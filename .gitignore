@@ -2,6 +2,7 @@ server.cfg
 *_log.txt
 *.log
 *.ppk
+*.amx
 
 # OS stuff
 desktop.ini
