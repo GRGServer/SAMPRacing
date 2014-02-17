@@ -1,0 +1,9 @@
+server.cfg
+server_log.txt
+*.log
+*.ppk
+
+# OS stuff
+desktop.ini
+.DS_Store
+$RECYCLE.BIN
