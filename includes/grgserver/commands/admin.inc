@@ -1,4 +1,4 @@
-CMD:admin(playerID, params[], 0)
+ACMD:admin(playerID, params[], StringID:47("Make Admin"))
 {
 	PVar:playerID[ISADMIN] = true;
 

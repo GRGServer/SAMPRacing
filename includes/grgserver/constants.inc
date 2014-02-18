@@ -6,10 +6,19 @@
 #define COLOR_ME			0x00FF40FF
 #define COLOR_USAGE			0x008000FF
 #define COLOR_WARNING			0xFF6000FF
+#define COLOR_SYSTEM			0xC0C0C0FF
 
 // Limits
-#define MAX_FUNCTION_NAME		32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(24)
+#define MAX_FUNCTION_NAME			32
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(140)
+#define MAX_MONEY					100000.00
+
+
+
+// Register
+#define REGISTER_PASSWORD_MAX				20
+#define REGISTER_PASSWORD_MIN				 3
+
 
 // Sounds
 #define SOUND_COMMAND_DENIED				5203
@@ -25,7 +34,7 @@
 #define STRINGLENGTH_NUMBERPLATE	8
 #define STRINGLENGTH_VEHICLENAME	20
 #define STRINGLENGTH_VEHICLETYPE	16
-
+#define STRINGLENGTH_LOCATION				100
 // Command responses
 enum
 {
@@ -46,4 +55,10 @@ enum
 {
 	LANGUAGE_ENGLISH,
 	LANGUAGE_GERMAN
+}
+
+// Money
+enum
+{
+	MONEY_CASH,
 }

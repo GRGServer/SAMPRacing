@@ -193,4 +193,188 @@
             %p hat den Server betreten
         </de>
     </string>
+    <string id="24">
+        <en>
+            Please enter the password of your account.
+        </en>
+        <de>
+            Gebe bitte dein Passwort ein1
+        </de>
+    </string>
+    <string id="25">
+        <en>
+            The entered password ist wrong!
+        </en>
+        <de>
+            Dein Eingegebenes Passwort ist Falsch!
+        </de>
+    </string>
+    <string id="26">
+        <en>
+            %p logged in
+        </en>
+        <de>
+            %p hat sich Eingeloggt
+        </de>
+    </string>
+    <string id="27">
+        <en>
+            You have been logged in successfully
+        </en>
+        <de>
+            Du hast dich erfolgreich Eingeloggt
+        </de>
+    </string>
+    <string id="28">
+        <en>
+            You can now Quit the Game!
+        </en>
+        <de>
+            Du kannst jetzt das Spiel beenden!
+        </de>
+    </string>
+    <string id="29">
+        <en>
+            You have to enter your password!
+        </en>
+        <de>
+            Du hast dein Passwort einzugeben!
+        </de>
+    </string>
+    <string id="30">
+        <en>
+            Please use a password with a length between %d and %d!
+        </en>
+        <de>
+            Bitte benutzte eine passwort länge von %d and %d!
+        </de>
+    </string>
+    <string id="31">
+        <en>
+            The entered passwords do not match! Please try again.
+        </en>
+        <de>
+            Das eingegebene passwort stimmt nicht Übereine! Bitte versuch es Nocheinmal1
+        </de>
+    </string>
+    <string id="32">
+        <en>
+            Welcome to the GRG server!
+        </en>
+        <de>
+            Willkommen auf dem GRG Server!
+        </de>
+    </string>
+    <string id="33">
+        <en>
+            Register
+        </en>
+        <de>
+            Registrieren
+        </de>
+    </string>
+    <string id="34">
+        <en>
+            Back
+        </en>
+        <de>
+            Zurück
+        </de>
+    </string>
+    <string id="35">
+        <en>
+            You can now quit the game
+        </en>
+        <de>
+            Du kannst du das Spiel Verlassen
+        </de>
+    </string>
+    <string id="36">
+        <en>
+            You are not registered yet!\n\nPlease enter a new password for your account.
+        </en>
+        <de>
+            Du bist nicht registriert\n\nBitte gebe dein enues Passwort für deinen neuen Account ein!
+        </de>
+    </string>
+    <string id="37">
+        <en>
+            Next
+        </en>
+        <de>
+            Weiter
+        </de>
+    </string>
+    <string id="38">
+        <en>
+            Please repeat your new password to verfify.
+        </en>
+        <de>
+            Bitte wiederhole dein Passwort zum Verifizieren.
+        </de>
+    </string>
+    <string id="39">
+        <en>
+            Repeat password
+        </en>
+        <de>
+            Wiederhole Passwort
+        </de>
+    </string>
+    <string id="40">
+        <en>
+            Preview
+        </en>
+        <de>
+            Preview
+        </de>
+    </string>
+    <string id="41">
+        <en>
+            This is Preview Server!
+        </en>
+        <de>
+            Das ist ein Preview Server!
+        </de>
+    </string>
+    <string id="42">
+        <en>
+            Sorry, but you got banned from this server!
+        </en>
+        <de>
+            Entschuldigung aber du bist gebannt von diesen Server!
+        </de>
+    </string>
+    <string id="43">
+        <en>
+            Reason for the ban: %s
+        </en>
+        <de>
+            Grund des Bannes: %s
+        </de>
+    </string>
+    <string id="44">
+        <en>
+            You got banned by mistake? In this case, please contact us on http://www.grgserver.net.
+        </en>
+        <de>
+            Du bist ohne grund Gebannt? Dann kontaktiere einen Admin auf http://www.grgserver.net
+        </de>
+    </string>
+    <string id="45">
+        <en>
+            You have exceeded the cash limit of %m!
+        </en>
+        <de>
+            Du hast so eben das Limit %m Überschritten!
+        </de>
+    </string>
+    <string id="46">
+        <en>
+            You were registered successfully and are now logged in.
+        </en>
+        <de>
+            Du bist erfolgreich Registriert und nun eingeloggt.
+        </de>
+    </string>
 </languagestrings>

@@ -56,6 +56,9 @@ for (new i_%0 = 0; ; ++i_%0) \
 // LoggedInPlayers(returningPlayerID)
 #define LoggedInPlayers(%0) Count(%0, maxPlayers) if (IsLoggedIn(%0))
 
+// LoadPermission
+#define LoadPermission:%0(%1,%2) permissions[%1][PERMISSION_%0] = strval(GetMySQLField(%2))
+
 // MD5(string)
 #define MD5(%0) MD5_Hash(%0, true)
 
