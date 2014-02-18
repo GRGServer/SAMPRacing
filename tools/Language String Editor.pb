@@ -530,7 +530,7 @@ EndProcedure
 
 Procedure UpdateConfig()
 	regEx = CreateRegularExpression(#PB_Any, "LanguageStringLimit\(([0-9]+)\)")
-	fileName$ = serverRoot$ + "includes\grgserver\config.inc"
+	fileName$ = serverRoot$ + "includes\grgserver\constants.inc"
 	inputFile = ReadFile(#PB_Any, fileName$)
 	If IsFile(inputFile)
 		outputFile = CreateFile(#PB_Any, fileName$ + ".tmp")
@@ -858,16 +858,16 @@ If OpenWindow(#Window, 100, 100, 800, 500, #Title, #PB_Window_MinimizeGadget | #
 		EndSelect
 	ForEver
 EndIf
-; IDE Options = PureBasic 5.11 (Windows - x86)
-; CursorPosition = 633
-; FirstLine = 627
+; IDE Options = PureBasic 5.21 LTS (Windows - x86)
+; CursorPosition = 532
+; FirstLine = 529
 ; Folding = -----
 ; EnableXP
 ; UseIcon = Language String Editor.ico
 ; Executable = Language String Editor.exe
 ; CommandLine = X:\Projects\SAMP-Server\
-; EnableCompileCount = 357
-; EnableBuildCount = 18
+; EnableCompileCount = 358
+; EnableBuildCount = 19
 ; EnableExeConstant
 ; IncludeVersionInfo
 ; VersionField0 = 1,0,0,0

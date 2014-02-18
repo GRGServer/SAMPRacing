@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<languagestrings>
+    <string id="0" ignoreUnused="1">
+        <en>
+            Undefined language string ID!
+        </en>
+        <de>
+            Nicht definierte Sprachstring ID!
+        </de>
+    </string>
+    <string id="1">
+        <en>
+            Spawn a vehicle
+        </en>
+        <de>
+            Fahrzeug spawnen
+        </de>
+    </string>
+    <string id="2">
+        <en>
+            Spawn a vehicle [%s]
+        </en>
+        <de>
+            Ein Fahrzeug spawnen [%s]
+        </de>
+    </string>
+    <string id="3">
+        <en>
+            Spawn
+        </en>
+        <de>
+            Spawnen
+        </de>
+    </string>
+    <string id="4">
+        <en>
+            Cancel
+        </en>
+        <de>
+            Abbrechen
+        </de>
+    </string>
+    <string id="5">
+        <en>
+            Usage: /%s
+        </en>
+        <de>
+            Verwendung: /%s
+        </de>
+    </string>
+    <string id="6">
+        <en>
+            The vehicle was not found!
+        </en>
+        <de>
+            Das Fahrzeug wurde nicht gefunden!
+        </de>
+    </string>
+    <string id="7">
+        <en>
+            The model ID must be between 400 and 611!
+        </en>
+        <de>
+            Die Model ID muss zwischen 400 und 611 sein!
+        </de>
+    </string>
+    <string id="8">
+        <en>
+            The color must be between 0 and 127!
+        </en>
+        <de>
+            Die Farbe muss zwischen 0 und 127 sein!
+        </de>
+    </string>
+    <string id="9">
+        <en>
+            The vehicle could not be spawned!
+        </en>
+        <de>
+            Das Fahrzeug konnte nicht gespawnt werden!
+        </de>
+    </string>
+    <string id="10">
+        <en>
+            The vehicle has been spawned
+        </en>
+        <de>
+            Das Fahrzeug wurde gespawnt
+        </de>
+    </string>
+    <string id="11">
+        <en>
+            An error occurred while processing the command!
+        </en>
+        <de>
+            Beim Ausführen des Befehls ist ein Fehler aufgetreten!
+        </de>
+    </string>
+    <string id="12">
+        <en>
+            Command not found!
+        </en>
+        <de>
+            Befehl nicht gefunden!
+        </de>
+    </string>
+    <string id="13">
+        <en>
+            Use /cmds to see a list of commands
+        </en>
+        <de>
+            Verwende /cmds um eine Liste mit Befehlen zu sehen
+        </de>
+    </string>
+    <string id="14">
+        <en>
+            You are not in a vehicle!
+        </en>
+        <de>
+            Du bist nicht in einem Fahrzeug!
+        </de>
+    </string>
+    <string id="15">
+        <en>
+            You do not have the required permissions to use this command!
+        </en>
+        <de>
+            Du hast nicht die erforderlichen Rechte um diesen Befehl zu verwenden!
+        </de>
+    </string>
+    <string id="16">
+        <en>
+            Player not found!
+        </en>
+        <de>
+            Spieler nicht gefunden!
+        </de>
+    </string>
+    <string id="17">
+        <en>
+            You got teleported
+        </en>
+        <de>
+            Du wurdest teleportiert
+        </de>
+    </string>
+    <string id="18">
+        <en>
+            Start or turn off the engine of your vehicle
+        </en>
+        <de>
+            Starte oder stoppe den Motor von deinem Fahrzeug
+        </de>
+    </string>
+    <string id="19">
+        <en>
+            You are not the driver of this vehicle!
+        </en>
+        <de>
+            Du bist nicht der Fahrer dieses Fahrzeugs!
+        </de>
+    </string>
+    <string id="20">
+        <en>
+            The engine of your vehicle has been turned off
+        </en>
+        <de>
+            Der Motor von deinem Fahrzeug wurde ausgeschalten
+        </de>
+    </string>
+    <string id="21">
+        <en>
+            The engine of your vehicle has been started
+        </en>
+        <de>
+            Der Motor von deinem Fahrzeug wurde gestartet
+        </de>
+    </string>
+    <string id="22">
+        <en>
+            %p has left the server (%s)
+        </en>
+        <de>
+            %p hat den Server verlassen (%s)
+        </de>
+    </string>
+    <string id="23">
+        <en>
+            %p has joined the server
+        </en>
+        <de>
+            %p hat den Server betreten
+        </de>
+    </string>
+</languagestrings>

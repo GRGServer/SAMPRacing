@@ -49,12 +49,12 @@ If OpenConsole()
 			AddInclude("arrays.inc")
 			AddInclude("globals.inc")
 			WriteStringN(mainInclude, "")
-			AddDir("Functions")
-			AddDir("Callbacks")
-			AddDir("Dialogs")
-			AddDir("Pickups")
-			AddDir("Timers")
-			AddDir("Commands")
+			AddDir("functions")
+			AddDir("callbacks")
+			AddDir("dialogs")
+			AddDir("pickups")
+			AddDir("timers")
+			AddDir("commands")
 			CloseFile(mainInclude)
 			Print(" Done")
 		Else
@@ -68,14 +68,14 @@ If OpenConsole()
 EndIf
 ; IDE Options = PureBasic 5.21 LTS (Windows - x86)
 ; ExecutableFormat = Console
-; CursorPosition = 58
+; CursorPosition = 56
 ; FirstLine = 18
 ; Folding = -
 ; EnableXP
 ; UseIcon = Includes Updater.ico
 ; Executable = Includes Updater.exe
-; EnableCompileCount = 16
-; EnableBuildCount = 16
+; EnableCompileCount = 17
+; EnableBuildCount = 17
 ; EnableExeConstant
 ; IncludeVersionInfo
 ; VersionField0 = 1,0,0,0

@@ -18,5 +18,4 @@
 // Main script
 #include <grgserver/main.inc>
 
-// This is required... C sucks
-main(){}
+main(){}// This is required... C sucks
