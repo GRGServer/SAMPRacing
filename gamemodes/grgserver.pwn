@@ -5,12 +5,12 @@
 #include <filemanager>
 #include <formatnumber>
 #include <geoip>
-#include <MD5>
 #include <md-sort>
 #include <mysql>
 #include <progressbars>
 #include <regex>
 #include <routeconnector>
+#include <SHA512>
 #include <sscanf>
 #include <streamer>
 #include <xml>
