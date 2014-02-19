@@ -22,12 +22,12 @@ public OnPlayerConnect(playerid)
 
 	if (rows)
 	{
-		// Continue with login
+		// Show login dialog
 		ShowDialog:Login(playerid);
 	}
 	else
 	{
-		// Continue with register
+		// Show language selection of register process
 		ShowDialog:Register_Language(playerid);
 	}
 
