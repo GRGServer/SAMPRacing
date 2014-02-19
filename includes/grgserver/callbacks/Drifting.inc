@@ -9,45 +9,58 @@ public Drifting(playerID)
 	if (speed > 0.2)
 	{
 		/*Trig functions for calculating moving(travelling) direction*/
-		if (x<0)
+		if (x < 0)
 		{
-  			if(y>0)
-  				{ TDirection = atan(floatabs(x/y)); }
-			else if (y<=0)
-				{ TDirection = atan(y/x) + 90; }
+  			if(y > 0)
+  			{ 
+				TDirection = atan(floatabs(x/y)); 
+			}
+			else if (y <= 0)
+			{ 
+				TDirection = atan(y/x) + 90; 
+			}
 		}
-		else if (x>0)
+		else if (x > 0)
 		{
-  			if(y<0)
-	    		{ TDirection = atan(floatabs(x/y)) + 180; }
-			else if (y>=0)
-				{ TDirection = atan(y/x) + 270; }
+  			if(y < 0)
+    		{
+				TDirection = atan(floatabs(x/y)) + 180; 
+			}
+			else if (y >= 0)
+			{
+				TDirection = atan(y/x) + 270; 
+			}
 		}
-		else if (x==0)
+		else if (x == 0)
 		{
-			if (y>0)
-				{ TDirection = 0; }
-			else if (y<0)
-				{ TDirection = 180; }
+			if (y > 0)
+			{ 
+				TDirection = 0; 
+			}
+			else if (y < 0)
+			{ 
+				TDirection = 180; 
+			}
 		}
 		/*Calculations for drifting angle*/
 		GetVehicleZAngle(vid, CDirection);
 		DriftAngle = floatabs(TDirection - CDirection);
 		/*Adding score*/
-		if ((15 < DriftAngle < 80) || ( 280 < DriftAngle < 345)) //At least a 15 degree angle is required to score anything
+		if ((15 < DriftAngle < 80) || ( 280 < DriftAngle < 345)) 
 		{
 			ScoreState[playerID] = true;
 			Score[playerID]++;
-			if ((25 < DriftAngle < 70) || (290 < DriftAngle < 335)) //At least a 25 degree angle is required to score 2 points
+			if ((25 < DriftAngle < 70) || (290 < DriftAngle < 335)) 
 			{
 				Score[playerID]++;
-				if ((35 < DriftAngle < 45) || (315 < DriftAngle < 325)) //35-45 degree drifts receive additional bonuses
+				if ((35 < DriftAngle < 45) || (315 < DriftAngle < 325)) 
 				{
 				    Score[playerID]++;
         			SetPVarInt(playerID, "AngleBonus", GetPVarInt(playerID, "AngleBonus")+1);
 				    format(driftstring,sizeof(driftstring),"Winkel Bonus + %d !", GetPVarInt(playerID, "AngleBonus"));
 				    TextDrawSetString(DrawAngleBonus[playerID], driftstring);
 					TextDrawShowForPlayer(playerID, DrawAngleBonus[playerID]);
+					GivePlayerMoney(playerID, GetPVarInt(playerID, "AngleBonus"));
 				}
 			}
 			if (speed > 0.6)
@@ -57,6 +70,7 @@ public Drifting(playerID)
 				    format(driftstring,sizeof(driftstring),"Geschwindigkeits Bonus + %d !", GetPVarInt(playerID, "SpeedBonus"));
 				    TextDrawSetString(DrawSpeedBonus[playerID], driftstring);
 		    		TextDrawShowForPlayer(playerID, DrawSpeedBonus[playerID]);
+					GivePlayerMoney(playerID, GetPVarInt(playerID, "SpeedBonus"));
 				}
 			format(driftstring, sizeof(driftstring), "Punkte: %d", Score[playerID]);
 			TextDrawSetString(DrawScore[playerID], driftstring);
@@ -73,7 +87,7 @@ public Drifting(playerID)
 					{
 						SetPVarInt(playerID, "AbsMaxScore", Score[playerID]);
 						format(driftstring,sizeof(driftstring),"Beste: %d",GetPVarInt(playerID,"AbsMaxScore"));
-						TextDrawSetString(DrawBestScore[playerID], driftstring); //Comment this line if you want to disable score updating(under TAB)
+						TextDrawSetString(DrawBestScore[playerID], driftstring); 
 					}
 					else
 					{

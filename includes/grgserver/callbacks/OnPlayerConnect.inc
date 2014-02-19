@@ -32,5 +32,6 @@ public OnPlayerConnect(playerid)
 	}
 	
 	CreateGlobalTextDraws(playerid);
+	TextDrawShowForPlayer(playerid, textDrawClock);
 	return true;
 }
