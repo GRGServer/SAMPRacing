@@ -203,10 +203,10 @@
     </string>
     <string id="25">
         <en>
-            The entered password ist wrong!
+            The entered password is wrong!
         </en>
         <de>
-            Dein Eingegebenes Passwort ist Falsch!
+            Das eingegebene Passwort ist falsch!
         </de>
     </string>
     <string id="26">
@@ -291,10 +291,10 @@
     </string>
     <string id="36">
         <en>
-            You are not registered yet!\n\nPlease enter a new password for your account.
+            Please enter a new password for your account.
         </en>
         <de>
-            Du bist nicht registriert\n\nBitte gebe dein enues Passwort für deinen neuen Account ein!
+            Bitte gebe ein neues Password für deinen Account dein.
         </de>
     </string>
     <string id="37">
@@ -323,18 +323,18 @@
     </string>
     <string id="40">
         <en>
-            Preview
+            OK
         </en>
         <de>
-            Preview
+            OK
         </de>
     </string>
     <string id="41">
         <en>
-            This is Preview Server!
+            Your registration was successful
         </en>
         <de>
-            Das ist ein Preview Server!
+            Deine Registrierung war erfolgreich
         </de>
     </string>
     <string id="42">
@@ -363,18 +363,18 @@
     </string>
     <string id="45">
         <en>
-            You have exceeded the cash limit of %m!
+            Login
         </en>
         <de>
-            Du hast so eben das Limit %m Überschritten!
+            Login
         </de>
     </string>
     <string id="46">
         <en>
-            You were registered successfully and are now logged in.
+            You are now logged in
         </en>
         <de>
-            Du bist erfolgreich Registriert und nun eingeloggt.
+            Du bist nun eingeloggt
         </de>
     </string>
 </languagestrings>

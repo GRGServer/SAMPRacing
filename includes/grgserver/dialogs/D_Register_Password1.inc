@@ -1,6 +1,6 @@
 ShowDialog:Register_Password1(playerID)
 {
-	CreateDialog(playerID, "Register_Password1", DIALOG_STYLE_PASSWORD, LanguageString(playerID, StringID:33("Register")), LanguageString(playerID, StringID:36("You are not registered yet!\n\nPlease enter a new password for your account.")), LanguageString(playerID, StringID:37("Next")), LanguageString(playerID, StringID:34("Back")));
+	CreateDialog(playerID, "Register_Password1", DIALOG_STYLE_PASSWORD, LanguageString(playerID, StringID:33("Register")), LanguageString(playerID, StringID:36("Please enter a new password for your account.")), LanguageString(playerID, StringID:37("Next")), LanguageString(playerID, StringID:34("Back")));
 }
 
 DialogResponse:Register_Password1(playerID, response, listItem, inputText[])

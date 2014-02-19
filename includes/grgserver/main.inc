@@ -5,7 +5,6 @@
 
 // Structures
 #include <grgserver\Structures\enum_languageString.inc>
-#include <grgserver\Structures\enum_permission.inc>
 #include <grgserver\Structures\enum_playerVariable.inc>
 #include <grgserver\Structures\enum_vehicle.inc>
 #include <grgserver\Structures\enum_vehicleModel.inc>
@@ -20,16 +19,15 @@
 #include <grgserver\functions\CreateDialog.inc>
 #include <grgserver\functions\CreateVehicleEx.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
+#include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
 #include <grgserver\functions\GetPlayerNameEx.inc>
-#include <grgserver\functions\GetPlayerVersionEx.inc>
 #include <grgserver\functions\GetVehicleEngineState.inc>
-#include <grgserver\functions\IsBanned.inc>
+#include <grgserver\functions\Hash.inc>
 #include <grgserver\functions\IsLoggedIn.inc>
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
-#include <grgserver\functions\LoadPlayerPermissions.inc>
 #include <grgserver\functions\MySQLEscapeString.inc>
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
@@ -37,7 +35,6 @@
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SavePlayer.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
-#include <grgserver\functions\SetPlayerMoney.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
 #include <grgserver\functions\StrNotNull.inc>
@@ -54,14 +51,12 @@
 
 // dialogs
 #include <grgserver\dialogs\D_Login.inc>
-#include <grgserver\dialogs\D_PreviewInfo.inc>
 #include <grgserver\dialogs\D_Register_Language.inc>
 #include <grgserver\dialogs\D_Register_Password1.inc>
 #include <grgserver\dialogs\D_Register_Password2.inc>
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
 // commands
-#include <grgserver\commands\admin.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 

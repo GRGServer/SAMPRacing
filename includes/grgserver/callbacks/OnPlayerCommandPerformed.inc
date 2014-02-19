@@ -1,25 +1,3 @@
-/**
- * <summary>
- *	This callback gets called once a player sent a command it got performed.
- * </summary>
- *
- * <param name="playerID">
- *	The ID of the player which sent the command.
- * </param>
- *
- * <param name="command">
- *	The name of the command without the slash.
- * </param>
- *
- * <param name="parameters">
- *	The parameters passed to the command.
- * </param>
- *
- * <param name="returnCode">
- *	The return code of the command.
- * </param>
- */
-
 OnPlayerCommandPerformed(playerID, command[], parameters[], returnCode)
 {
 	switch (returnCode)

@@ -8,25 +8,31 @@
 #define COLOR_WARNING			0xFF6000FF
 #define COLOR_SYSTEM			0xC0C0C0FF
 
-// Limits
-#define MAX_FUNCTION_NAME			32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(140)
-#define MAX_MONEY					100000.00
 
+// Limits
+#define MAX_FUNCTION_NAME		32
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(47)
 
 
 // Register
-#define REGISTER_PASSWORD_MAX				20
-#define REGISTER_PASSWORD_MIN				 3
+#define REGISTER_PASSWORD_MAX		20
+#define REGISTER_PASSWORD_MIN		 3
 
 
 // Sounds
-#define SOUND_COMMAND_DENIED				5203
-#define SOUND_COMMAND_ERROR				1085
-#define SOUND_COMMAND_OK				1138
-#define SOUND_NAVITARGETREACHED				1057
-#define SOUND_OBJECTPLACED				31810
-#define SOUND_PICKUPEVENT				1150
+#define SOUND_COMMAND_DENIED		5203
+#define SOUND_COMMAND_ERROR		1085
+#define SOUND_COMMAND_OK		1138
+#define SOUND_PICKUPEVENT		1150
+
+
+// Spawn default location
+#define SPAWN_POSX			-2024.1847
+#define SPAWN_POSY			-100.8980
+#define SPAWN_POSZ			35.1641
+#define SPAWN_ANGLE			352.6504
+#define SPAWN_INTERIOR			0
+
 
 // String sizes
 #define STRINGLENGTH_DIALOGNAME		MAX_FUNCTION_NAME - 4// 4 = "DR_" + 1 (For 0 byte)
@@ -34,7 +40,8 @@
 #define STRINGLENGTH_NUMBERPLATE	8
 #define STRINGLENGTH_VEHICLENAME	20
 #define STRINGLENGTH_VEHICLETYPE	16
-#define STRINGLENGTH_LOCATION				100
+
+
 // Command responses
 enum
 {
@@ -50,15 +57,10 @@ enum
 	COMMAND_USAGE
 }
 
+
 // Language IDs
 enum
 {
 	LANGUAGE_ENGLISH,
 	LANGUAGE_GERMAN
-}
-
-// Money
-enum
-{
-	MONEY_CASH,
 }

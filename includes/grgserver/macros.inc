@@ -53,14 +53,9 @@ for (new i_%0 = 0; ; ++i_%0) \
 // LanguageStringLimit(number)
 // Language String Editor searches for this and replaces the number with the required number of strings
 #define LanguageStringLimit(%0) %0
+
 // LoggedInPlayers(returningPlayerID)
 #define LoggedInPlayers(%0) Count(%0, maxPlayers) if (IsLoggedIn(%0))
-
-// LoadPermission
-#define LoadPermission:%0(%1,%2) permissions[%1][PERMISSION_%0] = strval(GetMySQLField(%2))
-
-// MD5(string)
-#define MD5(%0) MD5_Hash(%0, true)
 
 // MySQLQuery(formattedString, parameters)
 #define MySQLQuery(%0) Format:sqlQuery(%0); if (mysql_query(sqlQuery)) printf("SQL: %s", sqlQuery)

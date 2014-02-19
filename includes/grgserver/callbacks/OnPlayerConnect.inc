@@ -1,15 +1,11 @@
 public OnPlayerConnect(playerid)
 {
+	// Reset all player variables to their default values
 	ResetPlayerVariables(playerid);
 
-	if (IsBanned(playerid, true))
-	{
-		Kick(playerid);
-		return false;
-	}
-	
 	printf("%s connected from %s", GetPlayerNameEx(playerid), GetPlayerCountryName(playerid));
 
+	// Send join message to all players except the joined player
 	PlayerLoop(playerID)
 	{
 		if (!IsPlayerNPC(playerID) && playerID != playerid)
@@ -17,6 +13,23 @@ public OnPlayerConnect(playerid)
 			SendClientMessageEx(playerID, COLOR_JOINLEAVE, StringID:23("%p has joined the server"), playerid);
 		}
 	}
-	ShowDialog:PreviewInfo(playerid);
+
+	// Check whether the player is already registered
+	MySQLQuery("SELECT `id` FROM `users` WHERE `username` = '%s'", MySQLEscapeString(GetPlayerNameEx(playerid)));
+	mysql_store_result();
+	new rows = mysql_num_rows();
+	mysql_free_result();
+
+	if (rows)
+	{
+		// Continue with login
+		ShowDialog:Login(playerid);
+	}
+	else
+	{
+		// Continue with register
+		ShowDialog:Register_Language(playerid);
+	}
+
 	return true;
 }

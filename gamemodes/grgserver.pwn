@@ -10,9 +10,9 @@
 #include <progressbars>
 #include <regex>
 #include <routeconnector>
-#include <SHA512>
 #include <sscanf>
 #include <streamer>
+#include <whirlpool>
 #include <xml>
 
 // Main script
