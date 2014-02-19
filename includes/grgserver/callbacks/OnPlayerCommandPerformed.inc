@@ -1,4 +1,5 @@
-OnPlayerCommandPerformed(playerID, command[], parameters[], returnCode)
+forward OnPlayerCommandPerformed(playerID, command[], parameters[], returnCode);
+public OnPlayerCommandPerformed(playerID, command[], parameters[], returnCode)
 {
 	switch (returnCode)
 	{

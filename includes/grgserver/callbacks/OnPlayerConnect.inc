@@ -30,6 +30,7 @@ public OnPlayerConnect(playerid)
 		// Show language selection of register process
 		ShowDialog:Register_Language(playerid);
 	}
-
+	
+	CreateGlobalTextDraws(playerid);
 	return true;
 }
