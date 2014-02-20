@@ -53,18 +53,18 @@ SendClientMessageEx(playerID, color, languageStringID, { _, Float, Text3D, Menu,
 						Format:targetString("%s$%s", targetString, FormatMoney(getarg(argumentIndex)));
 						isFormatChar = true;
 					}
-					case 'p':
-					{
-						argumentIndex++;
-						strcat(targetString, GetPlayerNameEx(getarg(argumentIndex)));
-						isFormatChar = true;
-					}
 					case 's':
 					{
 						argumentIndex++;
 						new string[256];
 						GetStringArg(argumentIndex, string);
 						strcat(targetString, string);
+						isFormatChar = true;
+					}
+					case 'u':
+					{
+						argumentIndex++;
+						strcat(targetString, GetPlayerNameEx(getarg(argumentIndex)));
 						isFormatChar = true;
 					}
 				}
