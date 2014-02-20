@@ -1,9 +1,7 @@
 public OnPlayerDeath(playerid, killerid, reason)
 {
-	if (DriftingState[playerid] == true)
+	if (PVar:playerid[DRIFTING_STATE])
 	{
-	    CancelDrifting(playerid);
-	    SendClientMessage(playerid, 0xFFAAFFAA, "We don't want no dead people drifting 'round these parts");
+		StopDrifting(playerid);
 	}
-	return 1;
 }

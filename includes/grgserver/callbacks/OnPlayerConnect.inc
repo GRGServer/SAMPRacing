@@ -10,7 +10,7 @@ public OnPlayerConnect(playerid)
 	{
 		if (!IsPlayerNPC(playerID) && playerID != playerid)
 		{
-			SendClientMessageEx(playerID, COLOR_JOINLEAVE, StringID:23("%p has joined the server"), playerid);
+			SendClientMessageEx(playerID, COLOR_JOINLEAVE, StringID:23("%u has joined the server"), playerid);
 		}
 	}
 
@@ -30,8 +30,10 @@ public OnPlayerConnect(playerid)
 		// Show language selection of register process
 		ShowDialog:Register_Language(playerid);
 	}
-	
-	CreateGlobalTextDraws(playerid);
+
+	CreatePlayerTextDraws(playerid);
+
 	TextDrawShowForPlayer(playerid, textDrawClock);
+
 	return true;
 }

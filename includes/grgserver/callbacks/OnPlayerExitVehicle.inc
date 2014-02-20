@@ -1,9 +1,7 @@
 public OnPlayerExitVehicle(playerid, vehicleid)
 {
-	if (DriftingState[playerid] == true)
+	if (PVar:playerid[DRIFTING_STATE])
 	{
-		CancelDrifting(playerid);
-		SendClientMessage(playerid, 0xFFAAFFAA, "Drifting mode is OFF. You can't drift without a vehicle!");
+		StopDrifting(playerid);
 	}
-	return 1;
 }

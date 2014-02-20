@@ -179,18 +179,18 @@
     </string>
     <string id="22">
         <en>
-            %p has left the server (%s)
+            %u has left the server (%s)
         </en>
         <de>
-            %p hat den Server verlassen (%s)
+            %u hat den Server verlassen (%s)
         </de>
     </string>
     <string id="23">
         <en>
-            %p has joined the server
+            %u has joined the server
         </en>
         <de>
-            %p hat den Server betreten
+            %u hat den Server betreten
         </de>
     </string>
     <string id="24">
@@ -211,10 +211,10 @@
     </string>
     <string id="26">
         <en>
-            %p logged in
+            %u logged in
         </en>
         <de>
-            %p hat sich Eingeloggt
+            %u hat sich eingeloggt
         </de>
     </string>
     <string id="27">
@@ -259,10 +259,10 @@
     </string>
     <string id="32">
         <en>
-            Welcome to the GRG server!
+            Drifting has been disabled
         </en>
         <de>
-            Willkommen auf dem GRG Server!
+            Driften wurde deaktiviert
         </de>
     </string>
     <string id="33">
@@ -339,26 +339,26 @@
     </string>
     <string id="42">
         <en>
-            Sorry, but you got banned from this server!
+            Drifting has been enabled
         </en>
         <de>
-            Entschuldigung aber du bist gebannt von diesen Server!
+            Driften wurde aktiviert
         </de>
     </string>
     <string id="43">
         <en>
-            Reason for the ban: %s
+            Speed bonus + %d
         </en>
         <de>
-            Grund des Bannes: %s
+            Geschwindigkeitsbonus + %d
         </de>
     </string>
     <string id="44">
         <en>
-            You got banned by mistake? In this case, please contact us on http://www.grgserver.net.
+            Angle bonus + %d
         </en>
         <de>
-            Du bist ohne grund Gebannt? Dann kontaktiere einen Admin auf http://www.grgserver.net
+            Winkelbonus + %d
         </de>
     </string>
     <string id="45">
@@ -375,6 +375,62 @@
         </en>
         <de>
             Du bist nun eingeloggt
+        </de>
+    </string>
+    <string id="47">
+        <en>
+            Score: %d
+        </en>
+        <de>
+            Punkte: %d
+        </de>
+    </string>
+    <string id="48">
+        <en>
+            Last: %d
+        </en>
+        <de>
+            Letzter: %d
+        </de>
+    </string>
+    <string id="49">
+        <en>
+            Best: %d
+        </en>
+        <de>
+            Bester: %d
+        </de>
+    </string>
+    <string id="50">
+        <en>
+            Teleport to another player
+        </en>
+        <de>
+            Teleportiere dich zu einem anderen Spieler
+        </de>
+    </string>
+    <string id="51">
+        <en>
+            Give admin privileges to another player
+        </en>
+        <de>
+            Gebe Adminberechtigungen an einen anderen Spieler
+        </de>
+    </string>
+    <string id="52">
+        <en>
+            You gave admin privileges to %u
+        </en>
+        <de>
+            Du hast Adminrechte an %u gegeben
+        </de>
+    </string>
+    <string id="53">
+        <en>
+            You got admin privileges from %u
+        </en>
+        <de>
+            Du hast Adminrechte von %u bekommen
         </de>
     </string>
 </languagestrings>

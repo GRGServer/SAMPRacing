@@ -1,0 +1,8 @@
+enum enum_playerTextDraws
+{
+	PlayerText:PTD_DRIFTING_ANGLEBONUS,
+	PlayerText:PTD_DRIFTING_BESTSCORE,
+	PlayerText:PTD_DRIFTING_LASTSCORE,
+	PlayerText:PTD_DRIFTING_SCORE,
+	PlayerText:PTD_DRIFTING_SPEEDBONUS
+}

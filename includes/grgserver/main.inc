@@ -5,8 +5,8 @@
 
 // Structures
 #include <grgserver\Structures\enum_languageString.inc>
-#include <grgserver\Structures\enum_permission.inc>
-#include <grgserver\Structures\enum_playerVariable.inc>
+#include <grgserver\Structures\enum_playerTextDraws.inc>
+#include <grgserver\Structures\enum_playerVariables.inc>
 #include <grgserver\Structures\enum_vehicle.inc>
 #include <grgserver\Structures\enum_vehicleModel.inc>
 
@@ -16,12 +16,11 @@
 
 // functions
 #include <grgserver\functions\AddLine.inc>
-#include <grgserver\functions\CancelDrifting.inc>
 #include <grgserver\functions\CmdUsageMsg.inc>
 #include <grgserver\functions\CreateDialog.inc>
-#include <grgserver\functions\CreateGlobalTextDraws.inc>
+#include <grgserver\functions\CreatePlayerTextDraws.inc>
 #include <grgserver\functions\CreateVehicleEx.inc>
-#include <grgserver\functions\DestroyTextDraw.inc>
+#include <grgserver\functions\DestroyPlayerTextDraws.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
 #include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
@@ -41,11 +40,11 @@
 #include <grgserver\functions\SendClientMessageEx.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
+#include <grgserver\functions\StopDrifting.inc>
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\str_replace.inc>
 
 // callbacks
-#include <grgserver\callbacks\Drifting.inc>
 #include <grgserver\callbacks\OnDialogResponse.inc>
 #include <grgserver\callbacks\OnGameModeInit.inc>
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
@@ -68,6 +67,7 @@
 // commands
 #include <grgserver\commands\drift.inc>
 #include <grgserver\commands\engine.inc>
-#include <grgserver\commands\goto.inc>
+#include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\spawnvehicle.inc>
+#include <grgserver\commands\tp.inc>
 

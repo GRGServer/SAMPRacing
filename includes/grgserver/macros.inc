@@ -70,7 +70,7 @@ for (new i_%0 = 0; ; ++i_%0) \
 #define PlayerLoop(%0) Count(%0, maxPlayers) if (IsPlayerConnected(%0))
 
 // PTextDraw:playerID[textDrawField]
-#define PTextDraw:%0[%1] PVar:%0[TD_%1]
+#define PTextDraw:%0[%1] playerTextDraws[%0][PTD_%1]
 
 // PVar:playerID[field]
 #define PVar:%0[%1] playerVariables[%0][PVAR_%1]

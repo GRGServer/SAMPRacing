@@ -11,7 +11,7 @@
 
 // Limits
 #define MAX_FUNCTION_NAME		32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(53)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(54)
 
 
 // Register
@@ -41,8 +41,6 @@
 #define STRINGLENGTH_VEHICLENAME	20
 #define STRINGLENGTH_VEHICLETYPE	16
 
-#define MaximumPlayers 50 
-
 
 // Command responses
 enum
@@ -66,21 +64,3 @@ enum
 	LANGUAGE_ENGLISH,
 	LANGUAGE_GERMAN
 }
-
-//drifting shizzle
-new bool:DriftingState[MaximumPlayers]; 
-new bool:ScoreState[MaximumPlayers]; 
-new Float:TDirection, 
-	Float:CDirection, 
-	Float:DriftAngle, 
-	Float:speed;
-new Score[MaximumPlayers];
-new driftstring[64];
-
-//textdraws
-new Text:DrawSpeedBonus[MaximumPlayers]; 
-new Text:DrawAngleBonus[MaximumPlayers]; 
-new Text:DrawScore[MaximumPlayers];
-new Text:DrawLastScore[MaximumPlayers]; 
-new Text:DrawBestScore[MaximumPlayers];  
-new Text:textDrawClock;

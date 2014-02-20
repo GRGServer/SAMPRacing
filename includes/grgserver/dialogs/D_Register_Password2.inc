@@ -19,7 +19,7 @@ DialogResponse:Register_Password2(playerID, response, listItem, inputText[])
 			{
 				if (currentPlayerID != playerID)
 				{
-					SendClientMessageEx(currentPlayerID, COLOR_JOINLEAVE, StringID:26("%p logged in"), playerID);
+					SendClientMessageEx(currentPlayerID, COLOR_JOINLEAVE, StringID:26("%u logged in"), playerID);
 				}
 			}
 

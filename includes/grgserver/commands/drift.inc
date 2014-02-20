@@ -1,21 +1,24 @@
-CMD:drift(playerID, params[], StringID:48("Drifting ON/OFF"))
+CMD:drift(playerID, params[], StringID:48("Enable or disable drifting"))
 {
-	if ((DriftingState[playerID] == false) && (IsPlayerInAnyVehicle(playerID)==1))
+	if (!IsPlayerInAnyVehicle(playerID))
 	{
-		DriftingState[playerID]=true;
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:51("Driftmode ON"));
-		TextDrawShowForPlayer(playerID,DrawScore[playerID]);
-		TextDrawShowForPlayer(playerID,DrawLastScore[playerID]);
-		TextDrawShowForPlayer(playerID,DrawBestScore[playerID]);
+		return COMMAND_NOT_IN_VEHICLE;
 	}
-	else if (DriftingState[playerID] == true)
+
+	if (GetPlayerVehicleSeat(playerID) != 0)
 	{
-		CancelDrifting(playerID);
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:49("Driftmode OFF"));
+		return COMMAND_NOT_VEHICLE_DRIVER;
 	}
-	if (IsPlayerInAnyVehicle(playerID)==0)
+
+	if (PVar:playerID[DRIFTING_STATE])
 	{
-		SendClientMessageEx(playerID, COLOR_ERROR, StringID:50("You are not in a Vehicle!"));
+		StopDrifting(playerID);
 	}
+	else
+	{
+		PVar:playerID[DRIFTING_STATE] = true;
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:42("Drifting has been enabled"));
+	}
+
 	return COMMAND_OK;
 }

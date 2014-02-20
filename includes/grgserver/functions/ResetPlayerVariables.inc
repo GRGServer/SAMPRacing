@@ -2,6 +2,6 @@ ResetPlayerVariables(playerID)
 {
 	Count(playerVariable, sizeof(playerVariables[]))
 	{
-		playerVariables[playerID][enum_playerVariable:playerVariable] = 0;
+		playerVariables[playerID][enum_playerVariables:playerVariable] = 0;
 	}
 }

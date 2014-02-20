@@ -30,16 +30,15 @@ public OnPlayerDisconnect(playerid, reason)
 
 		if (!IsPlayerNPC(playerid) && playerid != playerid)
 		{
-			SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%p has left the server (%s)"), playerid, reasonString);
+			SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
 		}
 	}
 
+	StopDrifting(playerid);
+
 	ResetPlayerVariables(playerid);
-	
-	// Player Drifting TextDraw
-	
-	CancelDrifting(playerid);
-	DestroyTextDraw(playerid);
+
+	DestroyPlayerTextDraws(playerid);
 
 	return true;
 }
