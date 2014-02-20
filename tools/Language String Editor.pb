@@ -215,7 +215,7 @@ Procedure EditItem(stringID)
 	If OpenWindow(#Edit_Window, 100, 100, 500, 140, title$, #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget | #PB_Window_SizeGadget | #PB_Window_WindowCentered, WindowID(#Window))
 		TextGadget(#Edit_Text1, 10, 10, 70, 20, "ID:")
 		TextGadget(#Edit_Text2, 10, 40, 70, 20, "English:")
-		TextGadget(#Edit_Text3, 10, 70, 70, 20, "English:")
+		TextGadget(#Edit_Text3, 10, 70, 70, 20, "German:")
 		StringGadget(#Edit_ID, 90, 10, 0, 20, Str(stringID), #PB_String_Numeric)
 		StringGadget(#Edit_EnglishString, 90, 40, 0, 20, englishString$)
 		StringGadget(#Edit_GermanString, 90, 70, 0, 20, germanString$)
@@ -859,15 +859,15 @@ If OpenWindow(#Window, 100, 100, 800, 500, #Title, #PB_Window_MinimizeGadget | #
 	ForEver
 EndIf
 ; IDE Options = PureBasic 5.21 LTS (Windows - x86)
-; CursorPosition = 532
-; FirstLine = 529
+; CursorPosition = 217
+; FirstLine = 200
 ; Folding = -----
 ; EnableXP
 ; UseIcon = Language String Editor.ico
 ; Executable = Language String Editor.exe
 ; CommandLine = X:\Projects\SAMP-Server\
-; EnableCompileCount = 358
-; EnableBuildCount = 19
+; EnableCompileCount = 359
+; EnableBuildCount = 20
 ; EnableExeConstant
 ; IncludeVersionInfo
 ; VersionField0 = 1,0,0,0
