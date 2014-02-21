@@ -489,4 +489,28 @@
             Ungültiger Teilname!
         </de>
     </string>
+    <string id="61">
+        <en>
+            Add a new teleport location
+        </en>
+        <de>
+            Einen neuen Teleportort hinzufügen
+        </de>
+    </string>
+    <string id="62">
+        <en>
+            Teleport saved in slot %d
+        </en>
+        <de>
+            Teleport gespeichert in Slot %d
+        </de>
+    </string>
+    <string id="63">
+        <en>
+            Limit of %d teleports reached!
+        </en>
+        <de>
+            Limit von %d Teleports erreicht!
+        </de>
+    </string>
 </languagestrings>

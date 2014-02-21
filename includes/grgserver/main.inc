@@ -39,6 +39,7 @@
 #include <grgserver\functions\ReloadVehicleModels.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SavePlayer.inc>
+#include <grgserver\functions\SaveTeleports.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
@@ -68,6 +69,7 @@
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
 // commands
+#include <grgserver\commands\addtp.inc>
 #include <grgserver\commands\drift.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\makeadmin.inc>

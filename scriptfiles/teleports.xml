@@ -1,13 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <teleports>
-	<teleport>
-		<name>Drift 1</name>
-		<command>drift1</command>
-		<withvehicle>true</withvehicle>
-		<position>
-			<x>-2400.0713</x>
-			<y>-599.6747</y>
-			<z>132.1246</z>
-			<angle>112.6436</angle>
-		</position>
-	</teleport>
+    <teleport>
+        <name>Drift 1</name>
+        <command>drift1</command>
+        <withvehicle>true</withvehicle>
+        <position>
+            <x>-2400.071</x>
+            <y>-599.6746</y>
+            <z>132.12460</z>
+            <angle>112.64360</angle>
+            <interior>0</interior>
+        </position>
+    </teleport>
 </teleports>
