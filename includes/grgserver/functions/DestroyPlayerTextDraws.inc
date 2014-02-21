@@ -1,6 +1,6 @@
 DestroyPlayerTextDraws(playerID)
 {
-	Count(playerTextDraw, sizeof(playerTextDraws[]))
+	Foreach(playerTextDraw, playerTextDraws[])
 	{
 		PlayerTextDrawDestroy(playerID, playerTextDraws[playerID][enum_playerTextDraws:playerTextDraw]);
 	}
