@@ -4,24 +4,16 @@
 		- GPS ADDITION TO SA-MP
 		- Made By Gamer_Z a.k.a. grasmanek94 , Rafal Grasman
 
-		October-
+		October-2011
 
 
-		contact: grasmanek94@live.nl
+		contact: gzx@live.nl
 
-		http://gamer-gps.googlecode.com/
+		http://gpb.googlecode.com/
 */
 
 #if defined ROUTE_CONNECTOR_PLUGIN_INCLUDED
-
-#else
-
-#tryinclude <GPBMAIN>
-
-#if defined GPB_libGLOBAL_included
-
-#else
-	#define DISABLE_GPBMAIN
+	#endinput
 #endif
 
 #define MAX_NODES					(32768)
@@ -30,10 +22,9 @@
 #define CONNECT_TYPE_BOTH			(0)
 #define CONNECT_TYPE_One_To_Two		(1)
 
-#define INCLUDE_VERSION				(176)
+#define INCLUDE_VERSION				(184)
 
 #define ROUTE_CONNECTOR_PLUGIN_INCLUDED
-#define PLUGIN_HAS_NO_HOOK //@main.cpp:14
 #pragma library "RouteConnectorPlugin"
 
 native AddNode(Float:X,Float:Y,Float:Z,AddToPathFinder = 0, AddToScanner = 0);
@@ -85,7 +76,7 @@ native ConnectNodes(NodeID_one,NodeID_two,AddToPathFinder = 0,direction = 0);
 		-5 - NodeTwo doesn't exist
 		-6 - NodeOne already connected with NodeTwo
 		-7 - NodeTwo already connected with NodeOne
-		-8 - No more connection slots left or direction does not equal 1 or 0
+		-8 - No more connection slots left on one of the nodes or direction does not equal 1 or 0
 		Anything above or equal to 0 means success (the NodeOne[connectid] is retuned).
 	Note:
 		NEVER EVER set AddToPathFinder to 1 when a calculation is in progress! THAT IS YOUR OWN RESPOSIBILITY IF IT HAPPENS.
@@ -158,17 +149,29 @@ native GetNodePos(NodeID,&Float:X,&Float:Y,&Float:Z);
 		(returns) X Y Z - The XYZ positions.
 	Returns 0 on failure (Out Of Range?), -1 if node doesn't exist, 1 on success.
 */
-native CalculatePath(Start,End,routeID = 0);//Threaded calculating, everything done here will be added to an Queue
+native CalculatePath(Start,End,routeID = 0,bool:CreatePolygon=false,Float:PolygonWidth=7.5,bool:GrabNodePositions=false);//Threaded calculating, everything done here will be added to an Queue
 /*
 	Function: 
 		CalculatePath
 	Description: 
-		Get the XYZ position of the supplied NodeID
+		Submits information to the plugins' queue to calculate a path between the desired points
 	Parameters: 
 		Start - The start NodeID
 		End - the destination NodeID
 		routeID (optional) - [custom integer supply] Here you can specify an integer value that will be passed 
 		to the callback, along with the calculated path information, for example the PlayerID.
+		182:
+		CreatePolygon - creates a polygon around the path if set to true
+		PolygonWidth - the width from the node lines to the edge of the polygon
+		183:
+		GrabNodePositions - makes sure the NodePos[][] array is filled with usefull information.
+		
+		Please note that this can increase the needed stack size extremely.
+		For storing the nodes, a polygon and all positions you need: 
+		amount_of_nodes*4096*8+4096 bytes. The max amount of nodes I ever calculated wasn't higher than 1000. so:
+		3280896 bytes would be needed for the stack. Make sure to use
+		#pragma dynamic 4194304 //2^21 < 32772096 < 2^22, so we choose 2^22 bytes, this is 4MB of memory, so look out!
+		Also make sure you know how much heap you will need (global variables etc) and add this amount to the calculated value and round up to nearest power of two
 	Note:
 		if you will be using the routeID parameter for recognizing routes, make sure they all are unique,
 		once started route search cannot be aborted and will just be queued and the callback will still be called.
@@ -177,9 +180,9 @@ native CalculatePath(Start,End,routeID = 0);//Threaded calculating, everything d
 		Your server will continue to work normally.
 
 		Only the callback in the script which calls the plugin will get executed with this, if you do CalculatePath in Script1, 
-		and have your callback in Script2 then it won't get executed
+		and have your callback in Script2 then it won't get executed, however if you need that, make in script1 CallRemoteFunction in the callback to call the other script.
 
-		Returns always 1.
+		Returns 1 on success, 0 when fails.
 */
 native IsNodeIntersection(NodeID);
 /*
@@ -234,7 +237,7 @@ native GetQueueSize();
 		GetQueueSize
 	Description: 
 		gets the size of all queued path calculations to do.
-	Returns -1 if the vector was locked when tried to access (Threading crash prevention), else it returns the vector size.
+	Update R184: Returns amount of calculations pending 
 */
 native GetConnectedNodeID(NodeID,ConnectID);
 /*
@@ -373,15 +376,17 @@ native NodeExists(NodeID);
 		Checks if the given nodeID exists in the memory.
 	Returns 0 if not, 1 if yes, -1 on failure.
 */
-native RemoveAllRouteIDFromQueue(routeid);
+native RemoveAllRouteIDFromQueue(/*routeid*/);
 /*
 	Function: 
 		RemoveAllRouteIDFromQueue
 	Description: 
 		Removes all pending calculations with 'routeid' from the queue.
+		R181 update: clears the WHOLE queue.
 	Returns -1 if the Queue is locked/accessed, else it returns the amount of entries deleted.
+	    R181 update: always returns 1.
 */
-forward GPS_WhenRouteIsCalculated(routeid,node_id_array[],amount_of_nodes,distance);//Every processed Queue will be called here
+forward GPS_WhenRouteIsCalculated(routeid,node_id_array[],amount_of_nodes,Float:distance,Float:Polygon[],Polygon_Size,Float:NodePosX[],Float:NodePosY[],Float:NodePosZ[]);//Every processed Queue will be called here
 /*
 	Called when a path finding calculation is done.
 	
@@ -396,14 +401,16 @@ forward GPS_WhenRouteIsCalculated(routeid,node_id_array[],amount_of_nodes,distan
 	amount_of_nodes - this is the amount of nodes the total path is, is set to 0 when it's impossible to calculate the route.
 	distance - the total distance all nodes take, rounded to an integer, is -1 if it's impossible to calculate the route.
 	so you can do:
-	public GPS_WhenRouteIsCalculated(routeid,node_id_array[],amount_of_nodes,distance)
+	public GPS_WhenRouteIsCalculated(...)
 	{
 		for(new i = 0; i < amount_of_nodes; ++i)
 		{
-			printf("Point(%d)=NodeID(%d)",i,node_id_array[i]);
+			printf("Point(%d)=NodeID(%d), Position(X;Y;Z):{%f;%f;%f}",i,node_id_array[i:NodePosX[i],:NodePosY[i],:NodePosZ[i]);	
 		}
 		return 1;
 	}
+	Polygon - the polygon around the path, only given if you specified it at calculatepath
+	Polygon_Size/2 = amount of points in polygon
 */
 forward OnPlayerClosestNodeIDChange(playerid,old_NodeID,new_NodeID);
 /*
@@ -441,20 +448,12 @@ stock GetIncludeVersion()
 		Gets the include file version
 	Returns the inclde file version, this function is only available since package 162
 */
-native gps_ManualPlayerAdding(enabled = 1);
-/*
-	Function: 
-		gps_ManualPlayerAdding
-	Description: 
-		Lets the plugin know if it has to add players for OnClosestNodeIDChange automatically or you want to do it yourself.
-	Returns the value you have set it to, 0 disabled, 1 enabled.
-*/
 native gps_AddPlayer(playerid);
 /*
 	Function: 
 		gps_AddPlayer
 	Description: 
-		If manualadding enabled, adds the player to the update check.
+		adds the player to the update check.
 	Returns 1 on success, 0 on failure, 2 if player already in list.
 */
 native gps_RemovePlayer(playerid);
@@ -462,7 +461,7 @@ native gps_RemovePlayer(playerid);
 	Function: 
 		gps_RemovePlayer
 	Description: 
-		If manualadding enabled, removes the player from the update check.
+		removes the player from the update check.
 	Returns 1 on success, 0 on failure.
 */
 native GetRouteArrayFromTo(ID,From,To,dest[],size=sizeof(dest));
@@ -539,108 +538,67 @@ native NodeChangeScanAreaOnly();
 	Description:
 		Goes only through nodes in player area when checking the closest nodeID in the callback.
 */
-native EnablePlayerOPIDC(playerid);
+native GetNodeIDMarkInArray(ArrayID,NodeID);//return 1 on true, 0 on false, -1 on failure
 /*
 	Function:
-		EnablePlayerOPIDC
+		GetNodeIDMarkInArray
 	Description:
-		Enables a player to be checked in the OnPlayerClosestNodeID callback.
+		The get function of the Set equilivant
 */
-native DisablePlayerOPIDC(playerid);
+native GetIndexMarkInArray(ArrayID,Index);//return 1 on true, 0 on false, -1 on failure
 /*
 	Function:
-		DisablePlayerOPIDC
+		GetIndexMarkInArray
 	Description:
-		Removes a player from the OnPlayerClosestNodeID callback checking.
+		The get function of the Set equilivant
 */
-
-//
-/* below is the plugin callback support code, you really shouldn't touch this */
-#if defined DISABLE_GPBMAIN
-
-#else
-	#include <a_http>
-	#if defined FILTERSCRIPT
-	public OnFilterScriptInit()
-	{
-		privGPB_AddUpdatecheck("GPS",3,GetPluginVersion(),GetIncludeVersion(),GetGPSdatVersion());
-		return CallLocalFunction("call_gps_OnFilterScriptInit","");
-	}
-
-	#if defined _ALS_OnFilterScriptInit
-		#undef OnFilterScriptInit
-	#else
-		#define _ALS_OnFilterScriptInit
-	#endif
-
-	#define OnFilterScriptInit call_gps_OnFilterScriptInit
-	forward call_gps_OnFilterScriptInit();
-
-	#else
-	public OnGameModeInit()
-	{
-	    privGPB_AddUpdatecheck("GPS",3,GetPluginVersion(),GetIncludeVersion(),GetGPSdatVersion());
-		return CallLocalFunction("call_gps_OnGameModeInit","");
-	}
-
-	#if defined _ALS_OnGameModeInit
-		#undef OnGameModeInit
-	#else
-		#define _ALS_OnGameModeInit
-	#endif
-
-	#define OnGameModeInit call_gps_OnGameModeInit
-	forward call_gps_OnGameModeInit();
-
-	#endif
-#endif
-
-#if defined PLUGIN_HAS_NO_HOOK
-	native gps_OnPlayerConnect(playerid);
-	native gps_OnPlayerDisconnect(playerid);//YES, no reason needed, duuh!
-
-	public OnPlayerConnect(playerid)
-	{
-		#if defined GPS_DISABLE_NPC
-		if(!IsPlayerNPC(playerid))
-		#endif
-		gps_OnPlayerConnect(playerid);
-		return CallLocalFunction("call_gps_OnPlayerConnect","i",playerid);
-	}
-
-	#if defined _ALS_OnPlayerConnect
-		#undef OnPlayerConnect
-	#else
-		#define _ALS_OnPlayerConnect
-	#endif
-
-	#define OnPlayerConnect call_gps_OnPlayerConnect
-	forward call_gps_OnPlayerConnect(playerid);
-
-	public OnPlayerDisconnect(playerid,reason)
-	{
-		gps_OnPlayerDisconnect(playerid);
-		return CallLocalFunction("call_gps_OnPlayerDisconnect","ii",playerid,reason);
-	}
-
-	#if defined _ALS_OnPlayerDisconnect
-		#undef OnPlayerDisconnect
-	#else
-		#define _ALS_OnPlayerDisconnect
-	#endif
-
-	#define OnPlayerDisconnect call_gps_OnPlayerDisconnect
-	forward call_gps_OnPlayerDisconnect(playerid,reason);
-
-	#endif
-	#if defined DISABLE_GPBMAIN
-
-	#else
-		#include <GPBMAIN>
-		#if defined GPB_libGLOBAL_new
-
-		#else
-			#error Please update your GPBMAIN.inc file for RouteConnector to work.
-		#endif
-	#endif
-#endif
+native ChangeOPCNIURate(TickRate = 55);
+/*
+	Function:
+		ChangeOPCNIURate
+	Description:
+		Sets the OnPlayerClosestNodeIDChanged callback update rate in ticks
+*/
+native NearestNodeFromPointInArray(ArrayID,Float:X,Float:Y,Float:Z,Float:MaxDist=9999.99,IgnoreNodeID=(-1),IgnoreMarkedNodes=0);
+/*
+	Function:
+		NearestNodeFromPointInArray
+	Description:
+		Gets the closest node to the specified XYZ coordinates which are in the route array ArrayID.
+		IgnoreNode ignores the specified node, IgnoreMarkedNodes makes sure it skips nodes that are marked in the array
+	Returns -1 if there is no closest node to this point (eg all nodes are marked, no such array id or other problems)
+*/
+native NearestNodeFromPlayerInArray(playerid,ArrayID,Float:MaxDist=9999.99,IgnoreNodeID=(-1),IgnoreMarkedNodes=0);
+/*
+	Function:
+		NearestNodeFromPlayerInArray
+	Description:
+		Gets the closest node to the specified player in the route array ArrayID.
+		IgnoreNode ignores the specified node, IgnoreMarkedNodes makes sure it skips nodes that are marked in the array
+	Returns -1 if there is no closest node to this point (eg all nodes are marked, no such array id or other problems)
+*/
+native RebuildGraph();
+/*
+	Function:
+		RebuildGraph
+	Description:
+		Rebuilds the internal node data for the pathfinder, usefull for use after AddNode without AddToPathFinder and ConnectNodes, change node positions, etc.
+	Returns:
+		1 on success, 0 on failure	
+*/
+native GetAmountOfFreeNodeSlots();
+/*
+	Function:
+		GetAmountOfFreeNodeSlots
+	Description:
+		Gets the amount of nodes which are available for creation
+	Returns:
+		amount of nodes left to create
+*/
+forward GPS_GetPlayerPosEnablerUn();
+public GPS_GetPlayerPosEnablerUn()
+{
+	new Float:____GPS_GetPlayerPosEnablerUn;
+	GetPlayerPos(0,____GPS_GetPlayerPosEnablerUn,____GPS_GetPlayerPosEnablerUn,____GPS_GetPlayerPosEnablerUn);
+	return 1;
+}
