@@ -7,6 +7,7 @@
 #include <grgserver\Structures\enum_languageString.inc>
 #include <grgserver\Structures\enum_playerTextDraws.inc>
 #include <grgserver\Structures\enum_playerVariables.inc>
+#include <grgserver\Structures\enum_teleport.inc>
 #include <grgserver\Structures\enum_vehicle.inc>
 #include <grgserver\Structures\enum_vehicleModel.inc>
 
@@ -34,6 +35,7 @@
 #include <grgserver\functions\MySQLEscapeString.inc>
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
+#include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SavePlayer.inc>
@@ -42,6 +44,7 @@
 #include <grgserver\functions\SpawnVehicle.inc>
 #include <grgserver\functions\StopDrifting.inc>
 #include <grgserver\functions\StrNotNull.inc>
+#include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\str_replace.inc>
 
 // callbacks
@@ -68,6 +71,7 @@
 #include <grgserver\commands\drift.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\makeadmin.inc>
+#include <grgserver\commands\reload.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 #include <grgserver\commands\tp.inc>
 

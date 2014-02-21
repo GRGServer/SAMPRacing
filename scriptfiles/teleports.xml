@@ -1,0 +1,13 @@
+<teleports>
+	<teleport>
+		<name>Drift 1</name>
+		<command>drift1</command>
+		<withvehicle>true</withvehicle>
+		<position>
+			<x>-2400.0713</x>
+			<y>-599.6747</y>
+			<z>132.1246</z>
+			<angle>112.6436</angle>
+		</position>
+	</teleport>
+</teleports>

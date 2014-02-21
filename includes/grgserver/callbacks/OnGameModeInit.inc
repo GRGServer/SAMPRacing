@@ -10,6 +10,7 @@ public OnGameModeInit()
 
 	ReloadLanguageStrings();
 	ReloadVehicleModels();
+	ReloadTeleports();
 
 	textDrawClock = TextDrawCreate(547, 25, "_");
 	TextDrawSetShadow(textDrawClock, 0);

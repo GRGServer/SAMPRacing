@@ -433,4 +433,60 @@
             Du hast Adminrechte von %u bekommen
         </de>
     </string>
+    <string id="54">
+        <en>
+            You got teleport to %s
+        </en>
+        <de>
+            Du wurdest nach %s teleportiert
+        </de>
+    </string>
+    <string id="55">
+        <en>
+            Reload parts of the script
+        </en>
+        <de>
+            Teile des Scripts neuladen
+        </de>
+    </string>
+    <string id="56">
+        <en>
+            Available parts: %s
+        </en>
+        <de>
+            Verfügbare Teile
+        </de>
+    </string>
+    <string id="57">
+        <en>
+            Language strings reloaded
+        </en>
+        <de>
+            Sprachstrings neugeladen
+        </de>
+    </string>
+    <string id="58">
+        <en>
+            Teleports reloaded
+        </en>
+        <de>
+            Teleports neugeladen
+        </de>
+    </string>
+    <string id="59">
+        <en>
+            Vehicle models reloaded
+        </en>
+        <de>
+            Fahrzeugmodelle neugeladen
+        </de>
+    </string>
+    <string id="60">
+        <en>
+            Invalid part name!
+        </en>
+        <de>
+            Ungültiger Teilname!
+        </de>
+    </string>
 </languagestrings>

@@ -1,6 +1,6 @@
 ResetPlayerVariables(playerID)
 {
-	Count(playerVariable, sizeof(playerVariables[]))
+	Foreach(playerVariable, playerVariables[])
 	{
 		playerVariables[playerID][enum_playerVariables:playerVariable] = 0;
 	}

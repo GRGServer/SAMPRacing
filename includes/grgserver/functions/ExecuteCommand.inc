@@ -1,34 +1,33 @@
-/**
- * <summary>
- *	Execute a player command (e.g. spawnvehicle Infernus)
- * </summary>
- *
- * <param name="playerID">
- *	The ID of the player which executes the command
- * </param>
- *
- * <param name="command">
- *	Name of the command to execute (e.g. spawnvehicle)
- * </param>
- *
- * <param name="parameters">
- *	The parameters passed to the command (e.g. Infernus)
- * </param>
- *
- * <returns>
- *	Return true if the command has been progressed or false if an error occured
- * </returns>
- *
- * <remarks>
- *	Currently only invalid return codes are handled as errors (return false)!
- * </remarks>
- */
-
 ExecuteCommand(playerID, command[], parameters[])
 {
 	FormatNew:functionName[MAX_FUNCTION_NAME]("cmd_%s", command);
+
 	new returnCode = COMMAND_NOT_FOUND;
-	if (funcidx(functionName) != -1)
+
+	// Check whether the function exists
+	if (funcidx(functionName) == -1)
+	{
+		// Search teleports for the command
+		Foreach(teleportID, teleports)
+		{
+			// Check whether the teleport command is the requested command
+			if (StrNotNull(teleports[teleportID][TELEPORT_COMMAND]) && !strcmp(teleports[teleportID][TELEPORT_COMMAND], command, true))
+			{
+				// Check whether the teleport is not only for admins or the player is an admin
+				if (!teleports[teleportID][TELEPORT_ADMINSONLY] || PVar:playerID[ISADMIN])
+				{
+					TeleportTo(playerID, teleportID);
+					returnCode = COMMAND_OK;
+				}
+				else
+				{
+					returnCode = COMMAND_PERMISSION_DENIED;
+				}
+				break;
+			}
+		}
+	}
+	else
 	{
 		if (StrNotNull(parameters))
 		{
