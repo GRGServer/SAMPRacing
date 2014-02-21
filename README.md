@@ -22,6 +22,16 @@ Visit http://grgserver.net for more information about the server.
 
 ## Compiling the script
 
-To compile the script you just have to execute the following command in the gamemodes folder:
+To compile the script on Windows you just have to execute the following commands:
 
+```
+cd gamemodes
 ../tools/pawn/pawncc.exe grgserver.pwn -i../includes -; -(
+```
+
+On Linux you have to use wine and escape the last two options:
+
+```
+cd gamemodes
+wine ../tools/pawn/pawncc.exe grgserver.pwn -i../includes -\; -\(
+```
