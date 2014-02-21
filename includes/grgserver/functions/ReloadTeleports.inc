@@ -52,6 +52,18 @@ ReloadTeleports()
 			}
 		}
 
+		// Read "adminsonly" value
+		teleports[teleportID][TELEPORT_ADMINSONLY] = false;
+		node = XML_GetFirstChild(teleportNode, "adminsonly");
+		if (node)
+		{
+			XML_GetValue(XML_GetFirstChild(node), string);
+			if (StrNotNull(string) && !strcmp(string, "true", true))
+			{
+				teleports[teleportID][TELEPORT_ADMINSONLY] = true;
+			}
+		}
+
 		// Read "position" node
 		new XMLNode:positionNode = XML_GetFirstChild(teleportNode, "position");
 		if (!positionNode)
@@ -111,6 +123,17 @@ ReloadTeleports()
 			printf("  Node 'angle' in node 'position' missing for teleport %d", teleportID);
 			teleportNode = XML_GetNextSibling(teleportNode, "teleport");
 			continue;
+		}
+
+		node = XML_GetFirstChild(positionNode, "interior");
+		if (node)
+		{
+			XML_GetValue(XML_GetFirstChild(node), string);
+			teleports[teleportID][TELEPORT_INTERIOR] = strval(string);
+		}
+		else
+		{
+			teleports[teleportID][TELEPORT_INTERIOR] = 0;
 		}
 
 		teleportID++;
