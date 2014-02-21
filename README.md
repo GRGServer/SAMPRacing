@@ -16,7 +16,7 @@ Visit http://grgserver.net for more information about the server.
   * Clone this repository
   * Copy server.sample.cfg to server.cfg and edit it to fit your needs
   * Copy localconfig.sample.inc in includes/grgserver to localconfig.inc and edit it to fit your needs
-  * Compile the grgserver.pwn located in the gamemodes folder (See section **Compile the script** bellow)
+  * Compile the grgserver.pwn located in the gamemodes folder (See section **Compiling the script** bellow)
   * Import the database schema into your MySQL database
   * Start the server
 
