@@ -10,9 +10,11 @@ DialogResponse:Register_Password2(playerID, response, listItem, inputText[])
 		if (!strcmp(inputText, PVar:playerID[REGISTERPASSWORD]))
 		{
 			// Add the new user to the database
-			MySQLQuery("INSERT INTO `users` (`username`, `password`, `language`, `registerDate`, `lastLogin`) VALUES('%s', '%s', '%s', NOW(), NOW())", MySQLEscapeString(GetPlayerNameEx(playerID)), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]));
+			new Cache:result = mysql_query_format(true, "INSERT INTO `users` (`username`, `password`, `language`, `registerDate`, `lastLogin`) VALUES('%e', '%e', '%e', NOW(), NOW())", GetPlayerNameEx(playerID), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]));
 
-			PVar:playerID[USERID] = mysql_insert_id();
+			PVar:playerID[USERID] = cache_insert_id();
+
+			cache_delete(result);
 
 			// Send login message to all players except the logged in player
 			PlayerLoop(currentPlayerID)

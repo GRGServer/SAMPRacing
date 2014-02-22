@@ -11,7 +11,7 @@ SavePlayer(playerID)
 
 		if (posX != 0 || posY != 0 || posZ != 0)
 		{
-			MySQLQuery("UPDATE `users` SET `posX` = '%f', `posY` = '%f', `posZ` = '%f', `angle` = '%f', `interior` = '%d' WHERE `id` = '%d'", posX, posY, posZ, angle, GetPlayerInterior(playerID), PVar:playerID[USERID]);
+			mysql_query_format(false, "UPDATE `users` SET `posX` = '%f', `posY` = '%f', `posZ` = '%f', `angle` = '%f', `interior` = '%d' WHERE `id` = '%d'", posX, posY, posZ, angle, GetPlayerInterior(playerID), PVar:playerID[USERID]);
 		}
 	}
 }

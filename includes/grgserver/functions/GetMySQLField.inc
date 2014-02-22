@@ -1,6 +1,6 @@
-GetMySQLField(field[])
+GetMySQLField(field[], row = 0)
 {
 	new value[256];
-	mysql_fetch_field(field, value);
+	cache_get_field_content(row, field, value);
 	return value;
 }

@@ -3,7 +3,6 @@ new languageStrings[MAX_LANGUAGE_STRINGS][enum_languageString];
 new maxPlayers;
 new PlayerText:playerTextDraws[MAX_PLAYERS][enum_playerTextDraws];
 new playerVariables[MAX_PLAYERS][enum_playerVariables];
-new sqlQuery[1024];
 new teleports[MAX_TELEPORTS][enum_teleport];
 new Text:textDrawClock;
 new vehicles[MAX_VEHICLES][enum_vehicle];

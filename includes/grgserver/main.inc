@@ -32,7 +32,6 @@
 #include <grgserver\functions\IsLoggedIn.inc>
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
-#include <grgserver\functions\MySQLEscapeString.inc>
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
@@ -46,10 +45,12 @@
 #include <grgserver\functions\StopDrifting.inc>
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
+#include <grgserver\functions\mysql_query_format.inc>
 #include <grgserver\functions\str_replace.inc>
 
 // callbacks
 #include <grgserver\callbacks\OnDialogResponse.inc>
+#include <grgserver\callbacks\OnGameModeExit.inc>
 #include <grgserver\callbacks\OnGameModeInit.inc>
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
 #include <grgserver\callbacks\OnPlayerCommandText.inc>

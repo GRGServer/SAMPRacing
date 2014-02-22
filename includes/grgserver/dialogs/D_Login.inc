@@ -10,8 +10,7 @@ DialogResponse:Login(playerID, response, listItem, inputText[])
 		if (strlen(inputText))
 		{
 			// Search user in database and compare password
-			MySQLQuery("SELECT `id` FROM `users` WHERE `username` = '%s' AND `password` = '%s'", MySQLEscapeString(GetPlayerNameEx(playerID)), Hash(inputText));
-			mysql_store_result();
+			new Cache:result = mysql_query_format(true, "SELECT `id` FROM `users` WHERE `username` = '%e' AND `password` = '%e'", GetPlayerNameEx(playerID), Hash(inputText));
 			if (mysql_num_rows())
 			{
 				PVar:playerID[USERID] = strval(GetMySQLField("id"));
@@ -22,12 +21,12 @@ DialogResponse:Login(playerID, response, listItem, inputText[])
 				ShowDialog:Login(playerID);
 				return;
 			}
-			mysql_free_result();
+			cache_delete(result);
 
 			if (PVar:playerID[USERID])
 			{
 				// Update some stats
-				MySQLQuery("UPDATE `users` SET `lastLogin` = NOW() WHERE `id` = '%d'", PVar:playerID[USERID]);
+				mysql_query_format(false, "UPDATE `users` SET `lastLogin` = NOW() WHERE `id` = %d", PVar:playerID[USERID]);
 
 				// Send login message to all players except the logged in player
 				PlayerLoop(currentPlayerID)

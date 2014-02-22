@@ -1,174 +1,364 @@
 /**
- *     SA:MP MySQL v2.1 Functions
- *  (c) Copyright 2011, StrickenKid
- *
- **/
+ * MySQL plugin R37
+ */
 
-#if defined __mysql_included
+#if defined mysql_included
 	#endinput
 #endif
+#define mysql_included
 
-#define __mysql_included
-#pragma library mysql
+/**
+ * Common error codes
+ *
+ * Client: http://dev.mysql.com/doc/refman/5.1/en/error-messages-client.html
+ * Server: http://dev.mysql.com/doc/refman/5.1/en/error-messages-server.html
+ */
 
-// plugin error id's
+#define ER_DBACCESS_DENIED_ERROR 		1044
+#define ER_ACCESS_DENIED_ERROR 			1045
+#define ER_UNKNOWN_TABLE 				1109
+#define ER_SYNTAX_ERROR 				1149
+#define CR_SERVER_GONE_ERROR 			2006
+#define CR_SERVER_LOST 					2013
+#define CR_COMMAND_OUT_OF_SYNC 			2014
+#define CR_SERVER_LOST_EXTENDED 		2055
 
-#define P_ERROR_NONE                                0
-#define P_ERROR_INCPARAMCNT                         1
-#define P_ERROR_INCVALUE                            2
-#define P_ERROR_MAXCONN                             3
-#define P_ERROR_DBNOCONN                            4
-#define P_ERROR_NORES                               5
-#define P_ERROR_RES                                 6
-#define P_ERROR_NOFIELD                             7
-#define P_ERROR_NOFIELDDATA                         8
-#define P_ERROR_NOROWDATA                           9
-#define P_ERROR_CANTALLOC                           10
-#define P_ERROR_NOCALLBACK                          11
-#define P_ERROR_NOQUERY                             12
-
-// mysql headers defines
-
-#define REFRESH_GRANT								1
-#define REFRESH_LOG									2
-#define REFRESH_TABLES								4
-#define REFRESH_HOSTS								8
-#define REFRESH_STATUS								16
-#define REFRESH_THREADS								32
-#define REFRESH_SLAVE   							64
-#define REFRESH_MASTER 							 	128
-
-// mysql error id's
-
-#define CR_ERROR_FIRST  							2000
-#define CR_UNKNOWN_ERROR							2000
-#define CR_SOCKET_CREATE_ERROR						2001
-#define CR_CONNECTION_ERROR							2002
-#define CR_CONN_HOST_ERROR							2003
-#define CR_IPSOCK_ERROR								2004
-#define CR_UNKNOWN_HOST								2005
-#define CR_SERVER_GONE_ERROR						2006
-#define CR_VERSION_ERROR							2007
-#define CR_OUT_OF_MEMORY							2008
-#define CR_WRONG_HOST_INFO							2009
-#define CR_LOCALHOST_CONNECTION 					2010
-#define CR_TCP_CONNECTION							2011
-#define CR_SERVER_HANDSHAKE_ERR 					2012
-#define CR_SERVER_LOST								2013
-#define CR_COMMANDS_OUT_OF_SYNC 					2014
-#define CR_NAMEDPIPE_CONNECTION 					2015
-#define CR_NAMEDPIPEWAIT_ERROR  					2016
-#define CR_NAMEDPIPEOPEN_ERROR  					2017
-#define CR_NAMEDPIPESETSTATE_ERROR 					2018
-#define CR_CANT_READ_CHARSET						2019
-#define CR_NET_PACKET_TOO_LARGE						2020
-#define CR_EMBEDDED_CONNECTION						2021
-#define CR_PROBE_SLAVE_STATUS   					2022
-#define CR_PROBE_SLAVE_HOSTS    					2023
-#define CR_PROBE_SLAVE_CONNECT  					2024
-#define CR_PROBE_MASTER_CONNECT 					2025
-#define CR_SSL_CONNECTION_ERROR 					2026
-#define CR_MALFORMED_PACKET     					2027
-#define CR_WRONG_LICENSE							2028
-#define CR_NULL_POINTER								2029
-#define CR_NO_PREPARE_STMT							2030
-#define CR_PARAMS_NOT_BOUND							2031
-#define CR_DATA_TRUNCATED							2032
-#define CR_NO_PARAMETERS_EXISTS 					2033
-#define CR_INVALID_PARAMETER_NO 					2034
-#define CR_INVALID_BUFFER_USE						2035
-#define CR_UNSUPPORTED_PARAM_TYPE 					2036
-#define CR_SHARED_MEMORY_CONNECTION             	2037
-#define CR_SHARED_MEMORY_CONNECT_REQUEST_ERROR 		2038
-#define CR_SHARED_MEMORY_CONNECT_ANSWER_ERROR   	2039
-#define CR_SHARED_MEMORY_CONNECT_FILE_MAP_ERROR 	2040
-#define CR_SHARED_MEMORY_CONNECT_MAP_ERROR      	2041
-#define CR_SHARED_MEMORY_FILE_MAP_ERROR         	2042
-#define CR_SHARED_MEMORY_MAP_ERROR              	2043
-#define CR_SHARED_MEMORY_EVENT_ERROR     			2044
-#define CR_SHARED_MEMORY_CONNECT_ABANDONED_ERROR 	2045
-#define CR_SHARED_MEMORY_CONNECT_SET_ERROR      	2046
-#define CR_CONN_UNKNOW_PROTOCOL 					2047
-#define CR_INVALID_CONN_HANDLE						2048
-#define CR_SECURE_AUTH                          	2049
-#define CR_FETCH_CANCELED                       	2050
-#define CR_NO_DATA                              	2051
-#define CR_NO_STMT_METADATA                     	2052
-#define CR_NO_RESULT_SET                        	2053
-#define CR_NOT_IMPLEMENTED                      	2054
-#define CR_SERVER_LOST_EXTENDED						2055
-#define CR_STMT_CLOSED								2056
-#define CR_NEW_STMT_METADATA                    	2057
-#define CR_ERROR_LAST                      			2057
-
-// logging types
-
-#define INVALID_MYSQL_ID							(-1)
-#define LOG_OFF										(0)
-#define LOG_ALL           							(1)
-#define LOG_ONLY_ERRORS   							(2)
-
-// function defines
-
-#define mysql_reload(%1) mysql_refresh(REFRESH_GRANT, %1)
-
-// plugin callbacks
-
-forward OnMysqlQueryArray(resultid, extravars[], MySQL:handle);
-forward OnMysqlQuery(resultid, spareid, MySQL:handle);
-forward OnMysqlError(error[], errorid, MySQL:handle);
-
-// plugin natives
-
-native MySQL:mysql_init(logtype = LOG_ONLY_ERRORS, printerrors = 1);
-native mysql_connect(const host[], const user[], const pass[], const db[], MySQL:handle = (MySQL:0), auto_reconnect = 0);
-native mysql_close(MySQL:handle = (MySQL:0));
-native mysql_refresh(options, MySQL:handle = (MySQL:0));
-native mysql_select_db(const db[], MySQL:handle = (MySQL:0));
-native mysql_query(const query[], resultid = (-1), spareid = (0), MySQL:handle = (MySQL:0));
-native mysql_query_array(const query[], resultid = (-1), {Float,_}:extravars[], MySQL:handle = (MySQL:0));
-native mysql_store_result(MySQL:handle = (MySQL:0));
-native mysql_free_result(MySQL:handle = (MySQL:0));
-native mysql_result_stored(MySQL:handle = (MySQL:0));
-native mysql_fetch_field(const fieldname[], dest[], MySQL:handle = (MySQL:0));
-native mysql_fetch_field_num(fieldnum, dest[], MySQL:handle = (MySQL:0));
-native mysql_fetch_row(dest[], const splitter[] = "|", MySQL:handle = (MySQL:0));
-native mysql_fetch_row_data(MySQL:handle = (MySQL:0));
-native mysql_real_escape_string(const string[], dest[], MySQL:handle = (MySQL:0));
-native mysql_num_rows(MySQL:handle = (MySQL:0));
-native mysql_num_fields(MySQL:handle = (MySQL:0));
-native mysql_affected_rows(MySQL:handle = (MySQL:0));
-native mysql_insert_id(MySQL:handle = (MySQL:0));
-native mysql_ping(MySQL:handle = (MySQL:0));
-native mysql_error(dest[], MySQL:handle = (MySQL:0));
-native mysql_errno(MySQL:handle = (MySQL:0));
-native mysql_warning_count(MySQL:handle = (MySQL:0));
-native mysql_info(dest[], MySQL:handle = (MySQL:0));
-native mysql_stat(dest[], MySQL:handle = (MySQL:0));
-native mysql_get_server_info(dest[], MySQL:handle = (MySQL:0));
-native mysql_get_host_info(dest[], MySQL:handle = (MySQL:0));
-native mysql_data_seek(rownum, MySQL:handle = (MySQL:0));
-native mysql_set_character_set(const csname[], MySQL:handle = (MySQL:0));
-native mysql_get_character_set(csname[], MySQL:handle = (MySQL:0));
-native mysql_fetch_int(MySQL:handle = (MySQL:0));
-native Float:mysql_fetch_float(MySQL:handle = (MySQL:0));
-native mysql_fetch_string(dest[], MySQL:handle = (MySQL:0));
-
-#if !defined split
-// split function - thanks to Blacklite
-stock split(const strsrc[], strdest[][], delimiter = '|')
+enum E_LOGLEVEL//log levels
 {
-	new i, li, aNum, len, srclen = strlen(strsrc);
-	while(i <= srclen)
+	LOG_NONE = 0,
+	LOG_ERROR = 1,
+	LOG_WARNING = 2,
+	LOG_DEBUG = 4,
+	
+	LOG_ALL = LOG_ERROR | LOG_WARNING | LOG_DEBUG
+};
+
+enum E_LOGTYPE//log types
+{
+	LOG_TYPE_TEXT = 1,
+	LOG_TYPE_HTML = 2
+};
+
+enum ORM_Error
+{
+	ERROR_OK,
+	ERROR_NO_DATA
+};
+
+enum E_VAR_DATATYPE 
+{
+	DATATYPE_INT,
+	DATATYPE_FLOAT,
+	DATATYPE_STRING
+};
+
+enum E_MYSQL_OPTION
+{
+	DUPLICATE_CONNECTIONS
+};
+
+enum E_EXECTIME_UNIT
+{
+	UNIT_MILLISECONDS,
+	UNIT_MICROSECONDS
+};
+
+#define mysql_insert_id cache_insert_id
+#define mysql_affected_rows cache_affected_rows
+#define mysql_warning_count cache_warning_count
+#define mysql_real_escape_string mysql_escape_string
+
+// cache_num_fields
+#define cache_num_fields cache_get_field_count
+
+// cache_num_rows
+#define cache_num_rows cache_get_row_count
+
+// cache_get_field
+#define cache_get_field(%0) cache_get_field_name(%0)
+
+// mysql_function_query(conHandle, query[], bool:cache, callback[], format[], {Float,_}:...);
+#define mysql_function_query(%0,%1,%2,%3,"%4"%5) mysql_tquery(%0,%1,%3,#%4%5)
+
+// mysql_fetch_row(destination)
+#define mysql_fetch_row(%1) mysql_fetch_row_format(%1,"|")
+
+// mysql_next_row()
+#define mysql_next_row() mysql_retrieve_row()
+
+// mysql_get_field(fieldname, destination)
+#define mysql_get_field(%1,%2) mysql_fetch_field_row(%2,%1)
+
+// ismysqlnull(string[])
+#define ismysqlnull(%1) (strcmp(%1,"NULL",false)==0)
+
+
+// ORM natives
+native ORM:orm_create(const table[], connectionHandle = 1);
+native orm_destroy(ORM:id);
+
+native ORM_Error:orm_errno(ORM:id);
+
+native orm_apply_cache(ORM:id, row);
+native orm_select(ORM:id, callback[] = "", format[] = "", {Float, _}:...);
+/*
+native orm_select_inline(ORM:id, callback:Callback, format[], {Float,_}:...); //y_inline
+*/
+native orm_update(ORM:id);
+native orm_insert(ORM:id, callback[] = "", format[] = "", {Float, _}:...);
+/*
+native orm_insert_inline(ORM:id, callback:Callback, format[], {Float,_}:...); //y_inline
+*/
+native orm_delete(ORM:id, bool:clearvars=true);
+
+native orm_load(ORM:id, callback[] = "", format[] = "", {Float, _}:...) = orm_select;
+native orm_save(ORM:id, callback[] = "", format[] = "", {Float, _}:...);
+
+native orm_addvar(ORM:id, &{Float, _}:var, E_VAR_DATATYPE:datatype, var_maxlen, varname[]);
+/*
+native orm_addvar_int(ORM:id, &var, varname[]);
+native orm_addvar_float(ORM:id, &Float:var, varname[]);
+native orm_addvar_string(ORM:id, &var, var_maxlen, varname[]);
+*/
+#define orm_addvar_int(%0,%1,%2) orm_addvar(%0,%1,DATATYPE_INT,1,%2)
+#define orm_addvar_float(%0,%1,%2) orm_addvar(%0,%1,DATATYPE_FLOAT,1,%2)
+#define orm_addvar_string(%0,%1,%2,%3) orm_addvar(%0,%1,DATATYPE_STRING,%2,%3)
+native orm_delvar(ORM:id, varname[]);
+native orm_setkey(ORM:id, varname[]);
+
+
+// MySQL natives
+native mysql_log(E_LOGLEVEL:loglevel = LOG_ERROR | LOG_WARNING, E_LOGTYPE:logtype = LOG_TYPE_TEXT);
+native mysql_connect(const host[], const user[], const database[], const password[], port = 3306, bool:autoreconnect = true, pool_size = 2);
+native mysql_close(connectionHandle = 1);
+native mysql_reconnect(connectionHandle = 1);
+
+native mysql_unprocessed_queries(connectionHandle = 1);
+native mysql_current_handle();
+native mysql_option(E_MYSQL_OPTION:type, value);
+
+native mysql_errno(connectionHandle = 1);
+native mysql_escape_string(const source[], destination[], connectionHandle = 1, max_len = sizeof(destination));
+native mysql_format(connectionHandle, output[], len, format[], {Float,_}:...);
+native mysql_pquery(connectionHandle, query[], callback[] = "", format[] = "", {Float,_}:...);
+/*
+native mysql_pquery_inline(connHandle, query[], callback:Callback, format[], {Float,_}:...); //y_inline
+*/
+native mysql_tquery(connectionHandle, query[], callback[] = "", format[] = "", {Float,_}:...);
+/*
+native mysql_tquery_inline(connHandle, query[], callback:Callback, format[], {Float,_}:...); //y_inline
+*/
+native Cache:mysql_query(conhandle, query[], bool:use_cache = true);
+
+native mysql_stat(destination[], connectionHandle = 1, max_len = sizeof(destination));
+native mysql_get_charset(destination[], connectionHandle = 1, max_len = sizeof(destination));
+native mysql_set_charset(charset[], connectionHandle = 1);
+
+
+// Cache functions.
+native cache_get_data(&num_rows, &num_fields, connectionHandle = 1);
+native cache_get_row_count(connectionHandle = 1);
+native cache_get_field_count(connectionHandle = 1);
+native cache_get_field_name(field_index, destination[], connectionHandle = 1, max_len = sizeof(destination));
+
+native cache_get_row(row, field_idx, destination[], connectionHandle = 1, max_len = sizeof(destination));
+native cache_get_row_int(row, field_idx, connectionHandle = 1);
+native Float:cache_get_row_float(row, field_idx, connectionHandle = 1);
+
+native cache_get_field_content(row, const field_name[], destination[], connectionHandle = 1, max_len = sizeof(destination));
+native cache_get_field_content_int(row, const field_name[], connectionHandle = 1);
+native Float:cache_get_field_content_float(row, const field_name[], connectionHandle = 1);
+
+native Cache:cache_save(connectionHandle = 1);
+native cache_delete(Cache:cache_id, connectionHandle = 1);
+native cache_set_active(Cache:cache_id, connectionHandle = 1);
+native cache_is_valid(Cache:cache_id, connectionHandle = 1);
+
+native cache_affected_rows(connectionHandle = 1);
+native cache_insert_id(connectionHandle = 1);
+native cache_warning_count(connectionHandle = 1);
+
+native cache_get_query_exec_time(E_EXECTIME_UNIT:unit = UNIT_MICROSECONDS);
+native cache_get_query_string(destination[], max_len = sizeof(destination));
+
+
+// Forward declarations.
+forward OnQueryError(errorid, error[], callback[], query[], connectionHandle);
+
+
+#if defined MYSQL_USE_YINLINE || defined E_CALLBACK_DATA
+	#if !defined E_CALLBACK_DATA
+		#include <YSI\y_inline>
+	#endif
+	
+	static g_MySQL_InlineData[1000][E_CALLBACK_DATA];
+	static g_MySQL_VarArray[32][YSI_MAX_STRING];
+	static g_MySQL_AddressArray[32];
+
+	stock MySQL_Internal_SaveInline(callback:CB) 
 	{
-		if (strsrc[i] == delimiter || i == srclen)
+		static bool:g_MySQL_LazyInit = true;
+		if(g_MySQL_LazyInit == true) 
 		{
-			len = strmid(strdest[aNum], strsrc, li, i, 128);
-			strdest[aNum][len] = 0;
-			li = i + 1;
-			aNum++;
+			//set g_MySQL_InlineData empty
+			for(new i=0; i < sizeof(g_MySQL_InlineData); ++i)
+				for(new E_CALLBACK_DATA:e = E_CALLBACK_DATA:0; e < E_CALLBACK_DATA; ++e)
+					g_MySQL_InlineData[i][e] = 0;
+			g_MySQL_LazyInit = false;
 		}
-		i++;
+		
+		new InlineData[E_CALLBACK_DATA];
+		if (Callback_Get(CB, InlineData))
+		{
+			for(new i=0; i < sizeof(g_MySQL_InlineData); ++i) 
+			{
+				if(g_MySQL_InlineData[i][E_CALLBACK_DATA_POINTER] == 0) 
+				{
+					g_MySQL_InlineData[i] = InlineData;
+					return i;
+				}
+			}
+		}
+		return -1;
 	}
-}
+	
+	#define mysql_pquery_inline(%0,%1,%2,"%3"%4) \
+		mysql_pquery(%0,%1,"FJ37DH3JG_MYSQL_INTERNAL","d"#%3,MySQL_Internal_SaveInline(%2)%4)
+		
+	#define mysql_tquery_inline(%0,%1,%2,"%3"%4) \
+		mysql_tquery(%0,%1,"FJ37DH3JG_MYSQL_INTERNAL","d"#%3,MySQL_Internal_SaveInline(%2)%4)
+	
+	#define orm_select_inline(%0,%1,"%2"%3) \
+		orm_select(%0,"FJ37DH3JG_MYSQL_INTERNAL","d"#%2,MySQL_Internal_SaveInline(%1)%3)
+	
+	#define orm_insert_inline(%0,%1,"%2"%3) \
+		orm_insert(%0,"FJ37DH3JG_MYSQL_INTERNAL","d"#%2,MySQL_Internal_SaveInline(%1)%3)
+
+
+	forward FJ37DH3JG_MYSQL_INTERNAL(...);
+	public FJ37DH3JG_MYSQL_INTERNAL(...) 
+	{
+		new InlineDataIndex = getarg(0);
+		if(InlineDataIndex < 0)
+			return 0;
+		
+		for(new i=0; i < numargs()-1; ++i) 
+		{
+			for(new l=0; l < YSI_MAX_STRING; ++l) 
+			{
+				new TmpVal = getarg(i+1, l);
+				if(l == 0 || g_MySQL_VarArray[i][l-1] < 256)
+					g_MySQL_VarArray[i][l] = TmpVal;
+				else 
+					break;
+			}
+			
+			g_MySQL_AddressArray[i] = AMX_GetRelativeAddress(g_MySQL_VarArray[i][0]);
+		}
+		
+		Callback_Array(g_MySQL_InlineData[InlineDataIndex], g_MySQL_AddressArray);
+		
+		Callback_Release(g_MySQL_InlineData[InlineDataIndex]);
+		for(new E_CALLBACK_DATA:e = E_CALLBACK_DATA:0; e < E_CALLBACK_DATA; ++e)
+			g_MySQL_InlineData[InlineDataIndex][e] = 0;
+		
+		for(new i=0; i < numargs()-1; ++i) 
+		{
+			g_MySQL_AddressArray[i] = 0;
+			for(new l=0, lmax=strlen(g_MySQL_VarArray[i]); l < lmax; ++l)
+				g_MySQL_VarArray[i][l] = 0;
+		}
+		return 1;
+	}
 #endif
+
+
+// General wrappers for backward-compatibility
+stock mysql_debug(enabled) 
+{
+	if(enabled)
+		mysql_log(LOG_WARNING | LOG_ERROR | LOG_DEBUG);
+	else
+		mysql_log();
+	return 1;
+}
+#pragma deprecated mysql_ping
+stock mysql_reload(connectionHandle = 1) 
+{
+	mysql_tquery(connectionHandle, "FLUSH PRIVILEGES", "", "");
+	return 1;
+}
+
+static stock RowIndex[20];
+static stock bool:RetrieveRow[20];
+stock mysql_store_result(connectionHandle = 1) 
+{
+	RowIndex[connectionHandle] = 0;
+	RetrieveRow[connectionHandle] = false;
+	
+}
+stock mysql_free_result(connectionHandle = 1) 
+{
+	#pragma unused connectionHandle
+}
+stock mysql_num_rows(connectionHandle = 1) 
+{
+	return cache_get_row_count(connectionHandle);
+}
+stock mysql_num_fields(connectionHandle = 1) 
+{
+	return cache_get_field_count(connectionHandle);
+}
+stock mysql_retrieve_row(connectionHandle = 1) 
+{
+	if(RetrieveRow[connectionHandle] != false)
+		RowIndex[connectionHandle]++;
+	else
+		RetrieveRow[connectionHandle] = true;
+	
+	if(RowIndex[connectionHandle] >= cache_get_row_count(connectionHandle))
+		return 0;
+	return 1;
+}
+stock mysql_data_seek(offset, connectionHandle = 1) 
+{
+	new Rows = cache_get_row_count(connectionHandle);
+	if(offset < 0)
+		offset = 0;
+	else if(offset >= Rows)
+		offset = Rows-1;
+	RowIndex[connectionHandle] = offset;
+}
+stock mysql_fetch_field(number, destination[], connectionHandle = 1, max_len=sizeof(destination)) 
+{
+	strdel(destination, 0, max_len-1);
+	return cache_get_field(number, destination, connectionHandle, max_len);
+}
+stock mysql_fetch_field_row(destination[], const fieldname[], connectionHandle = 1, max_len=sizeof(destination)) 
+{
+	strdel(destination, 0, max_len-1);
+	new RIDX = RowIndex[connectionHandle];
+	cache_get_field_content(RIDX < 0 ? 0 : RIDX, fieldname, destination, connectionHandle, max_len);
+}
+stock mysql_fetch_row_format(destination[], const delimiter[] = "|", connectionHandle = 1, max_len=sizeof(destination)) 
+{
+	new retrieve = mysql_retrieve_row(connectionHandle);
+	strdel(destination, 0, max_len-1);
+	new Fields = cache_get_field_count(connectionHandle);
+	for(new f=0; f < Fields; f++) 
+	{
+		if(f != 0) 
+		{
+			strcat(destination, delimiter, max_len);
+		}
+		new row_val_tmp[512];
+		new RIDX = RowIndex[connectionHandle];
+		cache_get_row(RIDX < 0 ? 0 : RIDX, f, row_val_tmp, connectionHandle);
+		if(f == 0)
+			strins(destination, row_val_tmp, 0, max_len);
+		else
+			strcat(destination, row_val_tmp, max_len);
+	}
+	return retrieve;
+}
+

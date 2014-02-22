@@ -57,9 +57,6 @@ for (new i_%0 = 0; ; ++i_%0) \
 // LoggedInPlayers(returningPlayerID)
 #define LoggedInPlayers(%0) Count(%0, maxPlayers) if (IsLoggedIn(%0))
 
-// MySQLQuery(formattedString, parameters)
-#define MySQLQuery(%0) Format:sqlQuery(%0); if (mysql_query(sqlQuery)) printf("SQL: %s", sqlQuery)
-
 // PickupEvent:pickupType(parameters)
 #define PickupEvent:%0(%1) forward PUE_%0(%1); public PUE_%0(%1)
 
