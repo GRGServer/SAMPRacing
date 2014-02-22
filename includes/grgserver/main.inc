@@ -14,6 +14,7 @@
 // Global variables
 #include <grgserver\arrays.inc>
 #include <grgserver\globals.inc>
+#include <grgserver\forwards.inc>
 
 // functions
 #include <grgserver\functions\AddLine.inc>
