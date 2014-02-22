@@ -9,6 +9,7 @@ TeleportTo(playerID, teleportID)
 
 	if (teleports[teleportID][TELEPORT_WITHVEHICLE] && seat == 0)
 	{
+		SetVehiclePos(vehicleID, teleports[teleportID][TELEPORT_POSX], teleports[teleportID][TELEPORT_POSY], teleports[teleportID][TELEPORT_POSZ]);
 		PutPlayerInVehicle(playerID, vehicleID, seat);
 	}
 
