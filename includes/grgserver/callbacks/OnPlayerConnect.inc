@@ -15,9 +15,13 @@ public OnPlayerConnect(playerid)
 	}
 
 	// Check whether the player is already registered
-	MySQLQuery("SELECT `id` FROM `users` WHERE `username` = '%s'", MySQLEscapeString(GetPlayerNameEx(playerid)));
+	MySQLQuery("SELECT `id`, `language` FROM `users` WHERE `username` = '%s'", MySQLEscapeString(GetPlayerNameEx(playerid)));
 	mysql_store_result();
 	new rows = mysql_num_rows();
+	if (rows)
+	{
+		PVar:playerid[LANGUAGE] = GetLanguageID(GetMySQLField("language"));
+	}
 	mysql_free_result();
 
 	if (rows)
