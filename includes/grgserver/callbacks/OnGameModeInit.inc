@@ -17,4 +17,7 @@ public OnGameModeInit()
 	TextDrawSetOutline(textDrawClock, 2);
 	TextDrawLetterSize(textDrawClock, 0.6, 1.8);
 	TextDrawFont(textDrawClock, 3);
+
+	print("Starting timers");
+	SetTimer("Timer_EverySecond", 1000, true);
 }
