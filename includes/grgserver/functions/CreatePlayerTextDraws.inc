@@ -1,64 +1,23 @@
 CreatePlayerTextDraws(playerID)
 {
-	// Drifting Angle Bonus
-	PTextDraw:playerID[DRIFTING_ANGLEBONUS] = CreatePlayerTextDraw(playerID, 110.000000, 425.000000, " ");
-	PlayerTextDrawAlignment(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 3);
-	PlayerTextDrawBackgroundColor(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 255);
-	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 1);
-	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 0.500000, 1.000000);
-	PlayerTextDrawColor(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 16711935);
-	PlayerTextDrawSetOutline(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 1);
-	PlayerTextDrawSetProportional(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 1);
-	PlayerTextDrawSetShadow(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS],1);
-	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 1);
-	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_ANGLEBONUS], 0x000000FF);
+	// Drifting bottom line
+	PTextDraw:playerID[DRIFTING_BOTTOM] = CreatePlayerTextDraw(playerID, 320, 425, " ");
+	PlayerTextDrawAlignment(playerID, PTextDraw:playerID[DRIFTING_BOTTOM], 2);
+	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_BOTTOM], 1);
+	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_BOTTOM], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_BOTTOM], true);
+	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_BOTTOM], 0x00000066);
 
-	// Drifting Best Score
-	PTextDraw:playerID[DRIFTING_BESTSCORE] = CreatePlayerTextDraw(playerID, 290.000000, 411.000000, " ");
-	PlayerTextDrawBackgroundColor(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 255);
-	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 1);
-	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 0.500000, 1.000000);
-	PlayerTextDrawColor(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], -16776961);
-	PlayerTextDrawSetOutline(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 1);
-	PlayerTextDrawSetProportional(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 1);
-	PlayerTextDrawSetShadow(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE],1);
-	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 1);
-	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_BESTSCORE], 0x000000FF);
+	// Drifting bonus box
+	PTextDraw:playerID[DRIFTING_BONUS_LABELS] = CreatePlayerTextDraw(playerID, 480, 400, LanguageString(playerID, StringID:47("Speed bonus:~n~~n~Angle bonus:")));
+	PlayerTextDrawTextSize(playerID, PTextDraw:playerID[DRIFTING_BONUS_LABELS], 640, 0);
+	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_BONUS_LABELS], 1);
+	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_BONUS_LABELS], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_BONUS_LABELS], true);
+	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_BONUS_LABELS], 0xff000066);
 
-	// Drifting Last Score
-	PTextDraw:playerID[DRIFTING_LASTSCORE] = CreatePlayerTextDraw(playerID, 290.000000, 425.000000, " ");
-	PlayerTextDrawBackgroundColor(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 255);
-	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 1);
-	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 0.500000, 1.000000);
-	PlayerTextDrawColor(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], -16776961);
-	PlayerTextDrawSetOutline(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 1);
-	PlayerTextDrawSetProportional(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 1);
-	PlayerTextDrawSetShadow(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE],1);
-	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 1);
-	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_LASTSCORE], 0x000000FF);
-
-	// Drifting Score
-	PTextDraw:playerID[DRIFTING_SCORE] = CreatePlayerTextDraw(playerID, 290.000000, 402.000000, " ");
-	PlayerTextDrawBackgroundColor(playerID, PTextDraw:playerID[DRIFTING_SCORE], 255);
-	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_SCORE], 1);
-	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_SCORE], 0.500000, 1.000000);
-	PlayerTextDrawColor(playerID, PTextDraw:playerID[DRIFTING_SCORE], -16776961);
-	PlayerTextDrawSetOutline(playerID, PTextDraw:playerID[DRIFTING_SCORE], 1);
-	PlayerTextDrawSetProportional(playerID, PTextDraw:playerID[DRIFTING_SCORE], 1);
-	PlayerTextDrawSetShadow(playerID, PTextDraw:playerID[DRIFTING_SCORE],1);
-	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_SCORE], 1);
-	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_SCORE], 0x000000FF);
-
-	// Drifting Speed Bonus
-	PTextDraw:playerID[DRIFTING_SPEEDBONUS] = CreatePlayerTextDraw(playerID, 456.000000, 425.000000, " ");
-	PlayerTextDrawAlignment(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 3);
-	PlayerTextDrawBackgroundColor(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 255);
-	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 1);
-	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 0.500000, 1.000000);
-	PlayerTextDrawColor(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 16711935);
-	PlayerTextDrawSetOutline(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 1);
-	PlayerTextDrawSetProportional(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 1);
-	PlayerTextDrawSetShadow(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS],1);
-	PlayerTextDrawUseBox(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 1);
-	PlayerTextDrawBoxColor(playerID, PTextDraw:playerID[DRIFTING_SPEEDBONUS], 0x000000FF);
+	// Drifting bonus values
+	PTextDraw:playerID[DRIFTING_BONUS_VALUES] = CreatePlayerTextDraw(playerID, 580, 400, " ");
+	PlayerTextDrawFont(playerID, PTextDraw:playerID[DRIFTING_BONUS_VALUES], 1);
+	PlayerTextDrawLetterSize(playerID, PTextDraw:playerID[DRIFTING_BONUS_VALUES], 0.4, 0.8);
 }

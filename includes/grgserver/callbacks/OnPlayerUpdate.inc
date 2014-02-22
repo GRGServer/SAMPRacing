@@ -16,8 +16,6 @@ public OnPlayerUpdate(playerid)
 	// Drifting is enabled and player is the driver
 	if (PVar:playerid[DRIFTING_STATE] && vehicleSeat == 0)
 	{
-		new driftString[100];
-
 		// Speed calculcation
 		new Float:x;
 		new Float:y;
@@ -73,6 +71,7 @@ public OnPlayerUpdate(playerid)
 			{
 				PVar:playerid[DRIFTING_SCORESTATE] = true;
 				PVar:playerid[DRIFTING_SCORE]++;
+				GivePlayerMoney(playerid, PVar:playerid[DRIFTING_SCORE] / 10);
 
 				if ((25 < angle < 70) || (290 < angle < 335))
 				{
@@ -81,10 +80,6 @@ public OnPlayerUpdate(playerid)
 					{
 						PVar:playerid[DRIFTING_SCORE]++;
 						PVar:playerid[DRIFTING_ANGLEBONUS]++;
-						Format:driftString(LanguageString(playerid, StringID:44("Angle bonus + %d")), PVar:playerid[DRIFTING_ANGLEBONUS]++);
-						PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_ANGLEBONUS], driftString);
-						PlayerTextDrawShow(playerid, PTextDraw:playerid[DRIFTING_ANGLEBONUS]);
-						GivePlayerMoney(playerid, PVar:playerid[DRIFTING_ANGLEBONUS]);
 					}
 				}
 
@@ -92,14 +87,7 @@ public OnPlayerUpdate(playerid)
 				{
 					PVar:playerid[DRIFTING_SCORE]++;
 					PVar:playerid[DRIFTING_SPEEDBONUS]++;
-					Format:driftString(LanguageString(playerid, StringID:43("Speed bonus + %d")), PVar:playerid[DRIFTING_SPEEDBONUS]);
-					PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_SPEEDBONUS], driftString);
-					PlayerTextDrawShow(playerid, PTextDraw:playerid[DRIFTING_SPEEDBONUS]);
-					GivePlayerMoney(playerid, PVar:playerid[DRIFTING_SPEEDBONUS]);
 				}
-
-				Format:driftString(LanguageString(playerid, StringID:47("Score: %d")), PVar:playerid[DRIFTING_SCORE]);
-				PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_SCORE], driftString);
 			}
 			// Player stops drifting
 			else if (PVar:playerid[DRIFTING_SCORE])
@@ -109,22 +97,18 @@ public OnPlayerUpdate(playerid)
 					if (PVar:playerid[DRIFTING_SCORE] > PVar:playerid[DRIFTING_MAXSCORE])
 					{
 						PVar:playerid[DRIFTING_MAXSCORE] = PVar:playerid[DRIFTING_SCORE];
-						if (PVar:playerid[DRIFTING_SCORE] > PVar:playerid[DRIFTING_ABSMAXSCORE])
+						if (PVar:playerid[DRIFTING_SCORE] > PVar:playerid[DRIFTING_BESTSCORE])
 						{
-							PVar:playerid[DRIFTING_ABSMAXSCORE] = PVar:playerid[DRIFTING_SCORE];
-							Format:driftString(LanguageString(playerid, StringID:49("Best: %d")), PVar:playerid[DRIFTING_ABSMAXSCORE]);
-							PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_BESTSCORE], driftString); 
+							PVar:playerid[DRIFTING_BESTSCORE] = PVar:playerid[DRIFTING_SCORE];
 						}
 						else
 						{
-							Format:driftString(LanguageString(playerid, StringID:48("Last: %d")), PVar:playerid[DRIFTING_SCORE]);
-							PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_LASTSCORE], driftString);
+							PVar:playerid[DRIFTING_LASTSCORE] = PVar:playerid[DRIFTING_SCORE];
 						}
 					}
 					else
 					{
-						Format:driftString(LanguageString(playerid, StringID:48("Last: %d")), PVar:playerid[DRIFTING_SCORE]);
-						PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_LASTSCORE], driftString);
+						PVar:playerid[DRIFTING_LASTSCORE] = PVar:playerid[DRIFTING_SCORE];
 						if (PVar:playerid[DRIFTING_SCORE] > 70)
 						{
 							RepairVehicle(vehicleID);
@@ -133,40 +117,40 @@ public OnPlayerUpdate(playerid)
 						}
 					}
 					PVar:playerid[DRIFTING_SCORESTATE] = false;
+
+					GivePlayerMoney(playerid, PVar:playerid[DRIFTING_ANGLEBONUS] / 10);
+					GivePlayerMoney(playerid, PVar:playerid[DRIFTING_SPEEDBONUS] / 5);
+					GivePlayerMoney(playerid, PVar:playerid[DRIFTING_SCORE] / 2);
 				}
 
 				// Reset values
-				PlayerTextDrawHide(playerid, PTextDraw:playerid[DRIFTING_SPEEDBONUS]);
 				PVar:playerid[DRIFTING_SPEEDBONUS] = 0;
-				PlayerTextDrawHide(playerid, PTextDraw:playerid[DRIFTING_ANGLEBONUS]);
 				PVar:playerid[DRIFTING_ANGLEBONUS] = 0;
 
 				PVar:playerid[DRIFTING_SCORE]--;
-				Format:driftString(LanguageString(playerid, StringID:47("Score: %d")), PVar:playerid[DRIFTING_SCORE]);
-				PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_SCORE], driftString);
 			}
 		}
 		else if (PVar:playerid[DRIFTING_SCORE])
 		{
-			if (PVar:playerid[DRIFTING_SCORE] > PVar:playerid[DRIFTING_ABSMAXSCORE])
+			if (PVar:playerid[DRIFTING_SCORE] > PVar:playerid[DRIFTING_BESTSCORE])
 			{
-				PVar:playerid[DRIFTING_ABSMAXSCORE] = PVar:playerid[DRIFTING_SCORE];
-				Format:driftString(LanguageString(playerid, StringID:49("Best: %d")), PVar:playerid[DRIFTING_ABSMAXSCORE]);
-				PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_BESTSCORE], driftString); 
+				PVar:playerid[DRIFTING_BESTSCORE] = PVar:playerid[DRIFTING_SCORE];
 			}
 
-			Format:driftString(LanguageString(playerid, StringID:48("Last: %d")), PVar:playerid[DRIFTING_SCORE]);
-			PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_LASTSCORE], driftString);
-
-			PVar:playerid[DRIFTING_SCORE] = 0;
-			Format:driftString(LanguageString(playerid, StringID:47("Score: %d")), PVar:playerid[DRIFTING_SCORE]);
-			PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_SCORE], driftString);
+			PVar:playerid[DRIFTING_LASTSCORE] = PVar:playerid[DRIFTING_SCORE];
 
 			// Reset values
-			PlayerTextDrawHide(playerid, PTextDraw:playerid[DRIFTING_SPEEDBONUS]);
+			PVar:playerid[DRIFTING_SCORE] = 0;
 			PVar:playerid[DRIFTING_SPEEDBONUS] = 0;
-			PlayerTextDrawHide(playerid, PTextDraw:playerid[DRIFTING_ANGLEBONUS]);
 			PVar:playerid[DRIFTING_ANGLEBONUS] = 0;
 		}
+
+		new string[100];
+
+		Format:string(LanguageString(playerid, StringID:43("Drift Score: %d~n~~n~Best Score: %d * Last Score: %d")), PVar:playerid[DRIFTING_SCORE], PVar:playerid[DRIFTING_BESTSCORE], PVar:playerid[DRIFTING_LASTSCORE]);
+		PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_BOTTOM], string);
+
+		Format:string("%d~n~~n~%d", PVar:playerid[DRIFTING_SPEEDBONUS], PVar:playerid[DRIFTING_ANGLEBONUS]);
+		PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_BONUS_VALUES], string);
 	}
 }

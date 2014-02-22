@@ -347,18 +347,10 @@
     </string>
     <string id="43">
         <en>
-            Speed bonus + %d
+            Drift Score: %d~n~~n~Best Score: %d * Last Score: %d
         </en>
         <de>
-            Geschwindigkeitsbonus + %d
-        </de>
-    </string>
-    <string id="44">
-        <en>
-            Angle bonus + %d
-        </en>
-        <de>
-            Winkelbonus + %d
+            Driftpunkte: %d~n~~n~Beste: %d * Letzte: %d
         </de>
     </string>
     <string id="45">
@@ -379,26 +371,18 @@
     </string>
     <string id="47">
         <en>
-            Score: %d
+            Speed bonus:~n~~n~Angle bonus:
         </en>
         <de>
-            Punkte: %d
+            Speedbonus:~n~~n~Winkelbonus:
         </de>
     </string>
     <string id="48">
         <en>
-            Last: %d
+            Enable or disable drifting
         </en>
         <de>
-            Letzter: %d
-        </de>
-    </string>
-    <string id="49">
-        <en>
-            Best: %d
-        </en>
-        <de>
-            Bester: %d
+            Driften aktivieren oder deaktivieren
         </de>
     </string>
     <string id="50">

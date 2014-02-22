@@ -34,7 +34,10 @@ public OnPlayerDisconnect(playerid, reason)
 		}
 	}
 
-	StopDrifting(playerid);
+	if (PVar:playerid[DRIFTING_STATE])
+	{
+		StopDrifting(playerid);
+	}
 
 	ResetPlayerVariables(playerid);
 
