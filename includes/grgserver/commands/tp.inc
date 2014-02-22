@@ -1,10 +1,15 @@
-ACMD:tp(playerID, params[], StringID:50("Teleport to another player"))
+ACMD:tp(playerID, params[], StringID:50("Teleport yourself to another player"))
 {
 	new targetPlayerID;
 	if (sscanf(params, "u", targetPlayerID))
 	{
 		CmdUsageMsg(playerID, "tp", "PlayerID/Name");
 		return COMMAND_USAGE;
+	}
+
+	if (targetPlayerID == INVALID_PLAYER_ID)
+	{
+		return COMMAND_PLAYER_NOT_FOUND;
 	}
 
 	new Float:posX;
@@ -15,8 +20,10 @@ ACMD:tp(playerID, params[], StringID:50("Teleport to another player"))
 	GetPlayerPos(targetPlayerID, posX, posY, posZ);
 	GetPlayerFacingAngle(targetPlayerID, angle);
 
-	SetPlayerPos(targetPlayerID, posX, posY, posZ);
-	SetPlayerFacingAngle(targetPlayerID, angle);
+	SetPlayerPos(playerID, posX, posY, posZ);
+	SetPlayerFacingAngle(playerID, angle);
+
+	SendClientMessageEx(playerID, COLOR_INFO, StringID:17("You teleported yourself to %u"), targetPlayerID);
 
 	return COMMAND_OK;
 }
