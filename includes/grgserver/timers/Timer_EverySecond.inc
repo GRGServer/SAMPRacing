@@ -4,6 +4,8 @@ Timer:EverySecond()
 	new minute;
 	gettime(hour, minute);
 
+	SetWorldTime(hour);
+
 	FormatNew:clockString[6]("%02d:%02d", hour, minute);
 	TextDrawSetString(textDrawClock, clockString);
 }
