@@ -139,10 +139,10 @@
     </string>
     <string id="17">
         <en>
-            You got teleported
+            You teleported yourself to %u
         </en>
         <de>
-            Du wurdest teleportiert
+            Du hast dich zu %u teleportiert
         </de>
     </string>
     <string id="18">
@@ -403,7 +403,7 @@
     </string>
     <string id="50">
         <en>
-            Teleport to another player
+            Teleport yourself to another player
         </en>
         <de>
             Teleportiere dich zu einem anderen Spieler
@@ -511,6 +511,30 @@
         </en>
         <de>
             Limit von %d Teleports erreicht!
+        </de>
+    </string>
+    <string id="64">
+        <en>
+            Enable or disable god mode
+        </en>
+        <de>
+            Aktiviere oder deaktiviere Godmode
+        </de>
+    </string>
+    <string id="65">
+        <en>
+            God mode disabled
+        </en>
+        <de>
+            Godmode deaktiviert
+        </de>
+    </string>
+    <string id="66">
+        <en>
+            God mode enabled
+        </en>
+        <de>
+            Godmode aktiviert
         </de>
     </string>
 </languagestrings>

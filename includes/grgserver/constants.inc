@@ -11,7 +11,7 @@
 
 // Limits
 #define MAX_FUNCTION_NAME		32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(64)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(67)
 #define MAX_TELEPORTS			50
 
 

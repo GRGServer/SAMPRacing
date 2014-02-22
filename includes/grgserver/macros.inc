@@ -87,9 +87,6 @@ for (new i_%0 = 0; ; ++i_%0) \
 // StartScreenFader(playerID, red, green, blue, steps, waitOnEnd, extraID)
 #define StartScreenFader(%0) Timer_ScreenFader(%0)
 
-// StartTimer:name(functionName, repeat)
-#define StartTimer:%0(%1,%2) SetTimer(%1, TIMER_%0, %2)
-
 // StringID:ID("englishString")
 #define StringID:%0(%1) %0
 

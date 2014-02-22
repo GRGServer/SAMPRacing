@@ -68,10 +68,14 @@
 #include <grgserver\dialogs\D_Register_Password2.inc>
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
+// timers
+#include <grgserver\timers\Timer_EverySecond.inc>
+
 // commands
 #include <grgserver\commands\addtp.inc>
 #include <grgserver\commands\drift.inc>
 #include <grgserver\commands\engine.inc>
+#include <grgserver\commands\god.inc>
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\reload.inc>
 #include <grgserver\commands\spawnvehicle.inc>

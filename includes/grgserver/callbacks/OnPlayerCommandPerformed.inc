@@ -40,10 +40,6 @@ public OnPlayerCommandPerformed(playerID, command[], parameters[], returnCode)
 		{
 			SendClientMessageEx(playerID, COLOR_ERROR, StringID:16("Player not found!"));
 		}
-		case COMMAND_TELEPORTED:
-		{
-			SendClientMessageEx(playerID, COLOR_INFO, StringID:17("You got teleported"));
-		}
 		case COMMAND_USAGE:
 		{
 			// Command usage message displayed -> Nothing to do yet
