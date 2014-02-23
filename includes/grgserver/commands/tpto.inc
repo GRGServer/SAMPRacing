@@ -1,9 +1,9 @@
-ACMD:tp(playerID, params[], StringID:50("Teleport yourself to another player"))
+ACMD:tpto(playerID, params[], StringID:50("Teleport yourself to another player"))
 {
 	new targetPlayerID;
 	if (sscanf(params, "u", targetPlayerID))
 	{
-		CmdUsageMsg(playerID, "tp", "PlayerID/Name");
+		CmdUsageMsg(playerID, "tpto", "PlayerID/Name");
 		return COMMAND_USAGE;
 	}
 

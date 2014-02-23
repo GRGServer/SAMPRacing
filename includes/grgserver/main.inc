@@ -82,5 +82,5 @@
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\reload.inc>
 #include <grgserver\commands\spawnvehicle.inc>
-#include <grgserver\commands\tp.inc>
+#include <grgserver\commands\tpto.inc>
 
