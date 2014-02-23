@@ -2,36 +2,33 @@ public OnPlayerDisconnect(playerid, reason)
 {
 	if (IsPlayerNPC(playerid))
 	{
+		ResetPlayerVariables(playerid);
+
 		return true;
 	}
-	else
+
+	SavePlayer(playerid);
+
+	new reasonString[16];
+	switch (reason)
 	{
-		if (reason == 1)
+		case 0:
 		{
-			SavePlayer(playerid);
+			strcat(reasonString, "Timed out");
 		}
+		case 1:
+		{
+			strcat(reasonString, "Leaving");
+		}
+		case 2:
+		{
+			strcat(reasonString, "Kicked/Banned");
+		}
+	}
 
-		new reasonString[16];
-		switch (reason)
-		{
-			case 0:
-			{
-				strcat(reasonString, "Timed out");
-			}
-			case 1:
-			{
-				strcat(reasonString, "Leaving");
-			}
-			case 2:
-			{
-				strcat(reasonString, "Kicked/Banned");
-			}
-		}
-
-		if (!IsPlayerNPC(playerid) && playerid != playerid)
-		{
-			SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
-		}
+	if (!IsPlayerNPC(playerid) && playerid != playerid)
+	{
+		SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
 	}
 
 	if (PVar:playerid[DRIFTING_STATE])
@@ -40,8 +37,6 @@ public OnPlayerDisconnect(playerid, reason)
 	}
 
 	ResetPlayerVariables(playerid);
-
-	DestroyPlayerTextDraws(playerid);
 
 	return true;
 }

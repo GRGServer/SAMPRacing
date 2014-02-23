@@ -22,7 +22,6 @@
 #include <grgserver\functions\CreateDialog.inc>
 #include <grgserver\functions\CreatePlayerTextDraws.inc>
 #include <grgserver\functions\CreateVehicleEx.inc>
-#include <grgserver\functions\DestroyPlayerTextDraws.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
 #include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
@@ -40,6 +39,7 @@
 #include <grgserver\functions\ReloadVehicleModels.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SavePlayer.inc>
+#include <grgserver\functions\SavePlayers.inc>
 #include <grgserver\functions\SaveTeleports.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
@@ -72,6 +72,7 @@
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
 // timers
+#include <grgserver\timers\Timer_EveryMinute.inc>
 #include <grgserver\timers\Timer_EverySecond.inc>
 
 // commands
