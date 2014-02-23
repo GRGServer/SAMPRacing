@@ -2,6 +2,8 @@ SavePlayer(playerID)
 {
 	if (IsLoggedIn(playerID))
 	{
+		mysql_query_format(false, "UPDATE `users` SET `money` = %d WHERE `id` = %d", GetPlayerMoney(playerID), PVar:playerID[USERID]);
+
 		new Float:posX;
 		new Float:posY;
 		new Float:posZ;
@@ -11,7 +13,7 @@ SavePlayer(playerID)
 
 		if (posX != 0 || posY != 0 || posZ != 0)
 		{
-			mysql_query_format(false, "UPDATE `users` SET `posX` = '%f', `posY` = '%f', `posZ` = '%f', `angle` = '%f', `interior` = '%d' WHERE `id` = '%d'", posX, posY, posZ, angle, GetPlayerInterior(playerID), PVar:playerID[USERID]);
+			mysql_query_format(false, "UPDATE `users` SET `posX` = '%f', `posY` = '%f', `posZ` = '%f', `angle` = '%f', `interior` = '%d' WHERE `id` = %d", posX, posY, posZ, angle, GetPlayerInterior(playerID), PVar:playerID[USERID]);
 		}
 	}
 }
