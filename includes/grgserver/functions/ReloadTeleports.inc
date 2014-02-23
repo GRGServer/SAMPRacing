@@ -1,6 +1,15 @@
 ReloadTeleports()
 {
 	print("Loading teleports...");
+
+	Foreach(index, g_teleports)
+	{
+		Foreach(field, g_teleports[])
+		{
+			g_teleports[index][E_TELEPORT:field] = 0;
+		}
+	}
+
 	new teleportID = 0;
 	new XMLNode:xml = XML_LoadDocument("teleports.xml");
 	xml = XML_GetFirstChild(xml, "teleports");
@@ -129,5 +138,6 @@ ReloadTeleports()
 
 		teleportNode = XML_GetNextSibling(teleportNode, "teleport");
 	}
+
 	printf("  %d teleports loaded", teleportID);
 }

@@ -1,6 +1,15 @@
 ReloadVehicleModels()
 {
 	print("Loading vehicle models...");
+
+	Foreach(index, g_vehicleModels)
+	{
+		Foreach(field, g_vehicleModels[])
+		{
+			g_vehicleModels[index][E_VEHICLEMODEL:field] = 0;
+		}
+	}
+
 	new count;
 	new XMLNode:xml = XML_LoadDocument("vehiclemodels.xml");
 	xml = XML_GetFirstChild(xml, "vehiclemodels");
@@ -32,5 +41,6 @@ ReloadVehicleModels()
 
 		modelNode = XML_GetNextSibling(modelNode, "model");
 	}
+
 	printf("  %d vehicle models loaded", count);
 }

@@ -1,12 +1,13 @@
 ReloadLanguageStrings()
 {
-	print("Unloading language strings...");
+	print("Loading language strings...");
+
 	Count(stringID, MAX_LANGUAGE_STRINGS)
 	{
 		strdel(g_languageStrings[stringID][E_LANGUAGESTRING_ENGLISH], 0, STRINGLENGTH_LANGUAGESTRING);
 		strdel(g_languageStrings[stringID][E_LANGUAGESTRING_GERMAN], 0, STRINGLENGTH_LANGUAGESTRING);
 	}
-	print("Loading language strings...");
+
 	new count;
 	new highestStringID;
 	new XMLNode:xml = XML_LoadDocument("languagestrings.xml");
@@ -75,6 +76,7 @@ ReloadLanguageStrings()
 		stringNode = XML_GetNextSibling(stringNode, "string");
 	}
 	XML_UnloadDocument(xml);
+
 	Count(stringID, highestStringID + 1)
 	{
 		if (!strlen(g_languageStrings[stringID][E_LANGUAGESTRING_ENGLISH]) && !strlen(g_languageStrings[stringID][E_LANGUAGESTRING_GERMAN]))
@@ -82,5 +84,6 @@ ReloadLanguageStrings()
 			printf("  Unused language string ID %d", stringID);
 		}
 	}
+
 	printf("  %d language strings loaded", count);
 }

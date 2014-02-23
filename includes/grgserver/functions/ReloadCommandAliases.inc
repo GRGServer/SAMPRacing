@@ -1,6 +1,15 @@
 ReloadCommandAliases()
 {
 	print("Loading command aliases...");
+
+	Foreach(index, g_commandAliases)
+	{
+		Foreach(field, g_commandAliases[])
+		{
+			g_commandAliases[index][E_COMMANDALIAS:field] = 0;
+		}
+	}
+
 	new aliasID = 0;
 	new XMLNode:xml = XML_LoadDocument("commandaliases.xml");
 	xml = XML_GetFirstChild(xml, "commandaliases");
@@ -56,5 +65,6 @@ ReloadCommandAliases()
 
 		aliasNode = XML_GetNextSibling(aliasNode, "alias");
 	}
+
 	printf("  %d command aliases loaded", aliasID);
 }
