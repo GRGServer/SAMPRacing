@@ -7,14 +7,14 @@ ACMD:addtp(playerID, params[], StringID:61("Add a new teleport location"))
 		return COMMAND_USAGE;
 	}
 
-	Foreach(teleportID, teleports)
+	Foreach(teleportID, g_teleports)
 	{
-		if (!StrNotNull(teleports[teleportID][TELEPORT_NAME]))
+		if (!StrNotNull(g_teleports[teleportID][E_TELEPORT_NAME]))
 		{
-			strcat(teleports[teleportID][TELEPORT_NAME], name, STRINGLENGTH_TELEPORTNAME);
-			GetPlayerPos(playerID, teleports[teleportID][TELEPORT_POSX], teleports[teleportID][TELEPORT_POSY], teleports[teleportID][TELEPORT_POSZ]);
-			GetPlayerFacingAngle(playerID, teleports[teleportID][TELEPORT_ANGLE]);
-			teleports[teleportID][TELEPORT_INTERIOR] = GetPlayerInterior(playerID);
+			strcat(g_teleports[teleportID][E_TELEPORT_NAME], name, STRINGLENGTH_TELEPORTNAME);
+			GetPlayerPos(playerID, g_teleports[teleportID][E_TELEPORT_POSX], g_teleports[teleportID][E_TELEPORT_POSY], g_teleports[teleportID][E_TELEPORT_POSZ]);
+			GetPlayerFacingAngle(playerID, g_teleports[teleportID][E_TELEPORT_ANGLE]);
+			g_teleports[teleportID][E_TELEPORT_INTERIOR] = GetPlayerInterior(playerID);
 
 			SaveTeleports();
 

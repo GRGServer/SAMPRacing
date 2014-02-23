@@ -3,15 +3,15 @@ TeleportTo(playerID, teleportID)
 	new vehicleID = GetPlayerVehicleID(playerID);
 	new seat = GetPlayerVehicleSeat(playerID);
 
-	SetPlayerPos(playerID, teleports[teleportID][TELEPORT_POSX], teleports[teleportID][TELEPORT_POSY], teleports[teleportID][TELEPORT_POSZ]);
-	SetPlayerFacingAngle(playerID, teleports[teleportID][TELEPORT_ANGLE]);
-	SetPlayerInterior(playerID, teleports[teleportID][TELEPORT_INTERIOR]);
+	SetPlayerPos(playerID, g_teleports[teleportID][E_TELEPORT_POSX], g_teleports[teleportID][E_TELEPORT_POSY], g_teleports[teleportID][E_TELEPORT_POSZ]);
+	SetPlayerFacingAngle(playerID, g_teleports[teleportID][E_TELEPORT_ANGLE]);
+	SetPlayerInterior(playerID, g_teleports[teleportID][E_TELEPORT_INTERIOR]);
 
-	if (teleports[teleportID][TELEPORT_WITHVEHICLE] && seat == 0)
+	if (g_teleports[teleportID][E_TELEPORT_WITHVEHICLE] && seat == 0)
 	{
-		SetVehiclePos(vehicleID, teleports[teleportID][TELEPORT_POSX], teleports[teleportID][TELEPORT_POSY], teleports[teleportID][TELEPORT_POSZ]);
+		SetVehiclePos(vehicleID, g_teleports[teleportID][E_TELEPORT_POSX], g_teleports[teleportID][E_TELEPORT_POSY], g_teleports[teleportID][E_TELEPORT_POSZ]);
 		PutPlayerInVehicle(playerID, vehicleID, seat);
 	}
 
-	SendClientMessageEx(playerID, COLOR_INFO, StringID:54("You got teleport to %s"), teleports[teleportID][TELEPORT_NAME]);
+	SendClientMessageEx(playerID, COLOR_INFO, StringID:54("You got teleport to %s"), g_teleports[teleportID][E_TELEPORT_NAME]);
 }

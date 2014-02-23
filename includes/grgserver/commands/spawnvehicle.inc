@@ -14,11 +14,11 @@ ACMD:spawnvehicle(playerID, params[], StringID:1("Spawn a vehicle"))
 		new vehicleList[2048];
 		new foundVehicles;
 
-		Foreach(arrayIndex, vehicleModels)
+		Foreach(arrayIndex, g_vehicleModels)
 		{
-			if (strfind(vehicleModels[arrayIndex][VEHICLEMODEL_NAME], vehicleName, true) != -1)
+			if (strfind(g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NAME], vehicleName, true) != -1)
 			{
-				AddLine:vehicleList("%d\t%s", arrayIndex + 400, vehicleModels[arrayIndex][VEHICLEMODEL_NAME]);
+				AddLine:vehicleList("%d\t%s", arrayIndex + 400, g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NAME]);
 				foundVehicles++;
 				modelID = arrayIndex + 400;
 			}

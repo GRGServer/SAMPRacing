@@ -4,15 +4,14 @@
 #include <grgserver\macros.inc>
 
 // Structures
-#include <grgserver\Structures\enum_languageString.inc>
-#include <grgserver\Structures\enum_playerTextDraws.inc>
-#include <grgserver\Structures\enum_playerVariables.inc>
-#include <grgserver\Structures\enum_teleport.inc>
-#include <grgserver\Structures\enum_vehicle.inc>
-#include <grgserver\Structures\enum_vehicleModel.inc>
+#include <grgserver\Structures\E_LANGUAGESTRING.inc>
+#include <grgserver\Structures\E_PTD.inc>
+#include <grgserver\Structures\E_PVAR.inc>
+#include <grgserver\Structures\E_TELEPORT.inc>
+#include <grgserver\Structures\E_VEHICLE.inc>
+#include <grgserver\Structures\E_VEHICLEMODEL.inc>
 
 // Global variables
-#include <grgserver\arrays.inc>
 #include <grgserver\globals.inc>
 #include <grgserver\forwards.inc>
 

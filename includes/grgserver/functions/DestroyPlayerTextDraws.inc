@@ -1,7 +1,7 @@
 DestroyPlayerTextDraws(playerID)
 {
-	Foreach(playerTextDraw, playerTextDraws[])
+	Foreach(playerTextDraw, g_playerTextDraws[])
 	{
-		PlayerTextDrawDestroy(playerID, playerTextDraws[playerID][enum_playerTextDraws:playerTextDraw]);
+		PlayerTextDrawDestroy(playerID, g_playerTextDraws[playerID][E_PTD:playerTextDraw]);
 	}
 }

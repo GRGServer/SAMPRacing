@@ -3,7 +3,7 @@ LanguageString(playerID, stringID)
 	new string[STRINGLENGTH_LANGUAGESTRING];
 	if (playerID == INVALID_PLAYER_ID)
 	{
-		strcat(string, languageStrings[stringID][LANGUAGESTRING_ENGLISH]);
+		strcat(string, g_languageStrings[stringID][E_LANGUAGESTRING_ENGLISH]);
 	}
 	else
 	{
@@ -11,11 +11,11 @@ LanguageString(playerID, stringID)
 		{
 			case LANGUAGE_GERMAN:
 			{
-				strcat(string, languageStrings[stringID][LANGUAGESTRING_GERMAN]);
+				strcat(string, g_languageStrings[stringID][E_LANGUAGESTRING_GERMAN]);
 			}
 			default:
 			{
-				strcat(string, languageStrings[stringID][LANGUAGESTRING_ENGLISH]);
+				strcat(string, g_languageStrings[stringID][E_LANGUAGESTRING_ENGLISH]);
 			}
 		}
 	}

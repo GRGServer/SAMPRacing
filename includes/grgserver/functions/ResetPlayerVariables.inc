@@ -1,7 +1,7 @@
 ResetPlayerVariables(playerID)
 {
-	Foreach(playerVariable, playerVariables[])
+	Foreach(playerVariable, g_playerVariables[])
 	{
-		playerVariables[playerID][enum_playerVariables:playerVariable] = 0;
+		g_playerVariables[playerID][E_PVAR:playerVariable] = 0;
 	}
 }

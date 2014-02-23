@@ -20,7 +20,7 @@ ReloadTeleports()
 		node = XML_GetFirstChild(teleportNode, "name");
 		if (node)
 		{
-			XML_GetValue(XML_GetFirstChild(node), teleports[teleportID][TELEPORT_NAME], STRINGLENGTH_TELEPORTNAME);
+			XML_GetValue(XML_GetFirstChild(node), g_teleports[teleportID][E_TELEPORT_NAME], STRINGLENGTH_TELEPORTNAME);
 		}
 		else
 		{
@@ -33,34 +33,34 @@ ReloadTeleports()
 		node = XML_GetFirstChild(teleportNode, "command");
 		if (node)
 		{
-			XML_GetValue(XML_GetFirstChild(node), teleports[teleportID][TELEPORT_COMMAND], STRINGLENGTH_TELEPORTCOMMAND);
+			XML_GetValue(XML_GetFirstChild(node), g_teleports[teleportID][E_TELEPORT_COMMAND], STRINGLENGTH_TELEPORTCOMMAND);
 		}
 		else
 		{
-			teleports[teleportID][TELEPORT_COMMAND] = 0;
+			g_teleports[teleportID][E_TELEPORT_COMMAND] = 0;
 		}
 
 		// Read "withvehicle" value
-		teleports[teleportID][TELEPORT_WITHVEHICLE] = false;
+		g_teleports[teleportID][E_TELEPORT_WITHVEHICLE] = false;
 		node = XML_GetFirstChild(teleportNode, "withvehicle");
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
 			if (StrNotNull(string) && !strcmp(string, "true", true))
 			{
-				teleports[teleportID][TELEPORT_WITHVEHICLE] = true;
+				g_teleports[teleportID][E_TELEPORT_WITHVEHICLE] = true;
 			}
 		}
 
 		// Read "adminsonly" value
-		teleports[teleportID][TELEPORT_ADMINSONLY] = false;
+		g_teleports[teleportID][E_TELEPORT_ADMINSONLY] = false;
 		node = XML_GetFirstChild(teleportNode, "adminsonly");
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
 			if (StrNotNull(string) && !strcmp(string, "true", true))
 			{
-				teleports[teleportID][TELEPORT_ADMINSONLY] = true;
+				g_teleports[teleportID][E_TELEPORT_ADMINSONLY] = true;
 			}
 		}
 
@@ -77,7 +77,7 @@ ReloadTeleports()
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
-			teleports[teleportID][TELEPORT_POSX] = floatstr(string);
+			g_teleports[teleportID][E_TELEPORT_POSX] = floatstr(string);
 		}
 		else
 		{
@@ -90,7 +90,7 @@ ReloadTeleports()
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
-			teleports[teleportID][TELEPORT_POSY] = floatstr(string);
+			g_teleports[teleportID][E_TELEPORT_POSY] = floatstr(string);
 		}
 		else
 		{
@@ -103,7 +103,7 @@ ReloadTeleports()
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
-			teleports[teleportID][TELEPORT_POSZ] = floatstr(string);
+			g_teleports[teleportID][E_TELEPORT_POSZ] = floatstr(string);
 		}
 		else
 		{
@@ -116,7 +116,7 @@ ReloadTeleports()
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
-			teleports[teleportID][TELEPORT_ANGLE] = floatstr(string);
+			g_teleports[teleportID][E_TELEPORT_ANGLE] = floatstr(string);
 		}
 		else
 		{
@@ -129,11 +129,11 @@ ReloadTeleports()
 		if (node)
 		{
 			XML_GetValue(XML_GetFirstChild(node), string);
-			teleports[teleportID][TELEPORT_INTERIOR] = strval(string);
+			g_teleports[teleportID][E_TELEPORT_INTERIOR] = strval(string);
 		}
 		else
 		{
-			teleports[teleportID][TELEPORT_INTERIOR] = 0;
+			g_teleports[teleportID][E_TELEPORT_INTERIOR] = 0;
 		}
 
 		teleportID++;

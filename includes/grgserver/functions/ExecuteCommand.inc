@@ -8,13 +8,13 @@ ExecuteCommand(playerID, command[], parameters[])
 	if (funcidx(functionName) == -1)
 	{
 		// Search teleports for the command
-		Foreach(teleportID, teleports)
+		Foreach(teleportID, g_teleports)
 		{
 			// Check whether the teleport command is the requested command
-			if (StrNotNull(teleports[teleportID][TELEPORT_COMMAND]) && !strcmp(teleports[teleportID][TELEPORT_COMMAND], command, true))
+			if (StrNotNull(g_teleports[teleportID][E_TELEPORT_COMMAND]) && !strcmp(g_teleports[teleportID][E_TELEPORT_COMMAND], command, true))
 			{
 				// Check whether the teleport is not only for admins or the player is an admin
-				if (!teleports[teleportID][TELEPORT_ADMINSONLY] || PVar:playerID[ISADMIN])
+				if (!g_teleports[teleportID][E_TELEPORT_ADMINSONLY] || PVar:playerID[ISADMIN])
 				{
 					TeleportTo(playerID, teleportID);
 					returnCode = COMMAND_OK;

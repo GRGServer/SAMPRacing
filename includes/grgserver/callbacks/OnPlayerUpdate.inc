@@ -148,9 +148,9 @@ public OnPlayerUpdate(playerid)
 		new string[100];
 
 		Format:string(LanguageString(playerid, StringID:43("Drift Score: %d~n~~n~Best Score: %d * Last Score: %d")), PVar:playerid[DRIFTING_SCORE], PVar:playerid[DRIFTING_BESTSCORE], PVar:playerid[DRIFTING_LASTSCORE]);
-		PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_BOTTOM], string);
+		PlayerTextDrawSetString(playerid, g_playerTextDraws[playerid][E_PTD_DRIFTING_BOTTOM], string);
 
 		Format:string("%d~n~~n~%d", PVar:playerid[DRIFTING_SPEEDBONUS], PVar:playerid[DRIFTING_ANGLEBONUS]);
-		PlayerTextDrawSetString(playerid, PTextDraw:playerid[DRIFTING_BONUS_VALUES], string);
+		PlayerTextDrawSetString(playerid, g_playerTextDraws[playerid][E_PTD_DRIFTING_BONUS_VALUES], string);
 	}
 }

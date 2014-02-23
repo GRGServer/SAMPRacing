@@ -9,9 +9,9 @@ StopDrifting(playerID)
 	PVar:playerID[DRIFTING_SPEEDBONUS] = 0;
 	PVar:playerID[DRIFTING_STATE] = false;
 
-	PlayerTextDrawHide(playerID, PTextDraw:playerID[DRIFTING_BONUS_LABELS]);
-	PlayerTextDrawHide(playerID, PTextDraw:playerID[DRIFTING_BONUS_VALUES]);
-	PlayerTextDrawHide(playerID, PTextDraw:playerID[DRIFTING_BOTTOM]);
+	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS]);
+	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES]);
+	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BOTTOM]);
 
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:32("Drifting has been disabled"));
 }

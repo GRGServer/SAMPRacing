@@ -75,15 +75,15 @@ CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1
 
 		SetVehicleParamsEx(vehicleID, false, false, false, false, false, false, false);
 
-		Count(vehiclePropertyID, sizeof(vehicles[]))
+		Count(vehiclePropertyID, sizeof(g_vehicles[]))
 		{
-			vehicles[vehicleID][enum_vehicle:vehiclePropertyID] = 0;
+			g_vehicles[vehicleID][E_VEHICLE:vehiclePropertyID] = 0;
 		}
 
-		VehicleProperty:vehicleID[COLOR1] = color1;
-		VehicleProperty:vehicleID[COLOR2] = color2;
-		VehicleProperty:vehicleID[CURRENTCOLOR1] = newColor1;
-		VehicleProperty:vehicleID[CURRENTCOLOR2] = newColor2;
+		g_vehicles[vehicleID][E_VEHICLE_COLOR1] = color1;
+		g_vehicles[vehicleID][E_VEHICLE_COLOR2] = color2;
+		g_vehicles[vehicleID][E_VEHICLE_CURRENTCOLOR1] = newColor1;
+		g_vehicles[vehicleID][E_VEHICLE_CURRENTCOLOR2] = newColor2;
 
 		return vehicleID;
 	}

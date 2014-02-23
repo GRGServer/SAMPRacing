@@ -11,7 +11,7 @@
 #define NCMD:%0(%1,%2,%3) COMMAND:%0(%1, %2) if (!IsPlayerNPC(%1)) return COMMAND_NPC_ONLY; else
 
 // AddLine:string(string[, formatParameters])
-#define AddLine:%0(%1) if (strlen(%0)) strcat(%0, "\n"); Format:addLineString(%1); strcat(%0, addLineString)
+#define AddLine:%0(%1) if (strlen(%0)) strcat(%0, "\n"); Format:g_addLineString(%1); strcat(%0, g_addLineString)
 
 // Count(countingVariable, maximumValue)
 #define Count(%0,%1) for (new %0 = 0; %0 < %1; %0++)
@@ -55,7 +55,7 @@ for (new i_%0 = 0; ; ++i_%0) \
 #define LanguageStringLimit(%0) %0
 
 // LoggedInPlayers(returningPlayerID)
-#define LoggedInPlayers(%0) Count(%0, maxPlayers) if (IsLoggedIn(%0))
+#define LoggedInPlayers(%0) Count(%0, g_maxPlayers) if (IsLoggedIn(%0))
 
 // PickupEvent:pickupType(parameters)
 #define PickupEvent:%0(%1) forward PUE_%0(%1); public PUE_%0(%1)
@@ -64,13 +64,10 @@ for (new i_%0 = 0; ; ++i_%0) \
 #define PickupModelID:%0(%1) forward PUMID_%0(%1); public PUMID_%0(%1)
 
 // PlayerLoop(returningPlayerID)
-#define PlayerLoop(%0) Count(%0, maxPlayers) if (IsPlayerConnected(%0))
-
-// PTextDraw:playerID[textDrawField]
-#define PTextDraw:%0[%1] playerTextDraws[%0][PTD_%1]
+#define PlayerLoop(%0) Count(%0, g_maxPlayers) if (IsPlayerConnected(%0))
 
 // PVar:playerID[field]
-#define PVar:%0[%1] playerVariables[%0][PVAR_%1]
+#define PVar:%0[%1] g_playerVariables[%0][E_PVAR_%1]
 
 // RandomEx(min, max)
 #define RandomEx(%0,%1) (random(%1 - %0 + 1) + %0)
@@ -89,6 +86,3 @@ for (new i_%0 = 0; ; ++i_%0) \
 
 // Timer:name(parameters)
 #define Timer:%0(%1) forward Timer_%0(%1); public Timer_%0(%1)
-
-// VehicleProperty:vehicleID[property]
-#define VehicleProperty:%0[%1] vehicles[%0 - 1][VEHICLE_%1]

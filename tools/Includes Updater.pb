@@ -46,7 +46,6 @@ If OpenConsole()
 			WriteStringN(mainInclude, "")
 			AddDir("Structures")
 			AddIncludeGroup("Global variables")
-			AddInclude("arrays.inc")
 			AddInclude("globals.inc")
 			AddInclude("forwards.inc")
 			WriteStringN(mainInclude, "")
@@ -69,14 +68,14 @@ If OpenConsole()
 EndIf
 ; IDE Options = PureBasic 5.21 LTS (Windows - x86)
 ; ExecutableFormat = Console
-; CursorPosition = 50
+; CursorPosition = 48
 ; FirstLine = 18
 ; Folding = -
 ; EnableXP
 ; UseIcon = Includes Updater.ico
 ; Executable = Includes Updater.exe
-; EnableCompileCount = 19
-; EnableBuildCount = 19
+; EnableCompileCount = 20
+; EnableBuildCount = 20
 ; EnableExeConstant
 ; IncludeVersionInfo
 ; VersionField0 = 1,0,0,0
