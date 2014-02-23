@@ -32,6 +32,8 @@ DialogResponse:Register_Password2(playerID, response, listItem, inputText[])
 			LoadPlayer(playerID);
 			SpawnPlayer(playerID);
 
+			GivePlayerMoney(playerID, REGISTER_MONEY);
+
 			SendClientMessageEx(playerID, COLOR_INFO, StringID:41("Your registration was successful"));
 			SendClientMessageEx(playerID, COLOR_INFO, StringID:46("You are now logged in"));
 		}

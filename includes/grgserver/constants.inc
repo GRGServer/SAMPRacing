@@ -19,6 +19,7 @@
 
 
 // Register
+#define REGISTER_MONEY			2000
 #define REGISTER_PASSWORD_MAX		20
 #define REGISTER_PASSWORD_MIN		 3
 
