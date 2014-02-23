@@ -257,6 +257,14 @@
             Das eingegebene passwort stimmt nicht Übereine! Bitte versuch es Nocheinmal1
         </de>
     </string>
+    <string id="32">
+        <en>
+            Drift track
+        </en>
+        <de>
+            Driftstrecke
+        </de>
+    </string>
     <string id="33">
         <en>
             Register
