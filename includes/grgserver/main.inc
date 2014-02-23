@@ -4,6 +4,7 @@
 #include <grgserver\macros.inc>
 
 // Structures
+#include <grgserver\Structures\E_AREA.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
 #include <grgserver\Structures\E_PTD.inc>
@@ -33,6 +34,7 @@
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
 #include <grgserver\functions\PlaySound.inc>
+#include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
@@ -44,9 +46,10 @@
 #include <grgserver\functions\SendClientMessageEx.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
-#include <grgserver\functions\StopDrifting.inc>
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
+#include <grgserver\functions\UpdateDrifting.inc>
+#include <grgserver\functions\XML_GetFloatValue.inc>
 #include <grgserver\functions\mysql_query_format.inc>
 #include <grgserver\functions\str_replace.inc>
 
@@ -59,6 +62,8 @@
 #include <grgserver\callbacks\OnPlayerConnect.inc>
 #include <grgserver\callbacks\OnPlayerDeath.inc>
 #include <grgserver\callbacks\OnPlayerDisconnect.inc>
+#include <grgserver\callbacks\OnPlayerEnterArea.inc>
+#include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
 #include <grgserver\callbacks\OnPlayerSpawn.inc>
 #include <grgserver\callbacks\OnPlayerText.inc>
@@ -78,11 +83,13 @@
 
 // commands
 #include <grgserver\commands\addtp.inc>
-#include <grgserver\commands\drift.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\god.inc>
+#include <grgserver\commands\jetpack.inc>
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\reload.inc>
+#include <grgserver\commands\showarea.inc>
+#include <grgserver\commands\showareas.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 #include <grgserver\commands\tp.inc>
 #include <grgserver\commands\tpto.inc>

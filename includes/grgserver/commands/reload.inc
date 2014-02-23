@@ -4,8 +4,15 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	if (sscanf(params, "s[100]", part))
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "commandaliases, languagestrings, teleports, vehiclemodels");
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, languagestrings, teleports, vehiclemodels");
 		return COMMAND_USAGE;
+	}
+
+	if (!strcmp(part, "areas", true))
+	{
+		ReloadAreas();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:72("Areas reloaded"));
+		return COMMAND_OK;
 	}
 
 	if (!strcmp(part, "commandaliases", true))

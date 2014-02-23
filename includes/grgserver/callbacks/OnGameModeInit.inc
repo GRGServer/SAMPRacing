@@ -11,6 +11,7 @@ public OnGameModeInit()
 	ReloadVehicleModels();
 	ReloadCommandAliases();
 	ReloadTeleports();
+	ReloadAreas();
 
 	g_textDrawClock = TextDrawCreate(547, 25, "_");
 	TextDrawSetShadow(g_textDrawClock, 0);

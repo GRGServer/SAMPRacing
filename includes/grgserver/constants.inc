@@ -10,9 +10,11 @@
 
 
 // Limits
+#define MAX_AREA_POLYGON_POINTS		50
+#define MAX_AREAS			50
 #define MAX_COMMANDALIASES		50
 #define MAX_FUNCTION_NAME		32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(67)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(75)
 #define MAX_TELEPORTS			50
 
 
@@ -37,6 +39,8 @@
 
 
 // String sizes
+#define STRINGLENGTH_AREAGROUP		10
+#define STRINGLENGTH_AREANAME		100
 #define STRINGLENGTH_CMDALIASPARAMS	256
 #define STRINGLENGTH_COMMANDNAME	MAX_FUNCTION_NAME - 5// 4 = "cmd_" + 1 (For 0 byte)
 #define STRINGLENGTH_DIALOGNAME		MAX_FUNCTION_NAME - 4// 4 = "DR_" + 1 (For 0 byte)
@@ -45,6 +49,13 @@
 #define STRINGLENGTH_TELEPORTNAME	100
 #define STRINGLENGTH_VEHICLENAME	20
 #define STRINGLENGTH_VEHICLETYPE	16
+
+
+// Area groups
+enum
+{
+	AREAGROUP_DRIFT
+}
 
 
 // Command responses
