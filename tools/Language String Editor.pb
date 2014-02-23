@@ -134,7 +134,7 @@ Procedure FindEmptySlot()
 			ProcedureReturn index
 		EndIf
 	Next
-	ProcedureReturn ArraySize(Strings())
+	ProcedureReturn ArraySize(Strings()) + 1
 EndProcedure
 
 Procedure TrimList()
@@ -861,15 +861,15 @@ If OpenWindow(#Window, 100, 100, 800, 500, #Title, #PB_Window_MinimizeGadget | #
 	ForEver
 EndIf
 ; IDE Options = PureBasic 5.21 LTS (Windows - x86)
-; CursorPosition = 330
-; FirstLine = 292
+; CursorPosition = 140
+; FirstLine = 118
 ; Folding = -----
 ; EnableXP
 ; UseIcon = Language String Editor.ico
 ; Executable = Language String Editor.exe
 ; CommandLine = X:\GitHub\SAMPRacing\
-; EnableCompileCount = 363
-; EnableBuildCount = 21
+; EnableCompileCount = 372
+; EnableBuildCount = 22
 ; EnableExeConstant
 ; IncludeVersionInfo
 ; VersionField0 = 1,0,0,0
