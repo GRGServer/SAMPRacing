@@ -29,17 +29,6 @@ ReloadTeleports()
 			continue;
 		}
 
-		// Read "command" value
-		node = XML_GetFirstChild(teleportNode, "command");
-		if (node)
-		{
-			XML_GetValue(XML_GetFirstChild(node), g_teleports[teleportID][E_TELEPORT_COMMAND], STRINGLENGTH_COMMANDNAME);
-		}
-		else
-		{
-			g_teleports[teleportID][E_TELEPORT_COMMAND] = 0;
-		}
-
 		// Read "withvehicle" value
 		g_teleports[teleportID][E_TELEPORT_WITHVEHICLE] = false;
 		node = XML_GetFirstChild(teleportNode, "withvehicle");

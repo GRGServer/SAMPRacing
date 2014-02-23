@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <teleports>
     <teleport>
-        <name>Drift 1</name>
-        <command>drift1</command>
+        <name>drift1</name>
         <withvehicle>true</withvehicle>
         <position>
             <x>-2400.071</x>

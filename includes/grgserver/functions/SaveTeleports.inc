@@ -15,11 +15,6 @@ SaveTeleports()
 
 		XML_CreateNode(XML_CreateNode(teleportNode, "name"), g_teleports[teleportID][E_TELEPORT_NAME], e_XML_NODE_TEXT);
 
-		if (StrNotNull(g_teleports[teleportID][E_TELEPORT_COMMAND]))
-		{
-			XML_CreateNode(XML_CreateNode(teleportNode, "command"), g_teleports[teleportID][E_TELEPORT_COMMAND], e_XML_NODE_TEXT);
-		}
-
 		if (g_teleports[teleportID][E_TELEPORT_WITHVEHICLE])
 		{
 			XML_CreateNode(XML_CreateNode(teleportNode, "withvehicle"), "true", e_XML_NODE_TEXT);

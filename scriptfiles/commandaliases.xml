@@ -3,4 +3,9 @@
 		<name>v</name>
 		<command>spawnvehicle</command>
 	</alias>
+	<alias>
+		<name>drift1</name>
+		<command>tp</command>
+		<parameters>drift1</parameters>
+	</alias>
 </commandaliases>

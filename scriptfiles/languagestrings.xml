@@ -393,6 +393,14 @@
             Driften aktivieren oder deaktivieren
         </de>
     </string>
+    <string id="49">
+        <en>
+            Teleport not found!
+        </en>
+        <de>
+            Teleport nicht gefunden!
+        </de>
+    </string>
     <string id="50">
         <en>
             Teleport yourself to another player
