@@ -101,14 +101,9 @@ public OnPlayerUpdate(playerid)
 						{
 							PVar:playerid[DRIFTING_BESTSCORE] = PVar:playerid[DRIFTING_SCORE];
 						}
-						else
-						{
-							PVar:playerid[DRIFTING_LASTSCORE] = PVar:playerid[DRIFTING_SCORE];
-						}
 					}
 					else
 					{
-						PVar:playerid[DRIFTING_LASTSCORE] = PVar:playerid[DRIFTING_SCORE];
 						if (PVar:playerid[DRIFTING_SCORE] > 70)
 						{
 							RepairVehicle(vehicleID);
@@ -116,6 +111,7 @@ public OnPlayerUpdate(playerid)
 							AddVehicleComponent(vehicleID, 1009);
 						}
 					}
+					PVar:playerid[DRIFTING_LASTSCORE] = PVar:playerid[DRIFTING_SCORE];
 					PVar:playerid[DRIFTING_SCORESTATE] = false;
 
 					GivePlayerMoney(playerid, PVar:playerid[DRIFTING_ANGLEBONUS] / 10);
