@@ -313,6 +313,8 @@ Procedure AddString(stringID, englishString$, germanString$, addNotExisting, ign
 					AssignStrings()\references()\line = referenceLine
 					AssignStrings()\references()\content = referenceContent$
 				EndIf
+			ElseIf stringID < -1
+				WriteLog("Invalid string ID " + Str(stringID) + " used in '" + referenceFileName$ + "'!")
 			Else
 				If stringID > ArraySize(Strings())
 					ReDim Strings(stringID)
@@ -859,15 +861,15 @@ If OpenWindow(#Window, 100, 100, 800, 500, #Title, #PB_Window_MinimizeGadget | #
 	ForEver
 EndIf
 ; IDE Options = PureBasic 5.21 LTS (Windows - x86)
-; CursorPosition = 217
-; FirstLine = 200
+; CursorPosition = 330
+; FirstLine = 292
 ; Folding = -----
 ; EnableXP
 ; UseIcon = Language String Editor.ico
 ; Executable = Language String Editor.exe
-; CommandLine = X:\Projects\SAMP-Server\
-; EnableCompileCount = 359
-; EnableBuildCount = 20
+; CommandLine = X:\GitHub\SAMPRacing\
+; EnableCompileCount = 363
+; EnableBuildCount = 21
 ; EnableExeConstant
 ; IncludeVersionInfo
 ; VersionField0 = 1,0,0,0
