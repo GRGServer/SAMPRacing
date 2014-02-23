@@ -26,14 +26,13 @@ public OnPlayerDisconnect(playerid, reason)
 		}
 	}
 
-	if (!IsPlayerNPC(playerid) && playerid != playerid)
+	// Send leave message to all players except the leaving player
+	PlayerLoop(playerID)
 	{
-		SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
-	}
-
-	if (PVar:playerid[DRIFTING_STATE])
-	{
-		StopDrifting(playerid);
+		if (!IsPlayerNPC(playerID) && playerID != playerid)
+		{
+			SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
+		}
 	}
 
 	ResetPlayerVariables(playerid);
