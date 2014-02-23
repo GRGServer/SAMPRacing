@@ -353,6 +353,14 @@
             Driftpunkte: %d~n~~n~Beste: %d * Letzte: %d
         </de>
     </string>
+    <string id="44">
+        <en>
+            Command aliases reloaded
+        </en>
+        <de>
+            Befehlsaliase neugeladen
+        </de>
+    </string>
     <string id="45">
         <en>
             Login

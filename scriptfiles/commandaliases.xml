@@ -1,0 +1,6 @@
+<commandaliases>
+	<alias>
+		<name>v</name>
+		<command>spawnvehicle</command>
+	</alias>
+</commandaliases>

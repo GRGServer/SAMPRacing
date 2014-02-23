@@ -4,6 +4,7 @@
 #include <grgserver\macros.inc>
 
 // Structures
+#include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
 #include <grgserver\Structures\E_PTD.inc>
 #include <grgserver\Structures\E_PVAR.inc>
@@ -33,6 +34,7 @@
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
 #include <grgserver\functions\PlaySound.inc>
+#include <grgserver\functions\ReloadCommandAliases.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>

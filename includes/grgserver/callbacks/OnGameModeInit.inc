@@ -9,6 +9,7 @@ public OnGameModeInit()
 
 	ReloadLanguageStrings();
 	ReloadVehicleModels();
+	ReloadCommandAliases();
 	ReloadTeleports();
 
 	g_textDrawClock = TextDrawCreate(547, 25, "_");

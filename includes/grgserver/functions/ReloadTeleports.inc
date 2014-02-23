@@ -33,7 +33,7 @@ ReloadTeleports()
 		node = XML_GetFirstChild(teleportNode, "command");
 		if (node)
 		{
-			XML_GetValue(XML_GetFirstChild(node), g_teleports[teleportID][E_TELEPORT_COMMAND], STRINGLENGTH_TELEPORTCOMMAND);
+			XML_GetValue(XML_GetFirstChild(node), g_teleports[teleportID][E_TELEPORT_COMMAND], STRINGLENGTH_COMMANDNAME);
 		}
 		else
 		{
