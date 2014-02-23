@@ -61,6 +61,7 @@
 #include <grgserver\callbacks\OnPlayerDisconnect.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
 #include <grgserver\callbacks\OnPlayerSpawn.inc>
+#include <grgserver\callbacks\OnPlayerText.inc>
 #include <grgserver\callbacks\OnPlayerUpdate.inc>
 #include <grgserver\callbacks\OnVehicleDamageStatusUpdate.inc>
 
