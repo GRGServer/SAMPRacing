@@ -8,8 +8,16 @@ Visit http://grgserver.net for more information about the server.
 
 ## Requirements
 
-  * Windows or Linux
+  * Linux or Windows
   * MySQL Server
+
+To compile the script on Linux, you have to install wine. The Pawn compiler also requires vcrun6 and vcrun2005 which can be installed using winetricks.
+
+```
+aptitude install wine winetricks
+winetricks --unattended vcrun6
+winetricks --unattended vcrun2005
+```
 
 ## Configuration
 
