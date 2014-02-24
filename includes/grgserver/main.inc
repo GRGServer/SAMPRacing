@@ -94,5 +94,6 @@
 #include <grgserver\commands\showareas.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 #include <grgserver\commands\tp.inc>
+#include <grgserver\commands\tppos.inc>
 #include <grgserver\commands\tpto.inc>
 

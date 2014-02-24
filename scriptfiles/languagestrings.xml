@@ -601,4 +601,20 @@
             Du bist in keinem Bereich
         </de>
     </string>
+    <string id="75">
+        <en>
+            Teleport yourself to a specific position
+        </en>
+        <de>
+            Teleportiere dich an eine bestimmte Position
+        </de>
+    </string>
+    <string id="76">
+        <en>
+            You teleported yourself to the position %f x %f x %f in interior %d
+        </en>
+        <de>
+            Du hast dich an die Position %f x %f x %f im Interior %d teleportiert
+        </de>
+    </string>
 </languagestrings>

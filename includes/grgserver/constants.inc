@@ -14,7 +14,7 @@
 #define MAX_AREAS			50
 #define MAX_COMMANDALIASES		50
 #define MAX_FUNCTION_NAME		32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(75)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(77)
 #define MAX_TELEPORTS			50
 
 
