@@ -4,6 +4,11 @@ ReloadAreas()
 
 	Foreach(index, g_areas)
 	{
+		if (IsValidDynamicArea(g_areas[index][E_AREA_ID]))
+		{
+			DestroyDynamicArea(g_areas[index][E_AREA_ID]);
+		}
+
 		Foreach(field, g_areas[])
 		{
 			g_areas[index][E_AREA:field] = 0;
