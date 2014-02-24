@@ -12,6 +12,7 @@ public OnGameModeInit()
 	ReloadCommandAliases();
 	ReloadTeleports();
 	ReloadAreas();
+	ReloadPickups();
 
 	g_textDrawClock = TextDrawCreate(547, 25, "_");
 	TextDrawSetShadow(g_textDrawClock, 0);

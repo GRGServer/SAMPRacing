@@ -4,7 +4,7 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	if (sscanf(params, "s[100]", part))
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, languagestrings, teleports, vehiclemodels");
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, languagestrings, pickups, teleports, vehiclemodels");
 		return COMMAND_USAGE;
 	}
 
@@ -26,6 +26,13 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	{
 		ReloadLanguageStrings();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:57("Language strings reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "pickups", true))
+	{
+		ReloadPickups();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:77("Pickups reloaded"));
 		return COMMAND_OK;
 	}
 

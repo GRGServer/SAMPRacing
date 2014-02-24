@@ -7,6 +7,7 @@
 #include <grgserver\Structures\E_AREA.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
+#include <grgserver\Structures\E_PICKUP.inc>
 #include <grgserver\Structures\E_PTD.inc>
 #include <grgserver\Structures\E_PVAR.inc>
 #include <grgserver\Structures\E_TELEPORT.inc>
@@ -23,7 +24,11 @@
 #include <grgserver\functions\CreateDialog.inc>
 #include <grgserver\functions\CreatePlayerTextDraws.inc>
 #include <grgserver\functions\CreateVehicleEx.inc>
+#include <grgserver\functions\CreateVehicleShopVehicle.inc>
+#include <grgserver\functions\EnterVehicleShop.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
+#include <grgserver\functions\ExitVehicleShop.inc>
+#include <grgserver\functions\FindNextVehicleModel.inc>
 #include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
@@ -33,10 +38,12 @@
 #include <grgserver\functions\IsLoggedIn.inc>
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
+#include <grgserver\functions\PickupEvent.inc>
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
+#include <grgserver\functions\ReloadPickups.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
@@ -50,6 +57,7 @@
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\UpdateDrifting.inc>
+#include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>
 #include <grgserver\functions\mysql_query_format.inc>
 #include <grgserver\functions\str_replace.inc>
@@ -66,6 +74,8 @@
 #include <grgserver\callbacks\OnPlayerEnterArea.inc>
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
+#include <grgserver\callbacks\OnPlayerKeyStateChange.inc>
+#include <grgserver\callbacks\OnPlayerPickUpPickup.inc>
 #include <grgserver\callbacks\OnPlayerSpawn.inc>
 #include <grgserver\callbacks\OnPlayerText.inc>
 #include <grgserver\callbacks\OnPlayerUpdate.inc>
@@ -78,7 +88,11 @@
 #include <grgserver\dialogs\D_Register_Password2.inc>
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
+// pickups
+#include <grgserver\pickups\Pickup_VehicleShop.inc>
+
 // timers
+#include <grgserver\timers\Timer_EnterVehicleShopSpawn.inc>
 #include <grgserver\timers\Timer_EveryMinute.inc>
 #include <grgserver\timers\Timer_EverySecond.inc>
 

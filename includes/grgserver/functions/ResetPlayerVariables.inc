@@ -4,4 +4,7 @@ ResetPlayerVariables(playerID)
 	{
 		g_playerVariables[playerID][E_PVAR:playerVariable] = 0;
 	}
+
+	// Initialize variables with default values
+	PVar:playerID[VEHICLESHOP_VEHICLEID] = INVALID_VEHICLE_ID;
 }

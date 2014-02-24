@@ -1,10 +1,34 @@
 <pickups>
-	<pickup type="vehicleshop" posx="-1649.088134" posy="1209.080566" posz="7.25"/>
-	<pickup type="vehicleshop" posx="-1966.667236" posy="294.023406" posz="35.46875"/>
-	<pickup type="vehicleshop" posx="866.968505" posy="-1203.707031" posz="16.976562"/>
-	<pickup type="vehicleshop" posx="2404.021972" posy="-1496.852172" posz="24"/>
-	<pickup type="vehicleshop" posx="1953.929199" posy="703.649902" posz="10.820312"/>
-	<pickup type="vehicleshop" posx="2172.868896" posy="1397.020019" posz="11.0625"/>
-	<pickup type="vehicleshop" posx="940.755615" posy="1733.579223" posz="8.851562"/>
-	<pickup type="vehicleshop" posx="-145.682708" posy="1173.458984" posz="19.742187"/>
+	<pickup type="VehicleShop">
+		<position x="-1649.088134" y="1209.080566" z="7.25"/>
+		<respawn x="-1642.345825" y="1204.023315" z="7.254719" angle="240.642318"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="-1966.667236" y="294.023406" z="35.46875"/>
+		<respawn x="-1971.641357" y="293.807403" z="35.171875" angle="91.807563"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="866.968505" y="-1203.707031" z="16.976562"/>
+		<respawn x="871.500244" y="-1204.356201" z="16.976562" angle="255.659011"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="2404.021972" y="-1496.852172" z="24"/>
+		<respawn x="2400.881591" y="-1499.080810" z="23.834865" angle="72.670623"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="1953.929199" y="703.649902" z="10.820312"/>
+		<respawn x="1959.849731" y="702.206909" z="10.820312" angle="269.109069"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="2172.868896" y="1397.020019" z="11.0625"/>
+		<respawn x="2166.568359" y="1396.542724" z="10.820312" angle="180.217620"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="940.755615" y="1733.579223" z="8.851562"/>
+		<respawn x="945.730285" y="1734.769042" z="8.851562" angle="263.469024"/>
+	</pickup>
+	<pickup type="VehicleShop">
+		<position x="-145.682708" y="1173.458984" z="19.742187"/>
+		<respawn x="-148.354980" y="1175.044555" z="19.749988" angle="243.511428"/>
+	</pickup>
 </pickups>

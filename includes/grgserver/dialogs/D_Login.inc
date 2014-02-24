@@ -38,7 +38,7 @@ DialogResponse:Login(playerID, response, listItem, inputText[])
 				}
 
 				// The next spawn is the first one
-				PVar:playerID[FIRSTSPAWN] = true;
+				PVar:playerID[SPAWNTYPE] = SPAWNTYPE_FIRSTSPAWN;
 
 				// Load and spawn the player
 				LoadPlayer(playerID);

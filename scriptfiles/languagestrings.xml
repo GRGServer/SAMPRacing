@@ -582,7 +582,7 @@
             Areas reloaded
         </en>
         <de>
-            Bereiche neu geladen
+            Bereiche neugeladen
         </de>
     </string>
     <string id="73">
@@ -615,6 +615,38 @@
         </en>
         <de>
             Du hast dich an die Position %f x %f x %f im Interior %d teleportiert
+        </de>
+    </string>
+    <string id="77">
+        <en>
+            Pickups reloaded
+        </en>
+        <de>
+            Pickups neugeladen
+        </de>
+    </string>
+    <string id="78">
+        <en>
+            Previous: ~k~~VEHICLE_TURRETLEFT~~n~Next: ~k~~VEHICLE_TURRETRIGHT~~n~Buy: ~k~~PED_SPRINT~~n~Quit: ~k~~VEHICLE_ENTER_EXIT~
+        </en>
+        <de>
+            Vorheriges: ~k~~VEHICLE_TURRETLEFT~~n~Nächstes: ~k~~VEHICLE_TURRETRIGHT~~n~Kaufen: ~k~~PED_SPRINT~~n~Verlassen: ~k~~VEHICLE_ENTER_EXIT~
+        </de>
+    </string>
+    <string id="79">
+        <en>
+            %s~n~~n~Price: $%d
+        </en>
+        <de>
+            %s~n~~n~Preis: $%d
+        </de>
+    </string>
+    <string id="80">
+        <en>
+            You do not have enough money!
+        </en>
+        <de>
+            Du hast nicht genügend Geld!
         </de>
     </string>
 </languagestrings>
