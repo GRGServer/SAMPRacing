@@ -44,6 +44,7 @@
 #include <grgserver\functions\SavePlayers.inc>
 #include <grgserver\functions\SaveTeleports.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
+#include <grgserver\functions\SetPrivateWorld.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
 #include <grgserver\functions\StrNotNull.inc>
@@ -88,6 +89,7 @@
 #include <grgserver\commands\jetpack.inc>
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\reload.inc>
+#include <grgserver\commands\savepos.inc>
 #include <grgserver\commands\showarea.inc>
 #include <grgserver\commands\showareas.inc>
 #include <grgserver\commands\spawnvehicle.inc>
