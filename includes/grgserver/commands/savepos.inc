@@ -21,6 +21,7 @@ ACMD:savepos(playerID, params[], StringID:42("Save your current position to a fi
 		else
 		{
 			GetPlayerPos(playerID, posX, posY, posZ);
+			GetPlayerFacingAngle(playerID, angle);
 			Format:string("%f x %f x %f x %f (int %d)", posX, posY, posZ, angle, GetPlayerInterior(playerID));
 		}
 
