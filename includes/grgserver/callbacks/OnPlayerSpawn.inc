@@ -40,6 +40,9 @@ public OnPlayerSpawn(playerid)
 		default:
 		{
 			// TODO: Spawn at the nearest hospital?
+			SetPlayerPos(playerid, SPAWN_POSX, SPAWN_POSY, SPAWN_POSZ);
+			SetPlayerFacingAngle(playerid, SPAWN_ANGLE);
+			SetPlayerInterior(playerid, SPAWN_INTERIOR);
 		}
 	}
 }
