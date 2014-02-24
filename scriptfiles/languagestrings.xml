@@ -337,6 +337,14 @@
             Deine Registrierung war erfolgreich
         </de>
     </string>
+    <string id="42">
+        <en>
+            Save your current position to a file
+        </en>
+        <de>
+            Speicher deine aktuelle Position in einer Datei
+        </de>
+    </string>
     <string id="43">
         <en>
             Drift Score: %d~n~~n~Best Score: %d * Last Score: %d
@@ -375,6 +383,14 @@
         </en>
         <de>
             Speedbonus:~n~~n~Winkelbonus:
+        </de>
+    </string>
+    <string id="48">
+        <en>
+            Position saved
+        </en>
+        <de>
+            Position gespeichert
         </de>
     </string>
     <string id="49">
