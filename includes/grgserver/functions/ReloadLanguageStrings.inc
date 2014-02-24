@@ -2,10 +2,12 @@ ReloadLanguageStrings()
 {
 	print("Loading language strings...");
 
-	Count(stringID, MAX_LANGUAGE_STRINGS)
+	Foreach(index, g_languageStrings)
 	{
-		strdel(g_languageStrings[stringID][E_LANGUAGESTRING_ENGLISH], 0, STRINGLENGTH_LANGUAGESTRING);
-		strdel(g_languageStrings[stringID][E_LANGUAGESTRING_GERMAN], 0, STRINGLENGTH_LANGUAGESTRING);
+		Foreach(field, g_languageStrings[])
+		{
+			g_languageStrings[index][E_LANGUAGESTRING:field] = 0;
+		}
 	}
 
 	new count;
