@@ -5,6 +5,19 @@ public OnPlayerSpawn(playerid)
 
 	switch (spawnType)
 	{
+		case SPAWNTYPE_DEATH:// Spawned after death
+		{
+			new closestHospitalPickupID = GetClosestPickup(PVar:playerid[DEATH_POSX], PVar:playerid[DEATH_POSY], PVar:playerid[DEATH_POSZ], "Hospital");
+
+			new Float:posX;
+			new Float:posY;
+			new Float:posZ;
+			Streamer_GetFloatData(STREAMER_TYPE_PICKUP, g_pickups[closestHospitalPickupID][E_PICKUP_ID], E_STREAMER_X, posX);
+			Streamer_GetFloatData(STREAMER_TYPE_PICKUP, g_pickups[closestHospitalPickupID][E_PICKUP_ID], E_STREAMER_Y, posY);
+			Streamer_GetFloatData(STREAMER_TYPE_PICKUP, g_pickups[closestHospitalPickupID][E_PICKUP_ID], E_STREAMER_Z, posZ);
+
+			SetPlayerPos(playerid, posX, posY, posZ);
+		}
 		case SPAWNTYPE_EXITVEHICLESHOP:// Spawned after exit of vehicle shop
 		{
 			new pickupID = PVar:playerid[VEHICLESHOP_PICKUPID];
@@ -39,7 +52,6 @@ public OnPlayerSpawn(playerid)
 		}
 		default:
 		{
-			// TODO: Spawn at the nearest hospital?
 			SetPlayerPos(playerid, SPAWN_POSX, SPAWN_POSY, SPAWN_POSZ);
 			SetPlayerFacingAngle(playerid, SPAWN_ANGLE);
 			SetPlayerInterior(playerid, SPAWN_INTERIOR);

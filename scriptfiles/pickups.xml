@@ -1,4 +1,34 @@
 <pickups>
+	<!-- Hospitals -->
+	<pickup type="Hospital">
+		<position x="1606.99" y="1818.3" z="10.8203"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="-2656.75" y="697.086" z="27.9336"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="1172.65" y="-1323.62" z="14.9248"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="-320.922" y="1048.86" z="20.3403"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="2034.1" y="-1404.52" z="17.2574"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="-2654.97" y="635.803" z="14.4531"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="-1753.98" y="961.89" z="24.8828"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="1656.41" y="-5648.94" z="12.1676"/>
+	</pickup>
+	<pickup type="Hospital">
+		<position x="1906.18" y="-3405.28" z="12.594"/>
+	</pickup>
+
+	<!-- Vehicle shops -->
 	<pickup type="VehicleShop">
 		<position x="-1649.088134" y="1209.080566" z="7.25"/>
 		<respawn x="-1642.345825" y="1204.023315" z="7.254719" angle="240.642318"/>
@@ -13,7 +43,7 @@
 	</pickup>
 	<pickup type="VehicleShop">
 		<position x="2404.021972" y="-1496.852172" z="24"/>
-		<respawn x="2400.881591" y="-1499.080810" z="23.834865" angle="72.670623"/>
+		<respawn x="2400.881591" y="-1499.08081" z="23.834865" angle="72.670623"/>
 	</pickup>
 	<pickup type="VehicleShop">
 		<position x="1953.929199" y="703.649902" z="10.820312"/>
@@ -21,7 +51,7 @@
 	</pickup>
 	<pickup type="VehicleShop">
 		<position x="2172.868896" y="1397.020019" z="11.0625"/>
-		<respawn x="2166.568359" y="1396.542724" z="10.820312" angle="180.217620"/>
+		<respawn x="2166.568359" y="1396.542724" z="10.820312" angle="180.21762"/>
 	</pickup>
 	<pickup type="VehicleShop">
 		<position x="940.755615" y="1733.579223" z="8.851562"/>
@@ -29,6 +59,6 @@
 	</pickup>
 	<pickup type="VehicleShop">
 		<position x="-145.682708" y="1173.458984" z="19.742187"/>
-		<respawn x="-148.354980" y="1175.044555" z="19.749988" angle="243.511428"/>
+		<respawn x="-148.35498" y="1175.044555" z="19.749988" angle="243.511428"/>
 	</pickup>
 </pickups>

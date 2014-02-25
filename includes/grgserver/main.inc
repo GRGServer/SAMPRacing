@@ -29,6 +29,8 @@
 #include <grgserver\functions\ExecuteCommand.inc>
 #include <grgserver\functions\ExitVehicleShop.inc>
 #include <grgserver\functions\FindNextVehicleModel.inc>
+#include <grgserver\functions\GetClosestPickup.inc>
+#include <grgserver\functions\GetDistanceBetweenPoints.inc>
 #include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
@@ -89,6 +91,7 @@
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
 // pickups
+#include <grgserver\pickups\Pickup_Hospital.inc>
 #include <grgserver\pickups\Pickup_VehicleShop.inc>
 
 // timers
