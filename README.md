@@ -10,6 +10,7 @@ Visit http://grgserver.net for more information about the server.
 
   * Linux or Windows
   * MySQL Server
+  * Webserver (To stream the audio files)
 
 To compile the script on Linux, you have to install wine. The Pawn compiler also requires vcrun6 and vcrun2005 which can be installed using winetricks.
 
