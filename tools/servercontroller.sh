@@ -93,7 +93,7 @@ case "$1" in
 
 	stop)
 		echo "Stopping SA-MP server..."
-		$DAEMONCMD_START
+		$DAEMONCMD_STOP
 		case "$?" in
 			0)
 				echo "Done"
