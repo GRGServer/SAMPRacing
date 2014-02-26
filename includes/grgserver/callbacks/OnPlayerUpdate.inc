@@ -37,4 +37,11 @@ public OnPlayerUpdate(playerid)
 	}
 
 	UpdateDrifting(playerid);
+
+	if (PVar:playerid[SETCAMERA_COUNT] > 0)
+	{
+		PVar:playerid[SETCAMERA_COUNT]--;
+		SetPlayerCameraPos(playerid, PVar:playerid[SETCAMERA_POSX], PVar:playerid[SETCAMERA_POSY], PVar:playerid[SETCAMERA_POSZ]);
+		SetPlayerCameraLookAt(playerid, PVar:playerid[SETCAMERA_LOOKATX], PVar:playerid[SETCAMERA_LOOKATY], PVar:playerid[SETCAMERA_LOOKATZ]);
+	}
 }

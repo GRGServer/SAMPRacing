@@ -53,6 +53,7 @@
 #include <grgserver\functions\SavePlayers.inc>
 #include <grgserver\functions\SaveTeleports.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
+#include <grgserver\functions\SetPlayerCameraPosEx.inc>
 #include <grgserver\functions\SetPrivateWorld.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
@@ -95,7 +96,6 @@
 #include <grgserver\pickups\Pickup_VehicleShop.inc>
 
 // timers
-#include <grgserver\timers\Timer_EnterVehicleShopSpawn.inc>
 #include <grgserver\timers\Timer_EveryMinute.inc>
 #include <grgserver\timers\Timer_EverySecond.inc>
 
