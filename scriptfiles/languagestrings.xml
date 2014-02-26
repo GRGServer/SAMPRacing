@@ -649,4 +649,44 @@
             Du hast nicht genügend Geld!
         </de>
     </string>
+    <string id="81">
+        <en>
+            Are you sure to buy the vehicle?
+        </en>
+        <de>
+            Bist du dir sicher, dass du das Fahrzeug kaufen möchtest?
+        </de>
+    </string>
+    <string id="82">
+        <en>
+            Name: %s
+        </en>
+        <de>
+            Name: %s
+        </de>
+    </string>
+    <string id="83">
+        <en>
+            Price: $%d
+        </en>
+        <de>
+            Preis: $%d
+        </de>
+    </string>
+    <string id="84">
+        <en>
+            Buy vehicle
+        </en>
+        <de>
+            Fahrzeug kaufen
+        </de>
+    </string>
+    <string id="85">
+        <en>
+            Vehicle bought
+        </en>
+        <de>
+            Fahrzeug gekauft
+        </de>
+    </string>
 </languagestrings>

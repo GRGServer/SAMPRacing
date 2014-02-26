@@ -1,4 +1,4 @@
-ExitVehicleShop(playerID)
+ExitVehicleShop(playerID, buy)
 {
 	PVar:playerID[VEHICLESHOP_ISINSIDE] = false;
 
@@ -12,6 +12,14 @@ ExitVehicleShop(playerID)
 		DestroyVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]);
 	}
 
-	PVar:playerID[SPAWNTYPE] = SPAWNTYPE_EXITVEHICLESHOP;
+	if (buy)
+	{
+		PVar:playerID[SPAWNTYPE] = SPAWNTYPE_BUYVEHICLESHOP;
+	}
+	else
+	{
+		PVar:playerID[SPAWNTYPE] = SPAWNTYPE_EXITVEHICLESHOP;
+	}
+
 	TogglePlayerSpectating(playerID, false);
 }

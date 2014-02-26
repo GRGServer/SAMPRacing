@@ -1,3 +1,7 @@
+// Audio files
+#define AUDIOFILE_VEHICLEBOUGHT		"bought.ogg"
+
+
 // Colors
 #define COLOR_CHAT			0xAAFFAAFF
 #define COLOR_ERROR			0xFF0000FF
@@ -14,8 +18,9 @@
 #define MAX_AREAS			50
 #define MAX_COMMANDALIASES		50
 #define MAX_FUNCTION_NAME		32
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(81)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(86)
 #define MAX_TELEPORTS			50
+#define MAX_VEHICLESHOPS		10
 
 
 // Register
@@ -105,6 +110,7 @@ enum
 enum
 {
 	SPAWNTYPE_DEFAULT,// Must be the first (0)
+	SPAWNTYPE_BUYVEHICLESHOP,
 	SPAWNTYPE_DEATH,
 	SPAWNTYPE_EXITVEHICLESHOP,
 	SPAWNTYPE_FIRSTSPAWN

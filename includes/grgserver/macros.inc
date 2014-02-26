@@ -63,6 +63,8 @@ for (new i_%0 = 0; ; ++i_%0) \
 // PickupModelID:pickupType(pickupID)
 #define PickupModelID:%0(%1) forward PUMID_%0(%1); public PUMID_%0(%1)
 
+#define PickupSetupType:%0(%1) forward PUST_%0(%1); public PUST_%0(%1)
+
 // PlayerLoop(returningPlayerID)
 #define PlayerLoop(%0) Count(%0, g_maxPlayers) if (IsPlayerConnected(%0))
 

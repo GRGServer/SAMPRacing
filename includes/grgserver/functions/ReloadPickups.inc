@@ -15,6 +15,11 @@ ReloadPickups()
 		}
 	}
 
+	Foreach(field, g_pickupSetupTypeIDs)
+	{
+		g_pickupSetupTypeIDs[E_PUSTID:field] = 0;
+	}
+
 	new pickupID = 0;
 	new XMLNode:xml = XML_LoadDocument("pickups.xml");
 	xml = XML_GetFirstChild(xml, "pickups");
@@ -27,9 +32,10 @@ ReloadPickups()
 			break;
 		}
 
+		new functionName[MAX_FUNCTION_NAME];
 		new value[100];
 		XML_GetAttribute(pickupNode, "type", value);
-		FormatNew:functionName[MAX_FUNCTION_NAME]("PUMID_%s", value);// PUMID = PickUpModelID
+		Format:functionName("PUMID_%s", value);// PUMID = PickUpModelID
 		if (funcidx(functionName) == -1)
 		{
 			printf("  Invalid pickup type '%s' for pickup %d", value, pickupID);
@@ -60,6 +66,12 @@ ReloadPickups()
 		g_pickups[pickupID][E_PICKUP_ID] = CreateDynamicPickup(modelID, 1, XML_GetFloatAttribute(positionNode, "x"), XML_GetFloatAttribute(positionNode, "y"), XML_GetFloatAttribute(positionNode, "z"));
 
 		Streamer_SetIntData(STREAMER_TYPE_PICKUP, g_pickups[pickupID][E_PICKUP_ID], E_STREAMER_EXTRA_ID, pickupID);
+
+		Format:functionName("PUST_%s", value);// PUST = PickUpSetupType
+		if (funcidx(functionName) != -1)
+		{
+			g_pickups[pickupID][E_PICKUP_LINK_ID] = CallLocalFunction(functionName, "dd", pickupID, _:pickupNode);
+		}
 
 		pickupID++;
 

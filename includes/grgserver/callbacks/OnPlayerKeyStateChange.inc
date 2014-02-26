@@ -21,12 +21,12 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 			}
 			else
 			{
-				// TODO: handle buy
+				ShowDialog:ConfirmVehicleBuy(playerid);
 			}
 		}
 		else if (IsKeyPressed(KEY_SECONDARY_ATTACK))
 		{
-			ExitVehicleShop(playerid);
+			ExitVehicleShop(playerid, false);
 		}
 	}
 }

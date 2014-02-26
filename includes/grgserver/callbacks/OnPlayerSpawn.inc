@@ -5,6 +5,16 @@ public OnPlayerSpawn(playerid)
 
 	switch (spawnType)
 	{
+		case SPAWNTYPE_BUYVEHICLESHOP:// Spawned after buying a vehicle from vehicle shop
+		{
+			new pickupID = PVar:playerid[VEHICLESHOP_PICKUPID];
+			new vehicleShopID = g_pickups[pickupID][E_PICKUP_LINK_ID];
+			new vehicleID = CreateVehicleEx(PVar:playerid[VEHICLESHOP_MODELID],g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSX], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSY], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSZ], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_ANGLE], random(128), random(128), false);
+			PutPlayerInVehicle(playerid, vehicleID, 0);
+			GivePlayerMoney(playerid, -g_vehicleModels[PVar:playerid[VEHICLESHOP_MODELID] - 400][E_VEHICLEMODEL_PRICE]);
+			PlayAudioFileForPlayer(playerid, AUDIOFILE_VEHICLEBOUGHT);
+			GameTextForPlayer(playerid, LanguageString(playerid, StringID:85("Vehicle bought")), 5000, 1);
+		}
 		case SPAWNTYPE_DEATH:// Spawned after death
 		{
 			new closestHospitalPickupID = GetClosestPickup(PVar:playerid[DEATH_POSX], PVar:playerid[DEATH_POSY], PVar:playerid[DEATH_POSZ], "Hospital");

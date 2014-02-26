@@ -9,10 +9,12 @@
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
 #include <grgserver\Structures\E_PICKUP.inc>
 #include <grgserver\Structures\E_PTD.inc>
+#include <grgserver\Structures\E_PUSTID.inc>
 #include <grgserver\Structures\E_PVAR.inc>
 #include <grgserver\Structures\E_TELEPORT.inc>
 #include <grgserver\Structures\E_VEHICLE.inc>
 #include <grgserver\Structures\E_VEHICLEMODEL.inc>
+#include <grgserver\Structures\E_VEHICLESHOP.inc>
 
 // Global variables
 #include <grgserver\globals.inc>
@@ -41,6 +43,7 @@
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
 #include <grgserver\functions\PickupEvent.inc>
+#include <grgserver\functions\PlayAudioFileForPlayer.inc>
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
@@ -85,6 +88,7 @@
 #include <grgserver\callbacks\OnVehicleDamageStatusUpdate.inc>
 
 // dialogs
+#include <grgserver\dialogs\D_ConfirmVehicleBuy.inc>
 #include <grgserver\dialogs\D_Login.inc>
 #include <grgserver\dialogs\D_Register_Language.inc>
 #include <grgserver\dialogs\D_Register_Password1.inc>

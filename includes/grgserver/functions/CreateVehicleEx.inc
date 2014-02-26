@@ -63,14 +63,14 @@ CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1
 		{
 			if (modelID == 537 || modelID == 538)// We can not spawn Freight and Streak using CreateVehicle
 			{
-				return 0;
+				return INVALID_VEHICLE_ID;
 			}
 			vehicleID = CreateVehicle(modelID, posX, posY, posZ, angle, newColor1, newColor2, -1);
 		}
 
-		if (!vehicleID)
+		if (!vehicleID || vehicleID == INVALID_VEHICLE_ID)
 		{
-			return 0;
+			return INVALID_VEHICLE_ID;
 		}
 
 		SetVehicleParamsEx(vehicleID, false, false, false, false, false, false, false);
@@ -88,5 +88,5 @@ CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1
 		return vehicleID;
 	}
 
-	return 0;
+	return INVALID_VEHICLE_ID;
 }
