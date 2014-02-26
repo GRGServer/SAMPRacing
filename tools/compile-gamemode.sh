@@ -1,6 +1,9 @@
 #! /bin/bash
 
 TOOLSPATH=$(dirname $0)
-ROOTPATH="$TOOLSPATH/.."
 
-wine $TOOLSPATH/pawn/pawncc.exe $ROOTPATH/gamemodes/grgserver.pwn -i$ROOTPATH/includes -o$ROOTPATH/gamemodes/grgserver.amx -\; -\(
+pushd $TOOLSPATH/../gamemodes > /dev/null
+
+wine ../tools/pawn/pawncc.exe grgserver.pwn -i../includes -\; -\(
+
+popd > /dev/null
