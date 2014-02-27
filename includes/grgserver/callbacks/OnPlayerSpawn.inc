@@ -9,9 +9,22 @@ public OnPlayerSpawn(playerid)
 		{
 			new pickupID = PVar:playerid[VEHICLESHOP_PICKUPID];
 			new vehicleShopID = g_pickups[pickupID][E_PICKUP_LINK_ID];
-			new vehicleID = CreateVehicleEx(PVar:playerid[VEHICLESHOP_MODELID],g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSX], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSY], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSZ], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_ANGLE], random(128), random(128), false);
+			new vehicleID = PVar:playerid[VEHICLESHOP_VEHICLEID];
+
+			VehicleProperty:vehicleID[USERID] = PVar:playerid[USERID];
+
+			SetVehiclePos(vehicleID, g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSX], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSY], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSZ]);
+			SetVehicleZAngle(vehicleID, g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_ANGLE]);
 			PutPlayerInVehicle(playerid, vehicleID, 0);
+
+			VehicleProperty:vehicleID[USERID] = PVar:playerid[USERID];
+			new Cache:result = mysql_query_format(true, "INSERT INTO `vehicles` (`modelId`, `userId`) VALUES(%d, %d)", GetVehicleModel(vehicleID), PVar:playerid[USERID]);
+			VehicleProperty:vehicleID[SAVEID] = cache_insert_id();
+			cache_delete(result);
+			SaveVehicle(vehicleID);
+
 			GivePlayerMoney(playerid, -g_vehicleModels[PVar:playerid[VEHICLESHOP_MODELID] - 400][E_VEHICLEMODEL_PRICE]);
+
 			PlayAudioFileForPlayer(playerid, AUDIOFILE_VEHICLEBOUGHT);
 			GameTextForPlayer(playerid, LanguageString(playerid, StringID:85("Vehicle bought")), 5000, 1);
 		}

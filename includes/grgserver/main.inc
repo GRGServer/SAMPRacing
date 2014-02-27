@@ -51,10 +51,12 @@
 #include <grgserver\functions\ReloadPickups.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>
+#include <grgserver\functions\ReloadVehicles.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
+#include <grgserver\functions\SaveAll.inc>
 #include <grgserver\functions\SavePlayer.inc>
-#include <grgserver\functions\SavePlayers.inc>
 #include <grgserver\functions\SaveTeleports.inc>
+#include <grgserver\functions\SaveVehicle.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
 #include <grgserver\functions\SetPlayerCameraPosEx.inc>
 #include <grgserver\functions\SetPrivateWorld.inc>
@@ -86,6 +88,9 @@
 #include <grgserver\callbacks\OnPlayerText.inc>
 #include <grgserver\callbacks\OnPlayerUpdate.inc>
 #include <grgserver\callbacks\OnVehicleDamageStatusUpdate.inc>
+#include <grgserver\callbacks\OnVehiclePaintjob.inc>
+#include <grgserver\callbacks\OnVehicleRespray.inc>
+#include <grgserver\callbacks\OnVehicleSpawn.inc>
 
 // dialogs
 #include <grgserver\dialogs\D_ConfirmVehicleBuy.inc>

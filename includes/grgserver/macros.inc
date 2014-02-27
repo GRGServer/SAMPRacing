@@ -88,3 +88,6 @@ for (new i_%0 = 0; ; ++i_%0) \
 
 // Timer:name(parameters)
 #define Timer:%0(%1) forward Timer_%0(%1); public Timer_%0(%1)
+
+// VehicleProperty:vehicleID[property]
+#define VehicleProperty:%0[%1] g_vehicles[%0 - 1][E_VEHICLE_%1]

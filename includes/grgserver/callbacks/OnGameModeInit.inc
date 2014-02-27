@@ -5,6 +5,7 @@ public OnGameModeInit()
 	g_maxPlayers = GetServerVarAsInt("maxplayers");
 
 	print("Connecting to MySQL server");
+	mysql_log(MYSQL_LOGLEVEL);
 	mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_DATABASE, MYSQL_PASSWORD);
 
 	ReloadLanguageStrings();
@@ -13,6 +14,7 @@ public OnGameModeInit()
 	ReloadTeleports();
 	ReloadAreas();
 	ReloadPickups();
+	ReloadVehicles();
 
 	g_textDrawClock = TextDrawCreate(547, 25, "_");
 	TextDrawSetShadow(g_textDrawClock, 0);

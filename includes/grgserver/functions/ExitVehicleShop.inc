@@ -7,17 +7,13 @@ ExitVehicleShop(playerID, buy)
 
 	SetPrivateWorld(playerID, false);
 
-	if (PVar:playerID[VEHICLESHOP_VEHICLEID] != INVALID_VEHICLE_ID)
-	{
-		DestroyVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]);
-	}
-
 	if (buy)
 	{
 		PVar:playerID[SPAWNTYPE] = SPAWNTYPE_BUYVEHICLESHOP;
 	}
 	else
 	{
+		DestroyVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]);
 		PVar:playerID[SPAWNTYPE] = SPAWNTYPE_EXITVEHICLESHOP;
 	}
 

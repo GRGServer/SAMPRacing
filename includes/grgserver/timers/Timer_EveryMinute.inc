@@ -1,4 +1,4 @@
 Timer:EveryMinute()
 {
-	SavePlayers();
+	SaveAll();
 }

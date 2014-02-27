@@ -1,6 +1,7 @@
 // Copy this file and name it "localconfig.inc"
 
-// MySQL connection credentials
+// MySQL connection details
+#define MYSQL_LOGLEVEL		LOG_ERROR
 #define MYSQL_HOST		"localhost"
 #define MYSQL_USER		"root"
 #define MYSQL_PASSWORD		""

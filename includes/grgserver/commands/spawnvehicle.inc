@@ -7,7 +7,7 @@ ACMD:spawnvehicle(playerID, params[], StringID:1("Spawn a vehicle"))
 	{
 		if (sscanf(params, "s[20]", vehicleName))
 		{
-			CmdUsageMsg(playerID, "spawnvehicle", "ModelID/Name/t:Type", "[Color1]", "[Color2]");
+			CmdUsageMsg(playerID, "spawnvehicle", "ModelID/Name/t:Type");
 			return COMMAND_USAGE;
 		}
 

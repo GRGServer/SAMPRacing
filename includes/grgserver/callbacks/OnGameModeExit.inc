@@ -1,6 +1,6 @@
 public OnGameModeExit()
 {
-	SavePlayers();
+	SaveAll();
 
 	mysql_close();
 }
