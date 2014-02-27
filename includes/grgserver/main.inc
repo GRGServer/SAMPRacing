@@ -72,6 +72,7 @@
 
 // callbacks
 #include <grgserver\callbacks\OnDialogResponse.inc>
+#include <grgserver\callbacks\OnEnterExitModShop.inc>
 #include <grgserver\callbacks\OnGameModeExit.inc>
 #include <grgserver\callbacks\OnGameModeInit.inc>
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
