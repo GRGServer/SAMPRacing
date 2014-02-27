@@ -31,7 +31,7 @@ public OnPlayerDisconnect(playerid, reason)
 	{
 		if (!IsPlayerNPC(playerID) && playerID != playerid)
 		{
-			SendClientMessageEx(playerid, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
+			SendClientMessageEx(playerID, COLOR_JOINLEAVE, StringID:22("%u has left the server (%s)"), playerid, reasonString);
 		}
 	}
 
