@@ -15,6 +15,7 @@ public OnPlayerSpawn(playerid)
 
 			SetVehiclePos(vehicleID, g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSX], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSY], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_POSZ]);
 			SetVehicleZAngle(vehicleID, g_vehicleShops[vehicleShopID][E_VEHICLESHOP_VEHSPAWN_ANGLE]);
+			SetVehicleVirtualWorld(vehicleID, GetPlayerVirtualWorld(playerid));
 			PutPlayerInVehicle(playerid, vehicleID, 0);
 
 			VehicleProperty:vehicleID[USERID] = PVar:playerid[USERID];
@@ -77,4 +78,6 @@ public OnPlayerSpawn(playerid)
 			SetPlayerInterior(playerid, SPAWN_INTERIOR);
 		}
 	}
+
+	return true;
 }
