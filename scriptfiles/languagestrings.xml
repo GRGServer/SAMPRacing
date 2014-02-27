@@ -705,4 +705,36 @@
             Du hast dir $%d gegeben
         </de>
     </string>
+    <string id="88">
+        <en>
+            Vehicles reloaded
+        </en>
+        <de>
+            Fahrzeuge neugeladen
+        </de>
+    </string>
+    <string id="89">
+        <en>
+            Vehicle shops reloaded
+        </en>
+        <de>
+            Fahrzeugshops neugeladen
+        </de>
+    </string>
+    <string id="90">
+        <en>
+            Enter the specified vehicle shop
+        </en>
+        <de>
+            Den angegebenen Fahrzeugshop betreten
+        </de>
+    </string>
+    <string id="91">
+        <en>
+            Shop ID must be between 0 and %d
+        </en>
+        <de>
+            Die Shop ID muss zwischen 0 und %d sein
+        </de>
+    </string>
 </languagestrings>

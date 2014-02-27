@@ -1,6 +1,6 @@
 public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 {
-	if (PVar:playerid[VEHICLESHOP_ISINSIDE])
+	if (PVar:playerid[VEHICLESHOP_ID] != -1)
 	{
 		if (IsKeyPressed(KEY_ANALOG_LEFT))
 		{

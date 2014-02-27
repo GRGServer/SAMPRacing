@@ -1,4 +1,0 @@
-enum E_PUSTID
-{
-	E_PUSTID_VEHICLESHOP
-}

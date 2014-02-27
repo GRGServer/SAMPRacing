@@ -10,6 +10,7 @@ public OnGameModeInit()
 
 	ReloadLanguageStrings();
 	ReloadVehicleModels();
+	ReloadVehicleShops();
 	ReloadCommandAliases();
 	ReloadTeleports();
 	ReloadAreas();

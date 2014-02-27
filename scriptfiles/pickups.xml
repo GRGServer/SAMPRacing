@@ -1,72 +1,12 @@
 <pickups>
-	<!-- Hospitals -->
-	<pickup type="Hospital">
-		<position x="1606.99" y="1818.3" z="10.8203"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="-2656.75" y="697.086" z="27.9336"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="1172.65" y="-1323.62" z="14.9248"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="-320.922" y="1048.86" z="20.3403"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="2034.1" y="-1404.52" z="17.2574"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="-2654.97" y="635.803" z="14.4531"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="-1753.98" y="961.89" z="24.8828"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="1656.41" y="-5648.94" z="12.1676"/>
-	</pickup>
-	<pickup type="Hospital">
-		<position x="1906.18" y="-3405.28" z="12.594"/>
-	</pickup>
-
-	<!-- Vehicle shops -->
-	<pickup type="VehicleShop">
-		<position x="-1649.088134" y="1209.080566" z="7.25"/>
-		<respawn x="-1642.345825" y="1204.023315" z="7.254719" angle="240.642318"/>
-		<vehiclespawn x="-1784.827392" y="1303.468627" z="59.210792" angle="85.853981"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="-1966.667236" y="294.023406" z="35.46875"/>
-		<respawn x="-1971.641357" y="293.807403" z="35.171875" angle="91.807563"/>
-		<vehiclespawn x="-1984.964599" y="269.124114" z="35.179355" angle="77.414894"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="866.968505" y="-1203.707031" z="16.976562"/>
-		<respawn x="871.500244" y="-1204.356201" z="16.976562" angle="255.659011"/>
-		<vehiclespawn x="879.668945" y="-1210.637695" z="16.976562" angle="257.873199"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="2404.021972" y="-1496.852172" z="24"/>
-		<respawn x="2400.881591" y="-1499.08081" z="23.834865" angle="72.670623"/>
-		<vehiclespawn x="2391.376708" y="-1497.431640" z="23.834865" angle="86.144042"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="1953.929199" y="703.649902" z="10.820312"/>
-		<respawn x="1959.849731" y="702.206909" z="10.820312" angle="269.109069"/>
-		<vehiclespawn x="1937.382812" y="717.014648" z="10.820312" angle="91.784088"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="2172.868896" y="1397.020019" z="11.0625"/>
-		<respawn x="2166.568359" y="1396.542724" z="10.820312" angle="180.21762"/>
-		<vehiclespawn x="2142.262451" y="1392.214843" z="10.812517" angle="90.217407"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="940.755615" y="1733.579223" z="8.851562"/>
-		<respawn x="945.730285" y="1734.769042" z="8.851562" angle="263.469024"/>
-		<vehiclespawn x="957.164245" y="1729.677490" z="8.648437" angle="282.895874"/>
-	</pickup>
-	<pickup type="VehicleShop">
-		<position x="-145.682708" y="1173.458984" z="19.742187"/>
-		<respawn x="-148.35498" y="1175.044555" z="19.749988" angle="243.511428"/>
-		<vehiclespawn x="-152.731552" y="1179.889648" z="19.742187" angle="91.784141"/>
-	</pickup>
+	<!-- hospitals -->
+	<pickup type="hospital" x="1606.99" y="1818.3" z="10.8203"/>
+	<pickup type="hospital" x="-2656.75" y="697.086" z="27.9336"/>
+	<pickup type="hospital" x="1172.65" y="-1323.62" z="14.9248"/>
+	<pickup type="hospital" x="-320.922" y="1048.86" z="20.3403"/>
+	<pickup type="hospital" x="2034.1" y="-1404.52" z="17.2574"/>
+	<pickup type="hospital" x="-2654.97" y="635.803" z="14.4531"/>
+	<pickup type="hospital" x="-1753.98" y="961.89" z="24.8828"/>
+	<pickup type="hospital" x="1656.41" y="-5648.94" z="12.1676"/>
+	<pickup type="hospital" x="1906.18" y="-3405.28" z="12.594"/>
 </pickups>

@@ -9,7 +9,6 @@
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
 #include <grgserver\Structures\E_PICKUP.inc>
 #include <grgserver\Structures\E_PTD.inc>
-#include <grgserver\Structures\E_PUSTID.inc>
 #include <grgserver\Structures\E_PVAR.inc>
 #include <grgserver\Structures\E_TELEPORT.inc>
 #include <grgserver\Structures\E_VEHICLE.inc>
@@ -22,15 +21,19 @@
 
 // functions
 #include <grgserver\functions\AddLine.inc>
+#include <grgserver\functions\AddPickup.inc>
+#include <grgserver\functions\CheckNumberPlate.inc>
 #include <grgserver\functions\CmdUsageMsg.inc>
 #include <grgserver\functions\CreateDialog.inc>
 #include <grgserver\functions\CreatePlayerTextDraws.inc>
 #include <grgserver\functions\CreateVehicleEx.inc>
 #include <grgserver\functions\CreateVehicleShopVehicle.inc>
+#include <grgserver\functions\DestroyPickupsOfType.inc>
 #include <grgserver\functions\EnterVehicleShop.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
 #include <grgserver\functions\ExitVehicleShop.inc>
 #include <grgserver\functions\FindNextVehicleModel.inc>
+#include <grgserver\functions\GenerateNumberPlateText.inc>
 #include <grgserver\functions\GetClosestPickup.inc>
 #include <grgserver\functions\GetDistanceBetweenPoints.inc>
 #include <grgserver\functions\GetLanguageByID.inc>
@@ -40,6 +43,7 @@
 #include <grgserver\functions\GetVehicleEngineState.inc>
 #include <grgserver\functions\Hash.inc>
 #include <grgserver\functions\IsLoggedIn.inc>
+#include <grgserver\functions\IsValidNumberPlateVehicle.inc>
 #include <grgserver\functions\LanguageString.inc>
 #include <grgserver\functions\LoadPlayer.inc>
 #include <grgserver\functions\PickupEvent.inc>
@@ -51,6 +55,7 @@
 #include <grgserver\functions\ReloadPickups.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>
+#include <grgserver\functions\ReloadVehicleShops.inc>
 #include <grgserver\functions\ReloadVehicles.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SaveAll.inc>
@@ -102,10 +107,6 @@
 #include <grgserver\dialogs\D_Register_Password2.inc>
 #include <grgserver\dialogs\D_SpawnVehicle.inc>
 
-// pickups
-#include <grgserver\pickups\Pickup_Hospital.inc>
-#include <grgserver\pickups\Pickup_VehicleShop.inc>
-
 // timers
 #include <grgserver\timers\Timer_EveryMinute.inc>
 #include <grgserver\timers\Timer_EverySecond.inc>
@@ -125,4 +126,5 @@
 #include <grgserver\commands\tp.inc>
 #include <grgserver\commands\tppos.inc>
 #include <grgserver\commands\tpto.inc>
+#include <grgserver\commands\vehicleshop.inc>
 

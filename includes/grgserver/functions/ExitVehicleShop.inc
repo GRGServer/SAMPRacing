@@ -1,7 +1,5 @@
 ExitVehicleShop(playerID, buy)
 {
-	PVar:playerID[VEHICLESHOP_ISINSIDE] = false;
-
 	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_CTRL_INFO]);
 	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_VEHICLE_INFO]);
 

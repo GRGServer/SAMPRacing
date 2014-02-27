@@ -6,5 +6,6 @@ ResetPlayerVariables(playerID)
 	}
 
 	// Initialize variables with default values
+	PVar:playerID[VEHICLESHOP_ID] = -1;
 	PVar:playerID[VEHICLESHOP_VEHICLEID] = INVALID_VEHICLE_ID;
 }

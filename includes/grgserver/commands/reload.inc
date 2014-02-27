@@ -4,7 +4,7 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	if (sscanf(params, "s[100]", part))
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, languagestrings, pickups, teleports, vehiclemodels");
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, languagestrings, pickups, teleports, vehiclemodels, vehicles, vehicleshops");
 		return COMMAND_USAGE;
 	}
 
@@ -47,6 +47,20 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	{
 		ReloadVehicleModels();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:59("Vehicle models reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "vehicles", true))
+	{
+		ReloadVehicles();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:88("Vehicles reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "vehicleshops", true))
+	{
+		ReloadVehicleShops();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:89("Vehicle shops reloaded"));
 		return COMMAND_OK;
 	}
 

@@ -4,7 +4,6 @@ new g_commandAliases[MAX_COMMANDALIASES][E_COMMANDALIAS];
 new g_languageStrings[MAX_LANGUAGE_STRINGS][E_LANGUAGESTRING];
 new g_maxPlayers;
 new g_pickups[MAX_PICKUPS][E_PICKUP];
-new g_pickupSetupTypeIDs[E_PUSTID];
 new PlayerText:g_playerTextDraws[MAX_PLAYERS][E_PTD];
 new g_playerVariables[MAX_PLAYERS][E_PVAR];
 new g_teleports[MAX_TELEPORTS][E_TELEPORT];

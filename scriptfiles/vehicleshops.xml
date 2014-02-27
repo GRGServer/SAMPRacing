@@ -1,0 +1,50 @@
+<vehicleshops>
+	<shop>
+		<pickup x="-1649.088134" y="1209.080566" z="7.25"/>
+		<quitspawn x="-1642.345825" y="1204.023315" z="7.254719" angle="240.642318"/>
+		<buyspawn x="-1784.827392" y="1303.468627" z="59.210792" angle="85.853981"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="-1966.667236" y="294.023406" z="35.46875"/>
+		<quitspawn x="-1971.641357" y="293.807403" z="35.171875" angle="91.807563"/>
+		<buyspawn x="-1984.964599" y="269.124114" z="35.179355" angle="77.414894"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="866.968505" y="-1203.707031" z="16.976562"/>
+		<quitspawn x="871.500244" y="-1204.356201" z="16.976562" angle="255.659011"/>
+		<buyspawn x="879.668945" y="-1210.637695" z="16.976562" angle="257.873199"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="2404.021972" y="-1496.852172" z="24"/>
+		<quitspawn x="2400.881591" y="-1499.08081" z="23.834865" angle="72.670623"/>
+		<buyspawn x="2391.376708" y="-1497.431640" z="23.834865" angle="86.144042"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="1953.929199" y="703.649902" z="10.820312"/>
+		<quitspawn x="1959.849731" y="702.206909" z="10.820312" angle="269.109069"/>
+		<buyspawn x="1937.382812" y="717.014648" z="10.820312" angle="91.784088"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="2172.868896" y="1397.020019" z="11.0625"/>
+		<quitspawn x="2166.568359" y="1396.542724" z="10.820312" angle="180.21762"/>
+		<buyspawn x="2142.262451" y="1392.214843" z="10.812517" angle="90.217407"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="940.755615" y="1733.579223" z="8.851562"/>
+		<quitspawn x="945.730285" y="1734.769042" z="8.851562" angle="263.469024"/>
+		<buyspawn x="957.164245" y="1729.677490" z="8.648437" angle="282.895874"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+	<shop>
+		<pickup x="-145.682708" y="1173.458984" z="19.742187"/>
+		<quitspawn x="-148.35498" y="1175.044555" z="19.749988" angle="243.511428"/>
+		<buyspawn x="-152.731552" y="1179.889648" z="19.742187" angle="91.784141"/>
+		<numberplateprefix>??</numberplateprefix>
+	</shop>
+</vehicleshops>

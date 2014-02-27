@@ -1,15 +1,15 @@
 PickupEvent(playerID, pickupID, eventType)
 {
-	FormatNew:functionName[MAX_FUNCTION_NAME]("PUE_%s", g_pickups[pickupID][E_PICKUP_TYPE]);// PUE = PickUpEvent
-	if (funcidx(functionName) == -1)
+	switch (g_pickups[pickupID][E_PICKUP_TYPE])
 	{
-		printf("Unknown pickup type: %s", g_pickups[pickupID][E_PICKUP_TYPE]);
-		return false;
-	}
-
-	if (!CallLocalFunction(functionName, "ddd", playerID, pickupID, eventType))
-	{
-		return false;
+		case PICKUPTYPE_HOSPITAL:
+		{
+			SetPlayerHealth(playerID, 100);
+		}
+		case PICKUPTYPE_VEHICLESHOP:
+		{
+			EnterVehicleShop(playerID, g_pickups[pickupID][E_PICKUP_LINKID], false);
+		}
 	}
 
 	PlaySound(playerID, SOUND_PICKUPEVENT);
