@@ -26,6 +26,8 @@ ReloadVehicles()
 			SetVehicleHealth(vehicleID, cache_get_field_content_float(row, "health"));
 			ChangeVehiclePaintjob(vehicleID, cache_get_field_content_int(row, "paintjobId"));
 			VehicleProperty:vehicleID[MILEAGE] = cache_get_field_content_int(row, "mileage");
+			VehicleProperty:vehicleID[USERID] = cache_get_field_content_int(row, "userId");
+			VehicleProperty:vehicleID[SAVEID] = cache_get_field_content_int(row, "id");
 			count++;
 		}
 	}
