@@ -10,8 +10,10 @@ ReloadVehicles()
 		}
 	}
 
+	new Cache:result;
+
 	new count;
-	new Cache:result = mysql_query(1, "SELECT * FROM `vehicles`");
+	result = mysql_query(1, "SELECT * FROM `vehicles`");
 	Count(row, cache_get_row_count())
 	{
 		new vehicleID = CreateVehicleEx(cache_get_field_content_int(row, "modelId"), cache_get_field_content_float(row, "posX"), cache_get_field_content_float(row, "posY"), cache_get_field_content_float(row, "posZ"), cache_get_field_content_float(row, "angle"), cache_get_field_content_int(row, "color1"), cache_get_field_content_int(row, "color2"));
@@ -30,4 +32,24 @@ ReloadVehicles()
 	cache_delete(result);
 
 	printf("  %d vehicles loaded", count);
+
+	print("Adding vehicle components...");
+
+	count = 0;
+	result = mysql_query(1, "SELECT * FROM `vehiclecomponents`");
+	Count(row, cache_get_row_count())
+	{
+		new vehicleSaveID = cache_get_field_content_int(row, "vehicleId");
+		Foreach(vehicleIndex, g_vehicles)
+		{
+			if (g_vehicles[vehicleIndex][E_VEHICLE_SAVEID] == vehicleSaveID)
+			{
+				AddVehicleComponent(vehicleIndex + 1, cache_get_field_content_int(row, "componentId"));
+				count++;
+				break;
+			}
+		}
+	}
+
+	printf("  %d vehicle components added", count);
 }

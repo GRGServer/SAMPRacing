@@ -88,6 +88,7 @@
 #include <grgserver\callbacks\OnPlayerText.inc>
 #include <grgserver\callbacks\OnPlayerUpdate.inc>
 #include <grgserver\callbacks\OnVehicleDamageStatusUpdate.inc>
+#include <grgserver\callbacks\OnVehicleMod.inc>
 #include <grgserver\callbacks\OnVehiclePaintjob.inc>
 #include <grgserver\callbacks\OnVehicleRespray.inc>
 #include <grgserver\callbacks\OnVehicleSpawn.inc>

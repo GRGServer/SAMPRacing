@@ -34,10 +34,7 @@ CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1
 		if (playerID != INVALID_PLAYER_ID)
 		{
 			VehicleProperty:vehicleID[USERID] = PVar:playerID[USERID];
-			new Cache:result = mysql_query_format(true, "INSERT INTO `vehicles` (`modelId`, `userId`) VALUES(%d, %d)", modelID, PVar:playerID[USERID]);
-			VehicleProperty:vehicleID[SAVEID] = cache_insert_id();
-			cache_delete(result);
-			SaveVehicle(vehicleID);
+			SaveVehicle(vehicleID, true);
 		}
 
 		return vehicleID;

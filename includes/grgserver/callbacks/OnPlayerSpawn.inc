@@ -18,10 +18,7 @@ public OnPlayerSpawn(playerid)
 			PutPlayerInVehicle(playerid, vehicleID, 0);
 
 			VehicleProperty:vehicleID[USERID] = PVar:playerid[USERID];
-			new Cache:result = mysql_query_format(true, "INSERT INTO `vehicles` (`modelId`, `userId`) VALUES(%d, %d)", GetVehicleModel(vehicleID), PVar:playerid[USERID]);
-			VehicleProperty:vehicleID[SAVEID] = cache_insert_id();
-			cache_delete(result);
-			SaveVehicle(vehicleID);
+			SaveVehicle(vehicleID, true);
 
 			GivePlayerMoney(playerid, -g_vehicleModels[PVar:playerid[VEHICLESHOP_MODELID] - 400][E_VEHICLEMODEL_PRICE]);
 
