@@ -689,4 +689,20 @@
             Fahrzeug gekauft
         </de>
     </string>
+    <string id="86">
+        <en>
+            Give money to yourself
+        </en>
+        <de>
+            Gebe dir Geld
+        </de>
+    </string>
+    <string id="87">
+        <en>
+            You gave $%d to yourself
+        </en>
+        <de>
+            Du hast dir $%d gegeben
+        </de>
+    </string>
 </languagestrings>

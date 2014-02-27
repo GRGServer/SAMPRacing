@@ -111,6 +111,7 @@
 // commands
 #include <grgserver\commands\addtp.inc>
 #include <grgserver\commands\engine.inc>
+#include <grgserver\commands\givemoney.inc>
 #include <grgserver\commands\god.inc>
 #include <grgserver\commands\jetpack.inc>
 #include <grgserver\commands\makeadmin.inc>
