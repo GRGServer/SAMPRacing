@@ -51,6 +51,7 @@
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
+#include <grgserver\functions\ReloadHiddenPackages.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
 #include <grgserver\functions\ReloadPickups.inc>
 #include <grgserver\functions\ReloadTeleports.inc>

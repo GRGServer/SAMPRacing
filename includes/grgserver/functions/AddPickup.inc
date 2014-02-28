@@ -3,6 +3,10 @@ AddPickup(type, Float:posX, Float:posY, Float:posZ, linkID)
 	new modelID;
 	switch (type)
 	{
+		case PICKUPTYPE_HIDDENPACKAGE:
+		{
+			modelID = 1276;
+		}
 		case PICKUPTYPE_HOSPITAL:
 		{
 			modelID = 1240;
