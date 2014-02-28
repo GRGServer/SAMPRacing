@@ -6,11 +6,13 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		{
 			PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", false);
 			CreateVehicleShopVehicle(playerid);
+			return false;
 		}
 		else if (IsKeyPressed(KEY_ANALOG_RIGHT))
 		{
 			PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", true);
 			CreateVehicleShopVehicle(playerid);
+			return false;
 		}
 		else if (IsKeyPressed(KEY_SPRINT))
 		{
@@ -23,10 +25,14 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 			{
 				ShowDialog:ConfirmVehicleBuy(playerid);
 			}
+			return false;
 		}
 		else if (IsKeyPressed(KEY_SECONDARY_ATTACK))
 		{
 			ExitVehicleShop(playerid, false);
+			return false;
 		}
 	}
+
+	return true;
 }

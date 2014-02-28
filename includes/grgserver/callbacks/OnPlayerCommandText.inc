@@ -9,5 +9,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	{
 		sscanf(cmdText, "s[" #MAX_FUNCTION_NAME "]", command);
 	}
-	return ExecuteCommand(playerid, command, parameters);
+	ExecuteCommand(playerid, command, parameters);
+	return true;
 }
