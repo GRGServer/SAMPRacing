@@ -44,4 +44,6 @@ public OnPlayerUpdate(playerid)
 		SetPlayerCameraPos(playerid, PVar:playerid[SETCAMERA_POSX], PVar:playerid[SETCAMERA_POSY], PVar:playerid[SETCAMERA_POSZ]);
 		SetPlayerCameraLookAt(playerid, PVar:playerid[SETCAMERA_LOOKATX], PVar:playerid[SETCAMERA_LOOKATY], PVar:playerid[SETCAMERA_LOOKATZ]);
 	}
+
+	return true;
 }
