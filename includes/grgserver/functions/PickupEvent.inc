@@ -8,7 +8,7 @@ PickupEvent(playerID, pickupID, eventType)
 		{
 			if (PVar:playerID[HIDDENPACKAGES][linkID])
 			{
-				GameTextForPlayer(playerID, LanguageString(playerID, StringID:-1("You already found this hidden package!")), 3000, 3);
+				GameTextForPlayer(playerID, LanguageString(playerID, StringID:96("You already found this hidden package!")), 3000, 3);
 			}
 			else
 			{
@@ -22,11 +22,11 @@ PickupEvent(playerID, pickupID, eventType)
 				}
 				if (hiddenPackagesFound == g_hiddenPackagesCount)
 				{
-					GameTextForPlayer(playerID, LanguageString(playerID, StringID:-1("You found all hidden packages!")), 3000, 3);
+					GameTextForPlayer(playerID, LanguageString(playerID, StringID:97("You found all hidden packages!")), 3000, 3);
 				}
 				else
 				{
-					FormatNew:message[100](LanguageString(playerID, StringID:-1("Hidden Package %d of %d")), hiddenPackagesFound, g_hiddenPackagesCount);
+					FormatNew:message[100](LanguageString(playerID, StringID:98("Hidden Package %d of %d")), hiddenPackagesFound, g_hiddenPackagesCount);
 					GameTextForPlayer(playerID, message, 3000, 3);
 				}
 			}

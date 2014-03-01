@@ -7,6 +7,8 @@
 #include <grgserver\Structures\E_AREA.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
+#include <grgserver\Structures\E_OBJECT.inc>
+#include <grgserver\Structures\E_OBJECTMODEL.inc>
 #include <grgserver\Structures\E_PICKUP.inc>
 #include <grgserver\Structures\E_PTD.inc>
 #include <grgserver\Structures\E_PVAR.inc>
@@ -21,6 +23,7 @@
 
 // functions
 #include <grgserver\functions\AddLine.inc>
+#include <grgserver\functions\AddObject.inc>
 #include <grgserver\functions\AddPickup.inc>
 #include <grgserver\functions\CheckNumberPlate.inc>
 #include <grgserver\functions\CmdUsageMsg.inc>
@@ -45,6 +48,7 @@
 #include <grgserver\functions\IsLoggedIn.inc>
 #include <grgserver\functions\IsValidNumberPlateVehicle.inc>
 #include <grgserver\functions\LanguageString.inc>
+#include <grgserver\functions\LoadObjectsFromFile.inc>
 #include <grgserver\functions\LoadPlayer.inc>
 #include <grgserver\functions\PickupEvent.inc>
 #include <grgserver\functions\PlayAudioFileForPlayer.inc>
@@ -53,6 +57,8 @@
 #include <grgserver\functions\ReloadCommandAliases.inc>
 #include <grgserver\functions\ReloadHiddenPackages.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
+#include <grgserver\functions\ReloadObjectModels.inc>
+#include <grgserver\functions\ReloadObjects.inc>
 #include <grgserver\functions\ReloadPickups.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>
@@ -60,6 +66,7 @@
 #include <grgserver\functions\ReloadVehicles.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SaveAll.inc>
+#include <grgserver\functions\SaveObjects.inc>
 #include <grgserver\functions\SavePlayer.inc>
 #include <grgserver\functions\SaveTeleports.inc>
 #include <grgserver\functions\SaveVehicle.inc>
@@ -71,8 +78,10 @@
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\UpdateDrifting.inc>
+#include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>
+#include <grgserver\functions\XML_SetFloatAttribute.inc>
 #include <grgserver\functions\mysql_query_format.inc>
 #include <grgserver\functions\str_replace.inc>
 
@@ -86,11 +95,13 @@
 #include <grgserver\callbacks\OnPlayerConnect.inc>
 #include <grgserver\callbacks\OnPlayerDeath.inc>
 #include <grgserver\callbacks\OnPlayerDisconnect.inc>
+#include <grgserver\callbacks\OnPlayerEditDynamicObject.inc>
 #include <grgserver\callbacks\OnPlayerEnterArea.inc>
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
 #include <grgserver\callbacks\OnPlayerKeyStateChange.inc>
 #include <grgserver\callbacks\OnPlayerPickUpPickup.inc>
+#include <grgserver\callbacks\OnPlayerSelectDynamicObject.inc>
 #include <grgserver\callbacks\OnPlayerSpawn.inc>
 #include <grgserver\callbacks\OnPlayerText.inc>
 #include <grgserver\callbacks\OnPlayerUpdate.inc>
@@ -101,6 +112,7 @@
 #include <grgserver\callbacks\OnVehicleSpawn.inc>
 
 // dialogs
+#include <grgserver\dialogs\D_AddObject.inc>
 #include <grgserver\dialogs\D_ConfirmVehicleBuy.inc>
 #include <grgserver\dialogs\D_Login.inc>
 #include <grgserver\dialogs\D_Register_Language.inc>
@@ -113,6 +125,7 @@
 #include <grgserver\timers\Timer_EverySecond.inc>
 
 // commands
+#include <grgserver\commands\addobject.inc>
 #include <grgserver\commands\addtp.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\givemoney.inc>

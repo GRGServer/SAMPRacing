@@ -7,9 +7,6 @@
 // ACMD:name(playerID, params, languageStringID)
 #define ACMD:%0(%1,%2,%3) COMMAND:%0(%1, %2) if (!PVar:%1[ISADMIN]) return COMMAND_PERMISSION_DENIED; else
 
-// NCMD:name(playerID, params, languageStringID)
-#define NCMD:%0(%1,%2,%3) COMMAND:%0(%1, %2) if (!IsPlayerNPC(%1)) return COMMAND_NPC_ONLY; else
-
 // AddLine:string(string[, formatParameters])
 #define AddLine:%0(%1) if (strlen(%0)) strcat(%0, "\n"); Format:g_addLineString(%1); strcat(%0, g_addLineString)
 
@@ -57,13 +54,8 @@ for (new i_%0 = 0; ; ++i_%0) \
 // LoggedInPlayers(returningPlayerID)
 #define LoggedInPlayers(%0) Count(%0, g_maxPlayers) if (IsLoggedIn(%0))
 
-// PickupEvent:pickupType(parameters)
-#define PickupEvent:%0(%1) forward PUE_%0(%1); public PUE_%0(%1)
-
-// PickupModelID:pickupType(pickupID)
-#define PickupModelID:%0(%1) forward PUMID_%0(%1); public PUMID_%0(%1)
-
-#define PickupSetupType:%0(%1) forward PUST_%0(%1); public PUST_%0(%1)
+// Object:objectID[field]
+#define Object:%0[%1] g_objects[%0 - 1][E_OBJECT_%1]
 
 // PlayerLoop(returningPlayerID)
 #define PlayerLoop(%0) Count(%0, g_maxPlayers) if (IsPlayerConnected(%0))

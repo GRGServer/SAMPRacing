@@ -4,7 +4,7 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	if (sscanf(params, "s[100]", part))
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, hiddenpackages, languagestrings, pickups, teleports, vehiclemodels, vehicles, vehicleshops");
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, hiddenpackages, languagestrings, objectmodels, objects, pickups, teleports, vehiclemodels, vehicles, vehicleshops");
 		return COMMAND_USAGE;
 	}
 
@@ -25,7 +25,7 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	if (!strcmp(part, "hiddenpackages", true))
 	{
 		ReloadHiddenPackages();
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:-1("Hidden packages reloaded"));
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:92("Hidden packages reloaded"));
 		return COMMAND_OK;
 	}
 
@@ -33,6 +33,20 @@ ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
 	{
 		ReloadLanguageStrings();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:57("Language strings reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "objectmodels", true))
+	{
+		ReloadObjectModels();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:105("Object models reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "objects", true))
+	{
+		ReloadObjects();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:106("Objects reloaded"));
 		return COMMAND_OK;
 	}
 

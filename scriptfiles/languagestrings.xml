@@ -737,4 +737,124 @@
             Die Shop ID muss zwischen 0 und %d sein
         </de>
     </string>
+    <string id="92">
+        <en>
+            Hidden packages reloaded
+        </en>
+        <de>
+            Versteckte Päckchen neugeladen
+        </de>
+    </string>
+    <string id="93">
+        <en>
+            Add a new object
+        </en>
+        <de>
+            Ein neues Objekt hinzufügen
+        </de>
+    </string>
+    <string id="94">
+        <en>
+            Object model '%s' not found!
+        </en>
+        <de>
+            Objektmodel '%s' nicht gefunden!
+        </de>
+    </string>
+    <string id="95">
+        <en>
+            The model ID must be greater than 0!
+        </en>
+        <de>
+            Die Model ID muss größer als 0 sein!
+        </de>
+    </string>
+    <string id="96">
+        <en>
+            You already found this hidden package!
+        </en>
+        <de>
+            Du hast dieses versteckte Päckchen bereits gefunden!
+        </de>
+    </string>
+    <string id="97">
+        <en>
+            You found all hidden packages!
+        </en>
+        <de>
+            Du hast alle versteckten Päckchen gefunden!
+        </de>
+    </string>
+    <string id="98">
+        <en>
+            Hidden Package %d of %d
+        </en>
+        <de>
+            Verstecktes Päckchen %d von %d
+        </de>
+    </string>
+    <string id="99">
+        <en>
+            Add
+        </en>
+        <de>
+            Hinzufügen
+        </de>
+    </string>
+    <string id="100">
+        <en>
+            The changes have been saved
+        </en>
+        <de>
+            Die Änderungen wurden gespeichert
+        </de>
+    </string>
+    <string id="101">
+        <en>
+            Limit of %d objects reached!
+        </en>
+        <de>
+            Limit von %d Objekten erreicht!
+        </de>
+    </string>
+    <string id="102">
+        <en>
+            Object '%s from file '%s' selected
+        </en>
+        <de>
+            Objekt '%s' von Datei '%s' ausgewählt
+        </de>
+    </string>
+    <string id="103">
+        <en>
+            You can now edit the object using the GUI, clone it (Key ~k~~SNEAK_ABOUT~) or remove it (Key ~k~~CONVERSATION_NO~)
+        </en>
+        <de>
+            Du kannst nun das Objekt über die GUI bearbeiten, klonen (Taste ~k~~SNEAK_ABOUT~) oder löschen (Taste ~k~~CONVERSATION_NO~)
+        </de>
+    </string>
+    <string id="104">
+        <en>
+            The object %d (%s) has been added and selected for editing
+        </en>
+        <de>
+            Das Objekt %d (%s) wurde hinzugefügt und zum Bearbeiten ausgewählt
+        </de>
+    </string>
+    <string id="105">
+        <en>
+            Object models reloaded
+        </en>
+        <de>
+            Objektmodels neugeladen
+        </de>
+    </string>
+    <string id="106">
+        <en>
+            Objects reloaded
+        </en>
+        <de>
+            Objekte neugeladen
+        </de>
+    </string>
 </languagestrings>

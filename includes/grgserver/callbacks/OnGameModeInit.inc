@@ -9,6 +9,8 @@ public OnGameModeInit()
 	mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_DATABASE, MYSQL_PASSWORD);
 
 	ReloadLanguageStrings();
+	ReloadObjectModels();
+	ReloadObjects();
 	ReloadVehicleModels();
 	ReloadVehicleShops();
 	ReloadCommandAliases();

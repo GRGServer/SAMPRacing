@@ -4,6 +4,8 @@ new g_commandAliases[MAX_COMMANDALIASES][E_COMMANDALIAS];
 new g_hiddenPackagesCount;
 new g_languageStrings[MAX_LANGUAGE_STRINGS][E_LANGUAGESTRING];
 new g_maxPlayers;
+new g_objectModels[MAX_OBJECTMODELS][E_OBJECTMODEL];
+new g_objects[MAX_DYNAMIC_OBJECTS][E_OBJECT];
 new g_pickups[MAX_PICKUPS][E_PICKUP];
 new PlayerText:g_playerTextDraws[MAX_PLAYERS][E_PTD];
 new g_playerVariables[MAX_PLAYERS][E_PVAR];
