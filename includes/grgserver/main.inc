@@ -43,6 +43,7 @@
 #include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
+#include <grgserver\functions\GetObjectNameByModelID.inc>
 #include <grgserver\functions\GetPlayerNameEx.inc>
 #include <grgserver\functions\GetVehicleEngineState.inc>
 #include <grgserver\functions\Hash.inc>

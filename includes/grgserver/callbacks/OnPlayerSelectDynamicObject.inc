@@ -15,6 +15,6 @@ public OnPlayerSelectDynamicObject(playerid, objectid, modelid, Float:x, Float:y
 		}
 	}
 
-	SendClientMessageEx(playerid, COLOR_INFO, StringID:102("Object '%s from file '%s' selected"), g_objectModels[objectIndex][E_OBJECTMODEL_NAME], Object:objectid[FILENAME]);
+	SendClientMessageEx(playerid, COLOR_INFO, StringID:102("Object '%s' from file '%s' selected"), g_objectModels[objectIndex][E_OBJECTMODEL_NAME], Object:objectid[FILENAME]);
 	SendClientMessageEx(playerid, COLOR_INFO, StringID:103("You can now edit the object using the GUI, clone it (Key %s) or remove it (Key %s)"), GetGameTextKeyByID(KEY_OBJECTEDITOR_CLONE, IsPlayerInAnyVehicle(playerid)), GetGameTextKeyByID(KEY_OBJECTEDITOR_REMOVE, IsPlayerInAnyVehicle(playerid)));
 }

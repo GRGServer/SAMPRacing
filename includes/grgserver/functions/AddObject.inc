@@ -35,17 +35,7 @@ AddObject(playerID, modelID, copyFromCurrent = false)
 	Object:objectID[ORIGINAL_ROTY] = rotY;
 	Object:objectID[ORIGINAL_ROTZ] = rotZ;
 
-	new name[STRINGLENGTH_OBJECTMODELNAME];
-	Foreach(index, g_objectModels)
-	{
-		if (g_objectModels[index][E_OBJECTMODEL_ID] == modelID)
-		{
-			strcat(name, g_objectModels[index][E_OBJECTMODEL_NAME]);
-			break;
-		}
-	}
-
-	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added to file '%s' and selected for editing"), modelID, name, Object:objectID[FILENAME]);
+	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added to file '%s' and selected for editing"), modelID, GetObjectNameByModelID(modelID), Object:objectID[FILENAME]);
 
 	return true;
 }

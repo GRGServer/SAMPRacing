@@ -23,7 +23,7 @@ ReloadObjects()
 	{
 		if (type == FM_FILE)
 		{
-			printf("    Loading objects from '%s'...", item);
+			printf("  Loading objects from '%s'...", item);
 
 			new filename[STRINGLENGTH_OBJECTFILENAME];
 			strmid(filename, item, 0, strlen(item) - 4);

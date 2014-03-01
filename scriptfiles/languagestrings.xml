@@ -819,10 +819,10 @@
     </string>
     <string id="102">
         <en>
-            Object '%s from file '%s' selected
+            Object '%s' from file '%s' selected
         </en>
         <de>
-            Objekt '%s' von Datei '%s' ausgewählt
+            Objekt '%s' aus Datei '%s' ausgewählt
         </de>
     </string>
     <string id="103">
@@ -903,6 +903,14 @@
         </en>
         <de>
             Objektauswahlmodus aktiviert
+        </de>
+    </string>
+    <string id="113">
+        <en>
+            The object %d (%s) has been removed from file '%s'
+        </en>
+        <de>
+            Das Objekt %d (%s) wurde aus der Datei '%s' entfernt
         </de>
     </string>
 </languagestrings>
