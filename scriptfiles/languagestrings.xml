@@ -961,4 +961,28 @@
             Verstecktes Päckchen %d hinzugefügt
         </de>
     </string>
+    <string id="120">
+        <en>
+            Teleport yourself to the target selected on the map
+        </en>
+        <de>
+            Teleportiere dich zu dem auf der Karte markierten Ziel
+        </de>
+    </string>
+    <string id="121">
+        <en>
+            You got teleported to the target on your map
+        </en>
+        <de>
+            Du wurdest zu dem Ziel, welches auf deiner Karte markiert ist, teleportiert
+        </de>
+    </string>
+    <string id="122">
+        <en>
+            You have not selected the target on your map!
+        </en>
+        <de>
+            Du hast noch kein Ziel auf deiner Karte markiert!
+        </de>
+    </string>
 </languagestrings>

@@ -93,6 +93,7 @@
 #include <grgserver\callbacks\OnEnterExitModShop.inc>
 #include <grgserver\callbacks\OnGameModeExit.inc>
 #include <grgserver\callbacks\OnGameModeInit.inc>
+#include <grgserver\callbacks\OnPlayerClickMap.inc>
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
 #include <grgserver\callbacks\OnPlayerCommandText.inc>
 #include <grgserver\callbacks\OnPlayerConnect.inc>
@@ -126,6 +127,7 @@
 // timers
 #include <grgserver\timers\Timer_EveryMinute.inc>
 #include <grgserver\timers\Timer_EverySecond.inc>
+#include <grgserver\timers\Timer_SetPlayerPosFindZ.inc>
 
 // commands
 #include <grgserver\commands\addhp.inc>
@@ -137,6 +139,7 @@
 #include <grgserver\commands\god.inc>
 #include <grgserver\commands\jetpack.inc>
 #include <grgserver\commands\makeadmin.inc>
+#include <grgserver\commands\maptp.inc>
 #include <grgserver\commands\reload.inc>
 #include <grgserver\commands\savepos.inc>
 #include <grgserver\commands\setobjectfilename.inc>
