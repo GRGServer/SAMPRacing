@@ -2,19 +2,19 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 {
 	if (PVar:playerid[VEHICLESHOP_ID] != -1)
 	{
-		if (IsKeyPressed(KEY_ANALOG_LEFT))
+		if (IsKeyPressed(KEY_VEHICLESHOP_PREVIOUS))
 		{
 			PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", false);
 			CreateVehicleShopVehicle(playerid);
 			return false;
 		}
-		else if (IsKeyPressed(KEY_ANALOG_RIGHT))
+		else if (IsKeyPressed(KEY_VEHICLESHOP_NEXT))
 		{
 			PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", true);
 			CreateVehicleShopVehicle(playerid);
 			return false;
 		}
-		else if (IsKeyPressed(KEY_SPRINT))
+		else if (IsKeyPressed(KEY_VEHICLESHOP_BUY))
 		{
 			new price = g_vehicleModels[PVar:playerid[VEHICLESHOP_MODELID] - 400][E_VEHICLEMODEL_PRICE];
 			if (GetPlayerMoney(playerid) < price)
@@ -27,7 +27,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 			}
 			return false;
 		}
-		else if (IsKeyPressed(KEY_SECONDARY_ATTACK))
+		else if (IsKeyPressed(KEY_VEHICLESHOP_QUIT))
 		{
 			ExitVehicleShop(playerid, false);
 			return false;

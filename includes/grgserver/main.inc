@@ -39,6 +39,7 @@
 #include <grgserver\functions\GenerateNumberPlateText.inc>
 #include <grgserver\functions\GetClosestPickup.inc>
 #include <grgserver\functions\GetDistanceBetweenPoints.inc>
+#include <grgserver\functions\GetGameTextKeyByID.inc>
 #include <grgserver\functions\GetLanguageByID.inc>
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
