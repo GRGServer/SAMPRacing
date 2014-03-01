@@ -27,7 +27,7 @@ ACMD:showarea(playerID, params[], StringID:69("Show area points as icons on the 
 				}
 
 				new pointIndex = index * 2;
-				SetPlayerMapIcon(playerID, index, points[pointIndex], points[pointIndex + 1], 0, 56, MAPICON_GLOBAL);
+				SetPlayerMapIcon(playerID, index, points[pointIndex], points[pointIndex + 1], 0, 56, 0, MAPICON_GLOBAL);
 			}
 
 			SendClientMessageEx(playerID, COLOR_INFO, StringID:70("The area points have been marked on your map"));
