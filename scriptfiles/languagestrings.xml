@@ -913,4 +913,52 @@
             Das Objekt %d (%s) wurde aus der Datei '%s' entfernt
         </de>
     </string>
+    <string id="114">
+        <en>
+            Show all hidden packages on the map
+        </en>
+        <de>
+            Zeige alle verstecken Päckchen auf der Karte
+        </de>
+    </string>
+    <string id="115">
+        <en>
+            The hidden packages have been marked on your map
+        </en>
+        <de>
+            Die versteckten Päckchen wurden auf deiner Karte markiert
+        </de>
+    </string>
+    <string id="116">
+        <en>
+            Add a hidden package
+        </en>
+        <de>
+            Ein verstecktes Päckchen hinzufügen
+        </de>
+    </string>
+    <string id="117">
+        <en>
+            Limit of %d hidden packages reached!
+        </en>
+        <de>
+            Limit von %d versteckten Päckchen erreicht!
+        </de>
+    </string>
+    <string id="118">
+        <en>
+            Can not add hidden package!
+        </en>
+        <de>
+            Das versteckte Päckchen konnte nicht hinzugefügt werden!
+        </de>
+    </string>
+    <string id="119">
+        <en>
+            Hidden package %d added
+        </en>
+        <de>
+            Verstecktes Päckchen %d hinzugefügt
+        </de>
+    </string>
 </languagestrings>

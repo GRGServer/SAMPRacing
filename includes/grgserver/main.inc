@@ -68,6 +68,7 @@
 #include <grgserver\functions\ReloadVehicles.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SaveAll.inc>
+#include <grgserver\functions\SaveHiddenPackages.inc>
 #include <grgserver\functions\SaveObjects.inc>
 #include <grgserver\functions\SavePlayer.inc>
 #include <grgserver\functions\SaveTeleports.inc>
@@ -127,6 +128,7 @@
 #include <grgserver\timers\Timer_EverySecond.inc>
 
 // commands
+#include <grgserver\commands\addhp.inc>
 #include <grgserver\commands\addobject.inc>
 #include <grgserver\commands\addtp.inc>
 #include <grgserver\commands\editobject.inc>
@@ -140,6 +142,7 @@
 #include <grgserver\commands\setobjectfilename.inc>
 #include <grgserver\commands\showarea.inc>
 #include <grgserver\commands\showareas.inc>
+#include <grgserver\commands\showhps.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 #include <grgserver\commands\tp.inc>
 #include <grgserver\commands\tppos.inc>
