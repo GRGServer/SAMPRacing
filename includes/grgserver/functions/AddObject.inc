@@ -26,7 +26,7 @@ AddObject(playerID, modelID, copyFromCurrent = false)
 
 	EditDynamicObject(playerID, objectID);
 
-	strcat(Object:objectID[FILENAME], "uncategorized", STRINGLENGTH_OBJECTFILENAME);
+	strcat(Object:objectID[FILENAME], PVar:playerID[OBJEDITOR_FILENAME], STRINGLENGTH_OBJECTFILENAME);
 
 	Object:objectID[ORIGINAL_POSX] = posX;
 	Object:objectID[ORIGINAL_POSY] = posY;
@@ -45,7 +45,7 @@ AddObject(playerID, modelID, copyFromCurrent = false)
 		}
 	}
 
-	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added and selected for editing"), modelID, name);
+	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added to file '%s' and selected for editing"), modelID, name, Object:objectID[FILENAME]);
 
 	return true;
 }

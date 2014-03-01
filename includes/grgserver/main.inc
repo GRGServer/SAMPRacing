@@ -135,6 +135,7 @@
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\reload.inc>
 #include <grgserver\commands\savepos.inc>
+#include <grgserver\commands\setobjectfilename.inc>
 #include <grgserver\commands\showarea.inc>
 #include <grgserver\commands\showareas.inc>
 #include <grgserver\commands\spawnvehicle.inc>

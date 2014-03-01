@@ -1,5 +1,12 @@
 ACMD:addobject(playerID, params[], StringID:93("Add a new object"))
 {
+	if (!StrNotNull(PVar:playerID[OBJEDITOR_FILENAME]))
+	{
+		SendClientMessageEx(playerID, COLOR_ERROR, StringID:109("No filename specified!"));
+		SendClientMessageEx(playerID, COLOR_ERROR, StringID:110("Set one using /setobjectfilename"));
+		return COMMAND_ERROR;
+	}
+
 	new modelID;
 	if (sscanf(params, "d", modelID))
 	{

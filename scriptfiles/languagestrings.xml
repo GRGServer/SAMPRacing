@@ -627,10 +627,10 @@
     </string>
     <string id="78">
         <en>
-            Previous: ~k~~VEHICLE_TURRETLEFT~~n~Next: ~k~~VEHICLE_TURRETRIGHT~~n~Buy: ~k~~PED_SPRINT~~n~Quit: ~k~~VEHICLE_ENTER_EXIT~
+            Previous: %s~n~Next: %s~n~Buy: %s~n~Quit: %s
         </en>
         <de>
-            Vorheriges: ~k~~VEHICLE_TURRETLEFT~~n~Nächstes: ~k~~VEHICLE_TURRETRIGHT~~n~Kaufen: ~k~~PED_SPRINT~~n~Verlassen: ~k~~VEHICLE_ENTER_EXIT~
+            Vorheriges: %s~n~Nächstes: %s~n~Kaufen: %s~n~Verlassen: %s
         </de>
     </string>
     <string id="79">
@@ -827,18 +827,18 @@
     </string>
     <string id="103">
         <en>
-            You can now edit the object using the GUI, clone it (Key ~k~~SNEAK_ABOUT~) or remove it (Key ~k~~CONVERSATION_NO~)
+            You can now edit the object using the GUI, clone it (Key %s) or remove it (Key %s)
         </en>
         <de>
-            Du kannst nun das Objekt über die GUI bearbeiten, klonen (Taste ~k~~SNEAK_ABOUT~) oder löschen (Taste ~k~~CONVERSATION_NO~)
+            Du kannst nun das Objekt über die GUI bearbeiten, klonen (Taste %s) oder löschen (Taste %s)
         </de>
     </string>
     <string id="104">
         <en>
-            The object %d (%s) has been added and selected for editing
+            The object %d (%s) has been added to file '%s' and selected for editing
         </en>
         <de>
-            Das Objekt %d (%s) wurde hinzugefügt und zum Bearbeiten ausgewählt
+            Das Objekt %d (%s) wurde zur Datei '%s' hinzugefügt und zum Bearbeiten ausgewählt
         </de>
     </string>
     <string id="105">
@@ -855,6 +855,38 @@
         </en>
         <de>
             Objekte neugeladen
+        </de>
+    </string>
+    <string id="107">
+        <en>
+            Specify the filename for new objects
+        </en>
+        <de>
+            Gebe den Dateinamen für neue Objekte an
+        </de>
+    </string>
+    <string id="108">
+        <en>
+            The filename has been changed to '%s'
+        </en>
+        <de>
+            Der Dateiname wurde auf '%s' geändert
+        </de>
+    </string>
+    <string id="109">
+        <en>
+            No filename specified!
+        </en>
+        <de>
+            Keine Dateiname angegeben!
+        </de>
+    </string>
+    <string id="110">
+        <en>
+            Set one using /setobjectfilename
+        </en>
+        <de>
+            Setze einen mit /setobjectfilename
         </de>
     </string>
 </languagestrings>
