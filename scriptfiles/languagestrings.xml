@@ -889,4 +889,20 @@
             Setze einen mit /setobjectfilename
         </de>
     </string>
+    <string id="111">
+        <en>
+            Enable the object selection mode to select and edit objects
+        </en>
+        <de>
+            Aktiviere den Objektauswahlmodus um Objekte auszuwählen und zu bearbeiten
+        </de>
+    </string>
+    <string id="112">
+        <en>
+            Object selection mode enabled
+        </en>
+        <de>
+            Objektauswahlmodus aktiviert
+        </de>
+    </string>
 </languagestrings>

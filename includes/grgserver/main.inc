@@ -128,6 +128,7 @@
 // commands
 #include <grgserver\commands\addobject.inc>
 #include <grgserver\commands\addtp.inc>
+#include <grgserver\commands\editobject.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\givemoney.inc>
 #include <grgserver\commands\god.inc>
