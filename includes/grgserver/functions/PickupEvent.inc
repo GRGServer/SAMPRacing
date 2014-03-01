@@ -12,6 +12,8 @@ PickupEvent(playerID, pickupID, eventType)
 			}
 			else
 			{
+				PVar:playerID[HIDDENPACKAGES][linkID] = true;
+
 				new hiddenPackagesFound = 0;
 				Count(packageID, MAX_HIDDENPACKAGES)
 				{
@@ -20,6 +22,7 @@ PickupEvent(playerID, pickupID, eventType)
 						hiddenPackagesFound++;
 					}
 				}
+
 				if (hiddenPackagesFound == g_hiddenPackagesCount)
 				{
 					GameTextForPlayer(playerID, LanguageString(playerID, StringID:97("You found all hidden packages!")), 3000, 3);
