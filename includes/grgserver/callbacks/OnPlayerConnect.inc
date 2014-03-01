@@ -5,6 +5,8 @@ public OnPlayerConnect(playerid)
 
 	printf("%s connected from %s", GetPlayerNameEx(playerid), GetPlayerCountryName(playerid));
 
+	SendDeathMessage(INVALID_PLAYER_ID, playerid, ICON_CONNECT);
+
 	// Send join message to all players except the joined player
 	PlayerLoop(playerID)
 	{

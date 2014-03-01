@@ -13,6 +13,11 @@
 #define COLOR_SYSTEM			0xC0C0C0FF
 
 
+// Special icons
+#define ICON_CONNECT			200
+#define ICON_DISCONNECT			201
+
+
 // Keys
 #define KEY_OBJECTEDITOR_CLONE		KEY_WALK
 #define KEY_OBJECTEDITOR_REMOVE		KEY_NO

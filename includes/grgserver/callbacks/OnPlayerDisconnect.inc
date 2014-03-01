@@ -9,6 +9,8 @@ public OnPlayerDisconnect(playerid, reason)
 
 	SavePlayer(playerid);
 
+	SendDeathMessage(INVALID_PLAYER_ID, playerid, ICON_DISCONNECT);
+
 	new reasonString[16];
 	switch (reason)
 	{
