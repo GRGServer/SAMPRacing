@@ -1,5 +1,10 @@
 public OnPlayerUpdate(playerid)
 {
+	if (IsPlayerNPC(playerid))
+	{
+		return true;
+	}
+
 	new vehicleID = GetPlayerVehicleID(playerid);
 	new vehicleSeat = GetPlayerVehicleSeat(playerid);
 

@@ -3,6 +3,11 @@ public OnPlayerConnect(playerid)
 	// Reset all player variables to their default values
 	ResetPlayerVariables(playerid);
 
+	if (IsPlayerNPC(playerid))
+	{
+		return true;
+	}
+
 	printf("%s connected from %s", GetPlayerNameEx(playerid), GetPlayerCountryName(playerid));
 
 	SendDeathMessage(INVALID_PLAYER_ID, playerid, ICON_CONNECT);
