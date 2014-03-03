@@ -22,26 +22,8 @@ public OnPlayerConnect(playerid)
 	}
 
 	// Check whether the player is already registered
-	new Cache:result = mysql_query_format(true, "SELECT `id`, `language` FROM `users` WHERE `username` = '%e'", GetPlayerNameEx(playerid));
-	new rows = cache_get_row_count();
-	if (rows)
-	{
-		PVar:playerid[LANGUAGE] = GetLanguageID(GetMySQLField("language"));
-	}
-	cache_delete(result);
-
-	if (rows)
-	{
-		// Show login dialog
-		ShowDialog:Login(playerid);
-	}
-	else
-	{
-		// Show language selection of register process
-		ShowDialog:Register_Language(playerid);
-	}
-
-	CreatePlayerTextDraws(playerid);
+	MySQLFormat("SELECT `id`, `language` FROM `users` WHERE `username` = '%e'", GetPlayerNameEx(playerid));
+	mysql_pquery(1, g_sqlQuery, "OnPlayerRegisteredCheck", "d", playerid);
 
 	TextDrawShowForPlayer(playerid, g_textDrawClock);
 

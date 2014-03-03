@@ -88,7 +88,6 @@
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>
 #include <grgserver\functions\XML_SetFloatAttribute.inc>
-#include <grgserver\functions\mysql_query_format.inc>
 #include <grgserver\functions\str_replace.inc>
 
 // callbacks
@@ -111,11 +110,13 @@
 #include <grgserver\callbacks\OnPlayerLogin.inc>
 #include <grgserver\callbacks\OnPlayerPickUpPickup.inc>
 #include <grgserver\callbacks\OnPlayerRegistered.inc>
+#include <grgserver\callbacks\OnPlayerRegisteredCheck.inc>
 #include <grgserver\callbacks\OnPlayerSelectDynamicObject.inc>
 #include <grgserver\callbacks\OnPlayerSpawn.inc>
 #include <grgserver\callbacks\OnPlayerText.inc>
 #include <grgserver\callbacks\OnPlayerUpdate.inc>
 #include <grgserver\callbacks\OnVehicleDamageStatusUpdate.inc>
+#include <grgserver\callbacks\OnVehicleInserted.inc>
 #include <grgserver\callbacks\OnVehicleMod.inc>
 #include <grgserver\callbacks\OnVehiclePaintjob.inc>
 #include <grgserver\callbacks\OnVehicleRespray.inc>
