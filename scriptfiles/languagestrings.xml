@@ -993,4 +993,20 @@
             Liste alle verfügbare Befehle auf
         </de>
     </string>
+    <string id="124">
+        <en>
+            Teleport yourself to a predefined location
+        </en>
+        <de>
+            Teleportiere dich zu einem vordefinierten Ort
+        </de>
+    </string>
+    <string id="125">
+        <en>
+            Show a list of areas you are currently in
+        </en>
+        <de>
+            Zeige eine Liste mit Bereichen in welchen du dich aktuell befindest
+        </de>
+    </string>
 </languagestrings>

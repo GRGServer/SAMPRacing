@@ -1,4 +1,4 @@
-CMD:tp(playerID, params[], stringID:-1("Teleport yourself to a predefined location"))
+CMD:tp(playerID, params[], StringID:124("Teleport yourself to a predefined location"))
 {
 	new name[STRINGLENGTH_TELEPORTNAME];
 	if (sscanf(params, "s[" #STRINGLENGTH_TELEPORTNAME "]", name))

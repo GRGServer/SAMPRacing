@@ -1,4 +1,4 @@
-ACMD:showareas(playerID, params[], String:-1("Show a list of areas you are currently in"))
+ACMD:showareas(playerID, params[], StringID:125("Show a list of areas you are currently in"))
 {
 	new areaCount = GetPlayerNumberDynamicAreas(playerID);
 	if (areaCount)
