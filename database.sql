@@ -37,10 +37,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `vehiclecomponents` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `vehicleId` int(11) NOT NULL,
   `slot` int(11) NOT NULL,
   `componentId` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
   UNIQUE KEY `vehicleId_slot` (`vehicleId`,`slot`),
   KEY `vehicleId` (`vehicleId`),
   CONSTRAINT `vehiclecomponents_vehicleId` FOREIGN KEY (`vehicleId`) REFERENCES `vehicles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
