@@ -2,6 +2,8 @@ ReloadHiddenPackages()
 {
 	print("Loading hidden packages...");
 
+	DestroyPickupsOfType(PICKUPTYPE_HIDDENPACKAGE);
+
 	new packageID = 0;
 
 	if (fexist("hiddenpackages.xml"))
