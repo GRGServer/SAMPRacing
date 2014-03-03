@@ -46,7 +46,7 @@ LoadCommands()
 	}
 	regex_delete(regex);
 
-	SortDeepArray(g_commands, string:E_COMMAND_NAME);// TODO: Does not sort the array (See also http://forum.sa-mp.com/showpost.php?p=2937426&postcount=86)
+	SortDeepArray(g_commands, String:E_COMMAND_NAME);// TODO: Fix warnings (tag mismatch)
 
 	printf("  %d commands loaded", commandID);
 }
