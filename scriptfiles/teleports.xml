@@ -11,4 +11,14 @@
             <interior>0</interior>
         </position>
     </teleport>
+    <teleport>
+        <name>stunt1</name>
+        <position>
+            <x>2082.8312</x>
+            <y>-2613.352</y>
+            <z>13.546875</z>
+            <angle>30.667631</angle>
+            <interior>0</interior>
+        </position>
+    </teleport>
 </teleports>

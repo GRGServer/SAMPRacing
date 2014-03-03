@@ -8,4 +8,9 @@
 		<command>tp</command>
 		<parameters>drift1</parameters>
 	</alias>
+	<alias>
+		<name>stunt1</name>
+		<command>tp</command>
+		<parameters>stunt1</parameters>
+	</alias>
 </commandaliases>
