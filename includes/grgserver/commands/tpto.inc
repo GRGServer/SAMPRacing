@@ -26,6 +26,8 @@ ACMD:tpto(playerID, params[], StringID:50("Teleport yourself to another player")
 	SetPlayerInterior(playerID, GetPlayerInterior(targetPlayerID));
 	SetPlayerVirtualWorld(playerID, GetPlayerVirtualWorld(targetPlayerID));
 
+	SetCameraBehindPlayer(playerID);
+
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:17("You teleported yourself to %u"), targetPlayerID);
 
 	return COMMAND_OK;

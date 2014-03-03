@@ -20,5 +20,7 @@ TeleportTo(playerID, teleportID)
 		SetVehicleVirtualWorld(vehicleID, 0);
 	}
 
+	SetCameraBehindPlayer(playerID);
+
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:54("You got teleport to %s"), g_teleports[teleportID][E_TELEPORT_NAME]);
 }

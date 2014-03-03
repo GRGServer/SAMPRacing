@@ -17,6 +17,8 @@ public OnPlayerSpawn(playerid)
 			SetVehicleVirtualWorld(vehicleID, GetPlayerVirtualWorld(playerid));
 			PutPlayerInVehicle(playerid, vehicleID, 0);
 
+			SetCameraBehindPlayer(playerid);
+
 			SaveVehicle(vehicleID, true);
 
 			GivePlayerMoney(playerid, -g_vehicleModels[PVar:playerid[VEHICLESHOP_MODELID] - 400][E_VEHICLEMODEL_PRICE]);

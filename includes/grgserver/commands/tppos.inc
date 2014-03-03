@@ -17,6 +17,7 @@ ACMD:tppos(playerID, params[], StringID:75("Teleport yourself to a specific posi
 
 	SetPlayerPos(playerID, posX, posY, posZ);
 	SetPlayerInterior(playerID, interior);
+	SetCameraBehindPlayer(playerID);
 
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:76("You teleported yourself to the position %f x %f x %f in interior %d"), posX, posY, posZ, interior);
 
