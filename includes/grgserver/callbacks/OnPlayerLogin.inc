@@ -1,7 +1,13 @@
-forward OnPlayerLogin(playerID);
-public OnPlayerLogin(playerID)
+forward OnPlayerLogin(playerID, password[]);
+public OnPlayerLogin(playerID, password[])
 {
-	if (!cache_num_rows())
+	new databasePassword[STRINGLENGTH_HASH * 2 + 2];
+	cache_get_field_content(0, "password", databasePassword);
+
+	new salt[STRINGLENGTH_HASH];
+	new hash[STRINGLENGTH_HASH];
+	sscanf(databasePassword, "p<$>s[" #STRINGLENGTH_HASH "]s[" #STRINGLENGTH_HASH "]", salt, hash);
+	if (!IsStr(databasePassword, Hash(password, salt)))
 	{
 		SendClientMessageEx(playerID, COLOR_ERROR, StringID:25("The entered password is wrong!"));
 		ShowDialog:Login(playerID);

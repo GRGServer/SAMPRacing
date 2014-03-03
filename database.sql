@@ -11,7 +11,7 @@ CREATE TABLE `chatlog` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(24) NOT NULL,
-  `password` varchar(128) NOT NULL,
+  `password` varchar(300) NOT NULL,
   `language` enum('de','en') NOT NULL,
   `isAdmin` tinyint(1) NOT NULL DEFAULT '0',
   `posX` float DEFAULT NULL,
@@ -46,6 +46,7 @@ CREATE TABLE `vehicles` (
   `angle` float NOT NULL DEFAULT '0',
   `health` float NOT NULL DEFAULT '1000',
   `mileage` int(11) NOT NULL DEFAULT '0',
+  `numberPlate` varchar(32) NOT NULL DEFAULT '',
   `color1` int(11) NOT NULL DEFAULT '0',
   `color2` int(11) NOT NULL DEFAULT '0',
   `paintjobId` int(11) NOT NULL DEFAULT '0',

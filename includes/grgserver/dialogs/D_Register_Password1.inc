@@ -7,14 +7,14 @@ DialogResponse:Register_Password1(playerID, response, listItem, inputText[])
 {
 	if (response)
 	{
-		if (strlen(inputText) >= REGISTER_PASSWORD_MIN && strlen(inputText) <= REGISTER_PASSWORD_MAX)
+		if (strlen(inputText) >= REGISTER_PASSWORD_MIN && strlen(inputText) <= STRINGLENGTH_HASHSTRING)
 		{
-			SetPVarStr:playerID[REGISTERPASSWORD][REGISTER_PASSWORD_MAX](inputText);
+			SetPVarStr:playerID[REGISTERPASSWORD][STRINGLENGTH_HASHSTRING](inputText);
 			ShowDialog:Register_Password2(playerID);
 		}
 		else
 		{
-			SendClientMessageEx(playerID, COLOR_ERROR, StringID:30("Please use a password with a length between %d and %d!"), REGISTER_PASSWORD_MIN, REGISTER_PASSWORD_MAX);
+			SendClientMessageEx(playerID, COLOR_ERROR, StringID:30("Please use a password with a length between %d and %d!"), REGISTER_PASSWORD_MIN, STRINGLENGTH_HASHSTRING);
 			ShowDialog:Register_Password1(playerID);
 		}
 	}
