@@ -5,8 +5,10 @@
 #include <filemanager>
 #include <formatnumber>
 #include <geoip>
+#include <md-sort>
 #include <mysql>
 #include <progressbars>
+#include <regex>
 #include <sscanf>
 #include <streamer>
 #include <whirlpool>

@@ -20,6 +20,8 @@ public OnGameModeInit()
 	ReloadVehicles();
 	ReloadHiddenPackages();
 
+	LoadCommands();
+
 	g_textDrawClock = TextDrawCreate(547, 25, "_");
 	TextDrawSetShadow(g_textDrawClock, 0);
 	TextDrawSetOutline(g_textDrawClock, 2);

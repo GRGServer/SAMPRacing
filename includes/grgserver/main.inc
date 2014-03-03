@@ -5,6 +5,7 @@
 
 // Structures
 #include <grgserver\Structures\E_AREA.inc>
+#include <grgserver\Structures\E_COMMAND.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
 #include <grgserver\Structures\E_OBJECT.inc>
@@ -50,6 +51,7 @@
 #include <grgserver\functions\IsLoggedIn.inc>
 #include <grgserver\functions\IsValidNumberPlateVehicle.inc>
 #include <grgserver\functions\LanguageString.inc>
+#include <grgserver\functions\LoadCommands.inc>
 #include <grgserver\functions\LoadObjectsFromFile.inc>
 #include <grgserver\functions\LoadPlayer.inc>
 #include <grgserver\functions\PickupEvent.inc>
@@ -133,6 +135,7 @@
 #include <grgserver\commands\addhp.inc>
 #include <grgserver\commands\addobject.inc>
 #include <grgserver\commands\addtp.inc>
+#include <grgserver\commands\cmds.inc>
 #include <grgserver\commands\editobject.inc>
 #include <grgserver\commands\engine.inc>
 #include <grgserver\commands\givemoney.inc>

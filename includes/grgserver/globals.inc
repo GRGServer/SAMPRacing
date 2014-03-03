@@ -1,6 +1,7 @@
 new g_addLineString[1024];
 new g_areas[MAX_AREAS][E_AREA];
 new g_commandAliases[MAX_COMMANDALIASES][E_COMMANDALIAS];
+new g_commands[MAX_COMMANDS][E_COMMAND];
 new g_hiddenPackagesCount;
 new g_languageStrings[MAX_LANGUAGE_STRINGS][E_LANGUAGESTRING];
 new g_maxPlayers;

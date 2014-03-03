@@ -985,4 +985,12 @@
             Du hast noch kein Ziel auf deiner Karte markiert!
         </de>
     </string>
+    <string id="123">
+        <en>
+            List all available commands
+        </en>
+        <de>
+            Liste alle verfügbare Befehle auf
+        </de>
+    </string>
 </languagestrings>
