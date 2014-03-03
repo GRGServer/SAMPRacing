@@ -84,6 +84,7 @@
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\UpdateDrifting.inc>
+#include <grgserver\functions\UpdateObjectEditorInfo.inc>
 #include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>

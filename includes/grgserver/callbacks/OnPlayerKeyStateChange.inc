@@ -36,6 +36,8 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 			SaveObjects(filename);
 
+			UpdateObjectEditorInfo(playerid, false);
+
 			UpdateObjectsForAllPlayers();
 			SelectObject(playerid);
 

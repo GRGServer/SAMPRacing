@@ -24,6 +24,12 @@ AddObject(playerID, modelID, copyFromCurrent = false)
 		return false;
 	}
 
+	PVar:playerID[OBJEDITOR_ID] = objectID;
+
+	PVar:playerID[OBJEDITOR_MODELNAME] = GetObjectNameByModelID(modelID);
+
+	UpdateObjectEditorInfo(playerID, true);
+
 	EditDynamicObject(playerID, objectID);
 
 	strcat(Object:objectID[FILENAME], PVar:playerID[OBJEDITOR_FILENAME], STRINGLENGTH_OBJECTFILENAME);
@@ -35,7 +41,7 @@ AddObject(playerID, modelID, copyFromCurrent = false)
 	Object:objectID[ORIGINAL_ROTY] = rotY;
 	Object:objectID[ORIGINAL_ROTZ] = rotZ;
 
-	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added to file '%s' and selected for editing"), modelID, GetObjectNameByModelID(modelID), Object:objectID[FILENAME]);
+	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added to file '%s' and selected for editing"), modelID, PVar:playerID[OBJEDITOR_MODELNAME], Object:objectID[FILENAME]);
 
 	return true;
 }

@@ -8,6 +8,9 @@ public OnPlayerEditDynamicObject(playerid, objectid, response, Float:x, Float:y,
 		{
 			MoveDynamicObject(objectid, Object:objectid[ORIGINAL_POSX], Object:objectid[ORIGINAL_POSY], Object:objectid[ORIGINAL_POSZ], 10.0, Object:objectid[ORIGINAL_ROTX], Object:objectid[ORIGINAL_ROTY], Object:objectid[ORIGINAL_ROTZ]);
 			PVar:playerid[OBJEDITOR_ID] = 0;
+
+			UpdateObjectEditorInfo(playerid, false);
+
 			SelectObject(playerid);
 		}
 		case EDIT_RESPONSE_FINAL:
@@ -22,8 +25,15 @@ public OnPlayerEditDynamicObject(playerid, objectid, response, Float:x, Float:y,
 			SaveObjects(Object:objectid[FILENAME]);
 			PVar:playerid[OBJEDITOR_ID] = 0;
 			PlaySound(playerid, SOUND_OBJECTPLACED);
+
+			UpdateObjectEditorInfo(playerid, false);
+
 			SelectObject(playerid);
 			SendClientMessageEx(playerid, COLOR_INFO, StringID:100("The changes have been saved"));
+		}
+		default:
+		{
+			UpdateObjectEditorInfo(playerid, true);
 		}
 	}
 }

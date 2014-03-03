@@ -371,10 +371,10 @@
     </string>
     <string id="46">
         <en>
-            You are now logged in
+            %s~n~Position: %f x %f x %f~n~Rotation: %f x %f x %f
         </en>
         <de>
-            Du bist nun eingeloggt
+            %s~n~Position: %f x %f x %f~n~Rotation: %f x %f x %f
         </de>
     </string>
     <string id="47">
