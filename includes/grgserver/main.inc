@@ -77,6 +77,7 @@
 #include <grgserver\functions\SaveVehicle.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
 #include <grgserver\functions\SetPlayerCameraPosEx.inc>
+#include <grgserver\functions\SetPlayerSpawn.inc>
 #include <grgserver\functions\SetPrivateWorld.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
@@ -99,6 +100,7 @@
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
 #include <grgserver\callbacks\OnPlayerCommandText.inc>
 #include <grgserver\callbacks\OnPlayerConnect.inc>
+#include <grgserver\callbacks\OnPlayerDataLoaded.inc>
 #include <grgserver\callbacks\OnPlayerDeath.inc>
 #include <grgserver\callbacks\OnPlayerDisconnect.inc>
 #include <grgserver\callbacks\OnPlayerEditDynamicObject.inc>
@@ -106,7 +108,9 @@
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
 #include <grgserver\callbacks\OnPlayerKeyStateChange.inc>
+#include <grgserver\callbacks\OnPlayerLogin.inc>
 #include <grgserver\callbacks\OnPlayerPickUpPickup.inc>
+#include <grgserver\callbacks\OnPlayerRegistered.inc>
 #include <grgserver\callbacks\OnPlayerSelectDynamicObject.inc>
 #include <grgserver\callbacks\OnPlayerSpawn.inc>
 #include <grgserver\callbacks\OnPlayerText.inc>

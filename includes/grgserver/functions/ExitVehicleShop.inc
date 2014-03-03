@@ -5,14 +5,32 @@ ExitVehicleShop(playerID, buy)
 
 	SetPrivateWorld(playerID, false);
 
-	if (buy)
+	new vehicleShopID = PVar:playerID[VEHICLESHOP_ID];
+
+	new spawnType = buy ? SPAWNTYPE_BUYVEHICLESHOP : SPAWNTYPE_DEFAULT;
+
+	if (PVar:playerID[VEHICLESHOP_SPAWNOLDPOS])
 	{
-		PVar:playerID[SPAWNTYPE] = SPAWNTYPE_BUYVEHICLESHOP;
+		SetPlayerSpawn(playerID, spawnType, PVar:playerID[VEHICLESHOP_OLDPOSX], PVar:playerID[VEHICLESHOP_OLDPOSY], PVar:playerID[VEHICLESHOP_OLDPOSZ], PVar:playerID[VEHICLESHOP_OLDANGLE], PVar:playerID[VEHICLESHOP_OLDINTERIOR]);
 	}
 	else
 	{
+		if (buy)
+		{
+			SetPlayerSpawn(playerID, spawnType, g_vehicleShops[vehicleShopID][E_VEHICLESHOP_BUYSPAWN_POSX], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_BUYSPAWN_POSY], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_BUYSPAWN_POSZ], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_BUYSPAWN_ANGLE]);
+		}
+		else
+		{
+			SetPlayerSpawn(playerID, spawnType, g_vehicleShops[vehicleShopID][E_VEHICLESHOP_QUITSPAWN_POSX], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_QUITSPAWN_POSY], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_QUITSPAWN_POSZ], g_vehicleShops[vehicleShopID][E_VEHICLESHOP_QUITSPAWN_ANGLE]);
+		}
+	}
+
+	if (!buy)
+	{
 		DestroyVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]);
-		PVar:playerID[SPAWNTYPE] = SPAWNTYPE_EXITVEHICLESHOP;
+
+		PVar:playerID[VEHICLESHOP_ID] = -1;
+		PVar:playerID[VEHICLESHOP_VEHICLEID] = INVALID_VEHICLE_ID;
 	}
 
 	TogglePlayerSpectating(playerID, false);

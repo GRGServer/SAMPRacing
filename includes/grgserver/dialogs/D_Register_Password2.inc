@@ -10,32 +10,8 @@ DialogResponse:Register_Password2(playerID, response, listItem, inputText[])
 		if (!strcmp(inputText, PVar:playerID[REGISTERPASSWORD]))
 		{
 			// Add the new user to the database
-			new Cache:result = mysql_query_format(true, "INSERT INTO `users` (`username`, `password`, `language`, `registerDate`, `lastLogin`) VALUES('%e', '%e', '%e', NOW(), NOW())", GetPlayerNameEx(playerID), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]));
-
-			PVar:playerID[USERID] = cache_insert_id();
-
-			cache_delete(result);
-
-			// Send login message to all players except the logged in player
-			PlayerLoop(currentPlayerID)
-			{
-				if (currentPlayerID != playerID)
-				{
-					SendClientMessageEx(currentPlayerID, COLOR_JOINLEAVE, StringID:26("%u logged in"), playerID);
-				}
-			}
-
-			// The next spawn is the first one
-			PVar:playerID[SPAWNTYPE] = SPAWNTYPE_FIRSTSPAWN;
-
-			// Load and spawn the player
-			LoadPlayer(playerID);
-			SpawnPlayer(playerID);
-
-			GivePlayerMoney(playerID, REGISTER_MONEY);
-
-			SendClientMessageEx(playerID, COLOR_INFO, StringID:41("Your registration was successful"));
-			SendClientMessageEx(playerID, COLOR_INFO, StringID:46("You are now logged in"));
+			MySQLFormat("INSERT INTO `users` (`username`, `password`, `language`, `money`, `registerDate`, `lastLogin`) VALUES('%e', '%e', '%e', %d, NOW(), NOW())", GetPlayerNameEx(playerID), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]), REGISTER_MONEY);
+			mysql_pquery(1, g_sqlQuery, "OnPlayerRegistered", "d", playerID);
 		}
 		else
 		{

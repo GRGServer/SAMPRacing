@@ -10,6 +10,7 @@ EnterVehicleShop(playerID, shopID, respawnOldPos)
 
 	GetPlayerPos(playerID, PVar:playerID[VEHICLESHOP_OLDPOSX], PVar:playerID[VEHICLESHOP_OLDPOSY], PVar:playerID[VEHICLESHOP_OLDPOSZ]);
 	GetPlayerFacingAngle(playerID, PVar:playerID[VEHICLESHOP_OLDANGLE]);
+	PVar:playerID[VEHICLESHOP_OLDINTERIOR] = GetPlayerInterior(playerID);
 
 	SetPrivateWorld(playerID, true);
 
