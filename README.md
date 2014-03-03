@@ -20,6 +20,21 @@ winetricks --unattended vcrun6
 winetricks --unattended vcrun2005
 ```
 
+## Used plugins
+
+The following plugins are used by the server:
+
+ * [crashdetect](http://forum.sa-mp.com/showthread.php?t=262796)
+ * [filemanager](http://forum.sa-mp.com/showthread.php?t=92246)
+ * [fixes2](http://forum.sa-mp.com/showthread.php?t=375925)
+ * [geoip](http://forum.sa-mp.com/showthread.php?t=32509)
+ * [mysql](http://forum.sa-mp.com/showthread.php?t=56564)
+ * [regex](http://forum.sa-mp.com/showthread.php?t=247893)
+ * [sscanf](http://forum.sa-mp.com/showthread.php?t=120356)
+ * [streamer](http://forum.sa-mp.com/showthread.php?t=102865)
+ * [whirlpool](http://forum.sa-mp.com/showthread.php?t=65290)
+ * [xml](http://forum.sa-mp.com/showthread.php?t=372521)
+
 ## Configuration
 
   * Clone this repository
