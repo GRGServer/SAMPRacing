@@ -37,6 +37,10 @@ LoadCommands()
 					commandID++;
 				}
 			}
+			else
+			{
+				printf("  Can not parse first line in '%s'", item);
+			}
 			f_close(file);
 		}
 	}
