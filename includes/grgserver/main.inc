@@ -106,6 +106,7 @@
 #include <grgserver\callbacks\OnPlayerEnterArea.inc>
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
+#include <grgserver\callbacks\OnPlayerHiddenPackagesLoaded.inc>
 #include <grgserver\callbacks\OnPlayerKeyStateChange.inc>
 #include <grgserver\callbacks\OnPlayerLogin.inc>
 #include <grgserver\callbacks\OnPlayerPickUpPickup.inc>

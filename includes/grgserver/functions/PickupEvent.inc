@@ -23,6 +23,9 @@ PickupEvent(playerID, pickupID, eventType)
 					}
 				}
 
+				MySQLFormat("INSERT INTO `hiddenpackages` (`userId`, `packageId`) VALUES(%d, %d)", PVar:playerID[USERID], linkID);
+				mysql_pquery(1, g_sqlQuery);
+
 				if (hiddenPackagesFound == g_hiddenPackagesCount)
 				{
 					GameTextForPlayer(playerID, LanguageString(playerID, StringID:97("You found all hidden packages!")), 3000, 3);
