@@ -1,1 +1,7 @@
+# PureBasic stuff
+*.pb.cfg
+project.cfg
+PureBasic_Compilation*.exe
+
+# Local tools configuration
 tools.conf
