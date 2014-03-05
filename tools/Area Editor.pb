@@ -448,8 +448,8 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 				ResizeGadget(#ScrollArea, #PB_Ignore, #PB_Ignore, WindowWidth(#Window) - GadgetWidth(#PointList), WindowHeight(#Window) - MenuHeight())
 				ResizeGadget(#AreaSelection, WindowWidth(#Window) - GadgetWidth(#AreaSelection) - GadgetWidth(#NewArea), #PB_Ignore, #PB_Ignore, #PB_Ignore)
 				ResizeGadget(#NewArea, WindowWidth(#Window) - GadgetWidth(#NewArea), #PB_Ignore, #PB_Ignore, #PB_Ignore)
-				ResizeGadget(#PointList, WindowWidth(#Window) - GadgetWidth(#PointList), #PB_Ignore, #PB_Ignore, WindowHeight(#Window) - GadgetY(#PointList) - GadgetHeight(#DeleteArea))
-				ResizeGadget(#DeleteArea, WindowWidth(#Window) - GadgetWidth(#DeleteArea), WindowHeight(#Window) - GadgetHeight(#DeleteArea), #PB_Ignore, #PB_Ignore)
+				ResizeGadget(#PointList, WindowWidth(#Window) - GadgetWidth(#PointList), #PB_Ignore, #PB_Ignore, WindowHeight(#Window) - GadgetY(#PointList) - GadgetHeight(#DeleteArea) - MenuHeight())
+				ResizeGadget(#DeleteArea, WindowWidth(#Window) - GadgetWidth(#DeleteArea), WindowHeight(#Window) - GadgetHeight(#DeleteArea) - MenuHeight(), #PB_Ignore, #PB_Ignore)
 			Case #PB_Event_CloseWindow
 				Select EventWindow()
 					Case #Window
