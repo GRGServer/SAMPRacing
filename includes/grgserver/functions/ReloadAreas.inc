@@ -35,6 +35,10 @@ ReloadAreas()
 		{
 			g_areas[areaID][E_AREA_TYPE] = AREATYPE_DRIFT;
 		}
+		else if (!strcmp(value, "stunt", true))
+		{
+			g_areas[areaID][E_AREA_TYPE] = AREATYPE_STUNT;
+		}
 		else
 		{
 			printf("  Invalid area group '%s' for area %d", value, areaID);

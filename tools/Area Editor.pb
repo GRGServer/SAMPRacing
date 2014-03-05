@@ -358,6 +358,7 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 							StringGadget(#NewArea_Name, 70, 10, 200, 20, "")
 							ComboBoxGadget(#NewArea_Type, 70, 40, 200, 20)
 							AddGadgetItem(#NewArea_Type, -1, "drift")
+							AddGadgetItem(#NewArea_Type, -1, "stunt")
 							ButtonGadget(#NewArea_OK, 90, 70, 100, 30, "OK")
 						EndIf
 					Case #PointList

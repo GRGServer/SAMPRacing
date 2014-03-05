@@ -1009,4 +1009,12 @@
             Zeige eine Liste mit Bereichen in welchen du dich aktuell befindest
         </de>
     </string>
+    <string id="126">
+        <en>
+            Stunt area
+        </en>
+        <de>
+            Stuntbereich
+        </de>
+    </string>
 </languagestrings>
