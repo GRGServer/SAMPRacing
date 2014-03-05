@@ -28,12 +28,20 @@ public OnPlayerUpdate(playerid)
 		new areaID = Streamer_GetIntData(STREAMER_TYPE_AREA, areas[0], E_STREAMER_EXTRA_ID);
 		if (PVar:playerid[CURRENT_AREA] != areaID + 1)
 		{
+			// Exit the old area
+			if (PVar:playerid[CURRENT_AREA])
+			{
+				OnPlayerExitArea(playerid, PVar:playerid[CURRENT_AREA] - 1);
+			}
+
+			// Enter the area
 			PVar:playerid[CURRENT_AREA] = areaID + 1;
 			OnPlayerEnterArea(playerid, areaID);
 		}
 	}
 	else
 	{
+		// Exit the area
 		if (PVar:playerid[CURRENT_AREA])
 		{
 			OnPlayerExitArea(playerid, PVar:playerid[CURRENT_AREA] - 1);
