@@ -146,7 +146,7 @@ Procedure LoadAreas()
 				MessageRequester("XML loading failed", "No main node found in XML file!", #MB_ICONERROR)
 			EndIf
 		Else
-			MessageRequester("XML loading failed", "Can Not load XML file!" + Chr(13) + Chr(13) + "Message: " + XMLError(xml) + Chr(13) + "Line: " + Str(XMLErrorLine(xml)) + Chr(13) + "Character: " + Str(XMLErrorPosition(xml)), #MB_ICONERROR)
+			MessageRequester("XML loading failed", "Can not load XML file!" + Chr(13) + Chr(13) + "Message: " + XMLError(xml) + Chr(13) + "Line: " + Str(XMLErrorLine(xml)) + Chr(13) + "Character: " + Str(XMLErrorPosition(xml)), #MB_ICONERROR)
 		EndIf
 	EndIf
 EndProcedure
@@ -306,7 +306,7 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 						event = EventType()
 						If event = #PB_EventType_LeftClick Or event = #PB_EventType_RightClick
 							If GetGadgetState(#AreaSelection) = -1
-								MessageRequester("Draw area", "Please Select an area first!", #MB_ICONERROR)
+								MessageRequester("Draw area", "Please select an area first!", #MB_ICONERROR)
 							Else
 								inputPoint.Point
 								inputPoint\x = GetGadgetAttribute(#MapCanvas, #PB_Canvas_MouseX)
