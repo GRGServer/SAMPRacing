@@ -28,7 +28,7 @@
 
 
 // Limits
-#define MAX_AREA_POLYGON_POINTS		50
+#define MAX_AREAPOINTS			50
 #define MAX_AREAS			50
 #define MAX_COMMANDALIASES		50
 #define MAX_COMMANDS			50

@@ -24,7 +24,7 @@ ReloadAreas()
 		new XMLNode:node;
 		new value[100];
 
-		if (areaID >= MAX_TELEPORTS)
+		if (areaID >= MAX_AREAS)
 		{
 			printf("  Reached limit of %d areas", MAX_AREAS);
 			break;
@@ -62,7 +62,7 @@ ReloadAreas()
 			maxZ = XML_GetFloatValue(node);
 		}
 
-		new Float:points[MAX_AREA_POLYGON_POINTS * 2];
+		new Float:points[MAX_AREAPOINTS * 2];
 		new pointIndex;
 
 		node = XML_GetFirstChild(areaNode, "point");
@@ -74,9 +74,9 @@ ReloadAreas()
 		}
 		while (node)
 		{
-			if (pointIndex >= MAX_AREA_POLYGON_POINTS * 2)
+			if (pointIndex >= MAX_AREAPOINTS * 2)
 			{
-				printf("  Reached limit of %d polygon points", MAX_AREA_POLYGON_POINTS);
+				printf("  Reached limit of %d polygon points", MAX_AREAPOINTS);
 				break;
 			}
 

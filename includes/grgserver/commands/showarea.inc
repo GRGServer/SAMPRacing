@@ -16,7 +16,7 @@ ACMD:showarea(playerID, params[], StringID:69("Show area points as icons on the 
 				RemovePlayerMapIcon(playerID, iconIndex);
 			}
 
-			new Float:points[MAX_AREA_POLYGON_POINTS * 2];
+			new Float:points[MAX_AREAPOINTS * 2];
 			GetDynamicPolygonPoints(g_areas[areaID][E_AREA_ID], points);
 			new numPoints = GetDynamicPolygonNumberPoints(g_areas[areaID][E_AREA_ID]);
 			Count(index, numPoints)
