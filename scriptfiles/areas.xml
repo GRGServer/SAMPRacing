@@ -74,4 +74,10 @@
         <point x="2133" y="-2622"/>
         <point x="2146" y="-2601"/>
     </area>
+    <area name="drift2" type="drift">
+        <point x="2255" y="1527"/>
+        <point x="2362" y="1527"/>
+        <point x="2362" y="1380"/>
+        <point x="2255" y="1380"/>
+    </area>
 </areas>

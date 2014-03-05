@@ -13,11 +13,23 @@
     </teleport>
     <teleport>
         <name>stunt1</name>
+        <withvehicle>true</withvehicle>
         <position>
             <x>2082.8312</x>
             <y>-2613.352</y>
             <z>13.546875</z>
             <angle>30.667631</angle>
+            <interior>0</interior>
+        </position>
+    </teleport>
+    <teleport>
+        <name>drift2</name>
+        <withvehicle>true</withvehicle>
+        <position>
+            <x>2274.0954</x>
+            <y>1395.7603</y>
+            <z>42.445274</z>
+            <angle>9.698478</angle>
             <interior>0</interior>
         </position>
     </teleport>

@@ -9,6 +9,11 @@
 		<parameters>drift1</parameters>
 	</alias>
 	<alias>
+		<name>drift2</name>
+		<command>tp</command>
+		<parameters>drift2</parameters>
+	</alias>
+	<alias>
 		<name>stunt1</name>
 		<command>tp</command>
 		<parameters>stunt1</parameters>
