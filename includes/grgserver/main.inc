@@ -68,6 +68,7 @@
 #include <grgserver\functions\ReloadVehicleModels.inc>
 #include <grgserver\functions\ReloadVehicleShops.inc>
 #include <grgserver\functions\ReloadVehicles.inc>
+#include <grgserver\functions\RemoveStandardObjectsForPlayer.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SaveAll.inc>
 #include <grgserver\functions\SaveHiddenPackages.inc>
@@ -88,6 +89,7 @@
 #include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>
+#include <grgserver\functions\XML_GetIntAttribute.inc>
 #include <grgserver\functions\XML_SetFloatAttribute.inc>
 #include <grgserver\functions\str_replace.inc>
 

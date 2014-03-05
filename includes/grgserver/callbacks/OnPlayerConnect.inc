@@ -21,6 +21,9 @@ public OnPlayerConnect(playerid)
 		}
 	}
 
+	// Remove standard objects
+	RemoveStandardObjectsForPlayer(playerid);
+
 	// Check whether the player is already registered
 	MySQLFormat("SELECT `id`, `language` FROM `users` WHERE `username` = '%e'", GetPlayerNameEx(playerid));
 	mysql_pquery(1, g_sqlQuery, "OnPlayerRegisteredCheck", "d", playerid);
