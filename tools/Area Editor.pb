@@ -35,47 +35,80 @@ Procedure GetDistanceBetweenPoints(*point1.Point, *point2.Point)
 	ProcedureReturn Sqr(Pow(*point1\x - *point2\x, 2)) + Sqr(Pow(*point1\y - *point2\y, 2))
 EndProcedure
 
+Procedure ConvertPoint(*input.Point, *output.Point, toGameCoordinates)
+	If toGameCoordinates
+		*output\x = *input\x - 3000
+		*output\y = (*input\y - 3000) * -1
+	Else
+		*output\x = *input\x + 3000
+		*output\y = *input\y * -1 + 3000
+	EndIf
+EndProcedure
+
 Procedure UpdateImage()
 	If StartDrawing(CanvasOutput(#MapCanvas))
 		DrawImage(ImageID(#MapImage), 0, 0)
+
 		FrontColor(RGB(0, 0, 255))
-		item = GetGadgetState(#AreaSelection)
-		If item <> -1
-			SelectElement(Areas(), item)
-			pointListItem = GetGadgetState(#PointList)
+
+		; Draw points of the selected area (if there is a selected one)
+		areaItem = GetGadgetState(#AreaSelection)
+		If areaItem <> -1
+			SelectElement(Areas(), areaItem)
+			currentPointItem = GetGadgetState(#PointList)
 			ClearGadgetItems(#PointList)
+
+			; Loop through all points
 			lastPoint = ListSize(Areas()\points()) - 1
-			For point = 0 To lastPoint
-				SelectElement(Areas()\points(), point)
+			For pointItem = 0 To lastPoint
+				SelectElement(Areas()\points(), pointItem)
 				AddGadgetItem(#PointList, -1, Str(Areas()\points()\x) + Chr(10) + Str(Areas()\points()\y))
-				startX = Areas()\points()\x + 3000
-				startY = Areas()\points()\y * -1 + 3000
+				
+				point.Point
+				ConvertPoint(Areas()\points(), point, #False)
+
+				; This is the first and last point
 				If lastPoint = 0
-					Plot(startX, startY)
+					Plot(point\x, point\y)
 				Else
-					If point = lastPoint
-						SelectElement(Areas()\points(), 0)
+					; This is the last point
+					If pointItem = lastPoint
+						nextPointItem = 0
 					Else
-						SelectElement(Areas()\points(), point + 1)
+						nextPointItem = pointItem + 1
 					EndIf
-					endX = Areas()\points()\x + 3000
-					endY = Areas()\points()\y * -1 + 3000
-					LineXY(startX, startY, endX, endY)
+
+					; Next point = End point of the line
+					SelectElement(Areas()\points(), nextPointItem)
+					
+					endPoint.Point
+					ConvertPoint(Areas()\points(), endPoint, #False)
+
+					; Draw a line from this point to the next one
+					LineXY(point\x, point\y, endPoint\x, endPoint\y)
 				EndIf
-				If point = pointListItem
-					Circle(startX, startY, 5, RGB(255, 255, 0))
+
+				; This is the currently selected point
+				If pointItem = currentPointItem
+					; Draw a bigger circle
+					Circle(point\x, point\y, 5, RGB(255, 255, 0))
+
+					; Scroll to the point if it is not in the visible area of the scroll area
 					scrollX = GetGadgetAttribute(#ScrollArea, #PB_ScrollArea_X)
 					scrollY = GetGadgetAttribute(#ScrollArea, #PB_ScrollArea_Y)
-					If startX < scrollX Or startX > scrollX + GadgetWidth(#ScrollArea)
-						SetGadgetAttribute(#ScrollArea, #PB_ScrollArea_X, startX - GadgetWidth(#ScrollArea) / 2)
+					If point\x < scrollX Or point\x > scrollX + GadgetWidth(#ScrollArea)
+						SetGadgetAttribute(#ScrollArea, #PB_ScrollArea_X, point\x - GadgetWidth(#ScrollArea) / 2)
 					EndIf
-					If startY < scrollY Or startY > scrollY + GadgetHeight(#ScrollArea)
-						SetGadgetAttribute(#ScrollArea, #PB_ScrollArea_Y, startY - GadgetHeight(#ScrollArea) / 2)
+					If point\y < scrollY Or point\y > scrollY + GadgetHeight(#ScrollArea)
+						SetGadgetAttribute(#ScrollArea, #PB_ScrollArea_Y, point\y - GadgetHeight(#ScrollArea) / 2)
 					EndIf
 				EndIf
 			Next
-			SetGadgetState(#PointList, pointListItem)
+
+			; Set selected item back to the previous one
+			SetGadgetState(#PointList, currentPointItem)
 		EndIf
+
 		StopDrawing()
 	EndIf
 EndProcedure
@@ -110,10 +143,10 @@ Procedure LoadAreas()
 				fileChanged = #False
 				UpdateAreaSelectBox()
 			Else
-				MessageRequester(#Title, "No main node found in XML file!", #MB_ICONERROR)
+				MessageRequester("XML loading failed", "No main node found in XML file!", #MB_ICONERROR)
 			EndIf
 		Else
-			MessageRequester(#Title, "Can not load XML file!" + Chr(13) + Chr(13) + "Message: " + XMLError(xml) + Chr(13) + "Line: " + Str(XMLErrorLine(xml)) + Chr(13) + "Character: " + Str(XMLErrorPosition(xml)), #MB_ICONERROR)
+			MessageRequester("XML loading failed", "Can Not load XML file!" + Chr(13) + Chr(13) + "Message: " + XMLError(xml) + Chr(13) + "Line: " + Str(XMLErrorLine(xml)) + Chr(13) + "Character: " + Str(XMLErrorPosition(xml)), #MB_ICONERROR)
 		EndIf
 	EndIf
 EndProcedure
@@ -123,6 +156,7 @@ Procedure SaveAreas()
 	If IsXML(xml)
 		*mainNode = CreateXMLNode(RootXMLNode(xml))
 		SetXMLNodeName(*mainNode, "areas")
+
 		ForEach Areas()
 			*areaNode = CreateXMLNode(*mainNode)
 			SetXMLNodeName(*areaNode, "area")
@@ -135,9 +169,11 @@ Procedure SaveAreas()
 				SetXMLAttribute(*pointNode, "y", Str(Areas()\points()\y))
 			Next
 		Next
+
 		FormatXML(xml, #PB_XML_LinuxNewline | #PB_XML_ReIndent | #PB_XML_ReFormat, 4)
 		saveOK = SaveXML(xml, scriptFilesPath$ + "areas.xml")
 		FreeXML(xml)
+
 		If saveOK
 			fileChanged = #False
 			ProcedureReturn #True
@@ -164,18 +200,22 @@ EndIf
 If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget | #PB_Window_SizeGadget | #PB_Window_ScreenCentered)
 	If CreateToolBar(#ToolBar, WindowID(#Window))
 		ToolBarStandardButton(#Save, #PB_ToolBarIcon_Save)
+		ToolBarToolTip(#ToolBar, #Save, "Save")
 	EndIf
 
+	; Scroll area with canvas
 	ScrollAreaGadget(#ScrollArea, 0, ToolBarHeight(#ToolBar), 0, 0, ImageWidth(#MapImage), ImageHeight(#MapImage), 100, #PB_ScrollArea_Center)
 	CanvasGadget(#MapCanvas, 0, 0, ImageWidth(#MapImage), ImageHeight(#MapImage))
 	CloseGadgetList()
 
+	; Right pane
 	ComboBoxGadget(#AreaSelection, 0, ToolBarHeight(#ToolBar), 150, 20)
 	ButtonGadget(#NewArea, 150, ToolBarHeight(#ToolBar), 50, 20, "New")
 	ListIconGadget(#PointList, 0, ToolBarHeight(#ToolBar) + 20, 200, 0, "X", 50, #PB_ListIcon_FullRowSelect)
 	AddGadgetColumn(#PointList, 1, "Y", 50)
 	ButtonGadget(#DeleteArea, 0, 0, 200, 20, "Delete area")
-	
+
+	; Keyboard shortcuts
 	AddKeyboardShortcut(#Window, #PB_Shortcut_Control | #PB_Shortcut_S, #Save)
 	AddKeyboardShortcut(#Window, #PB_Shortcut_Delete, #DeleteCurrentPoint)
 
@@ -213,7 +253,7 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 							EndIf
 						EndIf
 					Case #NewArea
-						If OpenWindow(#NewArea_Window, 100, 100, 280, 110, #Title + " - New area", #PB_Window_SystemMenu | #PB_Window_WindowCentered, WindowID(#Window))
+						If OpenWindow(#NewArea_Window, 100, 100, 280, 110, "New area", #PB_Window_SystemMenu | #PB_Window_WindowCentered, WindowID(#Window))
 							DisableWindow(#Window, #True)
 							TextGadget(#NewArea_Text1, 10, 10, 50, 20, "Name:")
 							TextGadget(#NewArea_Text2, 10, 40, 50, 20, "Type:")
@@ -260,17 +300,20 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 							CloseWindow(#NewArea_Window)
 							DisableWindow(#Window, #False)
 						Else
-							MessageRequester(#Title, "Please enter a name and select a type!", #MB_ICONERROR)
+							MessageRequester("New area", "Please enter a name And Select a type!", #MB_ICONERROR)
 						EndIf
 					Case #MapCanvas
 						event = EventType()
 						If event = #PB_EventType_LeftClick Or event = #PB_EventType_RightClick
 							If GetGadgetState(#AreaSelection) = -1
-								MessageRequester(#Title, "Please select an area first!", #MB_ICONERROR)
+								MessageRequester("Draw area", "Please Select an area first!", #MB_ICONERROR)
 							Else
-								point.Point
-								point\x = GetGadgetAttribute(#MapCanvas, #PB_Canvas_MouseX) - 3000
-								point\y = (GetGadgetAttribute(#MapCanvas, #PB_Canvas_MouseY) - 3000) * -1
+								inputPoint.Point
+								inputPoint\x = GetGadgetAttribute(#MapCanvas, #PB_Canvas_MouseX)
+								inputPoint\y = GetGadgetAttribute(#MapCanvas, #PB_Canvas_MouseY)
+								outputPoint.Point
+								ConvertPoint(inputPoint, outputPoint, #True)
+
 								Select event
 									Case #PB_EventType_LeftClick
 										item = GetGadgetState(#PointList)
@@ -280,13 +323,13 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 											SelectElement(Areas()\points(), item)
 										EndIf
 										AddElement(Areas()\points())
-										Areas()\points() = point
+										Areas()\points() = outputPoint
 										fileChanged = #True
 										UpdateImage()
 									Case #PB_EventType_RightClick
 										nearestPoint = -1
 										ForEach Areas()\points()
-											distance = Abs(GetDistanceBetweenPoints(Areas()\points(), point))
+											distance = Abs(GetDistanceBetweenPoints(Areas()\points(), outputPoint))
 											If nearestPoint = -1 Or distance < nearestDistance
 												nearestPoint = ListIndex(Areas()\points())
 												nearestDistance = distance
@@ -303,7 +346,7 @@ If OpenWindow(#Window, 100, 100, 800, 600, #Title, #PB_Window_MinimizeGadget | #
 						EndIf
 				EndSelect
 			Case #PB_Event_SizeWindow
-				ResizeGadget(#ScrollArea, #PB_Ignore, #PB_Ignore, WindowWidth(#Window) - GadgetWidth(#PointList), WindowHeight(#Window))
+				ResizeGadget(#ScrollArea, #PB_Ignore, #PB_Ignore, WindowWidth(#Window) - GadgetWidth(#PointList), WindowHeight(#Window) - ToolBarHeight(#ToolBar))
 				ResizeGadget(#AreaSelection, WindowWidth(#Window) - GadgetWidth(#AreaSelection) - GadgetWidth(#NewArea), #PB_Ignore, #PB_Ignore, #PB_Ignore)
 				ResizeGadget(#NewArea, WindowWidth(#Window) - GadgetWidth(#NewArea), #PB_Ignore, #PB_Ignore, #PB_Ignore)
 				ResizeGadget(#PointList, WindowWidth(#Window) - GadgetWidth(#PointList), #PB_Ignore, #PB_Ignore, WindowHeight(#Window) - GadgetY(#PointList) - GadgetHeight(#DeleteArea))
