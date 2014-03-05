@@ -1,8 +1,8 @@
 OnPlayerExitArea(playerID, areaID)
 {
-	switch (g_areas[areaID][E_AREA_GROUP])
+	switch (g_areas[areaID][E_AREA_TYPE])
 	{
-		case AREAGROUP_DRIFT:
+		case AREATYPE_DRIFT:
 		{
 			PVar:playerID[DRIFTING_STATE] = false;
 		}

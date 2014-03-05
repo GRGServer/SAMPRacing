@@ -92,10 +92,10 @@
 #define STRINGLENGTH_VEHICLETYPE	16
 
 
-// Area groups
+// Area types
 enum
 {
-	AREAGROUP_DRIFT
+	AREATYPE_DRIFT
 }
 
 
