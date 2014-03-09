@@ -1,4 +1,4 @@
-ACMD:vehicleshop(playerID, params[], StringID:90("Enter the specified vehicle shop"))
+PCMD:vehicleshop[ISADMIN](playerID, params[], StringID:90("Enter the specified vehicle shop"))
 {
 	new shopID;
 	if (sscanf(params, "d", shopID))

@@ -1,4 +1,4 @@
-ACMD:makeadmin(playerID, params[], StringID:51("Give admin privileges to another player"))
+PCMD:makeadmin[ISADMIN](playerID, params[], StringID:51("Give admin privileges to another player"))
 {
 	new targetPlayerID;
 	if (sscanf(params, "u", targetPlayerID))

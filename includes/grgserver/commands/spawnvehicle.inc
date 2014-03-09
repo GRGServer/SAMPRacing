@@ -1,4 +1,4 @@
-ACMD:spawnvehicle(playerID, params[], StringID:1("Spawn a vehicle"))
+PCMD:spawnvehicle[ISADMIN](playerID, params[], StringID:1("Spawn a vehicle"))
 {
 	new vehicleName[20];
 	new modelID;

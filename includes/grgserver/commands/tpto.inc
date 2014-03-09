@@ -1,4 +1,4 @@
-ACMD:tpto(playerID, params[], StringID:50("Teleport yourself to another player"))
+PCMD:tpto[ISADMIN](playerID, params[], StringID:50("Teleport yourself to another player"))
 {
 	new targetPlayerID;
 	if (sscanf(params, "u", targetPlayerID))

@@ -1,4 +1,4 @@
-ACMD:showhps(playerID, params[], StringID:114("Show all hidden packages on the map"))
+PCMD:showhps[ISADMIN](playerID, params[], StringID:114("Show all hidden packages on the map"))
 {
 	Count(iconIndex, 100)
 	{

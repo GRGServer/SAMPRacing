@@ -5,7 +5,7 @@ LoadCommands()
 	new commandID;
 	new item[100];
 	new type;
-	new RegEx:regex = regex_build("^(ACMD|CMD):([a-z]+)\\(playerID, params\\[\\], StringID:([0-9]+)\\(\"(.*)\"\\)\\)");
+	new RegEx:regex = regex_build("^(PCMD|CMD):([a-z]+)(\\[([A-Z_]+)\\])?\\(playerID, params\\[\\], StringID:([0-9]+)\\(\"(.*)\"\\)\\)");
 	new dir:dirHandle = dir_open("includes/grgserver/commands");
 	while (dir_list(dirHandle, item, type))
 	{
@@ -18,12 +18,12 @@ LoadCommands()
 			if (regex_match_exid(line, regex))
 			{
 				new lineReplaced[256];
-				regex_replace_exid(line, regex, "$1 $2 $3", lineReplaced);
+				regex_replace_exid(line, regex, "$2 $4 $5", lineReplaced);
 
-				new commandType[5];
 				new command[STRINGLENGTH_COMMANDNAME];
+				new pVarName[32];
 				new languageStringID;
-				if (!sscanf(lineReplaced, "s[5]s[" #STRINGLENGTH_COMMANDNAME "]d", commandType, command, languageStringID))
+				if (!sscanf(lineReplaced, "s[" #STRINGLENGTH_COMMANDNAME "]s[32]d", command, pVarName, languageStringID) || !sscanf(lineReplaced, "s[" #STRINGLENGTH_COMMANDNAME "]d", command, languageStringID))
 				{
 					if (commandID >= MAX_COMMANDS)
 					{
@@ -31,10 +31,14 @@ LoadCommands()
 						break;
 					}
 
-					g_commands[commandID][E_COMMAND_ADMIN] = !strcmp(commandType, "ACMD");
 					g_commands[commandID][E_COMMAND_NAME] = command;
+					g_commands[commandID][E_COMMAND_PVARNAME] = pVarName;
 					g_commands[commandID][E_COMMAND_LANGUAGESTRINGID] = languageStringID;
 					commandID++;
+				}
+				else
+				{
+					printf("  Can not parse first line in '%s'", item);
 				}
 			}
 			else

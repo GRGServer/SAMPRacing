@@ -1,4 +1,4 @@
-ACMD:maptp(playerID, params[], StringID:120("Teleport yourself to the target selected on the map"))
+PCMD:maptp[ISADMIN](playerID, params[], StringID:120("Teleport yourself to the target selected on the map"))
 {
 	if (PVar:playerID[MAP_POSX] && PVar:playerID[MAP_POSY])
 	{

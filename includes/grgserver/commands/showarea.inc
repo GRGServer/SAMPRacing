@@ -1,4 +1,4 @@
-ACMD:showarea(playerID, params[], StringID:69("Show area points as icons on the map"))
+PCMD:showarea[ISADMIN](playerID, params[], StringID:69("Show area points as icons on the map"))
 {
 	new name[STRINGLENGTH_AREANAME];
 	if (sscanf(params, "s[" #STRINGLENGTH_AREANAME "]", name))

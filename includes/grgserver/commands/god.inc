@@ -1,4 +1,4 @@
-ACMD:god(playerID, params[], StringID:64("Enable or disable god mode"))
+PCMD:god[ISADMIN](playerID, params[], StringID:64("Enable or disable god mode"))
 {
 	if (PVar:playerID[GODMODE])
 	{

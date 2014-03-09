@@ -1,4 +1,4 @@
-ACMD:savepos(playerID, params[], StringID:42("Save your current position to a file"))
+PCMD:savepos[ISADMIN](playerID, params[], StringID:42("Save your current position to a file"))
 {
 	new File:file = fopen("positions.txt", io_append);
 	if (file)

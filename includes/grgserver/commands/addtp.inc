@@ -1,4 +1,4 @@
-ACMD:addtp(playerID, params[], StringID:61("Add a new teleport location"))
+PCMD:addtp[ISADMIN](playerID, params[], StringID:61("Add a new teleport location"))
 {
 	new name[STRINGLENGTH_TELEPORTNAME];
 	if (sscanf(params, "s[" #STRINGLENGTH_TELEPORTNAME "]", name))

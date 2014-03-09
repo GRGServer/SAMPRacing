@@ -1,4 +1,4 @@
-ACMD:editobject(playerID, params[], StringID:111("Enable the object selection mode to select and edit objects"))
+PCMD:editobject[ISADMIN](playerID, params[], StringID:111("Enable the object selection mode to select and edit objects"))
 {
 	SelectObject(playerID);
 

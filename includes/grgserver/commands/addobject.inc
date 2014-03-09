@@ -1,4 +1,4 @@
-ACMD:addobject(playerID, params[], StringID:93("Add a new object"))
+PCMD:addobject[ISADMIN](playerID, params[], StringID:93("Add a new object"))
 {
 	if (!StrNotNull(PVar:playerID[OBJEDITOR_FILENAME]))
 	{

@@ -1,4 +1,4 @@
-ACMD:tppos(playerID, params[], StringID:75("Teleport yourself to a specific position"))
+PCMD:tppos[ISADMIN](playerID, params[], StringID:75("Teleport yourself to a specific position"))
 {
 	new Float:posX;
 	new Float:posY;

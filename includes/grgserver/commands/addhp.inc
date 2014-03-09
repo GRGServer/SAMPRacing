@@ -1,4 +1,4 @@
-ACMD:addhp(playerID, params[], StringID:116("Add a hidden package"))
+PCMD:addhp[ISADMIN](playerID, params[], StringID:116("Add a hidden package"))
 {
 	new Float:posX;
 	new Float:posY;

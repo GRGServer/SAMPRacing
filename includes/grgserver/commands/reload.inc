@@ -1,4 +1,4 @@
-ACMD:reload(playerID, params[], StringID:55("Reload parts of the script"))
+PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script"))
 {
 	new part[100];
 	if (sscanf(params, "s[100]", part))

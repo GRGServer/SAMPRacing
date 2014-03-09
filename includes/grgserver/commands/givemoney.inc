@@ -1,4 +1,4 @@
-ACMD:givemoney(playerID, params[], StringID:86("Give money to yourself"))
+PCMD:givemoney[ISADMIN](playerID, params[], StringID:86("Give money to yourself"))
 {
 	new amount;
 	if (sscanf(params, "d", amount))

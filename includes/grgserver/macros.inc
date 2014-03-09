@@ -1,11 +1,11 @@
 // CMD:name(playerID, params, languageStringID)
 #define CMD:%0(%1,%2,%3) COMMAND:%0(%1, %2)
 
+// PCMD:name[PVarName](playerID, params, languageStringID)
+#define PCMD:%0[%1](%2,%3,%4) COMMAND:%0(%2, %3) if (!PVar:%2[%1]) return COMMAND_PERMISSION_DENIED; else
+
 // COMMAND:name(playerID, params)
 #define COMMAND:%0(%1) forward cmd_%0(%1); public cmd_%0(%1)
-
-// ACMD:name(playerID, params, languageStringID)
-#define ACMD:%0(%1,%2,%3) COMMAND:%0(%1, %2) if (!PVar:%1[ISADMIN]) return COMMAND_PERMISSION_DENIED; else
 
 // AddLine:string(string[, formatParameters])
 #define AddLine:%0(%1) if (strlen(%0)) strcat(%0, "\n"); Format:g_addLineString(%1); strcat(%0, g_addLineString)

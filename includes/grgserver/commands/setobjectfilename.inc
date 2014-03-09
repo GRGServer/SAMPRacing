@@ -1,4 +1,4 @@
-ACMD:setobjectfilename(playerID, params[], StringID:107("Specify the filename for new objects"))
+PCMD:setobjectfilename[ISADMIN](playerID, params[], StringID:107("Specify the filename for new objects"))
 {
 	new filename[STRINGLENGTH_OBJECTFILENAME];
 	if (sscanf(params, "s[" #STRINGLENGTH_OBJECTFILENAME "]", filename))
