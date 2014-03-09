@@ -4,7 +4,7 @@ ReloadObjects()
 
 	Foreach(index, g_objects)
 	{
-		if (IsValidDynamicArea(index + 1))
+		if (IsValidDynamicObject(index + 1))
 		{
 			DestroyDynamicObject(index + 1);
 		}
