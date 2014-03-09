@@ -49,6 +49,7 @@
 #include <grgserver\functions\GetObjectNameByModelID.inc>
 #include <grgserver\functions\GetPlayerNameEx.inc>
 #include <grgserver\functions\GetVehicleEngineState.inc>
+#include <grgserver\functions\GiveHiddenPackagesRewards.inc>
 #include <grgserver\functions\Hash.inc>
 #include <grgserver\functions\IsLoggedIn.inc>
 #include <grgserver\functions\IsValidNumberPlateVehicle.inc>

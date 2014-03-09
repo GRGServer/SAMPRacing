@@ -22,10 +22,7 @@ public OnPlayerHiddenPackagesLoaded(playerID)
 	}
 
 	// Restore rewards
-	if (hiddenPackagesFound >= 50)
-	{
-		PVar:playerID[HAS_MOBILEVEHICLESHOP] = true;
-	}
+	GiveHiddenPackagesRewards(playerID, hiddenPackagesFound, false);
 
 	if (hiddenPackagesFound < g_hiddenPackagesCount)
 	{
