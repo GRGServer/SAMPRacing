@@ -1,8 +1,15 @@
 <commandaliases>
+	<!-- Shortcuts -->
+	<alias>
+		<name>mvs</name>
+		<command>mobilevehicleshop</command>
+	</alias>
 	<alias>
 		<name>v</name>
 		<command>spawnvehicle</command>
 	</alias>
+
+	<!-- Teleport aliases -->
 	<alias>
 		<name>drift1</name>
 		<command>tp</command>

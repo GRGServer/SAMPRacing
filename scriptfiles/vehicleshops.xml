@@ -1,4 +1,10 @@
 <vehicleshops>
+	<!-- Mobile Vehicle Shop -->
+	<shop>
+		<numberplateprefix>MS</numberplateprefix>
+	</shop>
+
+	<!-- Regular shops -->
 	<shop>
 		<pickup x="-1649.088134" y="1209.080566" z="7.25"/>
 		<quitspawn x="-1642.345825" y="1204.023315" z="7.254719" angle="240.642318"/>

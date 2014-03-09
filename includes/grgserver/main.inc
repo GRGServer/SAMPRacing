@@ -152,6 +152,7 @@
 #include <grgserver\commands\jetpack.inc>
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\maptp.inc>
+#include <grgserver\commands\mobilevehicleshop.inc>
 #include <grgserver\commands\reload.inc>
 #include <grgserver\commands\savepos.inc>
 #include <grgserver\commands\setobjectfilename.inc>

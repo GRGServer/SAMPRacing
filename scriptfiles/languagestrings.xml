@@ -1017,4 +1017,44 @@
             Stuntbereich
         </de>
     </string>
+    <string id="127">
+        <en>
+            Enable the mobile vehicle shop
+        </en>
+        <de>
+            Aktiviere den mobilen Fahrzeugshop
+        </de>
+    </string>
+    <string id="128">
+        <en>
+            You got $%d for finding 10 hidden packages
+        </en>
+        <de>
+            Du hast $%d für das Finden von 10 versteckten Päckchen bekommen
+        </de>
+    </string>
+    <string id="129">
+        <en>
+            You now own the mobile vehicle shop
+        </en>
+        <de>
+            Du besitzst nun den mobilen Fahrzeugshop
+        </de>
+    </string>
+    <string id="130">
+        <en>
+            It allows you to buy a vehicle wherever you are
+        </en>
+        <de>
+            Er erlaubt es dir, ein Fahrzeug von wo auch immer du gerade bist zu kaufen
+        </de>
+    </string>
+    <string id="131">
+        <en>
+            Just enable it using /mobilevehicleshop or /mvs
+        </en>
+        <de>
+            Aktiviere ihn einfach mit /mobilevehicleshop oder /mvs
+        </de>
+    </string>
 </languagestrings>
