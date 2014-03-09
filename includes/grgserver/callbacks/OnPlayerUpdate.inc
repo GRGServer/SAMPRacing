@@ -60,5 +60,15 @@ public OnPlayerUpdate(playerid)
 		SetPlayerCameraLookAt(playerid, PVar:playerid[SETCAMERA_LOOKATX], PVar:playerid[SETCAMERA_LOOKATY], PVar:playerid[SETCAMERA_LOOKATZ]);
 	}
 
+	if (PVar:playerid[SHOWPOS])
+	{
+		new Float:posX;
+		new Float:posY;
+		new Float:posZ;
+		GetPlayerPos(playerid, posX, posY, posZ);
+		FormatNew:showPosString[100]("X: %f~n~Y: %f~n~Z: %f", posX, posY, posZ);
+		PlayerTextDrawSetString(playerid, g_playerTextDraws[playerid][E_PTD_SHOWPOS], showPosString);
+	}
+
 	return true;
 }

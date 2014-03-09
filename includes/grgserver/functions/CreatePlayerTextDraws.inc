@@ -18,6 +18,11 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS], 0xff000066);
 
+	// Drifting bonus values
+	g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES] = CreatePlayerTextDraw(playerID, 580, 400, " ");
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES], 0.4, 0.8);
+
 	// Object editor info
 	g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO] = CreatePlayerTextDraw(playerID, 320, 425, " ");
 	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO], 2);
@@ -26,10 +31,13 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO], 0x00000066);
 
-	// Drifting bonus values
-	g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES] = CreatePlayerTextDraw(playerID, 580, 400, " ");
-	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES], 1);
-	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES], 0.4, 0.8);
+	// Show pos
+	g_playerTextDraws[playerID][E_PTD_SHOWPOS] = CreatePlayerTextDraw(playerID, 10, 150, " ");
+	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 150, 0);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 0x00000066);
 
 	// Vehicle shop control info
 	Format:text(LanguageString(playerID, StringID:78("Previous: %s~n~Next: %s~n~Buy: %s~n~Quit: %s")), GetGameTextKeyByID(KEY_VEHICLESHOP_PREVIOUS, false), GetGameTextKeyByID(KEY_VEHICLESHOP_NEXT, false), GetGameTextKeyByID(KEY_VEHICLESHOP_BUY, false), GetGameTextKeyByID(KEY_VEHICLESHOP_QUIT, false));

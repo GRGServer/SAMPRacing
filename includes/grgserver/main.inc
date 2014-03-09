@@ -160,6 +160,7 @@
 #include <grgserver\commands\showarea.inc>
 #include <grgserver\commands\showareas.inc>
 #include <grgserver\commands\showhps.inc>
+#include <grgserver\commands\showpos.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 #include <grgserver\commands\tp.inc>
 #include <grgserver\commands\tppos.inc>

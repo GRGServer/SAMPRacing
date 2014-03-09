@@ -739,10 +739,10 @@
     </string>
     <string id="92">
         <en>
-            Hidden packages reloaded
+            Toggle showing your current position
         </en>
         <de>
-            Versteckte Päckchen neugeladen
+            Aktiviere oder deaktiviere das Anzeigen deiner aktuellen Position
         </de>
     </string>
     <string id="93">
@@ -771,10 +771,10 @@
     </string>
     <string id="96">
         <en>
-            You already found this hidden package!
+            Current position display has been disabled
         </en>
         <de>
-            Du hast dieses versteckte Päckchen bereits gefunden!
+            Anzeige der aktuellen Position wurde deaktiviert
         </de>
     </string>
     <string id="97">
@@ -931,34 +931,10 @@
     </string>
     <string id="116">
         <en>
-            Add a hidden package
+            Current position display has been enabled
         </en>
         <de>
-            Ein verstecktes Päckchen hinzufügen
-        </de>
-    </string>
-    <string id="117">
-        <en>
-            Limit of %d hidden packages reached!
-        </en>
-        <de>
-            Limit von %d versteckten Päckchen erreicht!
-        </de>
-    </string>
-    <string id="118">
-        <en>
-            Can not add hidden package!
-        </en>
-        <de>
-            Das versteckte Päckchen konnte nicht hinzugefügt werden!
-        </de>
-    </string>
-    <string id="119">
-        <en>
-            Hidden package %d added
-        </en>
-        <de>
-            Verstecktes Päckchen %d hinzugefügt
+            Anzeige der aktuellen Position wurde aktiviert
         </de>
     </string>
     <string id="120">
