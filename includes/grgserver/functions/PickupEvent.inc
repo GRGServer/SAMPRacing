@@ -14,7 +14,7 @@ PickupEvent(playerID, pickupID, eventType)
 			{
 				PVar:playerID[HIDDENPACKAGES][linkID] = true;
 
-				new hiddenPackagesFound = 0;
+				new hiddenPackagesFound;
 				Count(packageID, MAX_HIDDENPACKAGES)
 				{
 					if (PVar:playerID[HIDDENPACKAGES][packageID])
