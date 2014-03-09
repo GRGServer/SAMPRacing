@@ -18,8 +18,8 @@ public OnGameModeInit()
 	ReloadAreas();
 	ReloadPickups();
 	ReloadVehicles();
-	ReloadHiddenPackages();
 
+	LoadHiddenPackages();
 	LoadCommands();
 
 	g_textDrawClock = TextDrawCreate(547, 25, "_");

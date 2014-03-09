@@ -1,8 +1,6 @@
-ReloadHiddenPackages()
+LoadHiddenPackages()
 {
 	print("Loading hidden packages...");
-
-	DestroyPickupsOfType(PICKUPTYPE_HIDDENPACKAGE);
 
 	new packageID = 0;
 
@@ -13,10 +11,15 @@ ReloadHiddenPackages()
 		new XMLNode:packageNode = XML_GetFirstChild(xml, "package");
 		while (packageNode)
 		{
-			if (!AddPickup(PICKUPTYPE_HIDDENPACKAGE, XML_GetFloatAttribute(packageNode, "x"), XML_GetFloatAttribute(packageNode, "y"), XML_GetFloatAttribute(packageNode, "z"), packageID))
+			if (packageID >= MAX_HIDDENPACKAGES)
 			{
+				printf("  Limit of %d hidden packages reached", MAX_HIDDENPACKAGES);
 				break;
 			}
+
+			g_hiddenPackages[packageID][E_HIDDENPACKAGE_POSX] = XML_GetFloatAttribute(packageNode, "x");
+			g_hiddenPackages[packageID][E_HIDDENPACKAGE_POSY] = XML_GetFloatAttribute(packageNode, "y");
+			g_hiddenPackages[packageID][E_HIDDENPACKAGE_POSZ] = XML_GetFloatAttribute(packageNode, "z");
 
 			packageID++;
 

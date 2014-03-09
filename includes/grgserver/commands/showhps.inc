@@ -6,18 +6,25 @@ PCMD:showhps[ISADMIN](playerID, params[], StringID:114("Show all hidden packages
 	}
 
 	new iconID;
-	Count(pickupID, MAX_PICKUPS)
+	Foreach(packageID, g_hiddenPackages)
 	{
 		if (iconID >= 100)
 		{
 			break;
 		}
 
-		if (g_pickups[pickupID][E_PICKUP_TYPE] == PICKUPTYPE_HIDDENPACKAGE)
+		new iconType;
+		if (PVar:playerID[HIDDENPACKAGES][packageID])
 		{
-			SetPlayerMapIcon(playerID, iconID, g_pickups[pickupID][E_PICKUP_POSX], g_pickups[pickupID][E_PICKUP_POSY], g_pickups[pickupID][E_PICKUP_POSZ], 56, 0, MAPICON_GLOBAL);
-			iconID++;
+			iconType = 52;
 		}
+		else
+		{
+			iconType = 36;
+		}
+
+		SetPlayerMapIcon(playerID, iconID, g_hiddenPackages[packageID][E_HIDDENPACKAGE_POSX], g_hiddenPackages[packageID][E_HIDDENPACKAGE_POSY], g_hiddenPackages[packageID][E_HIDDENPACKAGE_POSZ], iconType, 0, MAPICON_GLOBAL);
+		iconID++;
 	}
 
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:115("The hidden packages have been marked on your map"));

@@ -51,6 +51,8 @@ public OnPlayerUpdate(playerid)
 
 	UpdateDrifting(playerid);
 
+	CheckHiddenPackages(playerid);
+
 	if (PVar:playerid[SETCAMERA_COUNT] > 0)
 	{
 		PVar:playerid[SETCAMERA_COUNT]--;
