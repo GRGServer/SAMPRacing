@@ -9,7 +9,7 @@ PCMD:vehicleshop[ISADMIN](playerID, params[], StringID:90("Enter the specified v
 
 	if (shopID < 0 || shopID >= MAX_VEHICLESHOPS)
 	{
-		SendClientMessageEx(playerID, COLOR_ERROR, StringID:91("Shop ID must be between 0 and %d"), MAX_VEHICLESHOPS);
+		SendClientMessageEx(playerID, COLOR_ERROR, StringID:91("Shop ID must be between 0 and %d"), MAX_VEHICLESHOPS - 1);
 		return COMMAND_ERROR;
 	}
 
