@@ -4,6 +4,7 @@ new g_commandAliases[MAX_COMMANDALIASES][E_COMMANDALIAS];
 new g_commands[MAX_COMMANDS][E_COMMAND];
 new g_hiddenPackages[MAX_HIDDENPACKAGES][E_HIDDENPACKAGE];
 new g_hiddenPackagesCount;
+new g_interiors[MAX_INTERIORS][E_INTERIOR];
 new g_languageStrings[MAX_LANGUAGE_STRINGS][E_LANGUAGESTRING];
 new g_maxPlayers;
 new g_objectModels[MAX_OBJECTMODELS][E_OBJECTMODEL];

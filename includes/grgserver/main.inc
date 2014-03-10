@@ -8,6 +8,7 @@
 #include <grgserver\Structures\E_COMMAND.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_HIDDENPACKAGE.inc>
+#include <grgserver\Structures\E_INTERIOR.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
 #include <grgserver\Structures\E_OBJECT.inc>
 #include <grgserver\Structures\E_OBJECTMODEL.inc>
@@ -63,6 +64,7 @@
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
+#include <grgserver\functions\ReloadInteriors.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
 #include <grgserver\functions\ReloadObjectModels.inc>
 #include <grgserver\functions\ReloadObjects.inc>
@@ -86,6 +88,7 @@
 #include <grgserver\functions\SpawnVehicle.inc>
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
+#include <grgserver\functions\TeleportToInterior.inc>
 #include <grgserver\functions\UpdateDrifting.inc>
 #include <grgserver\functions\UpdateObjectEditorInfo.inc>
 #include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
@@ -163,6 +166,7 @@
 #include <grgserver\commands\showpos.inc>
 #include <grgserver\commands\spawnvehicle.inc>
 #include <grgserver\commands\tp.inc>
+#include <grgserver\commands\tpint.inc>
 #include <grgserver\commands\tppos.inc>
 #include <grgserver\commands\tpto.inc>
 #include <grgserver\commands\vehicleshop.inc>

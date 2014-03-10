@@ -14,6 +14,7 @@ public OnGameModeInit()
 	ReloadVehicleModels();
 	ReloadVehicleShops();
 	ReloadCommandAliases();
+	ReloadInteriors();
 	ReloadTeleports();
 	ReloadAreas();
 	ReloadPickups();

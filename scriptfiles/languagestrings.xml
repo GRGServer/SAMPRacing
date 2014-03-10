@@ -937,6 +937,30 @@
             Anzeige der aktuellen Position wurde aktiviert
         </de>
     </string>
+    <string id="117">
+        <en>
+            Teleport yourself to an interior
+        </en>
+        <de>
+            Teleportiere dich zu einem Interior
+        </de>
+    </string>
+    <string id="118">
+        <en>
+            Unknown interior ID!
+        </en>
+        <de>
+            Unbekannte Interior ID!
+        </de>
+    </string>
+    <string id="119">
+        <en>
+            You teleported yourself to the interior '%s'
+        </en>
+        <de>
+            Du hast dich zum Interior '%s' teleportiert
+        </de>
+    </string>
     <string id="120">
         <en>
             Teleport yourself to the target selected on the map
@@ -1039,6 +1063,14 @@
         </en>
         <de>
             Du hast %d von %d versteckten Päckchen gefunden
+        </de>
+    </string>
+    <string id="133">
+        <en>
+            The interior ID must be between 0 and %d!
+        </en>
+        <de>
+            Die Interior ID muss zwischen 0 und %d sein!
         </de>
     </string>
 </languagestrings>
