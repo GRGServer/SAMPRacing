@@ -10,6 +10,7 @@ CheckHiddenPackages(playerID)
 			{
 				// Remove the object
 				DestroyDynamicObject(PVar:playerID[HIDDENPACKAGES][hiddenPackageID]);
+				Streamer_Update(playerID);
 				PVar:playerID[HIDDENPACKAGES][hiddenPackageID] = 0;
 
 				// Save the state
