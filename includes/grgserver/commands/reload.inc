@@ -4,7 +4,9 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	if (sscanf(params, "s[100]", part))
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
-		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts: %s"), "areas, commandaliases, languagestrings, objectmodels, objects, pickups, teleports, vehiclemodels, vehicles, vehicleshops");
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts:"));
+		SendClientMessage(playerID, COLOR_INFO, "areas, commandaliases, garages, interiors, languagestrings, objectmodels");
+		SendClientMessage(playerID, COLOR_INFO, "objects, pickups, teleports, vehiclemodels, vehicles, vehicleshops");
 		return COMMAND_USAGE;
 	}
 
@@ -19,6 +21,20 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	{
 		ReloadCommandAliases();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:44("Command aliases reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "garages", true))
+	{
+		ReloadGarages();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:141("Garages reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (!strcmp(part, "interiors", true))
+	{
+		ReloadInteriors();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:142("Interiors reloaded"));
 		return COMMAND_OK;
 	}
 

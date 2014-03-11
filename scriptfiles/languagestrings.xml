@@ -451,10 +451,10 @@
     </string>
     <string id="56">
         <en>
-            Available parts: %s
+            Available parts:
         </en>
         <de>
-            Verfügbare Teile
+            Verfügbare Teile:
         </de>
     </string>
     <string id="57">
@@ -1127,6 +1127,22 @@
         </en>
         <de>
             Garage gekauft
+        </de>
+    </string>
+    <string id="141">
+        <en>
+            Garages reloaded
+        </en>
+        <de>
+            Garagen neugeladen
+        </de>
+    </string>
+    <string id="142">
+        <en>
+            Interiors reloaded
+        </en>
+        <de>
+            Interiors neugeladen
         </de>
     </string>
 </languagestrings>
