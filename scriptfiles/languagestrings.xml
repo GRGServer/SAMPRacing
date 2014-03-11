@@ -1145,4 +1145,20 @@
             Interiors neugeladen
         </de>
     </string>
+    <string id="143">
+        <en>
+            Teleport yourself to the spawn location
+        </en>
+        <de>
+            Teleportiere dich zum Spawnort
+        </de>
+    </string>
+    <string id="144">
+        <en>
+            You got teleported to the spawn location
+        </en>
+        <de>
+            Du hast dich zum Spawnort teleportiert
+        </de>
+    </string>
 </languagestrings>
