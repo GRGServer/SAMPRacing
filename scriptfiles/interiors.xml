@@ -15,7 +15,7 @@
 	<interior x="418.59" y="-82.8253" z="1001.8" angle="5.03423" interior="3">Barber Shop</interior>
 	<interior x="389.366" y="173.561" z="1008.38" angle="92.7918" interior="3">Planning Department</interior>
 	<interior x="288.848" y="168.799" z="1007.17" angle="4.74446" interior="3">Las Venturas Police Department</interior>
-	<interior x="206.995" y="-138.89" z="1003.51" angle="359.418" interior="3">Pro-Laps</interior>
+	<interior x="207.054992" y="-138.804992" z="1003.507812" angle="0" interior="3">Pro-Laps</interior>
 	<interior x="-100.337" y="-23.3265" z="1000.72" angle="4.7445" interior="3">Sex Shop</interior>
 	<interior x="-203.663" y="-42.6308" z="1002.27" angle="339.364" interior="3">Las Venturas Tattoo parlor</interior>
 	<interior x="-203.438" y="-7.38362" z="1002.27" angle="324.951" interior="17">Lost San Fierro Tattoo parlor</interior>
@@ -32,7 +32,7 @@
 	<interior x="621.453" y="-23.7289" z="1000.92" angle="15.6789" interior="1">Transfenders</interior>
 	<interior x="445.6" y="-6.9823" z="1000.73" angle="172.21" interior="1">World of Coq</interior>
 	<interior x="285.779" y="-40.0283" z="1001.52" angle="335.408" interior="1">Ammu-nation (version 2)</interior>
-	<interior x="203.913" y="-48.9999" z="1001.8" angle="353.268" interior="1">SubUrban</interior>
+	<interior x="203.777999" y="-48.492401" z="1001.804687" angle="0" interior="1">SubUrban</interior>
 	<interior x="245.231" y="304.763" z="999.148" angle="273.436" interior="1">Denise's Bedroom</interior>
 	<interior x="290.623" y="309.062" z="999.148" angle="89.9164" interior="3">Helena's Barn</interior>
 	<interior x="322.501" y="303.691" z="999.148" angle="8.1747" interior="5">Barbara's Love nest</interior>
@@ -61,7 +61,7 @@
 	<interior x="420.367" y="2536.58" z="10.0" angle="89.304" interior="10">Abandoned AC tower</interior>
 	<interior x="256.905" y="-41.6537" z="1002.02" angle="85.8774" interior="14">Wardrobe/Changing room</interior>
 	<interior x="204.392" y="-166.811" z="1000.52" angle="1.61653" interior="14">Didier Sachs</interior>
-	<interior x="1133.15" y="-12.2835" z="1000.68" angle="7.25669" interior="12">Casino (Redsands West)</interior>
+	<interior x="1133.069946" y="-9.573060" z="1000.679687" angle="0" interior="12">Casino (Redsands West)</interior>
 	<interior x="-1420.43" y="1616.92" z="1052.53" angle="159.126" interior="14">Kickstart Stadium</interior>
 	<interior x="493.423" y="-22.4514" z="1000.68" angle="2.53327" interior="17">Club</interior>
 	<interior x="1726.96" y="-1640.61" z="20.2243" angle="182.702" interior="18">Atrium</interior>
@@ -95,7 +95,7 @@
 	<interior x="318.589" y="1117.23" z="1083.88" angle="0.409738" interior="5">Crack Den</interior>
 	<interior x="227.756" y="1114.38" z="1080.99" angle="266.262" interior="5">Burglary House X11</interior>
 	<interior x="261.015" y="1286.43" z="1080.26" angle="1.97645" interior="4">Burglary House X12</interior>
-	<interior x="286.149" y="-84.5633" z="1001.52" angle="319.592" interior="4">Ammu-nation (version 3)</interior>
+	<interior x="285.798431" y="-83.850967" z="1001.515625" angle="0" interior="4">Ammu-nation (version 3)</interior>
 	<interior x="458.254" y="-88.4449" z="999.555" angle="90.9641" interior="4">Jay's Diner</interior>
 	<interior x="-27.2373" y="-29.7102" z="1003.56" angle="2.93985" interior="4">24/7 (version 5)</interior>
 	<interior x="2135.2" y="-2276.28" z="20.6719" angle="318.59" interior="0">Warehouse 3</interior>
