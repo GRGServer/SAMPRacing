@@ -1073,4 +1073,60 @@
             Die Interior ID muss zwischen 0 und %d sein!
         </de>
     </string>
+    <string id="134">
+        <en>
+            Press %s to use this pickup
+        </en>
+        <de>
+            Drücke %s um dieses Pickup zu verwenden
+        </de>
+    </string>
+    <string id="135">
+        <en>
+            Large garage
+        </en>
+        <de>
+            Große Garage
+        </de>
+    </string>
+    <string id="136">
+        <en>
+            Small garage
+        </en>
+        <de>
+            Kleine Garage
+        </de>
+    </string>
+    <string id="137">
+        <en>
+            Are you sure to buy this garage?
+        </en>
+        <de>
+            Bist du dir sicher, dass du diese Garage kaufen möchtest?
+        </de>
+    </string>
+    <string id="138">
+        <en>
+            Type: %s
+        </en>
+        <de>
+            Typ: %s
+        </de>
+    </string>
+    <string id="139">
+        <en>
+            Buy garage
+        </en>
+        <de>
+            Garage kaufen
+        </de>
+    </string>
+    <string id="140">
+        <en>
+            Garage bought
+        </en>
+        <de>
+            Garage gekauft
+        </de>
+    </string>
 </languagestrings>

@@ -5,4 +5,7 @@ LoadPlayer(playerID)
 
 	MySQLFormat("SELECT `packageId` FROM `hiddenpackages` WHERE `userId` = %d", PVar:playerID[USERID]);
 	mysql_pquery(1, g_sqlQuery, "OnPlayerHiddenPackagesLoaded", "d", playerID);
+
+	MySQLFormat("SELECT `id` FROM `garages` WHERE `userId` = %d", PVar:playerID[USERID]);
+	mysql_pquery(1, g_sqlQuery, "OnPlayerGaragesLoaded", "d", playerID);
 }

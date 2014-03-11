@@ -1,0 +1,142 @@
+<garages>
+	<garage id="1" type="small" price="">
+		<checkpoint x="852.158630" y="-1528.178710" z="12.415562"/>
+		<pickup x="852.158630" y="-1528.178710" z="12.415562"/>
+	</garage>
+	<garage id="2" type="small" price="">
+		<checkpoint x="168.821243" y="-1341.351806" z="69.175056"/>
+		<pickup x="168.821243" y="-1341.351806" z="69.175056"/>
+	</garage>
+	<garage id="3" type="small" price="">
+		<checkpoint x="687.347961" y="-1074.260009" z="48.962554"/>
+		<pickup x="687.347961" y="-1074.260009" z="48.962554"/>
+	</garage>
+	<garage id="4" type="small" price="">
+		<checkpoint x="725.279846" y="-997.163208" z="52.168285"/>
+		<pickup x="725.279846" y="-997.163208" z="52.168285"/>
+	</garage>
+	<garage id="5" type="small" price="">
+		<checkpoint x="944.187927" y="-842.972717" z="93.425506"/>
+		<pickup x="944.187927" y="-842.972717" z="93.425506"/>
+	</garage>
+	<garage id="6" type="small" price="">
+		<checkpoint x="1532.383178" y="-813.221618" z="71.567031"/>
+		<pickup x="1532.383178" y="-813.221618" z="71.567031"/>
+	</garage>
+	<garage id="7" type="small" price="">
+		<checkpoint x="2095.456054" y="-1277.692382" z="24.980852"/>
+		<pickup x="2095.456054" y="-1277.692382" z="24.980852"/>
+	</garage>
+	<garage id="8" type="small" price="">
+		<checkpoint x="2698.109375" y="-2387.339355" z="13.113462"/>
+		<pickup x="2698.109375" y="-2387.339355" z="13.113462"/>
+	</garage>
+	<garage id="9" type="large" price="">
+		<checkpoint x="2732.565185" y="-2511.587402" z="13.143383"/>
+		<pickup x="2732.565185" y="-2511.587402" z="13.143383"/>
+	</garage>
+	<garage id="10" type="large" price="">
+		<checkpoint x="1516.413696" y="-693.862670" z="94.229560"/>
+		<pickup x="1516.413696" y="-693.862670" z="94.229560"/>
+	</garage>
+	<garage id="11" type="large" price="">
+		<checkpoint x="1246.836547" y="-803.728027" z="83.620681"/>
+		<pickup x="1246.836547" y="-803.728027" z="83.620681"/>
+	</garage>
+	<garage id="12" type="small" price="">
+		<checkpoint x="2004.204833" y="738.999938" z="10.659790"/>
+		<pickup x="2004.204833" y="738.999938" z="10.659790"/>
+	</garage>
+	<garage id="13" type="small" price="">
+		<checkpoint x="2248.334716" y="695.111633" z="10.870347"/>
+		<pickup x="2248.334716" y="695.111633" z="10.870347"/>
+	</garage>
+	<garage id="14" type="small" price="">
+		<checkpoint x="2445.250488" y="654.280578" z="10.873268"/>
+		<pickup x="2445.250488" y="654.280578" z="10.873268"/>
+	</garage>
+	<garage id="15" type="large" price="">
+		<checkpoint x="2405.894531" y="650.506530" z="10.855858"/>
+		<pickup x="2405.894531" y="650.506530" z="10.855858"/>
+	</garage>
+	<garage id="16" type="small" price="">
+		<checkpoint x="2200.936279" y="2791.125244" z="10.299881"/>
+		<pickup x="2200.936279" y="2791.125244" z="10.299881"/>
+	</garage>
+	<garage id="17" type="large" price="">
+		<checkpoint x="2060.205078" y="2729.967529" z="10.300745"/>
+		<pickup x="2060.205078" y="2729.967529" z="10.300745"/>
+	</garage>
+	<garage id="18" type="small" price="">
+		<checkpoint x="1729.644775" y="2701.984863" z="10.300752"/>
+		<pickup x="1729.644775" y="2701.984863" z="10.300752"/>
+	</garage>
+	<garage id="19" type="small" price="">
+		<checkpoint x="1543.070922" y="2833.368652" z="10.300406"/>
+		<pickup x="1543.070922" y="2833.368652" z="10.300406"/>
+	</garage>
+	<garage id="20" type="large" price="">
+		<checkpoint x="1687.622680" y="2055.332763" z="10.942371"/>
+		<pickup x="1687.622680" y="2055.332763" z="10.942371"/>
+	</garage>
+	<garage id="21" type="large" price="">
+		<checkpoint x="1469.733764" y="1901.460449" z="10.875989"/>
+		<pickup x="1469.733764" y="1901.460449" z="10.875989"/>
+	</garage>
+	<garage id="22" type="small" price="">
+		<checkpoint x="1366.343872" y="2011.357910" z="10.941674"/>
+		<pickup x="1366.343872" y="2011.357910" z="10.941674"/>
+	</garage>
+	<garage id="23" type="small" price="">
+		<checkpoint x="989.695678" y="1938.891723" z="10.880618"/>
+		<pickup x="989.695678" y="1938.891723" z="10.880618"/>
+	</garage>
+	<garage id="24" type="small" price="">
+		<checkpoint x="-2718.267822" y="-181.038635" z="3.817962"/>
+		<pickup x="-2718.267822" y="-181.038635" z="3.817962"/>
+	</garage>
+	<garage id="25" type="small" price="">
+		<checkpoint x="-2692.788574" y="-99.750465" z="3.814466"/>
+		<pickup x="-2692.788574" y="-99.750465" z="3.814466"/>
+	</garage>
+	<garage id="26" type="large" price="">
+		<checkpoint x="-2719.588378" y="-30.280244" z="3.822668"/>
+		<pickup x="-2719.588378" y="-30.280244" z="3.822668"/>
+	</garage>
+	<garage id="27" type="large" price="">
+		<checkpoint x="-2693.557128" y="71.804031" z="3.816378"/>
+		<pickup x="-2693.557128" y="71.804031" z="3.816378"/>
+	</garage>
+	<garage id="28" type="large" price="">
+		<checkpoint x="-2128.629150" y="826.364074" z="69.039024"/>
+		<pickup x="-2128.629150" y="826.364074" z="69.039024"/>
+	</garage>
+	<garage id="29" type="large" price="">
+		<checkpoint x="-2073.964843" y="972.547485" z="62.319458"/>
+		<pickup x="-2073.964843" y="972.547485" z="62.319458"/>
+	</garage>
+	<garage id="30" type="small" price="">
+		<checkpoint x="-2047.758178" y="898.819152" z="52.804435"/>
+		<pickup x="-2047.758178" y="898.819152" z="52.804435"/>
+	</garage>
+	<garage id="31" type="small" price="">
+		<checkpoint x="-1769.212036" y="1113.559692" z="44.930679"/>
+		<pickup x="-1769.212036" y="1113.559692" z="44.930679"/>
+	</garage>
+	<garage id="32" type="large" price="">
+		<checkpoint x="-1874.036743" y="1415.416015" z="6.658422"/>
+		<pickup x="-1874.036743" y="1415.416015" z="6.658422"/>
+	</garage>
+	<garage id="33" type="large" price="">
+		<checkpoint x="-1975.923828" y="1274.835815" z="6.776348"/>
+		<pickup x="-1975.923828" y="1274.835815" z="6.776348"/>
+	</garage>
+	<garage id="34" type="small" price="">
+		<checkpoint x="-2902.571044" y="1175.974853" z="12.916947"/>
+		<pickup x="-2902.571044" y="1175.974853" z="12.916947"/>
+	</garage>
+	<garage id="35" type="small" price="">
+		<checkpoint x="-2838.122558" y="864.295715" z="43.535694"/>
+		<pickup x="-2838.122558" y="864.295715" z="43.535694"/>
+	</garage>
+</garages>

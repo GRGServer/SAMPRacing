@@ -1,4 +1,5 @@
 // Audio files
+#define AUDIOFILE_GARAGEBOUGHT		"bought.ogg"
 #define AUDIOFILE_VEHICLEBOUGHT		"bought.ogg"
 
 
@@ -21,6 +22,7 @@
 // Keys
 #define KEY_OBJECTEDITOR_CLONE		KEY_WALK
 #define KEY_OBJECTEDITOR_REMOVE		KEY_NO
+#define KEY_PICKUP_USE			KEY_YES
 #define KEY_VEHICLESHOP_BUY		KEY_SPRINT
 #define KEY_VEHICLESHOP_NEXT		KEY_ANALOG_RIGHT
 #define KEY_VEHICLESHOP_PREVIOUS	KEY_ANALOG_LEFT
@@ -34,9 +36,10 @@
 #define MAX_COMMANDS			50
 #define MAX_DYNAMIC_OBJECTS		1000
 #define MAX_FUNCTION_NAME		32
+#define MAX_GARAGES			50
 #define MAX_HIDDENPACKAGES		100
 #define MAX_INTERIORS			150
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(134)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(141)
 #define MAX_OBJECTMODELS		11000
 #define MAX_RANDOMNUMBERPLATE_TRIES	100
 #define MAX_TELEPORTS			50
@@ -120,6 +123,15 @@ enum
 }
 
 
+// Garage types
+enum
+{
+	GARAGE_UNSET,// Must be the first (0)
+	GARAGE_LARGE,
+	GARAGE_SMALL
+}
+
+
 // Language IDs
 enum
 {
@@ -131,6 +143,7 @@ enum
 // Pickup events
 enum
 {
+	PICKUPEVENT_KEY,
 	PICKUPEVENT_PICKUP
 }
 
@@ -139,6 +152,8 @@ enum
 enum
 {
 	PICKUPTYPE_UNSET,// Must be the first (0)
+	PICKUPTYPE_GARAGE_BOUGHT,
+	PICKUPTYPE_GARAGE_FREE,
 	PICKUPTYPE_HOSPITAL,
 	PICKUPTYPE_VEHICLESHOP
 }

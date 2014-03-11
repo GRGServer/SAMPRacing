@@ -7,6 +7,7 @@
 #include <grgserver\Structures\E_AREA.inc>
 #include <grgserver\Structures\E_COMMAND.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
+#include <grgserver\Structures\E_GARAGE.inc>
 #include <grgserver\Structures\E_HIDDENPACKAGE.inc>
 #include <grgserver\Structures\E_INTERIOR.inc>
 #include <grgserver\Structures\E_LANGUAGESTRING.inc>
@@ -48,7 +49,9 @@
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
 #include <grgserver\functions\GetObjectNameByModelID.inc>
+#include <grgserver\functions\GetPlayerIDByUserID.inc>
 #include <grgserver\functions\GetPlayerNameEx.inc>
+#include <grgserver\functions\GetPlayerPickup.inc>
 #include <grgserver\functions\GetVehicleEngineState.inc>
 #include <grgserver\functions\GiveHiddenPackagesRewards.inc>
 #include <grgserver\functions\Hash.inc>
@@ -64,6 +67,7 @@
 #include <grgserver\functions\PlaySound.inc>
 #include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
+#include <grgserver\functions\ReloadGarages.inc>
 #include <grgserver\functions\ReloadInteriors.inc>
 #include <grgserver\functions\ReloadLanguageStrings.inc>
 #include <grgserver\functions\ReloadObjectModels.inc>
@@ -76,6 +80,7 @@
 #include <grgserver\functions\RemoveStandardObjectsForPlayer.inc>
 #include <grgserver\functions\ResetPlayerVariables.inc>
 #include <grgserver\functions\SaveAll.inc>
+#include <grgserver\functions\SaveGarage.inc>
 #include <grgserver\functions\SaveObjects.inc>
 #include <grgserver\functions\SavePlayer.inc>
 #include <grgserver\functions\SaveTeleports.inc>
@@ -90,6 +95,7 @@
 #include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\TeleportToInterior.inc>
 #include <grgserver\functions\UpdateDrifting.inc>
+#include <grgserver\functions\UpdateGarage.inc>
 #include <grgserver\functions\UpdateObjectEditorInfo.inc>
 #include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
@@ -114,6 +120,7 @@
 #include <grgserver\callbacks\OnPlayerEnterArea.inc>
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
+#include <grgserver\callbacks\OnPlayerGaragesLoaded.inc>
 #include <grgserver\callbacks\OnPlayerHiddenPackagesLoaded.inc>
 #include <grgserver\callbacks\OnPlayerKeyStateChange.inc>
 #include <grgserver\callbacks\OnPlayerLogin.inc>
@@ -133,6 +140,7 @@
 
 // dialogs
 #include <grgserver\dialogs\D_AddObject.inc>
+#include <grgserver\dialogs\D_ConfirmGarageBuy.inc>
 #include <grgserver\dialogs\D_ConfirmVehicleBuy.inc>
 #include <grgserver\dialogs\D_Login.inc>
 #include <grgserver\dialogs\D_Register_Language.inc>

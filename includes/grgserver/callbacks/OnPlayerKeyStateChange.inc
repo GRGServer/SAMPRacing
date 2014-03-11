@@ -49,6 +49,16 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		}
 	}
 
+	if (IsKeyPressed(KEY_PICKUP_USE))
+	{
+		new pickupID = GetPlayerPickup(playerid);
+		if (pickupID != -1)
+		{
+			PickupEvent(playerid, pickupID, PICKUPEVENT_KEY);
+			return false;
+		}
+	}
+
 	if (PVar:playerid[VEHICLESHOP_ID] != -1)
 	{
 		if (IsKeyPressed(KEY_VEHICLESHOP_PREVIOUS))

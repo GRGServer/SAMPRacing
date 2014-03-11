@@ -3,6 +3,14 @@ AddPickup(type, Float:posX, Float:posY, Float:posZ, linkID)
 	new modelID;
 	switch (type)
 	{
+		case PICKUPTYPE_GARAGE_BOUGHT:
+		{
+			modelID = 1272;
+		}
+		case PICKUPTYPE_GARAGE_FREE:
+		{
+			modelID = 1273;
+		}
 		case PICKUPTYPE_HOSPITAL:
 		{
 			modelID = 1240;
@@ -17,7 +25,7 @@ AddPickup(type, Float:posX, Float:posY, Float:posZ, linkID)
 	if (pickupID == -1)
 	{
 		printf("Unable to add pickup (Limit reached?)");
-		return false;
+		return -1;
 	}
 
 	g_pickups[pickupID][E_PICKUP_POSX] = posX;
@@ -26,5 +34,5 @@ AddPickup(type, Float:posX, Float:posY, Float:posZ, linkID)
 	g_pickups[pickupID][E_PICKUP_TYPE] = type;
 	g_pickups[pickupID][E_PICKUP_LINKID] = linkID;
 
-	return true;
+	return pickupID;
 }
