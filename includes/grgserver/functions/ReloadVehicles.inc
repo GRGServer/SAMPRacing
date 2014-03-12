@@ -16,6 +16,12 @@ ReloadVehicles()
 	result = mysql_query(1, "SELECT * FROM `vehicles`");
 	Count(row, cache_get_row_count())
 	{
+		// Skip vehicles in garages
+		if (cache_get_field_content_int(row, "garageId"))
+		{
+			continue;
+		}
+
 		new vehicleID = CreateVehicleEx(cache_get_field_content_int(row, "modelId"), cache_get_field_content_float(row, "posX"), cache_get_field_content_float(row, "posY"), cache_get_field_content_float(row, "posZ"), cache_get_field_content_float(row, "angle"), cache_get_field_content_int(row, "color1"), cache_get_field_content_int(row, "color2"));
 		if (vehicleID == INVALID_VEHICLE_ID)
 		{

@@ -1,5 +1,6 @@
 new g_addLineString[1024];
 new g_areas[MAX_AREAS][E_AREA];
+new g_checkpoints[MAX_CHECKPOINTS][E_CHECKPOINT];
 new g_commandAliases[MAX_COMMANDALIASES][E_COMMANDALIAS];
 new g_commands[MAX_COMMANDS][E_COMMAND];
 new g_garages[MAX_GARAGES][E_GARAGE];

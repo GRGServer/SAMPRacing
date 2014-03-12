@@ -1161,4 +1161,20 @@
             Du hast dich zum Spawnort teleportiert
         </de>
     </string>
+    <string id="145">
+        <en>
+            Press %s to enter the garage
+        </en>
+        <de>
+            Drücke %s um die Garage zu betreten
+        </de>
+    </string>
+    <string id="146">
+        <en>
+            There are no vehicles in this garage!
+        </en>
+        <de>
+            Es sind keine Fahrzeuge in dieser Garage!
+        </de>
+    </string>
 </languagestrings>

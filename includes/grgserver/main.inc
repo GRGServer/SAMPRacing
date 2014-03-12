@@ -5,6 +5,7 @@
 
 // Structures
 #include <grgserver\Structures\E_AREA.inc>
+#include <grgserver\Structures\E_CHECKPOINT.inc>
 #include <grgserver\Structures\E_COMMAND.inc>
 #include <grgserver\Structures\E_COMMANDALIAS.inc>
 #include <grgserver\Structures\E_GARAGE.inc>
@@ -31,12 +32,15 @@
 #include <grgserver\functions\AddPickup.inc>
 #include <grgserver\functions\CheckHiddenPackages.inc>
 #include <grgserver\functions\CheckNumberPlate.inc>
+#include <grgserver\functions\CheckpointEvent.inc>
 #include <grgserver\functions\CmdUsageMsg.inc>
 #include <grgserver\functions\CreateDialog.inc>
+#include <grgserver\functions\CreateGarageVehicle.inc>
 #include <grgserver\functions\CreatePlayerTextDraws.inc>
 #include <grgserver\functions\CreateVehicleEx.inc>
 #include <grgserver\functions\CreateVehicleShopVehicle.inc>
 #include <grgserver\functions\DestroyPickupsOfType.inc>
+#include <grgserver\functions\EnterGarage.inc>
 #include <grgserver\functions\EnterVehicleShop.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
 #include <grgserver\functions\ExitVehicleShop.inc>
@@ -109,6 +113,9 @@
 #include <grgserver\callbacks\OnEnterExitModShop.inc>
 #include <grgserver\callbacks\OnGameModeExit.inc>
 #include <grgserver\callbacks\OnGameModeInit.inc>
+#include <grgserver\callbacks\OnGarageVehicleComponentsLoaded.inc>
+#include <grgserver\callbacks\OnGarageVehicleCountLoaded.inc>
+#include <grgserver\callbacks\OnGarageVehicleLoaded.inc>
 #include <grgserver\callbacks\OnPlayerClickMap.inc>
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
 #include <grgserver\callbacks\OnPlayerCommandText.inc>
@@ -118,6 +125,7 @@
 #include <grgserver\callbacks\OnPlayerDisconnect.inc>
 #include <grgserver\callbacks\OnPlayerEditDynamicObject.inc>
 #include <grgserver\callbacks\OnPlayerEnterArea.inc>
+#include <grgserver\callbacks\OnPlayerEnterDynamicCP.inc>
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
 #include <grgserver\callbacks\OnPlayerGaragesLoaded.inc>

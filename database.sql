@@ -60,6 +60,7 @@ CREATE TABLE `vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `modelId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
+  `garageId` int(11) DEFAULT NULL,
   `posX` float NOT NULL DEFAULT '0',
   `posY` float NOT NULL DEFAULT '0',
   `posZ` float NOT NULL DEFAULT '0',
@@ -72,5 +73,7 @@ CREATE TABLE `vehicles` (
   `paintjobId` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `userId` (`userId`),
+  KEY `garageId` (`garageId`),
+  CONSTRAINT `vehicles_garageId` FOREIGN KEY (`garageId`) REFERENCES `garages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `vehicles_userId` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

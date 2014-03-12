@@ -18,7 +18,12 @@ UpdateGarage(garageNumber)
 		new playerID = GetPlayerIDByUserID(g_garages[garageNumber][E_GARAGE_USERID]);
 		if (playerID != INVALID_PLAYER_ID)
 		{
-			g_garages[garageNumber][E_GARAGE_CHECKPOINT_ID] = CreateDynamicCP(g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSX], g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSY], g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSZ], 4, 0, 0, playerID);
+			new checkpointID = CreateDynamicCP(g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSX], g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSY], g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSZ], 4, 0, 0, playerID);
+
+			g_checkpoints[checkpointID][E_CHECKPOINT_TYPE] = CHECKPOINTTYPE_GARAGE;
+			g_checkpoints[checkpointID][E_CHECKPOINT_LINKID] = garageNumber;
+
+			g_garages[garageNumber][E_GARAGE_CHECKPOINT_ID] = checkpointID;
 		}
 	}
 	else
