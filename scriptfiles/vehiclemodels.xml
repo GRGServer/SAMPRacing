@@ -4,1272 +4,642 @@
 		<id>400</id>
 		<name>Landstalker</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>15000</price>
 	</model>
 	<model>
 		<id>401</id>
 		<name>Bravura</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>2000</price>
 	</model>
 	<model>
 		<id>402</id>
 		<name>Buffalo</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>403</id>
-		<name>Linerunner</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>165000</price>
 	</model>
 	<model>
 		<id>404</id>
 		<name>Pereniel</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>6000</price>
 	</model>
 	<model>
 		<id>405</id>
 		<name>Sentinel</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>406</id>
-		<name>Dumper</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>407</id>
-		<name>Firetruck</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>408</id>
-		<name>Trashmaster</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>25000</price>
 	</model>
 	<model>
 		<id>409</id>
 		<name>Stretch</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>9750</price>
 	</model>
 	<model>
 		<id>410</id>
 		<name>Manana</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>3500</price>
 	</model>
 	<model>
 		<id>411</id>
 		<name>Infernus</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>679000</price>
 	</model>
 	<model>
 		<id>412</id>
 		<name>Voodoo</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>53000</price>
 	</model>
 	<model>
 		<id>413</id>
 		<name>Pony</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>414</id>
-		<name>Mule</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>2500</price>
 	</model>
 	<model>
 		<id>415</id>
 		<name>Cheetah</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>416</id>
-		<name>Ambulance</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>417</id>
-		<name>Leviathan</name>
-		<type>Helicopter</type>
-		<price>0</price>
+		<price>164000</price>
 	</model>
 	<model>
 		<id>418</id>
 		<name>Moonbeam</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>4500</price>
 	</model>
 	<model>
 		<id>419</id>
 		<name>Esperanto</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>420</id>
-		<name>Taxi</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>3900</price>
 	</model>
 	<model>
 		<id>421</id>
 		<name>Washington</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>17000</price>
 	</model>
 	<model>
 		<id>422</id>
 		<name>Bobcat</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>423</id>
-		<name>Mr Whoopee</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>13500</price>
 	</model>
 	<model>
 		<id>424</id>
 		<name>BF Injection</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>425</id>
-		<name>Hunter</name>
-		<type>Helicopter</type>
-		<price>0</price>
+		<price>195000</price>
 	</model>
 	<model>
 		<id>426</id>
 		<name>Premier</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>110500</price>
 	</model>
 	<model>
 		<id>427</id>
 		<name>Enforcer</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>428</id>
-		<name>Securicar</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>1200</price>
 	</model>
 	<model>
 		<id>429</id>
 		<name>Banshee</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>430</id>
-		<name>Predator</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>431</id>
-		<name>Bus</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>432</id>
-		<name>Rhino</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>433</id>
-		<name>Barracks</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>1590000</price>
 	</model>
 	<model>
 		<id>434</id>
 		<name>Hotknife</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>435</id>
-		<name>Artict1</name>
-		<type>Trailer</type>
-		<price>0</price>
+		<price>1540000</price>
 	</model>
 	<model>
 		<id>436</id>
 		<name>Previon</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>437</id>
-		<name>Coach</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>438</id>
-		<name>Cabbie</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>57000</price>
 	</model>
 	<model>
 		<id>439</id>
 		<name>Stallion</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>970000</price>
 	</model>
 	<model>
 		<id>440</id>
 		<name>Rumpo</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>441</id>
-		<name>RC Bandit</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>495000</price>
 	</model>
 	<model>
 		<id>442</id>
 		<name>Romero</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>443</id>
-		<name>Packer</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>444</id>
-		<name>Monster</name>
-		<type>Monster Truck</type>
-		<price>0</price>
+		<price>60000</price>
 	</model>
 	<model>
 		<id>445</id>
 		<name>Admiral</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>446</id>
-		<name>Squalo</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>447</id>
-		<name>Seasparrow</name>
-		<type>Helicopter</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>448</id>
-		<name>Pizzaboy</name>
-		<type>Bike</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>449</id>
-		<name>Tram</name>
-		<type>Train</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>450</id>
-		<name>artict2</name>
-		<type>Trailer</type>
-		<price>0</price>
+		<price>160000</price>
 	</model>
 	<model>
 		<id>451</id>
 		<name>Turismo</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>452</id>
-		<name>Speeder</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>453</id>
-		<name>Reefer</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>454</id>
-		<name>Tropic</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>455</id>
-		<name>Flatbed</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>456</id>
-		<name>Yankee</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>457</id>
-		<name>Caddy</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>2567600</price>
 	</model>
 	<model>
 		<id>458</id>
 		<name>Solair</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>459</id>
-		<name>Berkley's RC Van</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>460</id>
-		<name>Skimmer</name>
-		<type>Plane</type>
-		<price>0</price>
+		<price>156000</price>
 	</model>
 	<model>
 		<id>461</id>
 		<name>PCJ-600</name>
 		<type>Bike</type>
-		<price>0</price>
+		<price>1465000</price>
 	</model>
 	<model>
 		<id>462</id>
 		<name>Faggio</name>
 		<type>Bike</type>
-		<price>0</price>
+		<price>1200</price>
 	</model>
 	<model>
 		<id>463</id>
 		<name>Freeway</name>
 		<type>Bike</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>464</id>
-		<name>RC Baron</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>465</id>
-		<name>RC Raider</name>
-		<type>Helicopter</type>
-		<price>0</price>
+		<price>2500</price>
 	</model>
 	<model>
 		<id>466</id>
 		<name>Glendale</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>355000</price>
 	</model>
 	<model>
 		<id>467</id>
 		<name>Oceanic</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1900</price>
 	</model>
 	<model>
 		<id>468</id>
 		<name>Sanchez</name>
 		<type>Bike</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>469</id>
-		<name>Sparrow</name>
-		<type>Helicopter</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>470</id>
-		<name>Patriot</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>6500</price>
 	</model>
 	<model>
 		<id>471</id>
 		<name>Quad</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>472</id>
-		<name>Coastguard</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>473</id>
-		<name>Dinghy</name>
-		<type>Boat</type>
-		<price>0</price>
+		<price>9500</price>
 	</model>
 	<model>
 		<id>474</id>
 		<name>Hermes</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>160000</price>
 	</model>
 	<model>
 		<id>475</id>
 		<name>Sabre</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>476</id>
-		<name>Rustler</name>
-		<type>Plane</type>
-		<price>0</price>
+		<price>14000</price>
 	</model>
 	<model>
 		<id>477</id>
 		<name>ZR3 50</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1926000</price>
 	</model>
 	<model>
 		<id>478</id>
 		<name>Walton</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>20000</price>
 	</model>
 	<model>
 		<id>479</id>
 		<name>Regina</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>16000</price>
 	</model>
 	<model>
 		<id>480</id>
 		<name>Comet</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>481</id>
-		<name>BMX</name>
-		<type>BMX</type>
-		<price>0</price>
+		<price>150000</price>
 	</model>
 	<model>
 		<id>482</id>
 		<name>Burrito</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>483</id>
-		<name>Camper</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>484</id>
-		<name>Marquis</name>
-		<type>Boat</type>
-		<price>0</price>
+		<price>5200</price>
 	</model>
 	<model>
 		<id>485</id>
 		<name>Baggage</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>486</id>
-		<name>Dozer</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>487</id>
-		<name>Maverick</name>
-		<type>Helicopter</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>488</id>
-		<name>News Chopper</name>
-		<type>Helicopter</type>
-		<price>0</price>
+		<price>4900</price>
 	</model>
 	<model>
 		<id>489</id>
 		<name>Rancher</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>490</id>
-		<name>FBI Rancher</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>150000</price>
 	</model>
 	<model>
 		<id>491</id>
 		<name>Virgo</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>160000</price>
 	</model>
 	<model>
 		<id>492</id>
 		<name>Greenwood</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>493</id>
-		<name>Jetmax</name>
-		<type>Boat</type>
-		<price>0</price>
+		<price>670000</price>
 	</model>
 	<model>
 		<id>494</id>
 		<name>Hotring</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1560000</price>
 	</model>
 	<model>
 		<id>495</id>
 		<name>Sandking</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1560000</price>
 	</model>
 	<model>
 		<id>496</id>
 		<name>Blista Compact</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>497</id>
-		<name>Police Maverick</name>
-		<type>Helicopter</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>498</id>
-		<name>Boxville</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>499</id>
-		<name>Benson</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>35000</price>
 	</model>
 	<model>
 		<id>500</id>
 		<name>Mesa</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>501</id>
-		<name>RC Goblin</name>
-		<type>Helicopter</type>
-		<price>0</price>
+		<price>13600</price>
 	</model>
 	<model>
 		<id>502</id>
 		<name>Hotring Racer A</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>6789000</price>
 	</model>
 	<model>
 		<id>503</id>
 		<name>Hotring Racer B</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>6789000</price>
 	</model>
 	<model>
 		<id>504</id>
 		<name>Bloodring Banger</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>6789000</price>
 	</model>
 	<model>
 		<id>505</id>
 		<name>Rancher</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>15000</price>
 	</model>
 	<model>
 		<id>506</id>
 		<name>Super GT</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>2460000</price>
 	</model>
 	<model>
 		<id>507</id>
 		<name>Elegant</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1976000</price>
 	</model>
 	<model>
 		<id>508</id>
 		<name>Journey</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>509</id>
-		<name>Bike</name>
-		<type>BMX</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>510</id>
-		<name>Mountain Bike</name>
-		<type>BMX</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>511</id>
-		<name>Beagle</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>512</id>
-		<name>Cropdust</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>513</id>
-		<name>Stunt</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>514</id>
-		<name>Petro</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>515</id>
-		<name>RoadTrain</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>35000</price>
 	</model>
 	<model>
 		<id>516</id>
 		<name>Nebula</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>12000</price>
 	</model>
 	<model>
 		<id>517</id>
 		<name>Majestic</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>165000</price>
 	</model>
 	<model>
 		<id>518</id>
 		<name>Buccaneer</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>519</id>
-		<name>Shamal</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>520</id>
-		<name>Hydra</name>
-		<type>Plane</type>
-		<price>0</price>
+		<price>45000</price>
 	</model>
 	<model>
 		<id>521</id>
 		<name>FCR-900</name>
 		<type>Bike</type>
-		<price>0</price>
+		<price>95000</price>
 	</model>
 	<model>
 		<id>522</id>
 		<name>NRG-500</name>
 		<type>Bike</type>
-		<price>0</price>
+		<price>1765000</price>
 	</model>
 	<model>
 		<id>523</id>
 		<name>HPV1000</name>
 		<type>Bike</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>524</id>
-		<name>Cement Truck</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>525</id>
-		<name>Tow Truck</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>3500</price>
 	</model>
 	<model>
 		<id>526</id>
 		<name>Fortune</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>12000</price>
 	</model>
 	<model>
 		<id>527</id>
 		<name>Cadrona</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>528</id>
-		<name>FBI Truck</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>16000</price>
 	</model>
 	<model>
 		<id>529</id>
 		<name>Willard</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>58000</price>
 	</model>
 	<model>
 		<id>530</id>
 		<name>Forklift</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>531</id>
-		<name>Tractor</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>97000</price>
 	</model>
 	<model>
 		<id>532</id>
 		<name>Combine</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>125000</price>
 	</model>
 	<model>
 		<id>533</id>
 		<name>Feltzer</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>110500</price>
 	</model>
 	<model>
 		<id>534</id>
 		<name>Remington</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>165000</price>
 	</model>
 	<model>
 		<id>535</id>
 		<name>Slamvan</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>126900</price>
 	</model>
 	<model>
 		<id>536</id>
 		<name>Blade</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>537</id>
-		<name>Freight</name>
-		<type>Train</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>538</id>
-		<name>Streak</name>
-		<type>Train</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>539</id>
-		<name>Vortex</name>
-		<type>Plane</type>
-		<price>0</price>
+		<price>2500</price>
 	</model>
 	<model>
 		<id>540</id>
 		<name>Vincent</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>2000</price>
 	</model>
 	<model>
 		<id>541</id>
 		<name>Bullet</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>3594000</price>
 	</model>
 	<model>
 		<id>542</id>
 		<name>Clover</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1500</price>
 	</model>
 	<model>
 		<id>543</id>
 		<name>Sadler</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>544</id>
-		<name>Firetruck</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>3500</price>
 	</model>
 	<model>
 		<id>545</id>
 		<name>Hustler</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>123000</price>
 	</model>
 	<model>
 		<id>546</id>
 		<name>Intruder</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>159000</price>
 	</model>
 	<model>
 		<id>547</id>
 		<name>Primo</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>548</id>
-		<name>Cargobob</name>
-		<type>Helicopter</type>
-		<price>0</price>
+		<price>2500</price>
 	</model>
 	<model>
 		<id>549</id>
 		<name>Tampa</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1200</price>
 	</model>
 	<model>
 		<id>550</id>
 		<name>Sunrise</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1200</price>
 	</model>
 	<model>
 		<id>551</id>
 		<name>Merit</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>552</id>
-		<name>Utility</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>553</id>
-		<name>Nevada</name>
-		<type>Plane</type>
-		<price>0</price>
+		<price>1200</price>
 	</model>
 	<model>
 		<id>554</id>
 		<name>Yosemite</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>354000</price>
 	</model>
 	<model>
 		<id>555</id>
 		<name>Windsor</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>556</id>
-		<name>Monster A</name>
-		<type>Monster Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>557</id>
-		<name>Monster B</name>
-		<type>Monster Truck</type>
-		<price>0</price>
+		<price>256000</price>
 	</model>
 	<model>
 		<id>558</id>
 		<name>Uranus</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1564000</price>
 	</model>
 	<model>
 		<id>559</id>
 		<name>Jester</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1235000</price>
 	</model>
 	<model>
 		<id>560</id>
 		<name>Sultan</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>2564000</price>
 	</model>
 	<model>
 		<id>561</id>
 		<name>Stratum</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1567000</price>
 	</model>
 	<model>
 		<id>562</id>
 		<name>Elegy</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>563</id>
-		<name>Raindance</name>
-		<type>Helicopter</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>564</id>
-		<name>RC Tiger</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>3685000</price>
 	</model>
 	<model>
 		<id>565</id>
 		<name>Flash</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1600</price>
 	</model>
 	<model>
 		<id>566</id>
 		<name>Tahoma</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1400</price>
 	</model>
 	<model>
 		<id>567</id>
 		<name>Savanna</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>168000</price>
 	</model>
 	<model>
 		<id>568</id>
 		<name>Bandito</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>569</id>
-		<name>Freight</name>
-		<type>Train</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>570</id>
-		<name>StreakC</name>
-		<type>Train</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>571</id>
-		<name>Kart</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>1100</price>
 	</model>
 	<model>
 		<id>572</id>
 		<name>Mower</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>573</id>
-		<name>Duneride</name>
-		<type>Monster Truck</type>
-		<price>0</price>
+		<price>125000</price>
 	</model>
 	<model>
 		<id>574</id>
 		<name>Sweeper</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>13000</price>
 	</model>
 	<model>
 		<id>575</id>
 		<name>Broadway</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>15000</price>
 	</model>
 	<model>
 		<id>576</id>
 		<name>Tornado</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>577</id>
-		<name>AT-400</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>578</id>
-		<name>DFT-30</name>
-		<type>Truck</type>
-		<price>0</price>
+		<price>19000</price>
 	</model>
 	<model>
 		<id>579</id>
 		<name>Huntley</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>34000</price>
 	</model>
 	<model>
 		<id>580</id>
 		<name>Stafford</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>169000</price>
 	</model>
 	<model>
 		<id>581</id>
 		<name>BF-400</name>
 		<type>Bike</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>582</id>
-		<name>Newsvan</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>123000</price>
 	</model>
 	<model>
 		<id>583</id>
 		<name>Tug</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>584</id>
-		<name>Petrol Trailer</name>
-		<type>Trailer</type>
-		<price>0</price>
+		<price>160000</price>
 	</model>
 	<model>
 		<id>585</id>
 		<name>Emperor</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>586</id>
-		<name>Wayfarer</name>
-		<type>Bike</type>
-		<price>0</price>
+		<price>150000</price>
 	</model>
 	<model>
 		<id>587</id>
 		<name>Euros</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>588</id>
-		<name>Hotdog</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>2569000</price>
 	</model>
 	<model>
 		<id>589</id>
 		<name>Club</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>590</id>
-		<name>Freight Box</name>
-		<type>Train</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>591</id>
-		<name>Artict3</name>
-		<type>Trailer</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>592</id>
-		<name>Andromada</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>593</id>
-		<name>Dodo</name>
-		<type>Plane</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>594</id>
-		<name>RC Cam</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>595</id>
-		<name>Launch</name>
-		<type>Boat</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>596</id>
-		<name>Police Car (LSPD)</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>597</id>
-		<name>Police Car (SFPD)</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>598</id>
-		<name>Police Car (LVPD)</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>599</id>
-		<name>Police Ranger</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>600</id>
-		<name>Picador</name>
-		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>601</id>
-		<name>S.W.A.T. Van</name>
-		<type>Car</type>
-		<price>0</price>
+		<price>2500</price>
 	</model>
 	<model>
 		<id>602</id>
 		<name>Alpha</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>1500000</price>
 	</model>
 	<model>
 		<id>603</id>
 		<name>Phoenix</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>2351000</price>
 	</model>
 	<model>
 		<id>604</id>
 		<name>Glendale</name>
 		<type>Car</type>
-		<price>0</price>
+		<price>159000</price>
 	</model>
 	<model>
 		<id>605</id>
 		<name>Sadler</name>
 		<type>Car</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>606</id>
-		<name>Luggage Trailer A</name>
-		<type>Trailer</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>607</id>
-		<name>Luggage Trailer B</name>
-		<type>Trailer</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>608</id>
-		<name>Stair Trailer</name>
-		<type>Trailer</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>609</id>
-		<name>Boxville</name>
-		<type>Truck</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>610</id>
-		<name>Farm Plow</name>
-		<type>Trailer</type>
-		<price>0</price>
-	</model>
-	<model>
-		<id>611</id>
-		<name>Utility Trailer</name>
-		<type>Trailer</type>
-		<price>0</price>
+		<price>12000</price>
 	</model>
 </vehiclemodels>
