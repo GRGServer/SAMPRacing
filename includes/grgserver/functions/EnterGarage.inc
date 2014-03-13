@@ -1,5 +1,18 @@
 EnterGarage(playerID, garageNumber)
 {
+	new vehicleID = GetPlayerVehicleID(playerID);
+	if (vehicleID && VehicleProperty:vehicleID[SAVEID])
+	{
+		MySQLFormat("UPDATE `vehicles` SET `garageId` = %d WHERE `id` = %d", g_garages[garageNumber][E_GARAGE_ID], VehicleProperty:vehicleID[SAVEID]);
+		mysql_query(1, g_sqlQuery);
+
+		PVar:playerID[GARAGE_VEHICLE_SAVEID] = VehicleProperty:vehicleID[SAVEID] - 1;
+	}
+	else
+	{
+		PVar:playerID[GARAGE_VEHICLE_SAVEID] = 0;
+	}
+
 	SetPrivateWorld(playerID, true);
 
 	TogglePlayerSpectating(playerID, true);
