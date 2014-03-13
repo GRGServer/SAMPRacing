@@ -15,13 +15,13 @@ CreateGarageVehicle(playerID, direction)
 		{
 			idOperator = "<";
 		}
-		case 0:
-		{
-			idOperator = "=";
-		}
 		case 1:
 		{
 			idOperator = ">";
+		}
+		default:
+		{
+			idOperator = "=";
 		}
 	}
 
