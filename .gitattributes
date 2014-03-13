@@ -2,3 +2,10 @@
 
 .*  eol=lf
 *.* eol=lf
+
+*.dll binary
+*.exe binary
+*.ico binary
+*.jpg binary
+*.ogg binary
+*.so binary
