@@ -2,11 +2,11 @@
 Global mainInclude
 
 Procedure AddIncludeGroup(name$)
-	WriteStringN(mainInclude, "// " + name$)
+	WriteString(mainInclude, "// " + name$ + #LF$)
 EndProcedure
 
 Procedure AddInclude(fileName$)
-	WriteStringN(mainInclude, "#include <grgserver\" + fileName$ + ">")
+	WriteString(mainInclude, "#include <grgserver\" + fileName$ + ">" + #LF$)
 EndProcedure
 
 Procedure AddDir(directoryName$)
@@ -24,7 +24,7 @@ Procedure AddDir(directoryName$)
 		ForEach Includes()
 			AddInclude(directoryName$ + "\" + Includes())
 		Next
-		WriteStringN(mainInclude, "")
+		WriteString(mainInclude, #LF$)
 		FinishDirectory(directory)
 	EndIf
 EndProcedure
@@ -43,12 +43,12 @@ If OpenConsole()
 			AddInclude("localconfig.inc")
 			AddInclude("constants.inc")
 			AddInclude("macros.inc")
-			WriteStringN(mainInclude, "")
+			WriteString(mainInclude, #LF$)
 			AddDir("Structures")
 			AddIncludeGroup("Global variables")
 			AddInclude("globals.inc")
 			AddInclude("forwards.inc")
-			WriteStringN(mainInclude, "")
+			WriteString(mainInclude, #LF$)
 			AddDir("functions")
 			AddDir("callbacks")
 			AddDir("dialogs")
@@ -66,35 +66,3 @@ If OpenConsole()
 		PrintN("The includes path '" +grgIncludesPath$ + "' does not exist!")
 	EndIf
 EndIf
-; IDE Options = PureBasic 5.21 LTS (Windows - x86)
-; ExecutableFormat = Console
-; CursorPosition = 48
-; FirstLine = 18
-; Folding = -
-; EnableXP
-; UseIcon = Includes Updater.ico
-; Executable = Includes Updater.exe
-; EnableCompileCount = 20
-; EnableBuildCount = 20
-; EnableExeConstant
-; IncludeVersionInfo
-; VersionField0 = 1,0,0,0
-; VersionField1 = 1,0,0,0
-; VersionField2 = SelfCoders
-; VersionField3 = Includes Updater
-; VersionField4 = 1.0
-; VersionField5 = 1.0
-; VersionField6 = Includes Updater
-; VersionField7 = Includes Updater
-; VersionField8 = %EXECUTABLE
-; VersionField13 = includesupdater@selfcoders.com
-; VersionField14 = http://www.selfcoders.com
-; VersionField15 = VOS_NT_WINDOWS32
-; VersionField16 = VFT_APP
-; VersionField17 = 0409 English (United States)
-; VersionField18 = Build
-; VersionField19 = Compile OS
-; VersionField20 = Date
-; VersionField21 = %BUILDCOUNT
-; VersionField22 = %OS
-; VersionField23 = %y-%m-%d %h:%i:%s
