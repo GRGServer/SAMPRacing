@@ -3,9 +3,17 @@
 .*  eol=lf
 *.* eol=lf
 
+# Binary files
+*.dat binary
 *.dll binary
 *.exe binary
 *.ico binary
 *.jpg binary
 *.ogg binary
 *.so binary
+
+# Extensionless binary files
+announce binary
+samp-npc binary
+samp-srv binary
+tools/pawn/pawncc
