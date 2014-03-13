@@ -37,7 +37,7 @@ public OnGarageVehicleLoaded(playerID)
 	PVar:playerID[GARAGE_VEHICLE_ID] = CreateVehicle(cache_get_field_content_int(0, "modelId"), vehiclePosX, vehiclePosY, vehiclePosZ, vehicleAngle, cache_get_field_content_int(0, "color1"), cache_get_field_content_int(0, "color2"), -1);
 	if (PVar:playerID[GARAGE_VEHICLE_ID] == INVALID_VEHICLE_ID)
 	{
-		PVar:playerID[GARAGE_VEHICLE_LOADING] = true;
+		PVar:playerID[GARAGE_VEHICLE_LOADING] = false;
 		return;
 	}
 
