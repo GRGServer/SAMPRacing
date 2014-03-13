@@ -49,7 +49,7 @@ ReloadVehicles()
 	print("Adding vehicle components...");
 
 	count = 0;
-	result = mysql_query(1, "SELECT * FROM `vehiclecomponents`");
+	result = mysql_query(1, "SELECT `vehicleId`, `componentId` FROM `vehiclecomponents` WHERE `componentId`");
 	Count(row, cache_get_row_count())
 	{
 		new vehicleSaveID = cache_get_field_content_int(row, "vehicleId");
