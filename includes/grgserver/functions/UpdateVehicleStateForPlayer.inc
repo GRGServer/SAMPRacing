@@ -1,52 +1,52 @@
-UpdateDrifting(playerID)
+UpdateVehicleStateForPlayer(playerID)
 {
+	new vehicleID = GetPlayerVehicleID(playerID);
+
+	// Speed calculcation
+	new Float:x;
+	new Float:y;
+	new Float:z;
+	GetVehicleVelocity(vehicleID, x, y, z);
+	new Float:speed = floatpower(x * x + y * y, 0.5);
+
 	// Drifting is enabled and player is the driver
 	if (PVar:playerID[DRIFTING_STATE] && GetPlayerVehicleSeat(playerID) == 0)
 	{
-		new vehicleID = GetPlayerVehicleID(playerID);
-
-		// Speed calculcation
-		new Float:x;
-		new Float:y;
-		new Float:z;
-		GetVehicleVelocity(vehicleID, x, y, z);
-		new Float:speed = floatpower(x * x + y * y, 0.5);
-
 		if (speed > 0.2)
 		{
 			// Get direction
 			new Float:direction;
 			if (x < 0)
 			{
-				if(y > 0)
-				{ 
-					direction = atan(floatabs(x/y)); 
+				if (y > 0)
+				{
+					direction = atan(floatabs(x / y));
 				}
 				else if (y <= 0)
-				{ 
-					direction = atan(y/x) + 90; 
+				{
+					direction = atan(y / x) + 90;
 				}
 			}
 			else if (x > 0)
 			{
 				if(y < 0)
 				{
-					direction = atan(floatabs(x/y)) + 180; 
+					direction = atan(floatabs(x/y)) + 180;
 				}
 				else if (y >= 0)
 				{
-					direction = atan(y/x) + 270; 
+					direction = atan(y / x) + 270;
 				}
 			}
 			else if (x == 0)
 			{
 				if (y > 0)
 				{ 
-					direction = 0; 
+					direction = 0;
 				}
 				else if (y < 0)
 				{ 
-					direction = 180; 
+					direction = 180;
 				}
 			}
 
