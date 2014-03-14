@@ -60,7 +60,7 @@
 #define MAX_GARAGES			50
 #define MAX_HIDDENPACKAGES		100
 #define MAX_INTERIORS			150
-#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(149)
+#define MAX_LANGUAGE_STRINGS		LanguageStringLimit(150)
 #define MAX_OBJECTMODELS		11000
 #define MAX_RANDOMNUMBERPLATE_TRIES	100
 #define MAX_TELEPORTS			50
@@ -91,6 +91,8 @@
 #define SOUND_HIDDENPACKAGE		1150
 #define SOUND_OBJECTPLACED		31810
 #define SOUND_PICKUPEVENT		1150
+#define SOUND_VEHICLE_LOCK		1057
+#define SOUND_VEHICLE_UNLOCK		1057
 
 
 // Spawn default location
@@ -118,63 +120,6 @@
 #define STRINGLENGTH_TELEPORTNAME	100
 #define STRINGLENGTH_VEHICLENAME	20
 #define STRINGLENGTH_VEHICLETYPE	16
-
-#define GREEN 			0x21DD00FF
-#define RED 			0xE60000FF
-#define YELLOW 			0xFFFF00FF
-#define ORANGE 			0xF97804FF
-#define LIGHTRED 		0xFF8080FF
-#define LIGHTBLUE 		0x00C2ECFF
-#define PURPLE 			0xB360FDFF
-#define BLUE 			0x1229FAFF
-#define LIGHTGREEN 		0x38FF06FF
-#define DARKPINK 		0xE100E1FF
-#define DARKGREEN 		0x008040FF
-#define ANNOUNCEMENT 	0x6AF7E1FF
-#define GREY 			0xCECECEFF
-#define PINK 			0xD52DFFFF
-#define DARKGREY    	0x626262FF
-#define AQUAGREEN   	0x03D687FF
-#define WHITE 			0xFFFFFFFF
-
-#define PLAYERS 200
-
-#define L_VEHICLE 200
-
-
-//******************************************************************************
-// SpeedoMeter Configurations
-//******************************************************************************
-
-//::::::::::::::::::::::::::::::::::::
-// -> Functions Config <-
-//::::::::::::::::::::::::::::::::::::
-#define VehLockTime      10                //Define the MAX Time for Car Locked! (In Minutes!)
-#define VehicleMaxSpeed  50                //Define the Speed Limit! (KPH)
-#define SpeedoLogoText   "SpeedoMeter" //Define Speedo Logo (Text in Speedo Top)
-#define UpdateConfig     500               //Update Speedo functions in ... (Miliseconds)
-
-
-//::::::::::::::::::::::::::::::::::::
-// -> Speedo TextDraw Config <-
-//::::::::::::::::::::::::::::::::::::
-#define TextBox         true   //Enable/Disable Speedo Box
-#define TextTopLines    true   //Enable/Disable Speedo Top Lines
-#define TextSideLines   true   //Enable/Disable Speedo Side Lines
-#define LogoName        true   //Enable/Disable Speedo LogoName
-
-
-//::::::::::::::::::::::::::::::::::::
-// -> Speedo Colors Config <-
-//::::::::::::::::::::::::::::::::::::
-#define BoxColor         0xffffffff     //Color of Speedo Box
-#define LogoColor        0xffffffff     //Color of Seedo Logo (Define logo in "SpeedoLogoText" (Line 57)
-#define SideLinesColor   0xffffffff     //Color of Speedo Side Lines
-#define TopLinesColor    0xffffffff     //Color of Speedo Top lines
-#define CategoriesColor  "~b~"          //Color of (Vehicle,Health,Altitude,Gps)
-#define MPH_KPH_Color    "~g~"          //Color of (MPH,KPH)
-
-#define MAX_ZONE_NAME 28
 
 
 // Area types
@@ -258,17 +203,4 @@ enum
 {
 	SPAWNTYPE_DEFAULT,// Must be the first (0)
 	SPAWNTYPE_BUYVEHICLESHOP
-}
-
-enum MainZone 
-{
-	Zone_Name[28], 
-	Float:Zone_Area[6] 
-}
-
-enum ReadPositions
-{
-	Float:ReadX,
-	Float:ReadY,
-	Float:ReadZ
 }

@@ -1,29 +1,28 @@
-CMD:lock(playerID, params[], StringID:147("Lock your Vehicle!"))
+CMD:lock(playerID, params[], StringID:147("Lock or unlock your Vehicle"))
 {
-	new Float:X;
-	new Float:Y;
-	new Float:Z;
-	
-	if(IsPlayerConnected(playerID) && VehicleStatus[GetPlayerVehicleID(playerID)] == 0)
+	if (IsPlayerInAnyVehicle(playerID))
 	{
-		new VehicleState = GetPlayerState(playerID);
-		
-		if(VehicleState == PLAYER_STATE_DRIVER)
-		{
-			for(new v = 0; v <L_VEHICLE; v++)
-			{
-				if (v != playerID)
-				{
-					SetVehicleParamsForPlayer(GetPlayerVehicleID(playerID),v, 0, 1);
-				}
-			}
-			SendClientMessage(playerID,AQUAGREEN, "***(LuxSpeedo): Vehicle Locked!");
-			GetPlayerPos(playerID,X,Y,Z);
-			PlayerPlaySound(playerID,1057,X,Y,Z);
-			VehicleStatus[GetPlayerVehicleID(playerID)] = 1;
-			SetTimerEx("LAutoUnlock",VehLockTime*60000,false,"i",GetPlayerVehicleID(playerID));
-		}
-		return true;
+		return COMMAND_NOT_IN_VEHICLE;
 	}
+
+	if (GetPlayerVehicleSeat(playerID))
+	{
+		return COMMAND_NOT_VEHICLE_DRIVER;
+	}
+
+	new vehicleID = GetPlayerVehicleID(playerID);
+
+	new engine;
+	new lights;
+	new alarm;
+	new doors;
+	new bonnet;
+	new boot;
+	new objective;
+
+	GetVehicleParamsEx(vehicleID, engine, lights, alarm, doors, bonnet, boot, objective);
+
+	LockVehicle(vehicleID, !doors, playerID);
+
 	return COMMAND_OK;
 }

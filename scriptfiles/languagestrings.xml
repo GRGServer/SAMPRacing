@@ -1179,18 +1179,26 @@
     </string>
     <string id="147">
         <en>
-            Lock your Vehicle!
+            Lock or unlock your Vehicle
         </en>
         <de>
-            Schlisse dein Fahrzeug!
+            Schließe dein Fahrzeug auf oder ab
         </de>
     </string>
     <string id="148">
         <en>
-            Unlock your Vehicle!
+            The doors of your vehicle have been locked
         </en>
         <de>
-            Öffne dein Fahrzeug!
+            Die Türen von deinem Fahrzeug wurden abgeschlossen
+        </de>
+    </string>
+    <string id="149">
+        <en>
+            The doors of your vehicle have been unlocked
+        </en>
+        <de>
+            Die Türen von deinem Fahrzeug wurden aufgeschlossen
         </de>
     </string>
 </languagestrings>
