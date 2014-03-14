@@ -1209,4 +1209,28 @@
             ~n~~n~Geschwindigkeit:~n~Gesundheit:
         </de>
     </string>
+    <string id="151">
+        <en>
+            Select language
+        </en>
+        <de>
+            Sprache auswählen
+        </de>
+    </string>
+    <string id="152">
+        <en>
+            The language has been changed
+        </en>
+        <de>
+            Die Sprache wurde geändert
+        </de>
+    </string>
+    <string id="153">
+        <en>
+            Change the language
+        </en>
+        <de>
+            Ändere die Sprache
+        </de>
+    </string>
 </languagestrings>

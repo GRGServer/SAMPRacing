@@ -1,0 +1,23 @@
+ShowDialog:Language(playerID)
+{
+	new list[1024];
+	AddLine(list, "en\tEnglish");
+	AddLine(list, "de\tDeutsch");
+	CreateDialog(playerID, "Language", DIALOG_STYLE_LIST, LanguageString(playerID, StringID:151("Select language")), list, LanguageString(playerID, StringID:40("OK")), LanguageString(playerID, StringID:4("Cancel")));
+}
+
+DialogResponse:Language(playerID, response, listItem, inputText[])
+{
+	if (response)
+	{
+		// Save the selected language to the player variable
+		new languageName[3];
+		new languageTitle[100];
+		sscanf(inputText, "p<\t>s[3]s[100]", languageName, languageTitle);
+		PVar:playerID[LANGUAGE] = GetLanguageID(languageName);
+
+		UpdatePlayerTextDrawStrings(playerID);
+
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:152("The language has been changed"));
+	}
+}

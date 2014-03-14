@@ -102,6 +102,7 @@
 #include <grgserver\functions\UpdateGarage.inc>
 #include <grgserver\functions\UpdateObjectEditorInfo.inc>
 #include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
+#include <grgserver\functions\UpdatePlayerTextDrawStrings.inc>
 #include <grgserver\functions\UpdateVehicleStateForPlayer.inc>
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>
@@ -151,6 +152,7 @@
 #include <grgserver\dialogs\D_AddObject.inc>
 #include <grgserver\dialogs\D_ConfirmGarageBuy.inc>
 #include <grgserver\dialogs\D_ConfirmVehicleBuy.inc>
+#include <grgserver\dialogs\D_Language.inc>
 #include <grgserver\dialogs\D_Login.inc>
 #include <grgserver\dialogs\D_Register_Language.inc>
 #include <grgserver\dialogs\D_Register_Password1.inc>
@@ -171,6 +173,7 @@
 #include <grgserver\commands\givemoney.inc>
 #include <grgserver\commands\god.inc>
 #include <grgserver\commands\jetpack.inc>
+#include <grgserver\commands\language.inc>
 #include <grgserver\commands\lock.inc>
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\maptp.inc>
