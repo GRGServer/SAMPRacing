@@ -99,10 +99,10 @@
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\TeleportToInterior.inc>
-#include <grgserver\functions\UpdateDrifting.inc>
 #include <grgserver\functions\UpdateGarage.inc>
 #include <grgserver\functions\UpdateObjectEditorInfo.inc>
 #include <grgserver\functions\UpdateObjectsForAllPlayers.inc>
+#include <grgserver\functions\UpdateVehicleStateForPlayer.inc>
 #include <grgserver\functions\XML_GetFloatAttribute.inc>
 #include <grgserver\functions\XML_GetFloatValue.inc>
 #include <grgserver\functions\XML_GetIntAttribute.inc>
