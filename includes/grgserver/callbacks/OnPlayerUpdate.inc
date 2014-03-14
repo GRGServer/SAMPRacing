@@ -49,7 +49,7 @@ public OnPlayerUpdate(playerid)
 		}
 	}
 
-	UpdateDrifting(playerid);
+	UpdateVehicleStateForPlayer(playerid);
 
 	CheckHiddenPackages(playerid);
 
