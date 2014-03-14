@@ -23,15 +23,38 @@ UpdateVehicleStateForPlayer(playerID)
 			health = 1000;
 		}
 
-		// Update vehicle info
-		Format:string("~n~~n~%.0f%%",  health / 10);
-		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], string);
-		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], g_vehicleModels[GetVehicleModel(vehicleID) - 400][E_VEHICLEMODEL_NAME]);
+		// 250 or less = Vehicle is burning
+		if (health < 250)
+		{
+			health = 250;
+		}
 
-		// Show vehicle info
-		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS]);
-		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME]);
-		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES]);
+		new backgroundColor;
+		new color;
+		if (health > 750)
+		{
+			backgroundColor = 0x006600ff;
+			color = 0x00aa00ff;
+		}
+		else if (health > 500)
+		{
+			backgroundColor = 0x666600ff;
+			color = 0xaaaa00ff;
+		}
+		else
+		{
+			backgroundColor = 0x660000ff;
+			color = 0xaa0000ff;
+		}
+
+		PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_VALUE], floatadd(SPEEDOMETER_HEALTHBAR_POSX, floatmul(floatsub(health, 250), floatdiv(SPEEDOMETER_HEALTHBAR_LENGTH, 750))), 0.0);
+		PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_VALUE], color);
+		PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_BOX2], backgroundColor);
+
+		// Show vehicle health
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_BOX1]);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_BOX2]);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_VALUE]);
 
 		// Update and show analog speedometer
 		Count(step, MAX_SPEEDOMETER_STEPS)
@@ -46,13 +69,14 @@ UpdateVehicleStateForPlayer(playerID)
 		Format:string("%d", speed);
 		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], string);
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE]);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_UNIT]);
 	}
 	else
 	{
-		// Hide vehicle info
-		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS]);
-		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME]);
-		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES]);
+		// Hide vehicle health
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_BOX1]);
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_BOX2]);
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLE_HEALTH_VALUE]);
 
 		// Hide speedometer
 		Count(step, MAX_SPEEDOMETER_STEPS)
@@ -60,6 +84,7 @@ UpdateVehicleStateForPlayer(playerID)
 			PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][step]);
 		}
 		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE]);
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_UNIT]);
 	}
 
 	// Drifting is enabled and player is the driver
