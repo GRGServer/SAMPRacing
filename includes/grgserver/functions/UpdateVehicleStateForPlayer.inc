@@ -173,6 +173,7 @@ UpdateVehicleStateForPlayer(playerID)
 					{
 						if (PVar:playerID[DRIFTING_SCORE] > 70)
 						{
+							GameTextForPlayer(playerID, LanguageString(playerID, StringID:150("Nice drifting!")), 3000, 6);
 							RepairVehicle(vehicleID);
 							SetVehicleHealth(vehicleID, 1000);
 							AddVehicleComponent(vehicleID, 1009);
