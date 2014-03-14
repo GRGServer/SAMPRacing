@@ -24,7 +24,7 @@ UpdateVehicleStateForPlayer(playerID)
 		}
 
 		// Update vehicle info
-		Format:string("~n~~n~%d km/h~n~%.0f%%", speed, health / 10);
+		Format:string("~n~~n~%.0f%%",  health / 10);
 		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], string);
 		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], g_vehicleModels[GetVehicleModel(vehicleID) - 400][E_VEHICLEMODEL_NAME]);
 
@@ -32,12 +32,34 @@ UpdateVehicleStateForPlayer(playerID)
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS]);
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME]);
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES]);
+
+		// Update and show analog speedometer
+		Count(step, MAX_SPEEDOMETER_STEPS)
+		{
+			new stepSpeed = 20 * (step + 1);
+			Format:string("~%c~%d", speed >= stepSpeed ? 'r' : 'g', stepSpeed);
+			PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][step], string);
+			PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][step]);
+		}
+
+		// Update and show digital speedometer
+		Format:string("%d", speed);
+		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], string);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE]);
 	}
 	else
 	{
+		// Hide vehicle info
 		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS]);
 		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME]);
 		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES]);
+
+		// Hide speedometer
+		Count(step, MAX_SPEEDOMETER_STEPS)
+		{
+			PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][step]);
+		}
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE]);
 	}
 
 	// Drifting is enabled and player is the driver

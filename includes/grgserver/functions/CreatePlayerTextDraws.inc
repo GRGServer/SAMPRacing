@@ -71,5 +71,40 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_VEHICLE_INFO], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_VEHICLE_INFO], 0x00000066);
 
+	g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE] = CreatePlayerTextDraw(playerID, SPEEDOMETER_POSX, SPEEDOMETER_POSY, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], 0.6, 1.0);
+	PlayerTextDrawSetShadow(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], 0);
+	PlayerTextDrawBackgroundColor(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], 0x000000ff);
+	PlayerTextDrawSetOutline(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER_VALUE], 1);
+
+	new speedometerNumbers[][] =
+	{
+		{-25, 20, 3},// 20
+		{-30, 10, 3},// 40
+		{-35, 0, 3},// 60
+		{-30, -10, 3},// 80
+		{-25, -20, 3},// 100
+		{-15, -30, 3},// 120
+		{0, -35, 2},// 140
+		{15, -30, 1},// 160
+		{25, -20, 1},// 180
+		{30, -10, 1},// 200
+		{35, 0, 1},// 220
+		{30, 10, 1},// 240
+		{25, 20, 1}// 260
+	};
+	Foreach(speedometerNumberIndex, speedometerNumbers)
+	{
+		g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex] = CreatePlayerTextDraw(playerID, floatadd(SPEEDOMETER_POSX, speedometerNumbers[speedometerNumberIndex][0]), floatadd(SPEEDOMETER_POSY, speedometerNumbers[speedometerNumberIndex][1]), " ");
+		PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex], speedometerNumbers[speedometerNumberIndex][2]);
+		PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex], 1);
+		PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex], 0.4, 0.8);
+		PlayerTextDrawSetShadow(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex], 0);
+		PlayerTextDrawBackgroundColor(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex], 0x000000ff);
+		PlayerTextDrawSetOutline(playerID, g_playerTextDraws[playerID][E_PTD_SPEEDOMETER][speedometerNumberIndex], 1);
+	}
+
 	UpdatePlayerTextDrawStrings(playerID);
 }
