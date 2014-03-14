@@ -24,7 +24,7 @@ UpdateVehicleStateForPlayer(playerID)
 		}
 
 		// Update vehicle info
-		Format:string("~n~~n~%d~n~%.0f%%", speed, health / 10);
+		Format:string("~n~~n~%d km/h~n~%.0f%%", speed, health / 10);
 		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], string);
 		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], g_vehicleModels[GetVehicleModel(vehicleID) - 400][E_VEHICLEMODEL_NAME]);
 

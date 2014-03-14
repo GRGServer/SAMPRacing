@@ -54,7 +54,7 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], 0.4, 0.8);
 
 	// Vehicle info values
-	g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES] = CreatePlayerTextDraw(playerID, 580, 300, " ");
+	g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES] = CreatePlayerTextDraw(playerID, 570, 300, " ");
 	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], 1);
 	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], 0.4, 0.8);
 
