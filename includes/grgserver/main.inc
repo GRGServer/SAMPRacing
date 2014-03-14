@@ -30,6 +30,7 @@
 #include <grgserver\functions\AddLine.inc>
 #include <grgserver\functions\AddObject.inc>
 #include <grgserver\functions\AddPickup.inc>
+#include <grgserver\functions\AutoUnlock.inc>
 #include <grgserver\functions\CheckHiddenPackages.inc>
 #include <grgserver\functions\CheckNumberPlate.inc>
 #include <grgserver\functions\CheckpointEvent.inc>
@@ -40,6 +41,7 @@
 #include <grgserver\functions\CreateVehicleEx.inc>
 #include <grgserver\functions\CreateVehicleShopVehicle.inc>
 #include <grgserver\functions\DestroyPickupsOfType.inc>
+#include <grgserver\functions\DistanceToPoint.inc>
 #include <grgserver\functions\EnterGarage.inc>
 #include <grgserver\functions\EnterVehicleShop.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
@@ -53,6 +55,7 @@
 #include <grgserver\functions\GetLanguageID.inc>
 #include <grgserver\functions\GetMySQLField.inc>
 #include <grgserver\functions\GetObjectNameByModelID.inc>
+#include <grgserver\functions\GetPlayer3DZone.inc>
 #include <grgserver\functions\GetPlayerIDByUserID.inc>
 #include <grgserver\functions\GetPlayerNameEx.inc>
 #include <grgserver\functions\GetPlayerPickup.inc>
@@ -69,6 +72,8 @@
 #include <grgserver\functions\PickupEvent.inc>
 #include <grgserver\functions\PlayAudioFileForPlayer.inc>
 #include <grgserver\functions\PlaySound.inc>
+#include <grgserver\functions\PlayerZone.inc>
+#include <grgserver\functions\ReadPosition.inc>
 #include <grgserver\functions\ReloadAreas.inc>
 #include <grgserver\functions\ReloadCommandAliases.inc>
 #include <grgserver\functions\ReloadGarages.inc>
@@ -98,6 +103,7 @@
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
 #include <grgserver\functions\TeleportToInterior.inc>
+#include <grgserver\functions\UnFreezeCar.inc>
 #include <grgserver\functions\UpdateDrifting.inc>
 #include <grgserver\functions\UpdateGarage.inc>
 #include <grgserver\functions\UpdateObjectEditorInfo.inc>
@@ -160,6 +166,7 @@
 #include <grgserver\timers\Timer_EveryMinute.inc>
 #include <grgserver\timers\Timer_EverySecond.inc>
 #include <grgserver\timers\Timer_SetPlayerPosFindZ.inc>
+#include <grgserver\timers\Timer_SpeedoMeterUp.inc>
 
 // commands
 #include <grgserver\commands\addobject.inc>
@@ -170,6 +177,7 @@
 #include <grgserver\commands\givemoney.inc>
 #include <grgserver\commands\god.inc>
 #include <grgserver\commands\jetpack.inc>
+#include <grgserver\commands\lock.inc>
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\maptp.inc>
 #include <grgserver\commands\mobilevehicleshop.inc>
@@ -186,5 +194,6 @@
 #include <grgserver\commands\tpint.inc>
 #include <grgserver\commands\tppos.inc>
 #include <grgserver\commands\tpto.inc>
+#include <grgserver\commands\unlock.inc>
 #include <grgserver\commands\vehicleshop.inc>
 

@@ -1177,4 +1177,20 @@
             Es sind keine Fahrzeuge in dieser Garage!
         </de>
     </string>
+    <string id="147">
+        <en>
+            Lock your Vehicle!
+        </en>
+        <de>
+            Schlisse dein Fahrzeug!
+        </de>
+    </string>
+    <string id="148">
+        <en>
+            Unlock your Vehicle!
+        </en>
+        <de>
+            Öffne dein Fahrzeug!
+        </de>
+    </string>
 </languagestrings>

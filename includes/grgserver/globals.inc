@@ -20,3 +20,21 @@ new Text:g_textDrawClock;
 new g_vehicles[MAX_VEHICLES][E_VEHICLE];
 new g_vehicleModels[212][E_VEHICLEMODEL];
 new g_vehicleShops[MAX_VEHICLESHOPS][E_VEHICLESHOP];
+
+new Text:LBox[MAX_PLAYERS];
+new Text:LLine1[MAX_PLAYERS];
+new Text:LLine2[MAX_PLAYERS];
+new Text:LLine3[MAX_PLAYERS];
+new Text:LLine4[MAX_PLAYERS];
+new Text:LCredits[MAX_PLAYERS];
+new Text:Lmph[MAX_PLAYERS];
+new Text:LFunc[MAX_PLAYERS];
+new SpeedoMeter[MAX_PLAYERS];
+new VehicleStatus[MAX_VEHICLES];
+
+new lstring[256];
+new lstr[256];
+
+new LUnFreeze;
+new ReadPlayerPosition[PLAYERS][ReadPositions];
+new Float:VehPosX[MAX_VEHICLES], Float:VehPosY[MAX_VEHICLES], Float:VehPosZ[MAX_VEHICLES];
