@@ -39,6 +39,25 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 0x00000066);
 
+	// Vehicle info box
+	g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS] = CreatePlayerTextDraw(playerID, 480, 300, LanguageString(playerID, StringID:150("~n~~n~Speed:~n~Health:")));
+	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS], 640, 0);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS], 0x00000066);
+
+	// Vehicle info name
+	g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME] = CreatePlayerTextDraw(playerID, 560, 300, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], 0.4, 0.8);
+
+	// Vehicle info values
+	g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES] = CreatePlayerTextDraw(playerID, 580, 300, " ");
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], 0.4, 0.8);
+
 	// Vehicle shop control info
 	Format:text(LanguageString(playerID, StringID:78("Previous: %s~n~Next: %s~n~Buy: %s~n~Quit: %s")), GetGameTextKeyByID(KEY_VEHICLESHOP_PREVIOUS, false), GetGameTextKeyByID(KEY_VEHICLESHOP_NEXT, false), GetGameTextKeyByID(KEY_VEHICLESHOP_BUY, false), GetGameTextKeyByID(KEY_VEHICLESHOP_QUIT, false));
 	g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_CTRL_INFO] = CreatePlayerTextDraw(playerID, 500, 375, text);

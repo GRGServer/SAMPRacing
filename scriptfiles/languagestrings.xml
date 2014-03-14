@@ -1201,4 +1201,12 @@
             Die Türen von deinem Fahrzeug wurden aufgeschlossen
         </de>
     </string>
+    <string id="150">
+        <en>
+            ~n~~n~Speed:~n~Health:
+        </en>
+        <de>
+            ~n~~n~Geschwindigkeit:~n~Gesundheit:
+        </de>
+    </string>
 </languagestrings>

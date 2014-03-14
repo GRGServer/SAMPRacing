@@ -1,50 +1,81 @@
 UpdateVehicleStateForPlayer(playerID)
 {
+	new string[256];
+
 	new vehicleID = GetPlayerVehicleID(playerID);
 
 	// Speed calculcation
-	new Float:x;
-	new Float:y;
-	new Float:z;
-	GetVehicleVelocity(vehicleID, x, y, z);
-	new Float:speed = floatpower(x * x + y * y, 0.5);
+	new Float:velocityX;
+	new Float:velocityY;
+	new Float:velocityZ;
+	GetVehicleVelocity(vehicleID, velocityX, velocityY, velocityZ);
+	new speed = floatround(floatsqroot(floatpower(velocityX, 2) + floatpower(velocityY, 2) + floatpower(velocityZ, 2)) * 100 * 1.61);
+
+	// Player is in a vehicle
+	if (vehicleID)
+	{
+		new Float:health;
+		GetVehicleHealth(vehicleID, health);
+
+		// Fix infinite health
+		if (health > 1000)
+		{
+			health = 1000;
+		}
+
+		// Update vehicle info
+		Format:string("~n~~n~%d~n~%.0f%%", speed, health / 10);
+		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES], string);
+		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME], g_vehicleModels[GetVehicleModel(vehicleID) - 400][E_VEHICLEMODEL_NAME]);
+
+		// Show vehicle info
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS]);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME]);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES]);
+	}
+	else
+	{
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_LABELS]);
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_NAME]);
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLEINFO_VALUES]);
+	}
 
 	// Drifting is enabled and player is the driver
 	if (PVar:playerID[DRIFTING_STATE] && GetPlayerVehicleSeat(playerID) == 0)
 	{
-		if (speed > 0.2)
+		if (speed >= 30)
 		{
 			// Get direction
 			new Float:direction;
-			if (x < 0)
+			if (velocityX < 0)
 			{
-				if (y > 0)
+				if (velocityY > 0)
 				{
-					direction = atan(floatabs(x / y));
+					direction = atan(floatabs(velocityX / velocityY));
 				}
-				else if (y <= 0)
+				else if (velocityY <= 0)
 				{
-					direction = atan(y / x) + 90;
+					direction = atan(velocityY / velocityX) + 90;
 				}
 			}
-			else if (x > 0)
+			else if (velocityX > 0)
 			{
-				if(y < 0)
+				if (velocityY < 0)
 				{
-					direction = atan(floatabs(x/y)) + 180;
+					direction = atan(floatabs(velocityX / velocityY)) + 180;
 				}
-				else if (y >= 0)
+				else if (velocityY >= 0)
 				{
-					direction = atan(y / x) + 270;
+					direction = atan(velocityY / velocityX) + 270;
 				}
 			}
-			else if (x == 0)
+			else if (velocityX == 0)
 			{
-				if (y > 0)
+				if (velocityY > 0)
 				{ 
 					direction = 0;
 				}
-				else if (y < 0)
+				else if (velocityY < 0)
 				{ 
 					direction = 180;
 				}
@@ -72,7 +103,7 @@ UpdateVehicleStateForPlayer(playerID)
 					}
 				}
 
-				if (speed > 0.6)
+				if (speed > 100)
 				{
 					PVar:playerID[DRIFTING_SCORE]++;
 					PVar:playerID[DRIFTING_SPEEDBONUS]++;
@@ -129,8 +160,6 @@ UpdateVehicleStateForPlayer(playerID)
 			PVar:playerID[DRIFTING_SPEEDBONUS] = 0;
 			PVar:playerID[DRIFTING_ANGLEBONUS] = 0;
 		}
-
-		new string[100];
 
 		Format:string(LanguageString(playerID, StringID:43("Drift Score: %d~n~~n~Best Score: %d * Last Score: %d")), PVar:playerID[DRIFTING_SCORE], PVar:playerID[DRIFTING_BESTSCORE], PVar:playerID[DRIFTING_LASTSCORE]);
 		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BOTTOM], string);
