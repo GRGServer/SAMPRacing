@@ -16,6 +16,9 @@ DialogResponse:Language(playerID, response, listItem, inputText[])
 		sscanf(inputText, "p<\t>s[3]s[100]", languageName, languageTitle);
 		PVar:playerID[LANGUAGE] = GetLanguageID(languageName);
 
+		MySQLFormat("UPDATE `users` SET `language` = '%s' WHERE `id` = %d", GetLanguageByID(PVar:playerID[LANGUAGE]), PVar:playerID[USERID]);
+		mysql_pquery(1, g_sqlQuery);
+
 		UpdatePlayerTextDrawStrings(playerID);
 
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:152("The language has been changed"));
