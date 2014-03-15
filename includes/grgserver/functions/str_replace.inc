@@ -1,4 +1,4 @@
-stock str_replace(search[], replace[], source[])
+str_replace(search[], replace[], source[])
 {
 	new newnick[256];
 	new newlen;
