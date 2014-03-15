@@ -44,6 +44,7 @@ The following plugins are used by the server:
   * Import the database schema into your MySQL database
   * Start the server
 
+
 ## Compiling the script
 
 To compile the script on Windows you just have to execute the following commands:
@@ -54,3 +55,17 @@ cd gamemodes
 ```
 
 On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory (requires wine).
+
+
+## Notes for Linux
+
+On Linux you have to manually set the executable bit on executables (*chmod +x*):
+
+```
+chmod +x announce samp-npc samp-srv tools/*.sh
+```
+
+When doing that you should disable *core.fileMode* in your git config to prevent marking the files as changed:
+```
+git config core.fileMode false
+```
