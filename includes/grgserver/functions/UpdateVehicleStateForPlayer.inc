@@ -90,6 +90,12 @@ UpdateVehicleStateForPlayer(playerID)
 	// Drifting is enabled and player is the driver
 	if (PVar:playerID[DRIFTING_STATE] && GetPlayerVehicleSeat(playerID) == 0)
 	{
+		if (PVar:playerID[DRIFTING_RESETSTATSTIMER])
+		{
+			KillTimer(PVar:playerID[DRIFTING_RESETSTATSTIMER]);
+			PVar:playerID[DRIFTING_RESETSTATSTIMER] = 0;
+		}
+
 		if (speed >= 30)
 		{
 			// Get direction
@@ -218,19 +224,20 @@ UpdateVehicleStateForPlayer(playerID)
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS]);
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES]);
 		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BOTTOM]);
+
+		PVar:playerID[DRIFTING_WASDRIFTING] = true;
 	}
 	else
 	{
-		PVar:playerID[DRIFTING_ANGLEBONUS] = 0;
-		PVar:playerID[DRIFTING_BESTSCORE] = 0;
-		PVar:playerID[DRIFTING_LASTSCORE] = 0;
-		PVar:playerID[DRIFTING_MAXSCORE] = 0;
-		PVar:playerID[DRIFTING_SCORE] = 0;
-		PVar:playerID[DRIFTING_SCORESTATE] = false;
-		PVar:playerID[DRIFTING_SPEEDBONUS] = 0;
+		if (PVar:playerID[DRIFTING_WASDRIFTING])
+		{
+			PVar:playerID[DRIFTING_WASDRIFTING] = false;
 
-		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS]);
-		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES]);
-		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BOTTOM]);
+			PVar:playerID[DRIFTING_RESETSTATSTIMER] = SetTimerEx("Timer_ResetDriftingStats", TIMER_RESETDRIFTINGSTATS, false, "d", playerID);
+
+			PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS]);
+			PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES]);
+			PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BOTTOM]);
+		}
 	}
 }
