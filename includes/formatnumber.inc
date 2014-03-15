@@ -76,11 +76,11 @@
 #endif
 
 #if !defined DEFAULT_THOUSAND_SEP
-	#define DEFAULT_THOUSAND_SEP  '.'
+	#define DEFAULT_THOUSAND_SEP  ' '
 #endif
 
 #if !defined DEFAULT_DECIMAL_POINT
-	#define DEFAULT_DECIMAL_POINT  ','
+	#define DEFAULT_DECIMAL_POINT  '.'
 #endif
 
 stock FormatNumber( { _, Float, Text3D, Menu, Text, DB, DBResult, bool, File, hex, bit, bit_byte, Bit }:xVariable, iDecimals = -1, iThousandSeparator = DEFAULT_THOUSAND_SEP, iDecimalPoint = DEFAULT_DECIMAL_POINT, iTag = tagof( xVariable ) )
