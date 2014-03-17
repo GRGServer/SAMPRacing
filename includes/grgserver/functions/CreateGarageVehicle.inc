@@ -1,4 +1,4 @@
-CreateGarageVehicle(playerID, direction)
+CreateGarageVehicle(playerID, row)
 {
 	// Prevent loading multiple times
 	if (PVar:playerID[GARAGE_VEHICLE_LOADING])
@@ -13,23 +13,53 @@ CreateGarageVehicle(playerID, direction)
 		DestroyVehicleEx(PVar:playerID[GARAGE_VEHICLE_ID]);
 	}
 
-	new idOperator[2];
-	switch (direction)
+	new garageNumber = PVar:playerID[GARAGE_NUMBER];
+
+	new Float:vehiclePosX;
+	new Float:vehiclePosY;
+	new Float:vehiclePosZ;
+	new Float:vehicleAngle;
+
+	switch (g_garages[garageNumber][E_GARAGE_TYPE])
 	{
-		case -1:
+		case GARAGE_LARGE:
 		{
-			idOperator = "<";
+			vehiclePosX = GARAGE_LARGE_VEHICLE_POSX;
+			vehiclePosY = GARAGE_LARGE_VEHICLE_POSY;
+			vehiclePosZ = GARAGE_LARGE_VEHICLE_POSZ;
+			vehicleAngle = GARAGE_LARGE_VEHICLE_ANGLE;
 		}
-		case 1:
+		case GARAGE_SMALL:
 		{
-			idOperator = ">";
-		}
-		default:
-		{
-			idOperator = "=";
+			vehiclePosX = GARAGE_SMALL_VEHICLE_POSX;
+			vehiclePosY = GARAGE_SMALL_VEHICLE_POSY;
+			vehiclePosZ = GARAGE_SMALL_VEHICLE_POSZ;
+			vehicleAngle = GARAGE_SMALL_VEHICLE_ANGLE;
 		}
 	}
 
-	MySQLFormat("SELECT `id`, `modelId`, `numberPlate`, `mileAge`, `userId`, `garageId`, `health`, `color1`, `color2`, `paintjobId` FROM `vehicles` WHERE `id` %s %d AND `userId` = %d AND `garageId` = %d ORDER BY `id` ASC LIMIT 1", idOperator, PVar:playerID[GARAGE_VEHICLE_SAVEID], PVar:playerID[USERID], g_garages[PVar:playerID[GARAGE_NUMBER]][E_GARAGE_ID]);
-	mysql_pquery(1, g_sqlQuery, "OnGarageVehicleLoaded", "d", playerID);
+	cache_set_active(PVar:playerID[GARAGE_MYSQLCACHEID]);
+
+	PVar:playerID[GARAGE_ROW] = row;
+
+	PVar:playerID[GARAGE_VEHICLE_SAVEID] = cache_get_field_content_int(row, "id");
+
+	PVar:playerID[GARAGE_VEHICLE_ID] = LoadVehicle(row, vehiclePosX, vehiclePosY, vehiclePosZ, vehicleAngle);
+	if (PVar:playerID[GARAGE_VEHICLE_ID] == INVALID_VEHICLE_ID)
+	{
+		PVar:playerID[GARAGE_VEHICLE_LOADING] = false;
+		return;
+	}
+
+	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerInterior(playerID));
+	SetVehicleVirtualWorld(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerVirtualWorld(playerID));
+
+	FormatNew:string[256]("%s~n~%d / %d", g_vehicleModels[GetVehicleModel(PVar:playerID[GARAGE_VEHICLE_ID]) - 400][E_VEHICLEMODEL_NAME], row + 1, cache_get_row_count());
+	PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], string);
+
+	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO]);
+	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO]);
+
+	MySQLFormat("SELECT `componentId` FROM `vehiclecomponents` WHERE `vehicleId` = %d", PVar:playerID[GARAGE_VEHICLE_SAVEID]);
+	mysql_pquery(1, g_sqlQuery, "OnGarageVehicleComponentsLoaded", "d", playerID);
 }

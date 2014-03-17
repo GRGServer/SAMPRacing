@@ -84,12 +84,32 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 	{
 		if (IsKeyPressed(KEY_GARAGE_PREVIOUS))
 		{
-			CreateGarageVehicle(playerid, -1);
+			cache_set_active(PVar:playerid[GARAGE_MYSQLCACHEID]);
+			new row = PVar:playerid[GARAGE_ROW];
+			if (row)
+			{
+				row--;
+			}
+			else
+			{
+				row = cache_get_row_count() - 1;
+			}
+			CreateGarageVehicle(playerid, row);
 			return false;
 		}
 		else if (IsKeyPressed(KEY_GARAGE_NEXT))
 		{
-			CreateGarageVehicle(playerid, 1);
+			cache_set_active(PVar:playerid[GARAGE_MYSQLCACHEID]);
+			new row = PVar:playerid[GARAGE_ROW];
+			if (row < cache_get_row_count() - 1)
+			{
+				row++;
+			}
+			else
+			{
+				row = 0;
+			}
+			CreateGarageVehicle(playerid, row);
 			return false;
 		}
 		else if (IsKeyPressed(KEY_GARAGE_GET))

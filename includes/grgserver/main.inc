@@ -119,8 +119,7 @@
 #include <grgserver\callbacks\OnGameModeExit.inc>
 #include <grgserver\callbacks\OnGameModeInit.inc>
 #include <grgserver\callbacks\OnGarageVehicleComponentsLoaded.inc>
-#include <grgserver\callbacks\OnGarageVehicleCountLoaded.inc>
-#include <grgserver\callbacks\OnGarageVehicleLoaded.inc>
+#include <grgserver\callbacks\OnGarageVehiclesLoaded.inc>
 #include <grgserver\callbacks\OnPlayerClickMap.inc>
 #include <grgserver\callbacks\OnPlayerCommandPerformed.inc>
 #include <grgserver\callbacks\OnPlayerCommandText.inc>

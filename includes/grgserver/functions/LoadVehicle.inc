@@ -3,7 +3,7 @@ LoadVehicle(row, Float:posX, Float:posY, Float:posZ, Float:angle)
 	new vehicleID = CreateVehicleEx(cache_get_field_content_int(row, "modelId"), posX, posY, posZ, angle, cache_get_field_content_int(row, "color1"), cache_get_field_content_int(row, "color2"));
 	if (vehicleID == INVALID_VEHICLE_ID)
 	{
-		printf("  Unable to load vehicle %d", cache_get_field_content_int(row, "id"));
+		printf("  Unable to load vehicle %d (row %d)", cache_get_field_content_int(row, "id"), row);
 		return INVALID_VEHICLE_ID;
 	}
 

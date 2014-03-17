@@ -33,8 +33,7 @@ CheckpointEvent(playerID, checkpointID, event)
 					}
 					else
 					{
-						MySQLFormat("SELECT `id` FROM `vehicles` WHERE `userId` = %d AND `garageId` = %d", PVar:playerID[USERID], g_garages[garageNumber][E_GARAGE_ID]);
-						mysql_pquery(1, g_sqlQuery, "OnGarageVehicleCountLoaded", "dd", playerID, garageNumber);
+						EnterGarage(playerID, garageNumber);
 					}
 				}
 			}
