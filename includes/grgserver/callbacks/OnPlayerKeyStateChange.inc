@@ -80,6 +80,30 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		}
 	}
 
+	if (PVar:playerid[GARAGE_NUMBER] != -1)
+	{
+		if (IsKeyPressed(KEY_GARAGE_PREVIOUS))
+		{
+			CreateGarageVehicle(playerid, -1);
+			return false;
+		}
+		else if (IsKeyPressed(KEY_GARAGE_NEXT))
+		{
+			CreateGarageVehicle(playerid, 1);
+			return false;
+		}
+		else if (IsKeyPressed(KEY_GARAGE_GET))
+		{
+			ExitGarage(playerid, true);
+			return false;
+		}
+		else if (IsKeyPressed(KEY_GARAGE_QUIT))
+		{
+			ExitGarage(playerid, false);
+			return false;
+		}
+	}
+
 	if (PVar:playerid[VEHICLESHOP_ID] != -1)
 	{
 		if (IsKeyPressed(KEY_VEHICLESHOP_PREVIOUS))

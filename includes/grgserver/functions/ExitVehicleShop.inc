@@ -27,7 +27,7 @@ ExitVehicleShop(playerID, buy)
 
 	if (!buy)
 	{
-		DestroyVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]);
+		DestroyVehicleEx(PVar:playerID[VEHICLESHOP_VEHICLEID]);
 
 		PVar:playerID[VEHICLESHOP_ID] = -1;
 		PVar:playerID[VEHICLESHOP_VEHICLEID] = INVALID_VEHICLE_ID;

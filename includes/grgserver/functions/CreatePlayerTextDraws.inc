@@ -21,6 +21,21 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES], 1);
 	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES], 0.4, 0.8);
 
+	// Garage control info
+	g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO] = CreatePlayerTextDraw(playerID, 500, 375, " ");
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO], 0x00000066);
+
+	// Garage vehicle info
+	g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO] = CreatePlayerTextDraw(playerID, 320, 425, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], 0x00000066);
+
 	// Object editor info
 	g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO] = CreatePlayerTextDraw(playerID, 320, 425, " ");
 	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO], 2);

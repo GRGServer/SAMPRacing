@@ -7,11 +7,18 @@ EnterGarage(playerID, garageNumber)
 		mysql_query(1, g_sqlQuery);
 
 		PVar:playerID[GARAGE_VEHICLE_SAVEID] = VehicleProperty:vehicleID[SAVEID] - 1;
+
+		DestroyVehicleEx(vehicleID);
 	}
 	else
 	{
 		PVar:playerID[GARAGE_VEHICLE_SAVEID] = 0;
 	}
+
+	// Save the old position to restore on garage exit
+	GetPlayerPos(playerID, PVar:playerID[GARAGE_OLDPOSX], PVar:playerID[GARAGE_OLDPOSY], PVar:playerID[GARAGE_OLDPOSZ]);
+	GetPlayerFacingAngle(playerID, PVar:playerID[GARAGE_OLDANGLE]);
+	PVar:playerID[GARAGE_OLDINTERIOR] = GetPlayerInterior(playerID);
 
 	SetPrivateWorld(playerID, true);
 

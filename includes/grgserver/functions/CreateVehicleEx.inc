@@ -1,4 +1,4 @@
-CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1, color2, playerID = INVALID_PLAYER_ID)
+CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1, color2)
 {
 	if (modelID >= 400 && modelID <= 611)
 	{
@@ -30,12 +30,6 @@ CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1
 
 		VehicleProperty:vehicleID[COLOR1] = color1;
 		VehicleProperty:vehicleID[COLOR2] = color2;
-
-		if (playerID != INVALID_PLAYER_ID)
-		{
-			VehicleProperty:vehicleID[USERID] = PVar:playerID[USERID];
-			SaveVehicle(vehicleID, true);
-		}
 
 		return vehicleID;
 	}

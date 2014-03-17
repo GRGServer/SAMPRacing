@@ -22,23 +22,8 @@ ReloadVehicles()
 			continue;
 		}
 
-		new vehicleID = CreateVehicleEx(cache_get_field_content_int(row, "modelId"), cache_get_field_content_float(row, "posX"), cache_get_field_content_float(row, "posY"), cache_get_field_content_float(row, "posZ"), cache_get_field_content_float(row, "angle"), cache_get_field_content_int(row, "color1"), cache_get_field_content_int(row, "color2"));
-		if (vehicleID == INVALID_VEHICLE_ID)
+		if (LoadVehicle(row, cache_get_field_content_float(row, "posX"), cache_get_field_content_float(row, "posY"), cache_get_field_content_float(row, "posZ"), cache_get_field_content_float(row, "angle")) != INVALID_VEHICLE_ID)
 		{
-			printf("  Unable to create vehicle %d", cache_get_field_content_int(row, "id"));
-		}
-		else
-		{
-			SetVehicleHealth(vehicleID, cache_get_field_content_float(row, "health"));
-			ChangeVehiclePaintjob(vehicleID, cache_get_field_content_int(row, "paintjobId"));
-
-			cache_get_field_content(row, "numberPlate", VehicleProperty:vehicleID[NUMBERPLATE], 1, STRINGLENGTH_NUMBERPLATE);
-			SetVehicleNumberPlate(vehicleID, VehicleProperty:vehicleID[NUMBERPLATE]);
-
-			VehicleProperty:vehicleID[MILEAGE] = cache_get_field_content_int(row, "mileage");
-			VehicleProperty:vehicleID[USERID] = cache_get_field_content_int(row, "userId");
-			VehicleProperty:vehicleID[SAVEID] = cache_get_field_content_int(row, "id");
-
 			count++;
 		}
 	}

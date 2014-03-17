@@ -34,7 +34,7 @@ public OnGarageVehicleLoaded(playerID)
 
 	PVar:playerID[GARAGE_VEHICLE_SAVEID] = cache_get_field_content_int(0, "id");
 
-	PVar:playerID[GARAGE_VEHICLE_ID] = CreateVehicle(cache_get_field_content_int(0, "modelId"), vehiclePosX, vehiclePosY, vehiclePosZ, vehicleAngle, cache_get_field_content_int(0, "color1"), cache_get_field_content_int(0, "color2"), -1);
+	PVar:playerID[GARAGE_VEHICLE_ID] = LoadVehicle(0, vehiclePosX, vehiclePosY, vehiclePosZ, vehicleAngle);
 	if (PVar:playerID[GARAGE_VEHICLE_ID] == INVALID_VEHICLE_ID)
 	{
 		PVar:playerID[GARAGE_VEHICLE_LOADING] = false;
@@ -44,8 +44,11 @@ public OnGarageVehicleLoaded(playerID)
 	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerInterior(playerID));
 	SetVehicleVirtualWorld(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerVirtualWorld(playerID));
 
-	SetVehicleNumberPlate(PVar:playerID[GARAGE_VEHICLE_ID], GetMySQLField("numberPlate"));
-	ChangeVehiclePaintjob(PVar:playerID[GARAGE_VEHICLE_ID], cache_get_field_content_int(0, "paintjobId"));
+	FormatNew:string[256]("%s", g_vehicleModels[GetVehicleModel(PVar:playerID[GARAGE_VEHICLE_ID]) - 400][E_VEHICLEMODEL_NAME]);
+	PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], string);
+
+	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO]);
+	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO]);
 
 	MySQLFormat("SELECT `componentId` FROM `vehiclecomponents` WHERE `vehicleId` = %d", PVar:playerID[GARAGE_VEHICLE_SAVEID]);
 	mysql_pquery(1, g_sqlQuery, "OnGarageVehicleComponentsLoaded", "d", playerID);

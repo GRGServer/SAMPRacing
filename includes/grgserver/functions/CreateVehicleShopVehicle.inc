@@ -2,7 +2,7 @@ CreateVehicleShopVehicle(playerID)
 {
 	if (PVar:playerID[VEHICLESHOP_VEHICLEID] != INVALID_VEHICLE_ID)
 	{
-		DestroyVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]);
+		DestroyVehicleEx(PVar:playerID[VEHICLESHOP_VEHICLEID]);
 	}
 
 	new modelID = PVar:playerID[VEHICLESHOP_MODELID];

@@ -5,7 +5,7 @@ SaveVehicle(vehicleID, insertNew = false)
 		MySQLFormat("INSERT INTO `vehicles` (`modelId`, `userId`) VALUES(%d, %d)", GetVehicleModel(vehicleID), VehicleProperty:vehicleID[USERID]);
 		mysql_pquery(1, g_sqlQuery, "OnVehicleInserted", "d", vehicleID);
 	}
-	else if (VehicleProperty:vehicleID[SAVEID])
+	else if (VehicleProperty:vehicleID[SAVEID] && !VehicleProperty:vehicleID[GARAGEID])
 	{
 		new Float:posX;
 		new Float:posY;

@@ -6,5 +6,5 @@ public OnVehicleSpawn(vehicleid)
 		mysql_pquery(1, g_sqlQuery);
 	}
 
-	DestroyVehicle(vehicleid);
+	DestroyVehicleEx(vehicleid);
 }

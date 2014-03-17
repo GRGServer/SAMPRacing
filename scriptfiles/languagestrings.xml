@@ -1233,4 +1233,12 @@
             Ändere die Sprache
         </de>
     </string>
+    <string id="154">
+        <en>
+            Previous: %s~n~Next: %s~n~Spawn: %s~n~Quit: %s
+        </en>
+        <de>
+            Vorheriges: %s~n~Nächstes: %s~n~Spawnen: %s~n~Verlassen: %s
+        </de>
+    </string>
 </languagestrings>

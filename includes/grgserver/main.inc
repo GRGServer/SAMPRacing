@@ -40,9 +40,11 @@
 #include <grgserver\functions\CreateVehicleEx.inc>
 #include <grgserver\functions\CreateVehicleShopVehicle.inc>
 #include <grgserver\functions\DestroyPickupsOfType.inc>
+#include <grgserver\functions\DestroyVehicleEx.inc>
 #include <grgserver\functions\EnterGarage.inc>
 #include <grgserver\functions\EnterVehicleShop.inc>
 #include <grgserver\functions\ExecuteCommand.inc>
+#include <grgserver\functions\ExitGarage.inc>
 #include <grgserver\functions\ExitVehicleShop.inc>
 #include <grgserver\functions\FindNextVehicleModel.inc>
 #include <grgserver\functions\GenerateNumberPlateText.inc>
@@ -66,6 +68,7 @@
 #include <grgserver\functions\LoadHiddenPackages.inc>
 #include <grgserver\functions\LoadObjectsFromFile.inc>
 #include <grgserver\functions\LoadPlayer.inc>
+#include <grgserver\functions\LoadVehicle.inc>
 #include <grgserver\functions\LockVehicle.inc>
 #include <grgserver\functions\PickupEvent.inc>
 #include <grgserver\functions\PlayAudioFileForPlayer.inc>

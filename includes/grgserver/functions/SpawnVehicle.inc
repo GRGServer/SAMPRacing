@@ -34,7 +34,7 @@ SpawnVehicle(playerID, modelID, color1, color2, showMessage)
 	GetPlayerPos(playerID, posX, posY, posZ);
 	GetPlayerFacingAngle(playerID, angle);
 
-	new vehicleID = CreateVehicleEx(modelID, posX, posY, posZ, angle, color1, color2, playerID);
+	new vehicleID = CreateVehicleEx(modelID, posX, posY, posZ, angle, color1, color2);
 	if (vehicleID == INVALID_VEHICLE_ID)
 	{
 		if (showMessage)
@@ -47,6 +47,9 @@ SpawnVehicle(playerID, modelID, color1, color2, showMessage)
 	LinkVehicleToInterior(vehicleID, GetPlayerInterior(playerID));
 	SetVehicleVirtualWorld(vehicleID, GetPlayerVirtualWorld(playerID));
 	PutPlayerInVehicle(playerID, vehicleID, 0);
+
+	VehicleProperty:vehicleID[USERID] = PVar:playerID[USERID];
+	SaveVehicle(vehicleID, true);
 
 	if (showMessage)
 	{
