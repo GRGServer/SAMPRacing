@@ -33,4 +33,5 @@ public OnGameModeInit()
 	print("Starting timers");
 	SetTimer("Timer_EverySecond", 1000, true);
 	SetTimer("Timer_EveryMinute", 60000, true);
+	SetTimer("Timer_UpdateVehicleStats", 100, true);
 }

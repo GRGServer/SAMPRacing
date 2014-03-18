@@ -166,6 +166,7 @@
 #include <grgserver\timers\Timer_EverySecond.inc>
 #include <grgserver\timers\Timer_ResetDriftingStats.inc>
 #include <grgserver\timers\Timer_SetPlayerPosFindZ.inc>
+#include <grgserver\timers\Timer_UpdateVehicleStats.inc>
 
 // commands
 #include <grgserver\commands\addobject.inc>
