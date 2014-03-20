@@ -44,6 +44,14 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_OBJEDITOR_INFO], 0x00000066);
 
+	// Race bottom line
+	g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM] = CreatePlayerTextDraw(playerID, 320, 425, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], 0.4, 0.8);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], 0x00000066);
+
 	// Show pos
 	g_playerTextDraws[playerID][E_PTD_SHOWPOS] = CreatePlayerTextDraw(playerID, 10, 150, " ");
 	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 150, 0);

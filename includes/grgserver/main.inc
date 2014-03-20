@@ -17,6 +17,7 @@
 #include <grgserver\Structures\E_PICKUP.inc>
 #include <grgserver\Structures\E_PTD.inc>
 #include <grgserver\Structures\E_PVAR.inc>
+#include <grgserver\Structures\E_RACE.inc>
 #include <grgserver\Structures\E_TELEPORT.inc>
 #include <grgserver\Structures\E_VEHICLE.inc>
 #include <grgserver\Structures\E_VEHICLEMODEL.inc>
@@ -81,6 +82,7 @@
 #include <grgserver\functions\ReloadObjectModels.inc>
 #include <grgserver\functions\ReloadObjects.inc>
 #include <grgserver\functions\ReloadPickups.inc>
+#include <grgserver\functions\ReloadRaces.inc>
 #include <grgserver\functions\ReloadTeleports.inc>
 #include <grgserver\functions\ReloadVehicleModels.inc>
 #include <grgserver\functions\ReloadVehicleShops.inc>
@@ -91,6 +93,7 @@
 #include <grgserver\functions\SaveGarage.inc>
 #include <grgserver\functions\SaveObjects.inc>
 #include <grgserver\functions\SavePlayer.inc>
+#include <grgserver\functions\SaveRaces.inc>
 #include <grgserver\functions\SaveTeleports.inc>
 #include <grgserver\functions\SaveVehicle.inc>
 #include <grgserver\functions\SendClientMessageEx.inc>
@@ -98,6 +101,7 @@
 #include <grgserver\functions\SetPlayerSpawn.inc>
 #include <grgserver\functions\SetPrivateWorld.inc>
 #include <grgserver\functions\SetVehicleEngineState.inc>
+#include <grgserver\functions\ShowRaceCheckpoint.inc>
 #include <grgserver\functions\SpawnVehicle.inc>
 #include <grgserver\functions\StrNotNull.inc>
 #include <grgserver\functions\TeleportTo.inc>
@@ -111,6 +115,7 @@
 #include <grgserver\functions\XML_GetFloatValue.inc>
 #include <grgserver\functions\XML_GetIntAttribute.inc>
 #include <grgserver\functions\XML_SetFloatAttribute.inc>
+#include <grgserver\functions\XML_SetIntAttribute.inc>
 #include <grgserver\functions\str_replace.inc>
 
 // callbacks
@@ -130,6 +135,7 @@
 #include <grgserver\callbacks\OnPlayerEditDynamicObject.inc>
 #include <grgserver\callbacks\OnPlayerEnterArea.inc>
 #include <grgserver\callbacks\OnPlayerEnterDynamicCP.inc>
+#include <grgserver\callbacks\OnPlayerEnterRaceCheckpoint.inc>
 #include <grgserver\callbacks\OnPlayerExitArea.inc>
 #include <grgserver\callbacks\OnPlayerExitVehicle.inc>
 #include <grgserver\callbacks\OnPlayerGaragesLoaded.inc>
@@ -170,6 +176,7 @@
 
 // commands
 #include <grgserver\commands\addobject.inc>
+#include <grgserver\commands\addracecp.inc>
 #include <grgserver\commands\addtp.inc>
 #include <grgserver\commands\cmds.inc>
 #include <grgserver\commands\editobject.inc>
@@ -182,9 +189,12 @@
 #include <grgserver\commands\makeadmin.inc>
 #include <grgserver\commands\maptp.inc>
 #include <grgserver\commands\mobilevehicleshop.inc>
+#include <grgserver\commands\race.inc>
 #include <grgserver\commands\reload.inc>
 #include <grgserver\commands\savepos.inc>
 #include <grgserver\commands\setobjectfilename.inc>
+#include <grgserver\commands\setracelaps.inc>
+#include <grgserver\commands\setracename.inc>
 #include <grgserver\commands\showarea.inc>
 #include <grgserver\commands\showareas.inc>
 #include <grgserver\commands\showhps.inc>

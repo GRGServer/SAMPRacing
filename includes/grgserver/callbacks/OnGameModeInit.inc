@@ -20,6 +20,7 @@ public OnGameModeInit()
 	ReloadPickups();
 	ReloadVehicles();
 	ReloadGarages();
+	ReloadRaces();
 
 	LoadHiddenPackages();
 	LoadCommands();

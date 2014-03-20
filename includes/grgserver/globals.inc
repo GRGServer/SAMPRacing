@@ -14,6 +14,7 @@ new g_objects[MAX_DYNAMIC_OBJECTS][E_OBJECT];
 new g_pickups[MAX_PICKUPS][E_PICKUP];
 new PlayerText:g_playerTextDraws[MAX_PLAYERS][E_PTD];
 new g_playerVariables[MAX_PLAYERS][E_PVAR];
+new g_races[MAX_RACES][E_RACE];
 new g_sqlQuery[1024];
 new g_teleports[MAX_TELEPORTS][E_TELEPORT];
 new Text:g_textDrawClock;

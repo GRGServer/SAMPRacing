@@ -1241,4 +1241,108 @@
             Vorheriges: %s~n~Nächstes: %s~n~Spawnen: %s~n~Verlassen: %s
         </de>
     </string>
+    <string id="155">
+        <en>
+            Races reloaded
+        </en>
+        <de>
+            Rennen neugeladen
+        </de>
+    </string>
+    <string id="156">
+        <en>
+            Start a race
+        </en>
+        <de>
+            Ein Rennen starten
+        </de>
+    </string>
+    <string id="157">
+        <en>
+            The Race ID must be between 0 and %d!
+        </en>
+        <de>
+            Die Race ID muss zwischen 0 und %d sein!
+        </de>
+    </string>
+    <string id="158">
+        <en>
+            Add a new checkpoint to a race
+        </en>
+        <de>
+            Füge einen neuen Checkpoint einem Rennen hinzu
+        </de>
+    </string>
+    <string id="159">
+        <en>
+            Lap %d / %d
+        </en>
+        <de>
+            Runde %d / %d
+        </de>
+    </string>
+    <string id="160">
+        <en>
+            Limit of %d checkpoints reached!
+        </en>
+        <de>
+            Limit von %d Checkpoints erreicht!
+        </de>
+    </string>
+    <string id="161">
+        <en>
+            Checkpoint %d added to race %d (%s)
+        </en>
+        <de>
+            Checkpoint %d zum Rennen %d (%s) hinzugefügt
+        </de>
+    </string>
+    <string id="162">
+        <en>
+            Set the name of a race
+        </en>
+        <de>
+            Lege den Namen von einem Rennen fest
+        </de>
+    </string>
+    <string id="163">
+        <en>
+            The name of the race has been changed
+        </en>
+        <de>
+            Der Name von dem Rennen wurde geändert
+        </de>
+    </string>
+    <string id="164">
+        <en>
+            Set the number of laps of a race
+        </en>
+        <de>
+            Lege die Anzahl der Runden von einem Rennen fest
+        </de>
+    </string>
+    <string id="165">
+        <en>
+            The number of laps can not be bellow 1!
+        </en>
+        <de>
+            Die Anzahl der Runden kann nicht unter 1 sein!
+        </de>
+    </string>
+    <string id="166">
+        <en>
+            The number of laps of the race has been changed
+        </en>
+        <de>
+            Die Anzahl der Runden von dem Rennen wurde geändert
+        </de>
+    </string>
+    <string id="167">
+        <en>
+            Finish!
+        </en>
+        <de>
+            Ziel!
+        </de>
+    </string>
 </languagestrings>
