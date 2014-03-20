@@ -1,6 +1,8 @@
 // SAMP standard includes
 #include <a_samp>
 
+#define _inc_a_samp
+
 // Custom includes
 #include <filemanager>
 #include <formatnumber>
