@@ -1345,4 +1345,12 @@
             Ziel!
         </de>
     </string>
+    <string id="168">
+        <en>
+            %s~n~~n~Lap %d / %d * Checkpoint %d / %d
+        </en>
+        <de>
+            %s~n~~n~Runde %d / %d * Checkpoint %d / %d
+        </de>
+    </string>
 </languagestrings>
