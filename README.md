@@ -12,14 +12,6 @@ Visit http://grgserver.net for more information about the server.
   * MySQL Server
   * Webserver (To stream the audio files)
 
-To compile the script on Linux, you have to install wine. The Pawn compiler also requires vcrun6 and vcrun2005 which can be installed using winetricks.
-
-```
-aptitude install wine winetricks
-winetricks --unattended vcrun6
-winetricks --unattended vcrun2005
-```
-
 ## Used plugins
 
 The following plugins are used by the server:
@@ -52,17 +44,18 @@ cd gamemodes
 ../tools/pawn/pawncc.exe grgserver.pwn -i../includes -; -(
 ```
 
-On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory (requires wine).
+On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory (Copy libpawnc.so to your system libraries directory first!).
 
 ## Notes for Linux
 
 On Linux you have to manually set the executable bit on executables (*chmod +x*):
 
 ```
-chmod +x announce samp-npc samp-srv tools/*.sh
+chmod +x announce samp-npc samp-srv tools/*.sh tools/pawn/pawncc
 ```
 
 When doing that you should disable *core.fileMode* in your git config to prevent marking the files as changed:
+
 ```
 git config core.fileMode false
 ```
