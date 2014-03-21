@@ -6,7 +6,7 @@ Procedure AddIncludeGroup(name$)
 EndProcedure
 
 Procedure AddInclude(fileName$)
-	WriteString(mainInclude, "#include <grgserver\" + fileName$ + ">" + #LF$)
+	WriteString(mainInclude, "#include <grgserver/" + fileName$ + ">" + #LF$)
 EndProcedure
 
 Procedure AddDir(directoryName$)
@@ -22,7 +22,7 @@ Procedure AddDir(directoryName$)
 		SortList(Includes(), #PB_Sort_Ascending)
 		AddIncludeGroup(directoryName$)
 		ForEach Includes()
-			AddInclude(directoryName$ + "\" + Includes())
+			AddInclude(directoryName$ + "/" + Includes())
 		Next
 		WriteString(mainInclude, #LF$)
 		FinishDirectory(directory)
@@ -44,7 +44,7 @@ If OpenConsole()
 			AddInclude("constants.inc")
 			AddInclude("macros.inc")
 			WriteString(mainInclude, #LF$)
-			AddDir("Structures")
+			AddDir("structures")
 			AddIncludeGroup("Global variables")
 			AddInclude("globals.inc")
 			AddInclude("forwards.inc")
