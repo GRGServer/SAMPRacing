@@ -157,22 +157,22 @@
 #include <grgserver/callbacks/OnVehicleSpawn.inc>
 
 // dialogs
-#include <grgserver/dialogs/D_AddObject.inc>
-#include <grgserver/dialogs/D_ConfirmGarageBuy.inc>
-#include <grgserver/dialogs/D_ConfirmVehicleBuy.inc>
-#include <grgserver/dialogs/D_Language.inc>
-#include <grgserver/dialogs/D_Login.inc>
-#include <grgserver/dialogs/D_Register_Language.inc>
-#include <grgserver/dialogs/D_Register_Password1.inc>
-#include <grgserver/dialogs/D_Register_Password2.inc>
-#include <grgserver/dialogs/D_SpawnVehicle.inc>
+#include <grgserver/dialogs/AddObject.inc>
+#include <grgserver/dialogs/ConfirmGarageBuy.inc>
+#include <grgserver/dialogs/ConfirmVehicleBuy.inc>
+#include <grgserver/dialogs/Language.inc>
+#include <grgserver/dialogs/Login.inc>
+#include <grgserver/dialogs/Register_Language.inc>
+#include <grgserver/dialogs/Register_Password1.inc>
+#include <grgserver/dialogs/Register_Password2.inc>
+#include <grgserver/dialogs/SpawnVehicle.inc>
 
 // timers
-#include <grgserver/timers/Timer_EveryMinute.inc>
-#include <grgserver/timers/Timer_EverySecond.inc>
-#include <grgserver/timers/Timer_ResetDriftingStats.inc>
-#include <grgserver/timers/Timer_SetPlayerPosFindZ.inc>
-#include <grgserver/timers/Timer_UpdateVehicleStats.inc>
+#include <grgserver/timers/EveryMinute.inc>
+#include <grgserver/timers/EverySecond.inc>
+#include <grgserver/timers/ResetDriftingStats.inc>
+#include <grgserver/timers/SetPlayerPosFindZ.inc>
+#include <grgserver/timers/UpdateVehicleStats.inc>
 
 // commands
 #include <grgserver/commands/addobject.inc>
