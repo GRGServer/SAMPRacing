@@ -1,5 +1,7 @@
 language: c
 before_script:
-  - chmod +x tools/compile-gamemode.sh
   - chmod +x tools/pawn/pawncc
-script: tools/compile-gamemode.sh
+script:
+  - cd gamemodes
+  - export LD_LIBRARY_PATH="../tools/pawn:$LD_LIBRARY_PATH"
+  - ../tools/pawn/pawncc grgserver.pwn -i../includes -\; -\(
