@@ -1,4 +1,5 @@
 language: c
 before_script:
   - chmod +x tools/compile-gamemode.sh
+  - chmod +x tools/pawn/pawncc
 script: tools/compile-gamemode.sh
