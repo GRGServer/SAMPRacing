@@ -635,10 +635,10 @@
     </string>
     <string id="79">
         <en>
-            %s~n~~n~Price: $%d
+            %s~n~~n~Price: $%s
         </en>
         <de>
-            %s~n~~n~Preis: $%d
+            %s~n~~n~Preis: $%s
         </de>
     </string>
     <string id="80">

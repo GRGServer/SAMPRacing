@@ -22,6 +22,6 @@ CreateVehicleShopVehicle(playerID)
 
 	SetVehicleVirtualWorld(PVar:playerID[VEHICLESHOP_VEHICLEID], GetPlayerVirtualWorld(playerID));
 
-	FormatNew:string[256](LanguageString(playerID, StringID:79("%s~n~~n~Price: $%d")), g_vehicleModels[modelID - 400][E_VEHICLEMODEL_NAME], g_vehicleModels[modelID - 400][E_VEHICLEMODEL_PRICE]);
+	FormatNew:string[256](LanguageString(playerID, StringID:79("%s~n~~n~Price: $%s")), g_vehicleModels[modelID - 400][E_VEHICLEMODEL_NAME], FormatNumber(g_vehicleModels[modelID - 400][E_VEHICLEMODEL_PRICE], 0, '.', ','));
 	PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_VEHICLE_INFO], string);
 }
