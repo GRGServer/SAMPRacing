@@ -11,6 +11,7 @@ Visit http://grgserver.net for more information about the server.
   * Linux or Windows
   * MySQL Server
   * Webserver (To stream the audio files)
+  * x64 Linux only: libc6-i386 (To run the Pawn compiler)
 
 ## Used plugins
 
