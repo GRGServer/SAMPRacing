@@ -5,12 +5,12 @@ set -e
 TOOLSPATH=$(dirname $0)
 
 export LD_LIBRARY_PATH="../tools/pawn:$LD_LIBRARY_PATH"
-export PATH="../tools/pawn:$PATH"
 
 pushd $TOOLSPATH/../gamemodes > /dev/null
 
-which pawncc
+file ../tools/pawn/pawncc
+ldd ../tools/pawn/pawncc
 
-pawncc grgserver.pwn -i../includes -\; -\(
+../tools/pawn/pawncc grgserver.pwn -i../includes -\; -\(
 
 popd > /dev/null
