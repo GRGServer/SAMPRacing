@@ -4,8 +4,8 @@ set -e
 
 TOOLSPATH=$(dirname $0)
 
-export LD_LIBRARY_PATH="$TOOLSPATH/pawn:$LD_LIBRARY_PATH"
-export PATH="$TOOLSPATH/pawn:$PATH"
+export LD_LIBRARY_PATH="../tools/pawn:$LD_LIBRARY_PATH"
+export PATH="../tools/pawn:$PATH"
 
 pushd $TOOLSPATH/../gamemodes > /dev/null
 
