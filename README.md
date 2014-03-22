@@ -44,7 +44,9 @@ cd gamemodes
 ../tools/pawn/pawncc.exe grgserver.pwn -i../includes -; -(
 ```
 
-On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory (Copy libpawnc.so to your system libraries directory first!).
+On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory.
+
+[![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
 
 ## Notes for Linux
 
