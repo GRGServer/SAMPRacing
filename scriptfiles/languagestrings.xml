@@ -1353,4 +1353,12 @@
             %s~n~~n~Runde %d / %d * Checkpoint %d / %d
         </de>
     </string>
+    <string id="169">
+        <en>
+            You are currently not allowed to execute any command!
+        </en>
+        <de>
+            Es ist dir aktuell nicht erlaubt einen Befehl auszuführen!
+        </de>
+    </string>
 </languagestrings>

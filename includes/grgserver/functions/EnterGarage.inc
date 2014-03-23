@@ -1,5 +1,7 @@
 EnterGarage(playerID, garageNumber)
 {
+	PVar:playerID[ALLOWCMDS] = false;
+
 	new vehicleID = GetPlayerVehicleID(playerID);
 	if (vehicleID && VehicleProperty:vehicleID[SAVEID])
 	{

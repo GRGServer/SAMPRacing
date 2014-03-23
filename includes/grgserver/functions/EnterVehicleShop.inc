@@ -1,5 +1,7 @@
 EnterVehicleShop(playerID, shopID, respawnOldPos)
 {
+	PVar:playerID[ALLOWCMDS] = false;
+
 	PVar:playerID[VEHICLESHOP_ID] = shopID;
 	PVar:playerID[VEHICLESHOP_SPAWNOLDPOS] = respawnOldPos;
 

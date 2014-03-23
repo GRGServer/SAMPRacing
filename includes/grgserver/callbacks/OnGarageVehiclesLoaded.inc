@@ -6,6 +6,8 @@ public OnGarageVehiclesLoaded(playerID)
 		PVar:playerID[GARAGE_NUMBER] = -1;
 
 		GameTextForPlayer(playerID, LanguageString(playerID, StringID:146("There are no vehicles in this garage!")), 3000, 3);
+
+		PVar:playerID[ALLOWCMDS] = true;
 		return;
 	}
 

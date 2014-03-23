@@ -24,4 +24,6 @@ ExitGarage(playerID, withVehicle)
 	}
 
 	TogglePlayerSpectating(playerID, false);
+
+	PVar:playerID[ALLOWCMDS] = true;
 }

@@ -34,4 +34,6 @@ ExitVehicleShop(playerID, buy)
 	}
 
 	TogglePlayerSpectating(playerID, false);
+
+	PVar:playerID[ALLOWCMDS] = true;
 }

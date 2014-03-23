@@ -4,6 +4,8 @@ public OnPlayerDataLoaded(playerID)
 	PVar:playerID[LANGUAGE] = GetLanguageID(GetMySQLField("language"));
 	PVar:playerID[ISADMIN] = strval(GetMySQLField("isAdmin"));
 
+	PVar:playerID[ALLOWCMDS] = true;
+
 	ResetPlayerMoney(playerID);
 	GivePlayerMoney(playerID, strval(GetMySQLField("money")));
 

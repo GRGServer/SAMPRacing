@@ -7,6 +7,11 @@ OnPlayerCommandPerformed(playerID, command[], parameters[], returnCode)
 			PlaySound(playerID, SOUND_COMMAND_ERROR);
 			SendClientMessageEx(playerID, COLOR_ERROR, StringID:11("An error occurred while processing the command!"));
 		}
+		case COMMAND_NO_CMDS_ALLOWED:
+		{
+			PlaySound(playerID, SOUND_COMMAND_ERROR);
+			SendClientMessageEx(playerID, COLOR_ERROR, StringID:169("You are currently not allowed to execute any command!"));
+		}
 		case COMMAND_NOT_FOUND:
 		{
 			PlaySound(playerID, SOUND_COMMAND_ERROR);
