@@ -230,6 +230,14 @@ enum
 }
 
 
+// Screen fader types
+enum
+{
+	SCREENFADER_UNSET,// Must be the first (0)
+	SCREENFADER_TELEPORT
+}
+
+
 // Spawn types
 enum
 {

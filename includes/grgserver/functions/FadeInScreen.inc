@@ -1,7 +1,8 @@
-FadeInScreen(playerID, steps)
+FadeInScreen(playerID, steps, id)
 {
 	PVar:playerID[SCREENFADER_FADEOUT] = false;
 	PVar:playerID[SCREENFADER_STEPS] = steps;
+	PVar:playerID[SCREENFADER_ID] = id;
 
 	if (PVar:playerID[SCREENFADER_TIMER])
 	{

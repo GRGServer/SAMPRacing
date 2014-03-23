@@ -1,6 +1,9 @@
-FadeOutScreen(playerID, steps, red, green, blue)
+FadeOutScreen(playerID, steps, red, green, blue, id)
 {
+	TogglePlayerControllable(playerID, false);
+
 	PVar:playerID[SCREENFADER_FADEOUT] = true;
+	PVar:playerID[SCREENFADER_ID] = id;
 	PVar:playerID[SCREENFADER_STEPS] = steps;
 	PVar:playerID[SCREENFADER_COLOR_RED] = red;
 	PVar:playerID[SCREENFADER_COLOR_GREEN] = green;
