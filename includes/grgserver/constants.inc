@@ -150,6 +150,7 @@
 
 // Timers
 #define TIMER_RESETDRIFTINGSTATS		60000// Time in milliseconds after which the drifting stats should be resetted once a drifting area was left
+#define TIMER_SCREENFADER			10
 
 
 // Area types

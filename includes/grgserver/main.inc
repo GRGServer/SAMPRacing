@@ -47,9 +47,12 @@
 #include <grgserver/functions/ExecuteCommand.inc>
 #include <grgserver/functions/ExitGarage.inc>
 #include <grgserver/functions/ExitVehicleShop.inc>
+#include <grgserver/functions/FadeInScreen.inc>
+#include <grgserver/functions/FadeOutScreen.inc>
 #include <grgserver/functions/FindNextVehicleModel.inc>
 #include <grgserver/functions/GenerateNumberPlateText.inc>
 #include <grgserver/functions/GetClosestPickup.inc>
+#include <grgserver/functions/GetColor.inc>
 #include <grgserver/functions/GetDistanceBetweenPoints.inc>
 #include <grgserver/functions/GetGameTextKeyByID.inc>
 #include <grgserver/functions/GetLanguageByID.inc>
@@ -149,6 +152,7 @@
 #include <grgserver/callbacks/OnPlayerSpawn.inc>
 #include <grgserver/callbacks/OnPlayerText.inc>
 #include <grgserver/callbacks/OnPlayerUpdate.inc>
+#include <grgserver/callbacks/OnScreenFaderEnded.inc>
 #include <grgserver/callbacks/OnVehicleDamageStatusUpdate.inc>
 #include <grgserver/callbacks/OnVehicleInserted.inc>
 #include <grgserver/callbacks/OnVehicleMod.inc>
@@ -171,6 +175,7 @@
 #include <grgserver/timers/EveryMinute.inc>
 #include <grgserver/timers/EverySecond.inc>
 #include <grgserver/timers/ResetDriftingStats.inc>
+#include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
 #include <grgserver/timers/UpdateVehicleStats.inc>
 

@@ -52,6 +52,11 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], 0x00000066);
 
+	// Screen fader
+	g_playerTextDraws[playerID][E_PTD_SCREENFADER] = CreatePlayerTextDraw(playerID, 0, 0, "~r~");
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_SCREENFADER], 0, 50);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_SCREENFADER], true);
+
 	// Show pos
 	g_playerTextDraws[playerID][E_PTD_SHOWPOS] = CreatePlayerTextDraw(playerID, 10, 150, " ");
 	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_SHOWPOS], 150, 0);
