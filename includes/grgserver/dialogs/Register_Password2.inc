@@ -10,9 +10,8 @@ DialogResponse:Register_Password2(playerID, response, listItem, inputText[])
 		if (!strcmp(inputText, PVar:playerID[REGISTERPASSWORD]))
 		{
 			// Add the new user to the database
-			MySQLFormat("INSERT INTO `users` (`username`, `password`, `language`, `money`, `registerDate`, `lastLogin`, `level`) VALUES('%e', '%e', '%e', %d, NOW(), NOW(), 1)", GetPlayerNameEx(playerID), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]), REGISTER_MONEY);
+			MySQLFormat("INSERT INTO `users` (`username`, `password`, `language`, `money`, `registerDate`, `lastLogin`) VALUES('%e', '%e', '%e', %d, NOW(), NOW())", GetPlayerNameEx(playerID), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]), REGISTER_MONEY);
 			mysql_pquery(1, g_sqlQuery, "OnPlayerRegistered", "d", playerID);
-			SetPlayerScore(playerID, 1);
 		}
 		else
 		{
