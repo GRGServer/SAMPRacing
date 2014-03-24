@@ -40,6 +40,7 @@
 #include <grgserver/functions/CreatePlayerTextDraws.inc>
 #include <grgserver/functions/CreateVehicleEx.inc>
 #include <grgserver/functions/CreateVehicleShopVehicle.inc>
+#include <grgserver/functions/DeleteVehicle.inc>
 #include <grgserver/functions/DestroyPickupsOfType.inc>
 #include <grgserver/functions/DestroyVehicleEx.inc>
 #include <grgserver/functions/EnterGarage.inc>
