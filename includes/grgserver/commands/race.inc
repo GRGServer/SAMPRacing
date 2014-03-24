@@ -13,6 +13,12 @@ CMD:race(playerID, params[], StringID:156("Start a race"))
 		return COMMAND_ERROR;
 	}
 
+	if (GetPlayerScore(playerID) < g_races[raceID][E_RACE_LEVEL])
+	{
+		GameTextForPlayer(playerID, LanguageString(playerID, StringID:179("You do not have the required level!")), 3000, 3);
+		return COMMAND_ERROR;
+	}
+
 	PVar:playerID[RACE_LAP] = 1;
 
 	ShowRaceCheckpoint(playerID, raceID, 0);

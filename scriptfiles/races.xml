@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <races>
-    <race name="LS RoundCurse" laps="3" score="1">
+    <race name="LS RoundCurse" laps="3" level="1">
         <checkpoint x="2070.2810" y="-1812.499" z="13.038820" />
         <checkpoint x="1968.1876" y="-1812.015" z="13.037755" />
         <checkpoint x="1961.1191" y="-1922.493" z="13.038666" />
@@ -16,7 +16,7 @@
         <checkpoint x="1999.3336" y="-1752.780" z="13.039111" />
         <checkpoint x="2079.6833" y="-1753.005" z="13.041625" />
     </race>
-    <race name="LS Police Sprint" laps="1" score="1">
+    <race name="LS Police Sprint" laps="1" level="1">
         <checkpoint x="1528.0500" y="-1730.859" z="13.041275" />
         <checkpoint x="1411.2009" y="-1731.697" z="13.046525" />
         <checkpoint x="1320.1468" y="-1731.696" z="13.038727" />
@@ -69,7 +69,7 @@
         <checkpoint x="651.27923" y="-599.1776" z="15.843338" />
         <checkpoint x="1141.9383" y="-947.1837" z="42.315479" />
     </race>
-    <race name="LS BSN RoundCurse" laps="3" score="1">
+    <race name="LS BSN RoundCurse" laps="3" level="1">
         <checkpoint x="1217.6529" y="-940.1641" z="42.307773" />
         <checkpoint x="1123.7413" y="-948.9724" z="42.269706" />
         <checkpoint x="979.60961" y="-965.6911" z="39.191459" />
@@ -95,7 +95,7 @@
         <checkpoint x="1377.1396" y="-950.4213" z="33.846855" />
         <checkpoint x="1280.8806" y="-924.8446" z="41.456916" />
     </race>
-    <race name="LS OutLand Sprint" laps="1" score="2">
+    <race name="LS OutLand Sprint" laps="1" level="2">
         <checkpoint x="1160.3939" y="-918.6560" z="42.465240" />
         <checkpoint x="1157.0019" y="-795.2351" z="55.258277" />
         <checkpoint x="1203.7082" y="-631.3811" z="57.238082" />
@@ -161,7 +161,7 @@
         <checkpoint x="1552.5174" y="-2088.405" z="33.718822" />
         <checkpoint x="1530.1422" y="-1913.264" z="14.426161" />
     </race>
-    <race name="LS to SF Sprint" laps="1" score="2">
+    <race name="LS to SF Sprint" laps="1" level="2">
         <checkpoint x="1055.6733" y="-1828.608" z="13.218578" />
         <checkpoint x="1001.3264" y="-1791.140" z="13.709095" />
         <checkpoint x="748.78179" y="-1763.140" z="12.520312" />
@@ -206,7 +206,7 @@
         <checkpoint x="-2059.072" y="-1183.098" z="31.881740" />
         <checkpoint x="-2170.739" y="-1017.794" z="33.549346" />
     </race>
-    <race name="SFWaterRoundCurse" laps="6" score="2">
+    <race name="SFWaterRoundCurse" laps="6" level="2">
         <checkpoint x="-2111.766" y="-1006.726" z="31.679384" />
         <checkpoint x="-1985.953" y="-1007.117" z="31.688447" />
         <checkpoint x="-1928.107" y="-1005.054" z="31.628053" />
@@ -215,7 +215,7 @@
         <checkpoint x="-2157.372" y="-1000.606" z="31.628604" />
         <checkpoint x="-2137.707" y="-1005.757" z="31.674554" />
     </race>
-    <race name="The SF Round" laps="2" score="3">
+    <race name="The SF Round" laps="2" level="3">
         <checkpoint x="-2251.704" y="-191.9084" z="34.827556" />
         <checkpoint x="-2183.312" y="-185.9526" z="34.834934" />
         <checkpoint x="-2167.281" y="-78.23165" z="34.827743" />
@@ -268,7 +268,7 @@
         <checkpoint x="-2359.843" y="-180.4864" z="34.827865" />
         <checkpoint x="-2293.789" y="-190.9620" z="34.827899" />
     </race>
-    <race name="The Largest Round" laps="5" score="3">
+    <race name="The Largest Round" laps="5" level="3">
         <checkpoint x="-2144.916" y="322.66836" z="34.903324" />
         <checkpoint x="-2251.697" y="321.69229" z="34.903182" />
         <checkpoint x="-2250.354" y="232.39683" z="34.897712" />
@@ -286,7 +286,7 @@
         <checkpoint x="-2005.067" y="312.99734" z="34.748519" />
         <checkpoint x="-2098.770" y="319.88317" z="34.749431" />
     </race>
-    <race name="MiniSprint" laps="1" score="1">
+    <race name="MiniSprint" laps="1" level="1">
         <checkpoint x="-2033.602" y="-348.4920" z="35.050525" />
         <checkpoint x="-1930.932" y="-337.0523" z="45.643032" />
         <checkpoint x="-1860.166" y="-236.5083" z="47.604881" />
@@ -302,7 +302,7 @@
         <checkpoint x="-1897.072" y="739.85675" z="45.029895" />
         <checkpoint x="-1895.904" y="840.73303" z="34.748619" />
     </race>
-    <race name="CurveSprint" laps="1" score="4">
+    <race name="CurveSprint" laps="1" level="4">
         <checkpoint x="-2128.958" y="917.97308" z="79.605628" />
         <checkpoint x="-2105.579" y="912.92895" z="76.625503" />
         <checkpoint x="-2100.998" y="943.14007" z="72.839668" />
@@ -336,7 +336,7 @@
         <checkpoint x="-1937.457" y="348.37680" z="32.341354" />
         <checkpoint x="-1865.937" y="403.49633" z="16.749795" />
     </race>
-    <race name="HaiwaytoHell" laps="3" score="4">
+    <race name="HaiwaytoHell" laps="3" level="4">
         <checkpoint x="1429.2137" y="833.19677" z="6.545627" />
         <checkpoint x="1640.1822" y="833.49432" z="6.471467" />
         <checkpoint x="1883.2612" y="834.46942" z="8.245489" />
@@ -359,7 +359,7 @@
         <checkpoint x="1208.5981" y="1104.6080" z="6.544073" />
         <checkpoint x="1256.3575" y="914.27856" z="6.549891" />
     </race>
-    <race name="All city Sprint" laps="1" score="4">
+    <race name="All city Sprint" laps="1" level="4">
         <checkpoint x="1674.4968" y="312.49215" z="29.848796" />
         <checkpoint x="1757.4610" y="553.60461" z="25.540927" />
         <checkpoint x="1810.2539" y="828.62658" z="10.403800" />
@@ -516,7 +516,7 @@
         <checkpoint x="760.52655" y="-931.5272" z="55.652835" />
         <checkpoint x="685.90081" y="-1040.102" z="50.291610" />
     </race>
-    <race name="The Hell Drive" laps="2" score="4">
+    <race name="The Hell Drive" laps="2" level="4">
         <checkpoint x="1868.2286" y="-84.91280" z="34.509685" />
         <checkpoint x="1903.5506" y="40.267108" z="34.322608" />
         <checkpoint x="2033.0799" y="40.364364" z="28.763017" />
@@ -566,7 +566,7 @@
         <checkpoint x="1861.5438" y="46.765270" z="35.294929" />
         <checkpoint x="2052.7773" y="40.848945" z="26.989028" />
     </race>
-    <race name="Offroad Tripp" laps="3" score="5">
+    <race name="Offroad Tripp" laps="3" level="5">
         <checkpoint x="-547.7047" y="-191.1773" z="78.498542" />
         <checkpoint x="-430.2015" y="-180.6002" z="72.467956" />
         <checkpoint x="-371.1347" y="-160.3815" z="55.905956" />
@@ -597,7 +597,7 @@
         <checkpoint x="-662.2631" y="-165.6450" z="60.092342" />
         <checkpoint x="-569.1281" y="-187.6502" z="78.497657" />
     </race>
-    <race name="A Long Way" laps="3" score="5">
+    <race name="A Long Way" laps="3" level="5">
         <checkpoint x="-562.6884" y="-1116.701" z="22.317686" />
         <checkpoint x="-660.5540" y="-1388.634" z="18.640441" />
         <checkpoint x="-673.8323" y="-1665.010" z="29.820110" />
@@ -657,7 +657,7 @@
         <checkpoint x="-351.1361" y="-782.9639" z="29.407684" />
         <checkpoint x="-476.5993" y="-981.8057" z="24.662754" />
     </race>
-    <race name="Neapel Power" laps="3" score="5">
+    <race name="Neapel Power" laps="3" level="5">
         <checkpoint x="1309.6187" y="-1674.105" z="13.115919" />
         <checkpoint x="1333.2769" y="-1505.913" z="13.125913" />
         <checkpoint x="1358.6768" y="-1291.821" z="12.962479" />

@@ -203,8 +203,8 @@
 #include <grgserver/commands/savepos.inc>
 #include <grgserver/commands/setobjectfilename.inc>
 #include <grgserver/commands/setracelaps.inc>
+#include <grgserver/commands/setracelevel.inc>
 #include <grgserver/commands/setracename.inc>
-#include <grgserver/commands/setracescore.inc>
 #include <grgserver/commands/showarea.inc>
 #include <grgserver/commands/showareas.inc>
 #include <grgserver/commands/showhps.inc>

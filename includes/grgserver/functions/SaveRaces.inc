@@ -26,12 +26,12 @@ SaveRaces()
 
 		XML_SetIntAttribute(raceNode, "laps", g_races[raceID][E_RACE_LAPS]);
 
-		if (g_races[raceID][E_RACE_SCORE] < 1)
+		if (g_races[raceID][E_RACE_LEVEL] < 1)
 		{
-			g_races[raceID][E_RACE_SCORE] = 1;
+			g_races[raceID][E_RACE_LEVEL] = 1;
 		}
 
-		XML_SetIntAttribute(raceNode, "score", g_races[raceID][E_RACE_SCORE]);
+		XML_SetIntAttribute(raceNode, "level", g_races[raceID][E_RACE_LEVEL]);
 
 		Count(checkpointID, MAX_RACECHECKPOINTS)
 		{

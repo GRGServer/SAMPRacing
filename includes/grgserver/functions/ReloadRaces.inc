@@ -25,7 +25,7 @@ ReloadRaces()
 		XML_GetAttribute(raceNode, "name", g_races[raceID][E_RACE_NAME], STRINGLENGTH_RACENAME);
 
 		g_races[raceID][E_RACE_LAPS] = XML_GetIntAttribute(raceNode, "laps");
-		g_races[raceID][E_RACE_SCORE] = XML_GetIntAttribute(raceNode, "score");
+		g_races[raceID][E_RACE_LEVEL] = XML_GetIntAttribute(raceNode, "level");
 
 		new checkpointID;
 

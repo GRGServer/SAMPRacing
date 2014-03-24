@@ -1427,34 +1427,34 @@
     </string>
     <string id="178">
         <en>
-            Set the number of Score of a race
+            Set the required level of a race
         </en>
         <de>
-            Setzt die nummer von Score für das Race
+            Lege das erforderliche Level von einem Rennen fest
         </de>
     </string>
     <string id="179">
         <en>
-            You have not the Score for that Race!
+            You do not have the required level!
         </en>
         <de>
-            Du hast kein Score für das Race angegeben!
+            Du hast nicht das erforderliche Level!
         </de>
     </string>
     <string id="180">
         <en>
-            The number of Score can not be bellow 1!
+            The level can not be bellow 1!
         </en>
         <de>
-            Die nummer von Score darf nicht unter 1 sein!
+            Das Level kann nicht unter 1 sein!
         </de>
     </string>
     <string id="181">
         <en>
-            The number of score of the race has been changed
+            The level of the race has been changed
         </en>
         <de>
-            Die nummer von Score von dem rennen wurde geändert
+            Das Level von dem Rennen wurde geändert
         </de>
     </string>
 </languagestrings>
