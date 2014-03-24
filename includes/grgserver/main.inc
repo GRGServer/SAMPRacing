@@ -197,6 +197,7 @@
 #include <grgserver/commands/mobilevehicleshop.inc>
 #include <grgserver/commands/race.inc>
 #include <grgserver/commands/reload.inc>
+#include <grgserver/commands/removevehicle.inc>
 #include <grgserver/commands/savepos.inc>
 #include <grgserver/commands/setobjectfilename.inc>
 #include <grgserver/commands/setracelaps.inc>
