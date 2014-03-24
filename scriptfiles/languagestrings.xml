@@ -1457,4 +1457,20 @@
             Das Level von dem Rennen wurde geändert
         </de>
     </string>
+    <string id="182">
+        <en>
+            You got disqualified from the race!
+        </en>
+        <de>
+            Du wurdest vom Rennen disqualifiziert!
+        </de>
+    </string>
+    <string id="183">
+        <en>
+            Get back to your vehicle!
+        </en>
+        <de>
+            Gehe zurück zu deinem Fahrzeug!
+        </de>
+    </string>
 </languagestrings>

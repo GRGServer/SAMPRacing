@@ -72,6 +72,8 @@ public OnPlayerSpawn(playerid)
 
 			SetCameraBehindPlayer(playerid);
 
+			PVar:playerid[RACE_STARTED] = true;
+
 			ShowRaceCheckpoint(playerid, PVar:playerid[RACE_ID], 1);// Show the first checkpoint
 
 			FadeInScreen(playerid, 5, SCREENFADER_RACE_START);

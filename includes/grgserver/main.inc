@@ -43,6 +43,7 @@
 #include <grgserver/functions/DeleteVehicle.inc>
 #include <grgserver/functions/DestroyPickupsOfType.inc>
 #include <grgserver/functions/DestroyVehicleEx.inc>
+#include <grgserver/functions/DisqualifyRacePlayer.inc>
 #include <grgserver/functions/EnterGarage.inc>
 #include <grgserver/functions/EnterVehicleShop.inc>
 #include <grgserver/functions/ExecuteCommand.inc>
@@ -142,6 +143,7 @@
 #include <grgserver/callbacks/OnPlayerEnterArea.inc>
 #include <grgserver/callbacks/OnPlayerEnterDynamicCP.inc>
 #include <grgserver/callbacks/OnPlayerEnterRaceCheckpoint.inc>
+#include <grgserver/callbacks/OnPlayerEnterVehicle.inc>
 #include <grgserver/callbacks/OnPlayerExitArea.inc>
 #include <grgserver/callbacks/OnPlayerExitVehicle.inc>
 #include <grgserver/callbacks/OnPlayerGaragesLoaded.inc>
@@ -180,6 +182,7 @@
 #include <grgserver/timers/ResetDriftingStats.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
+#include <grgserver/timers/Timer_DisqualifyRacePlayer.inc>
 #include <grgserver/timers/UpdateRaceLobby.inc>
 #include <grgserver/timers/UpdateVehicleStats.inc>
 
