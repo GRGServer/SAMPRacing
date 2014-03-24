@@ -114,6 +114,7 @@
 #include <grgserver/functions/UpdateObjectEditorInfo.inc>
 #include <grgserver/functions/UpdateObjectsForAllPlayers.inc>
 #include <grgserver/functions/UpdatePlayerTextDrawStrings.inc>
+#include <grgserver/functions/UpdateRaceLobby.inc>
 #include <grgserver/functions/UpdateVehicleStateForPlayer.inc>
 #include <grgserver/functions/XML_GetFloatAttribute.inc>
 #include <grgserver/functions/XML_GetFloatValue.inc>
@@ -179,6 +180,7 @@
 #include <grgserver/timers/ResetDriftingStats.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
+#include <grgserver/timers/UpdateRaceLobby.inc>
 #include <grgserver/timers/UpdateVehicleStats.inc>
 
 // commands

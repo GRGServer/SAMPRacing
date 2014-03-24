@@ -23,6 +23,9 @@ public OnScreenFaderEnded(playerID)
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START]);
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE]);
 
+				UpdateRaceLobby(playerID);
+				PVar:playerID[RACE_LOBBYUPDATETIMER] = SetTimerEx("Timer_UpdateRaceLobby", TIMER_UPDATERACELOBBY, true, "d", playerID);
+
 				TogglePlayerControllable(playerID, false);
 
 				FadeInScreen(playerID, 5, SCREENFADER_RACE_ENTERLOBBY);
@@ -32,6 +35,8 @@ public OnScreenFaderEnded(playerID)
 				new raceID = PVar:playerID[RACE_ID];
 				SetPlayerSpawn(playerID, SPAWNTYPE_LEAVERACE, g_races[raceID][E_RACE_CHECKPOINT_POSX][0], g_races[raceID][E_RACE_CHECKPOINT_POSY][0], g_races[raceID][E_RACE_CHECKPOINT_POSZ][0], 0, 0);
 
+				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
+
 				TogglePlayerSpectating(playerID, false);
 
 				PVar:playerID[ALLOWCMDS] = true;
@@ -40,6 +45,8 @@ public OnScreenFaderEnded(playerID)
 			{
 				new raceID = PVar:playerID[RACE_ID];
 				SetPlayerSpawn(playerID, SPAWNTYPE_STARTRACE, g_races[raceID][E_RACE_CHECKPOINT_POSX][0], g_races[raceID][E_RACE_CHECKPOINT_POSY][0], g_races[raceID][E_RACE_CHECKPOINT_POSZ][0], 0, 0);
+
+				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
 
 				TogglePlayerSpectating(playerID, false);
 

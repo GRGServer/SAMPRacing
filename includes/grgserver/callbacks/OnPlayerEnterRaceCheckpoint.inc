@@ -25,6 +25,8 @@ public OnPlayerEnterRaceCheckpoint(playerid)
 		{
 			GameTextForPlayer(playerid, LanguageString(playerid, StringID:167("Finish!")), 3000, 3);
 
+			PVar:playerid[RACE_ID] = -1;
+
 			PlayerTextDrawHide(playerid, g_playerTextDraws[playerid][E_PTD_RACE_BOTTOM]);
 			return true;
 		}

@@ -60,10 +60,9 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND], 0x00000066);
 
 	// Race lobby title
-	g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE] = CreatePlayerTextDraw(playerID, 320, 130, "Test Race Title");
-	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 2);
-	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 1);
-	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 0.4, 0.8);
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE] = CreatePlayerTextDraw(playerID, 150, 100, " ");
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 0);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 1.25, 3);
 
 	// Race lobby header1 (Player list)
 	g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER1] = CreatePlayerTextDraw(playerID, 160, 145, " ");
@@ -82,6 +81,24 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3], 3);
 	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3], 1);
 	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3], 0.4, 0.8);
+
+	// Race lobby player list
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_PLAYERLIST] = CreatePlayerTextDraw(playerID, 160, 165, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_PLAYERLIST], 1);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_PLAYERLIST], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_PLAYERLIST], 0.4, 0.8);
+
+	// Race lobby vehicle list
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_VEHICLELIST] = CreatePlayerTextDraw(playerID, 320, 165, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_VEHICLELIST], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_VEHICLELIST], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_VEHICLELIST], 0.4, 0.8);
+
+	// Race lobby level list
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_LEVELLIST] = CreatePlayerTextDraw(playerID, 480, 165, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_LEVELLIST], 3);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_LEVELLIST], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_LEVELLIST], 0.4, 0.8);
 
 	// Race lobby start button
 	g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START] = CreatePlayerTextDraw(playerID, 200, 360, " ");
