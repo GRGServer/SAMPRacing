@@ -39,6 +39,7 @@ CREATE TABLE `users` (
   `angle` float DEFAULT NULL,
   `interior` int(11) DEFAULT NULL,
   `money` int(11) NOT NULL DEFAULT '0',
+  `level` int(11) NOT NULL,
   `registerDate` datetime NOT NULL,
   `lastLogin` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
