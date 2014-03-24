@@ -1,8 +1,8 @@
 ShowDialog:Register_Language(playerID)
 {
 	new list[1024];
-	AddLine(list, "en\tEnglish");
-	AddLine(list, "de\tDeutsch");
+	ConcatString(list, "en\tEnglish", "\n");
+	ConcatString(list, "de\tDeutsch", "\n");
 	CreateDialog(playerID, "Register_Language", DIALOG_STYLE_LIST, "Select language / Sprache wählen", list, "OK", "Quit / Beenden");
 }
 

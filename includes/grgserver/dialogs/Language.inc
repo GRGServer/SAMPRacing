@@ -1,8 +1,8 @@
 ShowDialog:Language(playerID)
 {
 	new list[1024];
-	AddLine(list, "en\tEnglish");
-	AddLine(list, "de\tDeutsch");
+	ConcatString(list, "en\tEnglish", "\n");
+	ConcatString(list, "de\tDeutsch", "\n");
 	CreateDialog(playerID, "Language", DIALOG_STYLE_LIST, LanguageString(playerID, StringID:151("Select language")), list, LanguageString(playerID, StringID:40("OK")), LanguageString(playerID, StringID:4("Cancel")));
 }
 

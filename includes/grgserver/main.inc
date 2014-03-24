@@ -28,13 +28,13 @@
 #include <grgserver/forwards.inc>
 
 // functions
-#include <grgserver/functions/AddLine.inc>
 #include <grgserver/functions/AddObject.inc>
 #include <grgserver/functions/AddPickup.inc>
 #include <grgserver/functions/CheckHiddenPackages.inc>
 #include <grgserver/functions/CheckNumberPlate.inc>
 #include <grgserver/functions/CheckpointEvent.inc>
 #include <grgserver/functions/CmdUsageMsg.inc>
+#include <grgserver/functions/ConcatString.inc>
 #include <grgserver/functions/CreateDialog.inc>
 #include <grgserver/functions/CreateGarageVehicle.inc>
 #include <grgserver/functions/CreatePlayerTextDraws.inc>
