@@ -18,6 +18,6 @@ PCMD:removevehicle[ISADMIN](playerID, params[], StringID:174("Remove the current
 	mysql_pquery(1, g_sqlQuery);
 	VehicleProperty:vehicleID[SAVEID] = 0;
 	DestroyVehicle(vehicleID);
-	SendClientMessageEx(playerID, COLOR_INFO, StringID:17("The vehicle has been removed"));
+	SendClientMessageEx(playerID, COLOR_INFO, StringID:176("The vehicle has been removed"));
 	return COMMAND_OK;
 }

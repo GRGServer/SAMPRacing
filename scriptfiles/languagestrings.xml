@@ -1393,4 +1393,36 @@
             Starten
         </de>
     </string>
+    <string id="174">
+        <en>
+            Remove the current vehicle from the database
+        </en>
+        <de>
+            Entfernt das Vorhandene auto von der Database
+        </de>
+    </string>
+    <string id="175">
+        <en>
+            This vehicle is not a saved vehicle!
+        </en>
+        <de>
+            Dieses Vehicle ist kein Gespeichertes
+        </de>
+    </string>
+    <string id="176">
+        <en>
+            The vehicle has been removed
+        </en>
+        <de>
+            Das Fahrzeug wurde gelöscht
+        </de>
+    </string>
+    <string id="177">
+        <en>
+            Clear the chat window
+        </en>
+        <de>
+            Löscht den Chat Verlauf
+        </de>
+    </string>
 </languagestrings>

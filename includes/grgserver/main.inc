@@ -184,6 +184,7 @@
 #include <grgserver/commands/addobject.inc>
 #include <grgserver/commands/addracecp.inc>
 #include <grgserver/commands/addtp.inc>
+#include <grgserver/commands/clear.inc>
 #include <grgserver/commands/cmds.inc>
 #include <grgserver/commands/editobject.inc>
 #include <grgserver/commands/engine.inc>
