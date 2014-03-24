@@ -13,6 +13,13 @@ public OnPlayerEnterRaceCheckpoint(playerid)
 
 	if (nextCheckpointID >= MAX_RACECHECKPOINTS || (!g_races[raceID][E_RACE_CHECKPOINT_POSX][nextCheckpointID] && !g_races[raceID][E_RACE_CHECKPOINT_POSY][nextCheckpointID] && !g_races[raceID][E_RACE_CHECKPOINT_POSZ][nextCheckpointID]))
 	{
+		if (PVar:playerid[RACE_SCORE] < g_races[raceID][E_RACE_SCORE])
+		{
+			GameTextForPlayer(playerid, LanguageString(playerid, StringID:179("You have not the Score for that Race!")), 3000, 3);
+
+			PlayerTextDrawHide(playerid, g_playerTextDraws[playerid][E_PTD_RACE_BOTTOM]);
+			return true;
+		}
 		if (PVar:playerid[RACE_LAP] < g_races[raceID][E_RACE_LAPS])
 		{
 			PVar:playerid[RACE_LAP]++;

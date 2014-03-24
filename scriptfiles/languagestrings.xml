@@ -1425,4 +1425,36 @@
             Löscht den Chat Verlauf
         </de>
     </string>
+    <string id="178">
+        <en>
+            Set the number of Score of a race
+        </en>
+        <de>
+            Setzt die nummer von Score für das Race
+        </de>
+    </string>
+    <string id="179">
+        <en>
+            You have not the Score for that Race!
+        </en>
+        <de>
+            Du hast kein Score für das Race angegeben!
+        </de>
+    </string>
+    <string id="180">
+        <en>
+            The number of Score can not be bellow 1!
+        </en>
+        <de>
+            Die nummer von Score darf nicht unter 1 sein!
+        </de>
+    </string>
+    <string id="181">
+        <en>
+            The number of score of the race has been changed
+        </en>
+        <de>
+            Die nummer von Score von dem rennen wurde geändert
+        </de>
+    </string>
 </languagestrings>

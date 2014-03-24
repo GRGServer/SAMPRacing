@@ -26,6 +26,13 @@ SaveRaces()
 
 		XML_SetIntAttribute(raceNode, "laps", g_races[raceID][E_RACE_LAPS]);
 
+		if (g_races[raceID][E_RACE_SCORE] < 1)
+		{
+			g_races[raceID][E_RACE_SCORE] = 1;
+		}
+
+		XML_SetIntAttribute(raceNode, "score", g_races[raceID][E_RACE_SCORE]);
+
 		Count(checkpointID, MAX_RACECHECKPOINTS)
 		{
 			if (!g_races[raceID][E_RACE_CHECKPOINT_POSX][checkpointID] && !g_races[raceID][E_RACE_CHECKPOINT_POSY][checkpointID] && !g_races[raceID][E_RACE_CHECKPOINT_POSZ][checkpointID])
