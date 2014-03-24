@@ -54,6 +54,26 @@ public OnPlayerSpawn(playerid)
 			PVar:playerid[GARAGE_NUMBER] = -1;
 			PVar:playerid[GARAGE_VEHICLE_ID] = INVALID_VEHICLE_ID;
 		}
+		case SPAWNTYPE_LEAVERACE:
+		{
+			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
+
+			SetPlayerInterior(playerid, 0);
+
+			SetCameraBehindPlayer(playerid);
+
+			FadeInScreen(playerid, 5, SCREENFADER_RACE_LEAVELOBBY);
+		}
+		case SPAWNTYPE_STARTRACE:
+		{
+			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
+
+			SetPlayerInterior(playerid, 0);
+
+			SetCameraBehindPlayer(playerid);
+
+			FadeInScreen(playerid, 5, SCREENFADER_RACE_START);
+		}
 		default:
 		{
 			new Float:posX = PVar:playerid[SPAWN_POSX];

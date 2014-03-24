@@ -52,8 +52,59 @@ CreatePlayerTextDraws(playerID)
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], true);
 	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], 0x00000066);
 
+	// Race lobby background
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND] = CreatePlayerTextDraw(playerID, 150, 120, "~n~");
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND], 0, 25);
+	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND], 490, 0);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND], 0x00000066);
+
+	// Race lobby title
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE] = CreatePlayerTextDraw(playerID, 320, 130, "Test Race Title");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], 0.4, 0.8);
+
+	// Race lobby header1 (Player list)
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER1] = CreatePlayerTextDraw(playerID, 160, 145, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER1], 1);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER1], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER1], 0.4, 0.8);
+
+	// Race lobby header2 (Vehicle list)
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER2] = CreatePlayerTextDraw(playerID, 320, 145, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER2], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER2], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER2], 0.4, 0.8);
+
+	// Race lobby header3 (Level list)
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3] = CreatePlayerTextDraw(playerID, 480, 145, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3], 3);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER3], 0.4, 0.8);
+
+	// Race lobby start button
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START] = CreatePlayerTextDraw(playerID, 200, 360, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], 0.4, 0.8);
+	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], 10, 100);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], 0x00000066);
+	PlayerTextDrawSetSelectable(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START], true);
+
+	// Race lobby leave button
+	g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE] = CreatePlayerTextDraw(playerID, 440, 360, " ");
+	PlayerTextDrawAlignment(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], 2);
+	PlayerTextDrawFont(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], 1);
+	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], 0.4, 0.8);
+	PlayerTextDrawTextSize(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], 10, 100);
+	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], true);
+	PlayerTextDrawBoxColor(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], 0x00000066);
+	PlayerTextDrawSetSelectable(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE], true);
+
 	// Screen fader
-	g_playerTextDraws[playerID][E_PTD_SCREENFADER] = CreatePlayerTextDraw(playerID, 0, 0, "~r~");
+	g_playerTextDraws[playerID][E_PTD_SCREENFADER] = CreatePlayerTextDraw(playerID, 0, 0, "~n~");
 	PlayerTextDrawLetterSize(playerID, g_playerTextDraws[playerID][E_PTD_SCREENFADER], 0, 50);
 	PlayerTextDrawUseBox(playerID, g_playerTextDraws[playerID][E_PTD_SCREENFADER], true);
 

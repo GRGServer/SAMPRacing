@@ -32,6 +32,8 @@ TeleportTo(playerID, teleportID, whileFading = false)
 	{
 		PVar:playerID[TELEPORTID] = teleportID;
 
+		TogglePlayerControllable(playerID, false);
+
 		FadeOutScreen(playerID, 5, 0, 0, 0, SCREENFADER_TELEPORT);
 	}
 }

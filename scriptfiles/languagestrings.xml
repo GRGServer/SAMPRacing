@@ -1361,4 +1361,36 @@
             Es ist dir aktuell nicht erlaubt einen Befehl auszuführen!
         </de>
     </string>
+    <string id="170">
+        <en>
+            Player
+        </en>
+        <de>
+            Spieler
+        </de>
+    </string>
+    <string id="171">
+        <en>
+            Vehicle
+        </en>
+        <de>
+            Fahrzeug
+        </de>
+    </string>
+    <string id="172">
+        <en>
+            Level
+        </en>
+        <de>
+            Level
+        </de>
+    </string>
+    <string id="173">
+        <en>
+            Start
+        </en>
+        <de>
+            Starten
+        </de>
+    </string>
 </languagestrings>

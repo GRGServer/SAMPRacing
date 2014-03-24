@@ -46,7 +46,15 @@ ShowRaceCheckpoint(playerID, raceID, checkpointID)
 
 	SetPlayerRaceCheckpoint(playerID, type, g_races[raceID][E_RACE_CHECKPOINT_POSX][checkpointID], g_races[raceID][E_RACE_CHECKPOINT_POSY][checkpointID], g_races[raceID][E_RACE_CHECKPOINT_POSZ][checkpointID], nextX, nextY, nextZ, RACE_CHECKPOINT_SIZE);
 
-	FormatNew:string[100](LanguageString(playerID, StringID:168("%s~n~~n~Lap %d / %d * Checkpoint %d / %d")), g_races[raceID][E_RACE_NAME], PVar:playerID[RACE_LAP], g_races[raceID][E_RACE_LAPS], checkpointID + 1, checkpoints);
-	PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], string);
-	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM]);
+	// Show the bottom line if this is not the first (start) checkpoint
+	if (PVar:playerID[RACE_LAP] > 1 || checkpointID || GetPlayerVehicleSeat(playerID) > 0)
+	{
+		FormatNew:string[100](LanguageString(playerID, StringID:168("%s~n~~n~Lap %d / %d * Checkpoint %d / %d")), g_races[raceID][E_RACE_NAME], PVar:playerID[RACE_LAP], g_races[raceID][E_RACE_LAPS], checkpointID + 1, checkpoints);
+		PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM], string);
+		PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM]);
+	}
+	else
+	{
+		PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACE_BOTTOM]);
+	}
 }

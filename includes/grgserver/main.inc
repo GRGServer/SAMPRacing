@@ -129,6 +129,7 @@
 #include <grgserver/callbacks/OnGarageVehicleComponentsLoaded.inc>
 #include <grgserver/callbacks/OnGarageVehiclesLoaded.inc>
 #include <grgserver/callbacks/OnPlayerClickMap.inc>
+#include <grgserver/callbacks/OnPlayerClickPlayerTextDraw.inc>
 #include <grgserver/callbacks/OnPlayerCommandPerformed.inc>
 #include <grgserver/callbacks/OnPlayerCommandText.inc>
 #include <grgserver/callbacks/OnPlayerConnect.inc>
