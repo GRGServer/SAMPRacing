@@ -61,8 +61,6 @@ public OnScreenFaderEnded(playerID)
 			}
 			case SCREENFADER_RACE_START:
 			{
-				ShowRaceCheckpoint(playerID, PVar:playerID[RACE_ID], 1);// Show the first checkpoint
-
 				// TODO: Start the race count down
 			}
 			case SCREENFADER_TELEPORT:
