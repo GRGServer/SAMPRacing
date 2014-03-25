@@ -11,6 +11,7 @@
 #define COLOR_INFO				0xFF8C55FF
 #define COLOR_JOINLEAVE				0x74E800FF
 #define COLOR_ME				0x00FF40FF
+#define COLOR_NPCCOMMAND			0x000000A0// This color should never be used somewhere else!
 #define COLOR_USAGE				0x008000FF
 #define COLOR_WARNING				0xFF6000FF
 #define COLOR_SYSTEM				0xC0C0C0FF
@@ -67,15 +68,30 @@
 #define MAX_GARAGES				150
 #define MAX_HIDDENPACKAGES			100
 #define MAX_INTERIORS				150
-#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(184)
+#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(193)
 #define MAX_OBJECTMODELS			11000
 #define MAX_RACECHECKPOINTS			1000
 #define MAX_RACES				100
 #define MAX_RANDOMNUMBERPLATE_TRIES		100
+#define MAX_RECNPC_PLAYNPCS			10
 #define MAX_SPEEDOMETER_STEPS			13
 #define MAX_TELEPORTS				50
 #define MAX_VEHICLECOMPONENT_SLOTS		14
 #define MAX_VEHICLESHOPS			10
+
+
+// NPC misc
+#define NPC_SCRIPT_NAME				"npcplayer"
+
+
+// NPC commands
+#define NPCCMD_LOG				"log"
+#define NPCCMD_PAUSE				"pause"
+#define NPCCMD_RECORDINGENDED			"recordingended"
+#define NPCCMD_RESUME				"resume"
+#define NPCCMD_SETREPEAT			"setrepeat"
+#define NPCCMD_START				"start"
+#define NPCCMD_STOP				"stop"
 
 
 // Races
@@ -140,6 +156,7 @@
 #define STRINGLENGTH_HASHSTRING			100// Maximum length of string to hash
 #define STRINGLENGTH_INTERIORNAME		50
 #define STRINGLENGTH_LANGUAGESTRING		256
+#define STRINGLENGTH_NPCRECORDINGNAME		100
 #define STRINGLENGTH_NUMBERPLATE		32
 #define STRINGLENGTH_OBJECTFILENAME		32
 #define STRINGLENGTH_OBJECTMODELNAME		32

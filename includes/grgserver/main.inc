@@ -102,6 +102,7 @@
 #include <grgserver/functions/SaveTeleports.inc>
 #include <grgserver/functions/SaveVehicle.inc>
 #include <grgserver/functions/SendClientMessageEx.inc>
+#include <grgserver/functions/SendNPCCommand.inc>
 #include <grgserver/functions/SetPlayerCameraPosEx.inc>
 #include <grgserver/functions/SetPlayerSpawn.inc>
 #include <grgserver/functions/SetPrivateWorld.inc>
@@ -122,6 +123,7 @@
 #include <grgserver/functions/XML_GetIntAttribute.inc>
 #include <grgserver/functions/XML_SetFloatAttribute.inc>
 #include <grgserver/functions/XML_SetIntAttribute.inc>
+#include <grgserver/functions/explode.inc>
 #include <grgserver/functions/str_replace.inc>
 
 // callbacks
@@ -192,6 +194,7 @@
 #include <grgserver/commands/addtp.inc>
 #include <grgserver/commands/clear.inc>
 #include <grgserver/commands/cmds.inc>
+#include <grgserver/commands/connectnpc.inc>
 #include <grgserver/commands/editobject.inc>
 #include <grgserver/commands/engine.inc>
 #include <grgserver/commands/givemoney.inc>
@@ -202,10 +205,14 @@
 #include <grgserver/commands/makeadmin.inc>
 #include <grgserver/commands/maptp.inc>
 #include <grgserver/commands/mobilevehicleshop.inc>
+#include <grgserver/commands/npccmd.inc>
+#include <grgserver/commands/putnpcinvehicle.inc>
 #include <grgserver/commands/race.inc>
+#include <grgserver/commands/recnpc.inc>
 #include <grgserver/commands/reload.inc>
 #include <grgserver/commands/removevehicle.inc>
 #include <grgserver/commands/savepos.inc>
+#include <grgserver/commands/setnpcrecording.inc>
 #include <grgserver/commands/setobjectfilename.inc>
 #include <grgserver/commands/setracelaps.inc>
 #include <grgserver/commands/setracelevel.inc>

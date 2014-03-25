@@ -11,3 +11,9 @@ pushd $TOOLSPATH/../gamemodes > /dev/null
 ../tools/pawn/pawncc grgserver.pwn -i../includes -\; -\(
 
 popd > /dev/null
+
+pushd $TOOLSPATH/../npcmodes > /dev/null
+
+../tools/pawn/pawncc npcplayer.pwn -i../includes -\; -\(
+
+popd > /dev/null
