@@ -1,0 +1,15 @@
+<npcs>
+	<!-- Test -->
+	<npc name="LSTest1" skin="253">
+		<recording name="LSTest1" startDelay="0" autoStart="1" autoRepeat="1"/>
+		<vehicle model="445" color1="-1" color2="-1"/>
+	</npc>
+	<npc name="LSTest2" skin="253">
+		<recording name="LSTest2" startDelay="0" autoStart="1" autoRepeat="1"/>
+		<vehicle model="401" color1="-1" color2="-1"/>
+	</npc>
+	<npc name="LSTest3" skin="253">
+		<recording name="LSTest3" startDelay="0" autoStart="1" autoRepeat="1"/>
+		<vehicle model="496" color1="-1" color2="-1"/>
+	</npc>
+</npcs>

@@ -21,3 +21,8 @@ new Text:g_textDrawClock;
 new g_vehicles[MAX_VEHICLES][E_VEHICLE];
 new g_vehicleModels[212][E_VEHICLEMODEL];
 new g_vehicleShops[MAX_VEHICLESHOPS][E_VEHICLESHOP];
+new npcs[MAX_NPCS][E_NPC];
+new g_vehicleColors[212][MAX_VEHICLE_COLORS][2];
+new g_car_LSTest1;
+new g_car_LSTest2;
+new g_car_LSTest3;

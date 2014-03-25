@@ -1,5 +1,29 @@
 public OnPlayerSpawn(playerid)
 {
+
+	if(IsPlayerNPC(playerid))
+	{
+		new botname[MAX_PLAYER_NAME];
+		new botname1[MAX_PLAYER_NAME];
+		new botname2[MAX_PLAYER_NAME];
+		GetPlayerName(playerid, botname, sizeof(botname));
+		GetPlayerName(playerid, botname1, sizeof(botname1));
+		GetPlayerName(playerid, botname2, sizeof(botname2));
+		if(!strcmp(botname, "LSTest1", true))
+		{
+			 PutPlayerInVehicle(playerid, g_car_LSTest1, 0);
+		}
+		if(!strcmp(botname1, "LSTest2", true))
+		{
+			 PutPlayerInVehicle(playerid, g_car_LSTest2, 0);
+		}
+		if(!strcmp(botname2, "LSTest3", true))
+		{
+			PutPlayerInVehicle(playerid, g_car_LSTest3, 0);
+		}
+	}
+    
+	
 	switch (PVar:playerid[SPAWN_TYPE])
 	{
 		case SPAWNTYPE_BUYVEHICLESHOP:// Spawned after buying a vehicle from vehicle shop

@@ -2,11 +2,7 @@ public OnPlayerConnect(playerid)
 {
 	// Reset all player variables to their default values
 	ResetPlayerVariables(playerid);
-
-	if (IsPlayerNPC(playerid))
-	{
-		return true;
-	}
+	ResetPlayerVariables(playerid);
 
 	printf("%s connected from %s", GetPlayerNameEx(playerid), GetPlayerCountryName(playerid));
 
@@ -15,10 +11,14 @@ public OnPlayerConnect(playerid)
 	// Send join message to all players except the joined player
 	PlayerLoop(playerID)
 	{
-		if (!IsPlayerNPC(playerID) && playerID != playerid)
+		if (IsPlayerNPC(playerID) && playerID != playerid)
 		{
 			SendClientMessageEx(playerID, COLOR_JOINLEAVE, StringID:23("%u has joined the server"), playerid);
 		}
+	}
+	if(IsPlayerNPC(playerid))
+	{
+		IsLoggedIn(playerid);
 	}
 
 	// Remove standard objects

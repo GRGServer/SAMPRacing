@@ -12,6 +12,7 @@
 #include <grgserver/structures/E_HIDDENPACKAGE.inc>
 #include <grgserver/structures/E_INTERIOR.inc>
 #include <grgserver/structures/E_LANGUAGESTRING.inc>
+#include <grgserver/structures/E_NPC.inc>
 #include <grgserver/structures/E_OBJECT.inc>
 #include <grgserver/structures/E_OBJECTMODEL.inc>
 #include <grgserver/structures/E_PICKUP.inc>
@@ -64,6 +65,7 @@
 #include <grgserver/functions/GetPlayerIDByUserID.inc>
 #include <grgserver/functions/GetPlayerNameEx.inc>
 #include <grgserver/functions/GetPlayerPickup.inc>
+#include <grgserver/functions/GetVehicleColor.inc>
 #include <grgserver/functions/GetVehicleEngineState.inc>
 #include <grgserver/functions/GiveHiddenPackagesRewards.inc>
 #include <grgserver/functions/Hash.inc>
@@ -72,6 +74,7 @@
 #include <grgserver/functions/LanguageString.inc>
 #include <grgserver/functions/LoadCommands.inc>
 #include <grgserver/functions/LoadHiddenPackages.inc>
+#include <grgserver/functions/LoadNPCs.inc>
 #include <grgserver/functions/LoadObjectsFromFile.inc>
 #include <grgserver/functions/LoadPlayer.inc>
 #include <grgserver/functions/LoadVehicle.inc>
@@ -184,6 +187,7 @@
 #include <grgserver/timers/ResetDriftingStats.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
+#include <grgserver/timers/Timer_ConnectNPC.inc>
 #include <grgserver/timers/Timer_DisqualifyRacePlayer.inc>
 #include <grgserver/timers/UpdateRaceLobby.inc>
 #include <grgserver/timers/UpdateVehicleStats.inc>
@@ -223,6 +227,8 @@
 #include <grgserver/commands/showpos.inc>
 #include <grgserver/commands/spawn.inc>
 #include <grgserver/commands/spawnvehicle.inc>
+#include <grgserver/commands/startnpc.inc>
+#include <grgserver/commands/stoprec.inc>
 #include <grgserver/commands/tp.inc>
 #include <grgserver/commands/tpint.inc>
 #include <grgserver/commands/tppos.inc>
