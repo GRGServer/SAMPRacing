@@ -27,9 +27,19 @@
         <withvehicle>true</withvehicle>
         <position>
             <x>2274.0954</x>
-            <y>1395.7603</y>
+            <y>1395.7602</y>
             <z>42.445274</z>
-            <angle>9.698478</angle>
+            <angle>9.698477</angle>
+            <interior>0</interior>
+        </position>
+    </teleport>
+    <teleport>
+        <name>Stunt2</name>
+        <position>
+            <x>-1304.405</x>
+            <y>-67.56085</y>
+            <z>14.148437</z>
+            <angle>171.04185</angle>
             <interior>0</interior>
         </position>
     </teleport>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<objects>
+    <object model="970" interior="0" posX="2313.9560" posY="-1977.090" posZ="12.776133" rotX="-102.8999" rotY="-81.89997" rotZ="93.400001" />
+    <object model="5152" interior="0" posX="-1304.405" posY="-67.56085" posZ="13.878434" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1300.365" posY="-67.56085" posZ="15.658439" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1296.344" posY="-67.56085" posZ="17.408452" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1292.363" posY="-67.56085" posZ="19.188470" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1288.551" posY="-67.56085" posZ="20.828491" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1284.878" posY="-67.56085" posZ="22.418523" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1280.807" posY="-67.56085" posZ="24.188518" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="4254" interior="0" posX="-1280.561" posY="-67.49417" posZ="25.431705" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="2940" interior="0" posX="-1352.243" posY="-58.75248" posZ="14.148437" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="2940" interior="0" posX="-1352.243" posY="-53.26250" posZ="15.978448" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="5152" interior="0" posX="-1341.796" posY="-60.90156" posZ="13.779047" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="18778" interior="0" posX="-1318.217" posY="-20.60934" posZ="14.608446" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="2940" interior="0" posX="-1352.222" posY="-47.53253" posZ="17.908464" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="18778" interior="0" posX="-1318.225" posY="-12.59911" posZ="14.604949" rotX="-0.099999" rotY="-0.200000" rotZ="179.90003" />
+</objects>
