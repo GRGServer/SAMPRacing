@@ -1545,36 +1545,4 @@
             Der NPC ist nun der Fahrer von deinem Fahrzeug
         </de>
     </string>
-    <string id="193">
-        <en>
-            Stop the current NPC recording
-        </en>
-        <de>
-            Stopt den Aktuelen NPC Aufnahmen
-        </de>
-    </string>
-    <string id="194">
-        <en>
-            Recording stopped
-        </en>
-        <de>
-            Aufnahme gestoppt
-        </de>
-    </string>
-    <string id="195">
-        <en>
-            Start the NPC
-        </en>
-        <de>
-            Startet die NPCS
-        </de>
-    </string>
-    <string id="196">
-        <en>
-            NPCs have ben Joined!
-        </en>
-        <de>
-            NPCs sind beigetretten.
-        </de>
-    </string>
 </languagestrings>

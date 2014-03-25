@@ -18,10 +18,6 @@
 #define COLOR_TEXTDRAWHOVER			0xFF8C55FF
 
 
-//Files
-#define FILE_NPCS					"npcs.xml"
-
-
 // Garages
 #define GARAGE_LARGE_CAMERA_POSX		611.025878
 #define GARAGE_LARGE_CAMERA_POSY		-72.445640
@@ -72,8 +68,7 @@
 #define MAX_GARAGES				150
 #define MAX_HIDDENPACKAGES			100
 #define MAX_INTERIORS				150
-#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(197)
-#define MAX_NPCS					150
+#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(193)
 #define MAX_OBJECTMODELS			11000
 #define MAX_RACECHECKPOINTS			1000
 #define MAX_RACES				100
@@ -83,7 +78,6 @@
 #define MAX_TELEPORTS				50
 #define MAX_VEHICLECOMPONENT_SLOTS		14
 #define MAX_VEHICLESHOPS			10
-#define MAX_VEHICLE_COLORS			999
 
 
 // NPC misc
@@ -98,7 +92,7 @@
 #define NPCCMD_SETREPEAT			"setrepeat"
 #define NPCCMD_START				"start"
 #define NPCCMD_STOP				"stop"
-#define NPC_CONNECT_DELAY			250
+
 
 // Races
 #define RACE_CHECKPOINT_SIZE			10

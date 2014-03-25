@@ -24,15 +24,6 @@ public OnGameModeInit()
 
 	LoadHiddenPackages();
 	LoadCommands();
-	LoadNPCs();
-
-	ConnectNPC("LSTest1","LSTest1");
-	g_car_LSTest1 = CreateVehicle(445, 2074.655273, -1814.141235, 13.115847, 90.339157 , 10, 1, -1);
-	ConnectNPC("LSTest2","LSTest2");
-	g_car_LSTest2 = CreateVehicle(401, 2073.809814, -1819.895751, 13.279934, 88.126510, 10, 1, -1);
-	ConnectNPC("LSTest3","LSTest3");
-	g_car_LSTest3 = CreateVehicle(496, 2073.659179, -1805.274658, 13.219514, 89.845085, 10, 1, -1);
-	
 
 	g_textDrawClock = TextDrawCreate(547, 25, "_");
 	TextDrawSetShadow(g_textDrawClock, 0);

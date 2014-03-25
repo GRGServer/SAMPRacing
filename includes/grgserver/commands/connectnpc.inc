@@ -1,7 +1,7 @@
 PCMD:connectnpc[ISADMIN](playerID, params[], StringID:188("Connect a new NPC"))
 {
 	new nameSuffix[MAX_PLAYER_NAME];
-	if (sscanf(params, "s[128]", nameSuffix))
+	if (sscanf(params, "s", nameSuffix))
 	{
 		CmdUsageMsg(playerID, "connectnpc", "Suffix");
 		return COMMAND_USAGE;
