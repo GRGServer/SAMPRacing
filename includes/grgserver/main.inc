@@ -187,6 +187,7 @@
 #include <grgserver/timers/ResetDriftingStats.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
+#include <grgserver/timers/Timer_ConnectNPC.inc>
 #include <grgserver/timers/Timer_DisqualifyRacePlayer.inc>
 #include <grgserver/timers/UpdateRaceLobby.inc>
 #include <grgserver/timers/UpdateVehicleStats.inc>
@@ -227,7 +228,6 @@
 #include <grgserver/commands/spawn.inc>
 #include <grgserver/commands/spawnvehicle.inc>
 #include <grgserver/commands/startnpc.inc>
-#include <grgserver/commands/stopnpc.inc>
 #include <grgserver/commands/stoprec.inc>
 #include <grgserver/commands/tp.inc>
 #include <grgserver/commands/tpint.inc>

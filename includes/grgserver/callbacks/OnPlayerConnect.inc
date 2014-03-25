@@ -16,6 +16,10 @@ public OnPlayerConnect(playerid)
 			SendClientMessageEx(playerID, COLOR_JOINLEAVE, StringID:23("%u has joined the server"), playerid);
 		}
 	}
+	if(IsPlayerNPC(playerid))
+	{
+		IsLoggedIn(playerid);
+	}
 
 	// Remove standard objects
 	RemoveStandardObjectsForPlayer(playerid);

@@ -1,47 +1,28 @@
 public OnPlayerSpawn(playerid)
 {
-	new NPCLSTest1;
-	new LSTest1[MAX_PLAYER_NAME];
-	GetPlayerName(NPCLSTest1, LSTest1, sizeof(LSTest1));
 
-
-	if(IsPlayerNPC(NPCLSTest1))
+	if(IsPlayerNPC(playerid))
 	{
-		if(!strcmp(LSTest1, "LSTest1", true))
+		new botname[MAX_PLAYER_NAME];
+		new botname1[MAX_PLAYER_NAME];
+		new botname2[MAX_PLAYER_NAME];
+		GetPlayerName(playerid, botname, sizeof(botname));
+		GetPlayerName(playerid, botname1, sizeof(botname1));
+		GetPlayerName(playerid, botname2, sizeof(botname2));
+		if(!strcmp(botname, "LSTest1", true))
 		{
-			PutPlayerInVehicle(NPCLSTest1, g_car_LSTest1, 0);
-			printf("NPC %s was Put in vehicle %d", LSTest1, g_car_LSTest1);
+			 PutPlayerInVehicle(playerid, g_car_LSTest1, 0);
 		}
-	}
-	
-	new NPCLSTest2;
-	new LSTest2[MAX_PLAYER_NAME];
-	GetPlayerName(NPCLSTest2, LSTest2, sizeof(LSTest2));
-
-
-	if(IsPlayerNPC(NPCLSTest2))
-	{
-		if(!strcmp(LSTest2, "LSTest2", true))
+		if(!strcmp(botname1, "LSTest2", true))
 		{
-			PutPlayerInVehicle(NPCLSTest2, g_car_LSTest2, 0);
-			printf("NPC %s was Put in vehicle %d", LSTest2, g_car_LSTest2);
+			 PutPlayerInVehicle(playerid, g_car_LSTest2, 0);
+		}
+		if(!strcmp(botname2, "LSTest3", true))
+		{
+			PutPlayerInVehicle(playerid, g_car_LSTest3, 0);
 		}
 	}
     
-	new NPCLSTest3;
-	new LSTest3[MAX_PLAYER_NAME];
-	GetPlayerName(NPCLSTest3, LSTest3, sizeof(LSTest3));
-
-
-	if(IsPlayerNPC(NPCLSTest3))
-	{
-		if(!strcmp(LSTest3, "LSTest3", true))
-		{
-			printf("NPC %s was Put in vehicle %d", LSTest3, g_car_LSTest3);
-			PutPlayerInVehicle(NPCLSTest3, g_car_LSTest3, 0);
-		}
-	}
-	
 	
 	switch (PVar:playerid[SPAWN_TYPE])
 	{
