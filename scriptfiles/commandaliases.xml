@@ -25,4 +25,9 @@
 		<command>tp</command>
 		<parameters>stunt1</parameters>
 	</alias>
+	<alias>
+		<name>stunt2</name>
+		<command>tp</command>
+		<parameters>stunt2</parameters>
+	</alias>
 </commandaliases>
