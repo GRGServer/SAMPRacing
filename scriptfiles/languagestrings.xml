@@ -1577,4 +1577,20 @@
             NPCs sind beigetretten.
         </de>
     </string>
+    <string id="197">
+        <en>
+            Stop the NPC
+        </en>
+        <de>
+            Stopt die NPCs
+        </de>
+    </string>
+    <string id="198">
+        <en>
+            This Player is not an NPC!
+        </en>
+        <de>
+            Dieser Spieler ist kein NPC!
+        </de>
+    </string>
 </languagestrings>

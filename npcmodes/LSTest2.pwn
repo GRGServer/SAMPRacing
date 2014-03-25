@@ -1,5 +1,5 @@
 #include "a_npc"
-#define RECORDING1 "LSTest2"
+#define RECORDING "LSTest2"
 
 main()
 {
@@ -7,12 +7,12 @@ main()
 
 public OnRecordingPlaybackEnd()
 {
-	StartRecordingPlayback(1, RECORDING1);
+	StartRecordingPlayback(1, RECORDING);
 }
 
 public OnNPCEnterVehicle(vehicleid, seatid)
 {
-	StartRecordingPlayback(1, RECORDING1);
+	StartRecordingPlayback(1, RECORDING);
 }
 public OnNPCExitVehicle()
 {

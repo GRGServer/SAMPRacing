@@ -1,5 +1,5 @@
-#include "a_npc"//Baut die Include "a_npc" ein
-#define RECORDING "LSTest1"// BulletLS gegen euren Aufnahmenamen ersetzen!
+#include "a_npc"
+#define RECORDING "LSTest1"
 
 main()
 {
@@ -7,12 +7,12 @@ main()
 
 public OnRecordingPlaybackEnd()
 {
-	StartRecordingPlayback(1, RECORDING);//1 = Aufnahmetyp - Fahrzeug, Recording = Der oben definierte Aufnahmename
+	StartRecordingPlayback(1, RECORDING);
 }
 
 public OnNPCEnterVehicle(vehicleid, seatid)
 {
-	StartRecordingPlayback(1, RECORDING);//1 = Aufnahmetyp - Fahrzeug, Recording = Der oben definierte Aufnahmename
+	StartRecordingPlayback(1, RECORDING);
 }
 public OnNPCExitVehicle()
 {
