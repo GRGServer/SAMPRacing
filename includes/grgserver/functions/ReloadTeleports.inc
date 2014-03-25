@@ -138,6 +138,7 @@ ReloadTeleports()
 
 		teleportNode = XML_GetNextSibling(teleportNode, "teleport");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d teleports loaded", teleportID);
 }

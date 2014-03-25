@@ -33,6 +33,7 @@ ReloadInteriors()
 
 		interiorNode = XML_GetNextSibling(interiorNode, "interior");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d interiors loaded", interiorID);
 }

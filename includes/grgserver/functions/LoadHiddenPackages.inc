@@ -25,6 +25,7 @@ LoadHiddenPackages()
 
 			packageNode = XML_GetNextSibling(packageNode, "package");
 		}
+		XML_UnloadDocument(xml);
 	}
 	else
 	{

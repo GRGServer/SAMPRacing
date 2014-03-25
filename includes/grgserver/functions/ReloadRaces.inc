@@ -51,6 +51,7 @@ ReloadRaces()
 
 		raceNode = XML_GetNextSibling(raceNode, "race");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d races loaded", raceID);
 }

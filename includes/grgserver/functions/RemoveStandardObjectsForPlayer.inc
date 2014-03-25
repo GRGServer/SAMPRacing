@@ -9,4 +9,5 @@ RemoveStandardObjectsForPlayer(playerID)
 
 		objectNode = XML_GetNextSibling(objectNode, "object");
 	}
+	XML_UnloadDocument(xml);
 }

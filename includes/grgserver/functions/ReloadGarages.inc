@@ -91,6 +91,7 @@ ReloadGarages()
 
 		garageNode = XML_GetNextSibling(garageNode, "garage");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d garages loaded", garageNumber);
 }

@@ -58,6 +58,7 @@ ReloadVehicleShops()
 
 		shopNode = XML_GetNextSibling(shopNode, "shop");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d vehicle shops loaded", shopID);
 }

@@ -41,6 +41,7 @@ ReloadVehicleModels()
 
 		modelNode = XML_GetNextSibling(modelNode, "model");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d vehicle models loaded", count);
 }

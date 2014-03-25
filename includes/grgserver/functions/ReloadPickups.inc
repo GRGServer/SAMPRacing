@@ -28,6 +28,7 @@ ReloadPickups()
 
 		pickupNode = XML_GetNextSibling(pickupNode, "pickup");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d pickups loaded", index);
 }

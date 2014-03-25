@@ -99,6 +99,7 @@ ReloadAreas()
 
 		areaNode = XML_GetNextSibling(areaNode, "area");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d areas loaded", areaID);
 }

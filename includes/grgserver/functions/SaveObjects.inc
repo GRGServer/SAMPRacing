@@ -4,8 +4,8 @@ SaveObjects(filename[])
 
 	FormatNew:filePath[STRINGLENGTH_OBJECTFILENAME]("objects/%s.xml", filename);
 
-	new XMLNode:document = XML_CreateDocument(filePath);
-	new XMLNode:rootNode = XML_CreateNode(document, "objects");
+	new XMLNode:xml = XML_CreateDocument(filePath);
+	new XMLNode:rootNode = XML_CreateNode(xml, "objects");
 
 	Foreach(arrayIndex, g_objects)
 	{
@@ -33,5 +33,6 @@ SaveObjects(filename[])
 		}
 	}
 
-	XML_SaveDocument(document);
+	XML_SaveDocument(xml);
+	XML_UnloadDocument(xml);
 }

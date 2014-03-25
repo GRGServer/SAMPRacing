@@ -1,7 +1,7 @@
 SaveRaces()
 {
-	new XMLNode:document = XML_CreateDocument("races.xml");
-	new XMLNode:rootNode = XML_CreateNode(document, "races");
+	new XMLNode:xml = XML_CreateDocument("races.xml");
+	new XMLNode:rootNode = XML_CreateNode(xml, "races");
 
 	Foreach(raceID, g_races)
 	{
@@ -48,5 +48,6 @@ SaveRaces()
 		}
 	}
 
-	XML_SaveDocument(document);
+	XML_SaveDocument(xml);
+	XML_UnloadDocument(xml);
 }

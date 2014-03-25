@@ -65,6 +65,7 @@ ReloadCommandAliases()
 
 		aliasNode = XML_GetNextSibling(aliasNode, "alias");
 	}
+	XML_UnloadDocument(xml);
 
 	printf("  %d command aliases loaded", aliasID);
 }

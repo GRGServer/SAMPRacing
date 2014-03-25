@@ -52,6 +52,7 @@ LoadObjectsFromFile(filename[])
 
 		count++;
 	}
+	XML_UnloadDocument(xml);
 
 	return count;
 }

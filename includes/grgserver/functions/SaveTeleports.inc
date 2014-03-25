@@ -1,7 +1,7 @@
 SaveTeleports()
 {
-	new XMLNode:document = XML_CreateDocument("teleports.xml");
-	new XMLNode:rootNode = XML_CreateNode(document, "teleports");
+	new XMLNode:xml = XML_CreateDocument("teleports.xml");
+	new XMLNode:rootNode = XML_CreateNode(xml, "teleports");
 
 	Foreach(teleportID, g_teleports)
 	{
@@ -43,5 +43,6 @@ SaveTeleports()
 		XML_CreateNode(XML_CreateNode(positionNode, "interior"), string, e_XML_NODE_TEXT);
 	}
 
-	XML_SaveDocument(document);
+	XML_SaveDocument(xml);
+	XML_UnloadDocument(xml);
 }
