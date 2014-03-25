@@ -5,6 +5,14 @@ public OnPlayerConnect(playerid)
 
 	if (IsPlayerNPC(playerid))
 	{
+		new ip[16];// TODO: Increase for IPv6 (Once supported in SA-MP)
+		GetPlayerIp(playerid, ip, sizeof(ip));
+		if (!IsStr(ip, "127.0.0.1"))
+		{
+			print("IP address of NPC does not equal 127.0.0.1! Kicking...");
+			Kick(playerid);
+		}
+
 		return true;
 	}
 
