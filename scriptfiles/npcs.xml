@@ -15,4 +15,17 @@
     <npc id="4" skin="0" type="driver" recording="LSPoliceSprint2">
         <vehicle model="480" paintjob="0" />
     </npc>
+    <npc id="5" skin="0" type="driver" recording="LSPoliceSprint3">
+        <vehicle model="559" paintjob="0">
+            <component>1162</component>
+            <component>1068</component>
+            <component>1070</component>
+            <component>1010</component>
+            <component>1066</component>
+            <component>1082</component>
+            <component>1087</component>
+            <component>1160</component>
+            <component>1161</component>
+        </vehicle>
+    </npc>
 </npcs>
