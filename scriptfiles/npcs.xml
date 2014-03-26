@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<npcs/>
+<npcs>
+    <npc id="0" skin="0" type="driver" recording="LSRoundCurse1">
+        <vehicle model="445" paintjob="0" />
+    </npc>
+    <npc id="1" skin="0" type="driver" recording="LSRoundCurse2">
+        <vehicle model="496" paintjob="0" />
+    </npc>
+    <npc id="2" skin="0" type="driver" recording="LSRoundCurse3">
+        <vehicle model="401" paintjob="0" />
+    </npc>
+    <npc id="3" skin="0" type="driver" recording="LSPoliceSprint1">
+        <vehicle model="422" paintjob="0" />
+    </npc>
+    <npc id="4" skin="0" type="driver" recording="LSPoliceSprint2">
+        <vehicle model="480" paintjob="0" />
+    </npc>
+</npcs>
