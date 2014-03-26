@@ -28,28 +28,13 @@
         <vehicle model="439" paintjob="0" />
     </npc>
     <npc id="9" skin="0" type="driver" recording="LSOutLandSprint1">
-        <vehicle model="426" paintjob="0">
-            <component>1010</component>
-            <component>1087</component>
-        </vehicle>
+        <vehicle model="426" paintjob="0" />
     </npc>
     <npc id="10" skin="0" type="driver" recording="LSOutLandSprint2">
-        <vehicle model="533" paintjob="0">
-            <component>1010</component>
-            <component>1074</component>
-            <component>1087</component>
-        </vehicle>
+        <vehicle model="533" paintjob="0" />
     </npc>
     <npc id="11" skin="0" type="driver" recording="LSOutLandSprint3">
-        <vehicle model="404" paintjob="0">
-            <component>1000</component>
-            <component>1007</component>
-            <component>1013</component>
-            <component>1010</component>
-            <component>1019</component>
-            <component>1078</component>
-            <component>1087</component>
-        </vehicle>
+        <vehicle model="404" paintjob="0" />
     </npc>
     <npc id="12" skin="0" type="driver" recording="LSToSF1">
         <vehicle model="541" paintjob="0" />
@@ -59,5 +44,14 @@
     </npc>
     <npc id="14" skin="0" type="driver" recording="LSToSF3">
         <vehicle model="415" paintjob="0" />
+    </npc>
+    <npc id="15" skin="0" type="driver" recording="SFWaterRound1">
+        <vehicle model="419" paintjob="0" />
+    </npc>
+    <npc id="16" skin="0" type="driver" recording="SFWaterRound2">
+        <vehicle model="470" paintjob="0" />
+    </npc>
+    <npc id="17" skin="0" type="driver" recording="SFWaterRound3">
+        <vehicle model="561" paintjob="0" />
     </npc>
 </npcs>
