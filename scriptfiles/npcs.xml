@@ -51,4 +51,13 @@
             <component>1087</component>
         </vehicle>
     </npc>
+    <npc id="12" skin="0" type="driver" recording="LSToSF1">
+        <vehicle model="541" paintjob="0" />
+    </npc>
+    <npc id="13" skin="0" type="driver" recording="LSToSF2">
+        <vehicle model="411" paintjob="0" />
+    </npc>
+    <npc id="14" skin="0" type="driver" recording="LSToSF3">
+        <vehicle model="415" paintjob="0" />
+    </npc>
 </npcs>
