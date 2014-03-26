@@ -16,42 +16,39 @@
         <vehicle model="480" paintjob="0" />
     </npc>
     <npc id="5" skin="0" type="driver" recording="LSPoliceSprint3">
-        <vehicle model="559" paintjob="0">
-            <component>1162</component>
-            <component>1068</component>
-            <component>1070</component>
-            <component>1010</component>
-            <component>1066</component>
-            <component>1082</component>
-            <component>1087</component>
-            <component>1160</component>
-            <component>1161</component>
-        </vehicle>
+        <vehicle model="559" paintjob="0" />
     </npc>
     <npc id="6" skin="0" type="driver" recording="LSBSNRound1">
-        <vehicle model="562" paintjob="2">
-            <component>1146</component>
-            <component>1038</component>
-            <component>1036</component>
-            <component>1010</component>
-            <component>1037</component>
-            <component>1080</component>
-            <component>1171</component>
-            <component>1149</component>
-        </vehicle>
+        <vehicle model="562" paintjob="2" />
     </npc>
     <npc id="7" skin="0" type="driver" recording="LSBSNRound2">
         <vehicle model="507" paintjob="0" />
     </npc>
     <npc id="8" skin="0" type="driver" recording="LSBSNRound3">
-        <vehicle model="439" paintjob="0">
-            <component>1003</component>
+        <vehicle model="439" paintjob="0" />
+    </npc>
+    <npc id="9" skin="0" type="driver" recording="LSOutLandSprint1">
+        <vehicle model="426" paintjob="0">
+            <component>1010</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="10" skin="0" type="driver" recording="LSOutLandSprint2">
+        <vehicle model="533" paintjob="0">
+            <component>1010</component>
+            <component>1074</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="11" skin="0" type="driver" recording="LSOutLandSprint3">
+        <vehicle model="404" paintjob="0">
+            <component>1000</component>
             <component>1007</component>
             <component>1013</component>
             <component>1010</component>
-            <component>1097</component>
+            <component>1019</component>
+            <component>1078</component>
             <component>1087</component>
-            <component>1145</component>
         </vehicle>
     </npc>
 </npcs>
