@@ -49,6 +49,87 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		}
 	}
 
+	if (PVar:playerid[RECNPC_RUNNING])
+	{
+		if (IsKeyPressed(KEY_RECNPC_STOP))
+		{
+			PVar:playerid[RECNPC_RUNNING] = false;
+
+			StopRecordingPlayerData(playerid);
+
+			Count(playNPCIndex, MAX_RECNPC_PLAYNPCS)
+			{
+				new npcID = PVar:playerid[RECNPC_PLAYNPCS][playNPCIndex];
+				if (npcID != -1)
+				{
+					FormatNew:name[MAX_PLAYER_NAME]("NPC_%d", npcID);
+					new npcPlayerID = GetPlayerID(name);
+					if (npcPlayerID != INVALID_PLAYER_ID)
+					{
+						Kick(npcPlayerID);
+					}
+				}
+			}
+
+			new npcID = PVar:playerid[RECNPC_NPCID];
+			new vehicleID = GetPlayerVehicleID(playerid);
+			if (!vehicleID)
+			{
+				vehicleID = INVALID_VEHICLE_ID;
+			}
+
+			// Find a free ID for the new recording
+			new highestID = -1;
+			Foreach(arrayIndex, g_npcs)
+			{
+				if (g_npcs[arrayIndex][E_NPC_ID] > highestID)
+				{
+					highestID = g_npcs[arrayIndex][E_NPC_ID];
+				}
+			}
+			g_npcs[npcID][E_NPC_ID] = highestID + 1;
+
+			strdel(g_npcs[npcID][E_NPC_RECORDING_NAME], 0, STRINGLENGTH_NPCRECORDINGNAME);
+			strcat(g_npcs[npcID][E_NPC_RECORDING_NAME], PVar:playerid[RECNPC_NAME], STRINGLENGTH_NPCRECORDINGNAME);
+
+			g_npcs[npcID][E_NPC_RECORDING_TYPE] = PVar:playerid[RECNPC_TYPE];
+			g_npcs[npcID][E_NPC_SKIN] = 0;
+			g_npcs[npcID][E_NPC_VEHICLE_ID] = vehicleID;
+
+			if (vehicleID == INVALID_VEHICLE_ID)
+			{
+				g_npcs[npcID][E_NPC_VEHICLE_MODELID] = 0;
+				g_npcs[npcID][E_NPC_VEHICLE_PAINTJOB] = -1;
+
+				Count(componentSlot, MAX_VEHICLECOMPONENT_SLOTS)
+				{
+					g_npcs[npcID][E_NPC_VEHICLE_COMPONENTS][componentSlot] = 0;
+				}
+			}
+			else
+			{
+				g_npcs[npcID][E_NPC_VEHICLE_MODELID] = GetVehicleModel(vehicleID);
+				g_npcs[npcID][E_NPC_VEHICLE_PAINTJOB] = VehicleProperty:vehicleID[PAINTJOBID];
+
+				Count(componentSlot, MAX_VEHICLECOMPONENT_SLOTS)
+				{
+					g_npcs[npcID][E_NPC_VEHICLE_COMPONENTS][componentSlot] = GetVehicleComponentInSlot(vehicleID, componentSlot);
+				}
+			}
+
+			// Move the recording to npcmodes/recordings
+			FormatNew:sourceFilename[100]("scriptfiles/%s.rec", PVar:playerid[RECNPC_NAME]);
+			FormatNew:destinationFilename[100]("npcmodes/recordings/%s.rec", PVar:playerid[RECNPC_NAME]);
+			file_move(sourceFilename, destinationFilename);
+
+			SaveNPCs();
+
+			SendClientMessageEx(playerid, COLOR_INFO, StringID:184("The NPC recording '%s' has been stopped"), PVar:playerid[RECNPC_NAME]);
+
+			return false;
+		}
+	}
+
 	if (IsKeyPressed(KEY_PICKUP_USE))
 	{
 		new pickupID = GetPlayerPickup(playerid);

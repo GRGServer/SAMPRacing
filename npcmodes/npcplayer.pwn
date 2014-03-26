@@ -66,27 +66,33 @@ HandleCommand(command[], parameters[])
 		return;
 	}
 
-	if (IsStr(command, NPCCMD_SETREPEAT))
-	{
-		g_repeat = strval(parameters);
-	}
-
-	if (IsStr(command, NPCCMD_START))
+	if (IsStr(command, NPCCMD_SETRECORDING))
 	{
 		new playbackType;
 		new recordingName[STRINGLENGTH_NPCRECORDINGNAME];
 		if (sscanf(parameters, "ds", playbackType, recordingName))
 		{
-			if (!StrNotNull(g_recordingName))
-			{
-				Log("No recording defined!");
-				return;
-			}
+			Log("Invalid arguments!");
+			return;
 		}
-		else
+
+		g_playbackType = playbackType;
+		g_recordingName = recordingName;
+		return;
+	}
+
+	if (IsStr(command, NPCCMD_SETREPEAT))
+	{
+		g_repeat = strval(parameters);
+		return;
+	}
+
+	if (IsStr(command, NPCCMD_START))
+	{
+		if (!StrNotNull(g_recordingName))
 		{
-			g_playbackType = playbackType;
-			g_recordingName = recordingName;
+			Log("No recording defined!");
+			return;
 		}
 
 		StartRecordingPlayback(g_playbackType, g_recordingName);

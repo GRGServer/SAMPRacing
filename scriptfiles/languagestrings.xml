@@ -1475,26 +1475,10 @@
     </string>
     <string id="184">
         <en>
-            Set the recording of a NPC
+            The NPC recording '%s' has been stopped
         </en>
         <de>
-            Lege die Aufnahme von einem NPC fest
-        </de>
-    </string>
-    <string id="185">
-        <en>
-            Invalid recording type!
-        </en>
-        <de>
-            Ungültiger Aufnahmetyp!
-        </de>
-    </string>
-    <string id="186">
-        <en>
-            The recording of the NPC has been changed
-        </en>
-        <de>
-            Die Aufnahme von dem NPC wurde geändert
+            Die NPC Aufnahme '%s' wurde gestoppt
         </de>
     </string>
     <string id="187">
@@ -1507,18 +1491,10 @@
     </string>
     <string id="188">
         <en>
-            Connect a new NPC
+            Limit of %d NPCs reached!
         </en>
         <de>
-            Verbinde einen neuen NPC
-        </de>
-    </string>
-    <string id="189">
-        <en>
-            The NPC '%s' will now try to connect
-        </en>
-        <de>
-            Der NPC '%s' versucht nun sich zu verbinden
+            Limit von %d NPCs erreicht!
         </de>
     </string>
     <string id="190">
@@ -1543,6 +1519,94 @@
         </en>
         <de>
             Der NPC ist nun der Fahrer von deinem Fahrzeug
+        </de>
+    </string>
+    <string id="193">
+        <en>
+            NPCs reloaded
+        </en>
+        <de>
+            NPCs neugeladen
+        </de>
+    </string>
+    <string id="194">
+        <en>
+            Driver
+        </en>
+        <de>
+            Fahrer
+        </de>
+    </string>
+    <string id="195">
+        <en>
+            On foot
+        </en>
+        <de>
+            Zu Fuß
+        </de>
+    </string>
+    <string id="196">
+        <en>
+            Your NPC recording is ready to start.
+        </en>
+        <de>
+            Deine NPC Aufnahme ist startbereit.
+        </de>
+    </string>
+    <string id="197">
+        <en>
+            Name
+        </en>
+        <de>
+            Name
+        </de>
+    </string>
+    <string id="198">
+        <en>
+            Type
+        </en>
+        <de>
+            Typ
+        </de>
+    </string>
+    <string id="199">
+        <en>
+            NPCs
+        </en>
+        <de>
+            NPCs
+        </de>
+    </string>
+    <string id="200">
+        <en>
+            Start NPC recording
+        </en>
+        <de>
+            NPC Aufnahme starten
+        </de>
+    </string>
+    <string id="201">
+        <en>
+            NPC recording started
+        </en>
+        <de>
+            NPC Aufnahme gestartet
+        </de>
+    </string>
+    <string id="202">
+        <en>
+            Invalid NPC ID '%d'!
+        </en>
+        <de>
+            Ungültige NPC ID '%d'!
+        </de>
+    </string>
+    <string id="203">
+        <en>
+            Press %s to stop the recording
+        </en>
+        <de>
+            Drücke %s um die Aufnahme zu stoppen
         </de>
     </string>
 </languagestrings>

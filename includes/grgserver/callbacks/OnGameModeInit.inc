@@ -21,6 +21,7 @@ public OnGameModeInit()
 	ReloadVehicles();
 	ReloadGarages();
 	ReloadRaces();
+	ReloadNPCs();
 
 	LoadHiddenPackages();
 	LoadCommands();

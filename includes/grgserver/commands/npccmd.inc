@@ -9,9 +9,9 @@ public cmd_npccmd(playerID, params[])
 
 	new command[100];
 	new parameters[200];
-	if (sscanf(params, "ss", command, parameters))
+	if (sscanf(params, "s[100]s[200]", command, parameters))
 	{
-		if (sscanf(params, "s", command))
+		if (sscanf(params, "s[100]", command))
 		{
 			return COMMAND_ERROR;
 		}

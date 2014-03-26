@@ -1,5 +1,16 @@
 public OnPlayerSpawn(playerid)
 {
+	if (IsPlayerNPC(playerid))
+	{
+		new npcID = PVar:playerid[NPCID];
+		if (g_npcs[npcID][E_NPC_VEHICLE_ID] != INVALID_VEHICLE_ID && g_npcs[npcID][E_NPC_RECORDING_TYPE] == PLAYER_RECORDING_TYPE_DRIVER)
+		{
+			PutPlayerInVehicle(playerid, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
+			SetVehicleEngineState(g_npcs[npcID][E_NPC_VEHICLE_ID], true);
+		}
+		return true;
+	}
+
 	switch (PVar:playerid[SPAWN_TYPE])
 	{
 		case SPAWNTYPE_BUYVEHICLESHOP:// Spawned after buying a vehicle from vehicle shop

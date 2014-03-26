@@ -5,7 +5,7 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts:"));
-		SendClientMessage(playerID, COLOR_INFO, "areas, commandaliases, garages, interiors, languagestrings, objectmodels");
+		SendClientMessage(playerID, COLOR_INFO, "areas, commandaliases, garages, interiors, languagestrings, npcs, objectmodels");
 		SendClientMessage(playerID, COLOR_INFO, "objects, pickups, races, teleports, vehiclemodels, vehicles, vehicleshops");
 		return COMMAND_USAGE;
 	}
@@ -42,6 +42,13 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	{
 		ReloadLanguageStrings();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:57("Language strings reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (IsStr(part, "npcs"))
+	{
+		ReloadNPCs();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:193("NPCs reloaded"));
 		return COMMAND_OK;
 	}
 

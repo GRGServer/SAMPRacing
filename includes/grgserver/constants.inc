@@ -51,6 +51,7 @@
 #define KEY_OBJECTEDITOR_CLONE			KEY_WALK
 #define KEY_OBJECTEDITOR_REMOVE			KEY_NO
 #define KEY_PICKUP_USE				KEY_YES
+#define KEY_RECNPC_STOP				KEY_YES
 #define KEY_VEHICLESHOP_BUY			KEY_SPRINT
 #define KEY_VEHICLESHOP_NEXT			KEY_ANALOG_RIGHT
 #define KEY_VEHICLESHOP_PREVIOUS		KEY_ANALOG_LEFT
@@ -68,7 +69,8 @@
 #define MAX_GARAGES				150
 #define MAX_HIDDENPACKAGES			100
 #define MAX_INTERIORS				150
-#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(193)
+#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(204)
+#define MAX_NPCS				50
 #define MAX_OBJECTMODELS			11000
 #define MAX_RACECHECKPOINTS			1000
 #define MAX_RACES				100
@@ -89,6 +91,7 @@
 #define NPCCMD_PAUSE				"pause"
 #define NPCCMD_RECORDINGENDED			"recordingended"
 #define NPCCMD_RESUME				"resume"
+#define NPCCMD_SETRECORDING			"setrecording"
 #define NPCCMD_SETREPEAT			"setrepeat"
 #define NPCCMD_START				"start"
 #define NPCCMD_STOP				"stop"

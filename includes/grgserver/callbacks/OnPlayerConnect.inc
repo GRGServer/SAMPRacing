@@ -7,11 +7,58 @@ public OnPlayerConnect(playerid)
 	{
 		new ip[16];// TODO: Increase for IPv6 (Once supported in SA-MP)
 		GetPlayerIp(playerid, ip, sizeof(ip));
+
+		// NPC not spawned from localhost -> Bad NPC
 		if (!IsStr(ip, "127.0.0.1"))
 		{
 			print("IP address of NPC does not equal 127.0.0.1! Kicking...");
 			Kick(playerid);
+			return true;
 		}
+
+		new prefix[MAX_PLAYER_NAME];
+		new npcID;
+		sscanf(GetPlayerNameEx(playerid), "p<_>s[10]d", prefix, npcID);
+
+		// NPC name does not match the requied format -> Bad NPC
+		if (!IsStr(prefix, "NPC") || npcID < 0 || npcID >= MAX_NPCS)
+		{
+			print("Invalid NPC name! Kicking...");
+			Kick(playerid);
+			return true;
+		}
+
+		if (g_npcs[npcID][E_NPC_VEHICLE_MODELID])
+		{
+			g_npcs[npcID][E_NPC_VEHICLE_ID] = CreateVehicleEx(g_npcs[npcID][E_NPC_VEHICLE_MODELID], 0, 0, 0, 0, -1, -1);
+			new vehicleID = g_npcs[npcID][E_NPC_VEHICLE_ID];
+
+			if (vehicleID != INVALID_VEHICLE_ID)
+			{
+				if (g_npcs[npcID][E_NPC_VEHICLE_PAINTJOB] != -1)
+				{
+					VehicleProperty:vehicleID[PAINTJOBID] = g_npcs[npcID][E_NPC_VEHICLE_PAINTJOB];
+					ChangeVehiclePaintjob(vehicleID, g_npcs[npcID][E_NPC_VEHICLE_PAINTJOB]);
+				}
+
+				Count(componentSlot, MAX_VEHICLECOMPONENT_SLOTS)
+				{
+					if (g_npcs[npcID][E_NPC_VEHICLE_COMPONENTS][componentSlot])
+					{
+						AddVehicleComponent(vehicleID, g_npcs[npcID][E_NPC_VEHICLE_COMPONENTS][componentSlot]);
+					}
+				}
+			}
+		}
+
+		SetSpawnInfo(playerid, 0, g_npcs[npcID][E_NPC_SKIN], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+		// Assign the NPC ID to the PVar
+		PVar:playerid[NPCID] = npcID;
+
+		// Send a "set recording" command to the NPC
+		FormatNew:command[100]("%s %d %s", NPCCMD_SETRECORDING, g_npcs[npcID][E_NPC_RECORDING_TYPE], g_npcs[npcID][E_NPC_RECORDING_NAME]);
+		SendNPCCommand(playerid, command);
 
 		return true;
 	}

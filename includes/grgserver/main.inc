@@ -12,6 +12,7 @@
 #include <grgserver/structures/E_HIDDENPACKAGE.inc>
 #include <grgserver/structures/E_INTERIOR.inc>
 #include <grgserver/structures/E_LANGUAGESTRING.inc>
+#include <grgserver/structures/E_NPC.inc>
 #include <grgserver/structures/E_OBJECT.inc>
 #include <grgserver/structures/E_OBJECTMODEL.inc>
 #include <grgserver/structures/E_PICKUP.inc>
@@ -35,6 +36,7 @@
 #include <grgserver/functions/CheckpointEvent.inc>
 #include <grgserver/functions/CmdUsageMsg.inc>
 #include <grgserver/functions/ConcatString.inc>
+#include <grgserver/functions/ConnectNPCEx.inc>
 #include <grgserver/functions/CreateDialog.inc>
 #include <grgserver/functions/CreateGarageVehicle.inc>
 #include <grgserver/functions/CreatePlayerTextDraws.inc>
@@ -61,6 +63,7 @@
 #include <grgserver/functions/GetLanguageID.inc>
 #include <grgserver/functions/GetMySQLField.inc>
 #include <grgserver/functions/GetObjectNameByModelID.inc>
+#include <grgserver/functions/GetPlayerID.inc>
 #include <grgserver/functions/GetPlayerIDByUserID.inc>
 #include <grgserver/functions/GetPlayerNameEx.inc>
 #include <grgserver/functions/GetPlayerPickup.inc>
@@ -84,6 +87,7 @@
 #include <grgserver/functions/ReloadGarages.inc>
 #include <grgserver/functions/ReloadInteriors.inc>
 #include <grgserver/functions/ReloadLanguageStrings.inc>
+#include <grgserver/functions/ReloadNPCs.inc>
 #include <grgserver/functions/ReloadObjectModels.inc>
 #include <grgserver/functions/ReloadObjects.inc>
 #include <grgserver/functions/ReloadPickups.inc>
@@ -96,6 +100,7 @@
 #include <grgserver/functions/ResetPlayerVariables.inc>
 #include <grgserver/functions/SaveAll.inc>
 #include <grgserver/functions/SaveGarage.inc>
+#include <grgserver/functions/SaveNPCs.inc>
 #include <grgserver/functions/SaveObjects.inc>
 #include <grgserver/functions/SavePlayer.inc>
 #include <grgserver/functions/SaveRaces.inc>
@@ -170,6 +175,7 @@
 // dialogs
 #include <grgserver/dialogs/AddObject.inc>
 #include <grgserver/dialogs/ConfirmGarageBuy.inc>
+#include <grgserver/dialogs/ConfirmStartNPCRecording.inc>
 #include <grgserver/dialogs/ConfirmVehicleBuy.inc>
 #include <grgserver/dialogs/Language.inc>
 #include <grgserver/dialogs/Login.inc>
@@ -194,7 +200,6 @@
 #include <grgserver/commands/addtp.inc>
 #include <grgserver/commands/clear.inc>
 #include <grgserver/commands/cmds.inc>
-#include <grgserver/commands/connectnpc.inc>
 #include <grgserver/commands/editobject.inc>
 #include <grgserver/commands/engine.inc>
 #include <grgserver/commands/givemoney.inc>
@@ -212,7 +217,6 @@
 #include <grgserver/commands/reload.inc>
 #include <grgserver/commands/removevehicle.inc>
 #include <grgserver/commands/savepos.inc>
-#include <grgserver/commands/setnpcrecording.inc>
 #include <grgserver/commands/setobjectfilename.inc>
 #include <grgserver/commands/setracelaps.inc>
 #include <grgserver/commands/setracelevel.inc>
