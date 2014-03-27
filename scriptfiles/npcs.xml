@@ -54,4 +54,42 @@
     <npc id="17" skin="0" type="driver" recording="SFWaterRound3">
         <vehicle model="561" paintjob="0" />
     </npc>
+    <npc id="18" skin="0" type="driver" recording="TheSFRound1">
+        <vehicle model="480" paintjob="0" />
+    </npc>
+    <npc id="19" skin="0" type="driver" recording="TheSFRound2">
+        <vehicle model="415" paintjob="0" />
+    </npc>
+    <npc id="20" skin="0" type="driver" recording="TheSFRound3">
+        <vehicle model="562" paintjob="1">
+            <component>1147</component>
+            <component>1035</component>
+            <component>1036</component>
+            <component>1010</component>
+            <component>1037</component>
+            <component>1079</component>
+            <component>1087</component>
+            <component>1171</component>
+            <component>1148</component>
+        </vehicle>
+    </npc>
+    <npc id="21" skin="0" type="driver" recording="TheLargestRound1">
+        <vehicle model="429" paintjob="0">
+            <component>1010</component>
+            <component>1078</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="22" skin="0" type="driver" recording="TheLargestRound2">
+        <vehicle model="405" paintjob="0">
+            <component>1023</component>
+            <component>1010</component>
+            <component>1018</component>
+            <component>1078</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="23" skin="0" type="driver" recording="TheLargestRound3">
+        <vehicle model="419" paintjob="0" />
+    </npc>
 </npcs>
