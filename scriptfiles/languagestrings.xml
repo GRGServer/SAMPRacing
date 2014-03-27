@@ -1481,6 +1481,14 @@
             Die NPC Aufnahme '%s' wurde gestoppt
         </de>
     </string>
+    <string id="185">
+        <en>
+            You are now the host of this race
+        </en>
+        <de>
+            Du bist jetzt der Host von diesem Rennen
+        </de>
+    </string>
     <string id="187">
         <en>
             Record a new NPC and optionally playback other NPCs

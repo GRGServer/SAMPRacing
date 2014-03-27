@@ -43,9 +43,11 @@ public OnScreenFaderEnded(playerID)
 				SetPlayerSpawn(playerID, SPAWNTYPE_LEAVERACE, g_races[raceID][E_RACE_CHECKPOINT_POSX][0], g_races[raceID][E_RACE_CHECKPOINT_POSY][0], g_races[raceID][E_RACE_CHECKPOINT_POSZ][0], 0, 0);
 
 				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
+				PVar:playerID[RACE_LOBBYUPDATETIMER] = 0;
 
 				TogglePlayerSpectating(playerID, false);
 
+				PVar:playerID[RACE_ID] = -1;
 				PVar:playerID[ALLOWCMDS] = true;
 			}
 			case SCREENFADER_RACE_START:
@@ -54,10 +56,9 @@ public OnScreenFaderEnded(playerID)
 				SetPlayerSpawn(playerID, SPAWNTYPE_STARTRACE, g_races[raceID][E_RACE_CHECKPOINT_POSX][0], g_races[raceID][E_RACE_CHECKPOINT_POSY][0], g_races[raceID][E_RACE_CHECKPOINT_POSZ][0], 0, 0);
 
 				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
+				PVar:playerID[RACE_LOBBYUPDATETIMER] = 0;
 
 				TogglePlayerSpectating(playerID, false);
-
-				PVar:playerID[ALLOWCMDS] = true;
 			}
 			case SCREENFADER_TELEPORT:
 			{

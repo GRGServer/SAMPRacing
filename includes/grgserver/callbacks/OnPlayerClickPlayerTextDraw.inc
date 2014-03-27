@@ -47,6 +47,25 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 
 		FadeOutScreen(playerid, 5, 0, 0, 0, SCREENFADER_RACE_LEAVELOBBY);
 
+		new raceID = PVar:playerid[RACE_ID];
+
+		g_races[raceID][E_RACE_HOSTPLAYERID] = INVALID_PLAYER_ID;
+
+		// Search for another host of the race
+		PlayerLoop(playerID)
+		{
+			if (playerID != playerid && PVar:playerID[RACE_ID] == raceID && PVar:playerID[RACE_LOBBYUPDATETIMER])
+			{
+				g_races[raceID][E_RACE_HOSTPLAYERID] = playerID;
+
+				FormatNew:string[100]("~n~~n~~n~~n~~n~~n~~n~~n~~n~%s", LanguageString(playerID, StringID:185("You are now the host of this race")));
+				GameTextForPlayer(playerID, string, 3000, 3);
+
+				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START]);
+				break;
+			}
+		}
+
 		return true;
 	}
 
