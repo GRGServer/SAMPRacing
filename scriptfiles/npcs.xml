@@ -124,4 +124,17 @@
     <npc id="29" skin="0" type="driver" recording="CurveSprint3">
         <vehicle model="496" paintjob="0" />
     </npc>
+    <npc id="30" skin="0" type="driver" recording="HaiwaytoHell1">
+        <vehicle model="506" paintjob="0">
+            <component>1009</component>
+            <component>1085</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="31" skin="0" type="driver" recording="HaiwaytoHell2">
+        <vehicle model="541" paintjob="0" />
+    </npc>
+    <npc id="32" skin="0" type="driver" recording="HaiwaytoHell3">
+        <vehicle model="415" paintjob="0" />
+    </npc>
 </npcs>
