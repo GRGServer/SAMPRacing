@@ -8,6 +8,15 @@ public OnPlayerSpawn(playerid)
 			PutPlayerInVehicle(playerid, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
 			SetVehicleEngineState(g_npcs[npcID][E_NPC_VEHICLE_ID], true);
 		}
+
+		// This NPC is used for a race
+		if (PVar:playerid[RACE_ID] != -1)
+		{
+			PVar:playerid[RACE_READY] = true;
+
+			TryStartRace(PVar:playerid[RACE_ID]);
+		}
+
 		return true;
 	}
 
@@ -88,6 +97,8 @@ public OnPlayerSpawn(playerid)
 			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
 
 			SetCameraBehindPlayer(playerid);
+
+			TogglePlayerControllable(playerid, false);
 
 			PVar:playerid[RACE_STARTED] = true;
 

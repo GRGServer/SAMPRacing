@@ -33,8 +33,6 @@ public OnScreenFaderEnded(playerID)
 				UpdateRaceLobby(playerID);
 				PVar:playerID[RACE_LOBBYUPDATETIMER] = SetTimerEx("Timer_UpdateRaceLobby", TIMER_UPDATERACELOBBY, true, "d", playerID);
 
-				TogglePlayerControllable(playerID, false);
-
 				FadeInScreen(playerID, 5, SCREENFADER_RACE_ENTERLOBBY);
 			}
 			case SCREENFADER_RACE_LEAVELOBBY:
@@ -76,7 +74,9 @@ public OnScreenFaderEnded(playerID)
 			}
 			case SCREENFADER_RACE_START:
 			{
-				// TODO: Start the race count down
+				PVar:playerID[RACE_READY] = true;
+
+				TryStartRace(PVar:playerID[RACE_ID]);
 			}
 			case SCREENFADER_TELEPORT:
 			{

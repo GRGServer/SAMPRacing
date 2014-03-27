@@ -116,6 +116,7 @@
 #include <grgserver/functions/StrNotNull.inc>
 #include <grgserver/functions/TeleportTo.inc>
 #include <grgserver/functions/TeleportToInterior.inc>
+#include <grgserver/functions/TryStartRace.inc>
 #include <grgserver/functions/UpdateGarage.inc>
 #include <grgserver/functions/UpdateObjectEditorInfo.inc>
 #include <grgserver/functions/UpdateObjectsForAllPlayers.inc>
@@ -186,6 +187,7 @@
 // timers
 #include <grgserver/timers/EveryMinute.inc>
 #include <grgserver/timers/EverySecond.inc>
+#include <grgserver/timers/RaceCountDown.inc>
 #include <grgserver/timers/ResetDriftingStats.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>

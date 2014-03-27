@@ -1489,6 +1489,14 @@
             Du bist jetzt der Host von diesem Rennen
         </de>
     </string>
+    <string id="186">
+        <en>
+            Go!
+        </en>
+        <de>
+            Los!
+        </de>
+    </string>
     <string id="187">
         <en>
             Record a new NPC and optionally playback other NPCs

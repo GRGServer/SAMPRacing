@@ -100,6 +100,7 @@
 // Races
 #define RACE_CHECKPOINT_SIZE			10
 #define RACE_DISQUALIFICATION_TIMEOUT		30
+#define RACE_PLAYERCOUNT			4
 
 
 // Register

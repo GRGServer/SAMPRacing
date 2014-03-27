@@ -7,6 +7,8 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			return false;
 		}
 
+		new players;
+
 		PlayerLoop(playerID)
 		{
 			if (PVar:playerID[RACE_ID] == PVar:playerid[RACE_ID])
@@ -25,7 +27,15 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 				CancelSelectTextDraw(playerID);
 
 				FadeOutScreen(playerID, 5, 0, 0, 0, SCREENFADER_RACE_START);
+
+				players++;
 			}
+		}
+
+		// Add NPCs if required player count not reached
+		for (new player = players + 1; player <= RACE_PLAYERCOUNT; player++)
+		{
+			// TODO: Connect correct NPC
 		}
 
 		return true;
