@@ -104,4 +104,24 @@
             <component>1087</component>
         </vehicle>
     </npc>
+    <npc id="27" skin="0" type="driver" recording="CurveSprint1">
+        <vehicle model="475" paintjob="0">
+            <component>1010</component>
+            <component>1096</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="28" skin="0" type="driver" recording="CurveSprint2">
+        <vehicle model="477" paintjob="0">
+            <component>1006</component>
+            <component>1007</component>
+            <component>1010</component>
+            <component>1018</component>
+            <component>1074</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="29" skin="0" type="driver" recording="CurveSprint3">
+        <vehicle model="496" paintjob="0" />
+    </npc>
 </npcs>
