@@ -19,6 +19,7 @@ CreateGarageVehicle(playerID, row)
 	new Float:vehiclePosY;
 	new Float:vehiclePosZ;
 	new Float:vehicleAngle;
+	new interior;
 
 	switch (g_garages[garageNumber][E_GARAGE_TYPE])
 	{
@@ -28,6 +29,8 @@ CreateGarageVehicle(playerID, row)
 			vehiclePosY = GARAGE_LARGE_VEHICLE_POSY;
 			vehiclePosZ = GARAGE_LARGE_VEHICLE_POSZ;
 			vehicleAngle = GARAGE_LARGE_VEHICLE_ANGLE;
+
+			interior = GARAGE_LARGE_INTERIOR;
 		}
 		case GARAGE_SMALL:
 		{
@@ -35,6 +38,8 @@ CreateGarageVehicle(playerID, row)
 			vehiclePosY = GARAGE_SMALL_VEHICLE_POSY;
 			vehiclePosZ = GARAGE_SMALL_VEHICLE_POSZ;
 			vehicleAngle = GARAGE_SMALL_VEHICLE_ANGLE;
+
+			interior = GARAGE_SMALL_INTERIOR;
 		}
 	}
 
@@ -51,8 +56,8 @@ CreateGarageVehicle(playerID, row)
 		return;
 	}
 
-	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerInterior(playerID));
-	SetVehicleVirtualWorld(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerVirtualWorld(playerID));
+	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], interior);
+	SetVehicleVirtualWorld(PVar:playerID[GARAGE_VEHICLE_ID], VIRTUALWORLD_GARAGE + playerID);
 
 	FormatNew:string[256]("%s~n~%d / %d", g_vehicleModels[GetVehicleModel(PVar:playerID[GARAGE_VEHICLE_ID]) - 400][E_VEHICLEMODEL_NAME], row + 1, cache_get_row_count());
 	PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], string);

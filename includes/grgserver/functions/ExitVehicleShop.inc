@@ -3,7 +3,7 @@ ExitVehicleShop(playerID, buy)
 	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_CTRL_INFO]);
 	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_VEHICLESHOP_VEHICLE_INFO]);
 
-	SetPrivateWorld(playerID, false);
+	SetPlayerVirtualWorld(playerID, 0);
 
 	new vehicleShopID = PVar:playerID[VEHICLESHOP_ID];
 

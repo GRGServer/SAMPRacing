@@ -14,7 +14,7 @@ EnterVehicleShop(playerID, shopID, respawnOldPos)
 	GetPlayerFacingAngle(playerID, PVar:playerID[VEHICLESHOP_OLDANGLE]);
 	PVar:playerID[VEHICLESHOP_OLDINTERIOR] = GetPlayerInterior(playerID);
 
-	SetPrivateWorld(playerID, true);
+	SetPlayerVirtualWorld(playerID, VIRTUALWORLD_VEHICLESHOP + playerID);
 
 	TogglePlayerSpectating(playerID, true);
 	SetPlayerCameraPosEx(playerID, SHOP_VEHICLE_CAM_POSX, SHOP_VEHICLE_CAM_POSY, SHOP_VEHICLE_CAM_POSZ, SHOP_VEHICLE_VEH_POSX, SHOP_VEHICLE_VEH_POSY, SHOP_VEHICLE_VEH_POSZ);

@@ -176,6 +176,13 @@
 #define TIMER_UPDATERACELOBBY			2000
 
 
+// Virtual worlds
+#define VIRTUALWORLD_GARAGE			1000// First virtual world for garages (Each player has a virtual world)
+#define VIRTUALWORLD_MODSHOP			2000// First virtual world used for mod shops (Each player has a virtual world)
+#define VIRTUALWORLD_RACE			3000// First virtual world used for races (Each race has a virtual world)
+#define VIRTUALWORLD_VEHICLESHOP		4000// First virtual world used for vehicles shops (Each player has a virtual world)
+
+
 // Area types
 enum
 {

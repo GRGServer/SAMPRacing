@@ -29,6 +29,10 @@ public OnPlayerEnterRaceCheckpoint(playerid)
 			PVar:playerid[RACE_STARTED] = false;
 
 			PlayerTextDrawHide(playerid, g_playerTextDraws[playerid][E_PTD_RACE_BOTTOM]);
+
+			SetPlayerVirtualWorld(playerid, 0);
+			SetVehicleVirtualWorld(GetPlayerVehicleID(playerid), 0);
+
 			return true;
 		}
 	}

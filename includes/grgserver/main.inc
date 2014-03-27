@@ -110,7 +110,6 @@
 #include <grgserver/functions/SendNPCCommand.inc>
 #include <grgserver/functions/SetPlayerCameraPosEx.inc>
 #include <grgserver/functions/SetPlayerSpawn.inc>
-#include <grgserver/functions/SetPrivateWorld.inc>
 #include <grgserver/functions/SetVehicleEngineState.inc>
 #include <grgserver/functions/ShowRaceCheckpoint.inc>
 #include <grgserver/functions/SpawnVehicle.inc>

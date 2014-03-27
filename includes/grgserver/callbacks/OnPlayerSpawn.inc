@@ -25,7 +25,7 @@ public OnPlayerSpawn(playerid)
 			SetVehicleZAngle(vehicleID, PVar:playerid[SPAWN_ANGLE]);
 
 			LinkVehicleToInterior(vehicleID, PVar:playerid[SPAWN_INTERIOR]);
-			SetVehicleVirtualWorld(vehicleID, GetPlayerVirtualWorld(playerid));
+			SetVehicleVirtualWorld(vehicleID, 0);
 			PutPlayerInVehicle(playerid, vehicleID, 0);
 
 			SetCameraBehindPlayer(playerid);
@@ -50,7 +50,7 @@ public OnPlayerSpawn(playerid)
 			SetVehicleZAngle(vehicleID, PVar:playerid[SPAWN_ANGLE]);
 
 			LinkVehicleToInterior(vehicleID, PVar:playerid[SPAWN_INTERIOR]);
-			SetVehicleVirtualWorld(vehicleID, GetPlayerVirtualWorld(playerid));
+			SetVehicleVirtualWorld(vehicleID, 0);
 			PutPlayerInVehicle(playerid, vehicleID, 0);
 
 			SetCameraBehindPlayer(playerid);
@@ -70,6 +70,9 @@ public OnPlayerSpawn(playerid)
 			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
 
 			SetPlayerInterior(playerid, 0);
+			SetPlayerVirtualWorld(playerid, 0);
+
+			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], 0);
 
 			SetCameraBehindPlayer(playerid);
 
@@ -80,6 +83,9 @@ public OnPlayerSpawn(playerid)
 			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
 
 			SetPlayerInterior(playerid, 0);
+			SetPlayerVirtualWorld(playerid, VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
+
+			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
 
 			SetCameraBehindPlayer(playerid);
 

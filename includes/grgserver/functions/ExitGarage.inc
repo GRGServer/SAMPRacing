@@ -9,7 +9,7 @@ ExitGarage(playerID, withVehicle)
 	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO]);
 	PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO]);
 
-	SetPrivateWorld(playerID, false);
+	SetPlayerVirtualWorld(playerID, 0);
 
 	new spawnType = withVehicle ? SPAWNTYPE_GETGARAGEVEHICLE : SPAWNTYPE_DEFAULT;
 

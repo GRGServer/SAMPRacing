@@ -16,7 +16,7 @@ public OnGarageVehiclesLoaded(playerID)
 	GetPlayerFacingAngle(playerID, PVar:playerID[GARAGE_OLDANGLE]);
 	PVar:playerID[GARAGE_OLDINTERIOR] = GetPlayerInterior(playerID);
 
-	SetPrivateWorld(playerID, true);
+	SetPlayerVirtualWorld(playerID, VIRTUALWORLD_GARAGE + playerID);
 
 	TogglePlayerSpectating(playerID, true);
 

@@ -4,7 +4,8 @@ CMD:spawn(playerID, params[], StringID:143("Teleport yourself to the spawn locat
 	SetPlayerFacingAngle(playerID, SPAWN_ANGLE);
 	SetPlayerInterior(playerID, SPAWN_INTERIOR);
 	SetCameraBehindPlayer(playerID);
-	SetPrivateWorld(playerID, false);
+
+	SetPlayerVirtualWorld(playerID, 0);
 
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:144("You got teleported to the spawn location"));
 
