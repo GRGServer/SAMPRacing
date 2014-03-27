@@ -10,6 +10,7 @@ public OnScreenFaderEnded(playerID)
 				TogglePlayerSpectating(playerID, true);
 
 				new raceID = PVar:playerID[RACE_ID];
+
 				PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE], g_races[raceID][E_RACE_NAME]);
 
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND]);
@@ -20,8 +21,14 @@ public OnScreenFaderEnded(playerID)
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_PLAYERLIST]);
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_VEHICLELIST]);
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_LEVELLIST]);
-				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START]);
 				PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_LEAVE]);
+
+				if (g_races[raceID][E_RACE_HOSTPLAYERID] == INVALID_PLAYER_ID)
+				{
+					g_races[raceID][E_RACE_HOSTPLAYERID] = playerID;
+
+					PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START]);
+				}
 
 				UpdateRaceLobby(playerID);
 				PVar:playerID[RACE_LOBBYUPDATETIMER] = SetTimerEx("Timer_UpdateRaceLobby", TIMER_UPDATERACELOBBY, true, "d", playerID);

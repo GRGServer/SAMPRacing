@@ -8,6 +8,7 @@ ReloadRaces()
 		{
 			g_races[index][E_RACE:field] = 0;
 		}
+		g_races[index][E_RACE_HOSTPLAYERID] = INVALID_PLAYER_ID;
 	}
 
 	new raceID;
