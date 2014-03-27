@@ -46,6 +46,7 @@
 #include <grgserver/functions/DestroyPickupsOfType.inc>
 #include <grgserver/functions/DestroyVehicleEx.inc>
 #include <grgserver/functions/DisqualifyRacePlayer.inc>
+#include <grgserver/functions/EndRace.inc>
 #include <grgserver/functions/EnterGarage.inc>
 #include <grgserver/functions/EnterVehicleShop.inc>
 #include <grgserver/functions/ExecuteCommand.inc>

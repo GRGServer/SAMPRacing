@@ -46,6 +46,16 @@ SaveRaces()
 			XML_SetFloatAttribute(checkpointNode, "y", g_races[raceID][E_RACE_CHECKPOINT_POSY][checkpointID]);
 			XML_SetFloatAttribute(checkpointNode, "z", g_races[raceID][E_RACE_CHECKPOINT_POSZ][checkpointID]);
 		}
+
+		Count(npcID, MAX_RACENPCS)
+		{
+			if (g_races[raceID][E_RACE_NPCS][npcID] != -1)
+			{
+				new XMLNode:npcNode = XML_CreateNode(raceNode, "npc");
+
+				XML_SetIntAttribute(npcNode, "id", g_races[raceID][E_RACE_NPCS][npcID]);
+			}
+		}
 	}
 
 	XML_SaveDocument(xml);

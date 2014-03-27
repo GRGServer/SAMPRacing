@@ -8,6 +8,12 @@ ReloadRaces()
 		{
 			g_races[index][E_RACE:field] = 0;
 		}
+
+		Count(npcID, MAX_RACENPCS)
+		{
+			g_races[index][E_RACE_NPCS][npcID] = -1;
+		}
+
 		g_races[index][E_RACE_HOSTPLAYERID] = INVALID_PLAYER_ID;
 	}
 
@@ -29,7 +35,6 @@ ReloadRaces()
 		g_races[raceID][E_RACE_LEVEL] = XML_GetIntAttribute(raceNode, "level");
 
 		new checkpointID;
-
 		new XMLNode:checkpointNode = XML_GetFirstChild(raceNode, "checkpoint");
 		while (checkpointNode)
 		{
@@ -46,6 +51,23 @@ ReloadRaces()
 			checkpointID++;
 
 			checkpointNode = XML_GetNextSibling(checkpointNode, "checkpoint");
+		}
+
+		new npcID;
+		new XMLNode:npcNode = XML_GetFirstChild(raceNode, "npc");
+		while (npcNode)
+		{
+			if (npcID >= MAX_RACENPCS)
+			{
+				printf("  Reached limit of %d race NPCs", MAX_RACENPCS);
+				break;
+			}
+
+			g_races[raceID][E_RACE_NPCS][npcID] = XML_GetIntAttribute(npcNode, "id");
+
+			npcID++;
+
+			npcNode = XML_GetNextSibling(npcNode, "npc");
 		}
 
 		raceID++;

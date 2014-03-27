@@ -25,13 +25,7 @@ public OnPlayerEnterRaceCheckpoint(playerid)
 		{
 			GameTextForPlayer(playerid, LanguageString(playerid, StringID:167("Finish!")), 3000, 3);
 
-			PVar:playerid[RACE_ID] = -1;
-			PVar:playerid[RACE_STARTED] = false;
-
-			PlayerTextDrawHide(playerid, g_playerTextDraws[playerid][E_PTD_RACE_BOTTOM]);
-
-			SetPlayerVirtualWorld(playerid, 0);
-			SetVehicleVirtualWorld(GetPlayerVehicleID(playerid), 0);
+			EndRace(playerid);
 
 			return true;
 		}

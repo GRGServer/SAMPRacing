@@ -2,6 +2,18 @@ public OnPlayerDisconnect(playerid, reason)
 {
 	if (IsPlayerNPC(playerid))
 	{
+		new prefix[MAX_PLAYER_NAME];
+		new npcID;
+		sscanf(GetPlayerNameEx(playerid), "p<_>s[10]d", prefix, npcID);
+
+		if (npcID >=0 && npcID < MAX_NPCS)
+		{
+			if (g_npcs[npcID][E_NPC_VEHICLE_ID] != INVALID_VEHICLE_ID)
+			{
+				DestroyVehicleEx(g_npcs[npcID][E_NPC_VEHICLE_ID]);
+			}
+		}
+
 		ResetPlayerVariables(playerid);
 
 		return true;
@@ -57,6 +69,8 @@ public OnPlayerDisconnect(playerid, reason)
 				break;
 			}
 		}
+
+		EndRace(playerid);
 	}
 
 	ResetPlayerVariables(playerid);

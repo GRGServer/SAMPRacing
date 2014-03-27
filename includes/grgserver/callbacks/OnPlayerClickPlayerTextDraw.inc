@@ -2,7 +2,9 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 {
 	if (playertextid == g_playerTextDraws[playerid][E_PTD_RACELOBBY_BUTTON_START])
 	{
-		if (g_races[PVar:playerid[RACE_ID]][E_RACE_HOSTPLAYERID] != playerid)
+		new raceID = PVar:playerid[RACE_ID];
+
+		if (g_races[raceID][E_RACE_HOSTPLAYERID] != playerid)
 		{
 			return false;
 		}
@@ -11,7 +13,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 
 		PlayerLoop(playerID)
 		{
-			if (PVar:playerID[RACE_ID] == PVar:playerid[RACE_ID])
+			if (PVar:playerID[RACE_ID] == raceID)
 			{
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND]);
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE]);
@@ -33,9 +35,20 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 		}
 
 		// Add NPCs if required player count not reached
+		new npcID;
 		for (new player = players + 1; player <= RACE_PLAYERCOUNT; player++)
 		{
-			// TODO: Connect correct NPC
+			if (npcID >= MAX_RACENPCS)
+			{
+				break;
+			}
+
+			if (g_races[raceID][E_RACE_NPCS][npcID] != -1)
+			{
+				ConnectNPCEx(g_races[raceID][E_RACE_NPCS][npcID]);
+			}
+
+			npcID++;
 		}
 
 		return true;

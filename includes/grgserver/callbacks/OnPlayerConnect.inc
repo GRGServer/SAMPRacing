@@ -60,6 +60,27 @@ public OnPlayerConnect(playerid)
 		FormatNew:command[100]("%s %d %s", NPCCMD_SETRECORDING, g_npcs[npcID][E_NPC_RECORDING_TYPE], g_npcs[npcID][E_NPC_RECORDING_NAME]);
 		SendNPCCommand(playerid, command);
 
+		Foreach(raceID, g_races)
+		{
+			new foundRaceNPC;
+			Count(raceNPCID, MAX_RACENPCS)
+			{
+				if (g_races[raceID][E_RACE_NPCS][raceNPCID] == npcID)
+				{
+					PVar:playerid[RACE_ID] = raceID;
+					PVar:playerid[RACE_VEHICLEID] = g_npcs[npcID][E_NPC_VEHICLE_ID];
+
+					foundRaceNPC = true;
+					break;
+				}
+			}
+
+			if (foundRaceNPC)
+			{
+				break;
+			}
+		}
+
 		return true;
 	}
 
