@@ -61,35 +61,47 @@
         <vehicle model="415" paintjob="0" />
     </npc>
     <npc id="20" skin="0" type="driver" recording="TheSFRound3">
-        <vehicle model="562" paintjob="1">
-            <component>1147</component>
-            <component>1035</component>
-            <component>1036</component>
-            <component>1010</component>
-            <component>1037</component>
-            <component>1079</component>
-            <component>1087</component>
-            <component>1171</component>
-            <component>1148</component>
-        </vehicle>
+        <vehicle model="562" paintjob="1" />
     </npc>
     <npc id="21" skin="0" type="driver" recording="TheLargestRound1">
-        <vehicle model="429" paintjob="0">
-            <component>1010</component>
-            <component>1078</component>
-            <component>1087</component>
-        </vehicle>
+        <vehicle model="429" paintjob="0" />
     </npc>
     <npc id="22" skin="0" type="driver" recording="TheLargestRound2">
-        <vehicle model="405" paintjob="0">
-            <component>1023</component>
-            <component>1010</component>
-            <component>1018</component>
-            <component>1078</component>
-            <component>1087</component>
-        </vehicle>
+        <vehicle model="405" paintjob="0" />
     </npc>
     <npc id="23" skin="0" type="driver" recording="TheLargestRound3">
         <vehicle model="419" paintjob="0" />
+    </npc>
+    <npc id="24" skin="0" type="driver" recording="MiniSprint1">
+        <vehicle model="401" paintjob="0">
+            <component>1003</component>
+            <component>1004</component>
+            <component>1006</component>
+            <component>1007</component>
+            <component>1013</component>
+            <component>1010</component>
+            <component>1019</component>
+            <component>1085</component>
+            <component>1087</component>
+            <component>1145</component>
+        </vehicle>
+    </npc>
+    <npc id="25" skin="0" type="driver" recording="MiniSprint2">
+        <vehicle model="410" paintjob="0">
+            <component>1003</component>
+            <component>1007</component>
+            <component>1024</component>
+            <component>1010</component>
+            <component>1019</component>
+            <component>1097</component>
+            <component>1087</component>
+        </vehicle>
+    </npc>
+    <npc id="26" skin="0" type="driver" recording="MiniSprint3">
+        <vehicle model="475" paintjob="0">
+            <component>1010</component>
+            <component>1096</component>
+            <component>1087</component>
+        </vehicle>
     </npc>
 </npcs>
