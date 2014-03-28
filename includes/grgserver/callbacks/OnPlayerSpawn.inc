@@ -2,24 +2,16 @@ public OnPlayerSpawn(playerid)
 {
 	if (IsPlayerNPC(playerid))
 	{
+		SetPlayerVirtualWorld(playerid, VIRTUALWORLD_IDLENPC);
+
 		new npcID = PVar:playerid[NPCID];
+
 		if (g_npcs[npcID][E_NPC_VEHICLE_ID] != INVALID_VEHICLE_ID && g_npcs[npcID][E_NPC_RECORDING_TYPE] == PLAYER_RECORDING_TYPE_DRIVER)
 		{
 			PutPlayerInVehicle(playerid, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
 			SetVehicleEngineState(g_npcs[npcID][E_NPC_VEHICLE_ID], true);
 
-			// This NPC is used for a race
-			if (PVar:playerid[RACE_ID] != -1)
-			{
-				SetPlayerVirtualWorld(playerid, VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
-
-				SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
-
-				PVar:playerid[RACE_READY] = true;
-				PVar:playerid[RACE_STARTED] = true;
-
-				TryStartRace(PVar:playerid[RACE_ID]);
-			}
+			SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_IDLENPC);
 		}
 
 		return true;

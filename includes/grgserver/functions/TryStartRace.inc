@@ -2,7 +2,7 @@ TryStartRace(raceID)
 {
 	PlayerLoop(playerID)
 	{
-		if (PVar:playerID[RACE_ID] == raceID && !PVar:playerID[RACE_READY])
+		if (PVar:playerID[RACE_ID] == raceID && !PVar:playerID[RACE_READY] && !IsPlayerNPC(playerID))
 		{
 			return false;
 		}

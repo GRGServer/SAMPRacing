@@ -34,6 +34,8 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			}
 		}
 
+		new start = GetTickCount();
+
 		// Add NPCs if required player count not reached
 		new npcID;
 		for (new player = players + 1; player <= RACE_PLAYERCOUNT; player++)
@@ -45,11 +47,22 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 
 			if (g_races[raceID][E_RACE_NPCS][npcID] != -1)
 			{
-				ConnectNPCEx(g_races[raceID][E_RACE_NPCS][npcID]);
+				PlayerLoop(currentPlayerID)
+				{
+					if (PVar:currentPlayerID[NPCID] == g_races[raceID][E_RACE_NPCS][npcID])
+					{
+						SetPlayerVirtualWorld(currentPlayerID, VIRTUALWORLD_RACE + raceID);
+						SetVehicleVirtualWorld(GetPlayerVehicleID(currentPlayerID), VIRTUALWORLD_RACE + raceID);
+
+						break;
+					}
+				}
 			}
 
 			npcID++;
 		}
+
+		printf("NPCs connected in %d ms", GetTickCount() - start);
 
 		return true;
 	}

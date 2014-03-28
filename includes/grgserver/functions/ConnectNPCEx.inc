@@ -1,4 +1,5 @@
-ConnectNPCEx(npcID)
+forward ConnectNPCEx(npcID);
+public ConnectNPCEx(npcID)
 {
 	FormatNew:name[MAX_PLAYER_NAME]("NPC_%d", npcID);
 

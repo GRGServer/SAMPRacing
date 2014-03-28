@@ -72,6 +72,8 @@ ReloadNPCs()
 			}
 		}
 
+		SetTimerEx("ConnectNPCEx", (npcID / 10) * 10000, false, "d", npcID);
+
 		npcID++;
 
 		npcNode = XML_GetNextSibling(npcNode, "npc");

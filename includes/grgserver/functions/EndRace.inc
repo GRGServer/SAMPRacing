@@ -43,7 +43,7 @@ EndRace(playerID)
 		{
 			if (PVar:currentPlayerID[RACE_ID] == raceID && IsPlayerNPC(currentPlayerID))
 			{
-				Kick(currentPlayerID);
+				SetPlayerVirtualWorld(currentPlayerID, VIRTUALWORLD_IDLENPC);
 			}
 		}
 	}

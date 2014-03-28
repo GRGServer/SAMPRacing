@@ -54,11 +54,6 @@ PCMD:recnpc[ISADMIN](playerID, params[], StringID:187("Record a new NPC and opti
 			{
 				if (g_npcs[npcID][E_NPC_ID] == requestedNPCID)
 				{
-					if (!ConnectNPCEx(npcID))
-					{
-						return COMMAND_ERROR;
-					}
-
 					PVar:playerID[RECNPC_PLAYNPCS][connectedPlayNPCs] = npcID;
 
 					connectedPlayNPCs++;
