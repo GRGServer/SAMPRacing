@@ -43,6 +43,11 @@ PCMD:recnpc[ISADMIN](playerID, params[], StringID:187("Record a new NPC and opti
 	new playNPCsArray[MAX_RECNPC_PLAYNPCS][MAX_PLAYER_NAME];
 	explode(playNPCs, playNPCsArray);
 
+	Count(npcID, MAX_RECNPC_PLAYNPCS)
+	{
+		PVar:playerID[RECNPC_PLAYNPCS][npcID] = -1;
+	}
+
 	new connectedPlayNPCs;
 	Foreach(playNPCsIndex, playNPCsArray)
 	{
