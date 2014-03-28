@@ -6,7 +6,7 @@ UpdateRaceLobby(playerID)
 
 	PlayerLoop(currentPlayerID)
 	{
-		if (PVar:currentPlayerID[RACE_ID] == PVar:playerID[RACE_ID])
+		if (PVar:currentPlayerID[RACE_ID] == PVar:playerID[RACE_ID] && !IsPlayerNPC(currentPlayerID))
 		{
 			new vehicleModelID = GetVehicleModel(PVar:currentPlayerID[RACE_VEHICLEID]);
 			if (vehicleModelID)
