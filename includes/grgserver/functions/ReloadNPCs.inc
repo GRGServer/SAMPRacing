@@ -4,6 +4,14 @@ ReloadNPCs()
 
 	Foreach(index, g_npcs)
 	{
+		PlayerLoop(playerID)
+		{
+			if (PVar:playerID[NPCID] == index && IsPlayerNPC(playerID))
+			{
+				Kick(playerID);
+			}
+		}
+
 		Foreach(field, g_npcs[])
 		{
 			g_npcs[index][E_NPC:field] = 0;
