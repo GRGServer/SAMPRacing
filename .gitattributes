@@ -12,6 +12,9 @@
 *.ogg binary
 *.so binary
 
+# NPC recordings are binary files
+*.rec binary
+
 # Extensionless binary files
 announce binary
 samp-npc binary
