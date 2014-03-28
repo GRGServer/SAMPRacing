@@ -60,7 +60,7 @@ ReloadNPCs()
 
 			new componentID;
 
-			new XMLNode:componentNode = XML_GetFirstChild(npcNode, "component");
+			new XMLNode:componentNode = XML_GetFirstChild(vehicleNode, "component");
 			while (componentNode)
 			{
 				if (componentID >= MAX_VEHICLECOMPONENT_SLOTS)
