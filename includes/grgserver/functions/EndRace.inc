@@ -38,7 +38,7 @@ EndRace(playerID)
 
 	if (!foundPlayers)
 	{
-		// Kick all NPCs assigned to the race
+		// Change virtual world of all NPCs assigned to the race
 		PlayerLoop(currentPlayerID)
 		{
 			if (PVar:currentPlayerID[RACE_ID] == raceID && IsPlayerNPC(currentPlayerID))
