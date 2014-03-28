@@ -1513,28 +1513,28 @@
             Limit von %d NPCs erreicht!
         </de>
     </string>
-    <string id="190">
+    <string id="189">
         <en>
-            Put a NPC in your current vehicle
+            Show which NPCs are assigned to a specific race
         </en>
         <de>
-            Setze einen NPC in dein aktuellen Fahrzeug
+            Zeige welche NPCs mit einem bestimmten Rennen verknüpft sind
+        </de>
+    </string>
+    <string id="190">
+        <en>
+            NPCs assigned to race %d (%s):
+        </en>
+        <de>
+            NPCs verknüpft mit Rennen %d (%s):
         </de>
     </string>
     <string id="191">
         <en>
-            You must not be the driver of this vehicle!
+            %d NPCs
         </en>
         <de>
-            Du darfst nicht der Fahrer von diesem Fahrzeug sein!
-        </de>
-    </string>
-    <string id="192">
-        <en>
-            The NPC is now the driver of your vehicle
-        </en>
-        <de>
-            Der NPC ist nun der Fahrer von deinem Fahrzeug
+            %d NPCs
         </de>
     </string>
     <string id="193">
