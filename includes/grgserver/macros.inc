@@ -5,7 +5,7 @@
 #define PCMD:%0[%1](%2,%3,%4) COMMAND:%0(%2, %3) if (!PVar:%2[%1]) return COMMAND_PERMISSION_DENIED; else
 
 // COMMAND:name(playerID, params)
-#define COMMAND:%0(%1,%2) forward cmd_%0(%1, %2); public cmd_%0(%1, %2) if (!PVar:%1[ALLOWCMDS]) return COMMAND_NO_CMDS_ALLOWED; else
+#define COMMAND:%0(%1,%2) forward cmd_%0(%1, %2); public cmd_%0(%1, %2) if (!PVar:%1[ALLOWCMDS] && !PVar:%1[ISADMIN]) return COMMAND_NO_CMDS_ALLOWED; else
 
 // AddLine:string(string[, formatParameters])
 #define AddLine:%0(%1) if (strlen(%0)) strcat(%0, "\n"); Format:g_addLineString(%1); strcat(%0, g_addLineString)
