@@ -7,6 +7,11 @@ PCMD:makeadmin[ISADMIN](playerID, params[], StringID:51("Give admin privileges t
 		return COMMAND_USAGE;
 	}
 
+	if (targetPlayerID == INVALID_PLAYER_ID)
+	{
+		return COMMAND_PLAYER_NOT_FOUND;
+	}
+
 	PVar:targetPlayerID[ISADMIN] = true;
 
 	MySQLFormat("UPDATE `users` SET `isAdmin` = %d WHERE `id` = %d", PVar:targetPlayerID[ISADMIN], PVar:targetPlayerID[USERID]);
