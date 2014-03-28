@@ -66,7 +66,8 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 					new npcPlayerID = GetPlayerID(name);
 					if (npcPlayerID != INVALID_PLAYER_ID)
 					{
-						Kick(npcPlayerID);
+						SendNPCCommand(npcPlayerID, NPCCMD_STOP);
+						SetPlayerVirtualWorld(npcPlayerID, VIRTUALWORLD_IDLENPC);
 					}
 				}
 			}

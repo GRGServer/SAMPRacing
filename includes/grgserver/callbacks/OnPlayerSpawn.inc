@@ -8,10 +8,10 @@ public OnPlayerSpawn(playerid)
 
 		if (g_npcs[npcID][E_NPC_VEHICLE_ID] != INVALID_VEHICLE_ID && g_npcs[npcID][E_NPC_RECORDING_TYPE] == PLAYER_RECORDING_TYPE_DRIVER)
 		{
+			SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_IDLENPC);
+
 			PutPlayerInVehicle(playerid, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
 			SetVehicleEngineState(g_npcs[npcID][E_NPC_VEHICLE_ID], true);
-
-			SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_IDLENPC);
 		}
 
 		return true;

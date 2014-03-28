@@ -43,6 +43,7 @@ EndRace(playerID)
 		{
 			if (PVar:currentPlayerID[RACE_ID] == raceID && IsPlayerNPC(currentPlayerID))
 			{
+				SendNPCCommand(currentPlayerID, NPCCMD_STOP);
 				SetPlayerVirtualWorld(currentPlayerID, VIRTUALWORLD_IDLENPC);
 			}
 		}

@@ -88,7 +88,7 @@ HandleCommand(command[], parameters[])
 		if (!g_recordingRunning)
 		{
 			StartRecordingPlayback(g_playbackType, g_recordingName);
-			PauseRecordingPlayback();
+			SetTimer("PauseRecordingPlaybackEx", 100, false);
 		}
 
 		return;
@@ -121,4 +121,10 @@ HandleCommand(command[], parameters[])
 	}
 
 	Log("Invalid command!");
+}
+
+forward PauseRecordingPlaybackEx();
+public PauseRecordingPlaybackEx()
+{
+	PauseRecordingPlayback();
 }

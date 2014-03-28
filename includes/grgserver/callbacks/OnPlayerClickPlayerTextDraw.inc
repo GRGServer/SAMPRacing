@@ -9,11 +9,9 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			return false;
 		}
 
-		new players;
-
 		PlayerLoop(playerID)
 		{
-			if (PVar:playerID[RACE_ID] == raceID)
+			if (PVar:playerID[RACE_ID] == raceID && !IsPlayerNPC(playerID))
 			{
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND]);
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE]);
@@ -29,40 +27,8 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 				CancelSelectTextDraw(playerID);
 
 				FadeOutScreen(playerID, 5, 0, 0, 0, SCREENFADER_RACE_START);
-
-				players++;
 			}
 		}
-
-		new start = GetTickCount();
-
-		// Add NPCs if required player count not reached
-		new npcID;
-		for (new player = players + 1; player <= RACE_PLAYERCOUNT; player++)
-		{
-			if (npcID >= MAX_RACENPCS)
-			{
-				break;
-			}
-
-			if (g_races[raceID][E_RACE_NPCS][npcID] != -1)
-			{
-				PlayerLoop(currentPlayerID)
-				{
-					if (PVar:currentPlayerID[NPCID] == g_races[raceID][E_RACE_NPCS][npcID])
-					{
-						SetPlayerVirtualWorld(currentPlayerID, VIRTUALWORLD_RACE + raceID);
-						SetVehicleVirtualWorld(GetPlayerVehicleID(currentPlayerID), VIRTUALWORLD_RACE + raceID);
-
-						break;
-					}
-				}
-			}
-
-			npcID++;
-		}
-
-		printf("NPCs connected in %d ms", GetTickCount() - start);
 
 		return true;
 	}
