@@ -2,6 +2,7 @@
 <objects>
     <object model="1315" interior="0" posX="2060.1672" posY="-1814.853" posZ="15.636871" rotX="0.000000" rotY="0.000000" rotZ="-95.00000" />
     <object model="19341" interior="0" posX="2015.7169" posY="-1806.525" posZ="13.382811" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object model="320" interior="0" posX="2046.6186" posY="-1812.484" posZ="13.382811" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
     <object model="18761" interior="0" posX="2075.0722" posY="-1751.645" posZ="17.514015" rotX="0.000000" rotY="0.000000" rotZ="-80.70001" />
     <object model="19122" interior="0" posX="2054.4582" posY="-1817.652" posZ="12.962818" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
     <object model="19122" interior="0" posX="2044.4077" posY="-1817.652" posZ="12.962818" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
