@@ -63,20 +63,4 @@ DialogResponse:ConfirmStartNPCRecording(playerID, response, listItem, inputText[
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:201("NPC recording started"));
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:203("Press %s to stop the recording"), GetGameTextKeyByID(KEY_RECNPC_STOP, IsPlayerInAnyVehicle(playerID)));
 	}
-	else
-	{
-		/*Count(playNPCIndex, MAX_RECNPC_PLAYNPCS)
-		{
-			new npcID = PVar:playerID[RECNPC_PLAYNPCS][playNPCIndex];
-			if (npcID != -1)
-			{
-				FormatNew:name[MAX_PLAYER_NAME]("NPC_%d", npcID);
-				new npcPlayerID = GetPlayerID(name);
-				if (npcPlayerID != INVALID_PLAYER_ID)
-				{
-					Kick(npcPlayerID);
-				}
-			}
-		}*/
-	}
 }
