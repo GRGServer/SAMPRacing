@@ -43,6 +43,8 @@ To compile the script on Windows you just have to execute the following commands
 ```
 cd gamemodes
 ../tools/pawn/pawncc.exe grgserver.pwn -i../includes -; -(
+cd ../npcmodes
+../tools/pawn/pawncc.exe npcplayer.pwn -i../includes -; -(
 ```
 
 On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory.
