@@ -22,6 +22,8 @@ PCMD:setracespawn[ISADMIN](playerID, params[], StringID:192("Set a spawn locatio
 
 	GetPlayerPos(playerID, g_races[raceID][E_RACE_SPAWN_POSX][spawn], g_races[raceID][E_RACE_SPAWN_POSY][spawn], g_races[raceID][E_RACE_SPAWN_POSZ][spawn]);
 
+	SaveRaces();
+
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:205("Spawn %d of race %d (%s) has been set"), spawn, raceID, g_races[raceID][E_RACE_NAME]);
 
 	return COMMAND_OK;
