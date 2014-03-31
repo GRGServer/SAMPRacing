@@ -44,6 +44,7 @@ EndRace(playerID)
 	if (!foundPlayers)
 	{
 		g_races[raceID][E_RACE_HOSTPLAYERID] = INVALID_PLAYER_ID;
+		g_races[raceID][E_RACE_STARTED] = false;// Race is no longer running
 
 		// Stop all NPCs assigned to the race
 		PlayerLoop(currentPlayerID)

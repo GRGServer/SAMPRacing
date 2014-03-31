@@ -9,6 +9,8 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			return false;
 		}
 
+		g_races[raceID][E_RACE_STARTED] = true;
+
 		PlayerLoop(playerID)
 		{
 			if (PVar:playerID[RACE_ID] == raceID && !IsPlayerNPC(playerID))

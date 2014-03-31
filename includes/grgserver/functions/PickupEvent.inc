@@ -39,31 +39,38 @@ PickupEvent(playerID, pickupID, eventType)
 			{
 				case PICKUPEVENT_KEY:
 				{
-					switch (GetPlayerVehicleSeat(playerID))
+					if (g_races[linkID][E_RACE_STARTED])
 					{
-						case -1:// Not in a vehicle
+						GameTextForPlayer(playerID, LanguageString(playerID, StringID:156("This race has been already started!")), 3000, 3);
+					}
+					else
+					{
+						switch (GetPlayerVehicleSeat(playerID))
 						{
-							GameTextForPlayer(playerID, LanguageString(playerID, StringID:14("You are not in a vehicle!")), 3000, 3);
-						}
-						case 0:// Is the driver of the vehicle
-						{
-							if (GetPlayerScore(playerID) >= g_races[linkID][E_RACE_LEVEL])
+							case -1:// Not in a vehicle
 							{
-								PVar:playerID[RACE_ID] = linkID;
-								PVar:playerID[ALLOWCMDS] = false;
-								PVar:playerID[RACE_LAP] = 1;
-								PVar:playerID[RACE_VEHICLEID] = GetPlayerVehicleID(playerID);
-								TogglePlayerControllable(playerID, false);
-								FadeOutScreen(playerID, 5, 0, 0, 0, SCREENFADER_RACE_ENTERLOBBY);
+								GameTextForPlayer(playerID, LanguageString(playerID, StringID:14("You are not in a vehicle!")), 3000, 3);
 							}
-							else
+							case 0:// Is the driver of the vehicle
 							{
-								GameTextForPlayer(playerID, LanguageString(playerID, StringID:179("You do not have the required level!")), 3000, 3);
+								if (GetPlayerScore(playerID) >= g_races[linkID][E_RACE_LEVEL])
+								{
+									PVar:playerID[RACE_ID] = linkID;
+									PVar:playerID[ALLOWCMDS] = false;
+									PVar:playerID[RACE_LAP] = 1;
+									PVar:playerID[RACE_VEHICLEID] = GetPlayerVehicleID(playerID);
+									TogglePlayerControllable(playerID, false);
+									FadeOutScreen(playerID, 5, 0, 0, 0, SCREENFADER_RACE_ENTERLOBBY);
+								}
+								else
+								{
+									GameTextForPlayer(playerID, LanguageString(playerID, StringID:179("You do not have the required level!")), 3000, 3);
+								}
 							}
-						}
-						default:// Any other seat (Not the driver)
-						{
-							GameTextForPlayer(playerID, LanguageString(playerID, StringID:19("You are not the driver of this vehicle!")), 3000, 3);
+							default:// Any other seat (Not the driver)
+							{
+								GameTextForPlayer(playerID, LanguageString(playerID, StringID:19("You are not the driver of this vehicle!")), 3000, 3);
+							}
 						}
 					}
 				}
