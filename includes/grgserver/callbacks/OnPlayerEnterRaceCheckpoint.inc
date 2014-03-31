@@ -31,18 +31,7 @@ public OnPlayerEnterRaceCheckpoint(playerid)
 		}
 	}
 
-	if (PVar:playerid[RACE_LAP] > 1 || PVar:playerid[RACE_CHECKPOINTID] || GetPlayerVehicleSeat(playerid) > 0)
-	{
-		ShowRaceCheckpoint(playerid, PVar:playerid[RACE_ID], nextCheckpointID);
-	}
-	else
-	{
-		// This is the first (start) checkpoint -> Show lobby
-		PVar:playerid[ALLOWCMDS] = false;
-		PVar:playerid[RACE_VEHICLEID] = GetPlayerVehicleID(playerid);
-		TogglePlayerControllable(playerid, false);
-		FadeOutScreen(playerid, 5, 0, 0, 0, SCREENFADER_RACE_ENTERLOBBY);
-	}
+	ShowRaceCheckpoint(playerid, PVar:playerid[RACE_ID], nextCheckpointID);
 
 	return true;
 }

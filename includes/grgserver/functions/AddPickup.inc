@@ -15,6 +15,10 @@ AddPickup(type, Float:posX, Float:posY, Float:posZ, linkID)
 		{
 			modelID = 1240;
 		}
+		case PICKUPTYPE_RACE:
+		{
+			modelID = 19130;
+		}
 		case PICKUPTYPE_VEHICLESHOP:
 		{
 			modelID = 1274;

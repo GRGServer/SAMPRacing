@@ -33,6 +33,12 @@ SaveRaces()
 
 		XML_SetIntAttribute(raceNode, "level", g_races[raceID][E_RACE_LEVEL]);
 
+		new XMLNode:pickupNode = XML_CreateNode(raceNode, "pickup");
+
+		XML_SetFloatAttribute(pickupNode, "x", g_races[raceID][E_RACE_PICKUP_POSX]);
+		XML_SetFloatAttribute(pickupNode, "y", g_races[raceID][E_RACE_PICKUP_POSY]);
+		XML_SetFloatAttribute(pickupNode, "z", g_races[raceID][E_RACE_PICKUP_POSZ]);
+
 		Count(checkpointID, MAX_RACECHECKPOINTS)
 		{
 			if (!g_races[raceID][E_RACE_CHECKPOINT_POSX][checkpointID] && !g_races[raceID][E_RACE_CHECKPOINT_POSY][checkpointID] && !g_races[raceID][E_RACE_CHECKPOINT_POSZ][checkpointID])

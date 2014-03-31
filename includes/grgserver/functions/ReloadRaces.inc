@@ -53,6 +53,16 @@ ReloadRaces()
 			checkpointNode = XML_GetNextSibling(checkpointNode, "checkpoint");
 		}
 
+		new XMLNode:pickupNode = XML_GetFirstChild(raceNode, "pickup");
+		if (pickupNode)
+		{
+			g_races[raceID][E_RACE_PICKUP_POSX] = XML_GetFloatAttribute(pickupNode, "x");
+			g_races[raceID][E_RACE_PICKUP_POSY] = XML_GetFloatAttribute(pickupNode, "y");
+			g_races[raceID][E_RACE_PICKUP_POSZ] = XML_GetFloatAttribute(pickupNode, "z");
+
+			AddPickup(PICKUPTYPE_RACE, g_races[raceID][E_RACE_PICKUP_POSX], g_races[raceID][E_RACE_PICKUP_POSY], g_races[raceID][E_RACE_PICKUP_POSZ], raceID);
+		}
+
 		new npcID;
 		new XMLNode:npcNode = XML_GetFirstChild(raceNode, "npc");
 		while (npcNode)

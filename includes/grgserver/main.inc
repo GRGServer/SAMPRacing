@@ -213,7 +213,6 @@
 #include <grgserver/commands/maptp.inc>
 #include <grgserver/commands/mobilevehicleshop.inc>
 #include <grgserver/commands/npccmd.inc>
-#include <grgserver/commands/race.inc>
 #include <grgserver/commands/racenpcs.inc>
 #include <grgserver/commands/recnpc.inc>
 #include <grgserver/commands/reload.inc>
