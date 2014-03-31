@@ -37,8 +37,7 @@ public OnScreenFaderEnded(playerID)
 			}
 			case SCREENFADER_RACE_LEAVELOBBY:
 			{
-				new raceID = PVar:playerID[RACE_ID];
-				SetPlayerSpawn(playerID, SPAWNTYPE_LEAVERACE, g_races[raceID][E_RACE_CHECKPOINT_POSX][0], g_races[raceID][E_RACE_CHECKPOINT_POSY][0], g_races[raceID][E_RACE_CHECKPOINT_POSZ][0], 0, 0);
+				PVar:playerID[SPAWN_TYPE] = SPAWNTYPE_LEAVERACE;
 
 				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
 				PVar:playerID[RACE_LOBBYUPDATETIMER] = 0;
@@ -51,7 +50,9 @@ public OnScreenFaderEnded(playerID)
 			case SCREENFADER_RACE_START:
 			{
 				new raceID = PVar:playerID[RACE_ID];
-				SetPlayerSpawn(playerID, SPAWNTYPE_STARTRACE, g_races[raceID][E_RACE_CHECKPOINT_POSX][0], g_races[raceID][E_RACE_CHECKPOINT_POSY][0], g_races[raceID][E_RACE_CHECKPOINT_POSZ][0], 0, 0);
+				new spawn = PVar:playerID[RACE_SPAWN];
+
+				SetPlayerSpawn(playerID, SPAWNTYPE_STARTRACE, g_races[raceID][E_RACE_SPAWN_POSX][spawn], g_races[raceID][E_RACE_SPAWN_POSY][spawn], g_races[raceID][E_RACE_SPAWN_POSZ][spawn], 0, 0);
 
 				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
 				PVar:playerID[RACE_LOBBYUPDATETIMER] = 0;

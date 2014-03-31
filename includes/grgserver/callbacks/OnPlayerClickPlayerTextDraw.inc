@@ -11,10 +11,13 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 
 		g_races[raceID][E_RACE_STARTED] = true;
 
+		new players;
 		PlayerLoop(playerID)
 		{
 			if (PVar:playerID[RACE_ID] == raceID && !IsPlayerNPC(playerID))
 			{
+				players++;
+
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BACKGROUND]);
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_TITLE]);
 				PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_HEADER1]);
@@ -29,6 +32,16 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 				CancelSelectTextDraw(playerID);
 
 				FadeOutScreen(playerID, 5, 0, 0, 0, SCREENFADER_RACE_START);
+			}
+		}
+
+		new spawnIndex = RACE_PLAYERCOUNT - players;// 4 players = Start at 0, 3 players = Start at 1 (0 = NPC), 2 players = Start at 2 (0 - 1 = NPC), 1 player = Start at 3 (0 - 2 = NPC)
+		PlayerLoop(playerID)
+		{
+			if (PVar:playerID[RACE_ID] == raceID && !IsPlayerNPC(playerID))
+			{
+				PVar:playerID[RACE_SPAWN] = spawnIndex;
+				spawnIndex++;
 			}
 		}
 

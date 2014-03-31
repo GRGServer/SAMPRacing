@@ -63,6 +63,25 @@ ReloadRaces()
 			AddPickup(PICKUPTYPE_RACE, g_races[raceID][E_RACE_PICKUP_POSX], g_races[raceID][E_RACE_PICKUP_POSY], g_races[raceID][E_RACE_PICKUP_POSZ], raceID);
 		}
 
+		new spawn;
+		new XMLNode:spawnNode = XML_GetFirstChild(raceNode, "spawn");
+		while (spawnNode)
+		{
+			if (spawn >= RACE_PLAYERCOUNT)
+			{
+				printf("  Reached limit of %d race spawns", RACE_PLAYERCOUNT);
+				break;
+			}
+
+			g_races[raceID][E_RACE_SPAWN_POSX][spawn] = XML_GetFloatAttribute(spawnNode, "x");
+			g_races[raceID][E_RACE_SPAWN_POSY][spawn] = XML_GetFloatAttribute(spawnNode, "y");
+			g_races[raceID][E_RACE_SPAWN_POSZ][spawn] = XML_GetFloatAttribute(spawnNode, "z");
+
+			spawn++;
+
+			spawnNode = XML_GetNextSibling(spawnNode, "spawn");
+		}
+
 		new npcID;
 		new XMLNode:npcNode = XML_GetFirstChild(raceNode, "npc");
 		while (npcNode)

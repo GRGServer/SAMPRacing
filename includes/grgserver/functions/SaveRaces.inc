@@ -53,6 +53,20 @@ SaveRaces()
 			XML_SetFloatAttribute(checkpointNode, "z", g_races[raceID][E_RACE_CHECKPOINT_POSZ][checkpointID]);
 		}
 
+		Count(spawn, RACE_PLAYERCOUNT)
+		{
+			if (!g_races[raceID][E_RACE_SPAWN_POSX][spawn] && !g_races[raceID][E_RACE_SPAWN_POSY][spawn] && !g_races[raceID][E_RACE_SPAWN_POSZ][spawn])
+			{
+				continue;
+			}
+
+			new XMLNode:spawnNode = XML_CreateNode(raceNode, "spawn");
+
+			XML_SetFloatAttribute(spawnNode, "x", g_races[raceID][E_RACE_SPAWN_POSX][spawn]);
+			XML_SetFloatAttribute(spawnNode, "y", g_races[raceID][E_RACE_SPAWN_POSY][spawn]);
+			XML_SetFloatAttribute(spawnNode, "z", g_races[raceID][E_RACE_SPAWN_POSZ][spawn]);
+		}
+
 		Count(npcID, MAX_RACENPCS)
 		{
 			if (g_races[raceID][E_RACE_NPCS][npcID] != -1)

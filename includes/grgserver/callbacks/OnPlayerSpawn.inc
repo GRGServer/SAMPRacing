@@ -86,12 +86,16 @@ public OnPlayerSpawn(playerid)
 		}
 		case SPAWNTYPE_STARTRACE:
 		{
+			new raceID = PVar:playerid[RACE_ID];
+
+			SetVehiclePos(PVar:playerid[RACE_VEHICLEID], PVar:playerid[SPAWN_POSX], PVar:playerid[SPAWN_POSY], PVar:playerid[SPAWN_POSZ]);
+
 			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
 
 			SetPlayerInterior(playerid, 0);
-			SetPlayerVirtualWorld(playerid, VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
+			SetPlayerVirtualWorld(playerid, VIRTUALWORLD_RACE + raceID);
 
-			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], VIRTUALWORLD_RACE + PVar:playerid[RACE_ID]);
+			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], VIRTUALWORLD_RACE + raceID);
 
 			SetCameraBehindPlayer(playerid);
 
@@ -99,7 +103,7 @@ public OnPlayerSpawn(playerid)
 
 			PVar:playerid[RACE_STARTED] = true;
 
-			ShowRaceCheckpoint(playerid, PVar:playerid[RACE_ID], 0);// Show the first checkpoint
+			ShowRaceCheckpoint(playerid, raceID, 0);// Show the first checkpoint
 
 			FadeInScreen(playerid, 5, SCREENFADER_RACE_START);
 		}
