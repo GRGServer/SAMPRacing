@@ -1537,6 +1537,14 @@
             %d NPCs
         </de>
     </string>
+    <string id="192">
+        <en>
+            Set a spawn location of a race
+        </en>
+        <de>
+            Lege einen Spawnort von einem Rennen fest
+        </de>
+    </string>
     <string id="193">
         <en>
             NPCs reloaded
@@ -1623,6 +1631,22 @@
         </en>
         <de>
             Drücke %s um die Aufnahme zu stoppen
+        </de>
+    </string>
+    <string id="204">
+        <en>
+            The spawn must be between 0 and %d!
+        </en>
+        <de>
+            Der Spawn muss zwischen 0 und %d sein!
+        </de>
+    </string>
+    <string id="205">
+        <en>
+            Spawn %d of race %d (%s) has been set
+        </en>
+        <de>
+            Spawn %d von Rennen %d (%s) wurde festgelegt
         </de>
     </string>
 </languagestrings>

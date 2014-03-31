@@ -222,6 +222,7 @@
 #include <grgserver/commands/setracelaps.inc>
 #include <grgserver/commands/setracelevel.inc>
 #include <grgserver/commands/setracename.inc>
+#include <grgserver/commands/setracespawn.inc>
 #include <grgserver/commands/showarea.inc>
 #include <grgserver/commands/showareas.inc>
 #include <grgserver/commands/showhps.inc>
