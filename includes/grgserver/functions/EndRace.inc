@@ -31,6 +31,11 @@ EndRace(playerID)
 	{
 		if (PVar:currentPlayerID[RACE_ID] == raceID && !IsPlayerNPC(currentPlayerID))
 		{
+			if (g_races[raceID][E_RACE_HOSTPLAYERID] == playerID)
+			{
+				g_races[raceID][E_RACE_HOSTPLAYERID] = currentPlayerID;
+			}
+
 			foundPlayers = true;
 			break;
 		}
@@ -38,7 +43,9 @@ EndRace(playerID)
 
 	if (!foundPlayers)
 	{
-		// Change virtual world of all NPCs assigned to the race
+		g_races[raceID][E_RACE_HOSTPLAYERID] = INVALID_PLAYER_ID;
+
+		// Stop all NPCs assigned to the race
 		PlayerLoop(currentPlayerID)
 		{
 			if (PVar:currentPlayerID[RACE_ID] == raceID && IsPlayerNPC(currentPlayerID))
