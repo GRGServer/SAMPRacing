@@ -69,7 +69,7 @@
 #define MAX_GARAGES				150
 #define MAX_HIDDENPACKAGES			100
 #define MAX_INTERIORS				150
-#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(206)
+#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(208)
 #define MAX_NPCS				50
 #define MAX_OBJECTMODELS			11000
 #define MAX_RACECHECKPOINTS			1000

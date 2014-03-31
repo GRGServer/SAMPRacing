@@ -1649,4 +1649,20 @@
             Spawn %d von Rennen %d (%s) wurde festgelegt
         </de>
     </string>
+    <string id="206">
+        <en>
+            Set the pickup for a race
+        </en>
+        <de>
+            Lege das Pickup von einem Rennen fest
+        </de>
+    </string>
+    <string id="207">
+        <en>
+            The pickup position of race %d (%s) has been set
+        </en>
+        <de>
+            Die Pickupposition vom Rennen %d (%s) wurde festgelegt
+        </de>
+    </string>
 </languagestrings>
