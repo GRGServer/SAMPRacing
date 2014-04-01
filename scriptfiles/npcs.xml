@@ -208,4 +208,33 @@
     <npc id="50" skin="0" type="driver" recording="LordOfFame3">
         <vehicle model="475" paintjob="0" />
     </npc>
+    <npc id="51" skin="0" type="driver" recording="RoundiBoundi1">
+        <vehicle model="560" paintjob="0" />
+    </npc>
+    <npc id="52" skin="0" type="driver" recording="RoundiBoundi2">
+        <vehicle model="560" paintjob="0" />
+    </npc>
+    <npc id="53" skin="0" type="driver" recording="RoundiBoundi3">
+        <vehicle model="560" paintjob="0">
+            <component>1139</component>
+            <component>1012</component>
+            <component>1033</component>
+            <component>1027</component>
+            <component>1010</component>
+            <component>1029</component>
+            <component>1098</component>
+            <component>1087</component>
+            <component>1170</component>
+            <component>1140</component>
+        </vehicle>
+    </npc>
+    <npc id="54" skin="0" type="driver" recording="NubelDubelRace1">
+        <vehicle model="410" paintjob="0" />
+    </npc>
+    <npc id="55" skin="0" type="driver" recording="NubelDubelRace2">
+        <vehicle model="566" paintjob="0" />
+    </npc>
+    <npc id="56" skin="0" type="driver" recording="NubelDubelRace3">
+        <vehicle model="402" paintjob="0" />
+    </npc>
 </npcs>
