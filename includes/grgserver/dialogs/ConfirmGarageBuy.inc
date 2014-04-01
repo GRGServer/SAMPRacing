@@ -59,6 +59,8 @@ DialogResponse:ConfirmGarageBuy(playerID, response, listItem, inputText[])
 
 		SaveGarage(garageNumber);
 
+		UpdateMapIcons(playerID);
+
 		PlayAudioFileForPlayer(playerID, AUDIOFILE_GARAGEBOUGHT);
 		GameTextForPlayer(playerID, LanguageString(playerID, StringID:140("Garage bought")), 5000, 1);
 	}

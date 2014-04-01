@@ -59,7 +59,9 @@
 
 
 // Map icon types
+#define MAPICONTYPE_GARAGE			40
 #define MAPICONTYPE_RACE			43
+#define MAPICONTYPE_VEHICLESHOP			55
 
 
 // Limits
