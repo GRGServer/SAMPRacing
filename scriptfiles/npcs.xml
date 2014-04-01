@@ -108,4 +108,13 @@
     <npc id="35" skin="0" type="driver" recording="AllCitySprint3">
         <vehicle model="506" paintjob="0" />
     </npc>
+    <npc id="36" skin="0" type="driver" recording="TheHellDrive1">
+        <vehicle model="541" paintjob="0" />
+    </npc>
+    <npc id="37" skin="0" type="driver" recording="TheHellDrive2">
+        <vehicle model="411" paintjob="0" />
+    </npc>
+    <npc id="38" skin="0" type="driver" recording="TheHellDrive3">
+        <vehicle model="415" paintjob="0" />
+    </npc>
 </npcs>
