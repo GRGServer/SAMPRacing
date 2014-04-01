@@ -99,4 +99,13 @@
     <npc id="32" skin="0" type="driver" recording="HaiWayToHell3">
         <vehicle model="415" paintjob="0" />
     </npc>
+    <npc id="33" skin="0" type="driver" recording="AllCitySprint1">
+        <vehicle model="480" paintjob="0" />
+    </npc>
+    <npc id="34" skin="0" type="driver" recording="AllCitySprint2">
+        <vehicle model="411" paintjob="0" />
+    </npc>
+    <npc id="35" skin="0" type="driver" recording="AllCitySprint3">
+        <vehicle model="506" paintjob="0" />
+    </npc>
 </npcs>
