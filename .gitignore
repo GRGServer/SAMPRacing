@@ -9,5 +9,3 @@ crashinfo.txt
 desktop.ini
 .DS_Store
 $RECYCLE.BIN
-includes/grgserver/commands/tunecar.inc
-includes/grgserver/commands/tuneveh.inc
