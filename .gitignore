@@ -5,7 +5,12 @@ crashinfo.txt
 *.ppk
 *.amx
 
+# Created by IDEs and other editors
+*.idea
+*.iml
+
 # OS stuff
 desktop.ini
 .DS_Store
 $RECYCLE.BIN
+/tools/*/target
