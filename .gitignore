@@ -5,6 +5,8 @@ crashinfo.txt
 *.ppk
 *.amx
 
+/includes/grgserver/localconfig.inc
+
 # Created by IDEs and other editors
 *.idea
 *.iml
