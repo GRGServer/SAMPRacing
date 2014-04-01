@@ -117,4 +117,10 @@
     <npc id="38" skin="0" type="driver" recording="TheHellDrive3">
         <vehicle model="415" paintjob="0" />
     </npc>
+    <npc id="39" skin="0" type="driver" recording="OffroadTripp1">
+        <vehicle model="400" paintjob="0" />
+    </npc>
+    <npc id="40" skin="0" type="driver" recording="OffroadTripp2">
+        <vehicle model="400" paintjob="0" />
+    </npc>
 </npcs>
