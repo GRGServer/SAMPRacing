@@ -65,6 +65,7 @@ SaveRaces()
 			XML_SetFloatAttribute(spawnNode, "x", g_races[raceID][E_RACE_SPAWN_POSX][spawn]);
 			XML_SetFloatAttribute(spawnNode, "y", g_races[raceID][E_RACE_SPAWN_POSY][spawn]);
 			XML_SetFloatAttribute(spawnNode, "z", g_races[raceID][E_RACE_SPAWN_POSZ][spawn]);
+			XML_SetFloatAttribute(spawnNode, "angle", g_races[raceID][E_RACE_SPAWN_ANGLE][spawn]);
 		}
 
 		Count(npcID, MAX_RACENPCS)

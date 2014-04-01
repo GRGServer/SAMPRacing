@@ -78,6 +78,7 @@ ReloadRaces()
 			g_races[raceID][E_RACE_SPAWN_POSX][spawn] = XML_GetFloatAttribute(spawnNode, "x");
 			g_races[raceID][E_RACE_SPAWN_POSY][spawn] = XML_GetFloatAttribute(spawnNode, "y");
 			g_races[raceID][E_RACE_SPAWN_POSZ][spawn] = XML_GetFloatAttribute(spawnNode, "z");
+			g_races[raceID][E_RACE_SPAWN_ANGLE][spawn] = XML_GetFloatAttribute(spawnNode, "angle");
 
 			spawn++;
 

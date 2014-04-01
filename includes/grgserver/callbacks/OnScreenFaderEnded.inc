@@ -52,7 +52,7 @@ public OnScreenFaderEnded(playerID)
 				new raceID = PVar:playerID[RACE_ID];
 				new spawn = PVar:playerID[RACE_SPAWN];
 
-				SetPlayerSpawn(playerID, SPAWNTYPE_STARTRACE, g_races[raceID][E_RACE_SPAWN_POSX][spawn], g_races[raceID][E_RACE_SPAWN_POSY][spawn], g_races[raceID][E_RACE_SPAWN_POSZ][spawn], 0, 0);
+				SetPlayerSpawn(playerID, SPAWNTYPE_STARTRACE, g_races[raceID][E_RACE_SPAWN_POSX][spawn], g_races[raceID][E_RACE_SPAWN_POSY][spawn], g_races[raceID][E_RACE_SPAWN_POSZ][spawn], g_races[raceID][E_RACE_SPAWN_ANGLE][spawn], 0);
 
 				KillTimer(PVar:playerID[RACE_LOBBYUPDATETIMER]);
 				PVar:playerID[RACE_LOBBYUPDATETIMER] = 0;

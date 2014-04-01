@@ -89,6 +89,7 @@ public OnPlayerSpawn(playerid)
 			new raceID = PVar:playerid[RACE_ID];
 
 			SetVehiclePos(PVar:playerid[RACE_VEHICLEID], PVar:playerid[SPAWN_POSX], PVar:playerid[SPAWN_POSY], PVar:playerid[SPAWN_POSZ]);
+			SetVehicleZAngle(PVar:playerid[RACE_VEHICLEID], PVar:playerid[SPAWN_ANGLE]);
 
 			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
 
@@ -97,9 +98,9 @@ public OnPlayerSpawn(playerid)
 
 			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], VIRTUALWORLD_RACE + raceID);
 
-			SetCameraBehindPlayer(playerid);
-
 			TogglePlayerControllable(playerid, false);
+
+			SetCameraBehindPlayer(playerid);
 
 			PVar:playerid[RACE_STARTED] = true;
 

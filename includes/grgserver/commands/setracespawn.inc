@@ -20,7 +20,15 @@ PCMD:setracespawn[ISADMIN](playerID, params[], StringID:192("Set a spawn locatio
 		return COMMAND_ERROR;
 	}
 
-	GetPlayerPos(playerID, g_races[raceID][E_RACE_SPAWN_POSX][spawn], g_races[raceID][E_RACE_SPAWN_POSY][spawn], g_races[raceID][E_RACE_SPAWN_POSZ][spawn]);
+	if (!IsPlayerInAnyVehicle(playerID))
+	{
+		return COMMAND_NOT_IN_VEHICLE;
+	}
+
+	new vehicleID = GetPlayerVehicleID(playerID);
+
+	GetVehiclePos(vehicleID, g_races[raceID][E_RACE_SPAWN_POSX][spawn], g_races[raceID][E_RACE_SPAWN_POSY][spawn], g_races[raceID][E_RACE_SPAWN_POSZ][spawn]);
+	GetVehicleZAngle(vehicleID, g_races[raceID][E_RACE_SPAWN_ANGLE][spawn]);
 
 	SaveRaces();
 
