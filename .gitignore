@@ -6,6 +6,7 @@ crashinfo.txt
 *.amx
 
 /includes/grgserver/localconfig.inc
+/includes/grgserver/main.inc
 
 # Created by IDEs and other editors
 *.idea
