@@ -17,6 +17,8 @@ ReloadRaces()
 		g_races[index][E_RACE_HOSTPLAYERID] = INVALID_PLAYER_ID;
 	}
 
+	DestroyPickupsOfType(PICKUPTYPE_RACE);
+
 	new raceID;
 	new XMLNode:xml = XML_LoadDocument("races.xml");
 	xml = XML_GetFirstChild(xml, "races");
