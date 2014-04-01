@@ -119,6 +119,7 @@
 #include <grgserver/functions/TeleportToInterior.inc>
 #include <grgserver/functions/TryStartRace.inc>
 #include <grgserver/functions/UpdateGarage.inc>
+#include <grgserver/functions/UpdateMapIcons.inc>
 #include <grgserver/functions/UpdateObjectEditorInfo.inc>
 #include <grgserver/functions/UpdateObjectsForAllPlayers.inc>
 #include <grgserver/functions/UpdatePlayerTextDrawStrings.inc>

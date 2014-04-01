@@ -58,6 +58,10 @@
 #define KEY_VEHICLESHOP_QUIT			KEY_SECONDARY_ATTACK
 
 
+// Map icon types
+#define MAPICONTYPE_RACE			43
+
+
 // Limits
 #define MAX_AREAPOINTS				50
 #define MAX_AREAS				50
@@ -72,6 +76,7 @@
 #define MAX_LANGUAGE_STRINGS			LanguageStringLimit(208)
 #define MAX_NPCS				250
 #define MAX_OBJECTMODELS			11000
+#define MAX_PLAYER_MAPICONS			500
 #define MAX_RACECHECKPOINTS			1000
 #define MAX_RACENPCS				3
 #define MAX_RACES				100
