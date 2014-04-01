@@ -1665,4 +1665,20 @@
             Die Pickupposition vom Rennen %d (%s) wurde festgelegt
         </de>
     </string>
+    <string id="208">
+        <en>
+            Tuned your Car
+        </en>
+        <de>
+            Tune dein Fahrzeug
+        </de>
+    </string>
+    <string id="209">
+        <en>
+            You not in a Vehicle
+        </en>
+        <de>
+            Du bist in keinem Fahrzeug
+        </de>
+    </string>
 </languagestrings>

@@ -123,4 +123,89 @@
     <npc id="40" skin="0" type="driver" recording="OffroadTripp2">
         <vehicle model="400" paintjob="0" />
     </npc>
+    <npc id="41" skin="0" type="driver" recording="OffroadTripp3">
+        <vehicle model="400" paintjob="0" />
+    </npc>
+    <npc id="42" skin="0" type="driver" recording="ALongWay1">
+        <vehicle model="562" paintjob="0">
+            <component>1023</component>
+            <component>1012</component>
+            <component>1038</component>
+            <component>1041</component>
+            <component>1010</component>
+            <component>1037</component>
+            <component>1098</component>
+            <component>1087</component>
+            <component>1172</component>
+            <component>1148</component>
+        </vehicle>
+    </npc>
+    <npc id="43" skin="0" type="driver" recording="ALongWay2">
+        <vehicle model="558" paintjob="0">
+            <component>1164</component>
+            <component>1012</component>
+            <component>1091</component>
+            <component>1095</component>
+            <component>1010</component>
+            <component>1092</component>
+            <component>1098</component>
+            <component>1087</component>
+            <component>1166</component>
+            <component>1167</component>
+        </vehicle>
+    </npc>
+    <npc id="44" skin="0" type="driver" recording="ALongWay3">
+        <vehicle model="560" paintjob="0">
+            <component>1139</component>
+            <component>1012</component>
+            <component>1033</component>
+            <component>1027</component>
+            <component>1010</component>
+            <component>1029</component>
+            <component>1098</component>
+            <component>1087</component>
+            <component>1170</component>
+            <component>1140</component>
+        </vehicle>
+    </npc>
+    <npc id="45" skin="0" type="driver" recording="NeapelPower1">
+        <vehicle model="558" paintjob="0">
+            <component>1164</component>
+            <component>1012</component>
+            <component>1091</component>
+            <component>1095</component>
+            <component>1010</component>
+            <component>1092</component>
+            <component>1098</component>
+            <component>1087</component>
+            <component>1166</component>
+            <component>1167</component>
+        </vehicle>
+    </npc>
+    <npc id="46" skin="0" type="driver" recording="NeapelPower2">
+        <vehicle model="561" paintjob="0">
+            <component>1060</component>
+            <component>1012</component>
+            <component>1061</component>
+            <component>1063</component>
+            <component>1010</component>
+            <component>1064</component>
+            <component>1098</component>
+            <component>1087</component>
+            <component>1157</component>
+            <component>1154</component>
+        </vehicle>
+    </npc>
+    <npc id="47" skin="0" type="driver" recording="NeapelPower3">
+        <vehicle model="560" paintjob="0" />
+    </npc>
+    <npc id="48" skin="0" type="driver" recording="LordOfFame1">
+        <vehicle model="496" paintjob="0" />
+    </npc>
+    <npc id="49" skin="0" type="driver" recording="LordOfFame2">
+        <vehicle model="405" paintjob="0" />
+    </npc>
+    <npc id="50" skin="0" type="driver" recording="LordOfFame3">
+        <vehicle model="475" paintjob="0" />
+    </npc>
 </npcs>
