@@ -4,6 +4,7 @@ before_install:
  - sudo apt-get install -qq libc6-i386
 before_script:
   - chmod +x tools/compile-gamemode.sh
+  - chmod +x tools/apache-maven/bin/mvn
   - chmod +x tools/pawn/pawncc
   - cp includes/grgserver/localconfig.sample.inc includes/grgserver/localconfig.inc
 script: tools/compile-gamemode.sh
