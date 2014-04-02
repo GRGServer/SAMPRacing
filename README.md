@@ -39,9 +39,13 @@ The following plugins are used by the server:
 
 ## Compiling the script
 
-**Note:** Run the Includes Updater before compiling the script! (See section *Using the Includes Updater* bellow)
+[![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
 
-To compile the script on Windows you just have to execute the following commands:
+### Windows
+
+**Note:** Run the Includes Updater before compiling the script! (See section *Includes Updater* bellow)
+
+To compile the script you just have to execute the following commands:
 
 ```
 cd gamemodes
@@ -50,11 +54,13 @@ cd ../npcmodes
 ../tools/pawn/pawncc.exe npcplayer.pwn -i../includes -; -(
 ```
 
-On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory.
+### Linux
 
-[![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
+Just execute the *compile-gamemode.sh* shell script located in the tools directory.
 
-## Using the Includes Updater
+The script will build the Includes Updater using maven, execute it and build the Gamemode.
+
+## Includes Updater
 
 The Includes Updater searches for all the include files in */includes/grgserver* and includes them into the *main.inc*.
 
