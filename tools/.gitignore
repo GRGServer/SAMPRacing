@@ -5,3 +5,6 @@ PureBasic_Compilation*.exe
 
 # Local tools configuration
 tools.conf
+
+# Maven builds
+*/target
