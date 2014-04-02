@@ -12,6 +12,7 @@ Visit http://grgserver.net for more information about the server.
   * MySQL Server
   * Webserver (To stream the audio files)
   * x64 Linux only: libc6-i386 (To run the Pawn compiler)
+  * A current JDK (To build and execute tools like the Includes Updater)
 
 ## Used plugins
 
@@ -38,6 +39,8 @@ The following plugins are used by the server:
 
 ## Compiling the script
 
+**Note:** Run the Includes Updater before compiling the script! (See section *Using the Includes Updater* bellow)
+
 To compile the script on Windows you just have to execute the following commands:
 
 ```
@@ -50,6 +53,19 @@ cd ../npcmodes
 On Linux you just have to execute the compile-gamemode.sh shell script located in the tools directory.
 
 [![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
+
+## Using the Includes Updater
+
+The Includes Updater searches for all the include files in */includes/grgserver* and includes them into the *main.inc*.
+
+As any other Java tool, the Includes Updater has to be build using Maven before using it:
+
+```
+cd tools/includesupdater
+../apache-maven/bin/mvn clean package
+```
+
+After that the *includesupdater.jar* is located in the *target* directory. Keep it in that directory! Execute it using *java -jar target/includesupdater.jar*
 
 ## Notes for Linux
 
