@@ -30,6 +30,10 @@ public OnScreenFaderEnded(playerID)
 					PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_RACELOBBY_BUTTON_START]);
 				}
 
+				SetPlayerVirtualWorld(playerID, VIRTUALWORLD_RACELOBBY);
+
+				RandomRaceLobbyCamera(playerID);
+
 				UpdateRaceLobby(playerID);
 				PVar:playerID[RACE_LOBBYUPDATETIMER] = SetTimerEx("Timer_UpdateRaceLobby", TIMER_UPDATERACELOBBY, true, "d", playerID);
 

@@ -67,6 +67,7 @@
 // Limits
 #define MAX_AREAPOINTS				50
 #define MAX_AREAS				50
+#define MAX_CAMERAMOVEMENTS			10
 #define MAX_CHECKPOINTS				1000
 #define MAX_COMMANDALIASES			50
 #define MAX_COMMANDS				50
@@ -108,6 +109,9 @@
 // Races
 #define RACE_CHECKPOINT_SIZE			10
 #define RACE_DISQUALIFICATION_TIMEOUT		30
+#define RACE_LOBBY_NPC1				60
+#define RACE_LOBBY_NPC2				61
+#define RACE_LOBBY_NPCSPECTATETIME		5000
 #define RACE_PLAYERCOUNT			4
 
 
@@ -190,6 +194,7 @@
 #define VIRTUALWORLD_IDLENPC			100// Virtual world for all NPCs which are currently not in use (To hide them from players)
 #define VIRTUALWORLD_MODSHOP			2000// First virtual world used for mod shops (Each player has a virtual world)
 #define VIRTUALWORLD_RACE			3000// First virtual world used for races (Each race has a virtual world)
+#define VIRTUALWORLD_RACELOBBY			101// Virtual world for race lobby
 #define VIRTUALWORLD_VEHICLESHOP		4000// First virtual world used for vehicles shops (Each player has a virtual world)
 
 
@@ -198,6 +203,14 @@ enum
 {
 	AREATYPE_DRIFT,
 	AREATYPE_STUNT
+}
+
+
+// Camera movement types
+enum
+{
+	CAMMOVEMENT_UNSET,// Must be the first (0)
+	CAMMOVEMENT_RACELOBBY
 }
 
 
