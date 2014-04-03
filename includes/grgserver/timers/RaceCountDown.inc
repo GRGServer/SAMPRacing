@@ -27,29 +27,31 @@ Timer:RaceCountDown(raceID)
 	if (!g_races[raceID][E_RACE_COUNTDOWN])
 	{
 		// Add NPCs if required player count not reached
-		new npcID;
+		new npcIndex;
 		for (new player = players + 1; player <= RACE_PLAYERCOUNT; player++)
 		{
-			if (npcID >= MAX_RACENPCS)
+			if (npcIndex >= MAX_RACENPCS)
 			{
 				break;
 			}
 
-			if (g_races[raceID][E_RACE_NPCS][npcID] != -1)
+			if (g_races[raceID][E_RACE_NPCS][npcIndex] != -1)
 			{
 				PlayerLoop(currentPlayerID)
 				{
-					if (IsPlayerNPC(currentPlayerID) && PVar:currentPlayerID[NPCID] == g_races[raceID][E_RACE_NPCS][npcID])
+					if (IsPlayerNPC(currentPlayerID) && PVar:currentPlayerID[NPCID] == g_races[raceID][E_RACE_NPCS][npcIndex])
 					{
+						new npcID = g_races[raceID][E_RACE_NPCS][npcIndex];
 						SetPlayerVirtualWorld(currentPlayerID, VIRTUALWORLD_RACE + raceID);
-						SetVehicleVirtualWorld(GetPlayerVehicleID(currentPlayerID), VIRTUALWORLD_RACE + raceID);
+						SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_RACE + raceID);
+						PutPlayerInVehicle(currentPlayerID, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
 						SendNPCCommand(currentPlayerID, NPCCMD_START);
 						break;
 					}
 				}
 			}
 
-			npcID++;
+			npcIndex++;
 		}
 
 		KillTimer(g_races[raceID][E_RACE_COUNTDOWNTIMER]);
