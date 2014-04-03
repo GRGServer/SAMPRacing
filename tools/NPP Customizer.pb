@@ -55,7 +55,7 @@ If MessageRequester(#Title, "Please verify the following paths:" + Chr(13) + Chr
 			WriteStringN(File, Chr(34) + ServerRoot$ + "tools\pawn\pawncc.exe" + Chr(34)+ " $(FILE_NAME) " + Chr(34) + "-i" + ServerRoot$ + "includes" + Chr(34) + " -; -(")
 			WriteStringN(File, "::Compile GRG Server")
 			WriteStringN(File, "NPP_SAVE")
-			WriteStringN(File, Chr(34) + ServerRoot$ + "tools\Includes Updater.exe" + Chr(34))
+			WriteStringN(File, "java -jar " + Chr(34) + ServerRoot$ + "tools\includesupdater\target\includesupdater.jar" + Chr(34))
 			WriteStringN(File, "cd " + Chr(34) + ServerRoot$ + "gamemodes" + Chr(34))
 			WriteStringN(File, Chr(34) + ServerRoot$ + "tools\pawn\pawncc.exe" + Chr(34) + " grgserver.pwn " + Chr(34) + "-i" + ServerRoot$ + "includes" + Chr(34) + " -; -(")
 			WriteStringN(File, "::Todo Finder")
@@ -73,35 +73,3 @@ If MessageRequester(#Title, "Please verify the following paths:" + Chr(13) + Chr
 		MessageRequester(#Title, "Done", #MB_ICONINFORMATION)
 	EndIf
 EndIf
-; IDE Options = PureBasic 5.21 LTS (Windows - x86)
-; CursorPosition = 59
-; FirstLine = 30
-; Folding = -
-; EnableXP
-; EnableAdmin
-; UseIcon = NPP Customizer.ico
-; Executable = NPP Customizer.exe
-; EnableCompileCount = 21
-; EnableBuildCount = 14
-; EnableExeConstant
-; IncludeVersionInfo
-; VersionField0 = 1,0,0,0
-; VersionField1 = 1,0,0,0
-; VersionField2 = SelfCoders
-; VersionField3 = Notepad++ Customizer
-; VersionField4 = 1.0
-; VersionField5 = 1.0
-; VersionField6 = Notepad++ Customizer
-; VersionField7 = Notepad++ Customizer
-; VersionField8 = %EXECUTABLE
-; VersionField13 = nppcustomizer@selfcoders.com
-; VersionField14 = http://www.selfcoders.com
-; VersionField15 = VOS_NT_WINDOWS32
-; VersionField16 = VFT_APP
-; VersionField17 = 0409 English (United States)
-; VersionField18 = Build
-; VersionField19 = Compile OS
-; VersionField20 = Date
-; VersionField21 = %BUILDCOUNT
-; VersionField22 = %OS
-; VersionField23 = %y-%m-%d %h:%i:%s
