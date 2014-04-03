@@ -74,7 +74,7 @@ Some tools have to be compiled before using them.
 
 Simply execute the *compile-tools.bat* (Windows) or *compile-tools.sh* (Linux) and you are done.
 
-**Note:** Everytime a gets tool changed it has to be rebuilt. In this case, simply re-execute the script.
+**Note:** Everytime a tool gets changed it has to be rebuilt. In this case, simply re-execute the script.
 
 ## Notes for Linux
 
