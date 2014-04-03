@@ -256,4 +256,13 @@
             <component>1167</component>
         </vehicle>
     </npc>
+    <npc id="60" skin="0" type="driver" recording="Arena1">
+        <vehicle model="502" paintjob="0" />
+    </npc>
+    <npc id="61" skin="0" type="driver" recording="Arena2">
+        <vehicle model="503" paintjob="0" />
+    </npc>
+    <npc id="62" skin="0" type="driver" recording="Arena2">
+        <vehicle model="503" paintjob="0" />
+    </npc>
 </npcs>
