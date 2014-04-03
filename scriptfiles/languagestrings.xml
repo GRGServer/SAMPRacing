@@ -1665,4 +1665,12 @@
             Die Pickupposition vom Rennen %d (%s) wurde festgelegt
         </de>
     </string>
+    <string id="208">
+        <en>
+            Camera movements reloaded
+        </en>
+        <de>
+            Kamerabewegungen neugeladen
+        </de>
+    </string>
 </languagestrings>

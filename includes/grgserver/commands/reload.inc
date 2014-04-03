@@ -5,8 +5,8 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	{
 		CmdUsageMsg(playerID, "reload", "Part");
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts:"));
-		SendClientMessage(playerID, COLOR_INFO, "areas, commandaliases, garages, interiors, languagestrings, npcs, objectmodels");
-		SendClientMessage(playerID, COLOR_INFO, "objects, pickups, races, teleports, vehiclemodels, vehicles, vehicleshops");
+		SendClientMessage(playerID, COLOR_INFO, "areas, cameramovements commandaliases, garages, interiors, languagestrings, npcs");
+		SendClientMessage(playerID, COLOR_INFO, "objectmodels, objects, pickups, races, teleports, vehiclemodels, vehicles, vehicleshops");
 		return COMMAND_USAGE;
 	}
 
@@ -14,6 +14,13 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	{
 		ReloadAreas();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:72("Areas reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (IsStr(part, "cameramovements"))
+	{
+		ReloadCameraMovements();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:208("Camera movements reloaded"));
 		return COMMAND_OK;
 	}
 
