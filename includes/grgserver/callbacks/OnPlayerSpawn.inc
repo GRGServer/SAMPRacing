@@ -105,12 +105,12 @@ public OnPlayerSpawn(playerid)
 			SetVehiclePos(PVar:playerid[RACE_VEHICLEID], PVar:playerid[SPAWN_POSX], PVar:playerid[SPAWN_POSY], PVar:playerid[SPAWN_POSZ]);
 			SetVehicleZAngle(PVar:playerid[RACE_VEHICLEID], PVar:playerid[SPAWN_ANGLE]);
 
-			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
-
-			SetPlayerInterior(playerid, 0);
+			SetPlayerInterior(playerid, 0);// TODO: Races in interiors?
 			SetPlayerVirtualWorld(playerid, VIRTUALWORLD_RACE + raceID);
 
 			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], VIRTUALWORLD_RACE + raceID);
+
+			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
 
 			TogglePlayerControllable(playerid, false);
 
