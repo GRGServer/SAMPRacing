@@ -70,9 +70,11 @@ After that the *includesupdater.jar* is located in *includesupdater/target*. Kee
 
 ## Compiling tools
 
-Some Tools have to be compiled before using them.
+Some tools have to be compiled before using them.
 
 Simply execute the *compile-tools.bat* (Windows) or *compile-tools.sh* (Linux) and you are done.
+
+**Note:** Everytime a gets tool changed it has to be rebuilt. In this case, simply re-execute the script.
 
 ## Notes for Linux
 
