@@ -64,21 +64,22 @@ The script will build the Includes Updater using maven, execute it and build the
 
 The Includes Updater searches for all the include files in */includes/grgserver* and includes them into the *main.inc*.
 
-As any other Java tool, the Includes Updater has to be build using Maven before using it:
+As any other Java tool, the Includes Updater has to be build using Maven before using it (See section *Compiling tools*).
 
-```
-cd tools/includesupdater
-../apache-maven/bin/mvn clean package
-```
+After that the *includesupdater.jar* is located in *includesupdater/target*. Keep it in that directory! Execute it using *java -jar path/to/target/includesupdater.jar*
 
-After that the *includesupdater.jar* is located in the *target* directory. Keep it in that directory! Execute it using *java -jar target/includesupdater.jar*
+## Compiling tools
+
+Some Tools have to be compiled before using them.
+
+Simply execute the *compile-tools.bat* (Windows) or *compile-tools.sh* (Linux) and you are done.
 
 ## Notes for Linux
 
 On Linux you have to manually set the executable bit on executables (*chmod +x*):
 
 ```
-chmod +x announce samp-npc samp-srv tools/*.sh tools/pawn/pawncc
+chmod +x announce samp-npc samp-srv tools/*.sh tools/apache-maven/bin/mvn tools/pawn/pawncc
 ```
 
 When doing that you should disable *core.fileMode* in your git config to prevent marking the files as changed:
