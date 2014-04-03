@@ -262,7 +262,4 @@
     <npc id="61" skin="0" type="driver" recording="Arena2">
         <vehicle model="503" paintjob="0" />
     </npc>
-    <npc id="62" skin="0" type="driver" recording="Arena2">
-        <vehicle model="503" paintjob="0" />
-    </npc>
 </npcs>
