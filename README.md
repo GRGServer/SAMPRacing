@@ -11,7 +11,7 @@ Visit http://grgserver.net for more information about the server.
   * Linux or Windows
   * MySQL Server
   * Webserver (To stream the audio files)
-  * x64 Linux only: libc6-i386 (To run the Pawn compiler)
+  * To use Pawn on x64 Linux: 32-bit C Library for AMD64 (*apt-get install libc6-i386* on Debian based Linux distributions)
   * A current [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To build and execute tools like the Includes Updater)
 
 ## Used plugins
