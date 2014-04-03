@@ -31,6 +31,7 @@ SaveNPCs()
 
 		XML_SetIntAttribute(npcNode, "id", g_npcs[npcID][E_NPC_ID]);
 		XML_SetIntAttribute(npcNode, "skin", g_npcs[npcID][E_NPC_SKIN]);
+		XML_SetIntAttribute(npcNode, "interior", g_npcs[npcID][E_NPC_INTERIOR]);
 		XML_SetAttribute(npcNode, "type", recordingType);
 		XML_SetAttribute(npcNode, "recording", g_npcs[npcID][E_NPC_RECORDING_NAME]);
 

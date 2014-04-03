@@ -50,6 +50,7 @@ ReloadNPCs()
 
 		g_npcs[npcID][E_NPC_ID] = XML_GetIntAttribute(npcNode, "id");
 		g_npcs[npcID][E_NPC_SKIN] = XML_GetIntAttribute(npcNode, "skin");
+		g_npcs[npcID][E_NPC_INTERIOR] = XML_GetIntAttribute(npcNode, "interior");
 		XML_GetAttribute(npcNode, "recording", g_npcs[npcID][E_NPC_RECORDING_NAME], STRINGLENGTH_NPCRECORDINGNAME);
 
 		new XMLNode:vehicleNode = XML_GetFirstChild(npcNode, "vehicle");

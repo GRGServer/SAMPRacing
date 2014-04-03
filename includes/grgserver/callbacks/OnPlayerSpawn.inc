@@ -6,9 +6,12 @@ public OnPlayerSpawn(playerid)
 
 		new npcID = PVar:playerid[NPCID];
 
+		SetPlayerInterior(playerid, g_npcs[npcID][E_NPC_INTERIOR]);
+
 		if (g_npcs[npcID][E_NPC_VEHICLE_ID] != INVALID_VEHICLE_ID && g_npcs[npcID][E_NPC_RECORDING_TYPE] == PLAYER_RECORDING_TYPE_DRIVER)
 		{
 			SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_IDLENPC);
+			LinkVehicleToInterior(g_npcs[npcID][E_NPC_VEHICLE_ID], g_npcs[npcID][E_NPC_INTERIOR]);
 
 			PutPlayerInVehicle(playerid, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
 			SetVehicleEngineState(g_npcs[npcID][E_NPC_VEHICLE_ID], true);
@@ -73,12 +76,12 @@ public OnPlayerSpawn(playerid)
 		}
 		case SPAWNTYPE_LEAVERACE:
 		{
-			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
-
 			SetPlayerInterior(playerid, 0);
 			SetPlayerVirtualWorld(playerid, 0);
 
 			SetVehicleVirtualWorld(PVar:playerid[RACE_VEHICLEID], 0);
+
+			PutPlayerInVehicle(playerid, PVar:playerid[RACE_VEHICLEID], 0);
 
 			SetCameraBehindPlayer(playerid);
 

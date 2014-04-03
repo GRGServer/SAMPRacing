@@ -95,6 +95,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 			g_npcs[npcID][E_NPC_RECORDING_TYPE] = PVar:playerid[RECNPC_TYPE];
 			g_npcs[npcID][E_NPC_SKIN] = 0;
+			g_npcs[npcID][E_NPC_INTERIOR] = GetPlayerInterior(playerid);
 			g_npcs[npcID][E_NPC_VEHICLE_ID] = vehicleID;
 
 			if (vehicleID == INVALID_VEHICLE_ID)
