@@ -24,9 +24,8 @@ public OnPlayerSpawn(playerid)
 			SetVehicleVirtualWorld(g_npcs[npcID][E_NPC_VEHICLE_ID], VIRTUALWORLD_RACELOBBY);
 			PutPlayerInVehicle(playerid, g_npcs[npcID][E_NPC_VEHICLE_ID], 0);
 
-			// TODO: NPC does not play the recording
 			SendNPCCommand(playerid, #NPCCMD_SETREPEAT " 1");
-			SendNPCCommand(playerid, NPCCMD_START);
+			SendNPCCommand(playerid, #NPCCMD_START " 1000");
 		}
 
 		return true;
