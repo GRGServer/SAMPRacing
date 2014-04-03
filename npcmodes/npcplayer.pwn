@@ -10,7 +10,6 @@
 
 new g_playbackType;
 new g_recordingName[STRINGLENGTH_NPCRECORDINGNAME];
-new g_recordingRunning;
 new g_repeat;
 
 public OnClientMessage(color, text[])
@@ -38,12 +37,10 @@ public OnRecordingPlaybackEnd()
 {
 	if (g_repeat)
 	{
-		g_recordingRunning = true;
-		StartRecordingPlayback(g_playbackType, g_recordingName);
+		StartRecordingPlaybackEx();
 	}
 	else
 	{
-		g_recordingRunning = false;
 		SendCommand("/npccmd " #NPCCMD_RECORDINGENDED);
 	}
 }
@@ -59,14 +56,12 @@ HandleCommand(command[], parameters[])
 {
 	if (IsStr(command, NPCCMD_PAUSE))
 	{
-		g_recordingRunning = false;
 		PauseRecordingPlayback();
 		return;
 	}
 
 	if (IsStr(command, NPCCMD_RESUME))
 	{
-		g_recordingRunning = true;
 		ResumeRecordingPlayback();
 		return;
 	}
@@ -83,14 +78,6 @@ HandleCommand(command[], parameters[])
 
 		g_playbackType = playbackType;
 		g_recordingName = recordingName;
-
-		// Fix for keeping NPC at spawn location till start of the recording (If not already running)
-		if (!g_recordingRunning)
-		{
-			StartRecordingPlayback(g_playbackType, g_recordingName);
-			SetTimer("PauseRecordingPlaybackEx", 100, false);
-		}
-
 		return;
 	}
 
@@ -108,14 +95,20 @@ HandleCommand(command[], parameters[])
 			return;
 		}
 
-		g_recordingRunning = true;
-		StartRecordingPlayback(g_playbackType, g_recordingName);
+		new delay = strval(parameters);
+		if (delay)
+		{
+			SetTimer("StartRecordingPlaybackEx", delay, false);
+		}
+		else
+		{
+			StartRecordingPlaybackEx();
+		}
 		return;
 	}
 
 	if (IsStr(command, NPCCMD_STOP))
 	{
-		g_recordingRunning = false;
 		StopRecordingPlayback();
 		return;
 	}
@@ -123,8 +116,8 @@ HandleCommand(command[], parameters[])
 	Log("Invalid command!");
 }
 
-forward PauseRecordingPlaybackEx();
-public PauseRecordingPlaybackEx()
+forward StartRecordingPlaybackEx();
+public StartRecordingPlaybackEx()
 {
-	PauseRecordingPlayback();
+	StartRecordingPlayback(g_playbackType, g_recordingName);
 }
