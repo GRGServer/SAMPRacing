@@ -145,21 +145,23 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 	if (IsKeyPressed(KEY_CHECKPOINT_USE))
 	{
 		new checkpointID = GetPlayerVisibleDynamicCP(playerid);
-
-		new Float:posX;
-		new Float:posY;
-		new Float:posZ;
-		new Float:size;
-
-		Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_X, posX);
-		Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Y, posY);
-		Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Z, posZ);
-		Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_SIZE, size);
-
-		if (IsPlayerInRangeOfPoint(playerid, size, posX, posY, posZ))
+		if (IsValidDynamicCP(checkpointID))
 		{
-			CheckpointEvent(playerid, checkpointID, CHECKPOINTEVENT_KEY);
-			return false;
+			new Float:posX;
+			new Float:posY;
+			new Float:posZ;
+			new Float:size;
+
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_X, posX);
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Y, posY);
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Z, posZ);
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_SIZE, size);
+
+			if (IsPlayerInRangeOfPoint(playerid, size, posX, posY, posZ))
+			{
+				CheckpointEvent(playerid, checkpointID, CHECKPOINTEVENT_KEY);
+				return false;
+			}
 		}
 	}
 
