@@ -1,19 +1,18 @@
 RandomRaceLobbyCamera(playerID)
 {
-	new searchNPCID;
-	if (random(2))
+	if (PVar:playerID[RACE_LOBBYNPC] == RACE_LOBBY_NPC1)
 	{
-		searchNPCID = RACE_LOBBY_NPC1;
+		PVar:playerID[RACE_LOBBYNPC] = RACE_LOBBY_NPC2;
 	}
 	else
 	{
-		searchNPCID = RACE_LOBBY_NPC2;
+		PVar:playerID[RACE_LOBBYNPC] = RACE_LOBBY_NPC1;
 	}
 
 	new npcID = -1;
 	Foreach(arrayIndex, g_npcs)
 	{
-		if (g_npcs[arrayIndex][E_NPC_ID] == searchNPCID)
+		if (g_npcs[arrayIndex][E_NPC_ID] == PVar:playerID[RACE_LOBBYNPC])
 		{
 			npcID = arrayIndex;
 			break;
