@@ -22,7 +22,6 @@ public OnGameModeInit()
 	ReloadGarages();
 	ReloadRaces();
 	ReloadNPCs();
-	ReloadCameraMovements();
 
 	LoadHiddenPackages();
 	LoadCommands();

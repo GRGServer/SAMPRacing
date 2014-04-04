@@ -67,7 +67,6 @@
 // Limits
 #define MAX_AREAPOINTS				50
 #define MAX_AREAS				50
-#define MAX_CAMERAMOVEMENTS			10
 #define MAX_CHECKPOINTS				1000
 #define MAX_COMMANDALIASES			50
 #define MAX_COMMANDS				50
@@ -203,14 +202,6 @@ enum
 {
 	AREATYPE_DRIFT,
 	AREATYPE_STUNT
-}
-
-
-// Camera movement types
-enum
-{
-	CAMMOVEMENT_UNSET,// Must be the first (0)
-	CAMMOVEMENT_RACELOBBY
 }
 
 
