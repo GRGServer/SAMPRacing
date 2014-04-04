@@ -51,6 +51,16 @@ public OnScreenFaderEnded(playerID)
 				PVar:playerID[RACE_ID] = -1;
 				PVar:playerID[ALLOWCMDS] = true;
 			}
+			case SCREENFADER_RACE_LOBBYNPCSWITCH:
+			{
+				// Show another random lobby camera if the player is still in the lobby
+				if (PVar:playerID[RACE_LOBBYUPDATETIMER])
+				{
+					RandomRaceLobbyCamera(playerID);
+
+					FadeInScreen(playerID, 5, SCREENFADER_RACE_LOBBYNPCSWITCH);
+				}
+			}
 			case SCREENFADER_RACE_START:
 			{
 				new raceID = PVar:playerID[RACE_ID];
