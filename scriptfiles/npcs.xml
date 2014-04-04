@@ -271,4 +271,42 @@
     <npc id="64" skin="0" interior="0" type="driver" recording="JumpRace3">
         <vehicle model="560" paintjob="0" />
     </npc>
+    <npc id="65" skin="0" interior="0" type="driver" recording="NunuRace1">
+        <vehicle model="562" paintjob="0">
+            <component>1146</component>
+            <component>1035</component>
+            <component>1039</component>
+            <component>1010</component>
+            <component>1034</component>
+            <component>1074</component>
+            <component>1087</component>
+            <component>1172</component>
+            <component>1148</component>
+        </vehicle>
+    </npc>
+    <npc id="66" skin="0" interior="0" type="driver" recording="NunuRace2">
+        <vehicle model="562" paintjob="0">
+            <component>1146</component>
+            <component>1035</component>
+            <component>1039</component>
+            <component>1010</component>
+            <component>1034</component>
+            <component>1074</component>
+            <component>1087</component>
+            <component>1172</component>
+            <component>1148</component>
+        </vehicle>
+    </npc>
+    <npc id="67" skin="0" interior="0" type="driver" recording="NunuRace3">
+        <vehicle model="480" paintjob="0" />
+    </npc>
+    <npc id="68" skin="0" interior="0" type="driver" recording="Bituslive1">
+        <vehicle model="562" paintjob="0" />
+    </npc>
+    <npc id="69" skin="0" interior="0" type="driver" recording="BitusLive2">
+        <vehicle model="411" paintjob="0" />
+    </npc>
+    <npc id="70" skin="0" interior="0" type="driver" recording="BitusLive3">
+        <vehicle model="560" paintjob="0" />
+    </npc>
 </npcs>
