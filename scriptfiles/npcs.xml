@@ -262,4 +262,13 @@
     <npc id="61" skin="0" interior="7" type="driver" recording="Arena2">
         <vehicle model="503" paintjob="0" />
     </npc>
+    <npc id="62" skin="0" interior="0" type="driver" recording="Jumprace1">
+        <vehicle model="562" paintjob="0" />
+    </npc>
+    <npc id="63" skin="0" interior="0" type="driver" recording="JumpRace2">
+        <vehicle model="541" paintjob="0" />
+    </npc>
+    <npc id="64" skin="0" interior="0" type="driver" recording="JumpRace3">
+        <vehicle model="560" paintjob="0" />
+    </npc>
 </npcs>
