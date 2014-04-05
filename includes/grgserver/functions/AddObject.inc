@@ -41,6 +41,8 @@ AddObject(playerID, modelID, copyFromCurrent = false)
 	Object:objectID[ORIGINAL_ROTY] = rotY;
 	Object:objectID[ORIGINAL_ROTZ] = rotZ;
 
+	Object:objectID[MOVE_SPEED] = 10;
+
 	SendClientMessageEx(playerID, COLOR_INFO, StringID:104("The object %d (%s) has been added to file '%s' and selected for editing"), modelID, PVar:playerID[OBJEDITOR_MODELNAME], Object:objectID[FILENAME]);
 
 	return true;
