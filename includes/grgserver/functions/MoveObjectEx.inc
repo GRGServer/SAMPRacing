@@ -15,6 +15,7 @@ MoveObjectEx(objectID, type, fromOriginalStart, reverse)
 	}
 
 	Object:objectID[MOVE_TYPE] = type;
+	Object:objectID[MOVE_REVERSE] = reverse;
 
 	if (reverse)
 	{
