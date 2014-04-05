@@ -47,6 +47,20 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 			return false;
 		}
+		else if (IsKeyPressed(KEY_OBJECTEDITOR_SETMOVEPOS))
+		{
+			new objectID = PVar:playerid[OBJEDITOR_ID];
+
+			GetDynamicObjectPos(objectID, Object:objectID[MOVE_POSX], Object:objectID[MOVE_POSY], Object:objectID[MOVE_POSZ]);
+			GetDynamicObjectRot(objectID, Object:objectID[MOVE_ROTX], Object:objectID[MOVE_ROTY], Object:objectID[MOVE_ROTZ]);
+
+			SaveObjects(Object:objectID[FILENAME]);
+
+			SendClientMessageEx(playerid, COLOR_INFO, StringID:210("The target move position of the selected object has been saved"));
+			SendClientMessageEx(playerid, COLOR_INFO, StringID:211("Use /previewobjectmove to preview the movement"));
+
+			return false;
+		}
 	}
 
 	if (PVar:playerid[RECNPC_RUNNING])

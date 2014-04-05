@@ -1667,10 +1667,50 @@
     </string>
     <string id="208">
         <en>
-            Camera movements reloaded
+            No target move position set!
         </en>
         <de>
-            Kamerabewegungen neugeladen
+            Keine Zielposition der Bewegung festgelegt!
+        </de>
+    </string>
+    <string id="209">
+        <en>
+            The target move position can be set by pressing key %s
+        </en>
+        <de>
+            Die Zielposition der Bewegung kann durch Drücken der Taste %s festgelegt werden
+        </de>
+    </string>
+    <string id="210">
+        <en>
+            The target move position of the selected object has been saved
+        </en>
+        <de>
+            Die Zielposition der Bewegung von dem ausgewählten Objekt wurde gespeichert
+        </de>
+    </string>
+    <string id="211">
+        <en>
+            Use /previewobjectmove to preview the movement
+        </en>
+        <de>
+            Verwende /previewobjectmove um eine Vorschau von der Bewegung zu sehen
+        </de>
+    </string>
+    <string id="212">
+        <en>
+            Preview the move of the last selected object
+        </en>
+        <de>
+            Sehe eine Vorschau von der bewegung des zuletzt ausgewählten Objekts
+        </de>
+    </string>
+    <string id="213">
+        <en>
+            You do not have a last selected object!
+        </en>
+        <de>
+            Du hast kein zuletzt ausgewähltes Objekt!
         </de>
     </string>
 </languagestrings>
