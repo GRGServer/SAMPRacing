@@ -29,7 +29,7 @@
             <x>2274.0954</x>
             <y>1395.7602</y>
             <z>42.445274</z>
-            <angle>9.698477</angle>
+            <angle>9.698476</angle>
             <interior>0</interior>
         </position>
     </teleport>
@@ -39,8 +39,18 @@
         <position>
             <x>-1304.405</x>
             <y>-67.56085</y>
-            <z>14.148437</z>
+            <z>14.148436</z>
             <angle>171.04185</angle>
+            <interior>0</interior>
+        </position>
+    </teleport>
+    <teleport>
+        <name>AdminBase</name>
+        <position>
+            <x>257.89321</x>
+            <y>2910.6533</y>
+            <z>6.004882</z>
+            <angle>352.56405</angle>
             <interior>0</interior>
         </position>
     </teleport>
