@@ -1713,4 +1713,28 @@
             Du hast kein zuletzt ausgewähltes Objekt!
         </de>
     </string>
+    <string id="214">
+        <en>
+            Set the move speed of the currently selected object
+        </en>
+        <de>
+            Lege die Bewegungsgeschwindigkeit des aktuell ausgewählten Objekts fest
+        </de>
+    </string>
+    <string id="215">
+        <en>
+            The object move speed has been changed
+        </en>
+        <de>
+            Die Objektbewegungsgeschwindigkeit wurde geändert
+        </de>
+    </string>
+    <string id="216">
+        <en>
+            No object selected!
+        </en>
+        <de>
+            Kein Objekt ausgewählt!
+        </de>
+    </string>
 </languagestrings>
