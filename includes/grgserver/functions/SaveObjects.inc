@@ -13,6 +13,21 @@ SaveObjects(filename[])
 
 			new XMLNode:objectNode = XML_CreateNode(rootNode, "object");
 
+			if (!g_objects[arrayIndex][E_OBJECT_ID])
+			{
+				new highestID;
+				Foreach(index, g_objects)
+				{
+					if (g_objects[index][E_OBJECT_ID] > highestID)
+					{
+						highestID = g_objects[index][E_OBJECT_ID];
+					}
+				}
+				g_objects[arrayIndex][E_OBJECT_ID] = highestID + 1;
+			}
+
+			XML_SetIntAttribute(objectNode, "id", g_objects[arrayIndex][E_OBJECT_ID]);
+
 			XML_SetIntAttribute(objectNode, "model", Streamer_GetIntData(STREAMER_TYPE_OBJECT, objectID, E_STREAMER_MODEL_ID));
 
 			new objectInteriors[1];

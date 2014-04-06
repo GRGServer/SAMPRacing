@@ -7,6 +7,28 @@ public OnDynamicObjectMoved(objectid)
 
 	switch (moveType)
 	{
+		case OBJECTMOVE_AUTORESET:
+		{
+			if (reverse)
+			{
+				if (Object:objectid[MOVE_RESET_TIMER])
+				{
+					KillTimer(Object:objectid[MOVE_RESET_TIMER]);
+					Object:objectid[MOVE_RESET_TIMER] = 0;
+				}
+			}
+			else
+			{
+				if (Object:objectid[MOVE_RESET_TIMEOUT])
+				{
+					if (Object:objectid[MOVE_RESET_TIMER])
+					{
+						KillTimer(Object:objectid[MOVE_RESET_TIMER]);
+					}
+					Object:objectid[MOVE_RESET_TIMER] = SetTimerEx("Timer_ResetMoveObject", Object:objectid[MOVE_RESET_TIMEOUT], false, "d", objectid);
+				}
+			}
+		}
 		case OBJECTMOVE_EDITORPREVIEW:
 		{
 			if (!reverse)

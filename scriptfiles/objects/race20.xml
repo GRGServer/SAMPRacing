@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <objects>
-    <object model="18786" interior="0" posX="-1646.266" posY="-790.2435" posZ="90.868522" rotX="9.000002" rotY="-0.699999" rotZ="-98.40004" />
+    <object id="343" model="18786" interior="0" posX="-1646.266" posY="-790.2435" posZ="90.868522" rotX="9.000002" rotY="-0.699999" rotZ="-98.40004" />
 </objects>

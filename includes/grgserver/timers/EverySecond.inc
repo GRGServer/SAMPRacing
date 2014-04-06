@@ -18,47 +18,52 @@ Timer:EverySecond()
 
 	PlayerLoop(playerID)
 	{
-		// Write player info
-		vehicleModelID = 0;
-		if (IsPlayerInAnyVehicle(playerID))
+		if (PVar:playerID[USERID])
 		{
-			vehicleModelID = GetVehicleModel(GetPlayerVehicleID(playerID));
-		}
-		GetPlayerPos(playerID, posX, posY, posZ);
-		Format:playerStatsString("%d\t%s\t%f\t%f\t%f\t%d\t%d\n", playerID, GetPlayerNameEx(playerID), posX, posY, posZ, GetPlayerInterior(playerID), vehicleModelID);
-		fwrite(playerStatsFile, playerStatsString);
-
-		// Update current area
-		new areaCount = GetPlayerNumberDynamicAreas(playerID);
-		if (areaCount)
-		{
-			new areas[MAX_AREAS];
-			GetPlayerDynamicAreas(playerID, areas);
-			new areaID = Streamer_GetIntData(STREAMER_TYPE_AREA, areas[0], E_STREAMER_EXTRA_ID);
-			if (PVar:playerID[CURRENT_AREA] != areaID + 1)
+			// Write player info
+			vehicleModelID = 0;
+			if (IsPlayerInAnyVehicle(playerID))
 			{
-				// Exit the old area
+				vehicleModelID = GetVehicleModel(GetPlayerVehicleID(playerID));
+			}
+			GetPlayerPos(playerID, posX, posY, posZ);
+			Format:playerStatsString("%d\t%s\t%f\t%f\t%f\t%d\t%d\n", playerID, GetPlayerNameEx(playerID), posX, posY, posZ, GetPlayerInterior(playerID), vehicleModelID);
+			fwrite(playerStatsFile, playerStatsString);
+
+			// Update current area
+			new areaCount = GetPlayerNumberDynamicAreas(playerID);
+			if (areaCount)
+			{
+				new areas[MAX_AREAS];
+				GetPlayerDynamicAreas(playerID, areas);
+				new areaID = Streamer_GetIntData(STREAMER_TYPE_AREA, areas[0], E_STREAMER_EXTRA_ID);
+				if (PVar:playerID[CURRENT_AREA] != areaID + 1)
+				{
+					// Exit the old area
+					if (PVar:playerID[CURRENT_AREA])
+					{
+						OnPlayerExitArea(playerID, PVar:playerID[CURRENT_AREA] - 1);
+					}
+
+					// Enter the area
+					PVar:playerID[CURRENT_AREA] = areaID + 1;
+					OnPlayerEnterArea(playerID, areaID);
+				}
+			}
+			else
+			{
+				// Exit the area
 				if (PVar:playerID[CURRENT_AREA])
 				{
 					OnPlayerExitArea(playerID, PVar:playerID[CURRENT_AREA] - 1);
+					PVar:playerID[CURRENT_AREA] = 0;
 				}
-
-				// Enter the area
-				PVar:playerID[CURRENT_AREA] = areaID + 1;
-				OnPlayerEnterArea(playerID, areaID);
 			}
-		}
-		else
-		{
-			// Exit the area
-			if (PVar:playerID[CURRENT_AREA])
-			{
-				OnPlayerExitArea(playerID, PVar:playerID[CURRENT_AREA] - 1);
-				PVar:playerID[CURRENT_AREA] = 0;
-			}
-		}
 
-		CheckHiddenPackages(playerID);
+			CheckGarage(playerID);
+
+			CheckHiddenPackages(playerID);
+		}
 	}
 
 	fclose(playerStatsFile);

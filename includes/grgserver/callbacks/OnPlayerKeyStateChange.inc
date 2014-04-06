@@ -224,29 +224,6 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		}
 	}
 
-	if (IsKeyPressed(KEY_CHECKPOINT_USE))
-	{
-		new checkpointID = GetPlayerVisibleDynamicCP(playerid);
-		if (IsValidDynamicCP(checkpointID))
-		{
-			new Float:posX;
-			new Float:posY;
-			new Float:posZ;
-			new Float:size;
-
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_X, posX);
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Y, posY);
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Z, posZ);
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_SIZE, size);
-
-			if (IsPlayerInRangeOfPoint(playerid, size, posX, posY, posZ))
-			{
-				CheckpointEvent(playerid, checkpointID, CHECKPOINTEVENT_KEY);
-				return false;
-			}
-		}
-	}
-
 	if (IsKeyPressed(KEY_PICKUP_USE))
 	{
 		new pickupID = GetPlayerPickup(playerid);
@@ -254,6 +231,59 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		{
 			PickupEvent(playerid, pickupID, PICKUPEVENT_KEY);
 			return false;
+		}
+	}
+
+	if (IsKeyPressed(KEY_OBJECT_MOVE_AUTORESET))
+	{
+		Foreach(objectIndex, g_objects)
+		{
+			if (g_objects[objectIndex][E_OBJECT_MOVE_POSX] || g_objects[objectIndex][E_OBJECT_MOVE_POSY] || g_objects[objectIndex][E_OBJECT_MOVE_POSZ])
+			{
+				new Float:posX;
+				new Float:posY;
+				new Float:posZ;
+
+				new objectID = objectIndex + 1;
+
+				Streamer_GetFloatData(STREAMER_TYPE_OBJECT, objectID, E_STREAMER_X, posX);
+				Streamer_GetFloatData(STREAMER_TYPE_OBJECT, objectID, E_STREAMER_Y, posY);
+				Streamer_GetFloatData(STREAMER_TYPE_OBJECT, objectID, E_STREAMER_Z, posZ);
+
+				if (IsPlayerInRangeOfPoint(playerid, 10, posX, posY, posZ))
+				{
+					new allowMove;
+
+					switch (g_objects[objectIndex][E_OBJECT_TYPE])
+					{
+						case OBJECTTYPE_GARAGEDOOR:
+						{
+							Foreach(garageNumber, g_garages)
+							{
+								if (g_garages[garageNumber][E_GARAGE_DOOROBJECTID] == g_objects[objectIndex][E_OBJECT_ID])
+								{
+									if (PVar:playerid[ISADMIN] || PVar:playerid[USERID] == g_garages[garageNumber][E_GARAGE_USERID])
+									{
+										allowMove = true;
+									}
+									break;
+								}
+							}
+						}
+						default:
+						{
+							allowMove = true;
+						}
+					}
+
+					if (allowMove)
+					{
+						MoveObjectEx(objectID, OBJECTMOVE_AUTORESET, false, false);
+					}
+
+					break;
+				}
+			}
 		}
 	}
 

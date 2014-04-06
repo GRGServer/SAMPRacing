@@ -4,17 +4,10 @@ ReloadGarages()
 
 	Foreach(index, g_garages)
 	{
-		if (IsValidDynamicCP(g_garages[index][E_GARAGE_CHECKPOINT_ID]))
-		{
-			DestroyDynamicCP(g_garages[index][E_GARAGE_CHECKPOINT_ID]);
-		}
-
 		Foreach(field, g_garages[])
 		{
 			g_garages[index][E_GARAGE:field] = 0;
 		}
-
-		g_garages[index][E_GARAGE_PICKUP_ID] = -1;
 	}
 
 	DestroyPickupsOfType(PICKUPTYPE_GARAGE_BOUGHT);
@@ -34,33 +27,21 @@ ReloadGarages()
 
 		new garageID = XML_GetIntAttribute(garageNode, "id");
 
-		new type[10];
-		XML_GetAttribute(garageNode, "type", type);
-		if (IsStr(type, "small"))
+		new XMLNode:vehicleNode = XML_GetFirstChild(garageNode, "vehicle");
+		if (!vehicleNode)
 		{
-			g_garages[garageNumber][E_GARAGE_TYPE] = GARAGE_SMALL;
-		}
-		else if (IsStr(type, "large"))
-		{
-			g_garages[garageNumber][E_GARAGE_TYPE] = GARAGE_LARGE;
-		}
-		else
-		{
-			printf("  Invalid garage type specified for garage %d", garageID);
+			printf("  No vehicle position specified for garage %d", garageID);
 			garageNode = XML_GetNextSibling(garageNode, "garage");
 			continue;
 		}
 
-		new XMLNode:checkpointNode = XML_GetFirstChild(garageNode, "checkpoint");
-		if (!checkpointNode)
+		new XMLNode:cameraNode = XML_GetFirstChild(garageNode, "camera");
+		if (!cameraNode)
 		{
-			printf("  No checkpoint specified for garage %d", garageID);
+			printf("  No camera position spedified for garage %d", garageID);
 			garageNode = XML_GetNextSibling(garageNode, "garage");
 			continue;
 		}
-		g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSX] = XML_GetFloatAttribute(checkpointNode, "x");
-		g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSY] = XML_GetFloatAttribute(checkpointNode, "y");
-		g_garages[garageNumber][E_GARAGE_CHECKPOINT_POSZ] = XML_GetFloatAttribute(checkpointNode, "z");
 
 		new XMLNode:pickupNode = XML_GetFirstChild(garageNode, "pickup");
 		if (!pickupNode)
@@ -69,12 +50,36 @@ ReloadGarages()
 			garageNode = XML_GetNextSibling(garageNode, "garage");
 			continue;
 		}
+
+		new XMLNode:doorObjectNode = XML_GetFirstChild(garageNode, "doorobject");
+		if (doorObjectNode)
+		{
+			new string[10];
+			XML_GetValue(XML_GetFirstChild(doorObjectNode), string);
+			g_garages[garageNumber][E_GARAGE_DOOROBJECTID] = strval(string);
+			new objectID = GetObjectByID(g_garages[garageNumber][E_GARAGE_DOOROBJECTID]);
+			if (objectID != -1)
+			{
+				g_objects[objectID][E_OBJECT_TYPE] = OBJECTTYPE_GARAGEDOOR;
+			}
+		}
+
+		g_garages[garageNumber][E_GARAGE_VEHICLE_POSX] = XML_GetFloatAttribute(vehicleNode, "x");
+		g_garages[garageNumber][E_GARAGE_VEHICLE_POSY] = XML_GetFloatAttribute(vehicleNode, "y");
+		g_garages[garageNumber][E_GARAGE_VEHICLE_POSZ] = XML_GetFloatAttribute(vehicleNode, "z");
+		g_garages[garageNumber][E_GARAGE_VEHICLE_ANGLE] = XML_GetFloatAttribute(vehicleNode, "angle");
+
+		g_garages[garageNumber][E_GARAGE_CAMERA_POSX] = XML_GetFloatAttribute(cameraNode, "x");
+		g_garages[garageNumber][E_GARAGE_CAMERA_POSY] = XML_GetFloatAttribute(cameraNode, "y");
+		g_garages[garageNumber][E_GARAGE_CAMERA_POSZ] = XML_GetFloatAttribute(cameraNode, "z");
+
 		g_garages[garageNumber][E_GARAGE_PICKUP_POSX] = XML_GetFloatAttribute(pickupNode, "x");
 		g_garages[garageNumber][E_GARAGE_PICKUP_POSY] = XML_GetFloatAttribute(pickupNode, "y");
 		g_garages[garageNumber][E_GARAGE_PICKUP_POSZ] = XML_GetFloatAttribute(pickupNode, "z");
 
 		g_garages[garageNumber][E_GARAGE_ID] = garageID;
 		g_garages[garageNumber][E_GARAGE_PRICE] = XML_GetIntAttribute(garageNode, "price");
+		g_garages[garageNumber][E_GARAGE_ENTERRANGE] = XML_GetIntAttribute(garageNode, "enterrange");
 
 		MySQLFormat("SELECT `userId`, `price` FROM `garages` WHERE `id` = %d", g_garages[garageNumber][E_GARAGE_ID]);
 		new Cache:result = mysql_query(1, g_sqlQuery);

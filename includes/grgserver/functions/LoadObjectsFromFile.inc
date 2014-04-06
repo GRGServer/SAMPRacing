@@ -9,6 +9,7 @@ LoadObjectsFromFile(filename[])
 	new XMLNode:objectNode = XML_GetFirstChild(xml, "object");
 	while (objectNode)
 	{
+		new id = XML_GetIntAttribute(objectNode, "id");
 		new modelID = XML_GetIntAttribute(objectNode, "model");
 		new interior = XML_GetIntAttribute(objectNode, "interior");
 
@@ -31,6 +32,7 @@ LoadObjectsFromFile(filename[])
 
 		strcat(Object:objectID[FILENAME], filename, STRINGLENGTH_OBJECTFILENAME);
 
+		Object:objectID[ID] = id;
 		Object:objectID[ORIGINAL_POSX] = posX;
 		Object:objectID[ORIGINAL_POSY] = posY;
 		Object:objectID[ORIGINAL_POSZ] = posZ;

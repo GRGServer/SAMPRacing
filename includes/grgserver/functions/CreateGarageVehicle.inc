@@ -15,48 +15,20 @@ CreateGarageVehicle(playerID, row)
 
 	new garageNumber = PVar:playerID[GARAGE_NUMBER];
 
-	new Float:vehiclePosX;
-	new Float:vehiclePosY;
-	new Float:vehiclePosZ;
-	new Float:vehicleAngle;
-	new interior;
-
-	switch (g_garages[garageNumber][E_GARAGE_TYPE])
-	{
-		case GARAGE_LARGE:
-		{
-			vehiclePosX = GARAGE_LARGE_VEHICLE_POSX;
-			vehiclePosY = GARAGE_LARGE_VEHICLE_POSY;
-			vehiclePosZ = GARAGE_LARGE_VEHICLE_POSZ;
-			vehicleAngle = GARAGE_LARGE_VEHICLE_ANGLE;
-
-			interior = GARAGE_LARGE_INTERIOR;
-		}
-		case GARAGE_SMALL:
-		{
-			vehiclePosX = GARAGE_SMALL_VEHICLE_POSX;
-			vehiclePosY = GARAGE_SMALL_VEHICLE_POSY;
-			vehiclePosZ = GARAGE_SMALL_VEHICLE_POSZ;
-			vehicleAngle = GARAGE_SMALL_VEHICLE_ANGLE;
-
-			interior = GARAGE_SMALL_INTERIOR;
-		}
-	}
-
 	cache_set_active(PVar:playerID[GARAGE_MYSQLCACHEID]);
 
 	PVar:playerID[GARAGE_ROW] = row;
 
 	PVar:playerID[GARAGE_VEHICLE_SAVEID] = cache_get_field_content_int(row, "id");
 
-	PVar:playerID[GARAGE_VEHICLE_ID] = LoadVehicle(row, vehiclePosX, vehiclePosY, vehiclePosZ, vehicleAngle);
+	PVar:playerID[GARAGE_VEHICLE_ID] = LoadVehicle(row, g_garages[garageNumber][E_GARAGE_VEHICLE_POSX], g_garages[garageNumber][E_GARAGE_VEHICLE_POSY], g_garages[garageNumber][E_GARAGE_VEHICLE_POSZ], g_garages[garageNumber][E_GARAGE_VEHICLE_ANGLE]);
 	if (PVar:playerID[GARAGE_VEHICLE_ID] == INVALID_VEHICLE_ID)
 	{
 		PVar:playerID[GARAGE_VEHICLE_LOADING] = false;
 		return;
 	}
 
-	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], interior);
+	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerInterior(playerID));
 	SetVehicleVirtualWorld(PVar:playerID[GARAGE_VEHICLE_ID], VIRTUALWORLD_GARAGE + playerID);
 
 	FormatNew:string[256]("%s~n~%d / %d", g_vehicleModels[GetVehicleModel(PVar:playerID[GARAGE_VEHICLE_ID]) - 400][E_VEHICLEMODEL_NAME], row + 1, cache_get_row_count());

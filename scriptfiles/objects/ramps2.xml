@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <objects>
-    <object model="19325" interior="0" posX="-1283.188" posY="46.030216" posZ="51.428833" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1286.088" posY="43.137474" posZ="51.242958" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1281.515" posY="38.577796" posZ="51.175342" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1276.878" posY="33.954589" posZ="51.106773" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1279.785" posY="31.040678" posZ="50.919818" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1284.416" posY="35.656856" posZ="50.988212" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1288.996" posY="40.223617" posZ="51.055934" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1293.670" posY="44.882125" posZ="51.124954" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1290.755" posY="47.788909" posZ="51.311923" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1295.436" posY="52.454448" posZ="51.381134" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="18787" interior="0" posX="-1295.166" posY="52.915504" posZ="45.410385" rotX="-0.499998" rotY="0.399998" rotZ="-44.59999" />
-    <object model="19325" interior="0" posX="-1298.343" posY="49.540473" posZ="51.194252" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1303.022" posY="54.206020" posZ="51.263416" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
-    <object model="19325" interior="0" posX="-1300.136" posY="57.127037" posZ="51.450069" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="472" model="19325" interior="0" posX="-1283.187" posY="46.030216" posZ="51.428833" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="473" model="19325" interior="0" posX="-1286.088" posY="43.137474" posZ="51.242958" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="474" model="19325" interior="0" posX="-1281.515" posY="38.577796" posZ="51.175342" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="475" model="19325" interior="0" posX="-1276.878" posY="33.954589" posZ="51.106773" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="476" model="19325" interior="0" posX="-1279.785" posY="31.040678" posZ="50.919818" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="477" model="19325" interior="0" posX="-1284.416" posY="35.656856" posZ="50.988212" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="478" model="19325" interior="0" posX="-1288.995" posY="40.223617" posZ="51.055934" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="479" model="19325" interior="0" posX="-1293.670" posY="44.882125" posZ="51.124954" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="480" model="19325" interior="0" posX="-1290.755" posY="47.788909" posZ="51.311923" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="481" model="19325" interior="0" posX="-1295.436" posY="52.454448" posZ="51.381134" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="482" model="18787" interior="0" posX="-1295.166" posY="52.915504" posZ="45.410385" rotX="-0.499998" rotY="0.399998" rotZ="-44.59999" />
+    <object id="483" model="19325" interior="0" posX="-1298.343" posY="49.540473" posZ="51.194252" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="484" model="19325" interior="0" posX="-1303.021" posY="54.206020" posZ="51.263416" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
+    <object id="485" model="19325" interior="0" posX="-1300.135" posY="57.127037" posZ="51.450069" rotX="0.599964" rotY="87.399963" rotZ="45.099960" />
 </objects>

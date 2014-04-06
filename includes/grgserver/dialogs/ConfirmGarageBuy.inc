@@ -8,26 +8,10 @@ ShowDialog:ConfirmGarageBuy(playerID)
 
 	new garageNumber = g_pickups[pickupID][E_PICKUP_LINKID];
 
-	new typeStringID;
-	switch (g_garages[garageNumber][E_GARAGE_TYPE])
-	{
-		case GARAGE_LARGE:
-		{
-			typeStringID = StringID:135("Large garage");
-		}
-		case GARAGE_SMALL:
-		{
-			typeStringID = StringID:136("Small garage");
-		}
-	}
-
 	new messageString[256];
 	new string[100];
 	strcat(messageString, LanguageString(playerID, StringID:137("Are you sure to buy this garage?")));
 	strcat(messageString, "\n\n");
-	Format:string(LanguageString(playerID, StringID:138("Type: %s")), LanguageString(playerID, typeStringID));
-	strcat(messageString, string);
-	strcat(messageString, "\n");
 	Format:string(LanguageString(playerID, StringID:83("Price: $%d")), g_garages[garageNumber][E_GARAGE_PRICE]);
 	strcat(messageString, string);
 

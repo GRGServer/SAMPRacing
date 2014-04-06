@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <objects>
-    <object model="13592" interior="0" posX="1843.1997" posY="-2589.687" posZ="22.276847" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
-    <object model="3665" interior="0" posX="1738.7149" posY="-2592.583" posZ="14.426887" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
-    <object model="3665" interior="0" posX="1571.8977" posY="-2597.396" posZ="14.426887" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
-    <object model="3665" interior="0" posX="1738.7244" posY="-2597.408" posZ="14.426887" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
-    <object model="3665" interior="0" posX="1571.9084" posY="-2592.617" posZ="14.426887" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
-    <object model="1245" interior="0" posX="2082.0986" posY="-2599.301" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="-165.4001" />
-    <object model="2940" interior="0" posX="2075.0207" posY="-2581.360" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="-85.10001" />
-    <object model="5152" interior="0" posX="2074.5178" posY="-2585.817" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
-    <object model="13646" interior="0" posX="2075.4663" posY="-2563.327" posZ="12.896874" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
-    <object model="1894" interior="0" posX="2031.1171" posY="-2492.255" posZ="12.276874" rotX="0.000000" rotY="0.000000" rotZ="-179.2000" />
-    <object model="13638" interior="0" posX="1979.8625" posY="-2467.123" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="-86.20001" />
-    <object model="2931" interior="0" posX="1971.3128" posY="-2546.477" posZ="12.436873" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
-    <object model="2931" interior="0" posX="1972.1230" posY="-2546.477" posZ="12.436873" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
-    <object model="2931" interior="0" posX="1972.9436" posY="-2546.477" posZ="12.436873" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="458" model="13592" interior="0" posX="1843.1997" posY="-2589.687" posZ="22.276847" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="459" model="3665" interior="0" posX="1738.7148" posY="-2592.583" posZ="14.426886" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
+    <object id="460" model="3665" interior="0" posX="1571.8977" posY="-2597.395" posZ="14.426886" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
+    <object id="461" model="3665" interior="0" posX="1738.7243" posY="-2597.407" posZ="14.426886" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
+    <object id="462" model="3665" interior="0" posX="1571.9084" posY="-2592.616" posZ="14.426886" rotX="0.000000" rotY="0.000000" rotZ="-90.49999" />
+    <object id="463" model="1245" interior="0" posX="2082.0986" posY="-2599.301" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="-165.4001" />
+    <object id="464" model="2940" interior="0" posX="2075.0207" posY="-2581.360" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="-85.10001" />
+    <object id="465" model="5152" interior="0" posX="2074.5178" posY="-2585.816" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="466" model="13646" interior="0" posX="2075.4663" posY="-2563.326" posZ="12.896874" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="467" model="1894" interior="0" posX="2031.1170" posY="-2492.254" posZ="12.276873" rotX="0.000000" rotY="0.000000" rotZ="-179.1999" />
+    <object id="468" model="13638" interior="0" posX="1979.8625" posY="-2467.123" posZ="13.546875" rotX="0.000000" rotY="0.000000" rotZ="-86.20001" />
+    <object id="469" model="2931" interior="0" posX="1971.3127" posY="-2546.477" posZ="12.436873" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="470" model="2931" interior="0" posX="1972.1230" posY="-2546.477" posZ="12.436873" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="471" model="2931" interior="0" posX="1972.9436" posY="-2546.477" posZ="12.436873" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
 </objects>

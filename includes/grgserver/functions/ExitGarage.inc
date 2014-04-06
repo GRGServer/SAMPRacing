@@ -11,15 +11,14 @@ ExitGarage(playerID, withVehicle)
 
 	SetPlayerVirtualWorld(playerID, 0);
 
-	new spawnType = withVehicle ? SPAWNTYPE_GETGARAGEVEHICLE : SPAWNTYPE_DEFAULT;
+	new garageNumber = PVar:playerID[GARAGE_NUMBER];
 
-	SetPlayerSpawn(playerID, spawnType, PVar:playerID[GARAGE_OLDPOSX], PVar:playerID[GARAGE_OLDPOSY], PVar:playerID[GARAGE_OLDPOSZ], PVar:playerID[GARAGE_OLDANGLE], PVar:playerID[GARAGE_OLDINTERIOR]);
+	SetPlayerSpawn(playerID, SPAWNTYPE_EXITGARAGE, g_garages[garageNumber][E_GARAGE_VEHICLE_POSX], g_garages[garageNumber][E_GARAGE_VEHICLE_POSY], g_garages[garageNumber][E_GARAGE_VEHICLE_POSZ], g_garages[garageNumber][E_GARAGE_VEHICLE_ANGLE]);
 
 	if (!withVehicle)
 	{
 		DestroyVehicleEx(PVar:playerID[GARAGE_VEHICLE_ID]);
 
-		PVar:playerID[GARAGE_NUMBER] = -1;
 		PVar:playerID[GARAGE_VEHICLE_ID] = INVALID_VEHICLE_ID;
 	}
 
