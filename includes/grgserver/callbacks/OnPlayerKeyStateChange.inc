@@ -146,39 +146,6 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		}
 	}
 
-	if (IsKeyPressed(KEY_PICKUP_USE))
-	{
-		new pickupID = GetPlayerPickup(playerid);
-		if (pickupID != -1)
-		{
-			PickupEvent(playerid, pickupID, PICKUPEVENT_KEY);
-			return false;
-		}
-	}
-
-	if (IsKeyPressed(KEY_CHECKPOINT_USE))
-	{
-		new checkpointID = GetPlayerVisibleDynamicCP(playerid);
-		if (IsValidDynamicCP(checkpointID))
-		{
-			new Float:posX;
-			new Float:posY;
-			new Float:posZ;
-			new Float:size;
-
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_X, posX);
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Y, posY);
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Z, posZ);
-			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_SIZE, size);
-
-			if (IsPlayerInRangeOfPoint(playerid, size, posX, posY, posZ))
-			{
-				CheckpointEvent(playerid, checkpointID, CHECKPOINTEVENT_KEY);
-				return false;
-			}
-		}
-	}
-
 	if (PVar:playerid[GARAGE_NUMBER] != -1)
 	{
 		if (IsKeyPressed(KEY_GARAGE_PREVIOUS))
@@ -253,6 +220,39 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		else if (IsKeyPressed(KEY_VEHICLESHOP_QUIT))
 		{
 			ExitVehicleShop(playerid, false);
+			return false;
+		}
+	}
+
+	if (IsKeyPressed(KEY_CHECKPOINT_USE))
+	{
+		new checkpointID = GetPlayerVisibleDynamicCP(playerid);
+		if (IsValidDynamicCP(checkpointID))
+		{
+			new Float:posX;
+			new Float:posY;
+			new Float:posZ;
+			new Float:size;
+
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_X, posX);
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Y, posY);
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_Z, posZ);
+			Streamer_GetFloatData(STREAMER_TYPE_CP, checkpointID, E_STREAMER_SIZE, size);
+
+			if (IsPlayerInRangeOfPoint(playerid, size, posX, posY, posZ))
+			{
+				CheckpointEvent(playerid, checkpointID, CHECKPOINTEVENT_KEY);
+				return false;
+			}
+		}
+	}
+
+	if (IsKeyPressed(KEY_PICKUP_USE))
+	{
+		new pickupID = GetPlayerPickup(playerid);
+		if (pickupID != -1)
+		{
+			PickupEvent(playerid, pickupID, PICKUPEVENT_KEY);
 			return false;
 		}
 	}
