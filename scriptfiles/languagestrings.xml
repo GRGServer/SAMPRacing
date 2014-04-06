@@ -1081,12 +1081,36 @@
             Drücke %s um dieses Pickup zu verwenden
         </de>
     </string>
+    <string id="135">
+        <en>
+            Set the spawn position of a garage
+        </en>
+        <de>
+            Lege die Spawnposition einer Garage fest
+        </de>
+    </string>
+    <string id="136">
+        <en>
+            The garage spawn position has been saved
+        </en>
+        <de>
+            Die Garagenspawnposition wurde gespeichert
+        </de>
+    </string>
     <string id="137">
         <en>
             Are you sure to buy this garage?
         </en>
         <de>
             Bist du dir sicher, dass du diese Garage kaufen möchtest?
+        </de>
+    </string>
+    <string id="138">
+        <en>
+            Limit of %d garages reached!
+        </en>
+        <de>
+            Limit von %d Garagen erreicht!
         </de>
     </string>
     <string id="139">
@@ -1135,6 +1159,14 @@
         </en>
         <de>
             Du hast dich zum Spawnort teleportiert
+        </de>
+    </string>
+    <string id="145">
+        <en>
+            Set the pickup of a garage
+        </en>
+        <de>
+            Lege das Pickup von einer Garage fest
         </de>
     </string>
     <string id="146">
@@ -1703,6 +1735,14 @@
         </en>
         <de>
             Kein Objekt ausgewählt!
+        </de>
+    </string>
+    <string id="217">
+        <en>
+            The garage pickup has been saved
+        </en>
+        <de>
+            Das Garagenpickup wurde gespeichert
         </de>
     </string>
 </languagestrings>
