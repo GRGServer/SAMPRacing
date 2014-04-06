@@ -40,6 +40,8 @@ SaveObjects(filename[])
 				XML_SetFloatAttribute(moveNode, "rotZ", g_objects[arrayIndex][E_OBJECT_MOVE_ROTZ]);
 
 				XML_SetFloatAttribute(moveNode, "speed", g_objects[arrayIndex][E_OBJECT_MOVE_SPEED]);
+
+				XML_SetIntAttribute(moveNode, "reset", g_objects[arrayIndex][E_OBJECT_MOVE_RESET_TIMEOUT]);
 			}
 		}
 	}

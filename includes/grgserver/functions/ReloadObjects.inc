@@ -9,6 +9,11 @@ ReloadObjects()
 			DestroyDynamicObject(index + 1);
 		}
 
+		if (g_objects[index][E_OBJECT_MOVE_RESET_TIMER])
+		{
+			KillTimer(g_objects[index][E_OBJECT_MOVE_RESET_TIMER]);
+		}
+
 		Foreach(field, g_objects[])
 		{
 			g_objects[index][E_OBJECT:field] = 0;

@@ -53,6 +53,9 @@ LoadObjectsFromFile(filename[])
 
 			// Read speed
 			Object:objectID[MOVE_SPEED] = XML_GetFloatAttribute(moveNode, "speed");
+
+			// Read reset timeout
+			Object:objectID[MOVE_RESET_TIMEOUT] = XML_GetIntAttribute(moveNode, "reset");
 		}
 
 		objectNode = XML_GetNextSibling(objectNode, "object");
