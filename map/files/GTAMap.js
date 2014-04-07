@@ -60,7 +60,7 @@ function GTAMap(canvasElement, tilesPath, center, repeating)
 			//Get tileX within range
 			for (; x < 0; x += max);
 
-			return (x % max) == -1 && y == -1 ? null : (tilesPath + "/map." + zoom + "." + x + "." + y + ".png");
+			return (x % max) == -1 && y == -1 ? null : (tilesPath + "/" + zoom + "." + x + "." + y + ".jpg");
 		},
 		tileSize: new google.maps.Size(512, 512),//Range of the map
 		maxZoom: 4,//Set zoom levels as given
