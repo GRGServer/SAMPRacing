@@ -29,7 +29,7 @@
             <x>2274.0954</x>
             <y>1395.7602</y>
             <z>42.445274</z>
-            <angle>9.698476</angle>
+            <angle>9.698475</angle>
             <interior>0</interior>
         </position>
     </teleport>
@@ -39,7 +39,7 @@
         <position>
             <x>-1304.405</x>
             <y>-67.56085</y>
-            <z>14.148436</z>
+            <z>14.148435</z>
             <angle>171.04185</angle>
             <interior>0</interior>
         </position>
@@ -49,9 +49,19 @@
         <position>
             <x>257.89321</x>
             <y>2910.6533</y>
-            <z>6.004882</z>
+            <z>6.004881</z>
             <angle>352.56405</angle>
             <interior>0</interior>
         </position>
     </teleport>
+    <teleport>
+        <name>drift3</name>
+		<withvehicle>true</withvehicle>
+        <position>
+            <x>1131.3872</x>
+            <y>1355.3939</y>
+            <z>10.820312</z>
+            <angle>108.24483</angle>
+            <interior>0</interior>
+        </position>
 </teleports>
