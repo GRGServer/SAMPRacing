@@ -21,6 +21,16 @@
 		<parameters>drift2</parameters>
 	</alias>
 	<alias>
+		<name>drift3</name>
+		<command>tp</command>
+		<parameters>drift3</parameters>
+	</alias>
+	<alias>
+		<name>AdminBase</name>
+		<command>tp</command>
+		<parameters>adminbase</parameters>
+	<alias>
+	<alias>
 		<name>stunt1</name>
 		<command>tp</command>
 		<parameters>stunt1</parameters>
