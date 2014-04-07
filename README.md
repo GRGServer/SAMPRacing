@@ -4,16 +4,6 @@ This repository contains all files required to set up the Grand Racing Game San 
 
 Visit http://grgserver.net for more information about the server.
 
-# How to run the server
-
-## Requirements
-
-  * Linux or Windows
-  * MySQL Server
-  * Webserver (To stream the audio files)
-  * To use Pawn on x64 Linux: 32-bit C Library for AMD64 (*apt-get install libc6-i386* on Debian based Linux distributions)
-  * A current [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To build and execute tools like the Includes Updater)
-
 ## Used plugins
 
 The following plugins are used by the server:
@@ -27,6 +17,15 @@ The following plugins are used by the server:
  * [streamer](http://forum.sa-mp.com/showthread.php?t=102865)
  * [whirlpool](http://forum.sa-mp.com/showthread.php?t=65290)
  * [xml](http://forum.sa-mp.com/showthread.php?t=372521)
+
+## Requirements
+
+  * Linux or Windows
+  * MySQL Server
+  * Webserver (To stream the audio files and display the online map)
+  * PHP (To display the online map)
+  * To use Pawn on x64 Linux: 32-bit C Library for AMD64 (*apt-get install libc6-i386* on Debian based Linux distributions)
+  * A current [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To build and execute tools like the Includes Updater)
 
 ## Configuration
 
