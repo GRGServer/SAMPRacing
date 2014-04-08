@@ -10,8 +10,8 @@ switch ($_GET["type"])
 		$models = $domDocument->getElementsByTagName("model");
 		foreach ($models as $model)
 		{
-			$id = $model->getElementsByTagName("id")->item(0)->nodeValue;
-			$name = $model->getElementsByTagName("name")->item(0)->nodeValue;
+			$id = $model->getAttribute("id");
+			$name = $model->getAttribute("name");
 
 			$data[$id] = $name;
 		}
