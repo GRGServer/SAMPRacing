@@ -46,6 +46,7 @@
     </teleport>
     <teleport>
         <name>adminbase</name>
+		<adminsonly>true</adminsonly>
         <position>
             <x>257.89321</x>
             <y>2910.6533</y>
