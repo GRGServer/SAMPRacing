@@ -1745,4 +1745,44 @@
             Das Garagenpickup wurde gespeichert
         </de>
     </string>
+    <string id="218">
+        <en>
+            Commands
+        </en>
+        <de>
+            Befehle
+        </de>
+    </string>
+    <string id="219">
+        <en>
+            Details
+        </en>
+        <de>
+            Details
+        </de>
+    </string>
+    <string id="220">
+        <en>
+            Command details
+        </en>
+        <de>
+            Befehlsdetails
+        </de>
+    </string>
+    <string id="221">
+        <en>
+            Execute
+        </en>
+        <de>
+            Ausführen
+        </de>
+    </string>
+    <string id="222">
+        <en>
+            Enter the command parameters bellow (if required)
+        </en>
+        <de>
+            Gebe die Befehlsparameter unten ein (wenn erforderlich)
+        </de>
+    </string>
 </languagestrings>

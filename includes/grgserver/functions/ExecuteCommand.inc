@@ -1,5 +1,19 @@
 ExecuteCommand(playerID, command[], parameters[], isSubCall = false)
 {
+	if (!isSubCall && !IsPlayerNPC(playerID))
+	{
+		new fullCommand[256];
+		strcat(fullCommand, command);
+
+		if (StrNotNull(parameters))
+		{
+			strcat(fullCommand, " ");
+			strcat(fullCommand, parameters);
+		}
+
+		printf("Player %s issued server command: %s", GetPlayerNameEx(playerID), fullCommand);// Log executed command to console
+	}
+
 	FormatNew:functionName[MAX_FUNCTION_NAME]("cmd_%s", command);
 
 	new returnCode = COMMAND_NOT_FOUND;

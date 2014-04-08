@@ -11,11 +11,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		sscanf(cmdText, "s[" #MAX_FUNCTION_NAME "]", command);
 	}
 
-	if (!IsPlayerNPC(playerid))
-	{
-		printf("Player %s issued server command: %s", GetPlayerNameEx(playerid), cmdText);// Log executed command to console
-	}
-
 	ExecuteCommand(playerid, command, parameters);
 	return true;
 }
