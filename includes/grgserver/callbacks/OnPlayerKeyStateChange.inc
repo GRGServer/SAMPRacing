@@ -270,6 +270,17 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 								}
 							}
 						}
+						case OBJECTTYPE_TUNINGGARAGEDOOR:
+						{
+							Foreach(tuningGarageNumber, g_tuningGarages)
+							{
+								if (g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_DOOROBJECTID] == g_objects[objectIndex][E_OBJECT_ID])
+								{
+									allowMove = true;
+									break;
+								}
+							}
+						}
 						default:
 						{
 							allowMove = true;

@@ -56,7 +56,7 @@
 #define MAX_GARAGES				150
 #define MAX_HIDDENPACKAGES			100
 #define MAX_INTERIORS				150
-#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(223)
+#define MAX_LANGUAGE_STRINGS			LanguageStringLimit(240)
 #define MAX_NPCS				250
 #define MAX_OBJECTMODELS			11000
 #define MAX_PLAYER_MAPICONS			500
@@ -67,6 +67,9 @@
 #define MAX_RECNPC_PLAYNPCS			10
 #define MAX_SPEEDOMETER_STEPS			13
 #define MAX_TELEPORTS				50
+#define MAX_TUNINGGARAGES			20
+#define MAX_TUNINGPARTS				25000
+#define MAX_TUNINGPARTSPERVEHICLE		250
 #define MAX_VEHICLECOMPONENT_SLOTS		14
 #define MAX_VEHICLESHOPS			10
 
@@ -169,12 +172,17 @@
 #define TIMER_UPDATERACELOBBY			2000
 
 
+// Tuning garages
+#define TUNINGGARAGE_PRICE_NUMBERPLATE		500// Price for change of number plate text
+
+
 // Virtual worlds
 #define VIRTUALWORLD_GARAGE			1000// First virtual world for garages (Each player has a virtual world)
 #define VIRTUALWORLD_IDLENPC			100// Virtual world for all NPCs which are currently not in use (To hide them from players)
 #define VIRTUALWORLD_MODSHOP			2000// First virtual world used for mod shops (Each player has a virtual world)
 #define VIRTUALWORLD_RACE			3000// First virtual world used for races (Each race has a virtual world)
 #define VIRTUALWORLD_RACELOBBY			101// Virtual world for race lobby
+#define VIRTUALWORLD_TUNINGGARAGE		5000// First virtual world used for tuning garages (Each player has a virtual world)
 #define VIRTUALWORLD_VEHICLESHOP		4000// First virtual world used for vehicles shops (Each player has a virtual world)
 
 
@@ -225,7 +233,8 @@ enum
 enum
 {
 	OBJECTTYPE_DEFAULT,// Must be the first (0)
-	OBJECTTYPE_GARAGEDOOR
+	OBJECTTYPE_GARAGEDOOR,
+	OBJECTTYPE_TUNINGGARAGEDOOR
 }
 
 
@@ -269,4 +278,18 @@ enum
 	SPAWNTYPE_EXITGARAGE,
 	SPAWNTYPE_LEAVERACE,
 	SPAWNTYPE_STARTRACE
+}
+
+
+// Tuning parts
+enum
+{
+	TUNINGPART_UNKNOWN,// Must be the first (0)
+	TUNINGPART_FRONTBUMBER,
+	TUNINGPART_HOOD,
+	TUNINGPART_LIGHTS,
+	TUNINGPART_NEON,
+	TUNINGPART_REARBUMBER,
+	TUNINGPART_ROOF,
+	TUNINGPART_SPOILER
 }

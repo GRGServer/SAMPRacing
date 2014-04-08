@@ -18,6 +18,8 @@ new g_races[MAX_RACES][E_RACE];
 new g_sqlQuery[1024];
 new g_teleports[MAX_TELEPORTS][E_TELEPORT];
 new Text:g_textDrawClock;
+new g_tuningGarages[MAX_TUNINGGARAGES][E_TUNINGGARAGE];
+new g_tuningParts[MAX_TUNINGPARTS][E_TUNINGPART];
 new g_vehicles[MAX_VEHICLES][E_VEHICLE];
 new g_vehicleModels[212][E_VEHICLEMODEL];
 new g_vehicleShops[MAX_VEHICLESHOPS][E_VEHICLESHOP];

@@ -62,6 +62,8 @@ Timer:EverySecond()
 
 			CheckGarage(playerID);
 
+			CheckTuningGarage(playerID);
+
 			CheckHiddenPackages(playerID);
 		}
 	}

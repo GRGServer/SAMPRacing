@@ -1785,4 +1785,126 @@
             Gebe die Befehlsparameter unten ein (wenn erforderlich)
         </de>
     </string>
+    <string id="223">
+        <en>
+            Select an item
+        </en>
+        <de>
+            Wähle einen Eintrag
+        </de>
+    </string>
+    <string id="224">
+        <en>
+            Buy
+        </en>
+        <de>
+            Kaufen
+        </de>
+    </string>
+    <string id="225">
+        <en>
+            Select a city
+        </en>
+        <de>
+            Wähle eine Stadt
+        </de>
+    </string>
+    <string id="226">
+        <en>
+            Front bumber
+        </en>
+        <de/>
+    </string>
+    <string id="227">
+        <en>
+            Rear bumber
+        </en>
+        <de/>
+    </string>
+    <string id="228">
+        <en>
+            Spoiler
+        </en>
+        <de>
+            Spoiler
+        </de>
+    </string>
+    <string id="229">
+        <en>
+            Neon
+        </en>
+        <de>
+            Neon
+        </de>
+    </string>
+    <string id="230">
+        <en>
+            Numberplate
+        </en>
+        <de>
+            Nummernschild
+        </de>
+    </string>
+    <string id="231">
+        <en>
+            Lights
+        </en>
+        <de>
+            Lampen
+        </de>
+    </string>
+    <string id="232">
+        <en>
+            Roof
+        </en>
+        <de>
+            Dach
+        </de>
+    </string>
+    <string id="233">
+        <en>
+            Hood
+        </en>
+        <de/>
+    </string>
+    <string id="234">
+        <en>
+            Select a category
+        </en>
+        <de>
+            Wähle eine Kategorie
+        </de>
+    </string>
+    <string id="235">
+        <en>
+            Set number plate text
+        </en>
+        <de>
+            Lege den Nummernschildtext fest
+        </de>
+    </string>
+    <string id="236">
+        <en>
+            Enter up to 4 characters you want to have as your number plate
+        </en>
+        <de>
+            Gebe bis zu 4 Zeichen ein welche du auf deinem Nummernschild haben möchtest
+        </de>
+    </string>
+    <string id="238">
+        <en>
+            The number plate text should have between 1 and 4 characters!
+        </en>
+        <de>
+            Der Nummernschildtext muss zwischen 1 und 4 Zeichen haben!
+        </de>
+    </string>
+    <string id="239">
+        <en>
+            Tuning garages reloaded
+        </en>
+        <de>
+            Tuninggaragen neugeladen
+        </de>
+    </string>
 </languagestrings>

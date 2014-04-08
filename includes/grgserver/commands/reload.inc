@@ -6,7 +6,7 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 		CmdUsageMsg(playerID, "reload", "Part");
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:56("Available parts:"));
 		SendClientMessage(playerID, COLOR_INFO, "areas, commandaliases, garages, interiors, languagestrings, npcs, objectmodels");
-		SendClientMessage(playerID, COLOR_INFO, "objects, pickups, races, teleports, vehiclemodels, vehicles, vehicleshops");
+		SendClientMessage(playerID, COLOR_INFO, "objects, pickups, races, teleports, tuninggarages, vehiclemodels, vehicles, vehicleshops");
 		return COMMAND_USAGE;
 	}
 
@@ -84,6 +84,13 @@ PCMD:reload[ISADMIN](playerID, params[], StringID:55("Reload parts of the script
 	{
 		ReloadTeleports();
 		SendClientMessageEx(playerID, COLOR_INFO, StringID:58("Teleports reloaded"));
+		return COMMAND_OK;
+	}
+
+	if (IsStr(part, "tuninggarages"))
+	{
+		ReloadTuningGarages();
+		SendClientMessageEx(playerID, COLOR_INFO, StringID:239("Tuning garages reloaded"));
 		return COMMAND_OK;
 	}
 
