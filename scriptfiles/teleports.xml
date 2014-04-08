@@ -45,7 +45,7 @@
         </position>
     </teleport>
     <teleport>
-        <name>AdminBase</name>
+        <name>adminbase</name>
         <position>
             <x>257.89321</x>
             <y>2910.6533</y>
@@ -64,4 +64,5 @@
             <angle>108.24483</angle>
             <interior>0</interior>
         </position>
+	</teleport>
 </teleports>

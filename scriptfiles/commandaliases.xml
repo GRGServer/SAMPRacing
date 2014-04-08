@@ -26,10 +26,10 @@
 		<parameters>drift3</parameters>
 	</alias>
 	<alias>
-		<name>AdminBase</name>
+		<name>adminbase</name>
 		<command>tp</command>
 		<parameters>adminbase</parameters>
-	<alias>
+	</alias>
 	<alias>
 		<name>stunt1</name>
 		<command>tp</command>
