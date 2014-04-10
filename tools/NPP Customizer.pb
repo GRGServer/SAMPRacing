@@ -58,7 +58,7 @@ If MessageRequester(#Title, "Please verify the following paths:" + Chr(13) + Chr
 			WriteStringN(File, Chr(34) + ServerRoot$ + "tools\compile-gamemode.bat" + Chr(34))
 			WriteStringN(File, "::Todo Finder")
 			WriteStringN(File, "NPP_SAVE")
-			WriteStringN(File, Chr(34) + ServerRoot$ + "tools\Todo Finder.exe" + Chr(34))
+			WriteStringN(File, Chr(34) + ServerRoot$ + "tools\todo-finder.bat" + Chr(34))
 			CloseFile(File)
 		EndIf
 		CopyFile(MainPath$ + "npp\pawn.api", NppPath$ + "plugins\APIs\pawn.api")

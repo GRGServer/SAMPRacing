@@ -1,5 +1,7 @@
 @echo off
 
-set MAVEN=apache-maven\bin\mvn.bat
+set TOOLSPATH=%~dp0
+set MAVEN=%TOOLSPATH%apache-maven\bin\mvn.bat
 
-%MAVEN% -f includesupdater clean package
+call %MAVEN% -f %TOOLSPATH%includesupdater clean package
+call %MAVEN% -f %TOOLSPATH%todofinder clean package
