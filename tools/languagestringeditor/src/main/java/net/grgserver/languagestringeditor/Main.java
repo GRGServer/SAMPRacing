@@ -17,11 +17,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 public class Main extends JFrame
 {
-	private boolean changed;
+	private static String serverPath;
+
+	private StringFile stringFile;
+	private StringList stringList;
 
 	public Main()
 	{
@@ -47,7 +52,7 @@ public class Main extends JFrame
 
 		this.setVisible(true);
 
-		this.reload();
+		this.stringFile = new StringFile(this.stringList);
 
 		this.addWindowListener(new WindowAdapter()
 		{
@@ -72,7 +77,7 @@ public class Main extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				Main.this.reload();
+				Main.this.stringFile.load();
 			}
 		});
 		fileMenu.add(reloadMenuItem);
@@ -84,7 +89,7 @@ public class Main extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				Main.this.save();
+				Main.this.stringFile.save();
 			}
 		});
 		fileMenu.add(saveMenuItem);
@@ -110,17 +115,19 @@ public class Main extends JFrame
 
 	private void createStringList()
 	{
-		this.add(new JScrollPane(new StringList()));
+		this.stringList = new StringList();
+
+		this.add(new JScrollPane(this.stringList));
 	}
 
 	private void quit()
 	{
-		if (Main.this.changed)
+		if (Main.this.stringList.isChanged())
 		{
 			switch (JOptionPane.showConfirmDialog(null, "There are unsaved changed!\n\nDo you want to save before quit?", "Unsaved changes", JOptionPane.YES_NO_CANCEL_OPTION))
 			{
 				case JOptionPane.YES_OPTION:
-					if (Main.this.save())
+					if (Main.this.stringFile.save())
 					{
 						System.exit(0);
 					}
@@ -136,15 +143,14 @@ public class Main extends JFrame
 		}
 	}
 
-	private void reload()
+	public static String getServerPath()
 	{
-		JOptionPane.showMessageDialog(null, "Reload");
+		return Main.serverPath;
 	}
 
-	private boolean save()
+	public static void setServerPath(String path)
 	{
-		JOptionPane.showMessageDialog(null, "Save");
-		return true;
+		Main.serverPath = path;
 	}
 
 	public static void main(String[] args)
@@ -157,6 +163,8 @@ public class Main extends JFrame
 		{
 			exception.printStackTrace();
 		}
+
+		Main.setServerPath(Paths.get(new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getAbsolutePath()).getParent().getParent().getParent().getParent().toString());
 
 		SwingUtilities.invokeLater(new Runnable()
 		{
