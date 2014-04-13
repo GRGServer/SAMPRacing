@@ -8,6 +8,7 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Rectangle;
 
 public class StringList extends JTable
 {
@@ -124,6 +125,48 @@ public class StringList extends JTable
 		}
 
 		return component;
+	}
+
+	public void scrollToRow(int row)
+	{
+		this.getSelectionModel().setSelectionInterval(row, row);// Select the row
+
+		this.scrollRectToVisible(new Rectangle(this.getCellRect(row, 0, true)));// Scroll to the row
+	}
+
+	public boolean gotoId(int id)
+	{
+		TableModel tableModel = this.getModel();
+
+		for (int row = 0; row < this.getRowCount(); row++)
+		{
+			if ((int) tableModel.getValueAt(row, this.getColumnIndexByType(ColumnTypes.ID)) == id)
+			{
+				this.scrollToRow(row);
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public boolean searchString(String string)
+	{
+		TableModel tableModel = this.getModel();
+
+		for (int row = 0; row < this.getRowCount(); row++)
+		{
+			for (int column = this.getColumnIndexByType(ColumnTypes.FIRST_LANGUAGE); column <= this.getColumnIndexByType(ColumnTypes.LAST_LANGUAGE); column++)
+			{
+				if (((String) tableModel.getValueAt(row, column)).equalsIgnoreCase(string))
+				{
+					this.scrollToRow(row);
+					return true;
+				}
+			}
+		}
+
+		return false;
 	}
 
 	public boolean isChanged()

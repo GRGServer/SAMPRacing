@@ -27,6 +27,8 @@ public class Main extends JFrame
 
 	private StringFile stringFile;
 	private StringList stringList;
+	private int lastGotoId;
+	private String lastSearchString;
 
 	public Main()
 	{
@@ -109,6 +111,50 @@ public class Main extends JFrame
 		fileMenu.add(quitMenuItem);
 
 		menuBar.add(fileMenu);
+
+		JMenu editMenu = new JMenu("Edit");
+
+		JMenuItem gotoIdmenuItem = new JMenuItem("Goto ID");
+		gotoIdmenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G, KeyEvent.CTRL_MASK));
+		gotoIdmenuItem.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				String string = (String) JOptionPane.showInputDialog(null, "Enter the ID you want to go to.", "Goto ID", JOptionPane.QUESTION_MESSAGE, null, null, Integer.toString(Main.this.lastGotoId));
+				if (string != null && !string.isEmpty())
+				{
+					Main.this.lastGotoId = new Integer(string);
+					if (!Main.this.stringList.gotoId(Main.this.lastGotoId))
+					{
+						JOptionPane.showMessageDialog(null, "The ID was not found!", "Goto ID", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+			}
+		});
+		editMenu.add(gotoIdmenuItem);
+
+		JMenuItem searchMenuItem = new JMenuItem("Search");
+		searchMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, KeyEvent.CTRL_MASK));
+		searchMenuItem.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				String string = (String) JOptionPane.showInputDialog(null, "Enter the string you want to search for.", "Search string", JOptionPane.QUESTION_MESSAGE, null, null, Main.this.lastSearchString);
+				if (string != null && !string.isEmpty())
+				{
+					Main.this.lastSearchString = string;
+					if (!Main.this.stringList.searchString(Main.this.lastSearchString))
+					{
+						JOptionPane.showMessageDialog(null, "The string was not found!", "Search string", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+			}
+		});
+		editMenu.add(searchMenuItem);
+
+		menuBar.add(editMenu);
 
 		this.setJMenuBar(menuBar);
 	}
