@@ -152,18 +152,37 @@ public class StringList extends JTable
 
 	public boolean searchString(String string)
 	{
+		int startingRow = this.getSelectedRow() + 1;// Use the next row as the starting row
+
+		// Use the first row if this is already the last one
+		if (startingRow >= this.getRowCount())
+		{
+			startingRow = 0;
+		}
+
+		return this.searchString(string, startingRow);
+	}
+
+	public boolean searchString(String string, int startingRow)
+	{
 		TableModel tableModel = this.getModel();
 
-		for (int row = 0; row < this.getRowCount(); row++)
+		for (int row = startingRow; row < this.getRowCount(); row++)
 		{
 			for (int column = this.getColumnIndexByType(ColumnTypes.FIRST_LANGUAGE); column <= this.getColumnIndexByType(ColumnTypes.LAST_LANGUAGE); column++)
 			{
-				if (((String) tableModel.getValueAt(row, column)).equalsIgnoreCase(string))
+				if (((String) tableModel.getValueAt(row, column)).toLowerCase().contains(string.toLowerCase()))
 				{
 					this.scrollToRow(row);
 					return true;
 				}
 			}
+		}
+
+		// Not searched from the start
+		if (startingRow != 0)
+		{
+			return this.searchString(string, 0);// Continue searching from the start
 		}
 
 		return false;

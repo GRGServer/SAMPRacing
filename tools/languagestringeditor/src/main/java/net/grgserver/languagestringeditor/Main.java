@@ -154,6 +154,32 @@ public class Main extends JFrame
 		});
 		editMenu.add(searchMenuItem);
 
+		JMenuItem searchNextMenuItem = new JMenuItem("Search next");
+		searchNextMenuItem.setAccelerator(KeyStroke.getKeyStroke("F3"));
+		searchNextMenuItem.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				if (Main.this.lastSearchString == null || Main.this.lastSearchString.isEmpty())
+				{
+					String string = (String) JOptionPane.showInputDialog(null, "Enter the string you want to search for.", "Search string", JOptionPane.QUESTION_MESSAGE, null, null, Main.this.lastSearchString);
+					if (string == null || string.isEmpty())
+					{
+						return;
+					}
+
+					Main.this.lastSearchString = string;
+				}
+
+				if (!Main.this.stringList.searchString(Main.this.lastSearchString))
+				{
+					JOptionPane.showMessageDialog(null, "The string was not found!", "Search string", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+		editMenu.add(searchNextMenuItem);
+
 		menuBar.add(editMenu);
 
 		this.setJMenuBar(menuBar);
