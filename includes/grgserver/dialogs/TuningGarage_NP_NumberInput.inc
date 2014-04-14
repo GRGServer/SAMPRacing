@@ -23,7 +23,29 @@ DialogResponse:TuningGarage_NP_NumberInput(playerID, response, listItem, inputTe
 			}
 			else
 			{
-				// TODO: Set the number plate text (if not already used)
+				new city[3];
+
+				switch (PVar:playerID[TUNINGGARAGE_NP_CITY])
+				{
+					case 0:// Los Santos
+					{
+						city = "LS";
+					}
+					case 1:// Las Venturas
+					{
+						city = "LV";
+					}
+					case 2:// San Fierro
+					{
+						city = "SF";
+					}
+				}
+
+				FormatNew:numberPlateText[STRINGLENGTH_NUMBERPLATE]("%s-%s", city, inputText);
+				SetVehicleNumberPlateEx(PVar:playerID[TUNINGGARAGE_VEHICLEID], numberPlateText);
+
+				GivePlayerMoney(playerID, -TUNINGGARAGE_PRICE_NUMBERPLATE);
+
 				ShowDialog:TuningGarage_MainMenu(playerID);
 			}
 		}

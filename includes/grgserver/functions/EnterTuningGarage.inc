@@ -17,5 +17,7 @@ EnterTuningGarage(playerID, tuningGarageNumber)
 	SetVehiclePos(vehicleID, g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSX], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSY], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSZ]);
 	SetVehicleZAngle(vehicleID, g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_ANGLE]);
 
+	PVar:playerID[TUNINGGARAGE_VEHICLEID] = vehicleID;
+
 	ShowDialog:TuningGarage_MainMenu(playerID);
 }

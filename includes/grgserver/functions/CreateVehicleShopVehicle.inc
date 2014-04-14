@@ -12,12 +12,10 @@ CreateVehicleShopVehicle(playerID)
 
 	if (IsValidNumberPlateVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]))
 	{
-		new numberPlateText[STRINGLENGTH_NUMBERPLATE];
-		numberPlateText = GenerateNumberPlateText(g_vehicleShops[shopID][E_VEHICLESHOP_NUMBERPLATEPREFIX]);
-		if (StrNotNull(numberPlateText))
-		{
-			SetVehicleNumberPlate(PVar:playerID[VEHICLESHOP_VEHICLEID], numberPlateText);
-		}
+		// Generate a random string in format "<prefix><A-Z><A-Z><1-9999>"
+		FormatNew:numberPlateText[STRINGLENGTH_NUMBERPLATE]("%s%c%c%d", g_vehicleShops[shopID][E_VEHICLESHOP_NUMBERPLATEPREFIX], random(26) + 65, random(26) + 65, random(9999) + 1);
+
+		SetVehicleNumberPlateEx(PVar:playerID[VEHICLESHOP_VEHICLEID], numberPlateText);
 	}
 
 	SetVehicleVirtualWorld(PVar:playerID[VEHICLESHOP_VEHICLEID], GetPlayerVirtualWorld(playerID));
