@@ -29,6 +29,8 @@ DialogResponse:TuningGarage_MainMenu(playerID, response, listItem, inputText[])
 	}
 	else
 	{
+		SaveVehicle(PVar:playerID[TUNINGGARAGE_VEHICLEID]);
+
 		SetPlayerVirtualWorld(playerID, 0);
 
 		new tuningGarageNumber = PVar:playerID[TUNINGGARAGE_NUMBER];
