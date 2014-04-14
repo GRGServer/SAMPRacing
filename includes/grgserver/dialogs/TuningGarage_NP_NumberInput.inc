@@ -9,9 +9,9 @@ DialogResponse:TuningGarage_NP_NumberInput(playerID, response, listItem, inputTe
 {
 	if (response)
 	{
-		if (strlen(inputText) < 1 || strlen(inputText) > 4)
+		if (strlen(inputText) < 1 || strlen(inputText) > 7)
 		{
-			SendClientMessageEx(playerID, COLOR_ERROR, StringID:238("The number plate text should have between 1 and 4 characters!"));
+			SendClientMessageEx(playerID, COLOR_ERROR, StringID:238("The number plate text should have between 1 and 7 characters!"));
 			ShowDialog:TuningGarage_NP_NumberInput(playerID, PVar:playerID[TUNINGGARAGE_NP_CITY]);
 		}
 		else
@@ -41,7 +41,7 @@ DialogResponse:TuningGarage_NP_NumberInput(playerID, response, listItem, inputTe
 					}
 				}
 
-				FormatNew:numberPlateText[STRINGLENGTH_NUMBERPLATE]("%s-%s", city, inputText);
+				FormatNew:numberPlateText[STRINGLENGTH_NUMBERPLATE]("%s %s", city, inputText);
 				SetVehicleNumberPlateEx(PVar:playerID[TUNINGGARAGE_VEHICLEID], numberPlateText);
 
 				GivePlayerMoney(playerID, -TUNINGGARAGE_PRICE_NUMBERPLATE);
