@@ -40,19 +40,6 @@ ReloadTuningGarages()
 			continue;
 		}
 
-		new XMLNode:doorObjectNode = XML_GetFirstChild(tuningGarageNode, "doorobject");
-		if (doorObjectNode)
-		{
-			new string[10];
-			XML_GetValue(XML_GetFirstChild(doorObjectNode), string);
-			g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_DOOROBJECTID] = strval(string);
-			new objectID = GetObjectByID(g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_DOOROBJECTID]);
-			if (objectID != -1)
-			{
-				g_objects[objectID][E_OBJECT_TYPE] = OBJECTTYPE_TUNINGGARAGEDOOR;
-			}
-		}
-
 		g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSX] = XML_GetFloatAttribute(vehicleNode, "x");
 		g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSY] = XML_GetFloatAttribute(vehicleNode, "y");
 		g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSZ] = XML_GetFloatAttribute(vehicleNode, "z");

@@ -24,13 +24,6 @@ SaveTuningGarages()
 			XML_SetFloatAttribute(cameraNode, "x", g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSX]);
 			XML_SetFloatAttribute(cameraNode, "y", g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSY]);
 			XML_SetFloatAttribute(cameraNode, "z", g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSZ]);
-
-			if (g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_DOOROBJECTID])
-			{
-				new string[10];
-				valstr(string, g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_DOOROBJECTID]);
-				XML_CreateNode(XML_CreateNode(tuningGarageNode, "doorobject"), string, e_XML_NODE_TEXT);
-			}
 		}
 	}
 
