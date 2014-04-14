@@ -1811,15 +1811,19 @@
     </string>
     <string id="226">
         <en>
-            Front bumber
+            Front bumper
         </en>
-        <de/>
+        <de>
+            Frontstoﬂstange
+        </de>
     </string>
     <string id="227">
         <en>
-            Rear bumber
+            Rear bumper
         </en>
-        <de/>
+        <de>
+            Heckstoﬂstange
+        </de>
     </string>
     <string id="228">
         <en>
@@ -1865,7 +1869,9 @@
         <en>
             Hood
         </en>
-        <de/>
+        <de>
+            Motorhaube
+        </de>
     </string>
     <string id="234">
         <en>
