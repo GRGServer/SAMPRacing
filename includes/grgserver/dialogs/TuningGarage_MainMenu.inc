@@ -2,8 +2,8 @@ ShowDialog:TuningGarage_MainMenu(playerID)
 {
 	new list[1024];
 
-	ConcatString(list, LanguageString(playerID, StringID:226("Front bumber")), "\n");// 0
-	ConcatString(list, LanguageString(playerID, StringID:227("Rear bumber")), "\n");// 1
+	ConcatString(list, LanguageString(playerID, StringID:226("Front bumper")), "\n");// 0
+	ConcatString(list, LanguageString(playerID, StringID:227("Rear bumper")), "\n");// 1
 	ConcatString(list, LanguageString(playerID, StringID:228("Spoiler")), "\n");// 2
 	ConcatString(list, LanguageString(playerID, StringID:229("Neon")), "\n");// 3
 	ConcatString(list, LanguageString(playerID, StringID:230("Numberplate")), "\n");// 4
@@ -26,5 +26,17 @@ DialogResponse:TuningGarage_MainMenu(playerID, response, listItem, inputText[])
 		{
 			ShowDialog:TuningGarage_CategoryTypes(playerID, listItem);
 		}
+	}
+	else
+	{
+		SetPlayerVirtualWorld(playerID, 0);
+
+		new tuningGarageNumber = PVar:playerID[TUNINGGARAGE_NUMBER];
+
+		SetPlayerSpawn(playerID, SPAWNTYPE_EXITTUNINGGARAGE, g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSX], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSY], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_POSZ], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_VEHICLE_ANGLE]);
+
+		TogglePlayerSpectating(playerID, false);
+
+		PVar:playerID[ALLOWCMDS] = true;
 	}
 }

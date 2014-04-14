@@ -93,6 +93,24 @@ public OnPlayerSpawn(playerid)
 			PVar:playerid[GARAGE_NUMBER] = -1;
 			PVar:playerid[GARAGE_VEHICLE_ID] = INVALID_VEHICLE_ID;
 		}
+		case SPAWNTYPE_EXITTUNINGGARAGE:
+		{
+			new vehicleID = PVar:playerid[TUNINGGARAGE_VEHICLEID];
+
+			SetPlayerInterior(playerid, PVar:playerid[SPAWN_INTERIOR]);
+
+			SetVehiclePos(vehicleID, PVar:playerid[SPAWN_POSX], PVar:playerid[SPAWN_POSY], PVar:playerid[SPAWN_POSZ]);
+			SetVehicleZAngle(vehicleID, PVar:playerid[SPAWN_ANGLE]);
+
+			LinkVehicleToInterior(vehicleID, PVar:playerid[SPAWN_INTERIOR]);
+			SetVehicleVirtualWorld(vehicleID, 0);
+			PutPlayerInVehicle(playerid, vehicleID, 0);
+
+			SetCameraBehindPlayer(playerid);
+
+			PVar:playerid[TUNINGGARAGE_NUMBER] = -1;
+			PVar:playerid[TUNINGGARAGE_VEHICLEID] = INVALID_VEHICLE_ID;
+		}
 		case SPAWNTYPE_LEAVERACE:
 		{
 			SetPlayerInterior(playerid, 0);
