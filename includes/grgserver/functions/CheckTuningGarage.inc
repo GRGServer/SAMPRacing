@@ -6,7 +6,7 @@ CheckTuningGarage(playerID)
 	{
 		Foreach(index, g_tuningGarages)
 		{
-			if (IsPlayerInRangeOfPoint(playerID, g_tuningGarages[index][E_TUNINGGARAGE_ENTERRANGE], g_tuningGarages[index][E_TUNINGGARAGE_VEHICLE_POSX], g_tuningGarages[index][E_TUNINGGARAGE_VEHICLE_POSY], g_tuningGarages[index][E_TUNINGGARAGE_VEHICLE_POSZ]))
+			if (g_tuningGarages[index][E_TUNINGGARAGE_ENTERRANGE] && IsPlayerInRangeOfPoint(playerID, g_tuningGarages[index][E_TUNINGGARAGE_ENTERRANGE], g_tuningGarages[index][E_TUNINGGARAGE_VEHICLE_POSX], g_tuningGarages[index][E_TUNINGGARAGE_VEHICLE_POSY], g_tuningGarages[index][E_TUNINGGARAGE_VEHICLE_POSZ]))
 			{
 				foundTuningGarage = true;
 				if (!PVar:playerID[TUNINGGARAGE_ISINSIDE])

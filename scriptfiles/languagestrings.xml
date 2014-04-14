@@ -1897,6 +1897,14 @@
             Gebe bis zu 4 Zeichen ein welche du auf deinem Nummernschild haben möchtest
         </de>
     </string>
+    <string id="237">
+        <en>
+            Set the spawn position of a tuning garage
+        </en>
+        <de>
+            Lege die Spawnposition einer Tuninggarage fest
+        </de>
+    </string>
     <string id="238">
         <en>
             The number plate text should have between 1 and 7 characters!
@@ -1911,6 +1919,22 @@
         </en>
         <de>
             Tuninggaragen neugeladen
+        </de>
+    </string>
+    <string id="240">
+        <en>
+            Limit of %d tuning garages reached!
+        </en>
+        <de>
+            Limit von %d Tuninggaragen erreicht!
+        </de>
+    </string>
+    <string id="241">
+        <en>
+            The tuning garage spawn position has been saved
+        </en>
+        <de>
+            Die Tuninggaragenspawnposition wurde gespeichert
         </de>
     </string>
 </languagestrings>
