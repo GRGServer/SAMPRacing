@@ -60,6 +60,14 @@ Simply execute the *compile-tools.bat* (Windows) or *compile-tools.sh* (Linux) a
 
 **Note:** Everytime a tool gets changed it has to be rebuilt. In this case, simply re-execute the script.
 
+## Map
+
+The map located in /map shows all currently connected players on a map.
+
+On the first use you have to generate the map tiles using the *generate-tiles.php* PHP script (Run it from the CLI using *php generate-tiles.php*).
+
+The map requires a webserver running PHP on the same host as the SA-MP server!
+
 ## Notes for Linux
 
 On Linux you have to manually set the executable bit on executables (*chmod +x*):
