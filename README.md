@@ -64,13 +64,13 @@ Simply execute the *compile-tools.bat* (Windows) or *compile-tools.sh* (Linux) a
 
 The map located in the *map* directory shows all currently online players on a map.
 
-On the first use you have to generate the map tiles using the *generate-tiles.php* PHP script (Run it from the command line using *php generate-tiles.php*).
+**Note:** On the first use you have to generate the map tiles using the *generate-tiles.php* PHP script (Run it from the command line using *php generate-tiles.php*).
 
-The map requires a webserver running PHP on the same host as the SA-MP server because the PHP scripts are reading files from the *scriptfiles* directory!
+**Note:** The map requires a webserver running PHP on the same host as the SA-MP server because the PHP scripts are reading files from the *scriptfiles* directory!
 
 ## Notes for Linux
 
-On Linux you have to manually set the executable bit on executables (*chmod +x*):
+On Linux you have to manually set the executable bit on some files (*chmod +x*):
 
 ```
 chmod +x announce samp-npc samp-srv tools/*.sh tools/apache-maven/bin/mvn tools/pawn/pawncc
