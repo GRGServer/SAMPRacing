@@ -67,17 +67,3 @@ The map located in the *map* directory shows all currently online players on a m
 **Note:** On the first use you have to generate the map tiles using the *generate-tiles.php* PHP script (Run it from the command line using *php generate-tiles.php*).
 
 **Note:** The map requires a webserver running PHP on the same host as the SA-MP server because the PHP scripts are reading files from the *scriptfiles* directory!
-
-## Notes for Linux
-
-On Linux you have to manually set the executable bit on some files (*chmod +x*):
-
-```
-chmod +x announce samp-npc samp-srv tools/*.sh tools/apache-maven/bin/mvn tools/pawn/pawncc
-```
-
-When doing that you should disable *core.fileMode* in your git config to prevent marking the files as changed:
-
-```
-git config core.fileMode false
-```
