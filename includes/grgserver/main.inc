@@ -5,7 +5,6 @@
 
 // structures
 #include <grgserver/structures/E_AREA.inc>
-#include <grgserver/structures/E_CHECKPOINT.inc>
 #include <grgserver/structures/E_COMMAND.inc>
 #include <grgserver/structures/E_COMMANDALIAS.inc>
 #include <grgserver/structures/E_GARAGE.inc>
@@ -32,8 +31,6 @@
 #include <grgserver/functions/AddObject.inc>
 #include <grgserver/functions/AddPickup.inc>
 #include <grgserver/functions/CheckHiddenPackages.inc>
-#include <grgserver/functions/CheckNumberPlate.inc>
-#include <grgserver/functions/CheckpointEvent.inc>
 #include <grgserver/functions/CmdUsageMsg.inc>
 #include <grgserver/functions/ConcatString.inc>
 #include <grgserver/functions/ConnectNPCEx.inc>
@@ -55,7 +52,6 @@
 #include <grgserver/functions/FadeInScreen.inc>
 #include <grgserver/functions/FadeOutScreen.inc>
 #include <grgserver/functions/FindNextVehicleModel.inc>
-#include <grgserver/functions/GenerateNumberPlateText.inc>
 #include <grgserver/functions/GetClosestPickup.inc>
 #include <grgserver/functions/GetColor.inc>
 #include <grgserver/functions/GetDistanceBetweenPoints.inc>
@@ -65,7 +61,6 @@
 #include <grgserver/functions/GetMySQLField.inc>
 #include <grgserver/functions/GetObjectNameByModelID.inc>
 #include <grgserver/functions/GetPlayerID.inc>
-#include <grgserver/functions/GetPlayerIDByUserID.inc>
 #include <grgserver/functions/GetPlayerNameEx.inc>
 #include <grgserver/functions/GetPlayerPickup.inc>
 #include <grgserver/functions/GetVehicleEngineState.inc>
@@ -150,7 +145,6 @@
 #include <grgserver/callbacks/OnPlayerDisconnect.inc>
 #include <grgserver/callbacks/OnPlayerEditDynamicObject.inc>
 #include <grgserver/callbacks/OnPlayerEnterArea.inc>
-#include <grgserver/callbacks/OnPlayerEnterDynamicCP.inc>
 #include <grgserver/callbacks/OnPlayerEnterRaceCheckpoint.inc>
 #include <grgserver/callbacks/OnPlayerEnterVehicle.inc>
 #include <grgserver/callbacks/OnPlayerExitArea.inc>
@@ -193,7 +187,6 @@
 #include <grgserver/timers/ResetDriftingStats.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
-#include <grgserver/timers/Timer_DisqualifyRacePlayer.inc>
 #include <grgserver/timers/UpdateRaceLobby.inc>
 #include <grgserver/timers/UpdateVehicleStats.inc>
 
