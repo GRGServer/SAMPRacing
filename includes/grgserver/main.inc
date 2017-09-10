@@ -1,4 +1,4 @@
-// Constants
+// Defines
 #include <grgserver/localconfig.inc>
 #include <grgserver/constants.inc>
 #include <grgserver/macros.inc>
@@ -19,6 +19,8 @@
 #include <grgserver/structures/E_PVAR.inc>
 #include <grgserver/structures/E_RACE.inc>
 #include <grgserver/structures/E_TELEPORT.inc>
+#include <grgserver/structures/E_TUNINGGARAGE.inc>
+#include <grgserver/structures/E_TUNINGPART.inc>
 #include <grgserver/structures/E_VEHICLE.inc>
 #include <grgserver/structures/E_VEHICLEMODEL.inc>
 #include <grgserver/structures/E_VEHICLESHOP.inc>
@@ -30,7 +32,9 @@
 // functions
 #include <grgserver/functions/AddObject.inc>
 #include <grgserver/functions/AddPickup.inc>
+#include <grgserver/functions/CheckGarage.inc>
 #include <grgserver/functions/CheckHiddenPackages.inc>
+#include <grgserver/functions/CheckTuningGarage.inc>
 #include <grgserver/functions/CmdUsageMsg.inc>
 #include <grgserver/functions/ConcatString.inc>
 #include <grgserver/functions/ConnectNPCEx.inc>
@@ -45,6 +49,7 @@
 #include <grgserver/functions/DisqualifyRacePlayer.inc>
 #include <grgserver/functions/EndRace.inc>
 #include <grgserver/functions/EnterGarage.inc>
+#include <grgserver/functions/EnterTuningGarage.inc>
 #include <grgserver/functions/EnterVehicleShop.inc>
 #include <grgserver/functions/ExecuteCommand.inc>
 #include <grgserver/functions/ExitGarage.inc>
@@ -59,10 +64,12 @@
 #include <grgserver/functions/GetLanguageByID.inc>
 #include <grgserver/functions/GetLanguageID.inc>
 #include <grgserver/functions/GetMySQLField.inc>
+#include <grgserver/functions/GetObjectByID.inc>
 #include <grgserver/functions/GetObjectNameByModelID.inc>
 #include <grgserver/functions/GetPlayerID.inc>
 #include <grgserver/functions/GetPlayerNameEx.inc>
 #include <grgserver/functions/GetPlayerPickup.inc>
+#include <grgserver/functions/GetTuningPartByName.inc>
 #include <grgserver/functions/GetVehicleEngineState.inc>
 #include <grgserver/functions/GiveHiddenPackagesRewards.inc>
 #include <grgserver/functions/Hash.inc>
@@ -75,9 +82,11 @@
 #include <grgserver/functions/LoadPlayer.inc>
 #include <grgserver/functions/LoadVehicle.inc>
 #include <grgserver/functions/LockVehicle.inc>
+#include <grgserver/functions/MoveObjectEx.inc>
 #include <grgserver/functions/PickupEvent.inc>
 #include <grgserver/functions/PlayAudioFileForPlayer.inc>
 #include <grgserver/functions/PlaySound.inc>
+#include <grgserver/functions/RandomRaceLobbyCamera.inc>
 #include <grgserver/functions/ReloadAreas.inc>
 #include <grgserver/functions/ReloadCommandAliases.inc>
 #include <grgserver/functions/ReloadGarages.inc>
@@ -89,6 +98,7 @@
 #include <grgserver/functions/ReloadPickups.inc>
 #include <grgserver/functions/ReloadRaces.inc>
 #include <grgserver/functions/ReloadTeleports.inc>
+#include <grgserver/functions/ReloadTuningGarages.inc>
 #include <grgserver/functions/ReloadVehicleModels.inc>
 #include <grgserver/functions/ReloadVehicleShops.inc>
 #include <grgserver/functions/ReloadVehicles.inc>
@@ -96,17 +106,20 @@
 #include <grgserver/functions/ResetPlayerVariables.inc>
 #include <grgserver/functions/SaveAll.inc>
 #include <grgserver/functions/SaveGarage.inc>
+#include <grgserver/functions/SaveGarages.inc>
 #include <grgserver/functions/SaveNPCs.inc>
 #include <grgserver/functions/SaveObjects.inc>
 #include <grgserver/functions/SavePlayer.inc>
 #include <grgserver/functions/SaveRaces.inc>
 #include <grgserver/functions/SaveTeleports.inc>
+#include <grgserver/functions/SaveTuningGarages.inc>
 #include <grgserver/functions/SaveVehicle.inc>
 #include <grgserver/functions/SendClientMessageEx.inc>
 #include <grgserver/functions/SendNPCCommand.inc>
 #include <grgserver/functions/SetPlayerCameraPosEx.inc>
 #include <grgserver/functions/SetPlayerSpawn.inc>
 #include <grgserver/functions/SetVehicleEngineState.inc>
+#include <grgserver/functions/SetVehicleNumberPlateEx.inc>
 #include <grgserver/functions/ShowRaceCheckpoint.inc>
 #include <grgserver/functions/SpawnVehicle.inc>
 #include <grgserver/functions/StrNotNull.inc>
@@ -130,6 +143,7 @@
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>
+#include <grgserver/callbacks/OnDynamicObjectMoved.inc>
 #include <grgserver/callbacks/OnEnterExitModShop.inc>
 #include <grgserver/callbacks/OnGameModeExit.inc>
 #include <grgserver/callbacks/OnGameModeInit.inc>
@@ -170,6 +184,8 @@
 
 // dialogs
 #include <grgserver/dialogs/AddObject.inc>
+#include <grgserver/dialogs/CommandDetails.inc>
+#include <grgserver/dialogs/CommandList.inc>
 #include <grgserver/dialogs/ConfirmGarageBuy.inc>
 #include <grgserver/dialogs/ConfirmStartNPCRecording.inc>
 #include <grgserver/dialogs/ConfirmVehicleBuy.inc>
@@ -179,12 +195,19 @@
 #include <grgserver/dialogs/Register_Password1.inc>
 #include <grgserver/dialogs/Register_Password2.inc>
 #include <grgserver/dialogs/SpawnVehicle.inc>
+#include <grgserver/dialogs/TuningGarage_CategoryTypes.inc>
+#include <grgserver/dialogs/TuningGarage_MainMenu.inc>
+#include <grgserver/dialogs/TuningGarage_NP_City.inc>
+#include <grgserver/dialogs/TuningGarage_NP_NumberInput.inc>
 
 // timers
+#include <grgserver/timers/DisqualifyRacePlayer.inc>
 #include <grgserver/timers/EveryMinute.inc>
 #include <grgserver/timers/EverySecond.inc>
 #include <grgserver/timers/RaceCountDown.inc>
+#include <grgserver/timers/RandomRaceLobbyCamera.inc>
 #include <grgserver/timers/ResetDriftingStats.inc>
+#include <grgserver/timers/ResetMoveObject.inc>
 #include <grgserver/timers/ScreenFader.inc>
 #include <grgserver/timers/SetPlayerPosFindZ.inc>
 #include <grgserver/timers/UpdateRaceLobby.inc>
@@ -207,17 +230,22 @@
 #include <grgserver/commands/maptp.inc>
 #include <grgserver/commands/mobilevehicleshop.inc>
 #include <grgserver/commands/npccmd.inc>
+#include <grgserver/commands/previewobjectmove.inc>
 #include <grgserver/commands/racenpcs.inc>
 #include <grgserver/commands/recnpc.inc>
 #include <grgserver/commands/reload.inc>
 #include <grgserver/commands/removevehicle.inc>
 #include <grgserver/commands/savepos.inc>
+#include <grgserver/commands/setgaragepickup.inc>
+#include <grgserver/commands/setgaragespawn.inc>
 #include <grgserver/commands/setobjectfilename.inc>
+#include <grgserver/commands/setobjectmovespeed.inc>
 #include <grgserver/commands/setracelaps.inc>
 #include <grgserver/commands/setracelevel.inc>
 #include <grgserver/commands/setracename.inc>
 #include <grgserver/commands/setracepickup.inc>
 #include <grgserver/commands/setracespawn.inc>
+#include <grgserver/commands/settuninggaragespawn.inc>
 #include <grgserver/commands/showarea.inc>
 #include <grgserver/commands/showareas.inc>
 #include <grgserver/commands/showhps.inc>
@@ -229,4 +257,3 @@
 #include <grgserver/commands/tppos.inc>
 #include <grgserver/commands/tpto.inc>
 #include <grgserver/commands/vehicleshop.inc>
-
