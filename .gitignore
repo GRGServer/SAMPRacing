@@ -1,6 +1,6 @@
-server.cfg
-crashinfo.txt
-*_log.txt
+/server.cfg
+/crashinfo.txt
+/*_log.txt
 *.log
 *.ppk
 *.amx
