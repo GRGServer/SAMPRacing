@@ -4,6 +4,7 @@
 *.log
 *.ppk
 *.amx
+includes/grgserver/main.inc
 
 /.vagrant/
 
@@ -15,4 +16,3 @@
 desktop.ini
 .DS_Store
 $RECYCLE.BIN
-includes/grgserver/main.inc
