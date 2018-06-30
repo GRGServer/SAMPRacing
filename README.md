@@ -18,9 +18,19 @@ The following plugins are used by the server:
  * [whirlpool](http://forum.sa-mp.com/showthread.php?t=65290)
  * [xml](http://forum.sa-mp.com/showthread.php?t=372521)
 
+## Running in Vagrant VM
+
+You can omit the other setup steps by using the provided Vagrant VM based on Debian Stretch.
+
+Simply execute `vagrant up` in the root directory of your checkout to start the Vagrant VM.
+
+This will automatically setup the whole server (including MySQL and the webserver) and compile the gamemode.
+
+Once the VM is running, simply add `localhost:7777` to your favorites and you are ready to start.
+
 ## Requirements
 
-  * Linux or Windows
+  * Linux
   * MySQL Server
   * Webserver (To stream the audio files and display the online map)
   * PHP (To display the online map)
@@ -40,7 +50,7 @@ The following plugins are used by the server:
 
 [![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
 
-Just execute *compile-gamemode.bat* (Windows) or *compile-gamemode.sh* (Linux) located in the tools directory.
+Just execute *compile-gamemode.sh* located in the tools directory.
 
 The script will execute the Includes Updater (See section *Includes Updater* bellow) and compile the gamemode.
 
@@ -56,7 +66,7 @@ After that the *includesupdater.jar* is located in *includesupdater/target*. Kee
 
 Some tools have to be compiled before using them.
 
-Simply execute the *compile-tools.bat* (Windows) or *compile-tools.sh* (Linux) and you are done.
+Simply execute *compile-tools.sh* and you are done.
 
 **Note:** Everytime a tool gets changed it has to be rebuilt. In this case, simply re-execute the script.
 
