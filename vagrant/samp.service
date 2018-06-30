@@ -1,0 +1,13 @@
+[Unit]
+Description=SAMP
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+User=vagrant
+WorkingDirectory=/opt/samp
+ExecStart=/opt/samp/samp-srv
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

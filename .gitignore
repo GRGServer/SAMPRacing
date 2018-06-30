@@ -5,6 +5,8 @@ crashinfo.txt
 *.ppk
 *.amx
 
+/.vagrant/
+
 # Created by IDEs and other editors
 *.idea
 *.iml
