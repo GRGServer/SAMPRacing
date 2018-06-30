@@ -83,10 +83,12 @@ ReloadGarages()
 
 		MySQLFormat("SELECT `userId`, `price` FROM `garages` WHERE `id` = %d", g_garages[garageNumber][E_GARAGE_ID]);
 		new Cache:result = mysql_query(1, g_sqlQuery);
-		if (cache_get_row_count())
+		new rows;
+		cache_get_row_count(rows);
+		if (rows)
 		{
-			g_garages[garageNumber][E_GARAGE_USERID] = cache_get_field_content_int(0, "userId");
-			g_garages[garageNumber][E_GARAGE_PRICE] = cache_get_field_content_int(0, "price");
+			cache_get_value_int(0, "userId", g_garages[garageNumber][E_GARAGE_USERID]);
+			cache_get_value_int(0, "price", g_garages[garageNumber][E_GARAGE_PRICE]);
 		}
 		cache_delete(result);
 

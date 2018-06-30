@@ -2,7 +2,7 @@ forward OnPlayerLogin(playerID, password[]);
 public OnPlayerLogin(playerID, password[])
 {
 	new databasePassword[STRINGLENGTH_HASH * 2 + 2];
-	cache_get_field_content(0, "password", databasePassword);
+	cache_get_value(0, "password", databasePassword, STRINGLENGTH_HASH * 2 + 2);
 
 	new salt[STRINGLENGTH_HASH];
 	new hash[STRINGLENGTH_HASH];
@@ -14,7 +14,7 @@ public OnPlayerLogin(playerID, password[])
 		return;
 	}
 
-	PVar:playerID[USERID] = strval(GetMySQLField("id"));
+	cache_get_value_int(0, "id", PVar:playerID[USERID]);
 
 	// Update some stats
 	MySQLFormat("UPDATE `users` SET `lastLogin` = NOW() WHERE `id` = %d", PVar:playerID[USERID]);

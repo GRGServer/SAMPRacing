@@ -1,9 +1,13 @@
 forward OnPlayerRegisteredCheck(playerID);
 public OnPlayerRegisteredCheck(playerID)
 {
-	if (cache_get_row_count())
+	new rows;
+	cache_get_row_count(rows);
+	if (rows)
 	{
-		PVar:playerID[LANGUAGE] = GetLanguageID(GetMySQLField("language"));
+		new language[10];
+		cache_get_value(0, "language", language, 10);
+		PVar:playerID[LANGUAGE] = GetLanguageID(language);
 
 		// Show login dialog
 		ShowDialog:Login(playerID);

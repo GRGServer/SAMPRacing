@@ -63,7 +63,6 @@
 #include <grgserver/functions/GetGameTextKeyByID.inc>
 #include <grgserver/functions/GetLanguageByID.inc>
 #include <grgserver/functions/GetLanguageID.inc>
-#include <grgserver/functions/GetMySQLField.inc>
 #include <grgserver/functions/GetObjectByID.inc>
 #include <grgserver/functions/GetObjectNameByModelID.inc>
 #include <grgserver/functions/GetPlayerID.inc>

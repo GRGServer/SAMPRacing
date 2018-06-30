@@ -3,7 +3,7 @@
 // Tab note: This file looks best if you set the tab length to 8 characters
 
 // MySQL connection details
-#define MYSQL_LOGLEVEL		LOG_ERROR
+#define MYSQL_LOGLEVEL		ERROR
 #define MYSQL_HOST		"localhost"
 #define MYSQL_USER		"root"
 #define MYSQL_PASSWORD		""

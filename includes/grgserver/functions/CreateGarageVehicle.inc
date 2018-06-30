@@ -19,7 +19,7 @@ CreateGarageVehicle(playerID, row)
 
 	PVar:playerID[GARAGE_ROW] = row;
 
-	PVar:playerID[GARAGE_VEHICLE_SAVEID] = cache_get_field_content_int(row, "id");
+	cache_get_value_int(row, "id", PVar:playerID[GARAGE_VEHICLE_SAVEID]);
 
 	PVar:playerID[GARAGE_VEHICLE_ID] = LoadVehicle(row, g_garages[garageNumber][E_GARAGE_VEHICLE_POSX], g_garages[garageNumber][E_GARAGE_VEHICLE_POSY], g_garages[garageNumber][E_GARAGE_VEHICLE_POSZ], g_garages[garageNumber][E_GARAGE_VEHICLE_ANGLE]);
 	if (PVar:playerID[GARAGE_VEHICLE_ID] == INVALID_VEHICLE_ID)
@@ -31,7 +31,9 @@ CreateGarageVehicle(playerID, row)
 	LinkVehicleToInterior(PVar:playerID[GARAGE_VEHICLE_ID], GetPlayerInterior(playerID));
 	SetVehicleVirtualWorld(PVar:playerID[GARAGE_VEHICLE_ID], VIRTUALWORLD_GARAGE + playerID);
 
-	FormatNew:string[256]("%s~n~%d / %d", g_vehicleModels[GetVehicleModel(PVar:playerID[GARAGE_VEHICLE_ID]) - 400][E_VEHICLEMODEL_NAME], row + 1, cache_get_row_count());
+	new rows;
+	cache_get_row_count(rows);
+	FormatNew:string[256]("%s~n~%d / %d", g_vehicleModels[GetVehicleModel(PVar:playerID[GARAGE_VEHICLE_ID]) - 400][E_VEHICLEMODEL_NAME], row + 1, rows);
 	PlayerTextDrawSetString(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO], string);
 
 	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_CTRL_INFO]);

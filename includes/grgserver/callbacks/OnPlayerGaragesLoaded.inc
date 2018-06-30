@@ -1,9 +1,12 @@
 forward OnPlayerGaragesLoaded(playerID);
 public OnPlayerGaragesLoaded(playerID)
 {
-	Count(row, cache_get_row_count())
+	new rows;
+	cache_get_row_count(rows);
+	Count(row, rows)
 	{
-		new garageID = cache_get_field_content_int(row, "id");
+		new garageID;
+		cache_get_value_int(row, "id", garageID);
 		Foreach(garageNumber, g_garages)
 		{
 			if (g_garages[garageNumber][E_GARAGE_ID] == garageID)

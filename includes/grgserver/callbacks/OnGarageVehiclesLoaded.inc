@@ -1,7 +1,9 @@
 forward OnGarageVehiclesLoaded(playerID);
 public OnGarageVehiclesLoaded(playerID)
 {
-	if (!cache_get_row_count())
+	new rows;
+	cache_get_row_count(rows);
+	if (!rows)
 	{
 		PVar:playerID[GARAGE_NUMBER] = -1;
 

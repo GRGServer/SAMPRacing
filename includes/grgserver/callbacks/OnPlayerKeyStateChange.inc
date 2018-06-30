@@ -158,7 +158,9 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 			}
 			else
 			{
-				row = cache_get_row_count() - 1;
+				new rows;
+				cache_get_row_count(rows);
+				row = rows - 1;
 			}
 			CreateGarageVehicle(playerid, row);
 			return false;
@@ -167,7 +169,9 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		{
 			cache_set_active(PVar:playerid[GARAGE_MYSQLCACHEID]);
 			new row = PVar:playerid[GARAGE_ROW];
-			if (row < cache_get_row_count() - 1)
+			new rows;
+			cache_get_row_count(rows);
+			if (row < rows - 1)
 			{
 				row++;
 			}

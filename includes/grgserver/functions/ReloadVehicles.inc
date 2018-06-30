@@ -14,15 +14,30 @@ ReloadVehicles()
 
 	new count;
 	result = mysql_query(1, "SELECT * FROM `vehicles`");
-	Count(row, cache_get_row_count())
+	new rows;
+	cache_get_row_count(rows);
+	Count(row, rows)
 	{
+		new garageID;
+		cache_get_value_int(row, "garageId", garageID);
+
 		// Skip vehicles in garages
-		if (cache_get_field_content_int(row, "garageId"))
+		if (garageID)
 		{
 			continue;
 		}
 
-		if (LoadVehicle(row, cache_get_field_content_float(row, "posX"), cache_get_field_content_float(row, "posY"), cache_get_field_content_float(row, "posZ"), cache_get_field_content_float(row, "angle")) != INVALID_VEHICLE_ID)
+		new Float:posX;
+		new Float:posY;
+		new Float:posZ;
+		new Float:angle;
+
+		cache_get_value_float(row, "posX", posX);
+		cache_get_value_float(row, "posY", posY);
+		cache_get_value_float(row, "posZ", posZ);
+		cache_get_value_float(row, "angle", angle);
+
+		if (LoadVehicle(row, posX, posY, posZ, angle) != INVALID_VEHICLE_ID)
 		{
 			count++;
 		}
@@ -35,14 +50,18 @@ ReloadVehicles()
 
 	count = 0;
 	result = mysql_query(1, "SELECT `vehicleId`, `componentId` FROM `vehiclecomponents` WHERE `componentId`");
-	Count(row, cache_get_row_count())
+	cache_get_row_count(rows);
+	Count(row, rows)
 	{
-		new vehicleSaveID = cache_get_field_content_int(row, "vehicleId");
+		new vehicleSaveID;
+		cache_get_value_int(row, "vehicleId", vehicleSaveID);
 		Foreach(vehicleIndex, g_vehicles)
 		{
 			if (g_vehicles[vehicleIndex][E_VEHICLE_SAVEID] == vehicleSaveID)
 			{
-				AddVehicleComponent(vehicleIndex + 1, cache_get_field_content_int(row, "componentId"));
+				new componentID;
+				cache_get_value_int(row, "componentId", componentID);
+				AddVehicleComponent(vehicleIndex + 1, componentID);
 				count++;
 				break;
 			}

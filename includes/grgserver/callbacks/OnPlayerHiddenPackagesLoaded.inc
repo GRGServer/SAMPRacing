@@ -3,9 +3,12 @@ public OnPlayerHiddenPackagesLoaded(playerID)
 {
 	new hiddenPackagesFound;
 	new foundHiddenPackages[MAX_HIDDENPACKAGES];
-	Count(row, cache_get_row_count())
+	new rows;
+	cache_get_row_count(rows);
+	Count(row, rows)
 	{
-		new packageID = cache_get_field_content_int(row, "packageId");
+		new packageID;
+		cache_get_value_int(row, "packageId", packageID);
 		if (packageID >= 0 && packageID < MAX_HIDDENPACKAGES)
 		{
 			foundHiddenPackages[packageID] = true;

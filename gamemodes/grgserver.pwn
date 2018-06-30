@@ -8,7 +8,7 @@
 #include <formatnumber>
 #include <geoip>
 #include <md-sort>
-#include <mysql>
+#include <a_mysql>
 #include <progressbars>
 #include <regex>
 #include <sscanf>
