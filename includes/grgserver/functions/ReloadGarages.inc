@@ -82,7 +82,7 @@ ReloadGarages()
 		g_garages[garageNumber][E_GARAGE_ENTERRANGE] = XML_GetIntAttribute(garageNode, "enterrange");
 
 		MySQLFormat("SELECT `userId`, `price` FROM `garages` WHERE `id` = %d", g_garages[garageNumber][E_GARAGE_ID]);
-		new Cache:result = mysql_query(1, g_sqlQuery);
+		new Cache:result = mysql_query(g_mysql, g_sqlQuery);
 		new rows;
 		cache_get_row_count(rows);
 		if (rows)

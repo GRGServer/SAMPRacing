@@ -13,7 +13,7 @@ ReloadVehicles()
 	new Cache:result;
 
 	new count;
-	result = mysql_query(1, "SELECT * FROM `vehicles`");
+	result = mysql_query(g_mysql, "SELECT * FROM `vehicles`");
 	new rows;
 	cache_get_row_count(rows);
 	Count(row, rows)
@@ -49,7 +49,7 @@ ReloadVehicles()
 	print("Adding vehicle components...");
 
 	count = 0;
-	result = mysql_query(1, "SELECT `vehicleId`, `componentId` FROM `vehiclecomponents` WHERE `componentId`");
+	result = mysql_query(g_mysql, "SELECT `vehicleId`, `componentId` FROM `vehiclecomponents` WHERE `componentId`");
 	cache_get_row_count(rows);
 	Count(row, rows)
 	{
