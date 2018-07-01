@@ -1,4 +1,4 @@
-#define MYSQL_LOGLEVEL LOG_ERROR
+#define MYSQL_LOGLEVEL ERROR
 #define MYSQL_HOST     "localhost"
 #define MYSQL_USER     "samp"
 #define MYSQL_PASSWORD "samp"
