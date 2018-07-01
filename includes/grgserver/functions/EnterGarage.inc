@@ -20,5 +20,5 @@ EnterGarage(playerID, garageNumber)
 	PVar:playerID[GARAGE_NUMBER] = garageNumber;
 
 	MySQLFormat("SELECT `id`, `modelId`, `numberPlate`, `mileAge`, `userId`, `garageId`, `health`, `color1`, `color2`, `paintjobId` FROM `vehicles` WHERE `userId` = %d AND `garageId` = %d", PVar:playerID[USERID], g_garages[PVar:playerID[GARAGE_NUMBER]][E_GARAGE_ID]);
-	mysql_pquery(1, g_sqlQuery, "OnGarageVehiclesLoaded", "d", playerID);
+	mysql_pquery(g_mysql, g_sqlQuery, "OnGarageVehiclesLoaded", "d", playerID);
 }

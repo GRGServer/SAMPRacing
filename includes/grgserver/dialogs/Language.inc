@@ -17,7 +17,7 @@ DialogResponse:Language(playerID, response, listItem, inputText[])
 		PVar:playerID[LANGUAGE] = GetLanguageID(languageName);
 
 		MySQLFormat("UPDATE `users` SET `language` = '%s' WHERE `id` = %d", GetLanguageByID(PVar:playerID[LANGUAGE]), PVar:playerID[USERID]);
-		mysql_pquery(1, g_sqlQuery);
+		mysql_pquery(g_mysql, g_sqlQuery);
 
 		UpdatePlayerTextDrawStrings(playerID);
 

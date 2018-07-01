@@ -55,7 +55,7 @@ for (new i_%0 = 0; ; ++i_%0) \
 #define LoggedInPlayers(%0) Count(%0, g_maxPlayers) if (IsLoggedIn(%0))
 
 // MySQLFormat(format, {Float,_}:...)
-#define MySQLFormat(%0) mysql_format(1, g_sqlQuery, sizeof(g_sqlQuery), %0)
+#define MySQLFormat(%0) mysql_format(g_mysql, g_sqlQuery, sizeof(g_sqlQuery), %0)
 
 // Object:objectID[field]
 #define Object:%0[%1] g_objects[%0 - 1][E_OBJECT_%1]

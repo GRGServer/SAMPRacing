@@ -83,7 +83,7 @@ public OnPlayerSpawn(playerid)
 				VehicleProperty:vehicleID[GARAGEID] = 0;
 
 				MySQLFormat("UPDATE `vehicles` SET `garageId` = NULL WHERE `id` = %d", VehicleProperty:vehicleID[SAVEID]);
-				mysql_pquery(1, g_sqlQuery);
+				mysql_pquery(g_mysql, g_sqlQuery);
 
 				SaveVehicle(vehicleID, true);
 			}

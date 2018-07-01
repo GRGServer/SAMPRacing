@@ -6,6 +6,6 @@ public OnVehicleInserted(vehicleID)
 	Count(slot, MAX_VEHICLECOMPONENT_SLOTS)
 	{
 		MySQLFormat("INSERT INTO `vehiclecomponents` (`vehicleId`, `slot`, `componentId`) VALUES(%d, %d, %d)", VehicleProperty:vehicleID[SAVEID], slot, GetVehicleComponentInSlot(vehicleID, slot));
-		mysql_pquery(1, g_sqlQuery);
+		mysql_pquery(g_mysql, g_sqlQuery);
 	}
 }

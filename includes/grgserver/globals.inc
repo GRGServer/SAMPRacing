@@ -8,6 +8,7 @@ new g_hiddenPackagesCount;
 new g_interiors[MAX_INTERIORS][E_INTERIOR];
 new g_languageStrings[MAX_LANGUAGE_STRINGS][E_LANGUAGESTRING];
 new g_maxPlayers;
+new MySQL:g_mysql;
 new g_npcs[MAX_NPCS][E_NPC];
 new g_objectModels[MAX_OBJECTMODELS][E_OBJECTMODEL];
 new g_objects[MAX_DYNAMIC_OBJECTS][E_OBJECT];

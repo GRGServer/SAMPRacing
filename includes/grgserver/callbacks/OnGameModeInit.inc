@@ -6,7 +6,7 @@ public OnGameModeInit()
 
 	print("Connecting to MySQL server");
 	mysql_log(MYSQL_LOGLEVEL);
-	mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_DATABASE, MYSQL_PASSWORD);
+	g_mysql = mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_DATABASE, MYSQL_PASSWORD);
 
 	ReloadLanguageStrings();
 	ReloadObjectModels();

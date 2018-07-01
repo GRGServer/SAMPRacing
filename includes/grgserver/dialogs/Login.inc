@@ -11,7 +11,7 @@ DialogResponse:Login(playerID, response, listItem, inputText[])
 		{
 			// Search user in database and compare password
 			MySQLFormat("SELECT `id`, `password` FROM `users` WHERE `username` = '%e'", GetPlayerNameEx(playerID));
-			mysql_pquery(1, g_sqlQuery, "OnPlayerLogin", "ds", playerID, inputText);
+			mysql_pquery(g_mysql, g_sqlQuery, "OnPlayerLogin", "ds", playerID, inputText);
 		}
 		else
 		{

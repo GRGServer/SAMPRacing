@@ -102,7 +102,7 @@ public OnPlayerConnect(playerid)
 
 	// Check whether the player is already registered
 	MySQLFormat("SELECT `id`, `language` FROM `users` WHERE `username` = '%e'", GetPlayerNameEx(playerid));
-	mysql_pquery(1, g_sqlQuery, "OnPlayerRegisteredCheck", "d", playerid);
+	mysql_pquery(g_mysql, g_sqlQuery, "OnPlayerRegisteredCheck", "d", playerid);
 
 	TextDrawShowForPlayer(playerid, g_textDrawClock);
 

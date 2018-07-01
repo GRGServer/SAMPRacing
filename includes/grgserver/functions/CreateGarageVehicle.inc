@@ -40,5 +40,5 @@ CreateGarageVehicle(playerID, row)
 	PlayerTextDrawShow(playerID, g_playerTextDraws[playerID][E_PTD_GARAGE_VEHICLE_INFO]);
 
 	MySQLFormat("SELECT `componentId` FROM `vehiclecomponents` WHERE `vehicleId` = %d", PVar:playerID[GARAGE_VEHICLE_SAVEID]);
-	mysql_pquery(1, g_sqlQuery, "OnGarageVehicleComponentsLoaded", "d", playerID);
+	mysql_pquery(g_mysql, g_sqlQuery, "OnGarageVehicleComponentsLoaded", "d", playerID);
 }

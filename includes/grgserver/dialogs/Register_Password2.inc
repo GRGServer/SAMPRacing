@@ -11,7 +11,7 @@ DialogResponse:Register_Password2(playerID, response, listItem, inputText[])
 		{
 			// Add the new user to the database
 			MySQLFormat("INSERT INTO `users` (`username`, `password`, `language`, `money`, `registerDate`, `lastLogin`) VALUES('%e', '%e', '%e', %d, NOW(), NOW())", GetPlayerNameEx(playerID), Hash(inputText), GetLanguageByID(PVar:playerID[LANGUAGE]), REGISTER_MONEY);
-			mysql_pquery(1, g_sqlQuery, "OnPlayerRegistered", "d", playerID);
+			mysql_pquery(g_mysql, g_sqlQuery, "OnPlayerRegistered", "d", playerID);
 		}
 		else
 		{

@@ -15,7 +15,7 @@ CheckHiddenPackages(playerID)
 
 				// Save the state
 				MySQLFormat("INSERT INTO `hiddenpackages` (`userId`, `packageId`) VALUES(%d, %d)", PVar:playerID[USERID], hiddenPackageID);
-				mysql_pquery(1, g_sqlQuery);
+				mysql_pquery(g_mysql, g_sqlQuery);
 
 				// One more hidden package
 				found = true;
