@@ -19,5 +19,5 @@
 # Extensionless binary files
 announce binary
 samp-npc binary
-samp-srv binary
+samp03svr binary
 tools/pawn/pawncc

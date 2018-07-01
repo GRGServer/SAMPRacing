@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 User=samp
 WorkingDirectory=/opt/samp
-ExecStart=/opt/samp/samp-srv
+ExecStart=/opt/samp/samp03svr
 Restart=on-failure
 
 [Install]
