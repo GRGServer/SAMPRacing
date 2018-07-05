@@ -22,6 +22,11 @@ The following plugins are used by the server:
 
 You can omit the other setup steps by using the provided Vagrant VM based on Debian Stretch.
 
+Before continuing, you have to install the following Vagrant plugins (if not already installed):
+
+* VirtualBox guest plugin: `vagrant plugin install vagrant-vbguest`
+* Puppet install plugin: `vagrant plugin install vagrant-puppet-install`
+
 Simply execute `vagrant up` in the root directory of your checkout to start the Vagrant VM.
 
 This will automatically setup the whole server (including MySQL and the webserver) and compile the gamemode.
