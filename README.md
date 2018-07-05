@@ -33,6 +33,8 @@ This will automatically setup the whole server (including MySQL and the webserve
 
 Once the VM is running, simply add `localhost:7777` to your favorites and you are ready to start.
 
+Unfortunately, the SA-MP server is now only reachable via *localhost*, it is not even reachable via *127.0.0.1*. One workaround for this issue is to manually specify the network interface IP address as *Host IP* in the port forwarding settings of the VM in VirtualBox.
+
 ## Requirements
 
   * Linux
