@@ -4,7 +4,6 @@ $packages = [
   "git",
   "htop",
   "libc6-i386",
-  "openjdk-8-jdk",
   "vim",
 ]
 
@@ -113,17 +112,9 @@ file { "/opt/samp/includes/grgserver/localconfig.inc":
   notify  => Exec["compile_gamemode"],
 }
 
-exec { "compile_tools":
-  command => "/opt/samp/tools/compile-tools.sh",
-  require => Package["openjdk-8-jdk"],
-}
-
 exec { "compile_gamemode":
   command => "/opt/samp/tools/compile-gamemode.sh",
-  require => [
-    Exec["compile_tools"],
-    Package["libc6-i386"],
-  ],
+  require => Package["libc6-i386"],
 }
 
 service { "samp":

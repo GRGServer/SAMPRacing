@@ -40,7 +40,7 @@ Once the VM is running, simply add `localhost:7777` to your favorites and you ar
   * Webserver (To stream the audio files and display the online map)
   * PHP (To display the online map)
   * To use Pawn on x64 Linux: 32-bit C Library for AMD64 (*apt-get install libc6-i386* on Debian based Linux distributions)
-  * A current [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To build and execute tools like the Includes Updater)
+  * Optional: A current [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To build and execute tools like the Language String Editor)
 
 ## Configuration
 
@@ -57,15 +57,7 @@ Once the VM is running, simply add `localhost:7777` to your favorites and you ar
 
 Just execute *compile-gamemode.sh* located in the tools directory.
 
-The script will execute the Includes Updater (See section *Includes Updater* bellow) and compile the gamemode.
-
-## Includes Updater
-
-The Includes Updater searches for all the include files in */includes/grgserver* and includes them into the *main.inc*.
-
-As any other Java tool, the Includes Updater has to be build using Maven before using it (See section *Compiling tools*).
-
-After that the *includesupdater.jar* is located in *includesupdater/target*. Keep it in that directory! Execute it using *java -jar path/to/target/includesupdater.jar*
+The script will execute the Includes Updater (`tools/update-includes.py`) and compile the gamemode.
 
 ## Compiling tools
 

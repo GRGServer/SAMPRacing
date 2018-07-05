@@ -6,10 +6,6 @@ This directory contains various tools for the SA-MP server.
 
 The Area Editor can be used to edit areas like drift zones.
 
-## Includes Updater
-
-The Includes Updater is used to generate the main.inc which includes all files like commands, functions or callbacks into the gamemode.
-
 ## Language String Editor
 
 The Language String Editor is used to edit the translation of the gamemode.
