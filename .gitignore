@@ -11,6 +11,7 @@ includes/grgserver/main.inc
 # Created by IDEs and other editors
 *.idea
 *.iml
+.vscode
 
 # OS stuff
 desktop.ini
