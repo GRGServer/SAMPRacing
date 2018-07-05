@@ -55,15 +55,15 @@ Once the VM is running, simply add `localhost:7777` to your favorites and you ar
 
 [![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
 
-Just execute *compile-gamemode.sh* located in the tools directory.
+Just execute `compile-gamemode.sh` located in the tools directory.
 
-The script will execute the Includes Updater (`tools/update-includes.py`) and compile the gamemode.
+The script will execute the Includes Updater (*tools/update-includes.py*) and compile the gamemode.
 
 ## Compiling tools
 
 Some tools have to be compiled before using them.
 
-Simply execute *compile-tools.sh* and you are done.
+Simply execute `compile-tools.sh` and you are done.
 
 **Note:** Everytime a tool gets changed it has to be rebuilt. In this case, simply re-execute the script.
 
@@ -71,6 +71,6 @@ Simply execute *compile-tools.sh* and you are done.
 
 The map located in the *map* directory shows all currently online players on a map.
 
-**Note:** On the first use you have to generate the map tiles using the *generate-tiles.php* PHP script (Run it from the command line using *php generate-tiles.php*).
+**Note:** On the first use you have to generate the map tiles using the *generate-tiles.php* PHP script (Run it from the command line using `php generate-tiles.php`).
 
 **Note:** The map requires a webserver running PHP on the same host as the SA-MP server because the PHP scripts are reading files from the *scriptfiles* directory!
