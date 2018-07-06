@@ -24,6 +24,6 @@ The configuration includes the following:
 
 ## Todo Finder
 
-The Todo Finder can be used to search for any Todo markers in the gamemode script.
+The Todo Finder (`list-todos.py`) can be used to search for any Todo markers in the gamemode script.
 
 It will search for "// TODO" and show the lines in the console.
