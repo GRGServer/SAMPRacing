@@ -139,6 +139,7 @@
 #include <grgserver/functions/XML_SetIntAttribute.inc>
 #include <grgserver/functions/explode.inc>
 #include <grgserver/functions/str_replace.inc>
+#include <grgserver/functions/SaveHiddenPackages.inc>
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>
@@ -256,3 +257,4 @@
 #include <grgserver/commands/tppos.inc>
 #include <grgserver/commands/tpto.inc>
 #include <grgserver/commands/vehicleshop.inc>
+#include <grgserver/commands/addhp.inc>

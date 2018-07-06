@@ -1937,4 +1937,28 @@
             Die Tuninggaragenspawnposition wurde gespeichert
         </de>
     </string>
+    <string id="242">
+        <en>
+            Add a new hidden package
+        </en>
+        <de>
+            Neues verstecktes Päckchen hinzufügen
+        </de>
+    </string>
+    <string id="243">
+        <en>
+            Hidden package created. It will appear on next reload.
+        </en>
+        <de>
+            Verstecktes Päckchen erstellt. Es erscheint beim nächsten Neuladen.
+        </de>
+    </string>
+    <string id="244">
+        <en>
+            Limit of %d hidden packages reached!
+        </en>
+        <de>
+            Limit von %d versteckten Päckchen erreicht!
+        </de>
+    </string>
 </languagestrings>
