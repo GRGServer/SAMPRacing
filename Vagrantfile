@@ -18,4 +18,5 @@ Vagrant.configure(2) do |config|
         puppet.environment = "test"
     end
     config.puppet_install.puppet_version = "4.10.9"
+    config.vm.provision "shell", run: "always", inline: "systemctl restart samp"
 end
