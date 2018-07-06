@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <garages>
     <garage id="1" price="0" enterrange="2.000000">
-        <vehicle x="221.11772" y="2988.0590" z="2.655729" angle="80.219543" />
-		<doorobject>177</doorobject>
-        <camera x="225.20120" y="2984.6501" z="3.993999" />
-        <pickup x="227.97979" y="2982.2121" z="2.999881" />
+        <vehicle x="-2683.907" y="-109.2154" z="4.043385" angle="269.83715" />
+        <camera x="-2685.295" y="-111.0706" z="5.086299" />
+        <pickup x="-2683.853" y="-109.2156" z="4.007942" />
+        <doorobject>177</doorobject>
     </garage>
-    <garage id="2" price="0" enterrange="2.000000">
-        <vehicle x="225.51695" y="3014.1831" z="2.704530" angle="80.903762" />
-		<doorobject>178</doorobject>
-        <camera x="225.03419" y="3006.8378" z="5.399700" />
-        <pickup x="233.59245" y="3009.1303" z="2.999881" />
+    <garage id="2" price="195250" enterrange="2.000000">
+        <vehicle x="-2728.984" y="-152.7805" z="4.001991" angle="87.866531" />
+        <camera x="-2726.643" y="-154.6195" z="5.629300" />
+        <pickup x="-2728.984" y="-152.7805" z="4.001991" />
+        <doorobject>178</doorobject>
     </garage>
-    <garage id="3" price="0" enterrange="2.000000">
-        <vehicle x="227.98190" y="3040.8784" z="2.704694" angle="84.686660" />
-        <camera x="224.49368" y="3034.2561" z="4.886096" />
-        <pickup x="238.24670" y="3033.6303" z="2.885092" />
+    <garage id="3" price="195250" enterrange="2.000000">
+        <vehicle x="-2728.519" y="-171.5127" z="4.061855" angle="90.153457" />
+        <camera x="-2726.572" y="-169.6331" z="5.601299" />
+        <pickup x="-2728.519" y="-171.5127" z="4.061855" />
     </garage>
-    <garage id="4" price="0" enterrange="2.000000">
-        <vehicle x="167.23588" y="-1335.838" z="69.703712" angle="359.96520" />
-		<doorobject>490</doorobject>
-        <camera x="167.31718" y="-1343.305" z="71.971702" />
-        <pickup x="172.61772" y="-1339.531" z="69.851631" />
+    <garage id="4" price="195250" enterrange="2.000000">
+        <vehicle x="-2626.657" y="-139.6023" z="4.049702" angle="88.995185" />
+        <camera x="-2624.383" y="-137.9080" z="5.346600" />
+        <pickup x="-2626.657" y="-139.6023" z="4.049702" />
+        <doorobject>490</doorobject>
     </garage>
-    <garage id="5" price="0" enterrange="2.000000">
-        <vehicle x="281.99313" y="-1159.031" z="80.618949" angle="48.787525" />
-		<doorobject>492</doorobject>
-        <camera x="287.53219" y="-1164.165" z="82.424201" />
-        <pickup x="299.91452" y="-1159.266" z="80.909896" />
+    <garage id="5" price="195250" enterrange="2.000000">
+        <vehicle x="-2627.198" y="-158.9030" z="4.062217" angle="85.368202" />
+        <camera x="-2623.951" y="-157.2881" z="5.610899" />
+        <pickup x="-2627.198" y="-158.9030" z="4.062217" />
+        <doorobject>492</doorobject>
     </garage>
-    <garage id="12" price="0" enterrange="2.000000">
-        <vehicle x="-2685.125" y="-109.5929" z="4.038244" angle="276.40414" />
-		<doorobject>514</doorobject>
-        <camera x="-2686.531" y="-111.0495" z="5.915299" />
-        <pickup x="-2686.303" y="-114.6111" z="4.793748" />
+    <garage id="12" price="230500" enterrange="2.000000">
+        <vehicle x="-2685.125" y="-109.5929" z="4.038243" angle="276.40414" />
+        <camera x="-2686.531" y="-111.0494" z="5.915298" />
+        <pickup x="-2686.302" y="-114.6110" z="4.793747" />
+        <doorobject>514</doorobject>
     </garage>
-    <garage id="11" price="0" enterrange="2.000000">
-        <vehicle x="-2728.481" y="-152.8389" z="4.032125" angle="89.908813" />
+    <garage id="11" price="150000" enterrange="2.000000">
+        <vehicle x="-2728.480" y="-152.8388" z="4.032124" angle="89.908813" />
+        <camera x="-2725.877" y="-152.7489" z="5.549300" />
+        <pickup x="-2727.513" y="-147.0375" z="4.443659" />
         <doorobject>511</doorobject>
-		<camera x="-2725.878" y="-152.7490" z="5.549300" />
-        <pickup x="-2727.514" y="-147.0375" z="4.443660" />
     </garage>
-    <garage id="10" price="0" enterrange="2.000000">
-        <vehicle x="-2728.872" y="-171.4848" z="4.058230" angle="89.980430" />
-		<doorobject>508</doorobject>
-        <camera x="-2726.971" y="-171.6927" z="5.940299" />
-        <pickup x="-2727.734" y="-166.4286" z="4.813753" />
+    <garage id="10" price="130600" enterrange="2.000000">
+        <vehicle x="-2728.872" y="-171.4848" z="4.058229" angle="89.980430" />
+        <camera x="-2726.970" y="-171.6927" z="5.940299" />
+        <pickup x="-2727.733" y="-166.4286" z="4.813753" />
+        <doorobject>508</doorobject>
     </garage>
-    <garage id="9" price="0" enterrange="2.000000">
-        <vehicle x="-2626.668" y="-139.5936" z="4.045308" angle="88.507423" />
-		<doorobject>505</doorobject>
-        <camera x="-2622.948" y="-139.9806" z="5.786399" />
-        <pickup x="-2623.435" y="-134.9171" z="4.801566" />
+    <garage id="9" price="195823" enterrange="2.000000">
+        <vehicle x="-2626.667" y="-139.5935" z="4.045308" angle="88.507423" />
+        <camera x="-2622.947" y="-139.9806" z="5.786398" />
+        <pickup x="-2623.435" y="-134.9170" z="4.801566" />
+        <doorobject>505</doorobject>
     </garage>
-    <garage id="8" price="0" enterrange="2.000000">
+    <garage id="8" price="259632" enterrange="2.000000">
         <vehicle x="-2626.030" y="-159.4113" z="4.058666" angle="89.498512" />
-		<doorobject>502</doorobject>
-        <camera x="-2624.077" y="-159.2752" z="5.730199" />
-        <pickup x="-2625.015" y="-153.2337" z="4.462494" />
+        <camera x="-2624.076" y="-159.2752" z="5.730198" />
+        <pickup x="-2625.014" y="-153.2337" z="4.462493" />
+        <doorobject>502</doorobject>
     </garage>
-    <garage id="7" price="0" enterrange="2.000000">
-        <vehicle x="1551.6343" y="-812.8550" z="72.436592" angle="271.78115" />
-		<doorobject>499</doorobject>
-        <camera x="1550.4930" y="-810.1116" z="74.313697" />
-        <pickup x="1553.1000" y="-803.6819" z="72.788139" />
+    <garage id="7" price="123485" enterrange="2.000000">
+        <vehicle x="1551.6342" y="-812.8549" z="72.436592" angle="271.78115" />
+        <camera x="1550.4930" y="-810.1115" z="74.313697" />
+        <pickup x="1553.0999" y="-803.6818" z="72.788139" />
+        <doorobject>499</doorobject>
     </garage>
-    <garage id="6" price="0" enterrange="2.000000">
-        <vehicle x="1542.2961" y="-760.8261" z="80.271827" angle="312.76528" /> 
-		<doorobject>497</doorobject>
+    <garage id="6" price="498722" enterrange="2.000000">
+        <vehicle x="1542.2961" y="-760.8261" z="80.271827" angle="312.76528" />
         <camera x="1538.8343" y="-763.4365" z="81.773803" />
-        <pickup x="1536.0638" y="-754.6377" z="80.635665" />
+        <pickup x="1536.0638" y="-754.6376" z="80.635665" />
+        <doorobject>497</doorobject>
     </garage>
 </garages>

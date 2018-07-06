@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<objects>
+    <object id="520" model="1555" interior="0" posX="-2680.961" posY="-113.5458" posZ="3.633743" rotX="0.000000" rotY="0.000000" rotZ="-91.99994">
+        <move posX="-2681.015" posY="-115.1149" posZ="3.633743" rotX="0.000000" rotY="0.000000" rotZ="-91.99994" speed="3.000000" reset="0" />
+    </object>
+    <object id="519" model="1502" interior="0" posX="-2683.165" posY="-111.2952" posZ="3.753743" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="521" model="1536" interior="0" posX="-2689.517" posY="-113.5292" posZ="3.724679" rotX="0.000000" rotY="0.000000" rotZ="-89.89997">
+        <move posX="-2689.515" posY="-114.8092" posZ="3.724679" rotX="0.000000" rotY="0.000000" rotZ="-89.89997" speed="3.000000" reset="0" />
+    </object>
+    <object id="522" model="1651" interior="0" posX="-2680.745" posY="-113.7333" posZ="7.569589" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="523" model="1651" interior="0" posX="-2680.745" posY="-109.6733" posZ="7.569589" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="524" model="1651" interior="0" posX="-2680.745" posY="-109.0533" posZ="7.569589" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="525" model="1651" interior="0" posX="-2680.745" posY="-109.0533" posZ="4.849586" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="526" model="1651" interior="0" posX="-2680.745" posY="-111.5633" posZ="4.849586" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
+    <object id="527" model="1651" interior="0" posX="-2691.572" posY="-109.0233" posZ="7.569589" rotX="0.000000" rotY="0.000000" rotZ="179.50000" />
+    <object id="528" model="1651" interior="0" posX="-2691.596" posY="-111.8732" posZ="7.569589" rotX="0.000000" rotY="0.000000" rotZ="179.50000" />
+    <object id="529" model="1651" interior="0" posX="-2691.615" posY="-114.2131" posZ="7.569589" rotX="0.000000" rotY="0.000000" rotZ="179.50000" />
+    <object id="530" model="1651" interior="0" posX="-2691.086" posY="-112.0874" posZ="4.899586" rotX="0.000000" rotY="0.000000" rotZ="179.90000" />
+</objects>
