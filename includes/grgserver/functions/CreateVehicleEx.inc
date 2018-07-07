@@ -21,8 +21,6 @@ CreateVehicleEx(modelID, Float:posX, Float:posY, Float:posZ, Float:angle, color1
             return INVALID_VEHICLE_ID;
         }
 
-        SetVehicleParamsEx(vehicleID, false, false, false, false, false, false, false);
-
         Count(field, sizeof(g_vehicles[]))
         {
             g_vehicles[vehicleID - 1][E_VEHICLE:field] = 0;
