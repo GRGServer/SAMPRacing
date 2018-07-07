@@ -37,6 +37,8 @@ public OnPlayerDataLoaded(playerID)
 	cache_get_value_float(0, "angle", angle);
 	cache_get_value_int(0, "interior", interior);
 
+	cache_get_value_int(0, "skin", PVar:playerID[SKIN]);
+
 	SetPlayerSpawn(playerID, SPAWNTYPE_DEFAULT, posX, posY, posZ, angle, interior);
 	SpawnPlayer(playerID);
 }

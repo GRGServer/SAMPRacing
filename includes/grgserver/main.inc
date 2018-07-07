@@ -258,3 +258,4 @@
 #include <grgserver/commands/tpto.inc>
 #include <grgserver/commands/vehicleshop.inc>
 #include <grgserver/commands/addhp.inc>
+#include <grgserver/commands/skin.inc>

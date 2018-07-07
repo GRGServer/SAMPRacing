@@ -1,6 +1,6 @@
 LoadPlayer(playerID)
 {
-	MySQLFormat("SELECT `posX`, `posY`, `posZ`, `angle`, `interior`, `language`, `isAdmin`, `level`, `money` FROM `users` WHERE `id` = %d", PVar:playerID[USERID]);
+	MySQLFormat("SELECT `posX`, `posY`, `posZ`, `angle`, `interior`, `skin`, `language`, `isAdmin`, `level`, `money` FROM `users` WHERE `id` = %d", PVar:playerID[USERID]);
 	mysql_pquery(g_mysql, g_sqlQuery, "OnPlayerDataLoaded", "d", playerID);
 
 	MySQLFormat("SELECT `packageId` FROM `hiddenpackages` WHERE `userId` = %d", PVar:playerID[USERID]);

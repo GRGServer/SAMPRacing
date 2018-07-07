@@ -52,6 +52,7 @@ CREATE TABLE `users` (
   `posZ`         float                      DEFAULT NULL,
   `angle`        float                      DEFAULT NULL,
   `interior`     int(11)                    DEFAULT NULL,
+  `skin`         int(11)                    DEFAULT '0',
   `money`        int(11)           NOT NULL DEFAULT '0',
   `level`        int(11)           NOT NULL DEFAULT '1',
   `registerDate` datetime          NOT NULL,

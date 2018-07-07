@@ -175,6 +175,8 @@ public OnPlayerSpawn(playerid)
 		}
 	}
 
+	SetPlayerSkin(playerid, PVar:playerid[SKIN]);
+
 	// Reset spawn values
 	PVar:playerid[SPAWN_TYPE] = SPAWNTYPE_DEFAULT;
 	PVar:playerid[SPAWN_POSX] = 0;

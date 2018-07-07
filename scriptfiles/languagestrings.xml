@@ -1961,4 +1961,20 @@
             Limit von %d versteckten Päckchen erreicht!
         </de>
     </string>
+    <string id="245">
+        <en>
+            Change your skin
+        </en>
+        <de>
+            Ändere dein Skin
+        </de>
+    </string>
+    <string id="246">
+        <en>
+            The skin ID must be between 0 and 311!
+        </en>
+        <de>
+            Die Skin ID muss zwischen 0 und 311 sein!
+        </de>
+    </string>
 </languagestrings>
