@@ -199,6 +199,7 @@
 #include <grgserver/dialogs/TuningGarage_MainMenu.inc>
 #include <grgserver/dialogs/TuningGarage_NP_City.inc>
 #include <grgserver/dialogs/TuningGarage_NP_NumberInput.inc>
+#include <grgserver/dialogs/Teleports.inc>
 
 // timers
 #include <grgserver/timers/DisqualifyRacePlayer.inc>

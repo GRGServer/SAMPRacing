@@ -3,8 +3,8 @@ CMD:tp(playerID, params[], StringID:124("Teleport yourself to a predefined locat
     new name[STRINGLENGTH_TELEPORTNAME];
     if (sscanf(params, "s[" #STRINGLENGTH_TELEPORTNAME "]", name))
     {
-        CmdUsageMsg(playerID, "tp", "Name");
-        return COMMAND_USAGE;
+        ShowDialog:Teleports(playerID);
+        return COMMAND_OK_NOSOUND;
     }
 
     Foreach(teleportID, g_teleports)

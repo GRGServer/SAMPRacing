@@ -1977,4 +1977,12 @@
             Die Skin ID muss zwischen 0 und 311 sein!
         </de>
     </string>
+    <string id="247">
+        <en>
+            Teleport to location
+        </en>
+        <de>
+            Zu Ort teleportieren
+        </de>
+    </string>
 </languagestrings>
