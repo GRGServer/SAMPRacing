@@ -1,148 +1,148 @@
 <interiors>
-	<interior x="2003.12" y="1015.19" z="33.008" angle="351.579" interior="11">Four Dragons' Managerial Suite</interior>
-	<interior x="772.28" y="-3.56022" z="1000.73" angle="14.051" interior="5">Ganton Gym</interior>
-	<interior x="973.508" y="-8.5647" z="1001.15" angle="90.1917" interior="3">Brothel</interior>
-	<interior x="961.931" y="-51.9071" z="1001.12" angle="95.5381" interior="3">Brothel2</interior>
-	<interior x="833.02" y="7.31122" z="1004.18" angle="96.4117" interior="3">Inside Track Betting</interior>
-	<interior x="1037.83" y="0.397" z="1001.28" angle="353.934" interior="3">Blastin' Fools Records</interior>
-	<interior x="1211.96" y="-27.5575" z="1000.95" angle="182.336" interior="3">The Big Spread Ranch</interior>
-	<interior x="1297.08" y="5.11675" z="1001.02" angle="188.649" interior="18">Warehouse 1</interior>
-	<interior x="1403.35" y="5.41779" z="1000.91" angle="180.188" interior="1">Warehouse 2</interior>
-	<interior x="1527.05" y="-12.0236" z="1002.1" angle="350.001" interior="3">B Dup's Apartment</interior>
-	<interior x="1523.51" y="-47.8211" z="1002.27" angle="262.704" interior="2">B Dup's Crack Palace</interior>
-	<interior x="612.219" y="-123.903" z="997.992" angle="266.57" interior="3">Wheel Arch Angels</interior>
-	<interior x="512.929" y="-11.6929" z="1001.57" angle="198.767" interior="3">OG Loc's House</interior>
-	<interior x="418.59" y="-82.8253" z="1001.8" angle="5.03423" interior="3">Barber Shop</interior>
-	<interior x="389.366" y="173.561" z="1008.38" angle="92.7918" interior="3">Planning Department</interior>
-	<interior x="288.848" y="168.799" z="1007.17" angle="4.74446" interior="3">Las Venturas Police Department</interior>
-	<interior x="207.054992" y="-138.804992" z="1003.507812" angle="0" interior="3">Pro-Laps</interior>
-	<interior x="-100.337" y="-23.3265" z="1000.72" angle="4.7445" interior="3">Sex Shop</interior>
-	<interior x="-203.663" y="-42.6308" z="1002.27" angle="339.364" interior="3">Las Venturas Tattoo parlor</interior>
-	<interior x="-203.438" y="-7.38362" z="1002.27" angle="324.951" interior="17">Lost San Fierro Tattoo parlor</interior>
-	<interior x="-25.8238" y="-186.517" z="1003.55" angle="1.29769" interior="17">24/7 (version 1)</interior>
-	<interior x="454.985" y="-107.255" z="999.438" angle="309.02" interior="5">Diner 1</interior>
-	<interior x="372.489" y="-131.892" z="1001.49" angle="4.43111" interior="5">Pizza Stack</interior>
-	<interior x="377.106" y="-191.677" z="1000.63" angle="4.76781" interior="17">Rusty Brown's Donuts</interior>
-	<interior x="315.816" y="-141.969" z="999.602" angle="1.77949" interior="7">Ammu-nation</interior>
-	<interior x="225.904" y="-7.89719" z="1002.21" angle="88.4287" interior="5">Victim</interior>
-	<interior x="611.354" y="-77.5574" z="998.0" angle="320.926" interior="2">Loco Low Co</interior>
-	<interior x="246.139" y="109.174" z="1003.22" angle="358.525" interior="10">San Fierro Police Department</interior>
-	<interior x="5.98657" y="-30.1167" z="1003.55" angle="351.655" interior="10">24/7 (version 2 - large)</interior>
-	<interior x="773.742" y="-76.6637" z="1000.65" angle="6.04484" interior="7">Below The Belt Gym (Las Venturas)</interior>
-	<interior x="621.453" y="-23.7289" z="1000.92" angle="15.6789" interior="1">Transfenders</interior>
-	<interior x="445.6" y="-6.9823" z="1000.73" angle="172.21" interior="1">World of Coq</interior>
-	<interior x="285.779" y="-40.0283" z="1001.52" angle="335.408" interior="1">Ammu-nation (version 2)</interior>
-	<interior x="203.777999" y="-48.492401" z="1001.804687" angle="0" interior="1">SubUrban</interior>
-	<interior x="245.231" y="304.763" z="999.148" angle="273.436" interior="1">Denise's Bedroom</interior>
-	<interior x="290.623" y="309.062" z="999.148" angle="89.9164" interior="3">Helena's Barn</interior>
-	<interior x="322.501" y="303.691" z="999.148" angle="8.1747" interior="5">Barbara's Love nest</interior>
-	<interior x="-2041.23" y="178.397" z="28.8465" angle="156.215" interior="1">San Fierro Garage</interior>
-	<interior x="-1402.66" y="106.39" z="1032.27" angle="105.136" interior="1">Oval Stadium</interior>
-	<interior x="-1403.01" y="-250.453" z="1043.53" angle="355.858" interior="7">8-Track Stadium</interior>
-	<interior x="1205.77" y="-11.4021" z="1000.92" angle="343.484" interior="2">The Pig Pen (strip club 2)</interior>
-	<interior x="2016.12" y="1017.15" z="996.875" angle="88.0055" interior="10">Four Dragons</interior>
-	<interior x="-741.849" y="493.004" z="1371.98" angle="71.7782" interior="1">Liberty City</interior>
-	<interior x="2467.05" y="-1698.12" z="1013.51" angle="90.9346" interior="2">Ryder's house</interior>
-	<interior x="2527.02" y="-1679.21" z="1015.5" angle="260.971" interior="1">Sweet's House</interior>
-	<interior x="-1129.89" y="1057.54" z="1346.41" angle="274.527" interior="10">RC Battlefield</interior>
-	<interior x="2496.13" y="-1693.84" z="1014.74" angle="180.862" interior="3">The Johnson House</interior>
-	<interior x="364.481" y="-74.0522" z="1001.51" angle="316.537" interior="10">Burger shot</interior>
-	<interior x="2233.94" y="1711.8" z="1011.63" angle="184.389" interior="1">Caligula's Casino</interior>
-	<interior x="268.371" y="304.936" z="999.148" angle="285.853" interior="2">Katie's Lovenest</interior>
-	<interior x="412.027" y="-21.2218" z="1001.8" angle="346.037" interior="2">Barber Shop 2 (Reece's)</interior>
-	<interior x="1.1853" y="-3.2387" z="999.428" angle="87.5718" interior="2">Angel Pine Trailer</interior>
-	<interior x="-30.5951" y="-89.7439" z="1003.55" angle="353.87" interior="18">24/7 (version 3)</interior>
-	<interior x="161.324" y="-94.5354" z="1001.8" angle="2.04037" interior="18">Zip</interior>
-	<interior x="-2637.07" y="1404.68" z="906.461" angle="62.8042" interior="3">The Pleasure Domes</interior>
-	<interior x="1262.63" y="-785.132" z="1091.91" angle="281.826" interior="5">Madd Dogg's Mansion</interior>
-	<interior x="2543.27" y="-1305.53" z="1025.07" angle="186.752" interior="2">Big Smoke's Crack Palace</interior>
-	<interior x="2350.76" y="-1180.8" z="1027.98" angle="96.2207" interior="5">Burning Desire Building</interior>
-	<interior x="-2159.28" y="641.21" z="1052.38" angle="143.198" interior="1">Wu-Zi Mu's</interior>
-	<interior x="420.367" y="2536.58" z="10.0" angle="89.304" interior="10">Abandoned AC tower</interior>
-	<interior x="256.905" y="-41.6537" z="1002.02" angle="85.8774" interior="14">Wardrobe/Changing room</interior>
-	<interior x="204.392" y="-166.811" z="1000.52" angle="1.61653" interior="14">Didier Sachs</interior>
-	<interior x="1133.069946" y="-9.573060" z="1000.679687" angle="0" interior="12">Casino (Redsands West)</interior>
-	<interior x="-1420.43" y="1616.92" z="1052.53" angle="159.126" interior="14">Kickstart Stadium</interior>
-	<interior x="493.423" y="-22.4514" z="1000.68" angle="2.53327" interior="17">Club</interior>
-	<interior x="1726.96" y="-1640.61" z="20.2243" angle="182.702" interior="18">Atrium</interior>
-	<interior x="-203.177" y="-25.7251" z="1002.27" angle="331.536" interior="16">Los Santos Tattoo Parlor</interior>
-	<interior x="2233.69" y="-1112.81" z="1050.88" angle="8.6483" interior="5">Safe House group 1</interior>
-	<interior x="2194.79" y="-1204.35" z="1049.02" angle="90.0" interior="6">Safe House group 2</interior>
-	<interior x="2318.05" y="-1024.85" z="1050.21" angle="351.927" interior="9">Safe House group 3</interior>
-	<interior x="2261.45" y="-1136.04" z="1050.63" angle="251.032" interior="10">Safe House group 4</interior>
-	<interior x="-959.639" y="1953.56" z="9.0" angle="183.352" interior="17">Sherman Dam</interior>
-	<interior x="-26.0117" y="-139.583" z="1003.55" angle="4.46015" interior="16">24/7 (version 4)</interior>
-	<interior x="2216.44" y="-1150.48" z="1025.8" angle="275.473" interior="15">Jefferson Motel</interior>
-	<interior x="1.59836" y="24.4675" z="1199.59" angle="359.157" interior="1">Jet Interior</interior>
-	<interior x="681.622" y="-451.893" z="-25.6172" angle="166.166" interior="1">The Welcome Pump</interior>
-	<interior x="235.077" y="1188.79" z="1080.26" angle="0.746772" interior="3">Burglary House X1</interior>
-	<interior x="224.322" y="1240.13" z="1082.14" angle="86.2876" interior="2">Burglary House X2</interior>
-	<interior x="223.374" y="1289.04" z="1082.13" angle="2.31342" interior="1">Burglary House X3</interior>
-	<interior x="228.167" y="1114.05" z="1080.99" angle="266.722" interior="5">Burglary House X4</interior>
-	<interior x="207.504" y="-108.396" z="1005.13" angle="1.97665" interior="15">Binco</interior>
-	<interior x="295.184" y="1474.73" z="1080.26" angle="1.03628" interior="15">4 Burglary houses</interior>
-	<interior x="-1417.89" y="932.448" z="1041.53" angle="0.7013" interior="15">Blood Bowl Stadium</interior>
-	<interior x="446.325" y="509.966" z="1001.42" angle="330.567" interior="12">Budget Inn Motel Room</interior>
-	<interior x="2306.63" y="-15.9107" z="26.7496" angle="292.753" interior="0">Palamino Bank</interior>
-	<interior x="2331.9" y="6.7816" z="26.5032" angle="100.236" interior="0">Palamino Diner</interior>
-	<interior x="663.059" y="-573.627" z="16.3359" angle="264.983" interior="0">Dillimore Gas Station</interior>
-	<interior x="-227.179" y="1401.16" z="27.7656" angle="266.769" interior="18">Lil' Probe Inn</interior>
-	<interior x="-688.15" y="942.083" z="13.6328" angle="177.657" interior="0">Torreno's Ranch</interior>
-	<interior x="-1916.13" y="714.862" z="46.5625" angle="152.284" interior="0">Zombotech - lobby area</interior>
-	<interior x="818.771" y="-1102.87" z="25.794" angle="91.1439" interior="0">Crypt in LS cemetery (temple)</interior>
-	<interior x="255.208" y="-59.6753" z="1.5703" angle="1.4645" interior="0">Blueberry Liquor Store</interior>
-	<interior x="446.779" y="1399.16" z="1084.3" angle="2.91665" interior="2">Pair of Burglary Houses</interior>
-	<interior x="318.589" y="1117.23" z="1083.88" angle="0.409738" interior="5">Crack Den</interior>
-	<interior x="227.756" y="1114.38" z="1080.99" angle="266.262" interior="5">Burglary House X11</interior>
-	<interior x="261.015" y="1286.43" z="1080.26" angle="1.97645" interior="4">Burglary House X12</interior>
-	<interior x="285.798431" y="-83.850967" z="1001.515625" angle="0" interior="4">Ammu-nation (version 3)</interior>
-	<interior x="458.254" y="-88.4449" z="999.555" angle="90.9641" interior="4">Jay's Diner</interior>
-	<interior x="-27.2373" y="-29.7102" z="1003.56" angle="2.93985" interior="4">24/7 (version 5)</interior>
-	<interior x="2135.2" y="-2276.28" z="20.6719" angle="318.59" interior="0">Warehouse 3</interior>
-	<interior x="302.063" y="302.719" z="999.148" angle="7.08363" interior="4">Michelle's Love Nest*</interior>
-	<interior x="24.0289" y="1342.1" z="1084.38" angle="9.30031" interior="10">Burglary House X14</interior>
-	<interior x="964.207" y="2157.8" z="1011.03" angle="176.645" interior="1">Sindacco Abatoir</interior>
-	<interior x="2548.48" y="2823.74" z="10.8203" angle="270.6" interior="0">K.A.C.C. Military Fuels Depot</interior>
-	<interior x="215.152" y="1874.06" z="13.1406" angle="177.554" interior="0">Area 69</interior>
-	<interior x="221.523" y="1142.04" z="1082.61" angle="4.09065" interior="4">Burglary House X13</interior>
-	<interior x="2324.49" y="-1147.82" z="1050.71" angle="5.63399" interior="12">Unused Safe House</interior>
-	<interior x="345.776" y="305.005" z="999.148" angle="232.223" interior="6">Millie's Bedroom</interior>
-	<interior x="411.778" y="-52.3721" z="1001.9" angle="357.244" interior="12">Barber Shop</interior>
-	<interior x="-1421.56" y="-663.826" z="1059.56" angle="170.934" interior="4">Dirtbike Stadium</interior>
-	<interior x="774.168" y="-47.8941" z="1000.59" angle="1.34057" interior="6">Cobra Gym</interior>
-	<interior x="247.06" y="64.527" z="1003.64" angle="1.96732" interior="6">Los Santos Police Department</interior>
-	<interior x="-1864.94" y="55.7325" z="1055.53" angle="85.8541" interior="14">Los Santos Airport</interior>
-	<interior x="-262.176" y="1456.62" z="1084.37" angle="82.459" interior="4">Burglary House X15</interior>
-	<interior x="22.861" y="1404.92" z="1084.43" angle="349.616" interior="5">Burglary House X16</interior>
-	<interior x="140.368" y="1367.88" z="1083.86" angle="349.237" interior="5">Burglary House X17</interior>
-	<interior x="1494.68" y="1305.57" z="1093.29" angle="357.801" interior="3">Bike School</interior>
-	<interior x="-1813.21" y="-58.012" z="1058.96" angle="335.32" interior="14">Francis International Airport</interior>
-	<interior x="-1401.07" y="1265.37" z="1039.87" angle="178.648" interior="16">Vice Stadium</interior>
-	<interior x="234.273" y="1065.48" z="1084.21" angle="2.18704" interior="6">Burglary House X18</interior>
-	<interior x="-68.5145" y="1353.85" z="1080.21" angle="3.5742" interior="6">Burglary House X19</interior>
-	<interior x="-2238.44" y="136.423" z="1035.41" angle="249.723" interior="6">Zero's RC Shop</interior>
-	<interior x="297.144" y="-109.87" z="1001.52" angle="20.2254" interior="6">Ammu-nation (version 4)</interior>
-	<interior x="316.503" y="-167.627" z="999.594" angle="10.3031" interior="6">Ammu-nation (version 5)</interior>
-	<interior x="-285.251" y="1471.2" z="1084.38" angle="85.6547" interior="15">Burglary House X20</interior>
-	<interior x="-26.8339" y="-55.5846" z="1003.55" angle="3.9528" interior="6">24/7 (version 6)</interior>
-	<interior x="442.129" y="-52.4782" z="999.717" angle="177.939" interior="6">Secret Valley Diner</interior>
-	<interior x="2182.2" y="1628.58" z="1043.87" angle="224.86" interior="2">Rosenberg's Office in Caligulas</interior>
-	<interior x="745.62" y="1438.25" z="1102.7" angle="333.607" interior="6">Fanny Batter's Whore House</interior>
-	<interior x="2807.33" y="-1172.5" z="1025.57" angle="0.240662" interior="8">Colonel Furhberger's</interior>
-	<interior x="365.807" y="-9.55842" z="1001.85" angle="343.924" interior="9">Cluckin' Bell</interior>
-	<interior x="2216.13" y="-1076.31" z="1050.48" angle="86.428" interior="1">The Camel's Toe Safehouse</interior>
-	<interior x="2267.96" y="1647.73" z="1084.23" angle="259.323" interior="1">Caligula's Roof</interior>
-	<interior x="2237.59" y="-1079" z="1049.02" angle="1.15724" interior="2">Old Venturas Strip Casino</interior>
-	<interior x="-2028.38" y="-104.996" z="1035.17" angle="138.446" interior="3">Driving School</interior>
-	<interior x="2365.03" y="-1133.48" z="1050.88" angle="355.564" interior="8">Verdant Bluffs Safehouse</interior>
-	<interior x="1168.51" y="1360.11" z="10.9293" angle="196.593" interior="0">Bike School</interior>
-	<interior x="315.454" y="976.597" z="1960.85" angle="359.637" interior="9">Andromada</interior>
-	<interior x="1893.07" y="1017.9" z="31.8828" angle="86.1044" interior="10">Four Dragons' Janitor's Office</interior>
-	<interior x="502.306" y="-69.7756" z="998.758" angle="198.99" interior="11">Bar</interior>
-	<interior x="-42.8519" y="1407.9" z="1084.43" angle="1.27441" interior="8">Burglary House X21</interior>
-	<interior x="2282.91" y="-1138.29" z="1050.9" angle="0.0" interior="11">Willowfield Safehouse</interior>
-	<interior x="83.3708" y="1324.02" z="1083.86" angle="357.755" interior="9">Burglary House X22</interior>
-	<interior x="261.106" y="1240" z="1084.26" angle="339.341" interior="9">Burglary House X23</interior>
-	<interior x="-1658.17" y="1215" z="7.25" angle="103.907" interior="0">Otto's Autos</interior>
-	<interior x="-1961.63" y="295.238" z="35.4688" angle="264.489" interior="0">Wang Cars</interior>
+    <interior x="2003.12" y="1015.19" z="33.008" angle="351.579" interior="11">Four Dragons' Managerial Suite</interior>
+    <interior x="772.28" y="-3.56022" z="1000.73" angle="14.051" interior="5">Ganton Gym</interior>
+    <interior x="973.508" y="-8.5647" z="1001.15" angle="90.1917" interior="3">Brothel</interior>
+    <interior x="961.931" y="-51.9071" z="1001.12" angle="95.5381" interior="3">Brothel2</interior>
+    <interior x="833.02" y="7.31122" z="1004.18" angle="96.4117" interior="3">Inside Track Betting</interior>
+    <interior x="1037.83" y="0.397" z="1001.28" angle="353.934" interior="3">Blastin' Fools Records</interior>
+    <interior x="1211.96" y="-27.5575" z="1000.95" angle="182.336" interior="3">The Big Spread Ranch</interior>
+    <interior x="1297.08" y="5.11675" z="1001.02" angle="188.649" interior="18">Warehouse 1</interior>
+    <interior x="1403.35" y="5.41779" z="1000.91" angle="180.188" interior="1">Warehouse 2</interior>
+    <interior x="1527.05" y="-12.0236" z="1002.1" angle="350.001" interior="3">B Dup's Apartment</interior>
+    <interior x="1523.51" y="-47.8211" z="1002.27" angle="262.704" interior="2">B Dup's Crack Palace</interior>
+    <interior x="612.219" y="-123.903" z="997.992" angle="266.57" interior="3">Wheel Arch Angels</interior>
+    <interior x="512.929" y="-11.6929" z="1001.57" angle="198.767" interior="3">OG Loc's House</interior>
+    <interior x="418.59" y="-82.8253" z="1001.8" angle="5.03423" interior="3">Barber Shop</interior>
+    <interior x="389.366" y="173.561" z="1008.38" angle="92.7918" interior="3">Planning Department</interior>
+    <interior x="288.848" y="168.799" z="1007.17" angle="4.74446" interior="3">Las Venturas Police Department</interior>
+    <interior x="207.054992" y="-138.804992" z="1003.507812" angle="0" interior="3">Pro-Laps</interior>
+    <interior x="-100.337" y="-23.3265" z="1000.72" angle="4.7445" interior="3">Sex Shop</interior>
+    <interior x="-203.663" y="-42.6308" z="1002.27" angle="339.364" interior="3">Las Venturas Tattoo parlor</interior>
+    <interior x="-203.438" y="-7.38362" z="1002.27" angle="324.951" interior="17">Lost San Fierro Tattoo parlor</interior>
+    <interior x="-25.8238" y="-186.517" z="1003.55" angle="1.29769" interior="17">24/7 (version 1)</interior>
+    <interior x="454.985" y="-107.255" z="999.438" angle="309.02" interior="5">Diner 1</interior>
+    <interior x="372.489" y="-131.892" z="1001.49" angle="4.43111" interior="5">Pizza Stack</interior>
+    <interior x="377.106" y="-191.677" z="1000.63" angle="4.76781" interior="17">Rusty Brown's Donuts</interior>
+    <interior x="315.816" y="-141.969" z="999.602" angle="1.77949" interior="7">Ammu-nation</interior>
+    <interior x="225.904" y="-7.89719" z="1002.21" angle="88.4287" interior="5">Victim</interior>
+    <interior x="611.354" y="-77.5574" z="998.0" angle="320.926" interior="2">Loco Low Co</interior>
+    <interior x="246.139" y="109.174" z="1003.22" angle="358.525" interior="10">San Fierro Police Department</interior>
+    <interior x="5.98657" y="-30.1167" z="1003.55" angle="351.655" interior="10">24/7 (version 2 - large)</interior>
+    <interior x="773.742" y="-76.6637" z="1000.65" angle="6.04484" interior="7">Below The Belt Gym (Las Venturas)</interior>
+    <interior x="621.453" y="-23.7289" z="1000.92" angle="15.6789" interior="1">Transfenders</interior>
+    <interior x="445.6" y="-6.9823" z="1000.73" angle="172.21" interior="1">World of Coq</interior>
+    <interior x="285.779" y="-40.0283" z="1001.52" angle="335.408" interior="1">Ammu-nation (version 2)</interior>
+    <interior x="203.777999" y="-48.492401" z="1001.804687" angle="0" interior="1">SubUrban</interior>
+    <interior x="245.231" y="304.763" z="999.148" angle="273.436" interior="1">Denise's Bedroom</interior>
+    <interior x="290.623" y="309.062" z="999.148" angle="89.9164" interior="3">Helena's Barn</interior>
+    <interior x="322.501" y="303.691" z="999.148" angle="8.1747" interior="5">Barbara's Love nest</interior>
+    <interior x="-2041.23" y="178.397" z="28.8465" angle="156.215" interior="1">San Fierro Garage</interior>
+    <interior x="-1402.66" y="106.39" z="1032.27" angle="105.136" interior="1">Oval Stadium</interior>
+    <interior x="-1403.01" y="-250.453" z="1043.53" angle="355.858" interior="7">8-Track Stadium</interior>
+    <interior x="1205.77" y="-11.4021" z="1000.92" angle="343.484" interior="2">The Pig Pen (strip club 2)</interior>
+    <interior x="2016.12" y="1017.15" z="996.875" angle="88.0055" interior="10">Four Dragons</interior>
+    <interior x="-741.849" y="493.004" z="1371.98" angle="71.7782" interior="1">Liberty City</interior>
+    <interior x="2467.05" y="-1698.12" z="1013.51" angle="90.9346" interior="2">Ryder's house</interior>
+    <interior x="2527.02" y="-1679.21" z="1015.5" angle="260.971" interior="1">Sweet's House</interior>
+    <interior x="-1129.89" y="1057.54" z="1346.41" angle="274.527" interior="10">RC Battlefield</interior>
+    <interior x="2496.13" y="-1693.84" z="1014.74" angle="180.862" interior="3">The Johnson House</interior>
+    <interior x="364.481" y="-74.0522" z="1001.51" angle="316.537" interior="10">Burger shot</interior>
+    <interior x="2233.94" y="1711.8" z="1011.63" angle="184.389" interior="1">Caligula's Casino</interior>
+    <interior x="268.371" y="304.936" z="999.148" angle="285.853" interior="2">Katie's Lovenest</interior>
+    <interior x="412.027" y="-21.2218" z="1001.8" angle="346.037" interior="2">Barber Shop 2 (Reece's)</interior>
+    <interior x="1.1853" y="-3.2387" z="999.428" angle="87.5718" interior="2">Angel Pine Trailer</interior>
+    <interior x="-30.5951" y="-89.7439" z="1003.55" angle="353.87" interior="18">24/7 (version 3)</interior>
+    <interior x="161.324" y="-94.5354" z="1001.8" angle="2.04037" interior="18">Zip</interior>
+    <interior x="-2637.07" y="1404.68" z="906.461" angle="62.8042" interior="3">The Pleasure Domes</interior>
+    <interior x="1262.63" y="-785.132" z="1091.91" angle="281.826" interior="5">Madd Dogg's Mansion</interior>
+    <interior x="2543.27" y="-1305.53" z="1025.07" angle="186.752" interior="2">Big Smoke's Crack Palace</interior>
+    <interior x="2350.76" y="-1180.8" z="1027.98" angle="96.2207" interior="5">Burning Desire Building</interior>
+    <interior x="-2159.28" y="641.21" z="1052.38" angle="143.198" interior="1">Wu-Zi Mu's</interior>
+    <interior x="420.367" y="2536.58" z="10.0" angle="89.304" interior="10">Abandoned AC tower</interior>
+    <interior x="256.905" y="-41.6537" z="1002.02" angle="85.8774" interior="14">Wardrobe/Changing room</interior>
+    <interior x="204.392" y="-166.811" z="1000.52" angle="1.61653" interior="14">Didier Sachs</interior>
+    <interior x="1133.069946" y="-9.573060" z="1000.679687" angle="0" interior="12">Casino (Redsands West)</interior>
+    <interior x="-1420.43" y="1616.92" z="1052.53" angle="159.126" interior="14">Kickstart Stadium</interior>
+    <interior x="493.423" y="-22.4514" z="1000.68" angle="2.53327" interior="17">Club</interior>
+    <interior x="1726.96" y="-1640.61" z="20.2243" angle="182.702" interior="18">Atrium</interior>
+    <interior x="-203.177" y="-25.7251" z="1002.27" angle="331.536" interior="16">Los Santos Tattoo Parlor</interior>
+    <interior x="2233.69" y="-1112.81" z="1050.88" angle="8.6483" interior="5">Safe House group 1</interior>
+    <interior x="2194.79" y="-1204.35" z="1049.02" angle="90.0" interior="6">Safe House group 2</interior>
+    <interior x="2318.05" y="-1024.85" z="1050.21" angle="351.927" interior="9">Safe House group 3</interior>
+    <interior x="2261.45" y="-1136.04" z="1050.63" angle="251.032" interior="10">Safe House group 4</interior>
+    <interior x="-959.639" y="1953.56" z="9.0" angle="183.352" interior="17">Sherman Dam</interior>
+    <interior x="-26.0117" y="-139.583" z="1003.55" angle="4.46015" interior="16">24/7 (version 4)</interior>
+    <interior x="2216.44" y="-1150.48" z="1025.8" angle="275.473" interior="15">Jefferson Motel</interior>
+    <interior x="1.59836" y="24.4675" z="1199.59" angle="359.157" interior="1">Jet Interior</interior>
+    <interior x="681.622" y="-451.893" z="-25.6172" angle="166.166" interior="1">The Welcome Pump</interior>
+    <interior x="235.077" y="1188.79" z="1080.26" angle="0.746772" interior="3">Burglary House X1</interior>
+    <interior x="224.322" y="1240.13" z="1082.14" angle="86.2876" interior="2">Burglary House X2</interior>
+    <interior x="223.374" y="1289.04" z="1082.13" angle="2.31342" interior="1">Burglary House X3</interior>
+    <interior x="228.167" y="1114.05" z="1080.99" angle="266.722" interior="5">Burglary House X4</interior>
+    <interior x="207.504" y="-108.396" z="1005.13" angle="1.97665" interior="15">Binco</interior>
+    <interior x="295.184" y="1474.73" z="1080.26" angle="1.03628" interior="15">4 Burglary houses</interior>
+    <interior x="-1417.89" y="932.448" z="1041.53" angle="0.7013" interior="15">Blood Bowl Stadium</interior>
+    <interior x="446.325" y="509.966" z="1001.42" angle="330.567" interior="12">Budget Inn Motel Room</interior>
+    <interior x="2306.63" y="-15.9107" z="26.7496" angle="292.753" interior="0">Palamino Bank</interior>
+    <interior x="2331.9" y="6.7816" z="26.5032" angle="100.236" interior="0">Palamino Diner</interior>
+    <interior x="663.059" y="-573.627" z="16.3359" angle="264.983" interior="0">Dillimore Gas Station</interior>
+    <interior x="-227.179" y="1401.16" z="27.7656" angle="266.769" interior="18">Lil' Probe Inn</interior>
+    <interior x="-688.15" y="942.083" z="13.6328" angle="177.657" interior="0">Torreno's Ranch</interior>
+    <interior x="-1916.13" y="714.862" z="46.5625" angle="152.284" interior="0">Zombotech - lobby area</interior>
+    <interior x="818.771" y="-1102.87" z="25.794" angle="91.1439" interior="0">Crypt in LS cemetery (temple)</interior>
+    <interior x="255.208" y="-59.6753" z="1.5703" angle="1.4645" interior="0">Blueberry Liquor Store</interior>
+    <interior x="446.779" y="1399.16" z="1084.3" angle="2.91665" interior="2">Pair of Burglary Houses</interior>
+    <interior x="318.589" y="1117.23" z="1083.88" angle="0.409738" interior="5">Crack Den</interior>
+    <interior x="227.756" y="1114.38" z="1080.99" angle="266.262" interior="5">Burglary House X11</interior>
+    <interior x="261.015" y="1286.43" z="1080.26" angle="1.97645" interior="4">Burglary House X12</interior>
+    <interior x="285.798431" y="-83.850967" z="1001.515625" angle="0" interior="4">Ammu-nation (version 3)</interior>
+    <interior x="458.254" y="-88.4449" z="999.555" angle="90.9641" interior="4">Jay's Diner</interior>
+    <interior x="-27.2373" y="-29.7102" z="1003.56" angle="2.93985" interior="4">24/7 (version 5)</interior>
+    <interior x="2135.2" y="-2276.28" z="20.6719" angle="318.59" interior="0">Warehouse 3</interior>
+    <interior x="302.063" y="302.719" z="999.148" angle="7.08363" interior="4">Michelle's Love Nest*</interior>
+    <interior x="24.0289" y="1342.1" z="1084.38" angle="9.30031" interior="10">Burglary House X14</interior>
+    <interior x="964.207" y="2157.8" z="1011.03" angle="176.645" interior="1">Sindacco Abatoir</interior>
+    <interior x="2548.48" y="2823.74" z="10.8203" angle="270.6" interior="0">K.A.C.C. Military Fuels Depot</interior>
+    <interior x="215.152" y="1874.06" z="13.1406" angle="177.554" interior="0">Area 69</interior>
+    <interior x="221.523" y="1142.04" z="1082.61" angle="4.09065" interior="4">Burglary House X13</interior>
+    <interior x="2324.49" y="-1147.82" z="1050.71" angle="5.63399" interior="12">Unused Safe House</interior>
+    <interior x="345.776" y="305.005" z="999.148" angle="232.223" interior="6">Millie's Bedroom</interior>
+    <interior x="411.778" y="-52.3721" z="1001.9" angle="357.244" interior="12">Barber Shop</interior>
+    <interior x="-1421.56" y="-663.826" z="1059.56" angle="170.934" interior="4">Dirtbike Stadium</interior>
+    <interior x="774.168" y="-47.8941" z="1000.59" angle="1.34057" interior="6">Cobra Gym</interior>
+    <interior x="247.06" y="64.527" z="1003.64" angle="1.96732" interior="6">Los Santos Police Department</interior>
+    <interior x="-1864.94" y="55.7325" z="1055.53" angle="85.8541" interior="14">Los Santos Airport</interior>
+    <interior x="-262.176" y="1456.62" z="1084.37" angle="82.459" interior="4">Burglary House X15</interior>
+    <interior x="22.861" y="1404.92" z="1084.43" angle="349.616" interior="5">Burglary House X16</interior>
+    <interior x="140.368" y="1367.88" z="1083.86" angle="349.237" interior="5">Burglary House X17</interior>
+    <interior x="1494.68" y="1305.57" z="1093.29" angle="357.801" interior="3">Bike School</interior>
+    <interior x="-1813.21" y="-58.012" z="1058.96" angle="335.32" interior="14">Francis International Airport</interior>
+    <interior x="-1401.07" y="1265.37" z="1039.87" angle="178.648" interior="16">Vice Stadium</interior>
+    <interior x="234.273" y="1065.48" z="1084.21" angle="2.18704" interior="6">Burglary House X18</interior>
+    <interior x="-68.5145" y="1353.85" z="1080.21" angle="3.5742" interior="6">Burglary House X19</interior>
+    <interior x="-2238.44" y="136.423" z="1035.41" angle="249.723" interior="6">Zero's RC Shop</interior>
+    <interior x="297.144" y="-109.87" z="1001.52" angle="20.2254" interior="6">Ammu-nation (version 4)</interior>
+    <interior x="316.503" y="-167.627" z="999.594" angle="10.3031" interior="6">Ammu-nation (version 5)</interior>
+    <interior x="-285.251" y="1471.2" z="1084.38" angle="85.6547" interior="15">Burglary House X20</interior>
+    <interior x="-26.8339" y="-55.5846" z="1003.55" angle="3.9528" interior="6">24/7 (version 6)</interior>
+    <interior x="442.129" y="-52.4782" z="999.717" angle="177.939" interior="6">Secret Valley Diner</interior>
+    <interior x="2182.2" y="1628.58" z="1043.87" angle="224.86" interior="2">Rosenberg's Office in Caligulas</interior>
+    <interior x="745.62" y="1438.25" z="1102.7" angle="333.607" interior="6">Fanny Batter's Whore House</interior>
+    <interior x="2807.33" y="-1172.5" z="1025.57" angle="0.240662" interior="8">Colonel Furhberger's</interior>
+    <interior x="365.807" y="-9.55842" z="1001.85" angle="343.924" interior="9">Cluckin' Bell</interior>
+    <interior x="2216.13" y="-1076.31" z="1050.48" angle="86.428" interior="1">The Camel's Toe Safehouse</interior>
+    <interior x="2267.96" y="1647.73" z="1084.23" angle="259.323" interior="1">Caligula's Roof</interior>
+    <interior x="2237.59" y="-1079" z="1049.02" angle="1.15724" interior="2">Old Venturas Strip Casino</interior>
+    <interior x="-2028.38" y="-104.996" z="1035.17" angle="138.446" interior="3">Driving School</interior>
+    <interior x="2365.03" y="-1133.48" z="1050.88" angle="355.564" interior="8">Verdant Bluffs Safehouse</interior>
+    <interior x="1168.51" y="1360.11" z="10.9293" angle="196.593" interior="0">Bike School</interior>
+    <interior x="315.454" y="976.597" z="1960.85" angle="359.637" interior="9">Andromada</interior>
+    <interior x="1893.07" y="1017.9" z="31.8828" angle="86.1044" interior="10">Four Dragons' Janitor's Office</interior>
+    <interior x="502.306" y="-69.7756" z="998.758" angle="198.99" interior="11">Bar</interior>
+    <interior x="-42.8519" y="1407.9" z="1084.43" angle="1.27441" interior="8">Burglary House X21</interior>
+    <interior x="2282.91" y="-1138.29" z="1050.9" angle="0.0" interior="11">Willowfield Safehouse</interior>
+    <interior x="83.3708" y="1324.02" z="1083.86" angle="357.755" interior="9">Burglary House X22</interior>
+    <interior x="261.106" y="1240" z="1084.26" angle="339.341" interior="9">Burglary House X23</interior>
+    <interior x="-1658.17" y="1215" z="7.25" angle="103.907" interior="0">Otto's Autos</interior>
+    <interior x="-1961.63" y="295.238" z="35.4688" angle="264.489" interior="0">Wang Cars</interior>
 </interiors>

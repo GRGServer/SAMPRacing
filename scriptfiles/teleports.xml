@@ -46,7 +46,7 @@
     </teleport>
     <teleport>
         <name>adminbase</name>
-		<adminsonly>true</adminsonly>
+        <adminsonly>true</adminsonly>
         <position>
             <x>257.89321</x>
             <y>2910.6533</y>
@@ -57,7 +57,7 @@
     </teleport>
     <teleport>
         <name>drift3</name>
-		<withvehicle>true</withvehicle>
+        <withvehicle>true</withvehicle>
         <position>
             <x>1131.3872</x>
             <y>1355.3939</y>
@@ -65,5 +65,5 @@
             <angle>108.24483</angle>
             <interior>0</interior>
         </position>
-	</teleport>
+    </teleport>
 </teleports>

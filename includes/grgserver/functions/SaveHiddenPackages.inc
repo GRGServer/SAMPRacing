@@ -20,5 +20,5 @@ SaveHiddenPackages()
     }
 
     XML_SaveDocument(xml);
-	XML_UnloadDocument(xml);
+    XML_UnloadDocument(xml);
 }

@@ -1,7 +1,7 @@
 Timer:UpdateVehicleStats()
 {
-	PlayerLoop(playerID)
-	{
-		UpdateVehicleStateForPlayer(playerID);
-	}
+    PlayerLoop(playerID)
+    {
+        UpdateVehicleStateForPlayer(playerID);
+    }
 }

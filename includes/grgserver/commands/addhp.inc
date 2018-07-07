@@ -17,5 +17,5 @@ PCMD:addhp[ISADMIN](playerID, params[], StringID:242("Add a new hidden package")
     }
 
     SendClientMessageEx(playerID, COLOR_ERROR, StringID:244("Limit of %d hidden packages reached!"), MAX_HIDDENPACKAGES);
-	return COMMAND_ERROR;
+    return COMMAND_ERROR;
 }

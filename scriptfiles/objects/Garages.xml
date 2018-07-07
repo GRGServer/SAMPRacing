@@ -3,12 +3,12 @@
     <object id="489" model="17950" interior="0" posX="166.73970" posY="-1335.271" posZ="71.255729" rotX="-1.899996" rotY="0.000000" rotZ="-179.0999" />
     <object id="490" model="17951" interior="0" posX="166.82514" posY="-1339.588" posZ="70.763221" rotX="-1.699999" rotY="-5.300000" rotZ="90.000007">
         <move posX="166.77841" posY="-1337.959" posZ="72.362709" rotX="-1.699999" rotY="91.399993" rotZ="91.800056" speed="1.000000" reset="10000" />
-		<doorobject>4</doorobject>
-	</object>
+        <doorobject>4</doorobject>
+    </object>
     <object id="491" model="8947" interior="0" posX="282.22299" posY="-1158.144" posZ="82.800842" rotX="0.000000" rotY="0.000000" rotZ="47.900001" />
     <object id="492" model="2885" interior="0" posX="290.93692" posY="-1166.438" posZ="84.249938" rotX="0.000000" rotY="0.000000" rotZ="47.799991">
         <move posX="284.41607" posY="-1160.524" posZ="83.880989" rotX="-92.39999" rotY="0.000000" rotZ="47.799991" speed="3.000000" reset="10000" />
-		<doorobject>5</doorobject>
+        <doorobject>5</doorobject>
    </object>
     <object id="493" model="19497" interior="0" posX="1533.9555" posY="-757.2286" posZ="81.222518" rotX="0.000000" rotY="0.000000" rotZ="43.900005" />
     <object id="494" model="19498" interior="0" posX="1533.9769" posY="-757.1510" posZ="81.234336" rotX="0.000000" rotY="0.000000" rotZ="43.300006" />
@@ -16,47 +16,47 @@
     <object id="496" model="19498" interior="0" posX="1548.5399" posY="-804.3585" posZ="73.382522" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
     <object id="497" model="2957" interior="0" posX="1538.5112" posY="-764.4251" posZ="80.466552" rotX="0.000000" rotY="0.000000" rotZ="133.89996">
         <move posX="1539.9543" posY="-763.0372" posZ="82.490127" rotX="76.499992" rotY="0.000000" rotZ="133.89996" speed="1.000000" reset="10000" />
-		<doorobject>6</doorobject>
+        <doorobject>6</doorobject>
    </object>
     <object id="498" model="1502" interior="0" posX="1541.7669" posY="-757.2586" posZ="79.526283" rotX="0.000000" rotY="0.000000" rotZ="44.599994" />
     <object id="499" model="2957" interior="0" posX="1546.8327" posY="-812.2130" posZ="72.725776" rotX="0.000000" rotY="0.000000" rotZ="-89.99996">
         <move posX="1549.0264" posY="-812.2130" posZ="74.886238" rotX="-69.99998" rotY="0.000000" rotZ="-89.99996" speed="1.000000" reset="10000" />
-		<doorobject>7</doorobject>
-	</object>
+        <doorobject>7</doorobject>
+    </object>
     <object id="500" model="19493" interior="0" posX="-2624.259" posY="-176.1392" posZ="7.995936" rotX="0.000000" rotY="0.000000" rotZ="-179.6000" />
     <object id="501" model="19494" interior="0" posX="-2624.115" posY="-175.8232" posZ="8.035941" rotX="0.000000" rotY="0.000000" rotZ="-179.8999" />
     <object id="502" model="2957" interior="0" posX="-2619.688" posY="-178.0038" posZ="4.335937" rotX="0.000000" rotY="0.000000" rotZ="90.499992">
         <move posX="-2622.169" posY="-178.0256" posZ="6.606364" rotX="-64.29999" rotY="0.000000" rotZ="90.499992" speed="1.000000" reset="10000" />
-		<doorobject>8</doorobject>
-	</object>
+        <doorobject>8</doorobject>
+    </object>
     <object id="503" model="19495" interior="0" posX="-2624.543" posY="-156.3740" posZ="7.735938" rotX="0.000000" rotY="0.000000" rotZ="178.69995" />
     <object id="504" model="19496" interior="0" posX="-2624.492" posY="-156.1343" posZ="7.735931" rotX="0.000000" rotY="0.000000" rotZ="177.89999" />
     <object id="505" model="2957" interior="0" posX="-2619.749" posY="-158.9974" posZ="4.335937" rotX="0.000000" rotY="0.000000" rotZ="-90.79998">
         <move posX="-2622.058" posY="-158.9652" posZ="5.921838" rotX="86.900009" rotY="0.000000" rotZ="-90.79998" speed="1.000000" reset="10000" />
-		<doorobject>9</doorobject>
+        <doorobject>9</doorobject>
    </object>
     <object id="506" model="19494" interior="0" posX="-2624.153" posY="-137.4934" posZ="8.035941" rotX="0.000000" rotY="0.000000" rotZ="179.90000" />
     <object id="507" model="19493" interior="0" posX="-2624.258" posY="-137.6183" posZ="7.995936" rotX="0.000000" rotY="0.000000" rotZ="-179.6000" />
     <object id="508" model="2957" interior="0" posX="-2620.025" posY="-139.5254" posZ="4.335937" rotX="0.000000" rotY="0.000000" rotZ="90.499992">
         <move posX="-2620.833" posY="-139.5325" posZ="6.240804" rotX="-91.09999" rotY="0.000000" rotZ="90.499992" speed="1.000000" reset="10000" />
-		<doorobject>10</doorobject>
+        <doorobject>10</doorobject>
    </object>
     <object id="509" model="19493" interior="0" posX="-2726.540" posY="-169.4203" posZ="8.009690" rotX="0.000000" rotY="0.000000" rotZ="-177.6000" />
     <object id="510" model="19494" interior="0" posX="-2726.314" posY="-169.2442" posZ="8.048128" rotX="0.000000" rotY="0.000000" rotZ="179.70002" />
     <object id="511" model="2957" interior="0" posX="-2721.939" posY="-171.2054" posZ="4.335937" rotX="0.000000" rotY="0.000000" rotZ="-88.20000">
         <move posX="-2723.780" posY="-171.2633" posZ="6.110804" rotX="82.799995" rotY="0.000000" rotZ="-88.20000" speed="1.000000" reset="10000" />
-		<doorobject>11</doorobject>
-	</object>
+        <doorobject>11</doorobject>
+    </object>
     <object id="512" model="19496" interior="0" posX="-2726.297" posY="-149.9824" posZ="7.710326" rotX="0.000000" rotY="0.000000" rotZ="-179.9999" />
     <object id="513" model="19495" interior="0" posX="-2726.585" posY="-149.8994" posZ="7.700323" rotX="0.000000" rotY="0.000000" rotZ="-179.6999" />
     <object id="514" model="2957" interior="0" posX="-2721.785" posY="-152.4275" posZ="4.915938" rotX="0.000000" rotY="0.000000" rotZ="-89.80000">
         <move posX="-2723.824" posY="-152.4346" posZ="5.821317" rotX="92.400009" rotY="0.000000" rotZ="-89.80000" speed="1.000000" reset="10000" />
-		<doorobject>12</doorobject>
+        <doorobject>12</doorobject>
    </object>
     <object id="515" model="19494" interior="0" posX="-2686.521" posY="-111.3991" posZ="8.028123" rotX="0.000000" rotY="0.000000" rotZ="0.300012" />
     <object id="516" model="19493" interior="0" posX="-2686.431" posY="-111.5319" posZ="7.978120" rotX="0.000000" rotY="0.000000" rotZ="0.000000" />
     <object id="517" model="2957" interior="0" posX="-2690.964" posY="-109.6005" posZ="4.335937" rotX="0.000000" rotY="0.000000" rotZ="91.400016">
         <move posX="-2688.494" posY="-109.5401" posZ="6.408388" rotX="71.099998" rotY="0.000000" rotZ="91.400016" speed="1.000000" reset="10000" />
-		<doorobject>13</doorobject>
-	</object>
+        <doorobject>13</doorobject>
+    </object>
 </objects>

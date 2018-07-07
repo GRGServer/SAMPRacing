@@ -1,9 +1,9 @@
 DisqualifyRacePlayer(playerID)
 {
-	FormatNew:string[100]("~r~%s", LanguageString(playerID, StringID:182("You got disqualified from the race!")));
-	GameTextForPlayer(playerID, string, 3000, 3);
+    FormatNew:string[100]("~r~%s", LanguageString(playerID, StringID:182("You got disqualified from the race!")));
+    GameTextForPlayer(playerID, string, 3000, 3);
 
-	EndRace(playerID);
+    EndRace(playerID);
 
-	KillTimer(PVar:playerID[RACE_DISQUALIFY_TIMER]);
+    KillTimer(PVar:playerID[RACE_DISQUALIFY_TIMER]);
 }

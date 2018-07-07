@@ -1,51 +1,51 @@
 ShowDialog:ConfirmGarageBuy(playerID)
 {
-	new pickupID = GetPlayerPickup(playerID);
-	if (pickupID == -1)
-	{
-		return;
-	}
+    new pickupID = GetPlayerPickup(playerID);
+    if (pickupID == -1)
+    {
+        return;
+    }
 
-	new garageNumber = g_pickups[pickupID][E_PICKUP_LINKID];
+    new garageNumber = g_pickups[pickupID][E_PICKUP_LINKID];
 
-	new messageString[256];
-	new string[100];
-	strcat(messageString, LanguageString(playerID, StringID:137("Are you sure to buy this garage?")));
-	strcat(messageString, "\n\n");
-	Format:string(LanguageString(playerID, StringID:83("Price: $%d")), g_garages[garageNumber][E_GARAGE_PRICE]);
-	strcat(messageString, string);
+    new messageString[256];
+    new string[100];
+    strcat(messageString, LanguageString(playerID, StringID:137("Are you sure to buy this garage?")));
+    strcat(messageString, "\n\n");
+    Format:string(LanguageString(playerID, StringID:83("Price: $%d")), g_garages[garageNumber][E_GARAGE_PRICE]);
+    strcat(messageString, string);
 
-	CreateDialog(playerID, "ConfirmGarageBuy", DIALOG_STYLE_MSGBOX, LanguageString(playerID, StringID:139("Buy garage")), messageString, LanguageString(playerID, StringID:40("OK")), LanguageString(playerID, StringID:4("Cancel")));
+    CreateDialog(playerID, "ConfirmGarageBuy", DIALOG_STYLE_MSGBOX, LanguageString(playerID, StringID:139("Buy garage")), messageString, LanguageString(playerID, StringID:40("OK")), LanguageString(playerID, StringID:4("Cancel")));
 }
 
 DialogResponse:ConfirmGarageBuy(playerID, response, listItem, inputText[])
 {
-	if (!response)
-	{
-		return;
-	}
+    if (!response)
+    {
+        return;
+    }
 
-	new pickupID = GetPlayerPickup(playerID);
-	if (pickupID == -1)
-	{
-		return;
-	}
+    new pickupID = GetPlayerPickup(playerID);
+    if (pickupID == -1)
+    {
+        return;
+    }
 
-	new garageNumber = g_pickups[pickupID][E_PICKUP_LINKID];
-	if (GetPlayerMoney(playerID) < g_garages[garageNumber][E_GARAGE_PRICE])
-	{
-		GameTextForPlayer(playerID, LanguageString(playerID, StringID:80("You do not have enough money!")), 3000, 3);
-	}
-	else
-	{
-		g_garages[garageNumber][E_GARAGE_USERID] = PVar:playerID[USERID];
-		UpdateGarage(garageNumber);
+    new garageNumber = g_pickups[pickupID][E_PICKUP_LINKID];
+    if (GetPlayerMoney(playerID) < g_garages[garageNumber][E_GARAGE_PRICE])
+    {
+        GameTextForPlayer(playerID, LanguageString(playerID, StringID:80("You do not have enough money!")), 3000, 3);
+    }
+    else
+    {
+        g_garages[garageNumber][E_GARAGE_USERID] = PVar:playerID[USERID];
+        UpdateGarage(garageNumber);
 
-		SaveGarage(garageNumber);
+        SaveGarage(garageNumber);
 
-		UpdateMapIcons(playerID);
+        UpdateMapIcons(playerID);
 
-		PlayAudioFileForPlayer(playerID, AUDIOFILE_GARAGEBOUGHT);
-		GameTextForPlayer(playerID, LanguageString(playerID, StringID:140("Garage bought")), 5000, 1);
-	}
+        PlayAudioFileForPlayer(playerID, AUDIOFILE_GARAGEBOUGHT);
+        GameTextForPlayer(playerID, LanguageString(playerID, StringID:140("Garage bought")), 5000, 1);
+    }
 }

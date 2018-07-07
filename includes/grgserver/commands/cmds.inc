@@ -1,6 +1,6 @@
 CMD:cmds(playerID, params[], StringID:123("List all available commands"))
 {
-	ShowDialog:CommandList(playerID);
+    ShowDialog:CommandList(playerID);
 
-	return COMMAND_OK;
+    return COMMAND_OK;
 }

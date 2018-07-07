@@ -1,12 +1,12 @@
 <pickups>
-	<!-- hospitals -->
-	<pickup type="hospital" x="1606.99" y="1818.3" z="10.8203"/>
-	<pickup type="hospital" x="-2656.75" y="697.086" z="27.9336"/>
-	<pickup type="hospital" x="1172.65" y="-1323.62" z="14.9248"/>
-	<pickup type="hospital" x="-320.922" y="1048.86" z="20.3403"/>
-	<pickup type="hospital" x="2034.1" y="-1404.52" z="17.2574"/>
-	<pickup type="hospital" x="-2654.97" y="635.803" z="14.4531"/>
-	<pickup type="hospital" x="-1753.98" y="961.89" z="24.8828"/>
-	<pickup type="hospital" x="1656.41" y="-5648.94" z="12.1676"/>
-	<pickup type="hospital" x="1906.18" y="-3405.28" z="12.594"/>
+    <!-- hospitals -->
+    <pickup type="hospital" x="1606.99" y="1818.3" z="10.8203"/>
+    <pickup type="hospital" x="-2656.75" y="697.086" z="27.9336"/>
+    <pickup type="hospital" x="1172.65" y="-1323.62" z="14.9248"/>
+    <pickup type="hospital" x="-320.922" y="1048.86" z="20.3403"/>
+    <pickup type="hospital" x="2034.1" y="-1404.52" z="17.2574"/>
+    <pickup type="hospital" x="-2654.97" y="635.803" z="14.4531"/>
+    <pickup type="hospital" x="-1753.98" y="961.89" z="24.8828"/>
+    <pickup type="hospital" x="1656.41" y="-5648.94" z="12.1676"/>
+    <pickup type="hospital" x="1906.18" y="-3405.28" z="12.594"/>
 </pickups>

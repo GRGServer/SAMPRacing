@@ -1,43 +1,43 @@
 <commandaliases>
-	<!-- Shortcuts -->
-	<alias>
-		<name>mvs</name>
-		<command>mobilevehicleshop</command>
-	</alias>
-	<alias>
-		<name>v</name>
-		<command>spawnvehicle</command>
-	</alias>
+    <!-- Shortcuts -->
+    <alias>
+        <name>mvs</name>
+        <command>mobilevehicleshop</command>
+    </alias>
+    <alias>
+        <name>v</name>
+        <command>spawnvehicle</command>
+    </alias>
 
-	<!-- Teleport aliases -->
-	<alias>
-		<name>drift1</name>
-		<command>tp</command>
-		<parameters>drift1</parameters>
-	</alias>
-	<alias>
-		<name>drift2</name>
-		<command>tp</command>
-		<parameters>drift2</parameters>
-	</alias>
-	<alias>
-		<name>drift3</name>
-		<command>tp</command>
-		<parameters>drift3</parameters>
-	</alias>
-	<alias>
-		<name>adminbase</name>
-		<command>tp</command>
-		<parameters>adminbase</parameters>
-	</alias>
-	<alias>
-		<name>stunt1</name>
-		<command>tp</command>
-		<parameters>stunt1</parameters>
-	</alias>
-	<alias>
-		<name>stunt2</name>
-		<command>tp</command>
-		<parameters>stunt2</parameters>
-	</alias>
+    <!-- Teleport aliases -->
+    <alias>
+        <name>drift1</name>
+        <command>tp</command>
+        <parameters>drift1</parameters>
+    </alias>
+    <alias>
+        <name>drift2</name>
+        <command>tp</command>
+        <parameters>drift2</parameters>
+    </alias>
+    <alias>
+        <name>drift3</name>
+        <command>tp</command>
+        <parameters>drift3</parameters>
+    </alias>
+    <alias>
+        <name>adminbase</name>
+        <command>tp</command>
+        <parameters>adminbase</parameters>
+    </alias>
+    <alias>
+        <name>stunt1</name>
+        <command>tp</command>
+        <parameters>stunt1</parameters>
+    </alias>
+    <alias>
+        <name>stunt2</name>
+        <command>tp</command>
+        <parameters>stunt2</parameters>
+    </alias>
 </commandaliases>

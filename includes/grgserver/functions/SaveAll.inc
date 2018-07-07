@@ -1,14 +1,14 @@
 SaveAll()
 {
-	// Players
-	LoggedInPlayers(playerID)
-	{
-		SavePlayer(playerID);
-	}
+    // Players
+    LoggedInPlayers(playerID)
+    {
+        SavePlayer(playerID);
+    }
 
-	// Vehicles
-	Count1(vehicleID, MAX_VEHICLES)
-	{
-		SaveVehicle(vehicleID);
-	}
+    // Vehicles
+    Count1(vehicleID, MAX_VEHICLES)
+    {
+        SaveVehicle(vehicleID);
+    }
 }

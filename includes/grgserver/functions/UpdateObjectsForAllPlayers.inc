@@ -1,7 +1,7 @@
 UpdateObjectsForAllPlayers()
 {
-	PlayerLoop(playerID)
-	{
-		Streamer_Update(playerID);
-	}
+    PlayerLoop(playerID)
+    {
+        Streamer_Update(playerID);
+    }
 }

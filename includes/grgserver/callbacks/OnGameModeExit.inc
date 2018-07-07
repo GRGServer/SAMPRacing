@@ -1,15 +1,15 @@
 public OnGameModeExit()
 {
-	SaveAll();
+    SaveAll();
 
-	// Kick all NPCs
-	PlayerLoop(playerID)
-	{
-		if (IsPlayerNPC(playerID))
-		{
-			Kick(playerID);
-		}
-	}
+    // Kick all NPCs
+    PlayerLoop(playerID)
+    {
+        if (IsPlayerNPC(playerID))
+        {
+            Kick(playerID);
+        }
+    }
 
-	mysql_close();
+    mysql_close();
 }
