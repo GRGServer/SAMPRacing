@@ -139,7 +139,6 @@
 #include <grgserver/functions/explode.inc>
 #include <grgserver/functions/str_replace.inc>
 #include <grgserver/functions/SaveHiddenPackages.inc>
-#include <grgserver/functions/GetDynamicPickupPos.inc>
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>

@@ -9,7 +9,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 
     new pickupID = GetClosestPickup(posX, posY, posZ, PICKUPTYPE_HOSPITAL);
 
-    GetDynamicPickupPos(pickupID, posX, posY, posZ);
+    Streamer_GetItemPos(STREAMER_TYPE_PICKUP, pickupID, posX, posY, posZ);
 
     SetPlayerSpawn(playerid, SPAWNTYPE_DEFAULT, posX, posY, posZ);
 }
