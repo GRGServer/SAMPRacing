@@ -6,7 +6,7 @@ EnterGarage(playerID, garageNumber)
     if (vehicleID && VehicleProperty:vehicleID[SAVEID])
     {
         MySQLFormat("UPDATE `vehicles` SET `garageId` = %d WHERE `id` = %d", g_garages[garageNumber][E_GARAGE_ID], VehicleProperty:vehicleID[SAVEID]);
-        mysql_query(g_mysql, g_sqlQuery);
+        mysql_pquery(g_mysql, g_sqlQuery);
 
         PVar:playerID[GARAGE_VEHICLE_SAVEID] = VehicleProperty:vehicleID[SAVEID] - 1;
 
