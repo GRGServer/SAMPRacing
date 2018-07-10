@@ -59,7 +59,6 @@
 #include <grgserver/functions/FindNextVehicleModel.inc>
 #include <grgserver/functions/GetClosestPickup.inc>
 #include <grgserver/functions/GetColor.inc>
-#include <grgserver/functions/GetDistanceBetweenPoints.inc>
 #include <grgserver/functions/GetGameTextKeyByID.inc>
 #include <grgserver/functions/GetLanguageByID.inc>
 #include <grgserver/functions/GetLanguageID.inc>
@@ -140,6 +139,7 @@
 #include <grgserver/functions/explode.inc>
 #include <grgserver/functions/str_replace.inc>
 #include <grgserver/functions/SaveHiddenPackages.inc>
+#include <grgserver/functions/GetDynamicPickupPos.inc>
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>
@@ -167,7 +167,6 @@
 #include <grgserver/callbacks/OnPlayerHiddenPackagesLoaded.inc>
 #include <grgserver/callbacks/OnPlayerKeyStateChange.inc>
 #include <grgserver/callbacks/OnPlayerLogin.inc>
-#include <grgserver/callbacks/OnPlayerPickUpPickup.inc>
 #include <grgserver/callbacks/OnPlayerRegistered.inc>
 #include <grgserver/callbacks/OnPlayerRegisteredCheck.inc>
 #include <grgserver/callbacks/OnPlayerSelectDynamicObject.inc>
@@ -181,6 +180,7 @@
 #include <grgserver/callbacks/OnVehiclePaintjob.inc>
 #include <grgserver/callbacks/OnVehicleRespray.inc>
 #include <grgserver/callbacks/OnVehicleSpawn.inc>
+#include <grgserver/callbacks/OnPlayerPickUpDynamicPickup.inc>
 
 // dialogs
 #include <grgserver/dialogs/AddObject.inc>

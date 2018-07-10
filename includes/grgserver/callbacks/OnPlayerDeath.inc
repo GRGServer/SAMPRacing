@@ -9,5 +9,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 
     new pickupID = GetClosestPickup(posX, posY, posZ, PICKUPTYPE_HOSPITAL);
 
-    SetPlayerSpawn(playerid, SPAWNTYPE_DEFAULT, g_pickups[pickupID][E_PICKUP_POSX], g_pickups[pickupID][E_PICKUP_POSY], g_pickups[pickupID][E_PICKUP_POSZ]);
+    GetDynamicPickupPos(pickupID, posX, posY, posZ);
+
+    SetPlayerSpawn(playerid, SPAWNTYPE_DEFAULT, posX, posY, posZ);
 }

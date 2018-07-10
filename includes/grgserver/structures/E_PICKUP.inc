@@ -2,8 +2,5 @@ enum E_PICKUP
 {
     E_PICKUP_ID,
     E_PICKUP_LINKID,
-    Float:E_PICKUP_POSX,
-    Float:E_PICKUP_POSY,
-    Float:E_PICKUP_POSZ,
     E_PICKUP_TYPE
 }

@@ -25,16 +25,13 @@ AddPickup(type, Float:posX, Float:posY, Float:posZ, linkID)
         }
     }
 
-    new pickupID = CreatePickup(modelID, 1, posX, posY, posZ);
+    new pickupID = CreateDynamicPickup(modelID, 1, posX, posY, posZ);
     if (pickupID == -1)
     {
         printf("Unable to add pickup (Limit reached?)");
         return -1;
     }
 
-    g_pickups[pickupID][E_PICKUP_POSX] = posX;
-    g_pickups[pickupID][E_PICKUP_POSY] = posY;
-    g_pickups[pickupID][E_PICKUP_POSZ] = posZ;
     g_pickups[pickupID][E_PICKUP_TYPE] = type;
     g_pickups[pickupID][E_PICKUP_LINKID] = linkID;
 

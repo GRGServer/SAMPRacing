@@ -1,4 +1,4 @@
-public OnPlayerPickUpPickup(playerid, pickupid)
+public OnPlayerPickUpDynamicPickup(playerid, pickupid)
 {
     PickupEvent(playerid, pickupid, PICKUPEVENT_PICKUP);
 

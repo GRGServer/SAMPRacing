@@ -4,7 +4,7 @@ DestroyPickupsOfType(type)
     {
         if (g_pickups[pickupID][E_PICKUP_TYPE] == type)
         {
-            DestroyPickup(pickupID);
+            DestroyDynamicPickup(pickupID);
 
             Foreach(field, g_pickups[])
             {

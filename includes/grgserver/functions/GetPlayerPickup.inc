@@ -1,8 +1,12 @@
 GetPlayerPickup(playerID)
 {
-    Count(pickupID, MAX_PICKUPS)
+    Count(pickupID, MAX_DYNAMIC_PICKUPS)
     {
-        if (IsPlayerInRangeOfPoint(playerID, 1.3, g_pickups[pickupID][E_PICKUP_POSX], g_pickups[pickupID][E_PICKUP_POSY], g_pickups[pickupID][E_PICKUP_POSZ]))
+        new Float:posX;
+        new Float:posY;
+        new Float:posZ;
+        GetDynamicPickupPos(pickupID, posX, posY, posZ);
+        if (IsPlayerInRangeOfPoint(playerID, 1.3, posX, posY, posZ))
         {
             return pickupID;
         }

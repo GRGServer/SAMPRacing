@@ -50,6 +50,7 @@
 #define MAX_COMMANDALIASES              50
 #define MAX_COMMANDS                    50
 #define MAX_DYNAMIC_OBJECTS             1000
+#define MAX_DYNAMIC_PICKUPS             4096
 #define MAX_FUNCTION_NAME               32
 #define MAX_GARAGES                     150
 #define MAX_HIDDENPACKAGES              100
