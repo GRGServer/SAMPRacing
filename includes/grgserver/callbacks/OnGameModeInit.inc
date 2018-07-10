@@ -5,8 +5,7 @@ public OnGameModeInit()
     g_maxPlayers = GetServerVarAsInt("maxplayers");
 
     print("Connecting to MySQL server");
-    mysql_log(MYSQL_LOGLEVEL);
-    g_mysql = mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_DATABASE, MYSQL_PASSWORD);
+    g_mysql = mysql_connect_file();
 
     ReloadLanguageStrings();
     ReloadObjectModels();

@@ -117,6 +117,11 @@ exec { "compile_gamemode":
   require => Package["libc6-i386"],
 }
 
+file { "/opt/samp/mysql.ini":
+  source  => "/opt/samp/vagrant/mysql.ini",
+  replace => false,
+}
+
 service { "samp":
   ensure  => running,
   enable  => true,
@@ -124,6 +129,7 @@ service { "samp":
     File[
       "/etc/systemd/system/samp.service",
       "/opt/samp/server.cfg",
+      "/opt/samp/mysql.ini",
     ],
     Exec["reload-systemd"],
     Mysql::Db["samp"],
