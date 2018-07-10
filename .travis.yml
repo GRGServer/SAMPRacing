@@ -1,9 +1,0 @@
-language: java
-before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq libc6-i386
-before_script:
-  - cp includes/grgserver/localconfig.sample.inc includes/grgserver/localconfig.inc
-script:
-  - tools/compile-tools.sh
-  - tools/compile-gamemode.sh

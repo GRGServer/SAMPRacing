@@ -1,0 +1,7 @@
+before_script:
+  - apt-get update -qq && apt-get install -y -qq libc6-i386
+  - cp includes/grgserver/localconfig.sample.inc includes/grgserver/localconfig.inc
+
+build:
+  script:
+    - tools/compile-gamemode.sh
