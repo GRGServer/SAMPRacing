@@ -27,6 +27,7 @@
 
 // Global variables
 #include <grgserver/globals.inc>
+#include <grgserver/commands.inc>
 #include <grgserver/forwards.inc>
 
 // functions
@@ -74,7 +75,6 @@
 #include <grgserver/functions/IsLoggedIn.inc>
 #include <grgserver/functions/IsValidNumberPlateVehicle.inc>
 #include <grgserver/functions/LanguageString.inc>
-#include <grgserver/functions/LoadCommands.inc>
 #include <grgserver/functions/LoadHiddenPackages.inc>
 #include <grgserver/functions/LoadObjectsFromFile.inc>
 #include <grgserver/functions/LoadPlayer.inc>

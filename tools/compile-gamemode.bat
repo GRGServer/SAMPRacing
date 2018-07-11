@@ -7,6 +7,7 @@ call :normalise_server_path "%SERVERPATH%"
 
 set PAWNCC=%TOOLSPATH%pawn\pawncc.exe
 
+python %TOOLSPATH%update-command-list.py
 python %TOOLSPATH%update-includes.py
 
 %PAWNCC% %SERVERPATH%gamemodes\grgserver.pwn -i%SERVERPATH%includes -; -(

@@ -10,7 +10,6 @@
 #include <md-sort>
 #include <a_mysql>
 #include <progressbars>
-#include <regex>
 #include <sscanf>
 #include <streamer>
 #include <whirlpool>

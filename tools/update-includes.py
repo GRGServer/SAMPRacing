@@ -45,6 +45,7 @@ def main():
 
     addGroup("Global variables")
     addInclude("globals.inc")
+    addInclude("commands.inc")
     addInclude("forwards.inc")
 
     addDirectory("functions")

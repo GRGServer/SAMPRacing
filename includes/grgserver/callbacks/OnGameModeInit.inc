@@ -24,7 +24,6 @@ public OnGameModeInit()
     ReloadNPCs();
 
     LoadHiddenPackages();
-    LoadCommands();
 
     g_textDrawClock = TextDrawCreate(547, 25, "_");
     TextDrawSetShadow(g_textDrawClock, 0);
