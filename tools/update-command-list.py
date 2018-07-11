@@ -22,9 +22,14 @@ for item in os.listdir(commandsPath):
             if match is None:
                 continue
 
+            pvar = match.group("pvar")
+
+            if pvar is None:
+                pvar = ""
+
             commands.append({
                 "name": match.group("name"),
-                "pvar": match.group("pvar"),
+                "pvar": pvar,
                 "stringid": match.group("stringid")
             })
 
