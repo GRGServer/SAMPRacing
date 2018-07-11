@@ -2,7 +2,7 @@ UpdateGarage(garageNumber)
 {
     if (g_garages[garageNumber][E_GARAGE_PICKUP_ID] != -1)
     {
-        DestroyPickup(g_garages[garageNumber][E_GARAGE_PICKUP_ID]);
+        DestroyDynamicPickup(g_garages[garageNumber][E_GARAGE_PICKUP_ID]);
     }
 
     new pickupType;
