@@ -80,6 +80,34 @@ PickupEvent(playerID, pickupID, eventType)
                 }
             }
         }
+        case PICKUPTYPE_TUNING_GARAGE:
+        {
+            switch (eventType)
+            {
+                case PICKUPEVENT_KEY:
+                {
+                    switch (GetPlayerVehicleSeat(playerID))
+                    {
+                        case -1:// Not in a vehicle
+                        {
+                            GameTextForPlayer(playerID, LanguageString(playerID, StringID:14("You are not in a vehicle!")), 3000, 3);
+                        }
+                        case 0:// Is the driver of the vehicle
+                        {
+                            EnterTuningGarage(playerID, linkID);
+                        }
+                        default:// Any other seat (Not the driver)
+                        {
+                            GameTextForPlayer(playerID, LanguageString(playerID, StringID:19("You are not the driver of this vehicle!")), 3000, 3);
+                        }
+                    }
+                }
+                case PICKUPEVENT_PICKUP:
+                {
+                    SendClientMessageEx(playerID, COLOR_INFO, StringID:134("Press %s to use this pickup"), GetGameTextKeyByID(KEY_PICKUP_USE, false));
+                }
+            }
+        }
         case PICKUPTYPE_VEHICLESHOP:
         {
             EnterVehicleShop(playerID, linkID, false);

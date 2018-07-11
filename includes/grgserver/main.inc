@@ -35,7 +35,6 @@
 #include <grgserver/functions/AddPickup.inc>
 #include <grgserver/functions/CheckGarage.inc>
 #include <grgserver/functions/CheckHiddenPackages.inc>
-#include <grgserver/functions/CheckTuningGarage.inc>
 #include <grgserver/functions/CmdUsageMsg.inc>
 #include <grgserver/functions/ConcatString.inc>
 #include <grgserver/functions/ConnectNPCEx.inc>
@@ -139,6 +138,7 @@
 #include <grgserver/functions/explode.inc>
 #include <grgserver/functions/str_replace.inc>
 #include <grgserver/functions/SaveHiddenPackages.inc>
+#include <grgserver/functions/UpdateTuningGarages.inc>
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>

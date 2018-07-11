@@ -10,7 +10,6 @@ SaveTuningGarages()
             new XMLNode:tuningGarageNode = XML_CreateNode(rootNode, "tuninggarage");
 
             XML_SetIntAttribute(tuningGarageNode, "id", g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ID]);
-            XML_SetFloatAttribute(tuningGarageNode, "enterrange", g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ENTERRANGE]);
 
             new XMLNode:vehicleNode = XML_CreateNode(tuningGarageNode, "vehicle");
 

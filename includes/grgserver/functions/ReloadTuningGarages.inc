@@ -50,13 +50,14 @@ ReloadTuningGarages()
         g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSZ] = XML_GetFloatAttribute(cameraNode, "z");
 
         g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ID] = tuningGarageID;
-        g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ENTERRANGE] = XML_GetIntAttribute(tuningGarageNode, "enterrange");
 
         tuningGarageNumber++;
 
         tuningGarageNode = XML_GetNextSibling(tuningGarageNode, "tuninggarage");
     }
     XML_UnloadDocument(xml);
+
+    UpdateTuningGarages();
 
     printf("  %d tuning garages loaded", tuningGarageNumber);
 }

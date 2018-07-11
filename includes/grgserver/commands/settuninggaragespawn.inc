@@ -1,10 +1,9 @@
 PCMD:settuninggaragespawn[ISADMIN](playerID, params[], StringID:237("Set the spawn position of a tuning garage"))
 {
     new tuningGarageID;
-    new Float:enterRange;
-    if (sscanf(params, "df", tuningGarageID, enterRange))
+    if (sscanf(params, "df", tuningGarageID))
     {
-        CmdUsageMsg(playerID, "settuninggaragespawn", "TuningGarageID", "EnterRange");
+        CmdUsageMsg(playerID, "settuninggaragespawn", "TuningGarageID");
         return COMMAND_USAGE;
     }
 
@@ -37,8 +36,6 @@ PCMD:settuninggaragespawn[ISADMIN](playerID, params[], StringID:237("Set the spa
         g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ID] = tuningGarageID;
     }
 
-    g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ENTERRANGE] = enterRange;
-
     new vehicleID = GetPlayerVehicleID(playerID);
     if (vehicleID)
     {
@@ -54,6 +51,7 @@ PCMD:settuninggaragespawn[ISADMIN](playerID, params[], StringID:237("Set the spa
     GetPlayerCameraPos(playerID, g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSX], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSY], g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_CAMERA_POSZ]);
 
     SaveTuningGarages();
+    UpdateTuningGarages();
 
     SendClientMessageEx(playerID, COLOR_INFO, StringID:241("The tuning garage spawn position has been saved"));
 
