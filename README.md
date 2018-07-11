@@ -46,8 +46,9 @@ Unfortunately, the SA-MP server is now only reachable via *localhost*, it is not
 ## Configuration
 
   * Clone this repository
-  * Copy server.sample.cfg to server.cfg and edit it to fit your needs
-  * Copy localconfig.sample.inc in includes/grgserver to localconfig.inc and edit it to fit your needs
+  * Copy [server.sample.cfg](server.sample.cfg) to server.cfg and edit it to fit your needs
+  * Copy [mysql.sample.ini](mysql.sample.ini) to mysql.ini and configure in the hostname, username, password and database for you MySQL database
+  * Copy [localconfig.sample.inc](includes/grgserver/localconfig.sample.inc) in includes/grgserver to localconfig.inc and edit it to fit your needs
   * Compile the grgserver.pwn located in the gamemodes folder (See section **Compiling the script** bellow)
   * Import the database schema into your MySQL database
   * Start the server
