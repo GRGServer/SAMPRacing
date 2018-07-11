@@ -12,7 +12,6 @@ The following plugins are used by the server:
  * [filemanager](http://forum.sa-mp.com/showthread.php?t=92246)
  * [geoip](http://forum.sa-mp.com/showthread.php?t=32509)
  * [mysql](http://forum.sa-mp.com/showthread.php?t=56564)
- * [regex](http://forum.sa-mp.com/showthread.php?t=247893)
  * [sscanf](http://forum.sa-mp.com/showthread.php?t=120356)
  * [streamer](http://forum.sa-mp.com/showthread.php?t=102865)
  * [whirlpool](http://forum.sa-mp.com/showthread.php?t=65290)
