@@ -7,7 +7,6 @@
 #include <filemanager>
 #include <formatnumber>
 #include <geoip>
-#include <md-sort>
 #include <a_mysql>
 #include <progressbars>
 #include <sscanf>
