@@ -1,9 +1,10 @@
 PCMD:settuninggaragespawn[ISADMIN](playerID, params[], StringID:237("Set the spawn position of a tuning garage"))
 {
     new tuningGarageID;
-    if (sscanf(params, "d", tuningGarageID))
+    new Float:enterRange;
+    if (sscanf(params, "df", tuningGarageID, enterRange))
     {
-        CmdUsageMsg(playerID, "settuninggaragespawn", "TuningGarageID");
+        CmdUsageMsg(playerID, "settuninggaragespawn", "TuningGarageID", "EnterRange");
         return COMMAND_USAGE;
     }
 
@@ -35,6 +36,8 @@ PCMD:settuninggaragespawn[ISADMIN](playerID, params[], StringID:237("Set the spa
 
         g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ID] = tuningGarageID;
     }
+
+    g_tuningGarages[tuningGarageNumber][E_TUNINGGARAGE_ENTERRANGE] = enterRange;
 
     new vehicleID = GetPlayerVehicleID(playerID);
     if (vehicleID)
