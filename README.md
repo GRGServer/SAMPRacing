@@ -55,7 +55,7 @@ Unfortunately, the SA-MP server is now only reachable via *localhost*, it is not
 
 ## Compiling the script
 
-[![Build Status](https://travis-ci.org/GRGServer/SAMPRacing.svg)](https://travis-ci.org/GRGServer/SAMPRacing)
+[![pipeline status](https://gitlab.com/GRGServer/SAMPRacing/badges/master/pipeline.svg)](https://gitlab.com/GRGServer/SAMPRacing/commits/master)
 
 Just execute `compile-gamemode.sh` located in the tools directory.
 
