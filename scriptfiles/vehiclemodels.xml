@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- 
+	TODO: 
+	- Unused Cars removed from Shop
+	- Unused Cars aktivat in XML: vehiclemodels.xml
+	- Used Cars must be set in a Catigory. 
+		Exemple: 
+			<model id="496" name="Blista Compact" type="Car" catigory="badcar" maxspeed="1.025" price="35000"/>
+	- Used Cars subdivided in 3 to 4 catigorys 
+-->
 <vehiclemodels>
     <model id="400" name="Landstalker" type="Car" price="15000"/>
     <model id="401" name="Bravura" type="Car" price="2000"/>
