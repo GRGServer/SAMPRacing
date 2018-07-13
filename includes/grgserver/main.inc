@@ -54,6 +54,7 @@
 #include <grgserver/functions/ExecuteCommand.inc>
 #include <grgserver/functions/ExitGarage.inc>
 #include <grgserver/functions/ExitVehicleShop.inc>
+#include <grgserver/functions/explode.inc>
 #include <grgserver/functions/FadeInScreen.inc>
 #include <grgserver/functions/FadeOutScreen.inc>
 #include <grgserver/functions/FindNextVehicleModel.inc>
@@ -97,13 +98,14 @@
 #include <grgserver/functions/ReloadTeleports.inc>
 #include <grgserver/functions/ReloadTuningGarages.inc>
 #include <grgserver/functions/ReloadVehicleModels.inc>
-#include <grgserver/functions/ReloadVehicleShops.inc>
 #include <grgserver/functions/ReloadVehicles.inc>
+#include <grgserver/functions/ReloadVehicleShops.inc>
 #include <grgserver/functions/RemoveStandardObjectsForPlayer.inc>
 #include <grgserver/functions/ResetPlayerVariables.inc>
 #include <grgserver/functions/SaveAll.inc>
 #include <grgserver/functions/SaveGarage.inc>
 #include <grgserver/functions/SaveGarages.inc>
+#include <grgserver/functions/SaveHiddenPackages.inc>
 #include <grgserver/functions/SaveNPCs.inc>
 #include <grgserver/functions/SaveObjects.inc>
 #include <grgserver/functions/SavePlayer.inc>
@@ -120,6 +122,7 @@
 #include <grgserver/functions/ShowRaceCheckpoint.inc>
 #include <grgserver/functions/SpawnVehicle.inc>
 #include <grgserver/functions/StrNotNull.inc>
+#include <grgserver/functions/str_replace.inc>
 #include <grgserver/functions/TeleportTo.inc>
 #include <grgserver/functions/TeleportToInterior.inc>
 #include <grgserver/functions/TryStartRace.inc>
@@ -129,16 +132,13 @@
 #include <grgserver/functions/UpdateObjectsForAllPlayers.inc>
 #include <grgserver/functions/UpdatePlayerTextDrawStrings.inc>
 #include <grgserver/functions/UpdateRaceLobby.inc>
+#include <grgserver/functions/UpdateTuningGarages.inc>
 #include <grgserver/functions/UpdateVehicleStateForPlayer.inc>
 #include <grgserver/functions/XML_GetFloatAttribute.inc>
 #include <grgserver/functions/XML_GetFloatValue.inc>
 #include <grgserver/functions/XML_GetIntAttribute.inc>
 #include <grgserver/functions/XML_SetFloatAttribute.inc>
 #include <grgserver/functions/XML_SetIntAttribute.inc>
-#include <grgserver/functions/explode.inc>
-#include <grgserver/functions/str_replace.inc>
-#include <grgserver/functions/SaveHiddenPackages.inc>
-#include <grgserver/functions/UpdateTuningGarages.inc>
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>
@@ -166,6 +166,7 @@
 #include <grgserver/callbacks/OnPlayerHiddenPackagesLoaded.inc>
 #include <grgserver/callbacks/OnPlayerKeyStateChange.inc>
 #include <grgserver/callbacks/OnPlayerLogin.inc>
+#include <grgserver/callbacks/OnPlayerPickUpDynamicPickup.inc>
 #include <grgserver/callbacks/OnPlayerRegistered.inc>
 #include <grgserver/callbacks/OnPlayerRegisteredCheck.inc>
 #include <grgserver/callbacks/OnPlayerSelectDynamicObject.inc>
@@ -179,7 +180,6 @@
 #include <grgserver/callbacks/OnVehiclePaintjob.inc>
 #include <grgserver/callbacks/OnVehicleRespray.inc>
 #include <grgserver/callbacks/OnVehicleSpawn.inc>
-#include <grgserver/callbacks/OnPlayerPickUpDynamicPickup.inc>
 
 // dialogs
 #include <grgserver/dialogs/AddObject.inc>
@@ -194,11 +194,11 @@
 #include <grgserver/dialogs/Register_Password1.inc>
 #include <grgserver/dialogs/Register_Password2.inc>
 #include <grgserver/dialogs/SpawnVehicle.inc>
+#include <grgserver/dialogs/Teleports.inc>
 #include <grgserver/dialogs/TuningGarage_CategoryTypes.inc>
 #include <grgserver/dialogs/TuningGarage_MainMenu.inc>
 #include <grgserver/dialogs/TuningGarage_NP_City.inc>
 #include <grgserver/dialogs/TuningGarage_NP_NumberInput.inc>
-#include <grgserver/dialogs/Teleports.inc>
 
 // timers
 #include <grgserver/timers/DisqualifyRacePlayer.inc>
@@ -214,6 +214,7 @@
 #include <grgserver/timers/UpdateVehicleStats.inc>
 
 // commands
+#include <grgserver/commands/addhp.inc>
 #include <grgserver/commands/addobject.inc>
 #include <grgserver/commands/addracecp.inc>
 #include <grgserver/commands/addtp.inc>
@@ -250,6 +251,7 @@
 #include <grgserver/commands/showareas.inc>
 #include <grgserver/commands/showhps.inc>
 #include <grgserver/commands/showpos.inc>
+#include <grgserver/commands/skin.inc>
 #include <grgserver/commands/spawn.inc>
 #include <grgserver/commands/spawnvehicle.inc>
 #include <grgserver/commands/tp.inc>
@@ -257,5 +259,3 @@
 #include <grgserver/commands/tppos.inc>
 #include <grgserver/commands/tpto.inc>
 #include <grgserver/commands/vehicleshop.inc>
-#include <grgserver/commands/addhp.inc>
-#include <grgserver/commands/skin.inc>
