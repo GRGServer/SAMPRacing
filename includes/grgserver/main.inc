@@ -254,6 +254,7 @@
 #include <grgserver/commands/skin.inc>
 #include <grgserver/commands/spawn.inc>
 #include <grgserver/commands/spawnvehicle.inc>
+#include <grgserver/commands/speedmul.inc>
 #include <grgserver/commands/tp.inc>
 #include <grgserver/commands/tpint.inc>
 #include <grgserver/commands/tppos.inc>

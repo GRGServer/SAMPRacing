@@ -36,6 +36,8 @@
 #define KEY_VEHICLESHOP_NEXT            KEY_ANALOG_RIGHT
 #define KEY_VEHICLESHOP_PREVIOUS        KEY_ANALOG_LEFT
 #define KEY_VEHICLESHOP_QUIT            KEY_SECONDARY_ATTACK
+#define KEY_VEHICLE_FORWARD             0b001000
+#define KEY_VEHICLE_BACKWARD            0b100000
 
 
 // Map icon types
@@ -55,7 +57,7 @@
 #define MAX_GARAGES                     150
 #define MAX_HIDDENPACKAGES              100
 #define MAX_INTERIORS                   150
-#define MAX_LANGUAGE_STRINGS            LanguageStringLimit(248)
+#define MAX_LANGUAGE_STRINGS            LanguageStringLimit(251)
 #define MAX_NPCS                        250
 #define MAX_OBJECTMODELS                11000
 #define MAX_PLAYER_MAPICONS             500

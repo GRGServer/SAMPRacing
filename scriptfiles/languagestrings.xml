@@ -1985,4 +1985,28 @@
             Zu Ort teleportieren
         </de>
     </string>
+    <string id="248">
+        <en>
+            Show or change the speed multiplier of your current vehicle
+        </en>
+        <de>
+            Zeige oder ändere den Geschwindigkeitsmultiplikator von deinem aktuellen Fahrzeug
+        </de>
+    </string>
+    <string id="249">
+        <en>
+            Speed multiplier of your current vehicle: %f
+        </en>
+        <de>
+            Geschwindigkeitsmultiplikator von deinem aktuellen Fahrzeug: %f
+        </de>
+    </string>
+    <string id="250">
+        <en>
+            Speed multiplier of your current vehicle changed to: %f
+        </en>
+        <de>
+            Geschwindigkeitsmultiplikator von deinem aktuellen Fahrzeug geändert auf: %f
+        </de>
+    </string>
 </languagestrings>

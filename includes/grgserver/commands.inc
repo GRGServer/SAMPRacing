@@ -38,6 +38,7 @@ new g_commands[][E_COMMAND] = {
     {245, "skin", ""},
     {143, "spawn", ""},
     {1, "spawnvehicle", "ISADMIN"},
+    {248, "speedmul", "ISADMIN"},
     {124, "tp", ""},
     {117, "tpint", "ISADMIN"},
     {75, "tppos", "ISADMIN"},

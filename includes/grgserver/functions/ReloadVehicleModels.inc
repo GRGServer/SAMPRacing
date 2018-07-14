@@ -60,6 +60,7 @@ ReloadVehicleModels()
 
             g_tuningParts[tuningPartIndex][E_TUNINGPART_MODELID] = XML_GetIntAttribute(tuningPartNode, "model");
             g_tuningParts[tuningPartIndex][E_TUNINGPART_PRICE] = XML_GetIntAttribute(tuningPartNode, "price");
+            g_tuningParts[tuningPartIndex][E_TUNINGPART_SPEEDMULTIPLIER] = XML_GetFloatAttribute(tuningPartNode, "speedmultiplier");
             g_tuningParts[tuningPartIndex][E_TUNINGPART_TYPE] = GetTuningPartByName(type);
 
             new offsetNodeIndex;

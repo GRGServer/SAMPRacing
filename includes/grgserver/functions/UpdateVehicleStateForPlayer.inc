@@ -3,12 +3,40 @@ UpdateVehicleStateForPlayer(playerID)
     new string[256];
 
     new vehicleID = GetPlayerVehicleID(playerID);
+    new vehicleSeat = GetPlayerVehicleSeat(playerID);
 
-    // Speed calculcation
     new Float:velocityX;
     new Float:velocityY;
     new Float:velocityZ;
     GetVehicleVelocity(vehicleID, velocityX, velocityY, velocityZ);
+
+    // Only update vehicle speed if the player is the driver
+    if (vehicleSeat == 0)
+    {
+        // Original script written by Slice (http://forum.sa-mp.com/showthread.php?t=334339)
+        new keys;
+        new updown;
+        new leftright;
+        GetPlayerKeys(playerID, keys, updown, leftright);
+
+        // If KEY_VEHICLE_FORWARD is pressed, but not KEY_VEHICLE_BACKWARD or KEY_HANDBRAKE.
+        if ((keys & (KEY_VEHICLE_FORWARD | KEY_VEHICLE_BACKWARD | KEY_HANDBRAKE)) == KEY_VEHICLE_FORWARD)
+        {
+            // Increase the X and Y velocity
+            velocityX *= VehicleProperty:vehicleID[SPEEDMULTIPLIER];
+            velocityY *= VehicleProperty:vehicleID[SPEEDMULTIPLIER];
+
+            // Increase the Z velocity to make up for lost gravity, if needed.
+            if (velocityZ > 0.04 || velocityZ < -0.04)
+            {
+                velocityZ -= 0.020;
+            }
+
+            SetVehicleVelocity(vehicleID, velocityX, velocityY, velocityZ);
+        }
+    }
+
+    // Speed calculcation
     new speed = floatround(floatsqroot(floatpower(velocityX, 2) + floatpower(velocityY, 2) + floatpower(velocityZ, 2)) * 100 * 1.61);
 
     // Player is in a vehicle
@@ -88,7 +116,7 @@ UpdateVehicleStateForPlayer(playerID)
     }
 
     // Drifting is enabled and player is the driver
-    if (PVar:playerID[DRIFTING_STATE] && GetPlayerVehicleSeat(playerID) == 0)
+    if (PVar:playerID[DRIFTING_STATE] && vehicleSeat == 0)
     {
         if (PVar:playerID[DRIFTING_RESETSTATSTIMER])
         {
