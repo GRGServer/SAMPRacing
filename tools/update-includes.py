@@ -28,7 +28,7 @@ def addInclude(name):
 def addDirectory(path):
     addGroup(path)
 
-    for item in os.listdir(os.path.join(fullPath, path)):
+    for item in sorted(os.listdir(os.path.join(fullPath, path))):
         filePath = os.path.join(fullPath, path, item)
         if not os.path.isfile(filePath):
             continue
