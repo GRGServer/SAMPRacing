@@ -8,7 +8,8 @@ build:
 
 release:
   stage: deploy
-  script: "true"
+  script:
+    - tools/compile-gamemode.sh
   dependencies:
   - build
   artifacts:
