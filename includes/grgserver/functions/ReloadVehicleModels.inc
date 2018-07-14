@@ -62,20 +62,42 @@ ReloadVehicleModels()
             g_tuningParts[tuningPartIndex][E_TUNINGPART_PRICE] = XML_GetIntAttribute(tuningPartNode, "price");
             g_tuningParts[tuningPartIndex][E_TUNINGPART_TYPE] = GetTuningPartByName(type);
 
+            new offsetNodeIndex;
             new XMLNode:offsetNode = XML_GetFirstChild(tuningPartNode, "offset");
-            if (offsetNode)
+            while (offsetNode)
             {
-                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSETX] = XML_GetFloatAttribute(offsetNode, "x");
-                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSETY] = XML_GetFloatAttribute(offsetNode, "y");
-                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSETZ] = XML_GetFloatAttribute(offsetNode, "z");
+                if (offsetNodeIndex >= MAX_TUNINGPART_ITEMS)
+                {
+                    printf("Reached limit of %d items for tuning part %d for vehicle %d", MAX_TUNINGPART_ITEMS, tuningPartSlot, modelID);
+                    break;
+                }
+
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_X][offsetNodeIndex] = XML_GetFloatAttribute(offsetNode, "x");
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_Y][offsetNodeIndex] = XML_GetFloatAttribute(offsetNode, "y");
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_Z][offsetNodeIndex] = XML_GetFloatAttribute(offsetNode, "z");
+
+                offsetNodeIndex++;
+
+                offsetNode = XML_GetNextSibling(offsetNode, "offset");
             }
 
+            new rotationNodeIndex;
             new XMLNode:rotationNode = XML_GetFirstChild(tuningPartNode, "rotation");
-            if (rotationNode)
+            while (rotationNode)
             {
-                g_tuningParts[tuningPartIndex][E_TUNINGPART_ROTX] = XML_GetFloatAttribute(rotationNode, "x");
-                g_tuningParts[tuningPartIndex][E_TUNINGPART_ROTY] = XML_GetFloatAttribute(rotationNode, "y");
-                g_tuningParts[tuningPartIndex][E_TUNINGPART_ROTZ] = XML_GetFloatAttribute(rotationNode, "z");
+                if (rotationNodeIndex >= MAX_TUNINGPART_ITEMS)
+                {
+                    printf("Reached limit of %d items for tuning part %d for vehicle %d", MAX_TUNINGPART_ITEMS, tuningPartSlot, modelID);
+                    break;
+                }
+
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_ROTATION_X][rotationNodeIndex] = XML_GetFloatAttribute(rotationNode, "x");
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_ROTATION_Y][rotationNodeIndex] = XML_GetFloatAttribute(rotationNode, "y");
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_ROTATION_Z][rotationNodeIndex] = XML_GetFloatAttribute(rotationNode, "z");
+
+                rotationNodeIndex++;
+
+                rotationNode = XML_GetNextSibling(rotationNode, "offset");
             }
 
             g_vehicleModels[arrayIndex][E_VEHICLEMODEL_TUNINGPARTS][tuningPartSlot] = tuningPartIndex;

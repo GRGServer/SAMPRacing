@@ -69,6 +69,7 @@
 #define MAX_TUNINGGARAGES               20
 #define MAX_TUNINGPARTS                 25000
 #define MAX_TUNINGPARTSPERVEHICLE       250
+#define MAX_TUNINGPART_ITEMS            4
 #define MAX_VEHICLECOMPONENT_SLOTS      14
 #define MAX_VEHICLESHOPS                10
 
