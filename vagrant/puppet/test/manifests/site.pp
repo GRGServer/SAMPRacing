@@ -103,12 +103,10 @@ exec { "reload-systemd":
 
 file { "/opt/samp/server.cfg":
   source  => "/opt/samp/vagrant/server.cfg",
-  replace => false,
 }
 
 file { "/opt/samp/includes/grgserver/localconfig.inc":
   source  => "/opt/samp/vagrant/localconfig.inc",
-  replace => false,
   notify  => Exec["compile_gamemode"],
 }
 
@@ -119,7 +117,6 @@ exec { "compile_gamemode":
 
 file { "/opt/samp/mysql.ini":
   source  => "/opt/samp/vagrant/mysql.ini",
-  replace => false,
 }
 
 service { "samp":
