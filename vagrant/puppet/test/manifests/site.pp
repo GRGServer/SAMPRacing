@@ -76,6 +76,12 @@ apache::vhost { "localhost":
   port     => 80,
   docroot  => "/opt/samp/map",
   override => ["All"],
+  aliases  => [
+    {
+      alias => "/audio",
+      path  => "/opt/samp/audio",
+    },
+  ],
 }
 
 class { "mysql::server":
