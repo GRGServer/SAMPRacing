@@ -54,7 +54,6 @@
 #include <grgserver/functions/ExecuteCommand.inc>
 #include <grgserver/functions/ExitGarage.inc>
 #include <grgserver/functions/ExitVehicleShop.inc>
-#include <grgserver/functions/explode.inc>
 #include <grgserver/functions/FadeInScreen.inc>
 #include <grgserver/functions/FadeOutScreen.inc>
 #include <grgserver/functions/FindNextVehicleModel.inc>
@@ -98,8 +97,8 @@
 #include <grgserver/functions/ReloadTeleports.inc>
 #include <grgserver/functions/ReloadTuningGarages.inc>
 #include <grgserver/functions/ReloadVehicleModels.inc>
-#include <grgserver/functions/ReloadVehicles.inc>
 #include <grgserver/functions/ReloadVehicleShops.inc>
+#include <grgserver/functions/ReloadVehicles.inc>
 #include <grgserver/functions/RemoveStandardObjectsForPlayer.inc>
 #include <grgserver/functions/ResetPlayerVariables.inc>
 #include <grgserver/functions/SaveAll.inc>
@@ -122,7 +121,6 @@
 #include <grgserver/functions/ShowRaceCheckpoint.inc>
 #include <grgserver/functions/SpawnVehicle.inc>
 #include <grgserver/functions/StrNotNull.inc>
-#include <grgserver/functions/str_replace.inc>
 #include <grgserver/functions/TeleportTo.inc>
 #include <grgserver/functions/TeleportToInterior.inc>
 #include <grgserver/functions/TryStartRace.inc>
@@ -139,6 +137,8 @@
 #include <grgserver/functions/XML_GetIntAttribute.inc>
 #include <grgserver/functions/XML_SetFloatAttribute.inc>
 #include <grgserver/functions/XML_SetIntAttribute.inc>
+#include <grgserver/functions/explode.inc>
+#include <grgserver/functions/str_replace.inc>
 
 // callbacks
 #include <grgserver/callbacks/OnDialogResponse.inc>
