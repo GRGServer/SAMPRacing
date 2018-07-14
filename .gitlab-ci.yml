@@ -31,3 +31,5 @@ release:
     - samp.service
     - samp03svr
     - server.sample.cfg
+  only:
+    - tags
