@@ -39,6 +39,7 @@ public OnPlayerDataLoaded(playerID)
 
     cache_get_value_int(0, "skin", PVar:playerID[SKIN]);
 
+    TogglePlayerControllable(playerID, true);
     SetPlayerSpawn(playerID, SPAWNTYPE_DEFAULT, posX, posY, posZ, angle, interior);
     SpawnPlayer(playerID);
 }

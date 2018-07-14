@@ -84,6 +84,8 @@ public OnPlayerConnect(playerid)
         return true;
     }
 
+    TogglePlayerControllable(playerid, false);
+
     printf("%s connected from %s", GetPlayerNameEx(playerid), GetPlayerCountryName(playerid));
 
     SendDeathMessage(INVALID_PLAYER_ID, playerid, ICON_CONNECT);
