@@ -37,7 +37,6 @@ def addDirectory(path):
 
 def main():
     addGroup("Defines")
-    addInclude("localconfig.inc")
     addInclude("constants.inc")
     addInclude("macros.inc")
 

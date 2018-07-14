@@ -7,6 +7,9 @@ public OnGameModeInit()
     print("Connecting to MySQL server");
     g_mysql = mysql_connect_file();
 
+    GetEnv("GRG_AUDIO_URL", g_audioUrl);
+    printf("Using Audio URL: %s", g_audioUrl);
+
     ReloadLanguageStrings();
     ReloadObjectModels();
     ReloadObjects();

@@ -1,5 +1,4 @@
 // Defines
-#include <grgserver/localconfig.inc>
 #include <grgserver/constants.inc>
 #include <grgserver/macros.inc>
 

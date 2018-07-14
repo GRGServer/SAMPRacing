@@ -1,5 +1,5 @@
 PlayAudioFileForPlayer(playerID, filename[])
 {
-    FormatNew:url[256]("%s%s", AUDIO_URL, filename);
+    FormatNew:url[256]("%s%s", g_audioUrl, filename);
     PlayAudioStreamForPlayer(playerID, url);
 }

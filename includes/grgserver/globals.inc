@@ -1,5 +1,6 @@
 new g_addLineString[1024];
 new g_areas[MAX_AREAS][E_AREA];
+new g_audioUrl[200];
 new g_commandAliases[MAX_COMMANDALIASES][E_COMMANDALIAS];
 new g_garages[MAX_GARAGES][E_GARAGE];
 new g_hiddenPackages[MAX_HIDDENPACKAGES][E_HIDDENPACKAGE];

@@ -105,11 +105,6 @@ file { "/opt/samp/server.cfg":
   source  => "/opt/samp/vagrant/server.cfg",
 }
 
-file { "/opt/samp/includes/grgserver/localconfig.inc":
-  source  => "/opt/samp/vagrant/localconfig.inc",
-  notify  => Exec["compile_gamemode"],
-}
-
 exec { "compile_gamemode":
   command => "/opt/samp/tools/compile-gamemode.sh",
   require => Package["libc6-i386"],

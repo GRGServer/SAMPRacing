@@ -4,6 +4,7 @@
 #define _inc_a_samp
 
 // Custom includes
+#include <env>
 #include <filemanager>
 #include <formatnumber>
 #include <geoip>

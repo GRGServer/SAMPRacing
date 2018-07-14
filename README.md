@@ -9,6 +9,7 @@ Visit http://grgserver.net for more information about the server.
 The following plugins are used by the server:
 
  * [crashdetect](http://forum.sa-mp.com/showthread.php?t=262796)
+ * [env](http://forum.sa-mp.com/showthread.php?t=656319)
  * [filemanager](http://forum.sa-mp.com/showthread.php?t=92246)
  * [geoip](http://forum.sa-mp.com/showthread.php?t=32509)
  * [mysql](http://forum.sa-mp.com/showthread.php?t=56564)
@@ -48,9 +49,9 @@ Unfortunately, the SA-MP server is now only reachable via *localhost*, it is not
   * Clone this repository
   * Copy [server.sample.cfg](server.sample.cfg) to server.cfg and edit it to fit your needs
   * Copy [mysql.sample.ini](mysql.sample.ini) to mysql.ini and configure in the hostname, username, password and database for you MySQL database
-  * Copy [localconfig.sample.inc](includes/grgserver/localconfig.sample.inc) in includes/grgserver to localconfig.inc and edit it to fit your needs
   * Compile the grgserver.pwn located in the gamemodes folder (See section **Compiling the script** bellow)
   * Import the database schema into your MySQL database
+  * Make sure to pass the *GRG_AUDIO_URL* environment variable containing the URL pointing to the [audio directory](audio) to the SAMP server (the [systemd service file](samp.service) already does this)
   * Start the server
 
 ## Compiling the script

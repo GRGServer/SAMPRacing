@@ -6,6 +6,7 @@ Wants=network-online.target
 [Service]
 User=vagrant
 WorkingDirectory=/opt/samp
+Environment=GRG_AUDIO_URL=http://localhost:8080/audio
 ExecStart=/opt/samp/samp03svr
 Restart=on-failure
 
