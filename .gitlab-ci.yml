@@ -2,5 +2,30 @@ before_script:
   - apt-get update -qq && apt-get install -y -qq libc6-i386
 
 build:
+  stage: build
   script:
     - tools/compile-gamemode.sh
+
+release:
+  stage: deploy
+  dependencies:
+  - build
+  artifacts:
+    paths:
+    - audio
+    - gamemodes/grgserver.amx
+    - map
+    - npcmodes/recordings/*.rec
+    - npcmodes/npcplayer.amx
+    - plugins
+    - scriptfiles
+    - tools/map.jpg
+    - announce
+    - database.sql
+    - log-core.so
+    - mysql.sample.ini
+    - README.md
+    - samp-npc
+    - samp.service
+    - samp03svr
+    - server.sample.cfg
