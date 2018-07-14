@@ -8,6 +8,7 @@ build:
 
 release:
   stage: deploy
+  script: "true"
   dependencies:
   - build
   artifacts:
