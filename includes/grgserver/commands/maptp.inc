@@ -4,7 +4,7 @@ PCMD:maptp[ISADMIN](playerID, params[], StringID:120("Teleport yourself to the t
     {
         SetPlayerPosFindZ(playerID, PVar:playerID[MAP_POSX], PVar:playerID[MAP_POSY], 6000.0);
         SetCameraBehindPlayer(playerID);
-        SetTimerEx("Timer_SetPlayerPosFindZ", 500, false, "dfff", playerID, PVar:playerID[MAP_POSX], PVar:playerID[MAP_POSY], 6000.0);// Workaround for http://forum.sa-mp.com/showthread.php?p=1800073
+        SetTimerEx:SetPlayerPosFindZ(500, false, "dfff", playerID, PVar:playerID[MAP_POSX], PVar:playerID[MAP_POSY], 6000.0);// Workaround for http://forum.sa-mp.com/showthread.php?p=1800073
         SendClientMessageEx(playerID, COLOR_INFO, StringID:121("You got teleported to the target on your map"));
 
         return COMMAND_OK;

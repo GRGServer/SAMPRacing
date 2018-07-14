@@ -8,7 +8,7 @@ public OnPlayerExitVehicle(playerid, vehicleid)
         if (PVar:playerid[RACE_VEHICLEID] == vehicleid)
         {
             PVar:playerid[RACE_DISQUALIFY_TIMEOUT] = RACE_DISQUALIFICATION_TIMEOUT;
-            PVar:playerid[RACE_DISQUALIFY_TIMER] = SetTimerEx("Timer_DisqualifyRacePlayer", 1000, true, "d", playerid);
+            PVar:playerid[RACE_DISQUALIFY_TIMER] = SetTimerEx:DisqualifyRacePlayer(1000, true, "d", playerid);
         }
     }
 }

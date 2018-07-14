@@ -233,7 +233,7 @@ UpdateVehicleStateForPlayer(playerID)
         {
             PVar:playerID[DRIFTING_WASDRIFTING] = false;
 
-            PVar:playerID[DRIFTING_RESETSTATSTIMER] = SetTimerEx("Timer_ResetDriftingStats", TIMER_RESETDRIFTINGSTATS, false, "d", playerID);
+            PVar:playerID[DRIFTING_RESETSTATSTIMER] = SetTimerEx:ResetDriftingStats(TIMER_RESETDRIFTINGSTATS, false, "d", playerID);
 
             PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_LABELS]);
             PlayerTextDrawHide(playerID, g_playerTextDraws[playerID][E_PTD_DRIFTING_BONUS_VALUES]);

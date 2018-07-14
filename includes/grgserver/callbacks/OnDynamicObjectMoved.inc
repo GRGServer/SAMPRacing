@@ -25,7 +25,7 @@ public OnDynamicObjectMoved(objectid)
                     {
                         KillTimer(Object:objectid[MOVE_RESET_TIMER]);
                     }
-                    Object:objectid[MOVE_RESET_TIMER] = SetTimerEx("Timer_ResetMoveObject", Object:objectid[MOVE_RESET_TIMEOUT], false, "d", objectid);
+                    Object:objectid[MOVE_RESET_TIMER] = SetTimerEx:ResetMoveObject(Object:objectid[MOVE_RESET_TIMEOUT], false, "d", objectid);
                 }
             }
         }

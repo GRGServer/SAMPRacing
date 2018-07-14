@@ -72,6 +72,12 @@ for (new i_%0 = 0; ; ++i_%0) \
 // SetPVarStr:playerID[field][size](string)
 #define SetPVarStr:%0[%1][%2](%3) format(PVar:%0[%1], %2, %3)
 
+// SetTimer:name(interval, repeating)
+#define SetTimer:%0(%1,%2) SetTimer("Timer_"#%0, %1, %2)
+
+// SetTimerEx:name(interval, repeating, format, arguments...)
+#define SetTimerEx:%0(%1,%2,%3,%4) SetTimerEx("Timer_"#%0, %1, %2, %3, %4)
+
 // ShowDialog:DIALOGNAME(playerID [,parameters...])
 #define ShowDialog:%0(%1) SD_%0(%1)
 

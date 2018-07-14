@@ -32,7 +32,7 @@ public OnGameModeInit()
     TextDrawFont(g_textDrawClock, 3);
 
     print("Starting timers");
-    SetTimer("Timer_EverySecond", 1000, true);
-    SetTimer("Timer_EveryMinute", 60000, true);
-    SetTimer("Timer_UpdateVehicleStats", 100, true);
+    SetTimer:EverySecond(1000, true);
+    SetTimer:EveryMinute(60000, true);
+    SetTimer:UpdateVehicleStats(100, true);
 }

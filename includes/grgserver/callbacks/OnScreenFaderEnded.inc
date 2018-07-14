@@ -35,7 +35,7 @@ public OnScreenFaderEnded(playerID)
                 RandomRaceLobbyCamera(playerID);
 
                 UpdateRaceLobby(playerID);
-                PVar:playerID[RACE_LOBBYUPDATETIMER] = SetTimerEx("Timer_UpdateRaceLobby", TIMER_UPDATERACELOBBY, true, "d", playerID);
+                PVar:playerID[RACE_LOBBYUPDATETIMER] = SetTimerEx:UpdateRaceLobby(TIMER_UPDATERACELOBBY, true, "d", playerID);
 
                 FadeInScreen(playerID, 5, SCREENFADER_RACE_ENTERLOBBY);
             }

@@ -12,5 +12,5 @@ FadeOutScreen(playerID, steps, red, green, blue, id)
     {
         KillTimer(PVar:playerID[SCREENFADER_TIMER]);
     }
-    PVar:playerID[SCREENFADER_TIMER] = SetTimerEx("Timer_ScreenFader", TIMER_SCREENFADER, true, "d", playerID);
+    PVar:playerID[SCREENFADER_TIMER] = SetTimerEx:ScreenFader(TIMER_SCREENFADER, true, "d", playerID);
 }

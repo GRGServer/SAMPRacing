@@ -28,5 +28,5 @@ RandomRaceLobbyCamera(playerID)
     SetPlayerInterior(playerID, g_npcs[npcID][E_NPC_INTERIOR]);
     PlayerSpectateVehicle(playerID, g_npcs[npcID][E_NPC_VEHICLE_ID], SPECTATE_MODE_NORMAL);
 
-    SetTimerEx("Timer_RandomRaceLobbyCamera", RACE_LOBBY_NPCSPECTATETIME, false, "d", playerID);
+    SetTimerEx:RandomRaceLobbyCamera(RACE_LOBBY_NPCSPECTATETIME, false, "d", playerID);
 }
