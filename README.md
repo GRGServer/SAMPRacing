@@ -44,7 +44,6 @@ Unfortunately, the SA-MP server is now only reachable via *localhost*, it is not
   * Webserver (To stream the audio files and display the online map)
   * PHP (To display the online map)
   * To use Pawn on x64 Linux: 32-bit C Library for AMD64 (*apt-get install libc6-i386* on Debian based Linux distributions)
-  * Optional: A current [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (To build and execute tools like the Language String Editor)
 
 ## Configuration
 
@@ -63,14 +62,6 @@ Unfortunately, the SA-MP server is now only reachable via *localhost*, it is not
 Just execute `compile-gamemode.sh` located in the tools directory.
 
 The script will execute the Includes Updater (*tools/update-includes.py*) and compile the gamemode.
-
-## Compiling tools
-
-Some tools have to be compiled before using them.
-
-Simply execute `compile-tools.sh` and you are done.
-
-**Note:** Everytime a tool gets changed it has to be rebuilt. In this case, simply re-execute the script.
 
 ## Map
 
