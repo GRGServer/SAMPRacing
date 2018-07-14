@@ -8,7 +8,7 @@ CreateVehicleShopVehicle(playerID)
     new modelID = PVar:playerID[VEHICLESHOP_MODELID];
     new shopID = PVar:playerID[VEHICLESHOP_ID];
 
-    PVar:playerID[VEHICLESHOP_VEHICLEID] = CreateVehicle(modelID, SHOP_VEHICLE_VEH_POSX, SHOP_VEHICLE_VEH_POSY, SHOP_VEHICLE_VEH_POSZ, SHOP_VEHICLE_VEH_ANGLE, random(128), random(128), -1);
+    PVar:playerID[VEHICLESHOP_VEHICLEID] = CreateVehicleEx(modelID, SHOP_VEHICLE_VEH_POSX, SHOP_VEHICLE_VEH_POSY, SHOP_VEHICLE_VEH_POSZ, SHOP_VEHICLE_VEH_ANGLE, random(128), random(128));
 
     if (IsValidNumberPlateVehicle(PVar:playerID[VEHICLESHOP_VEHICLEID]))
     {
