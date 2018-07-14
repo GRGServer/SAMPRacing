@@ -1,5 +1,7 @@
 # Grand Racing Game
 
+[![download latest release](https://img.shields.io/badge/download-latest-blue.svg)](https://gitlab.com/GRGServer/SAMPRacing/-/jobs/artifacts/master/download?job=release)
+
 This repository contains all files required to set up the Grand Racing Game San Andreas Multiplayer server.
 
 Visit http://grgserver.net for more information about the server.
