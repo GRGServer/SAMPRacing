@@ -163,7 +163,7 @@
     <model id="560" name="Sultan" type="Car" price="2564000" buyable="true"/>
     <model id="561" name="Stratum" type="Car" price="1567000" buyable="true"/>
     <model id="562" name="Elegy" type="Car" price="3685000" buyable="true"/>
-    <<model id="563" name="Raindance" type="Helicopter" price="0" buyable="false"/>
+    <model id="563" name="Raindance" type="Helicopter" price="0" buyable="false"/>
     <model id="564" name="RC Tiger" type="Car" price="0" buyable="true"/>
     <model id="565" name="Flash" type="Car" price="1600" buyable="true"/>
     <model id="566" name="Tahoma" type="Car" price="1400" buyable="true"/>
@@ -198,7 +198,7 @@
     <model id="595" name="Launch" type="Boat" price="0" buyable="false"/>
     <model id="596" name="Police Car (LSPD)" type="Car" price="0" buyable="false"/>
     <model id="597" name="Police Car (SFPD)" type="Car" price="0" buyable="false"/>
-    <model id="598" name="Police Car (LVPD)" type="Car" price="0" buyable="false"/> 
+    <model id="598" name="Police Car (LVPD)" type="Car" price="0" buyable="false"/>
     <model id="599" name="Police Ranger" type="Car" price="0" buyable="false"/>
     <model id="600" name="Picador" type="Car" price="0" buyable="false"/>
     <model id="601" name="S.W.A.T. Van" type="Car" price="0" buyable="false"/>
