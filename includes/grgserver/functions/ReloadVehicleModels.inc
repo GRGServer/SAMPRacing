@@ -49,6 +49,14 @@ ReloadVehicleModels()
 
         g_vehicleModels[arrayIndex][E_VEHICLEMODEL_PRICE] = XML_GetIntAttribute(modelNode, "price");
 
+        new XMLNode:neonNode = XML_GetFirstChild(modelNode, "neon");
+        if (neonNode)
+        {
+            g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NEON_X] = XML_GetFloatAttribute(neonNode, "x");
+            g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NEON_Y] = XML_GetFloatAttribute(neonNode, "y");
+            g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NEON_Z] = XML_GetFloatAttribute(neonNode, "z");
+        }
+
         new tuningPartSlot;
         new XMLNode:tuningPartNode = XML_GetFirstChild(modelNode, "tuningpart");
         while (tuningPartNode)
