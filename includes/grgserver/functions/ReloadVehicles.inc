@@ -58,6 +58,7 @@ ReloadVehicles()
             }
         }
     }
+    cache_delete(result);
 
     printf("  %d vehicle components added", count);
 }
