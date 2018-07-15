@@ -13,20 +13,11 @@ ReloadVehicles()
     new Cache:result;
 
     new count;
-    result = mysql_query(g_mysql, "SELECT * FROM `vehicles`");
+    result = mysql_query(g_mysql, "SELECT * FROM `vehicles` WHERE `garageId` IS NULL");
     new rows;
     cache_get_row_count(rows);
     Count(row, rows)
     {
-        new garageID;
-        cache_get_value_int(row, "garageId", garageID);
-
-        // Skip vehicles in garages
-        if (garageID)
-        {
-            continue;
-        }
-
         new Float:posX;
         new Float:posY;
         new Float:posZ;
