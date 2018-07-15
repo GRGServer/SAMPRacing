@@ -43,6 +43,10 @@ ReloadVehicleModels()
         XML_GetAttribute(modelNode, "name", g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NAME], STRINGLENGTH_VEHICLENAME);
         XML_GetAttribute(modelNode, "type", g_vehicleModels[arrayIndex][E_VEHICLEMODEL_TYPE], STRINGLENGTH_VEHICLETYPE);
 
+        new buyableString[10];
+        XML_GetAttribute(modelNode, "buyable", buyableString);
+        g_vehicleModels[arrayIndex][E_VEHICLEMODEL_BUYABLE] = !strcmp(buyableString, "true", true);
+
         g_vehicleModels[arrayIndex][E_VEHICLEMODEL_PRICE] = XML_GetIntAttribute(modelNode, "price");
 
         new tuningPartSlot;

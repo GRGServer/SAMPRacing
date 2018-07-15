@@ -198,13 +198,13 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
     {
         if (IsKeyPressed(KEY_VEHICLESHOP_PREVIOUS))
         {
-            PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", false);
+            PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", true, false);
             CreateVehicleShopVehicle(playerid);
             return false;
         }
         else if (IsKeyPressed(KEY_VEHICLESHOP_NEXT))
         {
-            PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", true);
+            PVar:playerid[VEHICLESHOP_MODELID] = FindNextVehicleModel(PVar:playerid[VEHICLESHOP_MODELID], "Car", true, true);
             CreateVehicleShopVehicle(playerid);
             return false;
         }

@@ -1,224 +1,215 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- 
-	TODO: 
-	- Unused Cars removed from Shop
-	- Unused Cars aktivat in XML: vehiclemodels.xml
-	- Used Cars must be set in a Catigory. 
-		Exemple: 
-			<model id="496" name="Blista Compact" type="Car" catigory="badcar" maxspeed="1.025" price="35000"/>
-	- Used Cars subdivided in 3 to 4 catigorys 
--->
 <vehiclemodels>
-    <model id="400" name="Landstalker" type="Car" price="15000"/>
-    <model id="401" name="Bravura" type="Car" price="2000"/>
-    <model id="402" name="Buffalo" type="Car" price="165000"/>
-   <!-- <model id="403" name="Linerunner" type="Truck" price="0"/> -->
-    <model id="404" name="Pereniel" type="Car" price="6000"/>
-    <model id="405" name="Sentinel" type="Car" price="25000"/>
-    <!-- <model id="406" name="Dumper" type="Truck" price="0"/>
-    <model id="407" name="Firetruck" type="Truck" price="0"/>
-    <model id="408" name="Trashmaster" type="Truck" price="0"/> -->
-    <model id="409" name="Stretch" type="Car" price="9750"/>
-    <model id="410" name="Manana" type="Car" price="3500"/>
-    <model id="411" name="Infernus" type="Car" price="679000"/>
-    <model id="412" name="Voodoo" type="Car" price="53000"/>
-    <model id="413" name="Pony" type="Car" price="2500"/>
-    <model id="414" name="Mule" type="Truck" price="0"/>
-    <model id="415" name="Cheetah" type="Car" price="164000"/>
-    <!-- <model id="416" name="Ambulance" type="Car" price="0"/>
-    <model id="417" name="Leviathan" type="Helicopter" price="0"/> -->
-    <model id="418" name="Moonbeam" type="Car" price="4500"/>
-    <model id="419" name="Esperanto" type="Car" price="3900"/>
-    <!-- <model id="420" name="Taxi" type="Car" price="0"/> -->
-    <model id="421" name="Washington" type="Car" price="17000"/>
-    <model id="422" name="Bobcat" type="Car" price="13500"/>
-    <!-- <model id="423" name="Mr Whoopee" type="Car" price="0"/> -->
-    <model id="424" name="BF Injection" type="Car" price="195000"/>
-    <!-- <model id="425" name="Hunter" type="Helicopter" price="0"/> -->
-    <model id="426" name="Premier" type="Car" price="110500"/>
-    <!-- <model id="427" name="Enforcer" type="Car" price="1200"/>
-    <model id="428" name="Securicar" type="Car" price="0"/> -->
-    <model id="429" name="Banshee" type="Car" price="1590000"/>
-    <!-- <model id="430" name="Predator" type="Boat" price="0"/>
-    <model id="431" name="Bus" type="Car" price="0"/>
-    <model id="432" name="Rhino" type="Car" price="0"/>
-    <model id="433" name="Barracks" type="Truck" price="0"/> -->
-    <model id="434" name="Hotknife" type="Car" price="1540000"/>
-    <!-- <model id="435" name="Artict1" type="Trailer" price="0"/> -->
-    <model id="436" name="Previon" type="Car" price="57000"/>
-    <!-- <model id="437" name="Coach" type="Car" price="0"/>
-    <model id="438" name="Cabbie" type="Car" price="0"/> -->
-    <model id="439" name="Stallion" type="Car" price="970000"/>
-    <model id="440" name="Rumpo" type="Car" price="495000"/>
-   <!-- <model id="441" name="RC Bandit" type="Car" price="0"/> -->
-    <model id="442" name="Romero" type="Car" price="60000"/>
-    <!-- <model id="443" name="Packer" type="Truck" price="0"/>
-    <model id="444" name="Monster" type="Monster Truck" price="0"/> -->
-    <model id="445" name="Admiral" type="Car" price="160000"/>
-    <!-- <model id="446" name="Squalo" type="Boat" price="0"/>
-    <model id="447" name="Seasparrow" type="Helicopter" price="0"/>
-    <model id="448" name="Pizzaboy" type="Bike" price="0"/>
-    <model id="449" name="Tram" type="Train" price="0"/>
-    <model id="450" name="artict2" type="Trailer" price="0"/> -->
-    <model id="451" name="Turismo" type="Car" price="2567600"/>
-    <!-- <model id="452" name="Speeder" type="Boat" price="0"/>
-    <model id="453" name="Reefer" type="Boat" price="0"/>
-    <model id="454" name="Tropic" type="Boat" price="0"/>
-    <model id="455" name="Flatbed" type="Truck" price="0"/>
-    <model id="456" name="Yankee" type="Truck" price="0"/>
-    <model id="457" name="Caddy" type="Car" price="0"/> --->
-    <model id="458" name="Solair" type="Car" price="156000"/>
-    <!-- <model id="459" name="Berkley's RC Van" type="Car" price="0"/>
-    <model id="460" name="Skimmer" type="Plane" price="0"/>
-    <model id="461" name="PCJ-600" type="Bike" price="1465000"/>
-    <model id="462" name="Faggio" type="Bike" price="1200"/>
-    <model id="463" name="Freeway" type="Bike" price="2500"/>
-    <model id="464" name="RC Baron" type="Plane" price="0"/>
-    <model id="465" name="RC Raider" type="Helicopter" price="0"/> -->
-    <model id="466" name="Glendale" type="Car" price="355000"/>
-    <model id="467" name="Oceanic" type="Car" price="1900"/>
-    <!-- <model id="468" name="Sanchez" type="Bike" price="6500"/>
-    <model id="469" name="Sparrow" type="Helicopter" price="0"/>
-    <model id="470" name="Patriot" type="Car" price="0"/>
-    <model id="471" name="Quad" type="Car" price="9500"/>
-    <model id="472" name="Coastguard" type="Boat" price="0"/>
-    <model id="473" name="Dinghy" type="Boat" price="0"/> -->
-    <model id="474" name="Hermes" type="Car" price="160000"/>
-    <model id="475" name="Sabre" type="Car" price="14000"/>
-    <!-- <model id="476" name="Rustler" type="Plane" price="0"/> -->
-    <model id="477" name="ZR3 50" type="Car" price="1926000"/>
-    <!-- <model id="478" name="Walton" type="Car" price="20000"/> -->
-    <model id="479" name="Regina" type="Car" price="16000"/>
-    <model id="480" name="Comet" type="Car" price="150000"/>
-    <!-- <model id="481" name="BMX" type="BMX" price="0"/> -->
-    <model id="482" name="Burrito" type="Car" price="5200"/>
-    <model id="483" name="Camper" type="Car" price="0"/>
-    <!-- <model id="484" name="Marquis" type="Boat" price="0"/>
-    <model id="485" name="Baggage" type="Car" price="4900"/>
-    <model id="486" name="Dozer" type="Truck" price="0"/>
-    <model id="487" name="Maverick" type="Helicopter" price="0"/>
-    <model id="488" name="News Chopper" type="Helicopter" price="0"/> -->
-    <model id="489" name="Rancher" type="Car" price="150000"/>
-    <model id="490" name="FBI Rancher" type="Car" price="0"/>
-    <model id="491" name="Virgo" type="Car" price="160000"/>
-    <model id="492" name="Greenwood" type="Car" price="670000"/>
-    <!-- <model id="493" name="Jetmax" type="Boat" price="0"/> -->
-    <model id="494" name="Hotring" type="Car" price="1560000"/>
-    <model id="495" name="Sandking" type="Car" price="1560000"/>
-    <model id="496" name="Blista Compact" type="Car" price="35000"/>
-    <!-- <model id="497" name="Police Maverick" type="Helicopter" price="0"/>
-    <model id="498" name="Boxville" type="Truck" price="0"/>
-    <model id="499" name="Benson" type="Truck" price="0"/> -->
-    <model id="500" name="Mesa" type="Car" price="13600"/>
-    <!-- <model id="501" name="RC Goblin" type="Helicopter" price="0"/> -->
-    <model id="502" name="Hotring Racer A" type="Car" price="6789000"/>
-    <model id="503" name="Hotring Racer B" type="Car" price="6789000"/>
-    <model id="504" name="Bloodring Banger" type="Car" price="6789000"/>
-    <model id="505" name="Rancher" type="Car" price="15000"/>
-    <model id="506" name="Super GT" type="Car" price="2460000"/>
-    <model id="507" name="Elegant" type="Car" price="1976000"/>
-    <!-- <model id="508" name="Journey" type="Car" price="35000"/> 
-    <model id="509" name="Bike" type="BMX" price="0"/> 
-    <model id="510" name="Mountain Bike" type="BMX" price="0"/> 
-    <model id="511" name="Beagle" type="Plane" price="0"/>
-    <model id="512" name="Cropdust" type="Plane" price="0"/>
-    <model id="513" name="Stunt" type="Plane" price="0"/>
-    <model id="514" name="Petro" type="Truck" price="0"/>
-    <model id="515" name="RoadTrain" type="Truck" price="0"/> -->
-    <model id="516" name="Nebula" type="Car" price="12000"/>
-    <model id="517" name="Majestic" type="Car" price="165000"/>
-    <model id="518" name="Buccaneer" type="Car" price="45000"/>
-    <!-- <model id="519" name="Shamal" type="Plane" price="0"/>
-    <model id="520" name="Hydra" type="Plane" price="0"/>
-    <model id="521" name="FCR-900" type="Bike" price="95000"/>
-    <model id="522" name="NRG-500" type="Bike" price="1765000"/>
-    <model id="523" name="HPV1000" type="Bike" price="3500"/>
-    <model id="524" name="Cement Truck" type="Truck" price="0"/> -->
-    <model id="525" name="Tow Truck" type="Truck" price="0"/>
-    <model id="526" name="Fortune" type="Car" price="12000"/>
-    <model id="527" name="Cadrona" type="Car" price="16000"/>
-    <model id="528" name="FBI Truck" type="Car" price="0"/>
-    <model id="529" name="Willard" type="Car" price="58000"/>
-    <model id="530" name="Forklift" type="Car" price="97000"/>
-    <model id="531" name="Tractor" type="Car" price="0"/>
-    <model id="532" name="Combine" type="Car" price="125000"/>
-    <model id="533" name="Feltzer" type="Car" price="110500"/>
-    <model id="534" name="Remington" type="Car" price="165000"/>
-    <model id="535" name="Slamvan" type="Car" price="126900"/>
-    <model id="536" name="Blade" type="Car" price="2500"/>
-    <!-- <model id="537" name="Freight" type="Train" price="0"/>
-    <model id="538" name="Streak" type="Train" price="0"/>
-    <model id="539" name="Vortex" type="Plane" price="0"/> -->
-    <model id="540" name="Vincent" type="Car" price="2000"/>
-    <model id="541" name="Bullet" type="Car" price="3594000"/>
-    <model id="542" name="Clover" type="Car" price="1500"/>
-    <model id="543" name="Sadler" type="Car" price="3500"/>
-    <!-- <model id="544" name="Firetruck" type="Truck" price="0"/> -->
-    <model id="545" name="Hustler" type="Car" price="123000"/>
-    <model id="546" name="Intruder" type="Car" price="159000"/>
-    <model id="547" name="Primo" type="Car" price="2500"/>
-    <!-- <model id="548" name="Cargobob" type="Helicopter" price="0"/> -->
-    <model id="549" name="Tampa" type="Car" price="1200"/>
-    <model id="550" name="Sunrise" type="Car" price="1200"/>
-    <model id="551" name="Merit" type="Car" price="1200"/>
-    <!-- <model id="552" name="Utility" type="Truck" price="0"/>
-    <model id="553" name="Nevada" type="Plane" price="0"/> -->
-    <model id="554" name="Yosemite" type="Car" price="354000"/>
-    <model id="555" name="Windsor" type="Car" price="256000"/>
-    <!-- <model id="556" name="Monster A" type="Monster Truck" price="0"/>
-    <model id="557" name="Monster B" type="Monster Truck" price="0"/> -->
-    <model id="558" name="Uranus" type="Car" price="1564000"/>
-    <model id="559" name="Jester" type="Car" price="1235000"/>
-    <model id="560" name="Sultan" type="Car" price="2564000"/>
-    <model id="561" name="Stratum" type="Car" price="1567000"/>
-    <model id="562" name="Elegy" type="Car" price="3685000"/>
-    <<!-- <model id="563" name="Raindance" type="Helicopter" price="0"/> -->
-    <model id="564" name="RC Tiger" type="Car" price="0"/>
-    <model id="565" name="Flash" type="Car" price="1600"/>
-    <model id="566" name="Tahoma" type="Car" price="1400"/>
-    <model id="567" name="Savanna" type="Car" price="168000"/>
-    <model id="568" name="Bandito" type="Car" price="1100"/>
-    <!-- <model id="569" name="Freight" type="Train" price="0"/>
-    <model id="570" name="StreakC" type="Train" price="0"/> -->
-    <model id="571" name="Kart" type="Car" price="0"/>
-    <model id="572" name="Mower" type="Car" price="125000"/>
-    <!-- <model id="573" name="Duneride" type="Monster Truck" price="0"/> -->
-    <model id="574" name="Sweeper" type="Car" price="13000"/>
-    <model id="575" name="Broadway" type="Car" price="15000"/>
-    <model id="576" name="Tornado" type="Car" price="19000"/>
-    <!-- <model id="577" name="AT-400" type="Plane" price="0"/>
-    <model id="578" name="DFT-30" type="Truck" price="0"/> -->
-    <model id="579" name="Huntley" type="Car" price="34000"/>
-    <model id="580" name="Stafford" type="Car" price="169000"/>
-    <!-- <model id="581" name="BF-400" type="Bike" price="123000"/> -->
-    <model id="582" name="Newsvan" type="Car" price="0"/>
-    <model id="583" name="Tug" type="Car" price="160000"/>
-    <!-- <model id="584" name="Petrol Trailer" type="Trailer" price="0"/> -->
-    <model id="585" name="Emperor" type="Car" price="150000"/>
-    <!-- <model id="586" name="Wayfarer" type="Bike" price="0"/> -->
-    <model id="587" name="Euros" type="Car" price="2569000"/>
-    <model id="588" name="Hotdog" type="Car" price="0"/>
-    <model id="589" name="Club" type="Car" price="2500"/>
-    <!-- <model id="590" name="Freight Box" type="Train" price="0"/>
-    <model id="591" name="Artict3" type="Trailer" price="0"/>
-    <model id="592" name="Andromada" type="Plane" price="0"/>
-    <model id="593" name="Dodo" type="Plane" price="0"/>
-    <model id="594" name="RC Cam" type="Car" price="0"/>
-    <model id="595" name="Launch" type="Boat" price="0"/>
-    <model id="596" name="Police Car (LSPD)" type="Car" price="0"/>
-    <model id="597" name="Police Car (SFPD)" type="Car" price="0"/>
-    <model id="598" name="Police Car (LVPD)" type="Car" price="0"/> 
-    <model id="599" name="Police Ranger" type="Car" price="0"/>
-    <model id="600" name="Picador" type="Car" price="0"/>
-    <model id="601" name="S.W.A.T. Van" type="Car" price="0"/> -->
-    <model id="602" name="Alpha" type="Car" price="1500000"/>
-    <model id="603" name="Phoenix" type="Car" price="2351000"/>
-    <model id="604" name="Glendale" type="Car" price="159000"/>
-    <model id="605" name="Sadler" type="Car" price="12000"/>
-    <!-- <model id="606" name="Luggage Trailer A" type="Trailer" price="0"/>
-    <model id="607" name="Luggage Trailer B" type="Trailer" price="0"/>
-    <model id="608" name="Stair Trailer" type="Trailer" price="0"/>
-    <model id="609" name="Boxville" type="Truck" price="0"/>
-    <model id="610" name="Farm Plow" type="Trailer" price="0"/>
-    <model id="611" name="Utility Trailer" type="Trailer" price="0"/> -->
+    <model id="400" name="Landstalker" type="Car" price="15000" buyable="true"/>
+    <model id="401" name="Bravura" type="Car" price="2000" buyable="true"/>
+    <model id="402" name="Buffalo" type="Car" price="165000" buyable="true"/>
+    <model id="403" name="Linerunner" type="Truck" price="0" buyable="false"/>
+    <model id="404" name="Pereniel" type="Car" price="6000" buyable="true"/>
+    <model id="405" name="Sentinel" type="Car" price="25000" buyable="true"/>
+    <model id="406" name="Dumper" type="Truck" price="0" buyable="true"/>
+    <model id="407" name="Firetruck" type="Truck" price="0" buyable="true"/>
+    <model id="408" name="Trashmaster" type="Truck" price="0" buyable="false"/>
+    <model id="409" name="Stretch" type="Car" price="9750" buyable="true"/>
+    <model id="410" name="Manana" type="Car" price="3500" buyable="true"/>
+    <model id="411" name="Infernus" type="Car" price="679000" buyable="true"/>
+    <model id="412" name="Voodoo" type="Car" price="53000" buyable="true"/>
+    <model id="413" name="Pony" type="Car" price="2500" buyable="true"/>
+    <model id="414" name="Mule" type="Truck" price="0" buyable="true"/>
+    <model id="415" name="Cheetah" type="Car" price="164000" buyable="true"/>
+    <model id="416" name="Ambulance" type="Car" price="0" buyable="false"/>
+    <model id="417" name="Leviathan" type="Helicopter" price="0" buyable="false"/>
+    <model id="418" name="Moonbeam" type="Car" price="4500" buyable="true"/>
+    <model id="419" name="Esperanto" type="Car" price="3900" buyable="true"/>
+    <model id="420" name="Taxi" type="Car" price="0" buyable="false"/>
+    <model id="421" name="Washington" type="Car" price="17000" buyable="true"/>
+    <model id="422" name="Bobcat" type="Car" price="13500" buyable="true"/>
+    <model id="423" name="Mr Whoopee" type="Car" price="0" buyable="false"/>
+    <model id="424" name="BF Injection" type="Car" price="195000" buyable="true"/>
+    <model id="425" name="Hunter" type="Helicopter" price="0" buyable="false"/>
+    <model id="426" name="Premier" type="Car" price="110500" buyable="true"/>
+    <model id="427" name="Enforcer" type="Car" price="1200" buyable="false"/>
+    <model id="428" name="Securicar" type="Car" price="0" buyable="false"/>
+    <model id="429" name="Banshee" type="Car" price="1590000" buyable="true"/>
+    <model id="430" name="Predator" type="Boat" price="0" buyable="false"/>
+    <model id="431" name="Bus" type="Car" price="0" buyable="false"/>
+    <model id="432" name="Rhino" type="Car" price="0" buyable="false"/>
+    <model id="433" name="Barracks" type="Truck" price="0" buyable="false"/>
+    <model id="434" name="Hotknife" type="Car" price="1540000" buyable="true"/>
+    <model id="435" name="Artict1" type="Trailer" price="0" buyable="false"/>
+    <model id="436" name="Previon" type="Car" price="57000" buyable="true"/>
+    <model id="437" name="Coach" type="Car" price="0" buyable="false"/>
+    <model id="438" name="Cabbie" type="Car" price="0" buyable="false"/>
+    <model id="439" name="Stallion" type="Car" price="970000" buyable="true"/>
+    <model id="440" name="Rumpo" type="Car" price="495000" buyable="true"/>
+    <model id="441" name="RC Bandit" type="Car" price="0" buyable="false"/>
+    <model id="442" name="Romero" type="Car" price="60000" buyable="true"/>
+    <model id="443" name="Packer" type="Truck" price="0" buyable="false"/>
+    <model id="444" name="Monster" type="Monster Truck" price="0" buyable="false"/>
+    <model id="445" name="Admiral" type="Car" price="160000" buyable="true"/>
+    <model id="446" name="Squalo" type="Boat" price="0" buyable="false"/>
+    <model id="447" name="Seasparrow" type="Helicopter" price="0" buyable="false"/>
+    <model id="448" name="Pizzaboy" type="Bike" price="0" buyable="false"/>
+    <model id="449" name="Tram" type="Train" price="0" buyable="false"/>
+    <model id="450" name="artict2" type="Trailer" price="0" buyable="false"/>
+    <model id="451" name="Turismo" type="Car" price="2567600" buyable="true"/>
+    <model id="452" name="Speeder" type="Boat" price="0" buyable="false"/>
+    <model id="453" name="Reefer" type="Boat" price="0" buyable="false"/>
+    <model id="454" name="Tropic" type="Boat" price="0" buyable="false"/>
+    <model id="455" name="Flatbed" type="Truck" price="0" buyable="false"/>
+    <model id="456" name="Yankee" type="Truck" price="0" buyable="false"/>
+    <model id="457" name="Caddy" type="Car" price="0" buyable="true"/> --->
+    <model id="458" name="Solair" type="Car" price="156000" buyable="true"/>
+    <model id="459" name="Berkley's RC Van" type="Car" price="0" buyable="false"/>
+    <model id="460" name="Skimmer" type="Plane" price="0" buyable="false"/>
+    <model id="461" name="PCJ-600" type="Bike" price="1465000" buyable="false"/>
+    <model id="462" name="Faggio" type="Bike" price="1200" buyable="false"/>
+    <model id="463" name="Freeway" type="Bike" price="2500" buyable="false"/>
+    <model id="464" name="RC Baron" type="Plane" price="0" buyable="false"/>
+    <model id="465" name="RC Raider" type="Helicopter" price="0" buyable="false"/>
+    <model id="466" name="Glendale" type="Car" price="355000" buyable="true"/>
+    <model id="467" name="Oceanic" type="Car" price="1900" buyable="true"/>
+    <model id="468" name="Sanchez" type="Bike" price="6500" buyable="false"/>
+    <model id="469" name="Sparrow" type="Helicopter" price="0" buyable="false"/>
+    <model id="470" name="Patriot" type="Car" price="0" buyable="false"/>
+    <model id="471" name="Quad" type="Car" price="9500" buyable="false"/>
+    <model id="472" name="Coastguard" type="Boat" price="0" buyable="false"/>
+    <model id="473" name="Dinghy" type="Boat" price="0" buyable="false"/>
+    <model id="474" name="Hermes" type="Car" price="160000" buyable="true"/>
+    <model id="475" name="Sabre" type="Car" price="14000" buyable="true"/>
+    <model id="476" name="Rustler" type="Plane" price="0" buyable="false"/>
+    <model id="477" name="ZR3 50" type="Car" price="1926000" buyable="true"/>
+    <model id="478" name="Walton" type="Car" price="20000" buyable="false"/>
+    <model id="479" name="Regina" type="Car" price="16000" buyable="true"/>
+    <model id="480" name="Comet" type="Car" price="150000" buyable="true"/>
+    <model id="481" name="BMX" type="BMX" price="0" buyable="false"/>
+    <model id="482" name="Burrito" type="Car" price="5200" buyable="true"/>
+    <model id="483" name="Camper" type="Car" price="0" buyable="true"/>
+    <model id="484" name="Marquis" type="Boat" price="0" buyable="false"/>
+    <model id="485" name="Baggage" type="Car" price="4900" buyable="false"/>
+    <model id="486" name="Dozer" type="Truck" price="0" buyable="false"/>
+    <model id="487" name="Maverick" type="Helicopter" price="0" buyable="false"/>
+    <model id="488" name="News Chopper" type="Helicopter" price="0" buyable="false"/>
+    <model id="489" name="Rancher" type="Car" price="150000" buyable="true"/>
+    <model id="490" name="FBI Rancher" type="Car" price="0" buyable="true"/>
+    <model id="491" name="Virgo" type="Car" price="160000" buyable="true"/>
+    <model id="492" name="Greenwood" type="Car" price="670000" buyable="true"/>
+    <model id="493" name="Jetmax" type="Boat" price="0" buyable="false"/>
+    <model id="494" name="Hotring" type="Car" price="1560000" buyable="true"/>
+    <model id="495" name="Sandking" type="Car" price="1560000" buyable="true"/>
+    <model id="496" name="Blista Compact" type="Car" price="35000" buyable="true"/>
+    <model id="497" name="Police Maverick" type="Helicopter" price="0" buyable="false"/>
+    <model id="498" name="Boxville" type="Truck" price="0" buyable="false"/>
+    <model id="499" name="Benson" type="Truck" price="0" buyable="false"/>
+    <model id="500" name="Mesa" type="Car" price="13600" buyable="true"/>
+    <model id="501" name="RC Goblin" type="Helicopter" price="0" buyable="false"/>
+    <model id="502" name="Hotring Racer A" type="Car" price="6789000" buyable="true"/>
+    <model id="503" name="Hotring Racer B" type="Car" price="6789000" buyable="true"/>
+    <model id="504" name="Bloodring Banger" type="Car" price="6789000" buyable="true"/>
+    <model id="505" name="Rancher" type="Car" price="15000" buyable="true"/>
+    <model id="506" name="Super GT" type="Car" price="2460000" buyable="true"/>
+    <model id="507" name="Elegant" type="Car" price="1976000" buyable="true"/>
+    <model id="508" name="Journey" type="Car" price="35000" buyable="false"/>
+    <model id="509" name="Bike" type="BMX" price="0" buyable="false"/>
+    <model id="510" name="Mountain Bike" type="BMX" price="0" buyable="false"/>
+    <model id="511" name="Beagle" type="Plane" price="0" buyable="false"/>
+    <model id="512" name="Cropdust" type="Plane" price="0" buyable="false"/>
+    <model id="513" name="Stunt" type="Plane" price="0" buyable="false"/>
+    <model id="514" name="Petro" type="Truck" price="0" buyable="false"/>
+    <model id="515" name="RoadTrain" type="Truck" price="0" buyable="false"/>
+    <model id="516" name="Nebula" type="Car" price="12000" buyable="true"/>
+    <model id="517" name="Majestic" type="Car" price="165000" buyable="true"/>
+    <model id="518" name="Buccaneer" type="Car" price="45000" buyable="true"/>
+    <model id="519" name="Shamal" type="Plane" price="0" buyable="false"/>
+    <model id="520" name="Hydra" type="Plane" price="0" buyable="false"/>
+    <model id="521" name="FCR-900" type="Bike" price="95000" buyable="false"/>
+    <model id="522" name="NRG-500" type="Bike" price="1765000" buyable="false"/>
+    <model id="523" name="HPV1000" type="Bike" price="3500" buyable="false"/>
+    <model id="524" name="Cement Truck" type="Truck" price="0" buyable="false"/>
+    <model id="525" name="Tow Truck" type="Truck" price="0" buyable="true"/>
+    <model id="526" name="Fortune" type="Car" price="12000" buyable="true"/>
+    <model id="527" name="Cadrona" type="Car" price="16000" buyable="true"/>
+    <model id="528" name="FBI Truck" type="Car" price="0" buyable="true"/>
+    <model id="529" name="Willard" type="Car" price="58000" buyable="true"/>
+    <model id="530" name="Forklift" type="Car" price="97000" buyable="true"/>
+    <model id="531" name="Tractor" type="Car" price="0" buyable="true"/>
+    <model id="532" name="Combine" type="Car" price="125000" buyable="true"/>
+    <model id="533" name="Feltzer" type="Car" price="110500" buyable="true"/>
+    <model id="534" name="Remington" type="Car" price="165000" buyable="true"/>
+    <model id="535" name="Slamvan" type="Car" price="126900" buyable="true"/>
+    <model id="536" name="Blade" type="Car" price="2500" buyable="true"/>
+    <model id="537" name="Freight" type="Train" price="0" buyable="false"/>
+    <model id="538" name="Streak" type="Train" price="0" buyable="false"/>
+    <model id="539" name="Vortex" type="Plane" price="0" buyable="false"/>
+    <model id="540" name="Vincent" type="Car" price="2000" buyable="true"/>
+    <model id="541" name="Bullet" type="Car" price="3594000" buyable="true"/>
+    <model id="542" name="Clover" type="Car" price="1500" buyable="true"/>
+    <model id="543" name="Sadler" type="Car" price="3500" buyable="true"/>
+    <model id="544" name="Firetruck" type="Truck" price="0" buyable="false"/>
+    <model id="545" name="Hustler" type="Car" price="123000" buyable="true"/>
+    <model id="546" name="Intruder" type="Car" price="159000" buyable="true"/>
+    <model id="547" name="Primo" type="Car" price="2500" buyable="true"/>
+    <model id="548" name="Cargobob" type="Helicopter" price="0" buyable="false"/>
+    <model id="549" name="Tampa" type="Car" price="1200" buyable="true"/>
+    <model id="550" name="Sunrise" type="Car" price="1200" buyable="true"/>
+    <model id="551" name="Merit" type="Car" price="1200" buyable="true"/>
+    <model id="552" name="Utility" type="Truck" price="0" buyable="false"/>
+    <model id="553" name="Nevada" type="Plane" price="0" buyable="false"/>
+    <model id="554" name="Yosemite" type="Car" price="354000" buyable="true"/>
+    <model id="555" name="Windsor" type="Car" price="256000" buyable="true"/>
+    <model id="556" name="Monster A" type="Monster Truck" price="0" buyable="false"/>
+    <model id="557" name="Monster B" type="Monster Truck" price="0" buyable="false"/>
+    <model id="558" name="Uranus" type="Car" price="1564000" buyable="true"/>
+    <model id="559" name="Jester" type="Car" price="1235000" buyable="true"/>
+    <model id="560" name="Sultan" type="Car" price="2564000" buyable="true"/>
+    <model id="561" name="Stratum" type="Car" price="1567000" buyable="true"/>
+    <model id="562" name="Elegy" type="Car" price="3685000" buyable="true"/>
+    <<model id="563" name="Raindance" type="Helicopter" price="0" buyable="false"/>
+    <model id="564" name="RC Tiger" type="Car" price="0" buyable="true"/>
+    <model id="565" name="Flash" type="Car" price="1600" buyable="true"/>
+    <model id="566" name="Tahoma" type="Car" price="1400" buyable="true"/>
+    <model id="567" name="Savanna" type="Car" price="168000" buyable="true"/>
+    <model id="568" name="Bandito" type="Car" price="1100" buyable="true"/>
+    <model id="569" name="Freight" type="Train" price="0" buyable="false"/>
+    <model id="570" name="StreakC" type="Train" price="0" buyable="false"/>
+    <model id="571" name="Kart" type="Car" price="0" buyable="true"/>
+    <model id="572" name="Mower" type="Car" price="125000" buyable="true"/>
+    <model id="573" name="Duneride" type="Monster Truck" price="0" buyable="false"/>
+    <model id="574" name="Sweeper" type="Car" price="13000" buyable="true"/>
+    <model id="575" name="Broadway" type="Car" price="15000" buyable="true"/>
+    <model id="576" name="Tornado" type="Car" price="19000" buyable="true"/>
+    <model id="577" name="AT-400" type="Plane" price="0" buyable="false"/>
+    <model id="578" name="DFT-30" type="Truck" price="0" buyable="false"/>
+    <model id="579" name="Huntley" type="Car" price="34000" buyable="true"/>
+    <model id="580" name="Stafford" type="Car" price="169000" buyable="true"/>
+    <model id="581" name="BF-400" type="Bike" price="123000" buyable="false"/>
+    <model id="582" name="Newsvan" type="Car" price="0" buyable="true"/>
+    <model id="583" name="Tug" type="Car" price="160000" buyable="true"/>
+    <model id="584" name="Petrol Trailer" type="Trailer" price="0" buyable="false"/>
+    <model id="585" name="Emperor" type="Car" price="150000" buyable="true"/>
+    <model id="586" name="Wayfarer" type="Bike" price="0" buyable="false"/>
+    <model id="587" name="Euros" type="Car" price="2569000" buyable="true"/>
+    <model id="588" name="Hotdog" type="Car" price="0" buyable="true"/>
+    <model id="589" name="Club" type="Car" price="2500" buyable="true"/>
+    <model id="590" name="Freight Box" type="Train" price="0" buyable="false"/>
+    <model id="591" name="Artict3" type="Trailer" price="0" buyable="false"/>
+    <model id="592" name="Andromada" type="Plane" price="0" buyable="false"/>
+    <model id="593" name="Dodo" type="Plane" price="0" buyable="false"/>
+    <model id="594" name="RC Cam" type="Car" price="0" buyable="false"/>
+    <model id="595" name="Launch" type="Boat" price="0" buyable="false"/>
+    <model id="596" name="Police Car (LSPD)" type="Car" price="0" buyable="false"/>
+    <model id="597" name="Police Car (SFPD)" type="Car" price="0" buyable="false"/>
+    <model id="598" name="Police Car (LVPD)" type="Car" price="0" buyable="false"/> 
+    <model id="599" name="Police Ranger" type="Car" price="0" buyable="false"/>
+    <model id="600" name="Picador" type="Car" price="0" buyable="false"/>
+    <model id="601" name="S.W.A.T. Van" type="Car" price="0" buyable="false"/>
+    <model id="602" name="Alpha" type="Car" price="1500000" buyable="true"/>
+    <model id="603" name="Phoenix" type="Car" price="2351000" buyable="true"/>
+    <model id="604" name="Glendale" type="Car" price="159000" buyable="true"/>
+    <model id="605" name="Sadler" type="Car" price="12000" buyable="true"/>
+    <model id="606" name="Luggage Trailer A" type="Trailer" price="0" buyable="false"/>
+    <model id="607" name="Luggage Trailer B" type="Trailer" price="0" buyable="false"/>
+    <model id="608" name="Stair Trailer" type="Trailer" price="0" buyable="false"/>
+    <model id="609" name="Boxville" type="Truck" price="0" buyable="false"/>
+    <model id="610" name="Farm Plow" type="Trailer" price="0" buyable="false"/>
+    <model id="611" name="Utility Trailer" type="Trailer" price="0" buyable="false"/>
 </vehiclemodels>

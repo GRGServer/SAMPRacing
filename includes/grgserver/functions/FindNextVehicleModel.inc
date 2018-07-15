@@ -1,4 +1,4 @@
-FindNextVehicleModel(startingModelID, type[], goForward)
+FindNextVehicleModel(startingModelID, type[], onlyBuyable, goForward)
 {
     new modelID = startingModelID;
 
@@ -22,7 +22,7 @@ FindNextVehicleModel(startingModelID, type[], goForward)
             modelID = 400;
         }
     }
-    while (modelID != startingModelID && strcmp(g_vehicleModels[modelID - 400][E_VEHICLEMODEL_TYPE], type, true));
+    while (modelID != startingModelID && strcmp(g_vehicleModels[modelID - 400][E_VEHICLEMODEL_TYPE], type, true) && (g_vehicleModels[modelID - 400][E_VEHICLEMODEL_BUYABLE] || !onlyBuyable));
 
     return modelID;
 }
