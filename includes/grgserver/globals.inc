@@ -22,5 +22,6 @@ new Text:g_textDrawClock;
 new g_tuningGarages[MAX_TUNINGGARAGES][E_TUNINGGARAGE];
 new g_tuningParts[MAX_TUNINGPARTS][E_TUNINGPART];
 new g_vehicles[MAX_VEHICLES][E_VEHICLE];
+new g_vehicleTuningParts[MAX_VEHICLES][MAX_TUNINGPARTTYPES][E_VEHICLE_TUNINGPART];
 new g_vehicleModels[212][E_VEHICLEMODEL];
 new g_vehicleShops[MAX_VEHICLESHOPS][E_VEHICLESHOP];

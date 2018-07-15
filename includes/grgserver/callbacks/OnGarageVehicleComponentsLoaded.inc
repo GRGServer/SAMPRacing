@@ -13,5 +13,6 @@ public OnGarageVehicleComponentsLoaded(playerID)
         }
     }
 
-    PVar:playerID[GARAGE_VEHICLE_LOADING] = false;
+    MySQLFormat("SELECT * FROM `vehicletuningparts` WHERE `vehicleId` = %d", PVar:playerID[GARAGE_VEHICLE_SAVEID]);
+    mysql_pquery(g_mysql, g_sqlQuery, "OnGarageVehiclePartsLoaded", "d", playerID);
 }

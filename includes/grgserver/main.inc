@@ -23,6 +23,7 @@
 #include <grgserver/structures/E_VEHICLE.inc>
 #include <grgserver/structures/E_VEHICLEMODEL.inc>
 #include <grgserver/structures/E_VEHICLESHOP.inc>
+#include <grgserver/structures/E_VEHICLE_TUNINGPART.inc>
 
 // Global variables
 #include <grgserver/globals.inc>
@@ -40,6 +41,7 @@
 #include <grgserver/functions/CreateDialog.inc>
 #include <grgserver/functions/CreateGarageVehicle.inc>
 #include <grgserver/functions/CreatePlayerTextDraws.inc>
+#include <grgserver/functions/CreateTuningPartObject.inc>
 #include <grgserver/functions/CreateVehicleEx.inc>
 #include <grgserver/functions/CreateVehicleShopVehicle.inc>
 #include <grgserver/functions/DeleteVehicle.inc>
@@ -131,7 +133,10 @@
 #include <grgserver/functions/UpdatePlayerTextDrawStrings.inc>
 #include <grgserver/functions/UpdateRaceLobby.inc>
 #include <grgserver/functions/UpdateTuningGarages.inc>
+#include <grgserver/functions/UpdateVehicleSpeedMultiplier.inc>
 #include <grgserver/functions/UpdateVehicleStateForPlayer.inc>
+#include <grgserver/functions/UpdateVehicleTuningPart.inc>
+#include <grgserver/functions/UpdateVehicleTuningParts.inc>
 #include <grgserver/functions/XML_GetFloatAttribute.inc>
 #include <grgserver/functions/XML_GetFloatValue.inc>
 #include <grgserver/functions/XML_GetIntAttribute.inc>
@@ -147,6 +152,7 @@
 #include <grgserver/callbacks/OnGameModeExit.inc>
 #include <grgserver/callbacks/OnGameModeInit.inc>
 #include <grgserver/callbacks/OnGarageVehicleComponentsLoaded.inc>
+#include <grgserver/callbacks/OnGarageVehiclePartsLoaded.inc>
 #include <grgserver/callbacks/OnGarageVehiclesLoaded.inc>
 #include <grgserver/callbacks/OnPlayerClickMap.inc>
 #include <grgserver/callbacks/OnPlayerClickPlayerTextDraw.inc>

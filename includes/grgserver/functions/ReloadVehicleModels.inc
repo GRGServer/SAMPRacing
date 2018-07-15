@@ -49,15 +49,44 @@ ReloadVehicleModels()
 
         g_vehicleModels[arrayIndex][E_VEHICLEMODEL_PRICE] = XML_GetIntAttribute(modelNode, "price");
 
+        new tuningPartSlot;
         new XMLNode:neonNode = XML_GetFirstChild(modelNode, "neon");
         if (neonNode)
         {
-            g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NEON_X] = XML_GetFloatAttribute(neonNode, "x");
-            g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NEON_Y] = XML_GetFloatAttribute(neonNode, "y");
-            g_vehicleModels[arrayIndex][E_VEHICLEMODEL_NEON_Z] = XML_GetFloatAttribute(neonNode, "z");
+            new Float:neonPosX = XML_GetFloatAttribute(neonNode, "x");
+            new Float:neonPosY = XML_GetFloatAttribute(neonNode, "y");
+            new Float:neonPosZ = XML_GetFloatAttribute(neonNode, "z");
+            new neonPrice = XML_GetIntAttribute(neonNode, "price");
+
+            for (new neonModelID = 18647; neonModelID <= 18652; neonModelID++)
+            {
+                if (tuningPartSlot >= MAX_TUNINGPARTSPERVEHICLE)
+                {
+                    printf("Reached limit of %d tuning parts for vehicle %d", MAX_TUNINGPARTSPERVEHICLE, modelID);
+                    break;
+                }
+
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_MODELID] = neonModelID;
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_PRICE] = neonPrice;
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_TYPE] = TUNINGPART_NEON;
+
+                // Left side
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_X][0] = -neonPosX;
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_Y][0] = neonPosY;
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_Z][0] = neonPosZ;
+
+                // Right side
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_X][1] = neonPosX;
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_Y][1] = neonPosY;
+                g_tuningParts[tuningPartIndex][E_TUNINGPART_OFFSET_Z][1] = neonPosZ;
+
+                g_vehicleModels[arrayIndex][E_VEHICLEMODEL_TUNINGPARTS][tuningPartSlot] = tuningPartIndex;
+
+                tuningPartSlot++;
+                tuningPartIndex++;
+            }
         }
 
-        new tuningPartSlot;
         new XMLNode:tuningPartNode = XML_GetFirstChild(modelNode, "tuningpart");
         while (tuningPartNode)
         {

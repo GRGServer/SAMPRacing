@@ -78,6 +78,21 @@ CREATE TABLE `vehiclecomponents` (
   ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
+CREATE TABLE `vehicletuningparts` (
+  `id`        int(11)                                                                         NOT NULL AUTO_INCREMENT,
+  `vehicleId` int(11)                                                                         NOT NULL,
+  `type`      ENUM ('frontBumber', 'hood', 'lights', 'neon', 'rearBumber', 'roof', 'spoiler') NOT NULL,
+  `value`     int(11)                                                                         NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `vehicleId_type` (`vehicleId`, `type`),
+  KEY `vehicleId` (`vehicleId`),
+  CONSTRAINT `vehicletuningparts_vehicleId` FOREIGN KEY (`vehicleId`) REFERENCES `vehicles` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
 CREATE TABLE `vehicles` (
   `id`          int(11)     NOT NULL AUTO_INCREMENT,
   `modelId`     int(11)     NOT NULL,

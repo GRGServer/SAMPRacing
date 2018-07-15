@@ -61,4 +61,40 @@ ReloadVehicles()
     cache_delete(result);
 
     printf("  %d vehicle components added", count);
+
+    print("Adding vehicle tuning parts...");
+
+    count = 0;
+    result = mysql_query(g_mysql, "SELECT * FROM `vehicletuningparts`");
+    cache_get_row_count(rows);
+    Count(row, rows)
+    {
+        new vehicleSaveID;
+        cache_get_value_int(row, "vehicleId", vehicleSaveID);
+        Foreach(vehicleIndex, g_vehicles)
+        {
+            if (g_vehicles[vehicleIndex][E_VEHICLE_SAVEID] == vehicleSaveID)
+            {
+                new type[16];
+                cache_get_value_name(row, "type", type);
+                new typeIndex = GetTuningPartByName(type);
+
+                cache_get_value_int(row, "value", g_vehicleTuningParts[vehicleIndex][typeIndex][E_VEHICLE_TUNINGPART_VALUE]);
+
+                count++;
+                break;
+            }
+        }
+    }
+    cache_delete(result);
+
+    Foreach(vehicleIndex, g_vehicles)
+    {
+        new vehicleID = vehicleIndex + 1;// Add 1 as the vehicle ID starts with 1
+
+        UpdateVehicleTuningParts(vehicleID);
+        UpdateVehicleSpeedMultiplier(vehicleID);
+    }
+
+    printf("  %d vehicle tuning parts added", count);
 }
