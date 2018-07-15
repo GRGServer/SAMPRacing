@@ -8,7 +8,12 @@ UpdateVehicleStateForPlayer(playerID)
     new Float:velocityX;
     new Float:velocityY;
     new Float:velocityZ;
+    new Float:currentDirection;
     GetVehicleVelocity(vehicleID, velocityX, velocityY, velocityZ);
+    GetVehicleZAngle(vehicleID, currentDirection);
+
+    new Float:velocityDirection = GetVelocityDirection(velocityX, velocityY);
+    new Float:velocityDirectionDifference = floatabs(velocityDirection - currentDirection);
 
     // Only update vehicle speed if the player is the driver
     if (vehicleSeat == 0)
@@ -22,9 +27,21 @@ UpdateVehicleStateForPlayer(playerID)
         // If KEY_VEHICLE_FORWARD is pressed, but not KEY_VEHICLE_BACKWARD or KEY_HANDBRAKE.
         if ((keys & (KEY_VEHICLE_FORWARD | KEY_VEHICLE_BACKWARD | KEY_HANDBRAKE)) == KEY_VEHICLE_FORWARD)
         {
+            new Float:speedMultiplier = VehicleProperty:vehicleID[SPEEDMULTIPLIER];
+            new Float:maxDirectionDifference = 5;
+
+            new Float:clampedVelocityDirectionDiff = velocityDirectionDifference;
+            if (clampedVelocityDirectionDiff > maxDirectionDifference)
+            {
+                clampedVelocityDirectionDiff = maxDirectionDifference;
+            }
+            new Float:speedMultiplierDifference = speedMultiplier - 1;
+            new Float:velocityDifferenceCorrection = 1 - (clampedVelocityDirectionDiff / maxDirectionDifference);
+            speedMultiplier = 1 + (speedMultiplierDifference * velocityDifferenceCorrection);
+
             // Increase the X and Y velocity
-            velocityX *= VehicleProperty:vehicleID[SPEEDMULTIPLIER];
-            velocityY *= VehicleProperty:vehicleID[SPEEDMULTIPLIER];
+            velocityX *= speedMultiplier;
+            velocityY *= speedMultiplier;
 
             // Increase the Z velocity to make up for lost gravity, if needed.
             if (velocityZ > 0.04 || velocityZ < -0.04)
@@ -126,58 +143,17 @@ UpdateVehicleStateForPlayer(playerID)
 
         if (speed >= 30)
         {
-            // Get direction
-            new Float:direction;
-            if (velocityX < 0)
-            {
-                if (velocityY > 0)
-                {
-                    direction = atan(floatabs(velocityX / velocityY));
-                }
-                else if (velocityY <= 0)
-                {
-                    direction = atan(velocityY / velocityX) + 90;
-                }
-            }
-            else if (velocityX > 0)
-            {
-                if (velocityY < 0)
-                {
-                    direction = atan(floatabs(velocityX / velocityY)) + 180;
-                }
-                else if (velocityY >= 0)
-                {
-                    direction = atan(velocityY / velocityX) + 270;
-                }
-            }
-            else if (velocityX == 0)
-            {
-                if (velocityY > 0)
-                {
-                    direction = 0;
-                }
-                else if (velocityY < 0)
-                {
-                    direction = 180;
-                }
-            }
-
-            // Calculate drifting angle
-            new Float:currentDirection;
-            GetVehicleZAngle(vehicleID, currentDirection);
-            new Float:angle = floatabs(direction - currentDirection);
-
             // Calculate score
-            if ((15 < angle < 80) || ( 280 < angle < 345))
+            if ((15 < velocityDirectionDifference < 80) || ( 280 < velocityDirectionDifference < 345))
             {
                 PVar:playerID[DRIFTING_SCORESTATE] = true;
                 PVar:playerID[DRIFTING_SCORE]++;
                 GivePlayerMoney(playerID, PVar:playerID[DRIFTING_SCORE] / 10);
 
-                if ((25 < angle < 70) || (290 < angle < 335))
+                if ((25 < velocityDirectionDifference < 70) || (290 < velocityDirectionDifference < 335))
                 {
                     PVar:playerID[DRIFTING_SCORE]++;
-                    if ((35 < angle < 45) || (315 < angle < 325))
+                    if ((35 < velocityDirectionDifference < 45) || (315 < velocityDirectionDifference < 325))
                     {
                         PVar:playerID[DRIFTING_SCORE]++;
                         PVar:playerID[DRIFTING_ANGLEBONUS]++;

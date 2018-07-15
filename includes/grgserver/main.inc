@@ -68,6 +68,7 @@
 #include <grgserver/functions/GetPlayerPickup.inc>
 #include <grgserver/functions/GetTuningPartByName.inc>
 #include <grgserver/functions/GetVehicleEngineState.inc>
+#include <grgserver/functions/GetVelocityDirection.inc>
 #include <grgserver/functions/GiveHiddenPackagesRewards.inc>
 #include <grgserver/functions/Hash.inc>
 #include <grgserver/functions/IsLoggedIn.inc>
