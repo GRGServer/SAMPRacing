@@ -18,6 +18,8 @@ Timer:EverySecond()
 
     PlayerLoop(playerID)
     {
+        SetPlayerTime(playerID, hour, minute);
+
         if (PVar:playerID[USERID])
         {
             // Write player info
