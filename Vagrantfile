@@ -19,4 +19,10 @@ Vagrant.configure(2) do |config|
     end
     config.puppet_install.puppet_version = "4.10.9"
     config.vm.provision "shell", run: "always", inline: "systemctl restart samp"
+
+    require "time"
+    offset = ((Time.zone_offset(Time.now.zone)/60)/60)
+    zone_sufix = offset >= 0 ? "-#{offset.to_s}" : "+#{offset.to_s}"
+    timezone = "Etc/GMT" + zone_sufix
+    config.vm.provision "shell", inline: "sudo rm -f /etc/localtime; echo \"#{timezone}\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
 end
