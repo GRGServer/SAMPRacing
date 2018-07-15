@@ -4,6 +4,8 @@ ReloadVehicles()
 
     Foreach(index, g_vehicles)
     {
+        DestroyVehicle(index + 1);
+
         Foreach(field, g_vehicles[])
         {
             g_vehicles[index][E_VEHICLE:field] = 0;
