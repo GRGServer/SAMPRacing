@@ -12,6 +12,8 @@ if (php_sapi_name() != "cli") {
     exit;
 }
 
+ini_set("memory_limit", -1);
+
 echo "Loading source image\n";
 $sourceImage = imagecreatefromjpeg(SOURCE_FILENAME);
 
