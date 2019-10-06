@@ -1,0 +1,6 @@
+/vagrant/
+/.git*
+/database.sql
+/README.md
+/samp.service
+/Vagrantfile

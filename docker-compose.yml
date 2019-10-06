@@ -1,0 +1,54 @@
+version: '3.7'
+
+services:
+  samp-server:
+    image: registry.gitlab.com/grgserver/sampracing/samp-server
+    container_name: samp-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 7777:7777/udp
+    networks:
+      - network
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: samp
+      MYSQL_PASSWORD: samp
+      MYSQL_DATABASE: samp
+      RANDOM_RCON_PASSWORD: 'true'
+      GRG_AUDIO_URL: 'http://localhost:8080/audio'
+    volumes:
+      - samp-scriptfiles:/opt/samp/scriptfiles
+
+  mysql:
+    image: mariadb:10.4
+    container_name: mysql
+    networks:
+      - network
+    environment:
+      MYSQL_USER: samp
+      MYSQL_PASSWORD: samp
+      MYSQL_DATABASE: samp
+      MYSQL_RANDOM_ROOT_PASSWORD: 'true'
+    volumes:
+      - ./database.sql:/docker-entrypoint-initdb.d/samp-db.sql:ro
+
+  webserver:
+    image: registry.gitlab.com/grgserver/sampracing/webserver
+    container_name: webserver
+    build:
+      context: .
+      dockerfile: map.Dockerfile
+    ports:
+      - 8080:80
+    networks:
+      - network
+    volumes:
+      - samp-scriptfiles:/opt/samp/scriptfiles:ro
+
+networks:
+  network:
+
+volumes:
+  samp-scriptfiles:
