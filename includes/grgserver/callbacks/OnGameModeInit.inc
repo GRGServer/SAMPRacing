@@ -7,6 +7,16 @@ public OnGameModeInit()
     print("Connecting to MySQL server");
     g_mysql = mysql_connect_file();
 
+    if (mysql_errno() == 0)
+    {
+        print("Successfully connected to MySQL server");
+    }
+    else
+    {
+        print("Can't connect to MySQL server!");
+        return;
+    }
+
     GetEnv("GRG_AUDIO_URL", g_audioUrl);
     printf("Using Audio URL: %s", g_audioUrl);
 
